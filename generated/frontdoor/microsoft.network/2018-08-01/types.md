@@ -35,6 +35,23 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disableHttps (Microsoft.Network/frontDoors/frontendEndpoints@2018-08-01)
+* **Resource**: Microsoft.Network/frontDoors/frontendEndpoints
+* **ApiVersion**: 2018-08-01
+* **Output**: any
+
+## Function enableHttps (Microsoft.Network/frontDoors/frontendEndpoints@2018-08-01)
+* **Resource**: Microsoft.Network/frontDoors/frontendEndpoints
+* **ApiVersion**: 2018-08-01
+* **Input**: [CustomHttpsConfiguration](#customhttpsconfiguration)
+* **Output**: any
+
+## Function purge (Microsoft.Network/frontDoors@2018-08-01)
+* **Resource**: Microsoft.Network/frontDoors
+* **ApiVersion**: 2018-08-01
+* **Input**: [PurgeParameters](#purgeparameters)
+* **Output**: any
+
 ## Function validateCustomDomain (Microsoft.Network/frontDoors@2018-08-01)
 * **Resource**: Microsoft.Network/frontDoors
 * **ApiVersion**: 2018-08-01
@@ -204,6 +221,10 @@
 ### Properties
 * **enabledState**: 'Disabled' | 'Enabled' | string: describes if the policy is in enabled state or disabled state
 * **mode**: 'Detection' | 'Prevention' | string: Describes if it is in detection mode  or prevention mode at policy level
+
+## PurgeParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be purged. Can describe a file path or a wild card directory.
 
 ## ResourceTags
 ### Properties

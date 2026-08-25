@@ -1395,5 +1395,20 @@
         "description": "The name of the receiver to resubscribe."
       }
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "subscribe",
+    "resourceType": "Microsoft.Insights/actionGroups",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/85"
+    },
+    "input": {
+      "$ref": "#/84"
+    }
   }
 ]

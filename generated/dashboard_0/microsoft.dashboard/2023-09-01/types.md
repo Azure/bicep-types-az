@@ -60,6 +60,11 @@
 * **ApiVersion**: 2023-09-01
 * **Output**: [GrafanaAvailablePluginListResponse](#grafanaavailablepluginlistresponse)
 
+## Function refreshManagedPrivateEndpoints (Microsoft.Dashboard/grafana@2023-09-01)
+* **Resource**: Microsoft.Dashboard/grafana
+* **ApiVersion**: 2023-09-01
+* **Output**: any
+
 ## AzureMonitorWorkspaceIntegration
 ### Properties
 * **azureMonitorWorkspaceResourceId**: string: The resource Id of the connected Azure Monitor Workspace.

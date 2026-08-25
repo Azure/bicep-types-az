@@ -3264,5 +3264,41 @@
     "itemType": {
       "$ref": "#/0"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2021-05-01",
+    "output": {
+      "$ref": "#/210"
+    },
+    "input": {
+      "$ref": "#/228"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2021-05-01",
+    "output": {
+      "$ref": "#/210"
+    },
+    "input": {
+      "$ref": "#/228"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteNode",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2021-05-01",
+    "output": {
+      "$ref": "#/210"
+    },
+    "input": {
+      "$ref": "#/228"
+    }
   }
 ]

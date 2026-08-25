@@ -231,6 +231,21 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
 * **type**: 'Microsoft.Logic/workflows/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.Logic/workflows/runs@2018-07-01-preview)
+* **Resource**: Microsoft.Logic/workflows/runs
+* **ApiVersion**: 2018-07-01-preview
+* **Output**: any
+
+## Function disable (Microsoft.Logic/workflows@2018-07-01-preview)
+* **Resource**: Microsoft.Logic/workflows
+* **ApiVersion**: 2018-07-01-preview
+* **Output**: any
+
+## Function enable (Microsoft.Logic/workflows@2018-07-01-preview)
+* **Resource**: Microsoft.Logic/workflows
+* **ApiVersion**: 2018-07-01-preview
+* **Output**: any
+
 ## Function generateUpgradedDefinition (Microsoft.Logic/workflows@2018-07-01-preview)
 * **Resource**: Microsoft.Logic/workflows
 * **ApiVersion**: 2018-07-01-preview
@@ -310,11 +325,57 @@
 * **ApiVersion**: 2018-07-01-preview
 * **Output**: any
 
+## Function logTrackingEvents (Microsoft.Logic/integrationAccounts@2018-07-01-preview)
+* **Resource**: Microsoft.Logic/integrationAccounts
+* **ApiVersion**: 2018-07-01-preview
+* **Input**: [TrackingEventsDefinition](#trackingeventsdefinition)
+* **Output**: any
+
+## Function move (Microsoft.Logic/workflows@2018-07-01-preview)
+* **Resource**: Microsoft.Logic/workflows
+* **ApiVersion**: 2018-07-01-preview
+* **Input**: [Workflow](#workflow)
+* **Output**: any
+
+## Function regenerateAccessKey (Microsoft.Logic/workflows@2018-07-01-preview)
+* **Resource**: Microsoft.Logic/workflows
+* **ApiVersion**: 2018-07-01-preview
+* **Input**: [RegenerateActionParameter](#regenerateactionparameter)
+* **Output**: any
+
 ## Function regenerateAccessKey (Microsoft.Logic/integrationAccounts@2018-07-01-preview)
 * **Resource**: Microsoft.Logic/integrationAccounts
 * **ApiVersion**: 2018-07-01-preview
 * **Input**: [RegenerateActionParameter](#regenerateactionparameter)
 * **Output**: [IntegrationAccount](#integrationaccount)
+
+## Function reset (Microsoft.Logic/workflows/triggers@2018-07-01-preview)
+* **Resource**: Microsoft.Logic/workflows/triggers
+* **ApiVersion**: 2018-07-01-preview
+* **Output**: any
+
+## Function resubmit (Microsoft.Logic/workflows/triggers/histories@2018-07-01-preview)
+* **Resource**: Microsoft.Logic/workflows/triggers/histories
+* **ApiVersion**: 2018-07-01-preview
+* **Output**: any
+
+## Function setState (Microsoft.Logic/workflows/triggers@2018-07-01-preview)
+* **Resource**: Microsoft.Logic/workflows/triggers
+* **ApiVersion**: 2018-07-01-preview
+* **Input**: [SetTriggerStateActionDefinition](#settriggerstateactiondefinition)
+* **Output**: any
+
+## Function validate (Microsoft.Logic/workflows@2018-07-01-preview)
+* **Resource**: Microsoft.Logic/workflows
+* **ApiVersion**: 2018-07-01-preview
+* **Input**: [Workflow](#workflow)
+* **Output**: any
+
+## Function validate (Microsoft.Logic/locations/workflows@2018-07-01-preview)
+* **Resource**: Microsoft.Logic/locations/workflows
+* **ApiVersion**: 2018-07-01-preview
+* **Input**: [Workflow](#workflow)
+* **Output**: any
 
 ## AgreementContent
 ### Properties
@@ -927,6 +988,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Response
 ### Properties
 * **bodyLink**: [ContentLink](#contentlink): Details on the location of the body content.
@@ -948,10 +1014,41 @@
 * **clientKeywords**: string[]: The client keywords.
 * **clientTrackingId**: string: The client tracking identifier.
 
+## SetTriggerStateActionDefinition
+### Properties
+* **source**: [WorkflowTrigger](#workflowtrigger) (Required): The workflow trigger.
+
 ## Sku
 ### Properties
 * **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' | string (Required): The name.
 * **plan**: [ResourceReference](#resourcereference): The reference to plan.
+
+## TrackingEvent
+### Properties
+* **error**: [TrackingEventErrorInfo](#trackingeventerrorinfo)
+* **eventLevel**: 'Critical' | 'Error' | 'Informational' | 'LogAlways' | 'Verbose' | 'Warning' (Required): The event level.
+* **eventTime**: string (Required)
+* **recordType**: 'AS2MDN' | 'AS2Message' | 'Custom' | 'EdifactFunctionalGroup' | 'EdifactFunctionalGroupAcknowledgment' | 'EdifactInterchange' | 'EdifactInterchangeAcknowledgment' | 'EdifactTransactionSet' | 'EdifactTransactionSetAcknowledgment' | 'NotSpecified' | 'X12FunctionalGroup' | 'X12FunctionalGroupAcknowledgment' | 'X12Interchange' | 'X12InterchangeAcknowledgment' | 'X12TransactionSet' | 'X12TransactionSetAcknowledgment' | string (Required): The tracking record type.
+
+## TrackingEventErrorInfo
+### Properties
+* **code**: string
+* **message**: string
+
+## TrackingEventsDefinition
+### Properties
+* **events**: [TrackingEvent](#trackingevent)[] (Required)
+* **sourceType**: string (Required)
+* **trackEventsOptions**: 'DisableSourceInfoEnrich' | 'None' | string: The track events operation options.
+
+## Workflow
+### Properties
+* **id**: string (ReadOnly): The resource id.
+* **location**: string: The resource location.
+* **name**: string (ReadOnly): Gets the resource name.
+* **properties**: [WorkflowProperties](#workflowproperties): The workflow properties.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **type**: string (ReadOnly): Gets the resource type.
 
 ## WorkflowOutputParameter
 ### Properties
@@ -1054,6 +1151,13 @@
 * **status**: 'Aborted' | 'Cancelled' | 'Failed' | 'Faulted' | 'Ignored' | 'NotSpecified' | 'Paused' | 'Running' | 'Skipped' | 'Succeeded' | 'Suspended' | 'TimedOut' | 'Waiting' | string (ReadOnly): Gets the status.
 * **trackedProperties**: any (ReadOnly): Gets the tracked properties.
 * **trackingId**: string (ReadOnly): Gets the tracking id.
+
+## WorkflowTrigger
+### Properties
+* **id**: string (ReadOnly): The resource id.
+* **name**: string (ReadOnly): Gets the workflow trigger name.
+* **properties**: [WorkflowTriggerProperties](#workflowtriggerproperties): The workflow trigger properties.
+* **type**: string (ReadOnly): Gets the workflow trigger type.
 
 ## WorkflowTriggerCallbackUrl
 ### Properties

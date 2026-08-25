@@ -5346,6 +5346,37 @@
   },
   {
     "$type": "ObjectType",
+    "name": "FailoverPolicies",
+    "properties": {
+      "failoverPolicies": {
+        "type": {
+          "$ref": "#/345"
+        },
+        "flags": 1,
+        "description": "List of failover policies."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/53"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failoverPriorityChange",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/96"
+    },
+    "input": {
+      "$ref": "#/344"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DatabaseAccountListKeysResult",
     "properties": {
       "primaryMasterKey": {
@@ -5384,7 +5415,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2020-06-01-preview",
     "output": {
-      "$ref": "#/344"
+      "$ref": "#/347"
     }
   },
   {
@@ -5393,7 +5424,7 @@
     "properties": {
       "connectionStrings": {
         "type": {
-          "$ref": "#/348"
+          "$ref": "#/351"
         },
         "flags": 0,
         "description": "An array that contains the connection strings for the Cosmos DB account."
@@ -5423,7 +5454,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/347"
+      "$ref": "#/350"
     }
   },
   {
@@ -5432,7 +5463,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2020-06-01-preview",
     "output": {
-      "$ref": "#/346"
+      "$ref": "#/349"
     }
   },
   {
@@ -5446,6 +5477,30 @@
         "flags": 1,
         "description": "Cosmos DB region, with spaces between words and each word capitalized."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "offlineRegion",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/96"
+    },
+    "input": {
+      "$ref": "#/353"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "onlineRegion",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/96"
+    },
+    "input": {
+      "$ref": "#/353"
     }
   },
   {
@@ -5474,7 +5529,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2020-06-01-preview",
     "output": {
-      "$ref": "#/351"
+      "$ref": "#/356"
     }
   },
   {
@@ -5483,7 +5538,7 @@
     "properties": {
       "keyKind": {
         "type": {
-          "$ref": "#/358"
+          "$ref": "#/363"
         },
         "flags": 1,
         "description": "The access key to regenerate."
@@ -5510,21 +5565,33 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/354"
+        "$ref": "#/359"
       },
       {
-        "$ref": "#/355"
+        "$ref": "#/360"
       },
       {
-        "$ref": "#/356"
+        "$ref": "#/361"
       },
       {
-        "$ref": "#/357"
+        "$ref": "#/362"
       },
       {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/96"
+    },
+    "input": {
+      "$ref": "#/358"
+    }
   },
   {
     "$type": "ObjectType",
@@ -5552,7 +5619,25 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
     "apiVersion": "2020-06-01-preview",
     "output": {
-      "$ref": "#/359"
+      "$ref": "#/365"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateAuthToken",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/96"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
+    "apiVersion": "2020-06-01-preview",
+    "output": {
+      "$ref": "#/96"
     }
   }
 ]

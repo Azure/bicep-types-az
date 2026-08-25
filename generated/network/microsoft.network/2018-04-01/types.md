@@ -648,6 +648,31 @@
 * **Input**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
 * **Output**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
 
+## Function start (Microsoft.Network/applicationGateways@2018-04-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2018-04-01
+* **Output**: any
+
+## Function start (Microsoft.Network/networkWatchers/connectionMonitors@2018-04-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2018-04-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/applicationGateways@2018-04-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2018-04-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/packetCaptures@2018-04-01)
+* **Resource**: Microsoft.Network/networkWatchers/packetCaptures
+* **ApiVersion**: 2018-04-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/connectionMonitors@2018-04-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2018-04-01
+* **Output**: any
+
 ## Function supportedvpndevices (Microsoft.Network/virtualNetworkGateways@2018-04-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
 * **ApiVersion**: 2018-04-01
@@ -664,6 +689,12 @@
 * **ApiVersion**: 2018-04-01
 * **Input**: [TroubleshootingParameters](#troubleshootingparameters)
 * **Output**: [TroubleshootingResult](#troubleshootingresult)
+
+## Function vpnConfiguration (Microsoft.Network/virtualWans@2018-04-01)
+* **Resource**: Microsoft.Network/virtualWans
+* **ApiVersion**: 2018-04-01
+* **Input**: [GetVpnSitesConfigurationRequest](#getvpnsitesconfigurationrequest)
+* **Output**: any
 
 ## Function vpndeviceconfigurationscript (Microsoft.Network/connections@2018-04-01)
 * **Resource**: Microsoft.Network/connections
@@ -1527,6 +1558,11 @@
 ## GatewayRouteListResult
 ### Properties
 * **value**: [GatewayRoute](#gatewayroute)[]: List of gateway routes
+
+## GetVpnSitesConfigurationRequest
+### Properties
+* **outputBlobSasUrl**: string: The sas-url to download the configurations for vpn-sites
+* **vpnSites**: [SubResource](#subresource)[]: List of resource-ids of the vpn-sites for which config is to be downloaded.
 
 ## HttpConfiguration
 ### Properties

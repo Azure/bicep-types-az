@@ -86,11 +86,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disconnect (Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2020-11-02-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions
+* **ApiVersion**: 2020-11-02-preview
+* **Output**: any
+
 ## Function expandMsixImage (Microsoft.DesktopVirtualization/hostPools@2020-11-02-preview)
 * **Resource**: Microsoft.DesktopVirtualization/hostPools
 * **ApiVersion**: 2020-11-02-preview
 * **Input**: [MsixImageURI](#msiximageuri)
 * **Output**: [ExpandMsixImageList](#expandmsiximagelist)
+
+## Function sendMessage (Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2020-11-02-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions
+* **ApiVersion**: 2020-11-02-preview
+* **Input**: [SendMessage](#sendmessage)
+* **Output**: any
 
 ## ApplicationGroupProperties
 ### Properties
@@ -212,6 +223,11 @@
 * **expirationTime**: string: Expiration time of registration token.
 * **registrationTokenOperation**: 'Delete' | 'None' | 'Update' | string: The type of resetting the token.
 * **token**: string: The registration token base64 encoded string.
+
+## SendMessage
+### Properties
+* **messageBody**: string: Body of message.
+* **messageTitle**: string: Title of message.
 
 ## SessionHostProperties
 ### Properties

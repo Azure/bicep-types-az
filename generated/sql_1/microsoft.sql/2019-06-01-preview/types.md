@@ -121,15 +121,67 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **properties**: [WorkloadClassifierProperties](#workloadclassifierproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.Sql/managedInstances/operations@2019-06-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/operations
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: any
+
+## Function cancelSync (Microsoft.Sql/servers/databases/syncGroups@2019-06-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/syncGroups
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: any
+
+## Function completeRestore (Microsoft.Sql/managedInstances/databases@2019-06-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/databases
+* **ApiVersion**: 2019-06-01-preview
+* **Input**: [CompleteDatabaseRestoreDefinition](#completedatabaserestoredefinition)
+* **Output**: any
+
+## Function failover (Microsoft.Sql/servers/databases@2019-06-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: any
+
+## Function failover (Microsoft.Sql/managedInstances@2019-06-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: any
+
+## Function move (Microsoft.Sql/servers/databases@2019-06-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2019-06-01-preview
+* **Input**: [ResourceMoveDefinition](#resourcemovedefinition)
+* **Output**: any
+
 ## Function pause (Microsoft.Sql/servers/databases@2019-06-01-preview)
 * **Resource**: Microsoft.Sql/servers/databases
 * **ApiVersion**: 2019-06-01-preview
 * **Output**: [Database](#database)
 
+## Function refreshHubSchema (Microsoft.Sql/servers/databases/syncGroups@2019-06-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/syncGroups
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: any
+
+## Function refreshSchema (Microsoft.Sql/servers/databases/syncGroups/syncMembers@2019-06-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/syncGroups/syncMembers
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: any
+
 ## Function resume (Microsoft.Sql/servers/databases@2019-06-01-preview)
 * **Resource**: Microsoft.Sql/servers/databases
 * **ApiVersion**: 2019-06-01-preview
 * **Output**: [Database](#database)
+
+## Function triggerSync (Microsoft.Sql/servers/databases/syncGroups@2019-06-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/syncGroups
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: any
+
+## Function upgradeDataWarehouse (Microsoft.Sql/servers/databases@2019-06-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: any
 
 ## AdministratorProperties
 ### Properties
@@ -138,6 +190,10 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **login**: string (Required): Login name of the server administrator.
 * **sid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): SID (object ID) of the server administrator.
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Tenant ID of the administrator.
+
+## CompleteDatabaseRestoreDefinition
+### Properties
+* **lastBackupName**: string (Required): The last backup name to apply
 
 ## Database
 ### Properties
@@ -306,6 +362,10 @@ When source subscription belongs to a different tenant than target subscription,
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Azure Active Directory principal id.
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Azure Active Directory tenant id.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+
+## ResourceMoveDefinition
+### Properties
+* **id**: string (Required): The target ID for the resource
 
 ## ServerPrivateEndpointConnection
 ### Properties

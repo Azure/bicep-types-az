@@ -1056,6 +1056,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.AppConfiguration/locations/deletedConfigurationStores",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/81"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CheckNameAvailabilityParameters",
     "properties": {
@@ -1068,7 +1080,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/83"
+          "$ref": "#/85"
         },
         "flags": 1,
         "description": "The resource type to check for name availability."
@@ -1083,7 +1095,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/82"
+        "$ref": "#/84"
       },
       {
         "$ref": "#/2"
@@ -1123,10 +1135,10 @@
     "resourceType": "Microsoft.AppConfiguration/locations",
     "apiVersion": "2022-05-01",
     "output": {
-      "$ref": "#/84"
+      "$ref": "#/86"
     },
     "input": {
-      "$ref": "#/81"
+      "$ref": "#/83"
     }
   }
 ]

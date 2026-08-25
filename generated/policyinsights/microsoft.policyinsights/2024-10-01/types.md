@@ -63,6 +63,11 @@
 * **ApiVersion**: 2024-10-01
 * **Output**: [SummarizeResults](#summarizeresults)
 
+## Function triggerEvaluation (Microsoft.PolicyInsights/policyStates@2024-10-01)
+* **Resource**: Microsoft.PolicyInsights/policyStates
+* **ApiVersion**: 2024-10-01
+* **Output**: any
+
 ## AttestationEvidence
 ### Properties
 * **description**: string: The description for this piece of evidence.

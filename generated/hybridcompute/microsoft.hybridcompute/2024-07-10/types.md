@@ -127,6 +127,12 @@
 * **ApiVersion**: 2024-07-10
 * **Output**: [NetworkSecurityPerimeterConfigurationReconcileResult](#networksecurityperimeterconfigurationreconcileresult)
 
+## Function upgradeExtensions (Microsoft.HybridCompute/machines@2024-07-10)
+* **Resource**: Microsoft.HybridCompute/machines
+* **ApiVersion**: 2024-07-10
+* **Input**: [MachineExtensionUpgrade](#machineextensionupgrade)
+* **Output**: any
+
 ## AccessRule
 ### Properties
 * **name**: string (ReadOnly): Name of the access rule.
@@ -201,6 +207,15 @@
 ### Properties
 * **licenseStatus**: int: The current status of the license profile key. Represented by the same integer value that is presented on the machine itself when querying the license key status.
 * **sku**: string: SKU number.
+
+## ExtensionTarget
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ExtensionTargetProperties](#extensiontargetproperties)
+
+## ExtensionTargetProperties
+### Properties
+* **targetVersion**: string: Properties for the specified Extension to Upgrade.
 
 ## ExtensionValueProperties
 ### Properties
@@ -381,6 +396,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## MachineExtensionUpgrade
+### Properties
+* **extensionTargets**: [ExtensionTarget](#extensiontarget): Describes the Extension Target Properties.
 
 ## MachineInstallPatchesParameters
 ### Properties

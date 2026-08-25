@@ -805,5 +805,115 @@
     "input": {
       "$ref": "#/43"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetConnectionsForProcessOnFocusedMachineRequest",
+    "properties": {
+      "focusedMachineId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Machine arm id"
+      },
+      "processIdOnFocusedMachine": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Process id"
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Filters for GetProcessNetworkConnections"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getConnectionsForProcessOnFocusedMachine",
+    "resourceType": "Microsoft.DependencyMap/maps",
+    "apiVersion": "2025-05-01-preview",
+    "output": {
+      "$ref": "#/56"
+    },
+    "input": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetConnectionsWithConnectedMachineForFocusedMachineRequest",
+    "properties": {
+      "focusedMachineId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Source machine arm id"
+      },
+      "connectedMachineId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Destination machine arm id"
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Filters for GetNetworkConnectionsBetweenMachines"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getConnectionsWithConnectedMachineForFocusedMachine",
+    "resourceType": "Microsoft.DependencyMap/maps",
+    "apiVersion": "2025-05-01-preview",
+    "output": {
+      "$ref": "#/56"
+    },
+    "input": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetDependencyViewForFocusedMachineRequest",
+    "properties": {
+      "focusedMachineId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Machine arm id"
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Filters for GetSingleMachineDependencyView"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDependencyViewForFocusedMachine",
+    "resourceType": "Microsoft.DependencyMap/maps",
+    "apiVersion": "2025-05-01-preview",
+    "output": {
+      "$ref": "#/56"
+    },
+    "input": {
+      "$ref": "#/70"
+    }
   }
 ]

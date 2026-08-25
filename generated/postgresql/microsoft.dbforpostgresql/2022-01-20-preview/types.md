@@ -64,6 +64,22 @@
 * **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
 * **Output**: [VirtualNetworkSubnetUsageResult](#virtualnetworksubnetusageresult)
 
+## Function restart (Microsoft.DBforPostgreSQL/flexibleServers@2022-01-20-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2022-01-20-preview
+* **Input**: [RestartParameter](#restartparameter)
+* **Output**: any
+
+## Function start (Microsoft.DBforPostgreSQL/flexibleServers@2022-01-20-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2022-01-20-preview
+* **Output**: any
+
+## Function stop (Microsoft.DBforPostgreSQL/flexibleServers@2022-01-20-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2022-01-20-preview
+* **Output**: any
+
 ## Backup
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
@@ -117,6 +133,11 @@
 * **delegatedSubnetResourceId**: string: delegated subnet arm resource id.
 * **privateDnsZoneArmResourceId**: string: private dns zone arm resource id.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): public network access is enabled or not
+
+## RestartParameter
+### Properties
+* **failoverMode**: 'ForcedFailover' | 'ForcedSwitchover' | 'PlannedFailover' | 'PlannedSwitchover' | string: Failover mode.
+* **restartWithFailover**: bool: Indicates whether to restart the server with failover.
 
 ## ServerBackupProperties
 ### Properties

@@ -1281,5 +1281,40 @@
     "input": {
       "$ref": "#/78"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UploadFile",
+    "properties": {
+      "content": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "File Content in base64 encoded format"
+      },
+      "chunkIndex": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Index of the uploaded chunk (Index starts at 0)"
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upload",
+    "resourceType": "Microsoft.Support/fileWorkspaces/files",
+    "apiVersion": "2022-09-01-preview",
+    "output": {
+      "$ref": "#/85"
+    },
+    "input": {
+      "$ref": "#/84"
+    }
   }
 ]

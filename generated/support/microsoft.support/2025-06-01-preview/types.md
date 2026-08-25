@@ -89,6 +89,12 @@
 * **Input**: [ProblemClassificationsClassificationInput](#problemclassificationsclassificationinput)
 * **Output**: [ProblemClassificationsClassificationOutput](#problemclassificationsclassificationoutput)
 
+## Function upload (Microsoft.Support/fileWorkspaces/files@2025-06-01-preview)
+* **Resource**: Microsoft.Support/fileWorkspaces/files
+* **ApiVersion**: 2025-06-01-preview
+* **Input**: [UploadFile](#uploadfile)
+* **Output**: any
+
 ## ChatTranscriptDetailsProperties
 ### Properties
 * **messages**: [MessageProperties](#messageproperties)[]: List of chat transcript communication resources.
@@ -261,4 +267,9 @@
 ## TechnicalTicketDetails
 ### Properties
 * **resourceId**: string: This is the resource Id of the Azure service resource (For example: A virtual machine resource or an HDInsight resource) for which the support ticket is created.
+
+## UploadFile
+### Properties
+* **chunkIndex**: int: Index of the uploaded chunk (Index starts at 0)
+* **content**: string: File Content in base64 encoded format
 

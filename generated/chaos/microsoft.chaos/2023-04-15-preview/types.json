@@ -1247,5 +1247,63 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExperimentCancelOperationResult",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String of the Experiment name."
+      },
+      "statusUrl": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "URL to retrieve the Experiment status."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Chaos/experiments",
+    "apiVersion": "2023-04-15-preview",
+    "output": {
+      "$ref": "#/90"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExperimentStartOperationResult",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "String of the Experiment name."
+      },
+      "statusUrl": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "URL to retrieve the Experiment status."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Chaos/experiments",
+    "apiVersion": "2023-04-15-preview",
+    "output": {
+      "$ref": "#/92"
+    }
   }
 ]

@@ -8,42 +8,92 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action pause under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/pause' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/restart' has no response schema. Returning 'any'.
+warning | Resource action save under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/save' has no response schema. Returning 'any'.
+warning | Resource action start under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action pause under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/pause' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/restart' has no response schema. Returning 'any'.
+warning | Resource action save under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/save' has no response schema. Returning 'any'.
+warning | Resource action start under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action pause under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/pause' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/restart' has no response schema. Returning 'any'.
+warning | Resource action save under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/save' has no response schema. Returning 'any'.
+warning | Resource action start under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action pause under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/pause' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/restart' has no response schema. Returning 'any'.
+warning | Resource action save under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/save' has no response schema. Returning 'any'.
+warning | Resource action start under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action pause under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/pause' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/restart' has no response schema. Returning 'any'.
+warning | Resource action save under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/save' has no response schema. Returning 'any'.
+warning | Resource action start under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action pause under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/pause' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/restart' has no response schema. Returning 'any'.
+warning | Resource action save under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/save' has no response schema. Returning 'any'.
+warning | Resource action start under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action pause under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/pause' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/restart' has no response schema. Returning 'any'.
+warning | Resource action save under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/save' has no response schema. Returning 'any'.
+warning | Resource action start under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action pause under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/pause' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/restart' has no response schema. Returning 'any'.
+warning | Resource action save under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/save' has no response schema. Returning 'any'.
+warning | Resource action start under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action pause under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/pause' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/restart' has no response schema. Returning 'any'.
+warning | Resource action save under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/save' has no response schema. Returning 'any'.
+warning | Resource action start under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action pause under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/pause' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/restart' has no response schema. Returning 'any'.
+warning | Resource action save under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/save' has no response schema. Returning 'any'.
+warning | Resource action start under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/{resourceUri}/providers/Microsoft.AzureStackHCI/virtualMachineInstances/default/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'GalleryOSDiskImage' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -144,9 +194,9 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'VirtualNetworkP
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualMachines/{virtualMachineName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualMachines/{virtualMachineName}/stop': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualMachines/{virtualMachineName}/restart': failed to find a response schema
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualMachines/{virtualMachineName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualMachines/{virtualMachineName}/stop' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualMachines/{virtualMachineName}/restart' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'galleryOSDiskImage' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -160,13 +210,13 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Virtualnetworks
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualmachines/{virtualmachinesName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualmachines/{virtualmachinesName}/stop': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualmachines/{virtualmachinesName}/restart': failed to find a response schema
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualmachines/{virtualmachinesName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualmachines/{virtualmachinesName}/stop' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualmachines/{virtualmachinesName}/restart' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'VirtualnetworksPropertiesSubnetsItem' -> 'VirtualnetworksPropertiesSubnetsItemAutoGenerated'
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualmachines/{virtualmachinesName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualmachines/{virtualmachinesName}/stop': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualmachines/{virtualmachinesName}/restart': failed to find a response schema
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualmachines/{virtualmachinesName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualmachines/{virtualmachinesName}/stop' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/virtualmachines/{virtualmachinesName}/restart' has no response schema. Returning 'any'.

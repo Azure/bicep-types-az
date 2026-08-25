@@ -355,6 +355,52 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RunDiskInspectionInput",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Qualified ID of the resource."
+      },
+      "manifest": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name of manifest in order to trigger Disk Inspection."
+      },
+      "uploadSasUri": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1,
+        "description": "SAS uri to the blob where results will be uploaded."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.Compute/locations/diagnostics",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/31"
+    },
+    "input": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "StorageConfigurationInput",
     "properties": {
       "storageAccountId": {
@@ -364,6 +410,18 @@
         "flags": 1,
         "description": "Fully qualified storage account Id. Example: \"/subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Storage/storageAccounts/{storageAccountName}\""
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "registerStorageConfiguration",
+    "resourceType": "Microsoft.Compute/locations/diagnostics",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/31"
+    },
+    "input": {
+      "$ref": "#/33"
     }
   },
   {
@@ -385,7 +443,7 @@
     "resourceType": "Microsoft.Compute/locations/diagnostics",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/30"
+      "$ref": "#/35"
     }
   },
   {
@@ -394,28 +452,28 @@
     "properties": {
       "desiredLocations": {
         "type": {
-          "$ref": "#/33"
+          "$ref": "#/38"
         },
         "flags": 0,
         "description": "The desired regions"
       },
       "desiredSizes": {
         "type": {
-          "$ref": "#/35"
+          "$ref": "#/40"
         },
         "flags": 0,
         "description": "The desired resource SKUs."
       },
       "desiredCount": {
         "type": {
-          "$ref": "#/36"
+          "$ref": "#/41"
         },
         "flags": 0,
         "description": "Desired instance count per region/zone based on the scope."
       },
       "availabilityZones": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/42"
         },
         "flags": 0,
         "description": "Defines if the scope is zonal or regional."
@@ -444,7 +502,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/34"
+      "$ref": "#/39"
     }
   },
   {
@@ -459,35 +517,35 @@
     "properties": {
       "desiredLocations": {
         "type": {
-          "$ref": "#/39"
+          "$ref": "#/44"
         },
         "flags": 0,
         "description": "The desired regions"
       },
       "desiredSizes": {
         "type": {
-          "$ref": "#/40"
+          "$ref": "#/45"
         },
         "flags": 0,
         "description": "The desired resource SKUs."
       },
       "desiredCount": {
         "type": {
-          "$ref": "#/36"
+          "$ref": "#/41"
         },
         "flags": 0,
         "description": "Desired instance count per region/zone based on the scope."
       },
       "availabilityZones": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/42"
         },
         "flags": 0,
         "description": "Defines if the scope is zonal or regional."
       },
       "placementScores": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/47"
         },
         "flags": 0,
         "description": "The spot placement scores."
@@ -503,7 +561,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/34"
+      "$ref": "#/39"
     }
   },
   {
@@ -540,7 +598,7 @@
       },
       "isQuotaAvailable": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/42"
         },
         "flags": 0,
         "description": "Whether the desired quota is available."
@@ -550,7 +608,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/41"
+      "$ref": "#/46"
     }
   },
   {
@@ -559,10 +617,10 @@
     "resourceType": "Microsoft.Compute/locations/diagnostics",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/38"
+      "$ref": "#/43"
     },
     "input": {
-      "$ref": "#/32"
+      "$ref": "#/37"
     }
   },
   {
@@ -571,28 +629,28 @@
     "properties": {
       "desiredLocations": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/50"
         },
         "flags": 0,
         "description": "The desired regions"
       },
       "desiredSizes": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/51"
         },
         "flags": 0,
         "description": "The desired resource SKUs."
       },
       "desiredCount": {
         "type": {
-          "$ref": "#/36"
+          "$ref": "#/41"
         },
         "flags": 0,
         "description": "Desired instance count per region/zone based on the scope."
       },
       "availabilityZones": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/42"
         },
         "flags": 0,
         "description": "Defines if the scope is zonal or regional."
@@ -608,7 +666,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/34"
+      "$ref": "#/39"
     }
   },
   {
@@ -617,35 +675,35 @@
     "properties": {
       "desiredLocations": {
         "type": {
-          "$ref": "#/48"
+          "$ref": "#/53"
         },
         "flags": 0,
         "description": "The desired regions"
       },
       "desiredSizes": {
         "type": {
-          "$ref": "#/49"
+          "$ref": "#/54"
         },
         "flags": 0,
         "description": "The desired resource SKUs."
       },
       "desiredCount": {
         "type": {
-          "$ref": "#/36"
+          "$ref": "#/41"
         },
         "flags": 0,
         "description": "Desired instance count per region/zone based on the scope."
       },
       "availabilityZones": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/42"
         },
         "flags": 0,
         "description": "Defines if the scope is zonal or regional."
       },
       "placementScores": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/55"
         },
         "flags": 0,
         "description": "The spot placement scores."
@@ -661,13 +719,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/34"
+      "$ref": "#/39"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/41"
+      "$ref": "#/46"
     }
   },
   {
@@ -676,10 +734,10 @@
     "resourceType": "Microsoft.Compute/locations/placementScores",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/47"
+      "$ref": "#/52"
     },
     "input": {
-      "$ref": "#/44"
+      "$ref": "#/49"
     }
   },
   {
@@ -688,28 +746,28 @@
     "properties": {
       "regularPriorityProfile": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/31"
         },
         "flags": 0,
         "description": "The regular priority VM profile."
       },
       "spotPriorityProfile": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/31"
         },
         "flags": 0,
         "description": "The spot priority VM profile."
       },
       "recommendationProperties": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/31"
         },
         "flags": 0,
         "description": "The recommendation properties."
       },
       "resourceProperties": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/31"
         },
         "flags": 0,
         "description": "The resource properties."
@@ -717,15 +775,12 @@
     }
   },
   {
-    "$type": "AnyType"
-  },
-  {
     "$type": "ObjectType",
     "name": "AttributeBasedVMSizeRecommenderResponse",
     "properties": {
       "recommendedVMSizes": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/31"
         },
         "flags": 0,
         "description": "The recommended VMSizes."
@@ -738,10 +793,10 @@
     "resourceType": "Microsoft.Compute/locations/vmSizeRecommendations",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/54"
+      "$ref": "#/58"
     },
     "input": {
-      "$ref": "#/52"
+      "$ref": "#/57"
     }
   }
 ]

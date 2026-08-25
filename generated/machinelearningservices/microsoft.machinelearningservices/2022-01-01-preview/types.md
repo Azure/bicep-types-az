@@ -96,6 +96,26 @@
 * **ApiVersion**: 2022-01-01-preview
 * **Output**: [NotebookResourceInfo](#notebookresourceinfo)
 
+## Function restart (Microsoft.MachineLearningServices/workspaces/computes@2022-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: any
+
+## Function resyncKeys (Microsoft.MachineLearningServices/workspaces@2022-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: any
+
+## Function start (Microsoft.MachineLearningServices/workspaces/computes@2022-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.MachineLearningServices/workspaces/computes@2022-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: any
+
 ## Function updateQuotas (Microsoft.MachineLearningServices/locations@2022-01-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/locations
 * **ApiVersion**: 2022-01-01-preview

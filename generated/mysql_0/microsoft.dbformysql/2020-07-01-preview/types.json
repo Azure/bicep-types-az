@@ -1192,12 +1192,42 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBForMySql/flexibleServers",
+    "apiVersion": "2020-07-01-preview",
+    "output": {
+      "$ref": "#/90"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBForMySql/flexibleServers",
+    "apiVersion": "2020-07-01-preview",
+    "output": {
+      "$ref": "#/90"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBForMySql/flexibleServers",
+    "apiVersion": "2020-07-01-preview",
+    "output": {
+      "$ref": "#/90"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ConfigurationListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/96"
         },
         "flags": 0,
         "description": "The list of server configurations."
@@ -1248,7 +1278,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/91"
+      "$ref": "#/95"
     }
   },
   {
@@ -1257,10 +1287,10 @@
     "resourceType": "Microsoft.DBForMySql/flexibleServers",
     "apiVersion": "2020-07-01-preview",
     "output": {
-      "$ref": "#/90"
+      "$ref": "#/94"
     },
     "input": {
-      "$ref": "#/90"
+      "$ref": "#/94"
     }
   },
   {
@@ -1282,7 +1312,7 @@
     "properties": {
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/97"
+          "$ref": "#/101"
         },
         "flags": 2,
         "description": "A list of delegated subnet usage"
@@ -1312,7 +1342,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/96"
+      "$ref": "#/100"
     }
   },
   {
@@ -1321,10 +1351,10 @@
     "resourceType": "Microsoft.DBForMySql/locations",
     "apiVersion": "2020-07-01-preview",
     "output": {
-      "$ref": "#/95"
+      "$ref": "#/99"
     },
     "input": {
-      "$ref": "#/94"
+      "$ref": "#/98"
     }
   }
 ]

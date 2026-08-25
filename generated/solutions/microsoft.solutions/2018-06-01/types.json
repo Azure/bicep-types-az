@@ -1559,6 +1559,15 @@
     "writableScopes": 8
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "refreshPermissions",
+    "resourceType": "Microsoft.Solutions/applications",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/6"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "UpdateAccessDefinition",
     "properties": {
@@ -1571,21 +1580,21 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/122"
+          "$ref": "#/123"
         },
         "flags": 1,
         "description": "The JIT request metadata."
       },
       "status": {
         "type": {
-          "$ref": "#/126"
+          "$ref": "#/127"
         },
         "flags": 1,
         "description": "The JIT status."
       },
       "subStatus": {
         "type": {
-          "$ref": "#/133"
+          "$ref": "#/134"
         },
         "flags": 1,
         "description": "The JIT status."
@@ -1642,13 +1651,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/123"
-      },
-      {
         "$ref": "#/124"
       },
       {
         "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
       },
       {
         "$ref": "#/2"
@@ -1683,9 +1692,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/127"
-      },
-      {
         "$ref": "#/128"
       },
       {
@@ -1701,9 +1707,24 @@
         "$ref": "#/132"
       },
       {
+        "$ref": "#/133"
+      },
+      {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAccess",
+    "resourceType": "Microsoft.Solutions/applications",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/122"
+    },
+    "input": {
+      "$ref": "#/122"
+    }
   },
   {
     "$type": "ObjectType",
@@ -1718,7 +1739,7 @@
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/135"
+          "$ref": "#/137"
         },
         "flags": 0,
         "description": "The user assigned identities."
@@ -1737,7 +1758,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/138"
+          "$ref": "#/140"
         },
         "flags": 0,
         "description": "The array of managed identity tokens."
@@ -1802,7 +1823,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/137"
+      "$ref": "#/139"
     }
   },
   {
@@ -1811,10 +1832,10 @@
     "resourceType": "Microsoft.Solutions/applications",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/136"
+      "$ref": "#/138"
     },
     "input": {
-      "$ref": "#/134"
+      "$ref": "#/136"
     }
   }
 ]

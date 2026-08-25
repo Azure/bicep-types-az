@@ -138,6 +138,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureStackHCI/edgeDevices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function apply (Microsoft.AzureStackHCI/clusters/updates@2024-01-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/updates
+* **ApiVersion**: 2024-01-01
+* **Output**: any
+
 ## Function consentAndInstallDefaultExtensions (Microsoft.AzureStackHCI/clusters/arcSettings@2024-01-01)
 * **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
 * **ApiVersion**: 2024-01-01
@@ -163,6 +168,23 @@
 * **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
 * **ApiVersion**: 2024-01-01
 * **Output**: [PasswordCredential](#passwordcredential)
+
+## Function initializeDisableProcess (Microsoft.AzureStackHCI/clusters/arcSettings@2024-01-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2024-01-01
+* **Output**: any
+
+## Function upgrade (Microsoft.AzureStackHCI/clusters/arcSettings/extensions@2024-01-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings/extensions
+* **ApiVersion**: 2024-01-01
+* **Input**: [ExtensionUpgradeParameters](#extensionupgradeparameters)
+* **Output**: any
+
+## Function uploadCertificate (Microsoft.AzureStackHCI/clusters@2024-01-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2024-01-01
+* **Input**: [UploadCertificateRequest](#uploadcertificaterequest)
+* **Output**: any
 
 ## Function validate (Microsoft.AzureStackHCI/edgeDevices@2024-01-01)
 * **Resource**: Microsoft.AzureStackHCI/edgeDevices
@@ -404,6 +426,10 @@
 * **perNodeExtensionDetails**: [PerNodeExtensionState](#pernodeextensionstate)[] (ReadOnly): State of Arc Extension in each of the nodes.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'DisableInProgress' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Extension proxy resource.
 
+## ExtensionUpgradeParameters
+### Properties
+* **targetVersion**: string: Extension Upgrade Target Version.
+
 ## HostNetwork
 ### Properties
 * **enableStorageAutoIp**: bool: Optional parameter required only for 3 Nodes Switchless deployments. This allows users to specify IPs and Mask for Storage NICs when Network ATC is not assigning the IPs for storage automatically.
@@ -542,6 +568,10 @@
 * **bandwidthPercentage_SMB**: string: This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
 * **priorityValue8021Action_Cluster**: string: This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
 * **priorityValue8021Action_SMB**: string: This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
+
+## RawCertificateData
+### Properties
+* **certificates**: string[]
 
 ## ReportedProperties
 ### Properties
@@ -691,6 +721,10 @@
 * **packageVersions**: [PackageVersionInfo](#packageversioninfo)[]: Current version of each updatable component.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'DisableInProgress' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the UpdateSummaries proxy resource.
 * **state**: 'AppliedSuccessfully' | 'NeedsAttention' | 'PreparationFailed' | 'PreparationInProgress' | 'Unknown' | 'UpdateAvailable' | 'UpdateFailed' | 'UpdateInProgress' | string: Overall update state of the stamp.
+
+## UploadCertificateRequest
+### Properties
+* **properties**: [RawCertificateData](#rawcertificatedata)
 
 ## UserAssignedIdentities
 ### Properties

@@ -2136,11 +2136,46 @@
   },
   {
     "$type": "ObjectType",
+    "name": "StopBackupProtectionGroupRequest",
+    "properties": {
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The reason for stopping the backup"
+      },
+      "comment": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Any further comments"
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopBackup",
+    "resourceType": "Commvault.ContentStore/cloudAccounts/protectionGroups",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/197"
+    },
+    "input": {
+      "$ref": "#/196"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "RestorePoints",
     "properties": {
       "restoreTimes": {
         "type": {
-          "$ref": "#/197"
+          "$ref": "#/200"
         },
         "flags": 3,
         "description": "The Commvault Protected Item Restore points"
@@ -2159,7 +2194,7 @@
     "resourceType": "Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/196"
+      "$ref": "#/199"
     }
   },
   {
@@ -2168,14 +2203,14 @@
     "properties": {
       "inPlaceRestore": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/203"
         },
         "flags": 1,
         "description": "Check whether inplace or out of place restore."
       },
       "restoreType": {
         "type": {
-          "$ref": "#/204"
+          "$ref": "#/207"
         },
         "flags": 0,
         "description": "Type of Restore"
@@ -2189,7 +2224,7 @@
       },
       "vmDestinationInfo": {
         "type": {
-          "$ref": "#/205"
+          "$ref": "#/208"
         },
         "flags": 1,
         "description": "The vm destination details of the VM."
@@ -2215,13 +2250,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/201"
+        "$ref": "#/204"
       },
       {
-        "$ref": "#/202"
+        "$ref": "#/205"
       },
       {
-        "$ref": "#/203"
+        "$ref": "#/206"
       },
       {
         "$ref": "#/2"
@@ -2234,7 +2269,7 @@
     "properties": {
       "vmInfoList": {
         "type": {
-          "$ref": "#/209"
+          "$ref": "#/212"
         },
         "flags": 1,
         "description": "List of information on VMs"
@@ -2261,7 +2296,7 @@
       },
       "powerOnVmAfterRestore": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/203"
         },
         "flags": 0,
         "description": "The identifier to check if VM needs to be powered on."
@@ -2303,7 +2338,7 @@
       },
       "attachAndSwapOsDisk": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/203"
         },
         "flags": 0,
         "description": "The identifier to check if to attach and swap disk of the VM."
@@ -2317,7 +2352,7 @@
       },
       "vmtag": {
         "type": {
-          "$ref": "#/208"
+          "$ref": "#/211"
         },
         "flags": 0,
         "description": "The vmTag of the VM."
@@ -2347,13 +2382,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/207"
+      "$ref": "#/210"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/206"
+      "$ref": "#/209"
     }
   },
   {
@@ -2369,7 +2404,7 @@
       },
       "jobIds": {
         "type": {
-          "$ref": "#/211"
+          "$ref": "#/214"
         },
         "flags": 3,
         "description": "The jobIds returned from Commvault."
@@ -2388,10 +2423,10 @@
     "resourceType": "Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/210"
+      "$ref": "#/213"
     },
     "input": {
-      "$ref": "#/199"
+      "$ref": "#/202"
     }
   }
 ]

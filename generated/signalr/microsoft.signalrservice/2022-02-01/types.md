@@ -71,6 +71,17 @@
 * **ApiVersion**: 2022-02-01
 * **Output**: [SignalRKeys](#signalrkeys)
 
+## Function regenerateKey (Microsoft.SignalRService/signalR@2022-02-01)
+* **Resource**: Microsoft.SignalRService/signalR
+* **ApiVersion**: 2022-02-01
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [SignalRKeys](#signalrkeys)
+
+## Function restart (Microsoft.SignalRService/signalR@2022-02-01)
+* **Resource**: Microsoft.SignalRService/signalR
+* **ApiVersion**: 2022-02-01
+* **Output**: any
+
 ## CustomCertificateProperties
 ### Properties
 * **keyVaultBaseUri**: string (Required): Base uri of the KeyVault that stores certificate.
@@ -167,6 +178,10 @@ It also appears in the aud (audience) claim of the issued token.
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## RegenerateKeyParameters
+### Properties
+* **keyType**: 'Primary' | 'Salt' | 'Secondary' | string: The type of access key.
 
 ## ResourceLogCategory
 ### Properties

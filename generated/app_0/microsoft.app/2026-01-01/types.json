@@ -10911,12 +10911,21 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.App/jobs/executions",
+    "apiVersion": "2026-01-01",
+    "output": {
+      "$ref": "#/206"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "JobSecretsCollection",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/719"
+          "$ref": "#/720"
         },
         "flags": 1,
         "description": "Collection of resources."
@@ -10935,7 +10944,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/718"
+      "$ref": "#/719"
     }
   },
   {
@@ -10964,7 +10973,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/721"
+      "$ref": "#/722"
     },
     "input": {
       "$ref": "#/558"
@@ -10976,7 +10985,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/725"
+          "$ref": "#/726"
         },
         "flags": 1,
         "description": "The JobExecution items on this page"
@@ -11034,7 +11043,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/724"
+      "$ref": "#/725"
     }
   },
   {
@@ -11043,7 +11052,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/723"
+      "$ref": "#/724"
     }
   },
   {
@@ -11052,14 +11061,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/728"
+          "$ref": "#/729"
         },
         "flags": 0,
         "description": "Environment auth token resource specific properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/729"
+          "$ref": "#/730"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -11135,7 +11144,7 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/727"
+      "$ref": "#/728"
     }
   },
   {
@@ -11156,7 +11165,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/734"
+          "$ref": "#/735"
         },
         "flags": 1,
         "description": "Collection of secrets used by a Dapr component"
@@ -11186,7 +11195,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/733"
+      "$ref": "#/734"
     }
   },
   {
@@ -11195,7 +11204,7 @@
     "resourceType": "Microsoft.App/connectedEnvironments/daprComponents",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/732"
+      "$ref": "#/733"
     }
   },
   {
@@ -11211,7 +11220,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/740"
+          "$ref": "#/741"
         },
         "flags": 0,
         "description": "Gets the logic app hybrid workflow kind."
@@ -11262,13 +11271,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/737"
-      },
-      {
         "$ref": "#/738"
       },
       {
         "$ref": "#/739"
+      },
+      {
+        "$ref": "#/740"
       },
       {
         "$ref": "#/0"
@@ -11281,7 +11290,34 @@
     "resourceType": "Microsoft.App/logicApps",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/736"
+      "$ref": "#/737"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2026-01-01",
+    "output": {
+      "$ref": "#/206"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deactivate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2026-01-01",
+    "output": {
+      "$ref": "#/206"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2026-01-01",
+    "output": {
+      "$ref": "#/206"
     }
   },
   {
@@ -11290,7 +11326,7 @@
     "resourceType": "Microsoft.App/managedEnvironments/daprComponents",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/732"
+      "$ref": "#/733"
     }
   }
 ]

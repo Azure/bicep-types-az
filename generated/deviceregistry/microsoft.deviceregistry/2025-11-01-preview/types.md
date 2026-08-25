@@ -179,6 +179,11 @@
 * **Input**: [NamespaceMigrateRequest](#namespacemigraterequest)
 * **Output**: [NamespaceMigrateResponse](#namespacemigrateresponse)
 
+## Function synchronize (Microsoft.DeviceRegistry/namespaces/credentials@2025-11-01-preview)
+* **Resource**: Microsoft.DeviceRegistry/namespaces/credentials
+* **ApiVersion**: 2025-11-01-preview
+* **Output**: any
+
 ## AssetEndpointProfileProperties
 ### Properties
 * **additionalConfiguration**: string: Stringified JSON that contains connectivity type specific further configuration (e.g. OPC UA, Modbus, ONVIF).

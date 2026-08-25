@@ -50,6 +50,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Communication/emailServices/domains/senderUsernames' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancelVerification (Microsoft.Communication/emailServices/domains@2023-03-31)
+* **Resource**: Microsoft.Communication/emailServices/domains
+* **ApiVersion**: 2023-03-31
+* **Input**: [VerificationParameter](#verificationparameter)
+* **Output**: any
+
+## Function initiateVerification (Microsoft.Communication/emailServices/domains@2023-03-31)
+* **Resource**: Microsoft.Communication/emailServices/domains
+* **ApiVersion**: 2023-03-31
+* **Input**: [VerificationParameter](#verificationparameter)
+* **Output**: any
+
 ## Function linkNotificationHub (Microsoft.Communication/communicationServices@2023-03-31)
 * **Resource**: Microsoft.Communication/communicationServices
 * **ApiVersion**: 2023-03-31
@@ -166,6 +178,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## VerificationParameter
+### Properties
+* **verificationType**: 'DKIM' | 'DKIM2' | 'DMARC' | 'Domain' | 'SPF' | string (Required): Type of verification.
 
 ## VerificationStatusRecord
 ### Properties

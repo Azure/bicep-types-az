@@ -185,10 +185,51 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Chaos/workspaces/scenarios/runs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.Chaos/experiments@2026-08-01-preview)
+* **Resource**: Microsoft.Chaos/experiments
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
+## Function cancel (Microsoft.Chaos/workspaces/scenarios/runs@2026-08-01-preview)
+* **Resource**: Microsoft.Chaos/workspaces/scenarios/runs
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
+## Function discover (Microsoft.Chaos/workspaces@2026-08-01-preview)
+* **Resource**: Microsoft.Chaos/workspaces
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
+## Function evaluate (Microsoft.Chaos/workspaces@2026-08-01-preview)
+* **Resource**: Microsoft.Chaos/workspaces
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
+## Function execute (Microsoft.Chaos/workspaces/scenarios/configurations@2026-08-01-preview)
+* **Resource**: Microsoft.Chaos/workspaces/scenarios/configurations
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
+## Function fixResourcePermissions (Microsoft.Chaos/workspaces/scenarios/configurations@2026-08-01-preview)
+* **Resource**: Microsoft.Chaos/workspaces/scenarios/configurations
+* **ApiVersion**: 2026-08-01-preview
+* **Input**: [FixResourcePermissionsRequest](#fixresourcepermissionsrequest)
+* **Output**: any
+
 ## Function getExecutionDetails (Microsoft.Chaos/experiments/executions@2026-08-01-preview)
 * **Resource**: Microsoft.Chaos/experiments/executions
 * **ApiVersion**: 2026-08-01-preview
 * **Output**: [ExperimentExecutionDetails](#experimentexecutiondetails)
+
+## Function start (Microsoft.Chaos/experiments@2026-08-01-preview)
+* **Resource**: Microsoft.Chaos/experiments
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
+## Function validate (Microsoft.Chaos/workspaces/scenarios/configurations@2026-08-01-preview)
+* **Resource**: Microsoft.Chaos/workspaces/scenarios/configurations
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
 
 ## ActionDependency
 ### Properties
@@ -410,6 +451,10 @@ for the connection.
 ## ExternalResource
 ### Properties
 * **resourceId**: string: The resource ID of the external resource.
+
+## FixResourcePermissionsRequest
+### Properties
+* **whatIf**: bool: Optional value that indicates whether to run a "dry run" of fixing resource permissions.
 
 ## KeyValuePair
 ### Properties

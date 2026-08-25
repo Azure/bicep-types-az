@@ -4032,6 +4032,18 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "offboard",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts",
+    "apiVersion": "2020-12-16-preview",
+    "output": {
+      "$ref": "#/334"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "GetFileUploadURLParameters",
     "properties": {
@@ -4070,10 +4082,10 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts",
     "apiVersion": "2020-12-16-preview",
     "output": {
-      "$ref": "#/335"
+      "$ref": "#/337"
     },
     "input": {
-      "$ref": "#/334"
+      "$ref": "#/336"
     }
   },
   {
@@ -4123,7 +4135,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/341"
+          "$ref": "#/343"
         },
         "flags": 0,
         "description": "The reason for unavailability of a name. Required if nameAvailable == false."
@@ -4149,10 +4161,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/339"
+        "$ref": "#/341"
       },
       {
-        "$ref": "#/340"
+        "$ref": "#/342"
       },
       {
         "$ref": "#/0"
@@ -4165,10 +4177,19 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts",
     "apiVersion": "2020-12-16-preview",
     "output": {
-      "$ref": "#/338"
+      "$ref": "#/340"
     },
     "input": {
-      "$ref": "#/337"
+      "$ref": "#/339"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "hardDelete",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/packages",
+    "apiVersion": "2020-12-16-preview",
+    "output": {
+      "$ref": "#/334"
     }
   },
   {
@@ -4177,7 +4198,7 @@
     "properties": {
       "downloadUrl": {
         "type": {
-          "$ref": "#/344"
+          "$ref": "#/347"
         },
         "flags": 2,
         "description": "The download URL."
@@ -4201,7 +4222,7 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts/packages",
     "apiVersion": "2020-12-16-preview",
     "output": {
-      "$ref": "#/343"
+      "$ref": "#/346"
     }
   },
   {
@@ -4210,7 +4231,7 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
     "apiVersion": "2020-12-16-preview",
     "output": {
-      "$ref": "#/343"
+      "$ref": "#/346"
     }
   },
   {
@@ -4219,7 +4240,7 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
     "apiVersion": "2020-12-16-preview",
     "output": {
-      "$ref": "#/343"
+      "$ref": "#/346"
     }
   }
 ]

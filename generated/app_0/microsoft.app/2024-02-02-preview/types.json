@@ -12377,6 +12377,58 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2024-02-02-preview",
+    "output": {
+      "$ref": "#/174"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deactivate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2024-02-02-preview",
+    "output": {
+      "$ref": "#/174"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2024-02-02-preview",
+    "output": {
+      "$ref": "#/174"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PatchSkipConfig",
+    "properties": {
+      "skip": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "The flag to indicate whether to skip the patch or not."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "skipConfig",
+    "resourceType": "Microsoft.App/containerApps/patches",
+    "apiVersion": "2024-02-02-preview",
+    "output": {
+      "$ref": "#/174"
+    },
+    "input": {
+      "$ref": "#/810"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ContainerAppsPatchResource",
     "properties": {
@@ -12423,7 +12475,7 @@
     "resourceType": "Microsoft.App/containerApps/patches",
     "apiVersion": "2024-02-02-preview",
     "output": {
-      "$ref": "#/807"
+      "$ref": "#/812"
     }
   },
   {
@@ -12432,14 +12484,14 @@
     "properties": {
       "containers": {
         "type": {
-          "$ref": "#/814"
+          "$ref": "#/819"
         },
         "flags": 0,
         "description": "List of container definitions for the Container Apps Job."
       },
       "initContainers": {
         "type": {
-          "$ref": "#/815"
+          "$ref": "#/820"
         },
         "flags": 0,
         "description": "List of specialized containers that run before job containers."
@@ -12466,21 +12518,21 @@
       },
       "command": {
         "type": {
-          "$ref": "#/811"
+          "$ref": "#/816"
         },
         "flags": 0,
         "description": "Container start command."
       },
       "args": {
         "type": {
-          "$ref": "#/812"
+          "$ref": "#/817"
         },
         "flags": 0,
         "description": "Container start command arguments."
       },
       "env": {
         "type": {
-          "$ref": "#/813"
+          "$ref": "#/818"
         },
         "flags": 0,
         "description": "Container environment variables."
@@ -12515,13 +12567,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/810"
+      "$ref": "#/815"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/810"
+      "$ref": "#/815"
     }
   },
   {
@@ -12550,10 +12602,10 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2024-02-02-preview",
     "output": {
-      "$ref": "#/816"
+      "$ref": "#/821"
     },
     "input": {
-      "$ref": "#/809"
+      "$ref": "#/814"
     }
   },
   {
@@ -12562,7 +12614,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/834"
+          "$ref": "#/839"
         },
         "flags": 1,
         "description": "Collection of resources."
@@ -12603,7 +12655,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/820"
+          "$ref": "#/825"
         },
         "flags": 0,
         "description": "Container Apps Job execution specific properties."
@@ -12616,7 +12668,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/828"
+          "$ref": "#/833"
         },
         "flags": 2,
         "description": "Current running State of the job"
@@ -12637,14 +12689,14 @@
       },
       "template": {
         "type": {
-          "$ref": "#/809"
+          "$ref": "#/814"
         },
         "flags": 0,
         "description": "Job's execution container."
       },
       "detailedStatus": {
         "type": {
-          "$ref": "#/829"
+          "$ref": "#/834"
         },
         "flags": 0,
         "description": "Detailed status of the job execution."
@@ -12683,25 +12735,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/821"
-      },
-      {
-        "$ref": "#/822"
-      },
-      {
-        "$ref": "#/823"
-      },
-      {
-        "$ref": "#/824"
-      },
-      {
-        "$ref": "#/825"
-      },
-      {
         "$ref": "#/826"
       },
       {
         "$ref": "#/827"
+      },
+      {
+        "$ref": "#/828"
+      },
+      {
+        "$ref": "#/829"
+      },
+      {
+        "$ref": "#/830"
+      },
+      {
+        "$ref": "#/831"
+      },
+      {
+        "$ref": "#/832"
       },
       {
         "$ref": "#/2"
@@ -12714,7 +12766,7 @@
     "properties": {
       "replicas": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/838"
         },
         "flags": 0,
         "description": "Replicas in the execution."
@@ -12734,7 +12786,7 @@
       },
       "containers": {
         "type": {
-          "$ref": "#/832"
+          "$ref": "#/837"
         },
         "flags": 0,
         "description": "Containers in the execution replica"
@@ -12778,19 +12830,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/831"
+      "$ref": "#/836"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/830"
+      "$ref": "#/835"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/819"
+      "$ref": "#/824"
     }
   },
   {
@@ -12799,7 +12851,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2024-02-02-preview",
     "output": {
-      "$ref": "#/818"
+      "$ref": "#/823"
     }
   },
   {
@@ -12808,7 +12860,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/837"
+          "$ref": "#/842"
         },
         "flags": 1,
         "description": "Collection of resources."
@@ -12827,7 +12879,16 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2024-02-02-preview",
     "output": {
-      "$ref": "#/836"
+      "$ref": "#/841"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.App/jobs/executions",
+    "apiVersion": "2024-02-02-preview",
+    "output": {
+      "$ref": "#/174"
     }
   },
   {
@@ -12836,14 +12897,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/840"
+          "$ref": "#/846"
         },
         "flags": 0,
         "description": "Environment auth token resource specific properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/841"
+          "$ref": "#/847"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -12919,7 +12980,7 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2024-02-02-preview",
     "output": {
-      "$ref": "#/839"
+      "$ref": "#/845"
     }
   },
   {
@@ -12972,7 +13033,7 @@
       },
       "filesToDelete": {
         "type": {
-          "$ref": "#/847"
+          "$ref": "#/853"
         },
         "flags": 0,
         "description": "Files of the app to delete."
@@ -12983,6 +13044,18 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deployWorkflowArtifacts",
+    "resourceType": "Microsoft.App/logicApps",
+    "apiVersion": "2024-02-02-preview",
+    "output": {
+      "$ref": "#/174"
+    },
+    "input": {
+      "$ref": "#/852"
     }
   },
   {
@@ -13026,7 +13099,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/849"
+          "$ref": "#/856"
         },
         "flags": 0,
         "description": "Additional workflow properties."
@@ -13046,14 +13119,14 @@
       },
       "flowState": {
         "type": {
-          "$ref": "#/856"
+          "$ref": "#/863"
         },
         "flags": 0,
         "description": "Gets or sets the state of the workflow."
       },
       "health": {
         "type": {
-          "$ref": "#/857"
+          "$ref": "#/864"
         },
         "flags": 0,
         "description": "Gets or sets workflow health."
@@ -13088,22 +13161,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/850"
+        "$ref": "#/857"
       },
       {
-        "$ref": "#/851"
+        "$ref": "#/858"
       },
       {
-        "$ref": "#/852"
+        "$ref": "#/859"
       },
       {
-        "$ref": "#/853"
+        "$ref": "#/860"
       },
       {
-        "$ref": "#/854"
+        "$ref": "#/861"
       },
       {
-        "$ref": "#/855"
+        "$ref": "#/862"
       },
       {
         "$ref": "#/2"
@@ -13116,14 +13189,14 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/862"
+          "$ref": "#/869"
         },
         "flags": 1,
         "description": "Gets or sets the workflow health state."
       },
       "error": {
         "type": {
-          "$ref": "#/863"
+          "$ref": "#/870"
         },
         "flags": 0,
         "description": "Gets or sets the workflow error."
@@ -13150,16 +13223,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/858"
+        "$ref": "#/865"
       },
       {
-        "$ref": "#/859"
+        "$ref": "#/866"
       },
       {
-        "$ref": "#/860"
+        "$ref": "#/867"
       },
       {
-        "$ref": "#/861"
+        "$ref": "#/868"
       }
     ]
   },
@@ -13183,21 +13256,21 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/864"
+          "$ref": "#/871"
         },
         "flags": 0,
         "description": "Parameters for the template."
       },
       "innerErrors": {
         "type": {
-          "$ref": "#/865"
+          "$ref": "#/872"
         },
         "flags": 0,
         "description": "Inner errors."
       },
       "details": {
         "type": {
-          "$ref": "#/866"
+          "$ref": "#/873"
         },
         "flags": 0,
         "description": "Error Details."
@@ -13234,13 +13307,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/863"
+      "$ref": "#/870"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/863"
+      "$ref": "#/870"
     }
   },
   {
@@ -13249,7 +13322,7 @@
     "resourceType": "Microsoft.App/logicApps",
     "apiVersion": "2024-02-02-preview",
     "output": {
-      "$ref": "#/848"
+      "$ref": "#/855"
     }
   }
 ]

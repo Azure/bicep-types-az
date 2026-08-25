@@ -28,6 +28,12 @@
 * **ApiVersion**: 2015-03-20
 * **Output**: [SharedKeys](#sharedkeys)
 
+## Function purge (Microsoft.OperationalInsights/workspaces@2015-03-20)
+* **Resource**: Microsoft.OperationalInsights/workspaces
+* **ApiVersion**: 2015-03-20
+* **Input**: [WorkspacePurgeBody](#workspacepurgebody)
+* **Output**: [WorkspacePurgeResponse](#workspacepurgeresponse)
+
 ## Function regenerateSharedKey (Microsoft.OperationalInsights/workspaces@2015-03-20)
 * **Resource**: Microsoft.OperationalInsights/workspaces
 * **ApiVersion**: 2015-03-20
@@ -127,4 +133,20 @@
 ### Properties
 * **name**: string (Required): The tag name.
 * **value**: string (Required): The tag value.
+
+## WorkspacePurgeBody
+### Properties
+* **filters**: [WorkspacePurgeBodyFilters](#workspacepurgebodyfilters)[] (Required): The set of columns and filters (queries) to run over them to purge the resulting data.
+* **table**: string (Required): Table from which to purge data.
+
+## WorkspacePurgeBodyFilters
+### Properties
+* **column**: string: The column of the table over which the given query should run
+* **key**: string: When filtering over custom dimensions, this key will be used as the name of the custom dimension.
+* **operator**: string: A query operator to evaluate over the provided column and value(s). Supported operators are ==, =~, in, in~, >, >=, <, <=, between, and have the same behavior as they would in a KQL query.
+* **value**: any: the value for the operator to function over. This can be a number (e.g., > 100), a string (timestamp >= '2017-09-01') or array of values.
+
+## WorkspacePurgeResponse
+### Properties
+* **operationId**: string (Required): Id to use when querying for status for a particular purge operation.
 

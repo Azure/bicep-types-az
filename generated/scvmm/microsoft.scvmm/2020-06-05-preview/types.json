@@ -2291,6 +2291,39 @@
     "$type": "BooleanType"
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ScVmm/virtualMachines",
+    "apiVersion": "2020-06-05-preview",
+    "output": {
+      "$ref": "#/134"
+    },
+    "input": {
+      "$ref": "#/132"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ScVmm/virtualMachines",
+    "apiVersion": "2020-06-05-preview",
+    "output": {
+      "$ref": "#/134"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ScVmm/virtualMachines",
+    "apiVersion": "2020-06-05-preview",
+    "output": {
+      "$ref": "#/134"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "VirtualMachineCreateCheckpoint",
     "properties": {
@@ -2311,6 +2344,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "createCheckpoint",
+    "resourceType": "Microsoft.ScVmm/virtualMachines",
+    "apiVersion": "2020-06-05-preview",
+    "output": {
+      "$ref": "#/134"
+    },
+    "input": {
+      "$ref": "#/138"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "VirtualMachineDeleteCheckpoint",
     "properties": {
@@ -2324,6 +2369,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "deleteCheckpoint",
+    "resourceType": "Microsoft.ScVmm/virtualMachines",
+    "apiVersion": "2020-06-05-preview",
+    "output": {
+      "$ref": "#/134"
+    },
+    "input": {
+      "$ref": "#/140"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "VirtualMachineRestoreCheckpoint",
     "properties": {
@@ -2334,6 +2391,18 @@
         "flags": 0,
         "description": "ID of the checkpoint to be restored to."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreCheckpoint",
+    "resourceType": "Microsoft.ScVmm/virtualMachines",
+    "apiVersion": "2020-06-05-preview",
+    "output": {
+      "$ref": "#/134"
+    },
+    "input": {
+      "$ref": "#/142"
     }
   }
 ]

@@ -1646,11 +1646,53 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ClusterIdentityResponse",
+    "name": "UploadCertificateRequest",
     "properties": {
       "properties": {
         "type": {
           "$ref": "#/145"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawCertificateData",
+    "properties": {
+      "certificates": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadCertificate",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/53"
+    },
+    "input": {
+      "$ref": "#/144"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterIdentityResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/149"
         },
         "flags": 2,
         "description": "Cluster identity properties."
@@ -1693,7 +1735,7 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters",
     "apiVersion": "2022-05-01",
     "output": {
-      "$ref": "#/144"
+      "$ref": "#/148"
     }
   }
 ]

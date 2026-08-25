@@ -1337,5 +1337,51 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionUpgrade",
+    "properties": {
+      "extensionTargets": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Describes the Extension Target Properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtensionTargetProperties",
+    "properties": {
+      "targetVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Properties for the specified Extension to Upgrade."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtensionTarget",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeExtensions",
+    "resourceType": "Microsoft.HybridCompute/machines",
+    "apiVersion": "2021-06-10-preview",
+    "output": {
+      "$ref": "#/18"
+    },
+    "input": {
+      "$ref": "#/77"
+    }
   }
 ]

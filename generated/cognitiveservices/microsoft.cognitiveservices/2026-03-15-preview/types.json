@@ -11322,6 +11322,33 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.CognitiveServices/accounts/computes",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.CognitiveServices/accounts/computes",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.CognitiveServices/accounts/computes",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "Deployment",
     "properties": {
@@ -11348,7 +11375,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/887"
+          "$ref": "#/890"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -11397,7 +11424,7 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/deployments",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/886"
+      "$ref": "#/889"
     }
   },
   {
@@ -11406,7 +11433,7 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/deployments",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/886"
+      "$ref": "#/889"
     }
   },
   {
@@ -11415,7 +11442,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/891"
+          "$ref": "#/894"
         },
         "flags": 0,
         "description": "Managed Network settings for a cognitive services account."
@@ -11456,7 +11483,7 @@
     "properties": {
       "isolationMode": {
         "type": {
-          "$ref": "#/895"
+          "$ref": "#/898"
         },
         "flags": 0,
         "description": "Isolation mode for the managed network of a cognitive services account."
@@ -11469,7 +11496,7 @@
       },
       "outboundRules": {
         "type": {
-          "$ref": "#/896"
+          "$ref": "#/899"
         },
         "flags": 0,
         "description": "Dictionary of <OutboundRule>"
@@ -11483,14 +11510,14 @@
       },
       "firewallSku": {
         "type": {
-          "$ref": "#/899"
+          "$ref": "#/902"
         },
         "flags": 0,
         "description": "Firewall Sku used for FQDN Rules"
       },
       "managedNetworkKind": {
         "type": {
-          "$ref": "#/902"
+          "$ref": "#/905"
         },
         "flags": 0,
         "description": "The Kind of the managed network. Users can switch from V1 to V2 for granular access controls, but cannot switch back to V1 once V2 is enabled."
@@ -11504,7 +11531,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/909"
+          "$ref": "#/912"
         },
         "flags": 2,
         "description": "The provisioning state of the managed network settings."
@@ -11527,13 +11554,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/892"
+        "$ref": "#/895"
       },
       {
-        "$ref": "#/893"
+        "$ref": "#/896"
       },
       {
-        "$ref": "#/894"
+        "$ref": "#/897"
       },
       {
         "$ref": "#/2"
@@ -11560,10 +11587,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/897"
+        "$ref": "#/900"
       },
       {
-        "$ref": "#/898"
+        "$ref": "#/901"
       },
       {
         "$ref": "#/2"
@@ -11582,10 +11609,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/900"
+        "$ref": "#/903"
       },
       {
-        "$ref": "#/901"
+        "$ref": "#/904"
       },
       {
         "$ref": "#/2"
@@ -11620,15 +11647,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/903"
-      },
-      {
-        "$ref": "#/904"
-      },
-      {
-        "$ref": "#/905"
-      },
-      {
         "$ref": "#/906"
       },
       {
@@ -11636,6 +11654,15 @@
       },
       {
         "$ref": "#/908"
+      },
+      {
+        "$ref": "#/909"
+      },
+      {
+        "$ref": "#/910"
+      },
+      {
+        "$ref": "#/911"
       },
       {
         "$ref": "#/2"
@@ -11655,7 +11682,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/912"
+          "$ref": "#/915"
         },
         "flags": 0,
         "description": "The list of cognitive services accounts. Since this list may be incomplete, the nextLink field should be used to request the next list of cognitive services accounts."
@@ -11706,7 +11733,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/911"
+      "$ref": "#/914"
     }
   },
   {
@@ -11715,10 +11742,10 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/managedNetworks",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/910"
+      "$ref": "#/913"
     },
     "input": {
-      "$ref": "#/890"
+      "$ref": "#/893"
     }
   },
   {
@@ -11780,7 +11807,25 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/915"
+      "$ref": "#/918"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.CognitiveServices/accounts/projects/applications",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.CognitiveServices/accounts/projects/applications",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/68"
     }
   },
   {
@@ -11796,7 +11841,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/919"
+          "$ref": "#/924"
         },
         "flags": 0,
         "description": "An array of objects of type Agent Reference."
@@ -11847,7 +11892,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/918"
+      "$ref": "#/923"
     }
   },
   {
@@ -11856,7 +11901,52 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/projects/applications",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/917"
+      "$ref": "#/922"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.CognitiveServices/accounts/projects/workbenches",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.CognitiveServices/accounts/projects/workbenches",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.CognitiveServices/accounts/projects/workbenches",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/68"
     }
   },
   {
@@ -11881,7 +11971,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/921"
+      "$ref": "#/931"
     }
   },
   {
@@ -11904,7 +11994,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/924"
+          "$ref": "#/934"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -11953,10 +12043,28 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/raiBlocklists",
     "apiVersion": "2026-03-15-preview",
     "output": {
-      "$ref": "#/923"
+      "$ref": "#/933"
     },
     "input": {
-      "$ref": "#/922"
+      "$ref": "#/932"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteRaiBlocklistItems",
+    "resourceType": "Microsoft.CognitiveServices/accounts/raiBlocklists",
+    "apiVersion": "2026-03-15-preview",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/936"
     }
   }
 ]

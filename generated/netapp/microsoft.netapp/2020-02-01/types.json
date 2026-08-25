@@ -1133,6 +1133,48 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revert",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2020-02-01",
+    "output": {
+      "$ref": "#/74"
+    },
+    "input": {
+      "$ref": "#/73"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "breakReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2020-02-01",
+    "output": {
+      "$ref": "#/74"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resyncReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2020-02-01",
+    "output": {
+      "$ref": "#/74"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2020-02-01",
+    "output": {
+      "$ref": "#/74"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AuthorizeRequest",
     "properties": {
@@ -1143,6 +1185,18 @@
         "flags": 0,
         "description": "Resource id of the remote volume"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "authorizeReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2020-02-01",
+    "output": {
+      "$ref": "#/74"
+    },
+    "input": {
+      "$ref": "#/79"
     }
   }
 ]

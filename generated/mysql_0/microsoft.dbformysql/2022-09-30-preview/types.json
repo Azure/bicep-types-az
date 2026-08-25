@@ -1807,12 +1807,21 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2022-09-30-preview",
+    "output": {
+      "$ref": "#/25"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ServerRestartParameter",
     "properties": {
       "restartWithFailover": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/148"
         },
         "flags": 0,
         "description": "Whether or not failover to standby server when restarting a server with high availability enabled."
@@ -1838,15 +1847,45 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/145"
+        "$ref": "#/146"
       },
       {
-        "$ref": "#/146"
+        "$ref": "#/147"
       },
       {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2022-09-30-preview",
+    "output": {
+      "$ref": "#/25"
+    },
+    "input": {
+      "$ref": "#/145"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2022-09-30-preview",
+    "output": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2022-09-30-preview",
+    "output": {
+      "$ref": "#/25"
+    }
   },
   {
     "$type": "ObjectType",
@@ -1859,6 +1898,18 @@
         "flags": 0,
         "description": "The Gtid set of server."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetGtid",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2022-09-30-preview",
+    "output": {
+      "$ref": "#/25"
+    },
+    "input": {
+      "$ref": "#/152"
     }
   },
   {
@@ -1894,7 +1945,7 @@
       },
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/157"
         },
         "flags": 2,
         "description": "A list of delegated subnet usage"
@@ -1924,7 +1975,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/151"
+      "$ref": "#/156"
     }
   },
   {
@@ -1933,10 +1984,10 @@
     "resourceType": "Microsoft.DBforMySQL/locations",
     "apiVersion": "2022-09-30-preview",
     "output": {
-      "$ref": "#/150"
+      "$ref": "#/155"
     },
     "input": {
-      "$ref": "#/149"
+      "$ref": "#/154"
     }
   },
   {
@@ -1972,7 +2023,7 @@
       },
       "nameAvailable": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/161"
         },
         "flags": 0,
         "description": "Indicates whether the resource name is available."
@@ -1995,10 +2046,10 @@
     "resourceType": "Microsoft.DBforMySQL/locations",
     "apiVersion": "2022-09-30-preview",
     "output": {
-      "$ref": "#/155"
+      "$ref": "#/160"
     },
     "input": {
-      "$ref": "#/154"
+      "$ref": "#/159"
     }
   }
 ]

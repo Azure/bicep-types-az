@@ -6811,6 +6811,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "deleteRaiBlocklistItems",
+    "resourceType": "Microsoft.CognitiveServices/accounts/raiBlocklists",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/84"
+    },
+    "input": {
+      "$ref": "#/84"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "NetworkSecurityPerimeterConfiguration",
     "properties": {
@@ -6850,7 +6862,7 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/534"
+      "$ref": "#/535"
     }
   }
 ]

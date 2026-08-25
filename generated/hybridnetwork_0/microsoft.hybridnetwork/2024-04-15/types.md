@@ -172,6 +172,30 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridNetwork/sites' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addNetworkFabricControllerEndPoints (Microsoft.HybridNetwork/publishers/artifactStores@2024-04-15)
+* **Resource**: Microsoft.HybridNetwork/publishers/artifactStores
+* **ApiVersion**: 2024-04-15
+* **Input**: [ArtifactStoreNetworkFabricControllerEndPoints](#artifactstorenetworkfabriccontrollerendpoints)
+* **Output**: any
+
+## Function approvePrivateEndPoints (Microsoft.HybridNetwork/publishers/artifactStores@2024-04-15)
+* **Resource**: Microsoft.HybridNetwork/publishers/artifactStores
+* **ApiVersion**: 2024-04-15
+* **Input**: [ArtifactStorePrivateEndPointsFormat](#artifactstoreprivateendpointsformat)
+* **Output**: any
+
+## Function deleteNetworkFabricControllerEndPoints (Microsoft.HybridNetwork/publishers/artifactStores@2024-04-15)
+* **Resource**: Microsoft.HybridNetwork/publishers/artifactStores
+* **ApiVersion**: 2024-04-15
+* **Input**: [ArtifactStoreNetworkFabricControllerEndPoints](#artifactstorenetworkfabriccontrollerendpoints)
+* **Output**: any
+
+## Function executeRequest (Microsoft.HybridNetwork/networkFunctions@2024-04-15)
+* **Resource**: Microsoft.HybridNetwork/networkFunctions
+* **ApiVersion**: 2024-04-15
+* **Input**: [ExecuteRequestParameters](#executerequestparameters)
+* **Output**: any
+
 ## Function listCredential (Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests@2024-04-15)
 * **Resource**: Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests
 * **ApiVersion**: 2024-04-15
@@ -186,6 +210,12 @@
 * **Resource**: Microsoft.HybridNetwork/publishers/artifactStores
 * **ApiVersion**: 2024-04-15
 * **Output**: [ArtifactStorePrivateEndPointsListResult](#artifactstoreprivateendpointslistresult)
+
+## Function removePrivateEndPoints (Microsoft.HybridNetwork/publishers/artifactStores@2024-04-15)
+* **Resource**: Microsoft.HybridNetwork/publishers/artifactStores
+* **ApiVersion**: 2024-04-15
+* **Input**: [ArtifactStorePrivateEndPointsFormat](#artifactstoreprivateendpointsformat)
+* **Output**: any
 
 ## Function updateState (Microsoft.HybridNetwork/publishers/configurationGroupSchemas@2024-04-15)
 * **Resource**: Microsoft.HybridNetwork/publishers/configurationGroupSchemas
@@ -498,6 +528,11 @@
 * **resources**: [Resources](#resources): The resource related to the component resource.
 * **status**: 'Deployed' | 'Downloading' | 'Failed' | 'Installing' | 'Pending-Install' | 'Pending-Rollback' | 'Pending-Upgrade' | 'Reinstalling' | 'Rollingback' | 'Superseded' | 'Uninstalled' | 'Uninstalling' | 'Unknown' | 'Upgrading' | string: The status of the component resource.
 
+## ExecuteRequestParameters
+### Properties
+* **requestMetadata**: [RequestMetadata](#requestmetadata) (Required): The request metadata.
+* **serviceEndpoint**: string (Required): The endpoint of service to call.
+
 ## HelmArtifactProfile
 ### Properties
 * **helmPackageName**: string: Helm package name.
@@ -708,6 +743,13 @@
 * **name**: string: The name of the replicaSet.
 * **namespace**: string: The namespace of the replicaSet.
 * **ready**: int: Number of ready pods.
+
+## RequestMetadata
+### Properties
+* **apiVersion**: string: The api version of the request.
+* **httpMethod**: 'Delete' | 'Get' | 'Patch' | 'Post' | 'Put' | 'Unknown' | string (Required): The http method of the request.
+* **relativePath**: string (Required): The relative path of the request.
+* **serializedBody**: string (Required): The serialized body of the request.
 
 ## ResourceElementTemplate
 * **Discriminator**: type

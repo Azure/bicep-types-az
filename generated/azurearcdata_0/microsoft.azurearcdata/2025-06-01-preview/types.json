@@ -9098,6 +9098,15 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "deleteMiLink",
+    "resourceType": "Microsoft.AzureArcData/sqlServerInstances/availabilityGroups",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "removeDatabases",
     "resourceType": "Microsoft.AzureArcData/sqlServerInstances/availabilityGroups",
     "apiVersion": "2025-06-01-preview",

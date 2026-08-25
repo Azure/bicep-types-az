@@ -3906,6 +3906,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2018-03-31-preview",
+    "output": {
+      "$ref": "#/298"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2018-03-31-preview",
+    "output": {
+      "$ref": "#/298"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "NameAvailabilityRequest",
     "properties": {
@@ -3938,7 +3959,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/302"
+          "$ref": "#/305"
         },
         "flags": 0,
         "description": "The reason why the name is not available, if nameAvailable is false"
@@ -3964,10 +3985,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/300"
+        "$ref": "#/303"
       },
       {
-        "$ref": "#/301"
+        "$ref": "#/304"
       },
       {
         "$ref": "#/0"
@@ -3980,10 +4001,10 @@
     "resourceType": "Microsoft.DataMigration/services",
     "apiVersion": "2018-03-31-preview",
     "output": {
-      "$ref": "#/299"
+      "$ref": "#/302"
     },
     "input": {
-      "$ref": "#/298"
+      "$ref": "#/301"
     }
   },
   {
@@ -3992,10 +4013,10 @@
     "resourceType": "Microsoft.DataMigration/locations",
     "apiVersion": "2018-03-31-preview",
     "output": {
-      "$ref": "#/299"
+      "$ref": "#/302"
     },
     "input": {
-      "$ref": "#/298"
+      "$ref": "#/301"
     }
   },
   {
@@ -4045,7 +4066,7 @@
     "resourceType": "Microsoft.DataMigration/services/projects/tasks",
     "apiVersion": "2018-03-31-preview",
     "output": {
-      "$ref": "#/305"
+      "$ref": "#/308"
     }
   }
 ]

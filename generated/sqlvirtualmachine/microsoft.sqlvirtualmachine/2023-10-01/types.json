@@ -2485,6 +2485,52 @@
   },
   {
     "$type": "ObjectType",
+    "name": "DiskConfigAssessmentRequest",
+    "properties": {
+      "runDiskConfigRules": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Boolean to run disk config Assessment. Use false to fetch past Assessment."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "fetchDCAssessment",
+    "resourceType": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
+    "apiVersion": "2023-10-01",
+    "output": {
+      "$ref": "#/182"
+    },
+    "input": {
+      "$ref": "#/181"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
+    "apiVersion": "2023-10-01",
+    "output": {
+      "$ref": "#/182"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startAssessment",
+    "resourceType": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
+    "apiVersion": "2023-10-01",
+    "output": {
+      "$ref": "#/182"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SqlVmTroubleshooting",
     "properties": {
       "startTimeUtc": {
@@ -2503,7 +2549,7 @@
       },
       "troubleshootingScenario": {
         "type": {
-          "$ref": "#/183"
+          "$ref": "#/188"
         },
         "flags": 0,
         "description": "SQL VM troubleshooting scenario."
@@ -2532,7 +2578,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/182"
+        "$ref": "#/187"
       },
       {
         "$ref": "#/0"
@@ -2545,10 +2591,10 @@
     "resourceType": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
     "apiVersion": "2023-10-01",
     "output": {
-      "$ref": "#/181"
+      "$ref": "#/186"
     },
     "input": {
-      "$ref": "#/181"
+      "$ref": "#/186"
     }
   }
 ]

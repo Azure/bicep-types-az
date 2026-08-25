@@ -48,6 +48,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Purview/accounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addRootCollectionAdmin (Microsoft.Purview/accounts@2024-04-01-preview)
+* **Resource**: Microsoft.Purview/accounts
+* **ApiVersion**: 2024-04-01-preview
+* **Input**: [CollectionAdminUpdate](#collectionadminupdate)
+* **Output**: any
+
 ## Function ingestionPrivateEndpointConnectionStatus (Microsoft.Purview/accounts@2024-04-01-preview)
 * **Resource**: Microsoft.Purview/accounts
 * **ApiVersion**: 2024-04-01-preview
@@ -158,6 +164,10 @@ Only applicable for the secondary account.
 ### Properties
 * **awsExternalId**: string (ReadOnly): AWS external identifier.
 Configured in AWS to allow use of the role arn used for scanning
+
+## CollectionAdminUpdate
+### Properties
+* **objectId**: string: Gets or sets the object identifier of the admin.
 
 ## Credentials
 ### Properties

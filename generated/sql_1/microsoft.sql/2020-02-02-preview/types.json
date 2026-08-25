@@ -14762,6 +14762,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeDataWarehouse",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ResourceMoveDefinition",
     "properties": {
@@ -14775,12 +14793,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "move",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    },
+    "input": {
+      "$ref": "#/1082"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ImportExistingDatabaseDefinition",
     "properties": {
       "storageKeyType": {
         "type": {
-          "$ref": "#/1084"
+          "$ref": "#/1087"
         },
         "flags": 5,
         "description": "Storage key type."
@@ -14841,10 +14871,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1082"
+        "$ref": "#/1085"
       },
       {
-        "$ref": "#/1083"
+        "$ref": "#/1086"
       },
       {
         "$ref": "#/0"
@@ -14860,7 +14890,7 @@
       "$ref": "#/1071"
     },
     "input": {
-      "$ref": "#/1081"
+      "$ref": "#/1084"
     }
   },
   {
@@ -14923,10 +14953,10 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1087"
+      "$ref": "#/1090"
     },
     "input": {
-      "$ref": "#/1086"
+      "$ref": "#/1089"
     }
   },
   {
@@ -14963,7 +14993,7 @@
       },
       "storageKeyType": {
         "type": {
-          "$ref": "#/1092"
+          "$ref": "#/1095"
         },
         "flags": 5,
         "description": "Storage key type."
@@ -15024,10 +15054,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1090"
+        "$ref": "#/1093"
       },
       {
-        "$ref": "#/1091"
+        "$ref": "#/1094"
       },
       {
         "$ref": "#/0"
@@ -15043,7 +15073,7 @@
       "$ref": "#/1071"
     },
     "input": {
-      "$ref": "#/1089"
+      "$ref": "#/1092"
     }
   },
   {
@@ -15052,7 +15082,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1095"
+          "$ref": "#/1098"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -15101,6 +15131,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "tdeCertificates",
+    "resourceType": "Microsoft.Sql/servers",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    },
+    "input": {
+      "$ref": "#/1097"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CompleteDatabaseRestoreDefinition",
     "properties": {
@@ -15114,12 +15156,63 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "completeRestore",
+    "resourceType": "Microsoft.Sql/managedInstances/databases",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    },
+    "input": {
+      "$ref": "#/1100"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/managedInstances",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "tdeCertificates",
+    "resourceType": "Microsoft.Sql/managedInstances",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    },
+    "input": {
+      "$ref": "#/1097"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Sql/servers/databases/operations",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateScan",
+    "resourceType": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DatabaseVulnerabilityAssessmentScansExport",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1098"
+          "$ref": "#/1107"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -15166,7 +15259,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1097"
+      "$ref": "#/1106"
     }
   },
   {
@@ -15209,7 +15302,34 @@
     "resourceType": "Microsoft.Sql/locations/deletedServers",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1100"
+      "$ref": "#/1109"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Sql/servers/elasticPools/operations",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/servers/elasticPools",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revalidate",
+    "resourceType": "Microsoft.Sql/servers/encryptionProtector",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
     }
   },
   {
@@ -15225,7 +15345,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1103"
+          "$ref": "#/1115"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -15274,7 +15394,7 @@
     "resourceType": "Microsoft.Sql/servers/failoverGroups",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1102"
+      "$ref": "#/1114"
     }
   },
   {
@@ -15283,7 +15403,7 @@
     "resourceType": "Microsoft.Sql/servers/failoverGroups",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1102"
+      "$ref": "#/1114"
     }
   },
   {
@@ -15326,7 +15446,7 @@
     "resourceType": "Microsoft.Sql/locations/instanceFailoverGroups",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1106"
+      "$ref": "#/1118"
     }
   },
   {
@@ -15335,7 +15455,16 @@
     "resourceType": "Microsoft.Sql/locations/instanceFailoverGroups",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1106"
+      "$ref": "#/1118"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Sql/servers/jobAgents/jobs/executions",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
     }
   },
   {
@@ -15378,7 +15507,34 @@
     "resourceType": "Microsoft.Sql/servers/jobAgents/jobs",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1109"
+      "$ref": "#/1122"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateScan",
+    "resourceType": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
     }
   },
   {
@@ -15387,7 +15543,43 @@
     "resourceType": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1097"
+      "$ref": "#/1106"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revalidate",
+    "resourceType": "Microsoft.Sql/managedInstances/encryptionProtector",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Sql/managedInstances/operations",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
     }
   },
   {
@@ -15443,10 +15635,10 @@
     "resourceType": "Microsoft.Sql/servers/dnsAliases",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1113"
+      "$ref": "#/1133"
     },
     "input": {
-      "$ref": "#/1112"
+      "$ref": "#/1132"
     }
   },
   {
@@ -15468,7 +15660,43 @@
     "resourceType": "Microsoft.Sql/servers/syncAgents",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1115"
+      "$ref": "#/1135"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshHubSchema",
+    "resourceType": "Microsoft.Sql/servers/databases/syncGroups",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelSync",
+    "resourceType": "Microsoft.Sql/servers/databases/syncGroups",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "triggerSync",
+    "resourceType": "Microsoft.Sql/servers/databases/syncGroups",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSchema",
+    "resourceType": "Microsoft.Sql/servers/databases/syncGroups/syncMembers",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/779"
     }
   },
   {
@@ -15477,7 +15705,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1118"
+          "$ref": "#/1142"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -15511,7 +15739,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/1121"
+          "$ref": "#/1145"
         },
         "flags": 2,
         "description": "The status of the DNS refresh operation."
@@ -15530,10 +15758,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1119"
+        "$ref": "#/1143"
       },
       {
-        "$ref": "#/1120"
+        "$ref": "#/1144"
       },
       {
         "$ref": "#/0"
@@ -15546,7 +15774,7 @@
     "resourceType": "Microsoft.Sql/virtualClusters",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1117"
+      "$ref": "#/1141"
     }
   }
 ]

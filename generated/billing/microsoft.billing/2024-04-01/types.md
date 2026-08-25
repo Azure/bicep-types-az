@@ -582,6 +582,17 @@
 * **Input**: [PaymentTerm](#paymentterm)[]
 * **Output**: [BillingAccount](#billingaccount)
 
+## Function amend (Microsoft.Billing/billingAccounts/invoices@2024-04-01)
+* **Resource**: Microsoft.Billing/billingAccounts/invoices
+* **ApiVersion**: 2024-04-01
+* **Output**: any
+
+## Function cancel (Microsoft.Billing/billingAccounts/billingSubscriptions@2024-04-01)
+* **Resource**: Microsoft.Billing/billingAccounts/billingSubscriptions
+* **ApiVersion**: 2024-04-01
+* **Input**: [CancelSubscriptionRequest](#cancelsubscriptionrequest)
+* **Output**: any
+
 ## Function cancel (Microsoft.Billing/billingAccounts/billingProfiles/customers/transfers@2024-04-01)
 * **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/customers/transfers
 * **ApiVersion**: 2024-04-01
@@ -1530,6 +1541,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CancelSubscriptionRequest
+### Properties
+* **cancellationReason**: 'Compromise' | 'Dispute' | 'Other' | string (Required): Cancellation reason.
+* **customerId**: string: The fully qualified ID that uniquely identifies a customer.
 
 ## CheckAccessRequest
 ### Properties

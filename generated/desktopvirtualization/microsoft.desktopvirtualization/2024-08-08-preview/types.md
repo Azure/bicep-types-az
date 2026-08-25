@@ -221,6 +221,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function controlSessionHostUpdate (Microsoft.DesktopVirtualization/hostPools/sessionHostManagements@2024-08-08-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHostManagements
+* **ApiVersion**: 2024-08-08-preview
+* **Input**: [HostPoolUpdateControlParameter](#hostpoolupdatecontrolparameter)
+* **Output**: any
+
+## Function disconnect (Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2024-08-08-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions
+* **ApiVersion**: 2024-08-08-preview
+* **Output**: any
+
 ## Function expandMsixImage (Microsoft.DesktopVirtualization/hostPools@2024-08-08-preview)
 * **Resource**: Microsoft.DesktopVirtualization/hostPools
 * **ApiVersion**: 2024-08-08-preview
@@ -233,6 +244,12 @@
 * **Input**: [ImportPackageInfoRequest](#importpackageinforequest)
 * **Output**: [AppAttachPackageList](#appattachpackagelist)
 
+## Function initiateSessionHostUpdate (Microsoft.DesktopVirtualization/hostPools/sessionHostManagements@2024-08-08-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHostManagements
+* **ApiVersion**: 2024-08-08-preview
+* **Input**: [UpdateSessionHostsRequestBody](#updatesessionhostsrequestbody)
+* **Output**: any
+
 ## Function listRegistrationTokens (Microsoft.DesktopVirtualization/hostPools@2024-08-08-preview)
 * **Resource**: Microsoft.DesktopVirtualization/hostPools
 * **ApiVersion**: 2024-08-08-preview
@@ -242,6 +259,17 @@
 * **Resource**: Microsoft.DesktopVirtualization/hostPools
 * **ApiVersion**: 2024-08-08-preview
 * **Output**: [RegistrationInfo](#registrationinfo)
+
+## Function retryProvisioning (Microsoft.DesktopVirtualization/hostPools/sessionHosts@2024-08-08-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHosts
+* **ApiVersion**: 2024-08-08-preview
+* **Output**: any
+
+## Function sendMessage (Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2024-08-08-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions
+* **ApiVersion**: 2024-08-08-preview
+* **Input**: [SendMessage](#sendmessage)
+* **Output**: any
 
 ## ActiveDirectoryInfoProperties
 ### Properties
@@ -447,12 +475,24 @@
 * **validationEnvironment**: bool: Is validation environment.
 * **vmTemplate**: string: VM template for sessionhosts configuration within hostpool.
 
+## HostPoolUpdateConfigurationPatchProperties
+### Properties
+* **deleteOriginalVm**: bool: Whether not to save original disk. False by default.
+* **logOffDelayMinutes**: int: Grace period before logging off users in minutes.
+* **logOffMessage**: string {maxLength: 260}: Log off message sent to user for logoff. Default value is an empty string.
+* **maxVmsRemoved**: int {minValue: 1}: The maximum number of virtual machines to be removed during hostpool update.
+
 ## HostPoolUpdateConfigurationProperties
 ### Properties
 * **deleteOriginalVm**: bool: Whether not to save original disk. False by default.
 * **logOffDelayMinutes**: int (Required): Grace period before logging off users in minutes.
 * **logOffMessage**: string {maxLength: 260}: Log off message sent to user for logoff. Default value is an empty string.
 * **maxVmsRemoved**: int {minValue: 1} (Required): The maximum number of virtual machines to be removed during hostpool update.
+
+## HostPoolUpdateControlParameter
+### Properties
+* **action**: 'Cancel' | 'Pause' | 'Resume' | 'Retry' | 'Start' | string (Required): Action types for controlling hostpool update.
+* **cancelMessage**: string {maxLength: 260}: The cancel message sent to the user on the session host. This is can only be specified if the action is 'Cancel'.
 
 ## ImageInfoProperties
 ### Properties
@@ -675,6 +715,11 @@
 * **type**: 'ConfidentialVM' | 'Standard' | 'TrustedLaunch' | string: The security type used by virtual machine in hostpool session host. Default is Standard.
 * **vTpmEnabled**: bool: Whether to use vTpm on the virtual machine.
 
+## SendMessage
+### Properties
+* **messageBody**: string: Body of message.
+* **messageTitle**: string: Title of message.
+
 ## SessionHostConfigurationProperties
 ### Properties
 * **availabilityZones**: int[]: Value for availability zones to be used by the session host. Should be from [1,2,3].
@@ -790,6 +835,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UpdateSessionHostsRequestBody
+### Properties
+* **scheduledDateTime**: string: The timestamp that the update validation is scheduled for. If none is provided, the update will be executed immediately
+* **scheduledDateTimeZone**: string: The timeZone as defined in https://docs.microsoft.com/dotnet/api/system.timezoneinfo.findsystemtimezonebyid.
+* **update**: [HostPoolUpdateConfigurationPatchProperties](#hostpoolupdateconfigurationpatchproperties): settings for management information for the hostpool update operation. If none is provided the update will use the settings saved in the sessionHostManagement object.
 
 ## UserAssignedIdentity
 ### Properties

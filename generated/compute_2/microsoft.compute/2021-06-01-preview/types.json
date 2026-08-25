@@ -1,6 +1,52 @@
 [
   {
     "$type": "ObjectType",
+    "name": "RunDiskInspectionInput",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Qualified name of the resource."
+      },
+      "manifest": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Name of manifest in order to trigger Disk Inspection."
+      },
+      "uploadSasUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "SAS uri to the blob where results will be uploaded."
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.Compute/locations/diagnostics",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/1"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "StorageConfigurationInput",
     "properties": {
       "storageAccountId": {
@@ -13,7 +59,19 @@
     }
   },
   {
-    "$type": "StringType"
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "registerStorageConfiguration",
+    "resourceType": "Microsoft.Compute/locations/diagnostics",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/5"
+    },
+    "input": {
+      "$ref": "#/4"
+    }
   },
   {
     "$type": "ObjectType",
@@ -33,7 +91,7 @@
     "resourceType": "Microsoft.Compute/locations/diagnostics",
     "apiVersion": "2021-06-01-preview",
     "output": {
-      "$ref": "#/2"
+      "$ref": "#/7"
     }
   }
 ]

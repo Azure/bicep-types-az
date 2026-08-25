@@ -58,6 +58,17 @@
 * **Input**: [FunctionRetrieveDefaultDefinitionParameters](#functionretrievedefaultdefinitionparameters)
 * **Output**: [Function](#function)
 
+## Function start (Microsoft.StreamAnalytics/streamingjobs@2016-03-01)
+* **Resource**: Microsoft.StreamAnalytics/streamingjobs
+* **ApiVersion**: 2016-03-01
+* **Input**: [StartStreamingJobParameters](#startstreamingjobparameters)
+* **Output**: any
+
+## Function stop (Microsoft.StreamAnalytics/streamingjobs@2016-03-01)
+* **Resource**: Microsoft.StreamAnalytics/streamingjobs
+* **ApiVersion**: 2016-03-01
+* **Output**: any
+
 ## Function test (Microsoft.StreamAnalytics/streamingjobs/inputs@2016-03-01)
 * **Resource**: Microsoft.StreamAnalytics/streamingjobs/inputs
 * **ApiVersion**: 2016-03-01
@@ -449,6 +460,11 @@
 ## Sku
 ### Properties
 * **name**: 'Standard' | string: The name of the SKU. Required on PUT (CreateOrReplace) requests.
+
+## StartStreamingJobParameters
+### Properties
+* **outputStartMode**: 'CustomTime' | 'JobStartTime' | 'LastOutputEventTime' | string: Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.
+* **outputStartTime**: string: Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime.
 
 ## StorageAccount
 ### Properties

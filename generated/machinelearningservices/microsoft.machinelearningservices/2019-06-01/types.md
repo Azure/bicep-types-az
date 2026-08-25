@@ -41,6 +41,11 @@
 * **ApiVersion**: 2019-06-01
 * **Output**: [AmlComputeNodesInformation](#amlcomputenodesinformation)
 
+## Function resyncKeys (Microsoft.MachineLearningServices/workspaces@2019-06-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2019-06-01
+* **Output**: any
+
 ## Function updateQuotas (Microsoft.MachineLearningServices/locations@2019-06-01)
 * **Resource**: Microsoft.MachineLearningServices/locations
 * **ApiVersion**: 2019-06-01

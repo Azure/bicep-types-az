@@ -1159,5 +1159,17 @@
     "output": {
       "$ref": "#/110"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cleanupData",
+    "resourceType": "Microsoft.Migrate/migrateProjects/solutions",
+    "apiVersion": "2018-09-01-preview",
+    "output": {
+      "$ref": "#/112"
+    }
   }
 ]

@@ -4758,6 +4758,95 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RestartParameter",
+    "properties": {
+      "restartWithFailover": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Indicates if restart the PostgreSQL database engine should failover or switch over from primary to standby. This only works if server has high availability enabled."
+      },
+      "failoverMode": {
+        "type": {
+          "$ref": "#/406"
+        },
+        "flags": 0,
+        "description": "Failover mode."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PlannedFailover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForcedFailover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PlannedSwitchover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForcedSwitchover"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/402"
+      },
+      {
+        "$ref": "#/403"
+      },
+      {
+        "$ref": "#/404"
+      },
+      {
+        "$ref": "#/405"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/407"
+    },
+    "input": {
+      "$ref": "#/401"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/407"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/407"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "CheckNameAvailabilityRequest",
     "properties": {
       "name": {
@@ -4803,7 +4892,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/405"
+          "$ref": "#/415"
         },
         "flags": 0,
         "description": "The reason why the given name is not available."
@@ -4829,10 +4918,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/403"
+        "$ref": "#/413"
       },
       {
-        "$ref": "#/404"
+        "$ref": "#/414"
       },
       {
         "$ref": "#/0"
@@ -4845,10 +4934,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2025-06-01-preview",
     "output": {
-      "$ref": "#/402"
+      "$ref": "#/412"
     },
     "input": {
-      "$ref": "#/401"
+      "$ref": "#/411"
     }
   },
   {
@@ -4870,7 +4959,7 @@
     "properties": {
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/410"
+          "$ref": "#/420"
         },
         "flags": 2
       },
@@ -4913,7 +5002,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/409"
+      "$ref": "#/419"
     }
   },
   {
@@ -4922,10 +5011,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2025-06-01-preview",
     "output": {
-      "$ref": "#/408"
+      "$ref": "#/418"
     },
     "input": {
-      "$ref": "#/407"
+      "$ref": "#/417"
     }
   }
 ]

@@ -171,6 +171,30 @@
 * **ApiVersion**: 2025-06-01
 * **Output**: [SvmPeerCommandResponse](#svmpeercommandresponse)
 
+## Function authorizeReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Input**: [AuthorizeRequest](#authorizerequest)
+* **Output**: any
+
+## Function breakFileLocks (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Input**: [BreakFileLocksRequest](#breakfilelocksrequest)
+* **Output**: any
+
+## Function breakReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Input**: [BreakReplicationRequest](#breakreplicationrequest)
+* **Output**: any
+
+## Function changeKeyVault (Microsoft.NetApp/netAppAccounts@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts
+* **ApiVersion**: 2025-06-01
+* **Input**: [ChangeKeyVault](#changekeyvault)
+* **Output**: any
+
 ## Function checkFilePathAvailability (Microsoft.NetApp/locations@2025-06-01)
 * **Resource**: Microsoft.NetApp/locations
 * **ApiVersion**: 2025-06-01
@@ -188,6 +212,21 @@
 * **ApiVersion**: 2025-06-01
 * **Input**: [QuotaAvailabilityRequest](#quotaavailabilityrequest)
 * **Output**: [CheckAvailabilityResponse](#checkavailabilityresponse)
+
+## Function deleteReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Output**: any
+
+## Function finalizeExternalReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Output**: any
+
+## Function finalizeRelocation (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Output**: any
 
 ## Function getGroupIdListForLdapUser (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
@@ -210,11 +249,34 @@
 * **ApiVersion**: 2025-06-01
 * **Output**: [ListReplications](#listreplications)
 
+## Function migrateBackups (Microsoft.NetApp/netAppAccounts@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts
+* **ApiVersion**: 2025-06-01
+* **Input**: [BackupsMigrationRequest](#backupsmigrationrequest)
+* **Output**: any
+
+## Function migrateBackups (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Input**: [BackupsMigrationRequest](#backupsmigrationrequest)
+* **Output**: any
+
 ## Function peerExternalCluster (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
 * **ApiVersion**: 2025-06-01
 * **Input**: [PeerClusterForVolumeMigrationRequest](#peerclusterforvolumemigrationrequest)
 * **Output**: [ClusterPeerCommandResponse](#clusterpeercommandresponse)
+
+## Function performReplicationTransfer (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Output**: any
+
+## Function poolChange (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Input**: [PoolChangeRequest](#poolchangerequest)
+* **Output**: any
 
 ## Function populateAvailabilityZone (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
@@ -227,10 +289,71 @@
 * **Input**: [QueryNetworkSiblingSetRequest](#querynetworksiblingsetrequest)
 * **Output**: [NetworkSiblingSet](#networksiblingset)
 
+## Function reestablishReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Input**: [ReestablishReplicationRequest](#reestablishreplicationrequest)
+* **Output**: any
+
+## Function reinitializeReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Output**: any
+
+## Function relocate (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Input**: [RelocateVolumeRequest](#relocatevolumerequest)
+* **Output**: any
+
+## Function renewCredentials (Microsoft.NetApp/netAppAccounts@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts
+* **ApiVersion**: 2025-06-01
+* **Output**: any
+
+## Function resetCifsPassword (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Output**: any
+
+## Function restoreFiles (Microsoft.NetApp/netAppAccounts/backupVaults/backups@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/backupVaults/backups
+* **ApiVersion**: 2025-06-01
+* **Input**: [BackupRestoreFiles](#backuprestorefiles)
+* **Output**: any
+
+## Function restoreFiles (Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots
+* **ApiVersion**: 2025-06-01
+* **Input**: [SnapshotRestoreFiles](#snapshotrestorefiles)
+* **Output**: any
+
+## Function resyncReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Output**: any
+
+## Function revert (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Input**: [VolumeRevert](#volumerevert)
+* **Output**: any
+
+## Function revertRelocation (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2025-06-01
+* **Output**: any
+
 ## Function splitCloneFromParent (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2025-06-01)
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
 * **ApiVersion**: 2025-06-01
 * **Output**: [Volume](#volume)
+
+## Function transitiontocmk (Microsoft.NetApp/netAppAccounts@2025-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts
+* **ApiVersion**: 2025-06-01
+* **Input**: [EncryptionTransitionRequest](#encryptiontransitionrequest)
+* **Output**: any
 
 ## Function updateNetworkSiblingSet (Microsoft.NetApp/locations@2025-06-01)
 * **Resource**: Microsoft.NetApp/locations
@@ -279,6 +402,10 @@
 * **statusDetails**: string (ReadOnly): Any details in regards to the Status of the Active Directory
 * **username**: string: A domain user account with permission to create machine accounts
 
+## AuthorizeRequest
+### Properties
+* **remoteVolumeResourceId**: string: Resource id of the remote volume
+
 ## BackupPolicyProperties
 ### Properties
 * **backupPolicyId**: string (ReadOnly): Backup Policy GUID ID
@@ -307,9 +434,35 @@
 * **useExistingSnapshot**: bool: Manual backup an already existing snapshot. This will always be false for scheduled backups and true/false for manual backups
 * **volumeResourceId**: string (Required): ResourceId used to identify the Volume
 
+## BackupRestoreFiles
+### Properties
+* **destinationVolumeId**: string (Required): Resource Id of the destination volume on which the files need to be restored
+* **fileList**: (string {minLength: 1, maxLength: 1024})[] {minLength: 1, maxLength: 8} (Required): List of files to be restored
+* **restoreFilePath**: string {pattern: "^\/.*$"}: Destination folder where the files will be restored. The path name should start with a forward slash. If it is omitted from request then restore is done at the root folder of the destination volume by default
+
+## BackupsMigrationRequest
+### Properties
+* **backupVaultId**: string (Required): The ResourceId of the Backup Vault
+
 ## BackupVaultProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
+
+## BreakFileLocksRequest
+### Properties
+* **clientIp**: string {pattern: "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"}: To clear file locks on a volume for a particular client
+* **confirmRunningDisruptiveOperation**: bool: Break File locks could be a disruptive operation for application as locks on the volume will be broken, if want to process, set to true.
+
+## BreakReplicationRequest
+### Properties
+* **forceBreakReplication**: bool: If replication is in status transferring and you want to force break the replication, set to true
+
+## ChangeKeyVault
+### Properties
+* **keyName**: string (Required): The name of the key that should be used for encryption.
+* **keyVaultPrivateEndpoints**: [KeyVaultPrivateEndpoint](#keyvaultprivateendpoint)[] (Required): Pairs of virtual network ID and private endpoint ID. Every virtual network that has volumes encrypted with customer-managed keys needs its own key vault private endpoint.
+* **keyVaultResourceId**: string: Azure resource ID of the key vault/managed HSM that should be used for encryption.
+* **keyVaultUri**: string (Required): The URI of the key vault/managed HSM that should be used for encryption.
 
 ## CheckAvailabilityResponse
 ### Properties
@@ -345,6 +498,11 @@
 * **federatedClientId**: string: ClientId of the multi-tenant Entra ID Application. Used to access cross-tenant keyvaults.
 * **principalId**: string (ReadOnly): The principal ID (object ID) of the identity used to authenticate with key vault. Read-only.
 * **userAssignedIdentity**: string: The ARM resource identifier of the user assigned identity used to authenticate with key vault. Applicable if identity.type has 'UserAssigned'. It should match key of identity.userAssignedIdentities.
+
+## EncryptionTransitionRequest
+### Properties
+* **privateEndpointId**: string (Required): Identifier of the private endpoint to reach the Azure Key Vault
+* **virtualNetworkId**: string (Required): Identifier for the virtual network
 
 ## ExportPolicyRule
 ### Properties
@@ -469,6 +627,10 @@
 * **key**: string (Required): Key for an application specific parameter for the placement of volumes in the volume group
 * **value**: string (Required): Value for an application specific parameter for the placement of volumes in the volume group
 
+## PoolChangeRequest
+### Properties
+* **newPoolResourceId**: string (Required): Resource id of the pool to move volume to
+
 ## PoolProperties
 ### Properties
 * **coolAccess**: bool: If enabled (true) the pool can contain cool Access enabled volumes.
@@ -493,6 +655,10 @@
 * **resourceGroup**: string (Required): Resource group name.
 * **type**: 'Microsoft.NetApp/netAppAccounts' | 'Microsoft.NetApp/netAppAccounts/capacityPools' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' | 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' | string (Required): Resource type used for verification.
 
+## ReestablishReplicationRequest
+### Properties
+* **sourceVolumeId**: string: Resource id of the source volume for the replication
+
 ## RegionInfo
 ### Properties
 * **availabilityZoneMappings**: [RegionInfoAvailabilityZoneMappingsItem](#regioninfoavailabilityzonemappingsitem)[]: Provides logical availability zone mappings for the subscription for a region.
@@ -502,6 +668,10 @@
 ### Properties
 * **availabilityZone**: string: Logical availability zone.
 * **isAvailable**: bool: Available availability zone
+
+## RelocateVolumeRequest
+### Properties
+* **creationToken**: string: New creation token for the volume that controls the mount point name
 
 ## RemotePath
 ### Properties
@@ -547,6 +717,11 @@
 * **created**: string (ReadOnly): The creation date of the snapshot
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **snapshotId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Snapshot
+
+## SnapshotRestoreFiles
+### Properties
+* **destinationPath**: string: Destination folder where the files will be restored
+* **filePaths**: (string {minLength: 1, maxLength: 1024})[] {minLength: 1, maxLength: 10} (Required): List of files to be restored
 
 ## SubscriptionQuotaItemProperties
 ### Properties
@@ -790,6 +965,10 @@ The value SMB isn't supported in the protocolTypes property. Default: NFSv3
 ### Properties
 * **readyToBeFinalized**: bool (ReadOnly): Has relocation finished and is ready to be cleaned up
 * **relocationRequested**: bool: Has relocation been requested for this volume
+
+## VolumeRevert
+### Properties
+* **snapshotId**: string: Resource id of the snapshot
 
 ## VolumeSnapshotProperties
 ### Properties

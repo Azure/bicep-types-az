@@ -375,16 +375,48 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/storages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.AppPlatform/Spring/jobs/executions@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/jobs/executions
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
 ## Function checkNameAvailability (Microsoft.AppPlatform/locations@2024-05-01-preview)
 * **Resource**: Microsoft.AppPlatform/locations
 * **ApiVersion**: 2024-05-01-preview
 * **Input**: [NameAvailabilityParameters](#nameavailabilityparameters)
 * **Output**: [NameAvailability](#nameavailability)
 
+## Function disable (Microsoft.AppPlatform/Spring/applicationAccelerators/predefinedAccelerators@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/applicationAccelerators/predefinedAccelerators
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
+## Function disableApmGlobally (Microsoft.AppPlatform/Spring@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2024-05-01-preview
+* **Input**: [ApmReference](#apmreference)
+* **Output**: any
+
 ## Function disableRemoteDebugging (Microsoft.AppPlatform/Spring/apps/deployments@2024-05-01-preview)
 * **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
 * **ApiVersion**: 2024-05-01-preview
 * **Output**: [RemoteDebugging](#remotedebugging)
+
+## Function disableTestEndpoint (Microsoft.AppPlatform/Spring@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
+## Function enable (Microsoft.AppPlatform/Spring/applicationAccelerators/predefinedAccelerators@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/applicationAccelerators/predefinedAccelerators
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
+## Function enableApmGlobally (Microsoft.AppPlatform/Spring@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2024-05-01-preview
+* **Input**: [ApmReference](#apmreference)
+* **Output**: any
 
 ## Function enableRemoteDebugging (Microsoft.AppPlatform/Spring/apps/deployments@2024-05-01-preview)
 * **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
@@ -396,6 +428,23 @@
 * **Resource**: Microsoft.AppPlatform/Spring
 * **ApiVersion**: 2024-05-01-preview
 * **Output**: [TestKeys](#testkeys)
+
+## Function flushVirtualNetworkDnsSettings (Microsoft.AppPlatform/Spring@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
+## Function generateHeapDump (Microsoft.AppPlatform/Spring/apps/deployments@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2024-05-01-preview
+* **Input**: [DiagnosticParameters](#diagnosticparameters)
+* **Output**: any
+
+## Function generateThreadDump (Microsoft.AppPlatform/Spring/apps/deployments@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2024-05-01-preview
+* **Input**: [DiagnosticParameters](#diagnosticparameters)
+* **Output**: any
 
 ## Function getLogFileUrl (Microsoft.AppPlatform/Spring/buildServices/builds/results@2024-05-01-preview)
 * **Resource**: Microsoft.AppPlatform/Spring/buildServices/builds/results
@@ -463,17 +512,53 @@
 * **Input**: [RegenerateTestKeyRequestPayload](#regeneratetestkeyrequestpayload)
 * **Output**: [TestKeys](#testkeys)
 
+## Function restart (Microsoft.AppPlatform/Spring/apps/deployments@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
+## Function restart (Microsoft.AppPlatform/Spring/gateways@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/gateways
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
 ## Function setActiveDeployments (Microsoft.AppPlatform/Spring/apps@2024-05-01-preview)
 * **Resource**: Microsoft.AppPlatform/Spring/apps
 * **ApiVersion**: 2024-05-01-preview
 * **Input**: [ActiveDeploymentCollection](#activedeploymentcollection)
 * **Output**: [AppResource](#appresource)
 
+## Function start (Microsoft.AppPlatform/Spring@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
+## Function start (Microsoft.AppPlatform/Spring/apps/deployments@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
 ## Function start (Microsoft.AppPlatform/Spring/jobs@2024-05-01-preview)
 * **Resource**: Microsoft.AppPlatform/Spring/jobs
 * **ApiVersion**: 2024-05-01-preview
 * **Input**: [JobExecutionTemplate](#jobexecutiontemplate)
 * **Output**: [JobExecution](#jobexecution)
+
+## Function startJFR (Microsoft.AppPlatform/Spring/apps/deployments@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2024-05-01-preview
+* **Input**: [DiagnosticParameters](#diagnosticparameters)
+* **Output**: any
+
+## Function stop (Microsoft.AppPlatform/Spring@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.AppPlatform/Spring/apps/deployments@2024-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
 
 ## Function validate (Microsoft.AppPlatform/Spring/configurationServices@2024-05-01-preview)
 * **Resource**: Microsoft.AppPlatform/Spring/configurationServices
@@ -1147,6 +1232,12 @@ eg: azure-servicebus, redis etc.
 * **clientSecret**: string {sensitive}: The secret known only to the application and the authorization server
 * **metadataUrl**: string: The URI of a JSON file with generic OIDC provider configuration.
 * **scopes**: string[]: It defines the specific actions applications can be allowed to do on a user's behalf
+
+## DiagnosticParameters
+### Properties
+* **appInstance**: string: App instance name
+* **duration**: string: Duration of your JFR. 1 min can be represented by 1m or 60s.
+* **filePath**: string: Your target file path in your own BYOS
 
 ## EnvSecretsCollection
 ### Properties

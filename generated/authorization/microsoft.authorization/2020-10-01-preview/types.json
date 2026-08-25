@@ -1726,5 +1726,26 @@
     "input": {
       "$ref": "#/128"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Authorization/roleAssignmentScheduleRequests",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/133"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Authorization/roleEligibilityScheduleRequests",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/133"
+    }
   }
 ]

@@ -102,6 +102,16 @@
 * **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
 * **Output**: [SignalRKeys](#signalrkeys)
 
+## Function restart (Microsoft.SignalRService/signalR@2024-08-01-preview)
+* **Resource**: Microsoft.SignalRService/signalR
+* **ApiVersion**: 2024-08-01-preview
+* **Output**: any
+
+## Function restart (Microsoft.SignalRService/signalR/replicas@2024-08-01-preview)
+* **Resource**: Microsoft.SignalRService/signalR/replicas
+* **ApiVersion**: 2024-08-01-preview
+* **Output**: any
+
 ## ApplicationFirewallSettings
 ### Properties
 * **clientConnectionCountRules**: [ClientConnectionCountRule](#clientconnectioncountrule)[] {maxLength: 10}: Rules to control the client connection count

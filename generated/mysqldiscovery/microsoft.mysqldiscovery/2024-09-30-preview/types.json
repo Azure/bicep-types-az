@@ -1035,5 +1035,17 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.MySQLDiscovery/MySQLSites",
+    "apiVersion": "2024-09-30-preview",
+    "output": {
+      "$ref": "#/84"
+    }
   }
 ]

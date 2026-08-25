@@ -250,6 +250,12 @@
 * **ApiVersion**: 2026-06-01
 * **Output**: [Macc](#macc)
 
+## Function changeSponsor (Microsoft.BillingBenefits/credits@2026-06-01)
+* **Resource**: Microsoft.BillingBenefits/credits
+* **ApiVersion**: 2026-06-01
+* **Input**: [ChangeSponsorRequest](#changesponsorrequest)
+* **Output**: any
+
 ## Function chargeShortfall (Microsoft.BillingBenefits/maccs@2026-06-01)
 * **Resource**: Microsoft.BillingBenefits/maccs
 * **ApiVersion**: 2026-06-01
@@ -324,6 +330,10 @@
 * **learnMoreLink**: string: Link to learn more about this catalog group. Uses the forward-link format https://go.microsoft.com/fwlink/?linkid=<linkId>.
 * **longDescription**: string: Long description of the catalog group.
 * **shortDescription**: string: Short description of the catalog group.
+
+## ChangeSponsorRequest
+### Properties
+* **sponsorId**: string: Financial code identifying the new sponsor. This is an alphanumeric identifier assigned by the billing system, for example P20567384.
 
 ## ChargeShortfallRequest
 ### Properties

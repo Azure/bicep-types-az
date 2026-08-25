@@ -26,6 +26,11 @@
 * **sku**: [SkuName](#skuname) (ReadOnly)
 * **type**: 'Microsoft.Capacity/reservationOrders/reservations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function archive (Microsoft.Capacity/reservationOrders/reservations@2019-04-01)
+* **Resource**: Microsoft.Capacity/reservationOrders/reservations
+* **ApiVersion**: 2019-04-01
+* **Output**: any
+
 ## Function availableScopes (Microsoft.Capacity/reservationOrders/reservations@2019-04-01)
 * **Resource**: Microsoft.Capacity/reservationOrders/reservations
 * **ApiVersion**: 2019-04-01
@@ -43,6 +48,11 @@
 * **ApiVersion**: 2019-04-01
 * **Input**: [SplitRequest](#splitrequest)
 * **Output**: [ReservationResponse](#reservationresponse)[]
+
+## Function unarchive (Microsoft.Capacity/reservationOrders/reservations@2019-04-01)
+* **Resource**: Microsoft.Capacity/reservationOrders/reservations
+* **ApiVersion**: 2019-04-01
+* **Output**: any
 
 ## AppliedScopeProperties
 ### Properties

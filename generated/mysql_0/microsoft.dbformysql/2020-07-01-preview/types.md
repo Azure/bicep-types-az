@@ -61,6 +61,21 @@
 * **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
 * **Output**: [VirtualNetworkSubnetUsageResult](#virtualnetworksubnetusageresult)
 
+## Function restart (Microsoft.DBForMySql/flexibleServers@2020-07-01-preview)
+* **Resource**: Microsoft.DBForMySql/flexibleServers
+* **ApiVersion**: 2020-07-01-preview
+* **Output**: any
+
+## Function start (Microsoft.DBForMySql/flexibleServers@2020-07-01-preview)
+* **Resource**: Microsoft.DBForMySql/flexibleServers
+* **ApiVersion**: 2020-07-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.DBForMySql/flexibleServers@2020-07-01-preview)
+* **Resource**: Microsoft.DBForMySql/flexibleServers
+* **ApiVersion**: 2020-07-01-preview
+* **Output**: any
+
 ## Function updateConfigurations (Microsoft.DBForMySql/flexibleServers@2020-07-01-preview)
 * **Resource**: Microsoft.DBForMySql/flexibleServers
 * **ApiVersion**: 2020-07-01-preview

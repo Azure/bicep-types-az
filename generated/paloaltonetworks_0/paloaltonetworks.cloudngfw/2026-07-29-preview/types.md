@@ -184,6 +184,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function commit (PaloAltoNetworks.Cloudngfw/globalRulestacks@2026-07-29-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks
+* **ApiVersion**: 2026-07-29-preview
+* **Output**: any
+
+## Function commit (PaloAltoNetworks.Cloudngfw/localRulestacks@2026-07-29-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/localRulestacks
+* **ApiVersion**: 2026-07-29-preview
+* **Output**: any
+
 ## Function getChangeLog (PaloAltoNetworks.Cloudngfw/globalRulestacks@2026-07-29-preview)
 * **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks
 * **ApiVersion**: 2026-07-29-preview
@@ -269,6 +279,21 @@
 * **ApiVersion**: 2026-07-29-preview
 * **Output**: [PredefinedUrlCategoriesResponse](#predefinedurlcategoriesresponse)
 
+## Function refreshCounters (PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules@2026-07-29-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules
+* **ApiVersion**: 2026-07-29-preview
+* **Output**: any
+
+## Function refreshCounters (PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules@2026-07-29-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules
+* **ApiVersion**: 2026-07-29-preview
+* **Output**: any
+
+## Function refreshCounters (PaloAltoNetworks.Cloudngfw/localRulestacks/localRules@2026-07-29-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/localRulestacks/localRules
+* **ApiVersion**: 2026-07-29-preview
+* **Output**: any
+
 ## Function resetCounters (PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules@2026-07-29-preview)
 * **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules
 * **ApiVersion**: 2026-07-29-preview
@@ -283,6 +308,22 @@
 * **Resource**: PaloAltoNetworks.Cloudngfw/localRulestacks/localRules
 * **ApiVersion**: 2026-07-29-preview
 * **Output**: [RuleCounterReset](#rulecounterreset)
+
+## Function revert (PaloAltoNetworks.Cloudngfw/globalRulestacks@2026-07-29-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks
+* **ApiVersion**: 2026-07-29-preview
+* **Output**: any
+
+## Function revert (PaloAltoNetworks.Cloudngfw/localRulestacks@2026-07-29-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/localRulestacks
+* **ApiVersion**: 2026-07-29-preview
+* **Output**: any
+
+## Function saveLogProfile (PaloAltoNetworks.Cloudngfw/firewalls@2026-07-29-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw/firewalls
+* **ApiVersion**: 2026-07-29-preview
+* **Input**: [LogSettings](#logsettings)
+* **Output**: any
 
 ## ApplicationInsights
 ### Properties

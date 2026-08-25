@@ -2515,5 +2515,26 @@
     "input": {
       "$ref": "#/205"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.SignalRService/webPubSub",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/211"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.SignalRService/webPubSub/replicas",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/211"
+    }
   }
 ]

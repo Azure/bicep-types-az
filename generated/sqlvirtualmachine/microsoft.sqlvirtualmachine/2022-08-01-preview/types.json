@@ -2295,6 +2295,27 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startAssessment",
+    "resourceType": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
+    "apiVersion": "2022-08-01-preview",
+    "output": {
+      "$ref": "#/164"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
+    "apiVersion": "2022-08-01-preview",
+    "output": {
+      "$ref": "#/164"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SqlVmTroubleshooting",
     "properties": {
@@ -2314,7 +2335,7 @@
       },
       "troubleshootingScenario": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/169"
         },
         "flags": 0,
         "description": "SQL VM troubleshooting scenario."
@@ -2343,7 +2364,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/165"
+        "$ref": "#/168"
       },
       {
         "$ref": "#/0"
@@ -2356,10 +2377,10 @@
     "resourceType": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
     "apiVersion": "2022-08-01-preview",
     "output": {
-      "$ref": "#/164"
+      "$ref": "#/167"
     },
     "input": {
-      "$ref": "#/164"
+      "$ref": "#/167"
     }
   }
 ]

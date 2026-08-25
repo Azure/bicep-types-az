@@ -232,6 +232,39 @@
 * **ApiVersion**: 2025-06-01
 * **Output**: [SupportedOptimizationTypesListResult](#supportedoptimizationtypeslistresult)
 
+## Function load (Microsoft.Cdn/profiles/endpoints@2025-06-01)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2025-06-01
+* **Input**: [LoadParameters](#loadparameters)
+* **Output**: any
+
+## Function migrationAbort (Microsoft.Cdn/profiles@2025-06-01)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2025-06-01
+* **Output**: any
+
+## Function migrationCommit (Microsoft.Cdn/profiles@2025-06-01)
+* **Resource**: Microsoft.Cdn/profiles
+* **ApiVersion**: 2025-06-01
+* **Output**: any
+
+## Function purge (Microsoft.Cdn/profiles/afdEndpoints@2025-06-01)
+* **Resource**: Microsoft.Cdn/profiles/afdEndpoints
+* **ApiVersion**: 2025-06-01
+* **Input**: [AfdPurgeParameters](#afdpurgeparameters)
+* **Output**: any
+
+## Function purge (Microsoft.Cdn/profiles/endpoints@2025-06-01)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2025-06-01
+* **Input**: [PurgeParameters](#purgeparameters)
+* **Output**: any
+
+## Function refreshValidationToken (Microsoft.Cdn/profiles/customDomains@2025-06-01)
+* **Resource**: Microsoft.Cdn/profiles/customDomains
+* **ApiVersion**: 2025-06-01
+* **Output**: any
+
 ## Function start (Microsoft.Cdn/profiles/endpoints@2025-06-01)
 * **Resource**: Microsoft.Cdn/profiles/endpoints
 * **ApiVersion**: 2025-06-01
@@ -357,6 +390,11 @@
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status
 * **sharedPrivateLinkResource**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): The properties of the private link resource for private origin.
 * **weight**: int {minValue: 1, maxValue: 1000}: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+
+## AfdPurgeParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be purged. Can describe a file path or a wild card directory.
+* **domains**: string[]: List of domains.
 
 ## AfdRouteCacheConfiguration
 ### Properties
@@ -853,6 +891,10 @@
 * **sampleSize**: int: The number of samples to consider for load balancing decisions
 * **successfulSamplesRequired**: int: The number of samples within the sample period that must succeed
 
+## LoadParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be loaded. Path should be a relative file URL of the origin.
+
 ## ManagedRuleGroupOverride
 ### Properties
 * **ruleGroupName**: string (Required): Describes the managed rule group within the rule set to override
@@ -1024,6 +1066,10 @@
 ## ProfileUpgradeParameters
 ### Properties
 * **wafMappingList**: [ProfileChangeSkuWafMapping](#profilechangeskuwafmapping)[] (Required): Web Application Firewall (WAF) and security policy mapping for the profile upgrade
+
+## PurgeParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be purged. Can describe a file path or a wild card directory.
 
 ## QueryStringMatchConditionParameters
 ### Properties

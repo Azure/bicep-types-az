@@ -560,5 +560,162 @@
     },
     "readableScopes": 12,
     "writableScopes": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dismiss",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/41"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resolve",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/41"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/41"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertSimulatorRequestBody",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "Alert Simulator request body data."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "AlertSimulatorRequestProperties",
+    "discriminator": "kind",
+    "baseProperties": {},
+    "elements": {
+      "Bundles": {
+        "$ref": "#/52"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertSimulatorBundlesRequestProperties",
+    "properties": {
+      "bundles": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Bundles list."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 1,
+        "description": "The kind of alert simulation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AppServices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DNS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaults"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KubernetesService"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceManager"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SqlServers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StorageAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VirtualMachines"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/61"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bundles"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "simulate",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/41"
+    },
+    "input": {
+      "$ref": "#/50"
+    }
   }
 ]

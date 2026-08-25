@@ -2089,6 +2089,90 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RunWorkflowParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the name of workflow run trigger."
+      },
+      "outputs": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Gets or sets the outputs of workflow run trigger."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkflowRun",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "Gets or sets the workflow run properties."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the workflow run name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the workflow run type."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the resource id."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.Logic/workflows",
+    "apiVersion": "2015-02-01-preview",
+    "output": {
+      "$ref": "#/180"
+    },
+    "input": {
+      "$ref": "#/179"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.Logic/workflows",
+    "apiVersion": "2015-02-01-preview",
+    "output": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.Logic/workflows",
+    "apiVersion": "2015-02-01-preview",
+    "output": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "Workflow",
     "properties": {
       "properties": {
@@ -2128,7 +2212,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/180"
+          "$ref": "#/185"
         },
         "flags": 0,
         "description": "Gets or sets the resource tags."
@@ -2141,6 +2225,18 @@
     "properties": {},
     "additionalProperties": {
       "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.Logic/workflows",
+    "apiVersion": "2015-02-01-preview",
+    "output": {
+      "$ref": "#/27"
+    },
+    "input": {
+      "$ref": "#/184"
     }
   },
   {
@@ -2169,7 +2265,7 @@
     "resourceType": "Microsoft.Logic/workflows/accessKeys",
     "apiVersion": "2015-02-01-preview",
     "output": {
-      "$ref": "#/181"
+      "$ref": "#/187"
     }
   },
   {
@@ -2178,7 +2274,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/187"
+          "$ref": "#/193"
         },
         "flags": 0,
         "description": "Gets or sets the key type."
@@ -2201,13 +2297,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/184"
+        "$ref": "#/190"
       },
       {
-        "$ref": "#/185"
+        "$ref": "#/191"
       },
       {
-        "$ref": "#/186"
+        "$ref": "#/192"
       }
     ]
   },
@@ -2217,10 +2313,28 @@
     "resourceType": "Microsoft.Logic/workflows/accessKeys",
     "apiVersion": "2015-02-01-preview",
     "output": {
-      "$ref": "#/181"
+      "$ref": "#/187"
     },
     "input": {
-      "$ref": "#/183"
+      "$ref": "#/189"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.Logic/workflows/triggers",
+    "apiVersion": "2015-02-01-preview",
+    "output": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Logic/workflows/runs",
+    "apiVersion": "2015-02-01-preview",
+    "output": {
+      "$ref": "#/27"
     }
   }
 ]

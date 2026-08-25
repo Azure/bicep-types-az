@@ -20499,12 +20499,24 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migratetoaad",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics",
+    "apiVersion": "2023-04-01",
+    "output": {
+      "$ref": "#/1017"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "FailoverProcessServerRequest",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1018"
+          "$ref": "#/1020"
         },
         "flags": 0,
         "description": "The properties of the PS Failover request."
@@ -20538,7 +20550,7 @@
       },
       "vmsToMigrate": {
         "type": {
-          "$ref": "#/1019"
+          "$ref": "#/1021"
         },
         "flags": 0,
         "description": "The VMS to migrate."
@@ -20567,6 +20579,15 @@
       "$ref": "#/982"
     },
     "input": {
+      "$ref": "#/1019"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "remove",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics",
+    "apiVersion": "2023-04-01",
+    "output": {
       "$ref": "#/1017"
     }
   },
@@ -20576,7 +20597,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1022"
+          "$ref": "#/1025"
         },
         "flags": 0,
         "description": "Renew certificate input properties."
@@ -20605,7 +20626,7 @@
       "$ref": "#/982"
     },
     "input": {
-      "$ref": "#/1021"
+      "$ref": "#/1024"
     }
   },
   {
@@ -20614,7 +20635,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1025"
+          "$ref": "#/1028"
         },
         "flags": 0,
         "description": "The properties of a discover protectable item request."
@@ -20654,7 +20675,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1027"
+          "$ref": "#/1030"
         },
         "flags": 0,
         "description": "The custom data."
@@ -20750,10 +20771,19 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1026"
+      "$ref": "#/1029"
     },
     "input": {
-      "$ref": "#/1024"
+      "$ref": "#/1027"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "remove",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers",
+    "apiVersion": "2023-04-01",
+    "output": {
+      "$ref": "#/1017"
     }
   },
   {
@@ -20762,7 +20792,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1030"
+          "$ref": "#/1034"
         },
         "flags": 0,
         "description": "Switch protection properties."
@@ -20782,7 +20812,7 @@
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1031"
+          "$ref": "#/1035"
         },
         "flags": 0,
         "description": "Provider specific switch protection input."
@@ -20796,7 +20826,7 @@
     "baseProperties": {},
     "elements": {
       "A2A": {
-        "$ref": "#/1032"
+        "$ref": "#/1036"
       }
     }
   },
@@ -20813,14 +20843,14 @@
       },
       "vmDisks": {
         "type": {
-          "$ref": "#/1033"
+          "$ref": "#/1037"
         },
         "flags": 0,
         "description": "The list of vm disk details."
       },
       "vmManagedDisks": {
         "type": {
-          "$ref": "#/1034"
+          "$ref": "#/1038"
         },
         "flags": 0,
         "description": "The list of vm managed disk details."
@@ -20897,7 +20927,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1035"
+          "$ref": "#/1039"
         },
         "flags": 1,
         "description": "Gets the Instance type."
@@ -20926,10 +20956,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1026"
+      "$ref": "#/1029"
     },
     "input": {
-      "$ref": "#/1029"
+      "$ref": "#/1033"
     }
   },
   {
@@ -20938,7 +20968,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1038"
+          "$ref": "#/1042"
         },
         "flags": 1,
         "description": "Migrate input properties."
@@ -20951,7 +20981,7 @@
     "properties": {
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1039"
+          "$ref": "#/1043"
         },
         "flags": 1,
         "description": "The provider specific details."
@@ -20965,7 +20995,7 @@
     "baseProperties": {},
     "elements": {
       "VMwareCbt": {
-        "$ref": "#/1040"
+        "$ref": "#/1044"
       }
     }
   },
@@ -20989,7 +21019,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1041"
+          "$ref": "#/1045"
         },
         "flags": 1,
         "description": "The class type."
@@ -21006,7 +21036,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1043"
+          "$ref": "#/1047"
         },
         "flags": 0,
         "description": "The migration item properties."
@@ -21082,7 +21112,7 @@
       },
       "migrationState": {
         "type": {
-          "$ref": "#/1061"
+          "$ref": "#/1065"
         },
         "flags": 2,
         "description": "The migration status."
@@ -21124,7 +21154,7 @@
       },
       "testMigrateState": {
         "type": {
-          "$ref": "#/1069"
+          "$ref": "#/1073"
         },
         "flags": 2,
         "description": "The test migrate state."
@@ -21138,21 +21168,21 @@
       },
       "health": {
         "type": {
-          "$ref": "#/1074"
+          "$ref": "#/1078"
         },
         "flags": 2,
         "description": "The consolidated health."
       },
       "healthErrors": {
         "type": {
-          "$ref": "#/1075"
+          "$ref": "#/1079"
         },
         "flags": 2,
         "description": "The list of health errors."
       },
       "allowedOperations": {
         "type": {
-          "$ref": "#/1084"
+          "$ref": "#/1088"
         },
         "flags": 2,
         "description": "The allowed operations on the migration item based on the current migration state of the item."
@@ -21166,7 +21196,7 @@
       },
       "criticalJobHistory": {
         "type": {
-          "$ref": "#/1085"
+          "$ref": "#/1089"
         },
         "flags": 2,
         "description": "The critical past job details."
@@ -21180,7 +21210,7 @@
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1086"
+          "$ref": "#/1090"
         },
         "flags": 0,
         "description": "The migration provider custom settings."
@@ -21259,18 +21289,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1044"
-      },
-      {
-        "$ref": "#/1045"
-      },
-      {
-        "$ref": "#/1046"
-      },
-      {
-        "$ref": "#/1047"
-      },
-      {
         "$ref": "#/1048"
       },
       {
@@ -21310,6 +21328,18 @@
         "$ref": "#/1060"
       },
       {
+        "$ref": "#/1061"
+      },
+      {
+        "$ref": "#/1062"
+      },
+      {
+        "$ref": "#/1063"
+      },
+      {
+        "$ref": "#/1064"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -21346,18 +21376,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1062"
-      },
-      {
-        "$ref": "#/1063"
-      },
-      {
-        "$ref": "#/1064"
-      },
-      {
-        "$ref": "#/1065"
-      },
-      {
         "$ref": "#/1066"
       },
       {
@@ -21365,6 +21383,18 @@
       },
       {
         "$ref": "#/1068"
+      },
+      {
+        "$ref": "#/1069"
+      },
+      {
+        "$ref": "#/1070"
+      },
+      {
+        "$ref": "#/1071"
+      },
+      {
+        "$ref": "#/1072"
       },
       {
         "$ref": "#/0"
@@ -21391,16 +21421,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1070"
+        "$ref": "#/1074"
       },
       {
-        "$ref": "#/1071"
+        "$ref": "#/1075"
       },
       {
-        "$ref": "#/1072"
+        "$ref": "#/1076"
       },
       {
-        "$ref": "#/1073"
+        "$ref": "#/1077"
       },
       {
         "$ref": "#/0"
@@ -21445,18 +21475,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1076"
-      },
-      {
-        "$ref": "#/1077"
-      },
-      {
-        "$ref": "#/1078"
-      },
-      {
-        "$ref": "#/1079"
-      },
-      {
         "$ref": "#/1080"
       },
       {
@@ -21466,6 +21484,18 @@
         "$ref": "#/1082"
       },
       {
+        "$ref": "#/1083"
+      },
+      {
+        "$ref": "#/1084"
+      },
+      {
+        "$ref": "#/1085"
+      },
+      {
+        "$ref": "#/1086"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -21473,7 +21503,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1083"
+      "$ref": "#/1087"
     }
   },
   {
@@ -21489,7 +21519,7 @@
     "baseProperties": {},
     "elements": {
       "VMwareCbt": {
-        "$ref": "#/1087"
+        "$ref": "#/1091"
       }
     }
   },
@@ -21639,14 +21669,14 @@
       },
       "targetVmTags": {
         "type": {
-          "$ref": "#/1088"
+          "$ref": "#/1092"
         },
         "flags": 0,
         "description": "The target VM tags."
       },
       "protectedDisks": {
         "type": {
-          "$ref": "#/1089"
+          "$ref": "#/1093"
         },
         "flags": 0,
         "description": "The list of protected disks."
@@ -21667,14 +21697,14 @@
       },
       "vmNics": {
         "type": {
-          "$ref": "#/1090"
+          "$ref": "#/1094"
         },
         "flags": 0,
         "description": "The network details."
       },
       "targetNicTags": {
         "type": {
-          "$ref": "#/1091"
+          "$ref": "#/1095"
         },
         "flags": 0,
         "description": "The tags for the target NICs."
@@ -21758,7 +21788,7 @@
       },
       "resyncState": {
         "type": {
-          "$ref": "#/1095"
+          "$ref": "#/1099"
         },
         "flags": 2,
         "description": "The resync state."
@@ -21772,28 +21802,28 @@
       },
       "seedDiskTags": {
         "type": {
-          "$ref": "#/1096"
+          "$ref": "#/1100"
         },
         "flags": 0,
         "description": "The tags for the seed disks."
       },
       "targetDiskTags": {
         "type": {
-          "$ref": "#/1097"
+          "$ref": "#/1101"
         },
         "flags": 0,
         "description": "The tags for the target disks."
       },
       "supportedOSVersions": {
         "type": {
-          "$ref": "#/1098"
+          "$ref": "#/1102"
         },
         "flags": 0,
         "description": "List of supported inplace OS Upgrade versions."
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1099"
+          "$ref": "#/1103"
         },
         "flags": 1,
         "description": "Gets the instance type."
@@ -21844,13 +21874,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1092"
+        "$ref": "#/1096"
       },
       {
-        "$ref": "#/1093"
+        "$ref": "#/1097"
       },
       {
-        "$ref": "#/1094"
+        "$ref": "#/1098"
       },
       {
         "$ref": "#/0"
@@ -21889,10 +21919,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1042"
+      "$ref": "#/1046"
     },
     "input": {
-      "$ref": "#/1037"
+      "$ref": "#/1041"
     }
   },
   {
@@ -21901,7 +21931,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1102"
+          "$ref": "#/1106"
         },
         "flags": 1,
         "description": "Pause replication input properties."
@@ -21927,10 +21957,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1042"
+      "$ref": "#/1046"
     },
     "input": {
-      "$ref": "#/1101"
+      "$ref": "#/1105"
     }
   },
   {
@@ -21939,7 +21969,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1105"
+          "$ref": "#/1109"
         },
         "flags": 1,
         "description": "Resume replication input properties."
@@ -21952,7 +21982,7 @@
     "properties": {
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1106"
+          "$ref": "#/1110"
         },
         "flags": 1,
         "description": "The provider specific input for resume replication."
@@ -21966,7 +21996,7 @@
     "baseProperties": {},
     "elements": {
       "VMwareCbt": {
-        "$ref": "#/1107"
+        "$ref": "#/1111"
       }
     }
   },
@@ -21983,7 +22013,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1108"
+          "$ref": "#/1112"
         },
         "flags": 1,
         "description": "The class type."
@@ -22000,10 +22030,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1042"
+      "$ref": "#/1046"
     },
     "input": {
-      "$ref": "#/1104"
+      "$ref": "#/1108"
     }
   },
   {
@@ -22012,7 +22042,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1111"
+          "$ref": "#/1115"
         },
         "flags": 1,
         "description": "Resync input properties."
@@ -22025,7 +22055,7 @@
     "properties": {
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1112"
+          "$ref": "#/1116"
         },
         "flags": 1,
         "description": "The provider specific details."
@@ -22039,7 +22069,7 @@
     "baseProperties": {},
     "elements": {
       "VMwareCbt": {
-        "$ref": "#/1113"
+        "$ref": "#/1117"
       }
     }
   },
@@ -22056,7 +22086,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1114"
+          "$ref": "#/1118"
         },
         "flags": 1,
         "description": "The class type."
@@ -22073,10 +22103,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1042"
+      "$ref": "#/1046"
     },
     "input": {
-      "$ref": "#/1110"
+      "$ref": "#/1114"
     }
   },
   {
@@ -22085,7 +22115,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1117"
+          "$ref": "#/1121"
         },
         "flags": 1,
         "description": "Test migrate input properties."
@@ -22098,7 +22128,7 @@
     "properties": {
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1118"
+          "$ref": "#/1122"
         },
         "flags": 1,
         "description": "The provider specific details."
@@ -22112,7 +22142,7 @@
     "baseProperties": {},
     "elements": {
       "VMwareCbt": {
-        "$ref": "#/1119"
+        "$ref": "#/1123"
       }
     }
   },
@@ -22136,7 +22166,7 @@
       },
       "vmNics": {
         "type": {
-          "$ref": "#/1121"
+          "$ref": "#/1125"
         },
         "flags": 0,
         "description": "The list of NIC details."
@@ -22150,7 +22180,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1122"
+          "$ref": "#/1126"
         },
         "flags": 1,
         "description": "The class type."
@@ -22222,7 +22252,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1120"
+      "$ref": "#/1124"
     }
   },
   {
@@ -22235,10 +22265,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1042"
+      "$ref": "#/1046"
     },
     "input": {
-      "$ref": "#/1116"
+      "$ref": "#/1120"
     }
   },
   {
@@ -22247,7 +22277,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1125"
+          "$ref": "#/1129"
         },
         "flags": 1,
         "description": "Test migrate cleanup input properties."
@@ -22260,7 +22290,7 @@
     "properties": {
       "comments": {
         "type": {
-          "$ref": "#/1126"
+          "$ref": "#/1130"
         },
         "flags": 0,
         "description": "Test migrate cleanup comments."
@@ -22277,10 +22307,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1042"
+      "$ref": "#/1046"
     },
     "input": {
-      "$ref": "#/1124"
+      "$ref": "#/1128"
     }
   },
   {
@@ -22289,7 +22319,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1129"
+          "$ref": "#/1133"
         },
         "flags": 0,
         "description": "Add disks input properties."
@@ -22302,7 +22332,7 @@
     "properties": {
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1130"
+          "$ref": "#/1134"
         },
         "flags": 1,
         "description": "The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null."
@@ -22316,7 +22346,7 @@
     "baseProperties": {},
     "elements": {
       "A2A": {
-        "$ref": "#/1131"
+        "$ref": "#/1135"
       }
     }
   },
@@ -22326,21 +22356,21 @@
     "properties": {
       "vmDisks": {
         "type": {
-          "$ref": "#/1132"
+          "$ref": "#/1136"
         },
         "flags": 0,
         "description": "The list of vm disk details."
       },
       "vmManagedDisks": {
         "type": {
-          "$ref": "#/1133"
+          "$ref": "#/1137"
         },
         "flags": 0,
         "description": "The list of vm managed disk details."
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1134"
+          "$ref": "#/1138"
         },
         "flags": 1,
         "description": "The class type."
@@ -22369,7 +22399,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1136"
+          "$ref": "#/1140"
         },
         "flags": 0,
         "description": "The custom data."
@@ -22529,7 +22559,7 @@
       },
       "allowedOperations": {
         "type": {
-          "$ref": "#/1137"
+          "$ref": "#/1141"
         },
         "flags": 0,
         "description": "The allowed operations on the Replication protected item."
@@ -22550,7 +22580,7 @@
       },
       "healthErrors": {
         "type": {
-          "$ref": "#/1138"
+          "$ref": "#/1142"
         },
         "flags": 0,
         "description": "List of health errors."
@@ -22599,7 +22629,7 @@
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1139"
+          "$ref": "#/1143"
         },
         "flags": 0,
         "description": "The Replication provider custom settings."
@@ -22639,34 +22669,34 @@
     "baseProperties": {},
     "elements": {
       "A2A": {
-        "$ref": "#/1140"
+        "$ref": "#/1144"
       },
       "A2ACrossClusterMigration": {
-        "$ref": "#/1156"
+        "$ref": "#/1160"
       },
       "HyperVReplica2012": {
-        "$ref": "#/1158"
-      },
-      "HyperVReplica2012R2": {
         "$ref": "#/1162"
       },
-      "HyperVReplicaAzure": {
+      "HyperVReplica2012R2": {
         "$ref": "#/1166"
       },
-      "HyperVReplicaBaseReplicationDetails": {
-        "$ref": "#/1175"
+      "HyperVReplicaAzure": {
+        "$ref": "#/1170"
       },
-      "InMage": {
+      "HyperVReplicaBaseReplicationDetails": {
         "$ref": "#/1179"
       },
+      "InMage": {
+        "$ref": "#/1183"
+      },
       "InMageAzureV2": {
-        "$ref": "#/1186"
+        "$ref": "#/1190"
       },
       "InMageRcm": {
-        "$ref": "#/1199"
+        "$ref": "#/1203"
       },
       "InMageRcmFailback": {
-        "$ref": "#/1224"
+        "$ref": "#/1228"
       }
     }
   },
@@ -22739,7 +22769,7 @@
       },
       "multiVmGroupCreateOption": {
         "type": {
-          "$ref": "#/1143"
+          "$ref": "#/1147"
         },
         "flags": 0,
         "description": "Whether Multi VM group is auto created or specified by user."
@@ -22753,21 +22783,21 @@
       },
       "protectedDisks": {
         "type": {
-          "$ref": "#/1144"
+          "$ref": "#/1148"
         },
         "flags": 0,
         "description": "The list of protected disks."
       },
       "unprotectedDisks": {
         "type": {
-          "$ref": "#/1145"
+          "$ref": "#/1149"
         },
         "flags": 0,
         "description": "The list of unprotected disks."
       },
       "protectedManagedDisks": {
         "type": {
-          "$ref": "#/1146"
+          "$ref": "#/1150"
         },
         "flags": 0,
         "description": "The list of protected managed disks."
@@ -22851,7 +22881,7 @@
       },
       "vmNics": {
         "type": {
-          "$ref": "#/1147"
+          "$ref": "#/1151"
         },
         "flags": 0,
         "description": "The virtual machine nic details."
@@ -22998,7 +23028,7 @@
       },
       "vmEncryptionType": {
         "type": {
-          "$ref": "#/1151"
+          "$ref": "#/1155"
         },
         "flags": 2,
         "description": "The encryption type of the VM."
@@ -23026,7 +23056,7 @@
       },
       "autoProtectionOfDataDisk": {
         "type": {
-          "$ref": "#/1154"
+          "$ref": "#/1158"
         },
         "flags": 0,
         "description": "A value indicating whether the auto protection is enabled."
@@ -23047,7 +23077,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1155"
+          "$ref": "#/1159"
         },
         "flags": 1,
         "description": "Gets the Instance type."
@@ -23066,10 +23096,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1141"
+        "$ref": "#/1145"
       },
       {
-        "$ref": "#/1142"
+        "$ref": "#/1146"
       },
       {
         "$ref": "#/0"
@@ -23116,13 +23146,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1148"
+        "$ref": "#/1152"
       },
       {
-        "$ref": "#/1149"
+        "$ref": "#/1153"
       },
       {
-        "$ref": "#/1150"
+        "$ref": "#/1154"
       },
       {
         "$ref": "#/0"
@@ -23141,10 +23171,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1152"
+        "$ref": "#/1156"
       },
       {
-        "$ref": "#/1153"
+        "$ref": "#/1157"
       },
       {
         "$ref": "#/0"
@@ -23203,7 +23233,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1157"
+          "$ref": "#/1161"
         },
         "flags": 1,
         "description": "Gets the Instance type."
@@ -23217,84 +23247,6 @@
   {
     "$type": "ObjectType",
     "name": "HyperVReplicaReplicationDetails",
-    "properties": {
-      "lastReplicatedTime": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The Last replication time."
-      },
-      "vmNics": {
-        "type": {
-          "$ref": "#/1159"
-        },
-        "flags": 0,
-        "description": "The PE Network details."
-      },
-      "vmId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The virtual machine Id."
-      },
-      "vmProtectionState": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The protection state for the vm."
-      },
-      "vmProtectionStateDescription": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The protection state description for the vm."
-      },
-      "initialReplicationDetails": {
-        "type": {
-          "$ref": "#/381"
-        },
-        "flags": 0,
-        "description": "Initial replication details."
-      },
-      "vMDiskDetails": {
-        "type": {
-          "$ref": "#/1160"
-        },
-        "flags": 0,
-        "description": "VM disk details."
-      },
-      "instanceType": {
-        "type": {
-          "$ref": "#/1161"
-        },
-        "flags": 1,
-        "description": "Gets the Instance type."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/334"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/531"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "HyperVReplica2012"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "HyperVReplicaBlueReplicationDetails",
     "properties": {
       "lastReplicatedTime": {
         "type": {
@@ -23368,6 +23320,84 @@
   },
   {
     "$type": "StringLiteralType",
+    "value": "HyperVReplica2012"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HyperVReplicaBlueReplicationDetails",
+    "properties": {
+      "lastReplicatedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Last replication time."
+      },
+      "vmNics": {
+        "type": {
+          "$ref": "#/1167"
+        },
+        "flags": 0,
+        "description": "The PE Network details."
+      },
+      "vmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The virtual machine Id."
+      },
+      "vmProtectionState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state for the vm."
+      },
+      "vmProtectionStateDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The protection state description for the vm."
+      },
+      "initialReplicationDetails": {
+        "type": {
+          "$ref": "#/381"
+        },
+        "flags": 0,
+        "description": "Initial replication details."
+      },
+      "vMDiskDetails": {
+        "type": {
+          "$ref": "#/1168"
+        },
+        "flags": 0,
+        "description": "VM disk details."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/1169"
+        },
+        "flags": 1,
+        "description": "Gets the Instance type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/334"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/531"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
     "value": "HyperVReplica2012R2"
   },
   {
@@ -23376,7 +23406,7 @@
     "properties": {
       "azureVmDiskDetails": {
         "type": {
-          "$ref": "#/1167"
+          "$ref": "#/1171"
         },
         "flags": 0,
         "description": "Azure VM Disk details."
@@ -23460,7 +23490,7 @@
       },
       "vmNics": {
         "type": {
-          "$ref": "#/1168"
+          "$ref": "#/1172"
         },
         "flags": 0,
         "description": "The PE Network details."
@@ -23572,42 +23602,42 @@
       },
       "targetVmTags": {
         "type": {
-          "$ref": "#/1169"
+          "$ref": "#/1173"
         },
         "flags": 0,
         "description": "The target VM tags."
       },
       "seedManagedDiskTags": {
         "type": {
-          "$ref": "#/1170"
+          "$ref": "#/1174"
         },
         "flags": 0,
         "description": "The tags for the seed managed disks."
       },
       "targetManagedDiskTags": {
         "type": {
-          "$ref": "#/1171"
+          "$ref": "#/1175"
         },
         "flags": 0,
         "description": "The tags for the target managed disks."
       },
       "targetNicTags": {
         "type": {
-          "$ref": "#/1172"
+          "$ref": "#/1176"
         },
         "flags": 0,
         "description": "The tags for the target NICs."
       },
       "protectedManagedDisks": {
         "type": {
-          "$ref": "#/1173"
+          "$ref": "#/1177"
         },
         "flags": 0,
         "description": "The list of protected managed disks."
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1174"
+          "$ref": "#/1178"
         },
         "flags": 1,
         "description": "Gets the Instance type."
@@ -23681,7 +23711,7 @@
       },
       "vmNics": {
         "type": {
-          "$ref": "#/1176"
+          "$ref": "#/1180"
         },
         "flags": 0,
         "description": "The PE Network details."
@@ -23716,14 +23746,14 @@
       },
       "vMDiskDetails": {
         "type": {
-          "$ref": "#/1177"
+          "$ref": "#/1181"
         },
         "flags": 0,
         "description": "VM disk details."
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1178"
+          "$ref": "#/1182"
         },
         "flags": 1,
         "description": "Gets the Instance type."
@@ -23850,7 +23880,7 @@
       },
       "protectedDisks": {
         "type": {
-          "$ref": "#/1180"
+          "$ref": "#/1184"
         },
         "flags": 0,
         "description": "The list of protected disks."
@@ -23885,7 +23915,7 @@
       },
       "consistencyPoints": {
         "type": {
-          "$ref": "#/1181"
+          "$ref": "#/1185"
         },
         "flags": 0,
         "description": "The collection of Consistency points."
@@ -23948,7 +23978,7 @@
       },
       "vmNics": {
         "type": {
-          "$ref": "#/1182"
+          "$ref": "#/1186"
         },
         "flags": 0,
         "description": "The PE Network details."
@@ -23969,14 +23999,14 @@
       },
       "datastores": {
         "type": {
-          "$ref": "#/1183"
+          "$ref": "#/1187"
         },
         "flags": 0,
         "description": "The datastores of the on-premise machine Value can be list of strings that contain datastore names."
       },
       "validationErrors": {
         "type": {
-          "$ref": "#/1184"
+          "$ref": "#/1188"
         },
         "flags": 0,
         "description": "The validation errors of the on-premise machine Value can be list of validation errors."
@@ -24032,7 +24062,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1185"
+          "$ref": "#/1189"
         },
         "flags": 1,
         "description": "Gets the Instance type."
@@ -24228,7 +24258,7 @@
       },
       "protectedDisks": {
         "type": {
-          "$ref": "#/1187"
+          "$ref": "#/1191"
         },
         "flags": 0,
         "description": "The list of protected disks."
@@ -24284,7 +24314,7 @@
       },
       "azureVMDiskDetails": {
         "type": {
-          "$ref": "#/1188"
+          "$ref": "#/1192"
         },
         "flags": 0,
         "description": "Azure VM Disk details."
@@ -24319,7 +24349,7 @@
       },
       "vmNics": {
         "type": {
-          "$ref": "#/1189"
+          "$ref": "#/1193"
         },
         "flags": 0,
         "description": "The PE Network details."
@@ -24361,7 +24391,7 @@
       },
       "datastores": {
         "type": {
-          "$ref": "#/1190"
+          "$ref": "#/1194"
         },
         "flags": 0,
         "description": "The datastores of the on-premise machine. Value can be list of strings that contain datastore names."
@@ -24424,7 +24454,7 @@
       },
       "validationErrors": {
         "type": {
-          "$ref": "#/1191"
+          "$ref": "#/1195"
         },
         "flags": 0,
         "description": "The validation errors of the on-premise machine Value can be list of validation errors."
@@ -24459,7 +24489,7 @@
       },
       "protectedManagedDisks": {
         "type": {
-          "$ref": "#/1192"
+          "$ref": "#/1196"
         },
         "flags": 0,
         "description": "The list of protected managed disks."
@@ -24508,35 +24538,35 @@
       },
       "targetVmTags": {
         "type": {
-          "$ref": "#/1193"
+          "$ref": "#/1197"
         },
         "flags": 0,
         "description": "The target VM tags."
       },
       "seedManagedDiskTags": {
         "type": {
-          "$ref": "#/1194"
+          "$ref": "#/1198"
         },
         "flags": 0,
         "description": "The tags for the seed managed disks."
       },
       "targetManagedDiskTags": {
         "type": {
-          "$ref": "#/1195"
+          "$ref": "#/1199"
         },
         "flags": 0,
         "description": "The tags for the target managed disks."
       },
       "targetNicTags": {
         "type": {
-          "$ref": "#/1196"
+          "$ref": "#/1200"
         },
         "flags": 0,
         "description": "The tags for the target NICs."
       },
       "switchProviderBlockingErrorDetails": {
         "type": {
-          "$ref": "#/1197"
+          "$ref": "#/1201"
         },
         "flags": 0,
         "description": "The switch provider blocking error information."
@@ -24550,7 +24580,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1198"
+          "$ref": "#/1202"
         },
         "flags": 1,
         "description": "Gets the Instance type."
@@ -24872,7 +24902,7 @@
       },
       "initialReplicationProgressHealth": {
         "type": {
-          "$ref": "#/1204"
+          "$ref": "#/1208"
         },
         "flags": 2,
         "description": "The initial replication progress health."
@@ -24900,7 +24930,7 @@
       },
       "resyncProgressHealth": {
         "type": {
-          "$ref": "#/1209"
+          "$ref": "#/1213"
         },
         "flags": 2,
         "description": "The resync progress health."
@@ -24914,14 +24944,14 @@
       },
       "resyncState": {
         "type": {
-          "$ref": "#/1213"
+          "$ref": "#/1217"
         },
         "flags": 2,
         "description": "The resync state."
       },
       "agentUpgradeState": {
         "type": {
-          "$ref": "#/1218"
+          "$ref": "#/1222"
         },
         "flags": 2,
         "description": "The agent auto upgrade state."
@@ -24949,7 +24979,7 @@
       },
       "protectedDisks": {
         "type": {
-          "$ref": "#/1219"
+          "$ref": "#/1223"
         },
         "flags": 0,
         "description": "The list of protected disks."
@@ -24977,21 +25007,21 @@
       },
       "lastAgentUpgradeErrorDetails": {
         "type": {
-          "$ref": "#/1220"
+          "$ref": "#/1224"
         },
         "flags": 0,
         "description": "The last agent upgrade error information."
       },
       "agentUpgradeBlockingErrorDetails": {
         "type": {
-          "$ref": "#/1221"
+          "$ref": "#/1225"
         },
         "flags": 0,
         "description": "The agent upgrade blocking error information."
       },
       "vmNics": {
         "type": {
-          "$ref": "#/1222"
+          "$ref": "#/1226"
         },
         "flags": 0,
         "description": "The network details."
@@ -25005,7 +25035,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1223"
+          "$ref": "#/1227"
         },
         "flags": 1,
         "description": "Gets the Instance type."
@@ -25032,16 +25062,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1200"
+        "$ref": "#/1204"
       },
       {
-        "$ref": "#/1201"
+        "$ref": "#/1205"
       },
       {
-        "$ref": "#/1202"
+        "$ref": "#/1206"
       },
       {
-        "$ref": "#/1203"
+        "$ref": "#/1207"
       },
       {
         "$ref": "#/0"
@@ -25068,16 +25098,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1205"
+        "$ref": "#/1209"
       },
       {
-        "$ref": "#/1206"
+        "$ref": "#/1210"
       },
       {
-        "$ref": "#/1207"
+        "$ref": "#/1211"
       },
       {
-        "$ref": "#/1208"
+        "$ref": "#/1212"
       },
       {
         "$ref": "#/0"
@@ -25100,13 +25130,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1210"
+        "$ref": "#/1214"
       },
       {
-        "$ref": "#/1211"
+        "$ref": "#/1215"
       },
       {
-        "$ref": "#/1212"
+        "$ref": "#/1216"
       },
       {
         "$ref": "#/0"
@@ -25133,16 +25163,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1214"
+        "$ref": "#/1218"
       },
       {
-        "$ref": "#/1215"
+        "$ref": "#/1219"
       },
       {
-        "$ref": "#/1216"
+        "$ref": "#/1220"
       },
       {
-        "$ref": "#/1217"
+        "$ref": "#/1221"
       },
       {
         "$ref": "#/0"
@@ -25274,7 +25304,7 @@
       },
       "initialReplicationProgressHealth": {
         "type": {
-          "$ref": "#/1229"
+          "$ref": "#/1233"
         },
         "flags": 2,
         "description": "The initial replication progress health."
@@ -25302,7 +25332,7 @@
       },
       "resyncProgressHealth": {
         "type": {
-          "$ref": "#/1234"
+          "$ref": "#/1238"
         },
         "flags": 2,
         "description": "The resync progress health."
@@ -25316,14 +25346,14 @@
       },
       "resyncState": {
         "type": {
-          "$ref": "#/1238"
+          "$ref": "#/1242"
         },
         "flags": 2,
         "description": "The resync state."
       },
       "protectedDisks": {
         "type": {
-          "$ref": "#/1239"
+          "$ref": "#/1243"
         },
         "flags": 0,
         "description": "The list of protected disks."
@@ -25337,7 +25367,7 @@
       },
       "vmNics": {
         "type": {
-          "$ref": "#/1240"
+          "$ref": "#/1244"
         },
         "flags": 0,
         "description": "The network details."
@@ -25351,7 +25381,7 @@
       },
       "lastPlannedFailoverStatus": {
         "type": {
-          "$ref": "#/1245"
+          "$ref": "#/1249"
         },
         "flags": 2,
         "description": "The last planned failover status."
@@ -25386,7 +25416,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1246"
+          "$ref": "#/1250"
         },
         "flags": 1,
         "description": "Gets the Instance type."
@@ -25413,16 +25443,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1225"
+        "$ref": "#/1229"
       },
       {
-        "$ref": "#/1226"
+        "$ref": "#/1230"
       },
       {
-        "$ref": "#/1227"
+        "$ref": "#/1231"
       },
       {
-        "$ref": "#/1228"
+        "$ref": "#/1232"
       },
       {
         "$ref": "#/0"
@@ -25449,16 +25479,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1230"
+        "$ref": "#/1234"
       },
       {
-        "$ref": "#/1231"
+        "$ref": "#/1235"
       },
       {
-        "$ref": "#/1232"
+        "$ref": "#/1236"
       },
       {
-        "$ref": "#/1233"
+        "$ref": "#/1237"
       },
       {
         "$ref": "#/0"
@@ -25481,13 +25511,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1235"
+        "$ref": "#/1239"
       },
       {
-        "$ref": "#/1236"
+        "$ref": "#/1240"
       },
       {
-        "$ref": "#/1237"
+        "$ref": "#/1241"
       },
       {
         "$ref": "#/0"
@@ -25526,16 +25556,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1241"
+        "$ref": "#/1245"
       },
       {
-        "$ref": "#/1242"
+        "$ref": "#/1246"
       },
       {
-        "$ref": "#/1243"
+        "$ref": "#/1247"
       },
       {
-        "$ref": "#/1244"
+        "$ref": "#/1248"
       },
       {
         "$ref": "#/0"
@@ -25552,10 +25582,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     },
     "input": {
-      "$ref": "#/1128"
+      "$ref": "#/1132"
     }
   },
   {
@@ -25564,7 +25594,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1249"
+          "$ref": "#/1253"
         },
         "flags": 1,
         "description": "The input properties to apply recovery point."
@@ -25584,7 +25614,7 @@
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1250"
+          "$ref": "#/1254"
         },
         "flags": 1,
         "description": "Provider specific input for applying recovery point."
@@ -25598,19 +25628,19 @@
     "baseProperties": {},
     "elements": {
       "A2A": {
-        "$ref": "#/1251"
-      },
-      "A2ACrossClusterMigration": {
-        "$ref": "#/1253"
-      },
-      "HyperVReplicaAzure": {
         "$ref": "#/1255"
       },
-      "InMageAzureV2": {
+      "A2ACrossClusterMigration": {
         "$ref": "#/1257"
       },
-      "InMageRcm": {
+      "HyperVReplicaAzure": {
         "$ref": "#/1259"
+      },
+      "InMageAzureV2": {
+        "$ref": "#/1261"
+      },
+      "InMageRcm": {
+        "$ref": "#/1263"
       }
     }
   },
@@ -25620,7 +25650,7 @@
     "properties": {
       "instanceType": {
         "type": {
-          "$ref": "#/1252"
+          "$ref": "#/1256"
         },
         "flags": 1,
         "description": "The class type."
@@ -25637,7 +25667,7 @@
     "properties": {
       "instanceType": {
         "type": {
-          "$ref": "#/1254"
+          "$ref": "#/1258"
         },
         "flags": 1,
         "description": "The class type."
@@ -25668,7 +25698,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1256"
+          "$ref": "#/1260"
         },
         "flags": 1,
         "description": "The class type."
@@ -25685,7 +25715,7 @@
     "properties": {
       "instanceType": {
         "type": {
-          "$ref": "#/1258"
+          "$ref": "#/1262"
         },
         "flags": 1,
         "description": "The class type."
@@ -25709,7 +25739,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1260"
+          "$ref": "#/1264"
         },
         "flags": 1,
         "description": "The class type."
@@ -25726,10 +25756,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     },
     "input": {
-      "$ref": "#/1248"
+      "$ref": "#/1252"
     }
   },
   {
@@ -25738,7 +25768,7 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     }
   },
   {
@@ -25747,7 +25777,7 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     }
   },
   {
@@ -25756,7 +25786,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1265"
+          "$ref": "#/1269"
         },
         "flags": 0,
         "description": "Planned failover input properties."
@@ -25776,7 +25806,7 @@
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1266"
+          "$ref": "#/1270"
         },
         "flags": 0,
         "description": "Provider specific settings."
@@ -25790,13 +25820,13 @@
     "baseProperties": {},
     "elements": {
       "HyperVReplicaAzure": {
-        "$ref": "#/1267"
+        "$ref": "#/1271"
       },
       "HyperVReplicaAzureFailback": {
-        "$ref": "#/1269"
+        "$ref": "#/1273"
       },
       "InMageRcmFailback": {
-        "$ref": "#/1271"
+        "$ref": "#/1275"
       }
     }
   },
@@ -25827,7 +25857,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1268"
+          "$ref": "#/1272"
         },
         "flags": 1,
         "description": "The class type."
@@ -25865,7 +25895,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1270"
+          "$ref": "#/1274"
         },
         "flags": 1,
         "description": "The class type."
@@ -25882,14 +25912,14 @@
     "properties": {
       "recoveryPointType": {
         "type": {
-          "$ref": "#/1274"
+          "$ref": "#/1278"
         },
         "flags": 1,
         "description": "The recovery point type."
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1275"
+          "$ref": "#/1279"
         },
         "flags": 1,
         "description": "The class type."
@@ -25908,10 +25938,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1272"
+        "$ref": "#/1276"
       },
       {
-        "$ref": "#/1273"
+        "$ref": "#/1277"
       },
       {
         "$ref": "#/0"
@@ -25928,10 +25958,112 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     },
     "input": {
-      "$ref": "#/1264"
+      "$ref": "#/1268"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DisableProtectionInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1282"
+        },
+        "flags": 1,
+        "description": "Disable protection input properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DisableProtectionInputProperties",
+    "properties": {
+      "disableProtectionReason": {
+        "type": {
+          "$ref": "#/1285"
+        },
+        "flags": 0,
+        "description": "Disable protection reason. It can have values NotSpecified/MigrationComplete."
+      },
+      "replicationProviderInput": {
+        "type": {
+          "$ref": "#/1286"
+        },
+        "flags": 0,
+        "description": "Replication provider specific input."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MigrationComplete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1283"
+      },
+      {
+        "$ref": "#/1284"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "DisableProtectionProviderSpecificInput",
+    "discriminator": "instanceType",
+    "baseProperties": {},
+    "elements": {
+      "InMage": {
+        "$ref": "#/1287"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InMageDisableProtectionProviderSpecificInput",
+    "properties": {
+      "replicaVmDeletionStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A value indicating whether the replica VM should be destroyed or retained. Values from Delete and Retain."
+      },
+      "instanceType": {
+        "type": {
+          "$ref": "#/1288"
+        },
+        "flags": 1,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InMage"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "remove",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
+    "apiVersion": "2023-04-01",
+    "output": {
+      "$ref": "#/1017"
+    },
+    "input": {
+      "$ref": "#/1281"
     }
   },
   {
@@ -25940,7 +26072,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1278"
+          "$ref": "#/1291"
         },
         "flags": 0,
         "description": "Remove disk input properties."
@@ -25953,7 +26085,7 @@
     "properties": {
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1279"
+          "$ref": "#/1292"
         },
         "flags": 0,
         "description": "The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null."
@@ -25967,7 +26099,7 @@
     "baseProperties": {},
     "elements": {
       "A2A": {
-        "$ref": "#/1280"
+        "$ref": "#/1293"
       }
     }
   },
@@ -25977,21 +26109,21 @@
     "properties": {
       "vmDisksUris": {
         "type": {
-          "$ref": "#/1281"
+          "$ref": "#/1294"
         },
         "flags": 0,
         "description": "The list of vm disk vhd URIs."
       },
       "vmManagedDisksIds": {
         "type": {
-          "$ref": "#/1282"
+          "$ref": "#/1295"
         },
         "flags": 0,
         "description": "The list of vm managed disk Ids."
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1283"
+          "$ref": "#/1296"
         },
         "flags": 1,
         "description": "The class type."
@@ -26020,10 +26152,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     },
     "input": {
-      "$ref": "#/1277"
+      "$ref": "#/1290"
     }
   },
   {
@@ -26032,7 +26164,7 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     }
   },
   {
@@ -26041,7 +26173,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1287"
+          "$ref": "#/1300"
         },
         "flags": 0,
         "description": "Reverse replication properties."
@@ -26061,7 +26193,7 @@
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1288"
+          "$ref": "#/1301"
         },
         "flags": 0,
         "description": "Provider specific reverse replication input."
@@ -26075,22 +26207,22 @@
     "baseProperties": {},
     "elements": {
       "A2A": {
-        "$ref": "#/1289"
+        "$ref": "#/1302"
       },
       "HyperVReplicaAzure": {
-        "$ref": "#/1292"
+        "$ref": "#/1305"
       },
       "InMage": {
-        "$ref": "#/1294"
+        "$ref": "#/1307"
       },
       "InMageAzureV2": {
-        "$ref": "#/1297"
+        "$ref": "#/1310"
       },
       "InMageRcm": {
-        "$ref": "#/1300"
+        "$ref": "#/1313"
       },
       "InMageRcmFailback": {
-        "$ref": "#/1302"
+        "$ref": "#/1315"
       }
     }
   },
@@ -26107,7 +26239,7 @@
       },
       "vmDisks": {
         "type": {
-          "$ref": "#/1290"
+          "$ref": "#/1303"
         },
         "flags": 0,
         "description": "The list of vm disk details."
@@ -26142,7 +26274,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1291"
+          "$ref": "#/1304"
         },
         "flags": 1,
         "description": "The class type."
@@ -26207,7 +26339,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1293"
+          "$ref": "#/1306"
         },
         "flags": 1,
         "description": "The class type."
@@ -26273,14 +26405,14 @@
       },
       "disksToInclude": {
         "type": {
-          "$ref": "#/1295"
+          "$ref": "#/1308"
         },
         "flags": 0,
         "description": "The disks to include list."
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1296"
+          "$ref": "#/1309"
         },
         "flags": 1,
         "description": "The class type."
@@ -26345,14 +26477,14 @@
       },
       "disksToInclude": {
         "type": {
-          "$ref": "#/1298"
+          "$ref": "#/1311"
         },
         "flags": 0,
         "description": "The disks to include list."
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1299"
+          "$ref": "#/1312"
         },
         "flags": 1,
         "description": "The class type."
@@ -26403,7 +26535,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1301"
+          "$ref": "#/1314"
         },
         "flags": 1,
         "description": "The class type."
@@ -26441,7 +26573,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1303"
+          "$ref": "#/1316"
         },
         "flags": 1,
         "description": "The class type."
@@ -26458,10 +26590,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     },
     "input": {
-      "$ref": "#/1286"
+      "$ref": "#/1299"
     }
   },
   {
@@ -26470,7 +26602,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1306"
+          "$ref": "#/1319"
         },
         "flags": 0,
         "description": "Disable resolve health input properties."
@@ -26483,7 +26615,7 @@
     "properties": {
       "healthErrors": {
         "type": {
-          "$ref": "#/1308"
+          "$ref": "#/1321"
         },
         "flags": 0,
         "description": "Health errors."
@@ -26506,7 +26638,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1307"
+      "$ref": "#/1320"
     }
   },
   {
@@ -26515,10 +26647,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     },
     "input": {
-      "$ref": "#/1305"
+      "$ref": "#/1318"
     }
   },
   {
@@ -26527,7 +26659,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1311"
+          "$ref": "#/1324"
         },
         "flags": 0,
         "description": "Switch provider input properties."
@@ -26547,7 +26679,7 @@
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1312"
+          "$ref": "#/1325"
         },
         "flags": 0,
         "description": "Provider specific settings."
@@ -26561,7 +26693,7 @@
     "baseProperties": {},
     "elements": {
       "InMageAzureV2": {
-        "$ref": "#/1313"
+        "$ref": "#/1326"
       }
     }
   },
@@ -26592,7 +26724,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1314"
+          "$ref": "#/1327"
         },
         "flags": 1,
         "description": "The class type."
@@ -26609,10 +26741,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     },
     "input": {
-      "$ref": "#/1310"
+      "$ref": "#/1323"
     }
   },
   {
@@ -26621,7 +26753,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1317"
+          "$ref": "#/1330"
         },
         "flags": 1,
         "description": "Test failover input properties."
@@ -26655,7 +26787,7 @@
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1318"
+          "$ref": "#/1331"
         },
         "flags": 0,
         "description": "Provider specific settings."
@@ -26669,19 +26801,19 @@
     "baseProperties": {},
     "elements": {
       "A2A": {
-        "$ref": "#/1319"
+        "$ref": "#/1332"
       },
       "HyperVReplicaAzure": {
-        "$ref": "#/1321"
+        "$ref": "#/1334"
       },
       "InMage": {
-        "$ref": "#/1323"
+        "$ref": "#/1336"
       },
       "InMageAzureV2": {
-        "$ref": "#/1329"
+        "$ref": "#/1342"
       },
       "InMageRcm": {
-        "$ref": "#/1331"
+        "$ref": "#/1344"
       }
     }
   },
@@ -26705,7 +26837,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1320"
+          "$ref": "#/1333"
         },
         "flags": 1,
         "description": "The class type."
@@ -26743,7 +26875,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1322"
+          "$ref": "#/1335"
         },
         "flags": 1,
         "description": "The class type."
@@ -26760,7 +26892,7 @@
     "properties": {
       "recoveryPointType": {
         "type": {
-          "$ref": "#/1327"
+          "$ref": "#/1340"
         },
         "flags": 0,
         "description": "The recovery point type. Values from LatestTime, LatestTag or Custom. In the case of custom, the recovery point provided by RecoveryPointId will be used. In the other two cases, recovery point id will be ignored."
@@ -26774,7 +26906,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1328"
+          "$ref": "#/1341"
         },
         "flags": 1,
         "description": "The class type."
@@ -26797,13 +26929,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1324"
+        "$ref": "#/1337"
       },
       {
-        "$ref": "#/1325"
+        "$ref": "#/1338"
       },
       {
-        "$ref": "#/1326"
+        "$ref": "#/1339"
       },
       {
         "$ref": "#/0"
@@ -26827,7 +26959,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1330"
+          "$ref": "#/1343"
         },
         "flags": 1,
         "description": "The class type."
@@ -26858,7 +26990,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1332"
+          "$ref": "#/1345"
         },
         "flags": 1,
         "description": "The class type."
@@ -26875,10 +27007,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     },
     "input": {
-      "$ref": "#/1316"
+      "$ref": "#/1329"
     }
   },
   {
@@ -26887,7 +27019,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1335"
+          "$ref": "#/1348"
         },
         "flags": 1,
         "description": "Test failover cleanup input properties."
@@ -26900,7 +27032,7 @@
     "properties": {
       "comments": {
         "type": {
-          "$ref": "#/1126"
+          "$ref": "#/1130"
         },
         "flags": 0,
         "description": "Test failover cleanup comments."
@@ -26913,10 +27045,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     },
     "input": {
-      "$ref": "#/1334"
+      "$ref": "#/1347"
     }
   },
   {
@@ -26925,7 +27057,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1338"
+          "$ref": "#/1351"
         },
         "flags": 1,
         "description": "Unplanned failover input properties."
@@ -26952,7 +27084,7 @@
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1339"
+          "$ref": "#/1352"
         },
         "flags": 0,
         "description": "Provider specific settings."
@@ -26966,19 +27098,19 @@
     "baseProperties": {},
     "elements": {
       "A2A": {
-        "$ref": "#/1340"
+        "$ref": "#/1353"
       },
       "HyperVReplicaAzure": {
-        "$ref": "#/1342"
+        "$ref": "#/1355"
       },
       "InMage": {
-        "$ref": "#/1344"
+        "$ref": "#/1357"
       },
       "InMageAzureV2": {
-        "$ref": "#/1350"
+        "$ref": "#/1363"
       },
       "InMageRcm": {
-        "$ref": "#/1352"
+        "$ref": "#/1365"
       }
     }
   },
@@ -27002,7 +27134,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1341"
+          "$ref": "#/1354"
         },
         "flags": 1,
         "description": "The class type."
@@ -27040,7 +27172,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1343"
+          "$ref": "#/1356"
         },
         "flags": 1,
         "description": "The class type."
@@ -27057,7 +27189,7 @@
     "properties": {
       "recoveryPointType": {
         "type": {
-          "$ref": "#/1348"
+          "$ref": "#/1361"
         },
         "flags": 0,
         "description": "The recovery point type. Values from LatestTime, LatestTag or Custom. In the case of custom, the recovery point provided by RecoveryPointId will be used. In the other two cases, recovery point id will be ignored."
@@ -27071,7 +27203,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1349"
+          "$ref": "#/1362"
         },
         "flags": 1,
         "description": "The class type."
@@ -27094,13 +27226,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1345"
+        "$ref": "#/1358"
       },
       {
-        "$ref": "#/1346"
+        "$ref": "#/1359"
       },
       {
-        "$ref": "#/1347"
+        "$ref": "#/1360"
       },
       {
         "$ref": "#/0"
@@ -27124,7 +27256,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1351"
+          "$ref": "#/1364"
         },
         "flags": 1,
         "description": "The class type."
@@ -27155,7 +27287,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1353"
+          "$ref": "#/1366"
         },
         "flags": 1,
         "description": "The class type."
@@ -27172,10 +27304,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     },
     "input": {
-      "$ref": "#/1337"
+      "$ref": "#/1350"
     }
   },
   {
@@ -27184,7 +27316,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1356"
+          "$ref": "#/1369"
         },
         "flags": 1,
         "description": "Update appliance replication protected item properties."
@@ -27204,7 +27336,7 @@
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1357"
+          "$ref": "#/1370"
         },
         "flags": 1,
         "description": "The provider specific input to update replication protected item."
@@ -27218,7 +27350,7 @@
     "baseProperties": {},
     "elements": {
       "InMageRcm": {
-        "$ref": "#/1358"
+        "$ref": "#/1371"
       }
     }
   },
@@ -27235,7 +27367,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1359"
+          "$ref": "#/1372"
         },
         "flags": 1,
         "description": "The class type."
@@ -27252,10 +27384,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     },
     "input": {
-      "$ref": "#/1355"
+      "$ref": "#/1368"
     }
   },
   {
@@ -27264,7 +27396,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1362"
+          "$ref": "#/1375"
         },
         "flags": 0,
         "description": "The properties of the update mobility service request."
@@ -27290,10 +27422,61 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1139"
     },
     "input": {
-      "$ref": "#/1361"
+      "$ref": "#/1374"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemoveProtectionContainerMappingInput",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1378"
+        },
+        "flags": 0,
+        "description": "Configure protection input properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemoveProtectionContainerMappingInputProperties",
+    "properties": {
+      "providerSpecificInput": {
+        "type": {
+          "$ref": "#/1379"
+        },
+        "flags": 0,
+        "description": "Provider specific input for unpairing."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReplicationProviderContainerUnmappingInput",
+    "properties": {
+      "instanceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The class type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "remove",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings",
+    "apiVersion": "2023-04-01",
+    "output": {
+      "$ref": "#/1017"
+    },
+    "input": {
+      "$ref": "#/1377"
     }
   },
   {
@@ -27302,7 +27485,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1365"
+          "$ref": "#/1382"
         },
         "flags": 0,
         "description": "Provider properties."
@@ -27413,14 +27596,14 @@
       },
       "allowedScenarios": {
         "type": {
-          "$ref": "#/1366"
+          "$ref": "#/1383"
         },
         "flags": 0,
         "description": "The scenarios allowed on this provider."
       },
       "healthErrorDetails": {
         "type": {
-          "$ref": "#/1367"
+          "$ref": "#/1384"
         },
         "flags": 0,
         "description": "The recovery services provider health error details."
@@ -27501,7 +27684,16 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1364"
+      "$ref": "#/1381"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "remove",
+    "resourceType": "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders",
+    "apiVersion": "2023-04-01",
+    "output": {
+      "$ref": "#/1017"
     }
   },
   {
@@ -27551,7 +27743,7 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationJobs",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1369"
+      "$ref": "#/1387"
     }
   },
   {
@@ -27560,7 +27752,7 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationJobs",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1369"
+      "$ref": "#/1387"
     }
   },
   {
@@ -27569,7 +27761,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1373"
+          "$ref": "#/1391"
         },
         "flags": 0,
         "description": "Resume job properties."
@@ -27595,10 +27787,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationJobs",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1369"
+      "$ref": "#/1387"
     },
     "input": {
-      "$ref": "#/1372"
+      "$ref": "#/1390"
     }
   },
   {
@@ -27607,7 +27799,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1376"
+          "$ref": "#/1394"
         },
         "flags": 0,
         "description": "The custom details."
@@ -27690,14 +27882,14 @@
       },
       "replicationProviders": {
         "type": {
-          "$ref": "#/1377"
+          "$ref": "#/1395"
         },
         "flags": 0,
         "description": "The list of replication providers."
       },
       "allowedOperations": {
         "type": {
-          "$ref": "#/1378"
+          "$ref": "#/1396"
         },
         "flags": 0,
         "description": "The list of allowed operations."
@@ -27746,14 +27938,14 @@
       },
       "groups": {
         "type": {
-          "$ref": "#/1379"
+          "$ref": "#/1397"
         },
         "flags": 0,
         "description": "The recovery plan groups."
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1380"
+          "$ref": "#/1398"
         },
         "flags": 0,
         "description": "The provider id and provider specific details."
@@ -27790,7 +27982,7 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1375"
+      "$ref": "#/1393"
     }
   },
   {
@@ -27799,7 +27991,7 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1375"
+      "$ref": "#/1393"
     }
   },
   {
@@ -27808,7 +28000,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1384"
+          "$ref": "#/1402"
         },
         "flags": 1,
         "description": "The recovery plan planned failover input properties."
@@ -27821,14 +28013,14 @@
     "properties": {
       "failoverDirection": {
         "type": {
-          "$ref": "#/1387"
+          "$ref": "#/1405"
         },
         "flags": 1,
         "description": "The failover direction."
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1438"
+          "$ref": "#/1456"
         },
         "flags": 0,
         "description": "The provider specific properties."
@@ -27847,10 +28039,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1385"
+        "$ref": "#/1403"
       },
       {
-        "$ref": "#/1386"
+        "$ref": "#/1404"
       },
       {
         "$ref": "#/0"
@@ -27864,25 +28056,25 @@
     "baseProperties": {},
     "elements": {
       "A2A": {
-        "$ref": "#/1389"
+        "$ref": "#/1407"
       },
       "HyperVReplicaAzure": {
-        "$ref": "#/1399"
+        "$ref": "#/1417"
       },
       "HyperVReplicaAzureFailback": {
-        "$ref": "#/1405"
+        "$ref": "#/1423"
       },
       "InMage": {
-        "$ref": "#/1413"
+        "$ref": "#/1431"
       },
       "InMageAzureV2": {
-        "$ref": "#/1419"
+        "$ref": "#/1437"
       },
       "InMageRcm": {
-        "$ref": "#/1426"
+        "$ref": "#/1444"
       },
       "InMageRcmFailback": {
-        "$ref": "#/1433"
+        "$ref": "#/1451"
       }
     }
   },
@@ -27892,7 +28084,7 @@
     "properties": {
       "recoveryPointType": {
         "type": {
-          "$ref": "#/1394"
+          "$ref": "#/1412"
         },
         "flags": 1,
         "description": "The recovery point type."
@@ -27906,14 +28098,14 @@
       },
       "multiVmSyncPointOption": {
         "type": {
-          "$ref": "#/1397"
+          "$ref": "#/1415"
         },
         "flags": 0,
         "description": "A value indicating whether multi VM sync enabled VMs should use multi VM sync points for failover."
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1398"
+          "$ref": "#/1416"
         },
         "flags": 1,
         "description": "The class type."
@@ -27940,16 +28132,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1390"
+        "$ref": "#/1408"
       },
       {
-        "$ref": "#/1391"
+        "$ref": "#/1409"
       },
       {
-        "$ref": "#/1392"
+        "$ref": "#/1410"
       },
       {
-        "$ref": "#/1393"
+        "$ref": "#/1411"
       },
       {
         "$ref": "#/0"
@@ -27968,10 +28160,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1395"
+        "$ref": "#/1413"
       },
       {
-        "$ref": "#/1396"
+        "$ref": "#/1414"
       },
       {
         "$ref": "#/0"
@@ -28002,14 +28194,14 @@
       },
       "recoveryPointType": {
         "type": {
-          "$ref": "#/1403"
+          "$ref": "#/1421"
         },
         "flags": 0,
         "description": "The recovery point type."
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1404"
+          "$ref": "#/1422"
         },
         "flags": 1,
         "description": "The class type."
@@ -28032,13 +28224,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1400"
+        "$ref": "#/1418"
       },
       {
-        "$ref": "#/1401"
+        "$ref": "#/1419"
       },
       {
-        "$ref": "#/1402"
+        "$ref": "#/1420"
       },
       {
         "$ref": "#/0"
@@ -28055,21 +28247,21 @@
     "properties": {
       "dataSyncOption": {
         "type": {
-          "$ref": "#/1408"
+          "$ref": "#/1426"
         },
         "flags": 1,
         "description": "The data sync option."
       },
       "recoveryVmCreationOption": {
         "type": {
-          "$ref": "#/1411"
+          "$ref": "#/1429"
         },
         "flags": 1,
         "description": "The ALR option."
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1412"
+          "$ref": "#/1430"
         },
         "flags": 1,
         "description": "The class type."
@@ -28088,10 +28280,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1406"
+        "$ref": "#/1424"
       },
       {
-        "$ref": "#/1407"
+        "$ref": "#/1425"
       },
       {
         "$ref": "#/0"
@@ -28110,10 +28302,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1409"
+        "$ref": "#/1427"
       },
       {
-        "$ref": "#/1410"
+        "$ref": "#/1428"
       },
       {
         "$ref": "#/0"
@@ -28130,14 +28322,14 @@
     "properties": {
       "recoveryPointType": {
         "type": {
-          "$ref": "#/1417"
+          "$ref": "#/1435"
         },
         "flags": 1,
         "description": "The recovery point type."
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1418"
+          "$ref": "#/1436"
         },
         "flags": 1,
         "description": "The class type."
@@ -28160,13 +28352,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1414"
+        "$ref": "#/1432"
       },
       {
-        "$ref": "#/1415"
+        "$ref": "#/1433"
       },
       {
-        "$ref": "#/1416"
+        "$ref": "#/1434"
       },
       {
         "$ref": "#/0"
@@ -28183,7 +28375,7 @@
     "properties": {
       "recoveryPointType": {
         "type": {
-          "$ref": "#/1424"
+          "$ref": "#/1442"
         },
         "flags": 1,
         "description": "The recovery point type."
@@ -28197,7 +28389,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1425"
+          "$ref": "#/1443"
         },
         "flags": 1,
         "description": "The class type."
@@ -28224,16 +28416,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1420"
+        "$ref": "#/1438"
       },
       {
-        "$ref": "#/1421"
+        "$ref": "#/1439"
       },
       {
-        "$ref": "#/1422"
+        "$ref": "#/1440"
       },
       {
-        "$ref": "#/1423"
+        "$ref": "#/1441"
       },
       {
         "$ref": "#/0"
@@ -28250,7 +28442,7 @@
     "properties": {
       "recoveryPointType": {
         "type": {
-          "$ref": "#/1431"
+          "$ref": "#/1449"
         },
         "flags": 1,
         "description": "The recovery point type."
@@ -28264,7 +28456,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1432"
+          "$ref": "#/1450"
         },
         "flags": 1,
         "description": "The class type."
@@ -28291,16 +28483,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1427"
+        "$ref": "#/1445"
       },
       {
-        "$ref": "#/1428"
+        "$ref": "#/1446"
       },
       {
-        "$ref": "#/1429"
+        "$ref": "#/1447"
       },
       {
-        "$ref": "#/1430"
+        "$ref": "#/1448"
       },
       {
         "$ref": "#/0"
@@ -28317,7 +28509,7 @@
     "properties": {
       "recoveryPointType": {
         "type": {
-          "$ref": "#/1436"
+          "$ref": "#/1454"
         },
         "flags": 1,
         "description": "The recovery point type."
@@ -28331,7 +28523,7 @@
       },
       "instanceType": {
         "type": {
-          "$ref": "#/1437"
+          "$ref": "#/1455"
         },
         "flags": 1,
         "description": "The class type."
@@ -28350,10 +28542,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1434"
+        "$ref": "#/1452"
       },
       {
-        "$ref": "#/1435"
+        "$ref": "#/1453"
       },
       {
         "$ref": "#/0"
@@ -28367,7 +28559,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1388"
+      "$ref": "#/1406"
     }
   },
   {
@@ -28376,10 +28568,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1375"
+      "$ref": "#/1393"
     },
     "input": {
-      "$ref": "#/1383"
+      "$ref": "#/1401"
     }
   },
   {
@@ -28388,7 +28580,7 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1375"
+      "$ref": "#/1393"
     }
   },
   {
@@ -28397,7 +28589,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1442"
+          "$ref": "#/1460"
         },
         "flags": 1,
         "description": "The recovery plan test failover input properties."
@@ -28410,7 +28602,7 @@
     "properties": {
       "failoverDirection": {
         "type": {
-          "$ref": "#/1445"
+          "$ref": "#/1463"
         },
         "flags": 1,
         "description": "The failover direction."
@@ -28431,7 +28623,7 @@
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1446"
+          "$ref": "#/1464"
         },
         "flags": 0,
         "description": "The provider specific properties."
@@ -28450,10 +28642,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1443"
+        "$ref": "#/1461"
       },
       {
-        "$ref": "#/1444"
+        "$ref": "#/1462"
       },
       {
         "$ref": "#/0"
@@ -28463,7 +28655,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1388"
+      "$ref": "#/1406"
     }
   },
   {
@@ -28472,10 +28664,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1375"
+      "$ref": "#/1393"
     },
     "input": {
-      "$ref": "#/1441"
+      "$ref": "#/1459"
     }
   },
   {
@@ -28484,7 +28676,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1449"
+          "$ref": "#/1467"
         },
         "flags": 1,
         "description": "The recovery plan test failover cleanup input properties."
@@ -28497,7 +28689,7 @@
     "properties": {
       "comments": {
         "type": {
-          "$ref": "#/1126"
+          "$ref": "#/1130"
         },
         "flags": 0,
         "description": "The test failover cleanup comments."
@@ -28510,10 +28702,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1375"
+      "$ref": "#/1393"
     },
     "input": {
-      "$ref": "#/1448"
+      "$ref": "#/1466"
     }
   },
   {
@@ -28522,7 +28714,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1452"
+          "$ref": "#/1470"
         },
         "flags": 1,
         "description": "The recovery plan unplanned failover input properties."
@@ -28535,21 +28727,21 @@
     "properties": {
       "failoverDirection": {
         "type": {
-          "$ref": "#/1455"
+          "$ref": "#/1473"
         },
         "flags": 1,
         "description": "The failover direction."
       },
       "sourceSiteOperations": {
         "type": {
-          "$ref": "#/1458"
+          "$ref": "#/1476"
         },
         "flags": 1,
         "description": "A value indicating whether source site operations are required."
       },
       "providerSpecificDetails": {
         "type": {
-          "$ref": "#/1459"
+          "$ref": "#/1477"
         },
         "flags": 0,
         "description": "The provider specific properties."
@@ -28568,10 +28760,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1453"
+        "$ref": "#/1471"
       },
       {
-        "$ref": "#/1454"
+        "$ref": "#/1472"
       },
       {
         "$ref": "#/0"
@@ -28590,10 +28782,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1456"
+        "$ref": "#/1474"
       },
       {
-        "$ref": "#/1457"
+        "$ref": "#/1475"
       },
       {
         "$ref": "#/0"
@@ -28603,7 +28795,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1388"
+      "$ref": "#/1406"
     }
   },
   {
@@ -28612,10 +28804,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationRecoveryPlans",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1375"
+      "$ref": "#/1393"
     },
     "input": {
-      "$ref": "#/1451"
+      "$ref": "#/1469"
     }
   },
   {
@@ -28624,7 +28816,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1462"
+          "$ref": "#/1480"
         },
         "flags": 0,
         "description": "The vault health related data."
@@ -28665,28 +28857,28 @@
     "properties": {
       "vaultErrors": {
         "type": {
-          "$ref": "#/1463"
+          "$ref": "#/1481"
         },
         "flags": 0,
         "description": "The list of errors on the vault."
       },
       "protectedItemsHealth": {
         "type": {
-          "$ref": "#/1464"
+          "$ref": "#/1482"
         },
         "flags": 0,
         "description": "The list of the health detail of the protected items in the vault."
       },
       "fabricsHealth": {
         "type": {
-          "$ref": "#/1464"
+          "$ref": "#/1482"
         },
         "flags": 0,
         "description": "The list of the health detail of the fabrics in the vault."
       },
       "containersHealth": {
         "type": {
-          "$ref": "#/1464"
+          "$ref": "#/1482"
         },
         "flags": 0,
         "description": "The list of the health detail of the containers in the vault."
@@ -28712,14 +28904,14 @@
       },
       "issues": {
         "type": {
-          "$ref": "#/1484"
+          "$ref": "#/1502"
         },
         "flags": 0,
         "description": "The list of summary of health errors across the resources under the container."
       },
       "categorizedResourceCounts": {
         "type": {
-          "$ref": "#/1485"
+          "$ref": "#/1503"
         },
         "flags": 0,
         "description": "The categorized resource counts."
@@ -28739,14 +28931,14 @@
       },
       "category": {
         "type": {
-          "$ref": "#/1477"
+          "$ref": "#/1495"
         },
         "flags": 0,
         "description": "The category of the health error."
       },
       "severity": {
         "type": {
-          "$ref": "#/1482"
+          "$ref": "#/1500"
         },
         "flags": 0,
         "description": "Severity of error."
@@ -28774,7 +28966,7 @@
       },
       "affectedResourceCorrelationIds": {
         "type": {
-          "$ref": "#/1483"
+          "$ref": "#/1501"
         },
         "flags": 0,
         "description": "The list of affected resource correlation Ids. This can be used to uniquely identify the count of items affected by a specific category and severity as well as count of item affected by an specific issue."
@@ -28829,37 +29021,37 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1466"
+        "$ref": "#/1484"
       },
       {
-        "$ref": "#/1467"
+        "$ref": "#/1485"
       },
       {
-        "$ref": "#/1468"
+        "$ref": "#/1486"
       },
       {
-        "$ref": "#/1469"
+        "$ref": "#/1487"
       },
       {
-        "$ref": "#/1470"
+        "$ref": "#/1488"
       },
       {
-        "$ref": "#/1471"
+        "$ref": "#/1489"
       },
       {
-        "$ref": "#/1472"
+        "$ref": "#/1490"
       },
       {
-        "$ref": "#/1473"
+        "$ref": "#/1491"
       },
       {
-        "$ref": "#/1474"
+        "$ref": "#/1492"
       },
       {
-        "$ref": "#/1475"
+        "$ref": "#/1493"
       },
       {
-        "$ref": "#/1476"
+        "$ref": "#/1494"
       },
       {
         "$ref": "#/0"
@@ -28886,16 +29078,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1478"
+        "$ref": "#/1496"
       },
       {
-        "$ref": "#/1479"
+        "$ref": "#/1497"
       },
       {
-        "$ref": "#/1480"
+        "$ref": "#/1498"
       },
       {
-        "$ref": "#/1481"
+        "$ref": "#/1499"
       },
       {
         "$ref": "#/0"
@@ -28911,7 +29103,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1465"
+      "$ref": "#/1483"
     }
   },
   {
@@ -28928,7 +29120,7 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/replicationVaultHealth",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1461"
+      "$ref": "#/1479"
     }
   }
 ]

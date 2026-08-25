@@ -1234,6 +1234,12 @@
 * **Input**: [ApiManagementServiceBackupRestoreParameters](#apimanagementservicebackuprestoreparameters)
 * **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
 
+## Function confirmConsentCode (Microsoft.ApiManagement/service/authorizationProviders/authorizations@2025-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/authorizationProviders/authorizations
+* **ApiVersion**: 2025-09-01-preview
+* **Input**: [AuthorizationConfirmConsentCodeRequestContract](#authorizationconfirmconsentcoderequestcontract)
+* **Output**: any
+
 ## Function connectivityCheck (Microsoft.ApiManagement/service@2025-09-01-preview)
 * **Resource**: Microsoft.ApiManagement/service
 * **ApiVersion**: 2025-09-01-preview
@@ -1267,6 +1273,11 @@
 * **Resource**: Microsoft.ApiManagement/service
 * **ApiVersion**: 2025-09-01-preview
 * **Output**: [ApiManagementServiceGetSsoTokenResult](#apimanagementservicegetssotokenresult)
+
+## Function invalidateDebugCredentials (Microsoft.ApiManagement/service/gateways@2025-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/gateways
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
 
 ## Function listDebugCredentials (Microsoft.ApiManagement/service/gateways@2025-09-01-preview)
 * **Resource**: Microsoft.ApiManagement/service/gateways
@@ -1351,10 +1362,21 @@
 * **Input**: [MigrateToStv2Contract](#migratetostv2contract)
 * **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
 
+## Function reconnect (Microsoft.ApiManagement/service/backends@2025-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/backends
+* **ApiVersion**: 2025-09-01-preview
+* **Input**: [BackendReconnectContract](#backendreconnectcontract)
+* **Output**: any
+
 ## Function refreshHostnames (Microsoft.ApiManagement/service@2025-09-01-preview)
 * **Resource**: Microsoft.ApiManagement/service
 * **ApiVersion**: 2025-09-01-preview
 * **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
+
+## Function refreshSecret (Microsoft.ApiManagement/gateways/hostnameBindings@2025-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/gateways/hostnameBindings
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
 
 ## Function refreshSecret (Microsoft.ApiManagement/service/authorizationProviders@2025-09-01-preview)
 * **Resource**: Microsoft.ApiManagement/service/authorizationProviders
@@ -1381,6 +1403,42 @@
 * **ApiVersion**: 2025-09-01-preview
 * **Output**: [NamedValueContract](#namedvaluecontract)
 
+## Function regenerateKey (Microsoft.ApiManagement/service/gateways@2025-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/gateways
+* **ApiVersion**: 2025-09-01-preview
+* **Input**: [GatewayKeyRegenerationRequestContract](#gatewaykeyregenerationrequestcontract)
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/subscriptions@2025-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/tenant@2025-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/workspaces/subscriptions@2025-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/workspaces/subscriptions
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/subscriptions@2025-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/tenant@2025-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/workspaces/subscriptions@2025-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/workspaces/subscriptions
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
+
 ## Function restore (Microsoft.ApiManagement/service@2025-09-01-preview)
 * **Resource**: Microsoft.ApiManagement/service
 * **ApiVersion**: 2025-09-01-preview
@@ -1392,6 +1450,11 @@
 * **ApiVersion**: 2025-09-01-preview
 * **Input**: [SaveConfigurationParameter](#saveconfigurationparameter)
 * **Output**: [OperationResultContract](#operationresultcontract)
+
+## Function send (Microsoft.ApiManagement/service/users/confirmations@2025-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/users/confirmations
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
 
 ## Function token (Microsoft.ApiManagement/service/users@2025-09-01-preview)
 * **Resource**: Microsoft.ApiManagement/service/users
@@ -1656,6 +1719,10 @@ providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 * **objectId**: string: The Object Id
 * **tenantId**: string: The Tenant Id
 
+## AuthorizationConfirmConsentCodeRequestContract
+### Properties
+* **consentCode**: string: The consent code from the authorization server after authorizing and consenting.
+
 ## AuthorizationContractProperties
 ### Properties
 * **authorizationType**: 'OAuth2' | string: Authorization type options
@@ -1838,6 +1905,18 @@ providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 * **password**: string: Password to connect to the WebProxy Server
 * **url**: string {minLength: 1, maxLength: 2000} (Required): WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
 * **username**: string: Username to connect to the WebProxy server
+
+## BackendReconnectContract
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [BackendReconnectProperties](#backendreconnectproperties): Reconnect request properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## BackendReconnectProperties
+### Properties
+* **after**: string: Duration in ISO8601 format after which reconnect will be initiated. Minimum duration of the Reconnect is PT2M.
 
 ## BackendServiceFabricClusterProperties
 ### Properties
@@ -2176,6 +2255,10 @@ providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 * **negotiateClientCertificate**: bool: Determines whether gateway requests client certificate
 * **tls10Enabled**: bool: Specifies if TLS 1.0 is supported
 * **tls11Enabled**: bool: Specifies if TLS 1.1 is supported
+
+## GatewayKeyRegenerationRequestContract
+### Properties
+* **keyType**: 'primary' | 'secondary' (Required): The Key being regenerated.
 
 ## GatewayKeysContract
 ### Properties

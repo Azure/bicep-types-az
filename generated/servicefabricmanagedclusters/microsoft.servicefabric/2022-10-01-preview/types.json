@@ -4000,5 +4000,41 @@
         "$ref": "#/0"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2022-10-01-preview",
+    "output": {
+      "$ref": "#/227"
+    },
+    "input": {
+      "$ref": "#/271"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2022-10-01-preview",
+    "output": {
+      "$ref": "#/227"
+    },
+    "input": {
+      "$ref": "#/271"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteNode",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2022-10-01-preview",
+    "output": {
+      "$ref": "#/227"
+    },
+    "input": {
+      "$ref": "#/271"
+    }
   }
 ]

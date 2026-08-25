@@ -81,6 +81,34 @@
 * **tags**: [NodeTypeTags](#nodetypetags): Resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function applyMaintenanceWindow (Microsoft.ServiceFabric/managedClusters@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: any
+
+## Function deallocate (Microsoft.ServiceFabric/managedClusters/nodeTypes@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
+## Function deleteNode (Microsoft.ServiceFabric/managedClusters/nodeTypes@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
+## Function fetchHealth (Microsoft.ServiceFabric/managedClusters/applications@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/applications
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [ApplicationFetchHealthRequest](#applicationfetchhealthrequest)
+* **Output**: any
+
+## Function fetchUpgradeStatus (Microsoft.ServiceFabric/managedClusters/applications@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/applications
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: any
+
 ## Function getazresiliencystatus (Microsoft.ServiceFabric/managedClusters@2025-10-01-preview)
 * **Resource**: Microsoft.ServiceFabric/managedClusters
 * **ApiVersion**: 2025-10-01-preview
@@ -113,6 +141,48 @@
 * **ApiVersion**: 2025-10-01-preview
 * **Output**: [FaultSimulationListResult](#faultsimulationlistresult)
 
+## Function redeploy (Microsoft.ServiceFabric/managedClusters/nodeTypes@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
+## Function reimage (Microsoft.ServiceFabric/managedClusters/nodeTypes@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
+## Function restart (Microsoft.ServiceFabric/managedClusters/nodeTypes@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
+## Function restartDeployedCodePackage (Microsoft.ServiceFabric/managedClusters/applications@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/applications
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [RestartDeployedCodePackageRequest](#restartdeployedcodepackagerequest)
+* **Output**: any
+
+## Function restartReplica (Microsoft.ServiceFabric/managedClusters/applications/services@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/applications/services
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [RestartReplicaRequest](#restartreplicarequest)
+* **Output**: any
+
+## Function resumeUpgrade (Microsoft.ServiceFabric/managedClusters/applications@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/applications
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [RuntimeResumeApplicationUpgradeParameters](#runtimeresumeapplicationupgradeparameters)
+* **Output**: any
+
+## Function start (Microsoft.ServiceFabric/managedClusters/nodeTypes@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
 ## Function startFaultSimulation (Microsoft.ServiceFabric/managedClusters@2025-10-01-preview)
 * **Resource**: Microsoft.ServiceFabric/managedClusters
 * **ApiVersion**: 2025-10-01-preview
@@ -124,6 +194,11 @@
 * **ApiVersion**: 2025-10-01-preview
 * **Input**: [FaultSimulationContentWrapper](#faultsimulationcontentwrapper)
 * **Output**: [FaultSimulation](#faultsimulation)
+
+## Function startRollback (Microsoft.ServiceFabric/managedClusters/applications@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/applications
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: any
 
 ## Function stopFaultSimulation (Microsoft.ServiceFabric/managedClusters@2025-10-01-preview)
 * **Resource**: Microsoft.ServiceFabric/managedClusters
@@ -137,12 +212,26 @@
 * **Input**: [FaultSimulationIdContent](#faultsimulationidcontent)
 * **Output**: [FaultSimulation](#faultsimulation)
 
+## Function updateUpgrade (Microsoft.ServiceFabric/managedClusters/applications@2025-10-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/applications
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [RuntimeUpdateApplicationUpgradeParameters](#runtimeupdateapplicationupgradeparameters)
+* **Output**: any
+
 ## AdditionalNetworkInterfaceConfiguration
 ### Properties
 * **dscpConfiguration**: [SubResource](#subresource): Specifies the DSCP configuration to apply to the network interface.
 * **enableAcceleratedNetworking**: bool: Specifies whether the network interface is accelerated networking-enabled.
 * **ipConfigurations**: [IpConfiguration](#ipconfiguration)[] (Required): Specifies the IP configurations of the network interface.
 * **name**: string (Required): Name of the network interface.
+
+## ApplicationFetchHealthRequest
+### Properties
+* **deployedApplicationsHealthStateFilter**: 'All' | 'Default' | 'Error' | 'None' | 'Ok' | 'Warning' | string: Allows filtering of the deployed applications health state objects returned in the result of application health query based on their health state.
+* **eventsHealthStateFilter**: 'All' | 'Default' | 'Error' | 'None' | 'Ok' | 'Warning' | string: Allows filtering of the health events returned in the response based on health state.
+* **excludeHealthStatistics**: bool: Indicates whether the health statistics should be returned as part of the query result. False by default. The statistics show the number of children entities in health state Ok, Warning, and Error.
+* **servicesHealthStateFilter**: 'All' | 'Default' | 'Error' | 'None' | 'Ok' | 'Warning' | string: Allows filtering of the services health state objects returned in the result of services health query based on their health state.
+* **timeout**: int: Request timeout for the health query in seconds. The default value is 60 seconds.
 
 ## ApplicationHealthPolicy
 ### Properties
@@ -451,6 +540,12 @@ This value must be between 00:00:00 and 49710.06:28:15 (unsigned 32 bit integer 
 * **sourcePortRange**: string: The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
 * **sourcePortRanges**: string[]: The source port ranges.
 
+## NodeTypeActionParameters
+### Properties
+* **force**: bool: Force the action to go through.
+* **nodes**: string[]: List of node names from the node type.
+* **updateType**: 'ByUpgradeDomain' | 'Default' | string: Specifies the way the operation will be performed.
+
 ## NodeTypeFaultSimulation
 ### Properties
 * **nodeTypeName**: string: Node type name.
@@ -578,6 +673,22 @@ should be split between the partition ‘Count’
 * **resourceName**: string (ReadOnly): VM Size properties.
 * **resourceType**: string (ReadOnly): VM Size id.
 
+## RestartDeployedCodePackageRequest
+### Properties
+* **codePackageInstanceId**: string (Required): The instance ID for currently running entry point. For a code package setup entry point (if specified) runs first and after it finishes main entry point is started. Each time entry point executable is run, its instance ID will change. If 0 is passed in as the code package instance ID, the API will restart the code package with whatever instance ID it is currently running. If an instance ID other than 0 is passed in, the API will restart the code package only if the current Instance ID matches the passed in instance ID. Note, passing in the exact instance ID (not 0) in the API is safer, because if ensures at most one restart of the code package.
+* **codePackageName**: string (Required): The name of the code package as specified in the service manifest.
+* **nodeName**: string (Required): The name of the node where the code package needs to be restarted. Use '*' to restart on all nodes where the code package is running.
+* **serviceManifestName**: string (Required): The name of the service manifest as specified in the code package.
+* **servicePackageActivationId**: string: The activation id of a deployed service package. If ServicePackageActivationMode specified at the time of creating the service is 'SharedProcess' (or if it is not specified, in which case it defaults to 'SharedProcess'), then value of ServicePackageActivationId is always an empty string.
+
+## RestartReplicaRequest
+### Properties
+* **forceRestart**: bool: If true, the restart operation will be forced. Use this option with care, as it may cause data loss.
+* **partitionId**: string (Required): The ID of the partition.
+* **replicaIds**: int[] (Required): The IDs of the replicas to be restarted.
+* **restartKind**: 'Simultaneous' | string (Required): The kind of restart to perform.
+* **timeout**: int: The server timeout for performing the operation in seconds. This timeout specifies the time duration that the client is willing to wait for the requested operation to complete. The default value for this parameter is 60 seconds.
+
 ## RollingUpgradeMonitoringPolicy
 ### Properties
 * **failureAction**: 'Manual' | 'Rollback' | string (Required): The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations. Invalid indicates the failure action is invalid. Rollback specifies that the upgrade will start rolling back automatically. Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.
@@ -586,6 +697,66 @@ should be split between the partition ‘Count’
 * **healthCheckWaitDuration**: string (Required): The amount of time to wait after completing an upgrade domain before applying health policies. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
 * **upgradeDomainTimeout**: string (Required): The amount of time each upgrade domain has to complete before FailureAction is executed. Cannot be larger than 12 hours. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
 * **upgradeTimeout**: string (Required): The amount of time the overall upgrade has to complete before FailureAction is executed. Cannot be larger than 12 hours. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
+
+## RuntimeApplicationHealthPolicy
+### Properties
+* **considerWarningAsError**: bool (Required): Indicates whether warnings are treated with the same severity as errors.
+* **defaultServiceTypeHealthPolicy**: [RuntimeServiceTypeHealthPolicy](#runtimeservicetypehealthpolicy): The health policy used by default to evaluate the health of a service type.
+* **maxPercentUnhealthyDeployedApplications**: int (Required): The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
+The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
+This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
+The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
+* **serviceTypeHealthPolicyMap**: [RuntimeApplicationHealthPolicyServiceTypeHealthPolicyMap](#runtimeapplicationhealthpolicyservicetypehealthpolicymap): The map with service type health policy per service type name. The map is empty by default.
+
+## RuntimeApplicationHealthPolicyServiceTypeHealthPolicyMap
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [RuntimeServiceTypeHealthPolicy](#runtimeservicetypehealthpolicy)
+
+## RuntimeResumeApplicationUpgradeParameters
+### Properties
+* **upgradeDomainName**: string: The upgrade domain name. Expected to be the next upgrade domain if the application is upgrading.
+
+## RuntimeRollingUpgradeUpdateMonitoringPolicy
+### Properties
+* **failureAction**: 'Manual' | 'Rollback' | string: The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations. Invalid indicates the failure action is invalid. Rollback specifies that the upgrade will start rolling back automatically. Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode
+* **forceRestart**: bool: If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
+* **healthCheckRetryTimeoutInMilliseconds**: string: The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+* **healthCheckStableDurationInMilliseconds**: string: The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+* **healthCheckWaitDurationInMilliseconds**: string: The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+* **instanceCloseDelayDurationInSeconds**: int: Duration in seconds, to wait before a stateless instance is closed, to allow the active requests to drain gracefully. This would be effective when the instance is closing during the application/cluster upgrade, only for those instances which have a non-zero delay duration configured in the service description.
+* **replicaSetCheckTimeoutInMilliseconds**: int: The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
+* **rollingUpgradeMode**: 'Monitored' | 'UnmonitoredAuto' | 'UnmonitoredManual' | string (Required): The mode used to monitor health during a rolling upgrade.
+* **upgradeDomainTimeoutInMilliseconds**: string: The amount of time each upgrade domain has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+* **upgradeTimeoutInMilliseconds**: string: The amount of time the overall upgrade has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+
+## RuntimeServiceTypeHealthPolicy
+### Properties
+* **maxPercentUnhealthyPartitionsPerService**: int {minValue: 0, maxValue: 100} (Required): The maximum allowed percentage of unhealthy partitions per service.
+
+The percentage represents the maximum tolerated percentage of partitions that can be unhealthy before the service is considered in error.
+If the percentage is respected but there is at least one unhealthy partition, the health is evaluated as Warning.
+The percentage is calculated by dividing the number of unhealthy partitions over the total number of partitions in the service.
+The computation rounds up to tolerate one failure on small numbers of partitions.
+* **maxPercentUnhealthyReplicasPerPartition**: int {minValue: 0, maxValue: 100} (Required): The maximum allowed percentage of unhealthy replicas per partition.
+
+The percentage represents the maximum tolerated percentage of replicas that can be unhealthy before the partition is considered in error.
+If the percentage is respected but there is at least one unhealthy replica, the health is evaluated as Warning.
+The percentage is calculated by dividing the number of unhealthy replicas over the total number of replicas in the partition.
+The computation rounds up to tolerate one failure on small numbers of replicas.
+* **maxPercentUnhealthyServices**: int {minValue: 0, maxValue: 100} (Required): The maximum allowed percentage of unhealthy services.
+
+The percentage represents the maximum tolerated percentage of services that can be unhealthy before the application is considered in error.
+If the percentage is respected but there is at least one unhealthy service, the health is evaluated as Warning.
+This is calculated by dividing the number of unhealthy services of the specific service type over the total number of services of the specific service type.
+The computation rounds up to tolerate one failure on small numbers of services.
+
+## RuntimeUpdateApplicationUpgradeParameters
+### Properties
+* **applicationHealthPolicy**: [RuntimeApplicationHealthPolicy](#runtimeapplicationhealthpolicy): Defines a health policy used to evaluate the health of an application or one of its children entities.
+* **name**: string (Required): The name of the application, including the 'fabric:' URI scheme.
+* **updateDescription**: [RuntimeRollingUpgradeUpdateMonitoringPolicy](#runtimerollingupgradeupdatemonitoringpolicy): Describes the parameters for updating a rolling upgrade of application or cluster and a monitoring policy.
+* **upgradeKind**: 'Rolling' | string (Required): The kind of the upgrade.
 
 ## ScalingMechanism
 * **Discriminator**: kind

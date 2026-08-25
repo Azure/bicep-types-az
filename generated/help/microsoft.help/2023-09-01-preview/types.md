@@ -33,6 +33,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Help/troubleshooters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function continue (Microsoft.Help/troubleshooters@2023-09-01-preview)
+* **Resource**: Microsoft.Help/troubleshooters
+* **ApiVersion**: 2023-09-01-preview
+* **Input**: [ContinueRequestBody](#continuerequestbody)
+* **Output**: any
+
+## Function end (Microsoft.Help/troubleshooters@2023-09-01-preview)
+* **Resource**: Microsoft.Help/troubleshooters
+* **ApiVersion**: 2023-09-01-preview
+* **Output**: any
+
 ## Function restart (Microsoft.Help/troubleshooters@2023-09-01-preview)
 * **Resource**: Microsoft.Help/troubleshooters
 * **ApiVersion**: 2023-09-01-preview
@@ -42,6 +53,11 @@
 ### Properties
 * **result**: string: Insight Article Content
 * **type**: 'Error' | 'Information' | 'Success' | 'Warning' | string: Type of Result.
+
+## ContinueRequestBody
+### Properties
+* **responses**: [TroubleshooterResponse](#troubleshooterresponse)[]
+* **stepId**: string: Unique id of the result.
 
 ## Diagnostic
 ### Properties
@@ -244,6 +260,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TroubleshooterResponse
+### Properties
+* **questionId**: string: id of the question.
+* **questionType**: 'Dropdown' | 'MultiLineInfoBox' | 'RadioButton' | 'TextInput' | string: Type of Question
+* **response**: string: Response key for SingleInput. For Multi-line test/open ended question it is free form text
 
 ## Video
 ### Properties

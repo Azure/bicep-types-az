@@ -793,5 +793,26 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.StoragePool/diskPools",
+    "apiVersion": "2021-04-01-preview",
+    "output": {
+      "$ref": "#/74"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.StoragePool/diskPools",
+    "apiVersion": "2021-04-01-preview",
+    "output": {
+      "$ref": "#/74"
+    }
   }
 ]

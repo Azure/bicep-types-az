@@ -21079,11 +21079,122 @@
   },
   {
     "$type": "ObjectType",
+    "name": "UploadCertificateRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1680"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawCertificateData",
+    "properties": {
+      "certificates": {
+        "type": {
+          "$ref": "#/1681"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadCertificate",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/163"
+    },
+    "input": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClaimDeviceRequest",
+    "properties": {
+      "devices": {
+        "type": {
+          "$ref": "#/1684"
+        },
+        "flags": 1,
+        "description": "List of resource ids of the devices to be modified"
+      },
+      "claimedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identifier of the group the device belongs to."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "claimDevices",
+    "resourceType": "Microsoft.AzureStackHCI/devicePools",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/163"
+    },
+    "input": {
+      "$ref": "#/1683"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReleaseDeviceRequest",
+    "properties": {
+      "devices": {
+        "type": {
+          "$ref": "#/1687"
+        },
+        "flags": 1,
+        "description": "List of resource ids of the devices to be modified"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "releaseDevices",
+    "resourceType": "Microsoft.AzureStackHCI/devicePools",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/163"
+    },
+    "input": {
+      "$ref": "#/1686"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "EdgeMachineValidateRequest",
     "properties": {
       "edgeMachineIds": {
         "type": {
-          "$ref": "#/1680"
+          "$ref": "#/1690"
         },
         "flags": 1,
         "description": "Machine Ids against which, current machine has to be validated."
@@ -21122,10 +21233,10 @@
     "resourceType": "Microsoft.AzureStackHCI/edgeMachines",
     "apiVersion": "2026-05-01-preview",
     "output": {
-      "$ref": "#/1681"
+      "$ref": "#/1691"
     },
     "input": {
-      "$ref": "#/1679"
+      "$ref": "#/1689"
     }
   },
   {
@@ -21175,7 +21286,7 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2026-05-01-preview",
     "output": {
-      "$ref": "#/1683"
+      "$ref": "#/1693"
     }
   },
   {
@@ -21184,7 +21295,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1686"
+          "$ref": "#/1696"
         },
         "flags": 2,
         "description": "ArcIdentity properties."
@@ -21227,7 +21338,7 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2026-05-01-preview",
     "output": {
-      "$ref": "#/1685"
+      "$ref": "#/1695"
     }
   },
   {
@@ -21266,7 +21377,16 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2026-05-01-preview",
     "output": {
-      "$ref": "#/1688"
+      "$ref": "#/1698"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initializeDisableProcess",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/163"
     }
   },
   {
@@ -21275,7 +21395,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1691"
+          "$ref": "#/1702"
         },
         "flags": 0,
         "description": "List of Arc Nodes in the cluster"
@@ -21288,7 +21408,7 @@
     "properties": {
       "clusterNodes": {
         "type": {
-          "$ref": "#/1692"
+          "$ref": "#/1703"
         },
         "flags": 0
       }
@@ -21306,10 +21426,87 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2026-05-01-preview",
     "output": {
-      "$ref": "#/1683"
+      "$ref": "#/1693"
     },
     "input": {
-      "$ref": "#/1690"
+      "$ref": "#/1701"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtensionUpgradeParameters",
+    "properties": {
+      "targetVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Extension Upgrade Target Version."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings/extensions",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/163"
+    },
+    "input": {
+      "$ref": "#/1705"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkHealth",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/updateSummaries",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/163"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckUpdatesRequest",
+    "properties": {
+      "updateName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of update"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkUpdates",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/updateSummaries",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/163"
+    },
+    "input": {
+      "$ref": "#/1708"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "apply",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/updates",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/163"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "prepare",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/updates",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/163"
     }
   },
   {
@@ -21318,7 +21515,7 @@
     "properties": {
       "ownershipVoucherDetails": {
         "type": {
-          "$ref": "#/1695"
+          "$ref": "#/1713"
         },
         "flags": 1,
         "description": "Ownership Voucher Details."
@@ -21338,7 +21535,7 @@
     "properties": {
       "ownershipVoucherValidationDetails": {
         "type": {
-          "$ref": "#/1697"
+          "$ref": "#/1715"
         },
         "flags": 1,
         "description": "Ownership Voucher Validation Details."
@@ -21357,10 +21554,10 @@
     "resourceType": "Microsoft.AzureStackHCI/locations",
     "apiVersion": "2026-05-01-preview",
     "output": {
-      "$ref": "#/1696"
+      "$ref": "#/1714"
     },
     "input": {
-      "$ref": "#/1694"
+      "$ref": "#/1712"
     }
   }
 ]

@@ -1539,12 +1539,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setDefaultKey",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-01-07",
+    "output": {
+      "$ref": "#/127"
+    },
+    "input": {
+      "$ref": "#/123"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DatadogHostListResponse",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/134"
+          "$ref": "#/136"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1571,21 +1586,21 @@
       },
       "aliases": {
         "type": {
-          "$ref": "#/129"
+          "$ref": "#/131"
         },
         "flags": 0,
         "description": "The aliases for the host installed via the Datadog agent."
       },
       "apps": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/132"
         },
         "flags": 0,
         "description": "The Datadog integrations reporting metrics for the host."
       },
       "meta": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/133"
         },
         "flags": 0
       }
@@ -1616,13 +1631,13 @@
       },
       "installMethod": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/134"
         },
         "flags": 0
       },
       "logsAgent": {
         "type": {
-          "$ref": "#/133"
+          "$ref": "#/135"
         },
         "flags": 0
       }
@@ -1671,7 +1686,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/128"
+      "$ref": "#/130"
     }
   },
   {
@@ -1680,7 +1695,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-01-07",
     "output": {
-      "$ref": "#/127"
+      "$ref": "#/129"
     }
   },
   {
@@ -1689,7 +1704,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/138"
+          "$ref": "#/140"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1726,7 +1741,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/137"
+      "$ref": "#/139"
     }
   },
   {
@@ -1735,7 +1750,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-01-07",
     "output": {
-      "$ref": "#/136"
+      "$ref": "#/138"
     }
   },
   {
@@ -1744,7 +1759,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/142"
+          "$ref": "#/144"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1802,7 +1817,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/141"
+      "$ref": "#/143"
     }
   },
   {
@@ -1811,7 +1826,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-01-07",
     "output": {
-      "$ref": "#/140"
+      "$ref": "#/142"
     }
   },
   {
@@ -1832,7 +1847,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-01-07",
     "output": {
-      "$ref": "#/144"
+      "$ref": "#/146"
     }
   },
   {
@@ -1841,14 +1856,14 @@
     "properties": {
       "marketplaceSaasInfo": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/149"
         },
         "flags": 0,
         "description": "Marketplace Subscription details"
       },
       "partnerBillingEntity": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/150"
         },
         "flags": 0,
         "description": "Partner Billing Entity details: Organization Info"
@@ -1929,7 +1944,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-01-07",
     "output": {
-      "$ref": "#/146"
+      "$ref": "#/148"
     }
   },
   {
@@ -2004,7 +2019,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/154"
         },
         "flags": 0,
         "description": "Dictionary of <string>"
@@ -2038,10 +2053,10 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-01-07",
     "output": {
-      "$ref": "#/151"
+      "$ref": "#/153"
     },
     "input": {
-      "$ref": "#/150"
+      "$ref": "#/152"
     }
   }
 ]

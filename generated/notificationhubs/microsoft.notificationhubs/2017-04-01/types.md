@@ -58,6 +58,12 @@
 * **Input**: [CheckAvailabilityParameters](#checkavailabilityparameters)
 * **Output**: [CheckAvailabilityResult](#checkavailabilityresult)
 
+## Function debugsend (Microsoft.NotificationHubs/namespaces/notificationHubs@2017-04-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs
+* **ApiVersion**: 2017-04-01
+* **Input**: any
+* **Output**: [DebugSendResponse](#debugsendresponse)
+
 ## Function listKeys (Microsoft.NotificationHubs/namespaces/AuthorizationRules@2017-04-01)
 * **Resource**: Microsoft.NotificationHubs/namespaces/AuthorizationRules
 * **ApiVersion**: 2017-04-01
@@ -145,6 +151,22 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: string (ReadOnly): Resource type
 
+## DebugSendResponse
+### Properties
+* **id**: string (ReadOnly): Resource Id
+* **location**: string: Resource location
+* **name**: string (ReadOnly): Resource name
+* **properties**: [DebugSendResult](#debugsendresult): Properties of the NotificationHub.
+* **sku**: [Sku](#sku): The sku of the created namespace
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: string (ReadOnly): Resource type
+
+## DebugSendResult
+### Properties
+* **failure**: int: send failure
+* **results**: any: actual failure description
+* **success**: int: successful send
+
 ## GcmCredential
 ### Properties
 * **properties**: [GcmCredentialProperties](#gcmcredentialproperties): Properties of NotificationHub GcmCredential.
@@ -223,6 +245,11 @@
 * **primaryKey**: string: PrimaryKey of the created AuthorizationRule.
 * **secondaryConnectionString**: string: SecondaryConnectionString of the created AuthorizationRule
 * **secondaryKey**: string: SecondaryKey of the created AuthorizationRule
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

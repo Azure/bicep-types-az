@@ -239,6 +239,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): User in DataBoxEdge Resource
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function downloadUpdates (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2021-02-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2021-02-01
+* **Output**: any
+
 ## Function generateCertificate (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2021-02-01)
 * **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
 * **ApiVersion**: 2021-02-01
@@ -249,10 +254,42 @@
 * **ApiVersion**: 2021-02-01
 * **Output**: [DataBoxEdgeDeviceExtendedInfo](#databoxedgedeviceextendedinfo)
 
+## Function installUpdates (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2021-02-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2021-02-01
+* **Output**: any
+
 ## Function listDCAccessCode (Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2021-02-01)
 * **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders
 * **ApiVersion**: 2021-02-01
 * **Output**: [DCAccessCode](#dcaccesscode)
+
+## Function refresh (Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares@2021-02-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares
+* **ApiVersion**: 2021-02-01
+* **Output**: any
+
+## Function refresh (Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers@2021-02-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers
+* **ApiVersion**: 2021-02-01
+* **Output**: any
+
+## Function scanForUpdates (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2021-02-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2021-02-01
+* **Output**: any
+
+## Function triggerSupportPackage (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2021-02-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2021-02-01
+* **Input**: [TriggerSupportPackageRequest](#triggersupportpackagerequest)
+* **Output**: any
+
+## Function update (Microsoft.DataBoxEdge/dataBoxEdgeDevices/securitySettings@2021-02-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices/securitySettings
+* **ApiVersion**: 2021-02-01
+* **Input**: [SecuritySettings](#securitysettings)
+* **Output**: any
 
 ## Function updateExtendedInformation (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2021-02-01)
 * **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
@@ -736,6 +773,17 @@ by the already existing properties
 * **encryptedSecret**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Encrypted (using device public key) secret value.
 * **keyVaultId**: string: Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).
 
+## SecuritySettings
+### Properties
+* **id**: string (ReadOnly): The path ID that uniquely identifies the object.
+* **name**: string (ReadOnly): The object name.
+* **properties**: [SecuritySettingsProperties](#securitysettingsproperties) (Required): Properties of the security settings.
+* **type**: string (ReadOnly): The hierarchical type of the object.
+
+## SecuritySettingsProperties
+### Properties
+* **deviceAdminPassword**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret) (Required): Device administrator password as an encrypted string (encrypted using RSA PKCS #1) is used to sign into the  local web UI of the device. The Actual password should have at least 8 characters that are a combination of  uppercase, lowercase, numeric, and special characters.
+
 ## ShareAccessRight
 ### Properties
 * **accessType**: 'Change' | 'Custom' | 'Read' | string (Required): Type of access to be allowed on the share for this user.
@@ -792,6 +840,14 @@ by the already existing properties
 * **name**: string
 * **state**: string
 
+## SupportPackageRequestProperties
+### Properties
+* **include**: string: Type of files, which need to be included in the logs
+This will contain the type of logs (Default/DefaultWithDumps/None/All/DefaultWithArchived)
+or a comma separated list of log types that are required
+* **maximumTimeStamp**: string: MaximumTimeStamp until where logs need to be collected
+* **minimumTimeStamp**: string: MinimumTimeStamp from where logs need to be collected
+
 ## SymmetricKey
 ### Properties
 * **connectionString**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Connection string based on the symmetric key.
@@ -811,6 +867,13 @@ by the already existing properties
 * **serialNumber**: string: Serial number of the device being tracked.
 * **trackingId**: string: Tracking ID of the shipment.
 * **trackingUrl**: string: Tracking URL of the shipment.
+
+## TriggerSupportPackageRequest
+### Properties
+* **id**: string (ReadOnly): The path ID that uniquely identifies the object.
+* **name**: string (ReadOnly): The object name.
+* **properties**: [SupportPackageRequestProperties](#supportpackagerequestproperties) (Required): The TriggerSupportPackageRequest properties.
+* **type**: string (ReadOnly): The hierarchical type of the object.
 
 ## UpdateDetails
 ### Properties

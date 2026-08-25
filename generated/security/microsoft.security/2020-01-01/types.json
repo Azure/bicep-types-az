@@ -3101,5 +3101,122 @@
     },
     "readableScopes": 12,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessPolicyInitiateRequest",
+    "properties": {
+      "virtualMachines": {
+        "type": {
+          "$ref": "#/241"
+        },
+        "flags": 1,
+        "description": "A list of virtual machines & ports to open access for"
+      },
+      "justification": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The justification for making the initiate request"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessPolicyInitiateVirtualMachine",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource ID of the virtual machine that is linked to this policy"
+      },
+      "ports": {
+        "type": {
+          "$ref": "#/240"
+        },
+        "flags": 1,
+        "description": "The ports to open for the resource with the `id`"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessPolicyInitiatePort",
+    "properties": {
+      "number": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1
+      },
+      "allowedSourceAddressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Source of the allowed traffic. If omitted, the request will be for the source IP address of the initiate request."
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The time to close the request in UTC"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/239"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/238"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "{jitNetworkAccessPolicyInitiateType}",
+    "resourceType": "Microsoft.Security/locations/jitNetworkAccessPolicies",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/237"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dismiss",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/148"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resolve",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/148"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/148"
+    }
   }
 ]

@@ -55,6 +55,16 @@
 * **Input**: [GrantAccessData](#grantaccessdata)
 * **Output**: [AccessUri](#accessuri)
 
+## Function endGetAccess (Microsoft.Compute/disks@2019-11-01)
+* **Resource**: Microsoft.Compute/disks
+* **ApiVersion**: 2019-11-01
+* **Output**: any
+
+## Function endGetAccess (Microsoft.Compute/snapshots@2019-11-01)
+* **Resource**: Microsoft.Compute/snapshots
+* **ApiVersion**: 2019-11-01
+* **Output**: any
+
 ## AccessUri
 ### Properties
 * **accessSAS**: string (ReadOnly): A SAS uri for accessing a disk.

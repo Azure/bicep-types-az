@@ -245,6 +245,12 @@
 * **ApiVersion**: 2019-01-01-preview
 * **Output**: [IncidentAlertList](#incidentalertlist)
 
+## Function appendTags (Microsoft.SecurityInsights/threatIntelligence/indicators@2019-01-01-preview)
+* **Resource**: Microsoft.SecurityInsights/threatIntelligence/indicators
+* **ApiVersion**: 2019-01-01-preview
+* **Input**: [ThreatIntelligenceAppendTags](#threatintelligenceappendtags)
+* **Output**: any
+
 ## Function bookmarks (Microsoft.SecurityInsights/incidents@2019-01-01-preview)
 * **Resource**: Microsoft.SecurityInsights/incidents
 * **ApiVersion**: 2019-01-01-preview
@@ -788,6 +794,10 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## ThreatIntelligenceAppendTags
+### Properties
+* **threatIntelligenceTags**: string[]: List of tags to be appended.
 
 ## ThreatIntelligenceExternalReference
 ### Properties

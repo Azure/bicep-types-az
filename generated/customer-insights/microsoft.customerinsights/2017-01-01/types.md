@@ -147,6 +147,11 @@
 * **ApiVersion**: 2017-01-01
 * **Output**: [AuthorizationPolicy](#authorizationpolicy)
 
+## Function reprocess (Microsoft.CustomerInsights/hubs/kpi@2017-01-01)
+* **Resource**: Microsoft.CustomerInsights/hubs/kpi
+* **ApiVersion**: 2017-01-01
+* **Output**: any
+
 ## Function suggestRelationshipLinks (Microsoft.CustomerInsights/hubs/interactions@2017-01-01)
 * **Resource**: Microsoft.CustomerInsights/hubs/interactions
 * **ApiVersion**: 2017-01-01

@@ -1982,6 +1982,24 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Chaos/experiments",
+    "apiVersion": "2024-11-01-preview",
+    "output": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Chaos/experiments",
+    "apiVersion": "2024-11-01-preview",
+    "output": {
+      "$ref": "#/107"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExperimentExecutionDetails",
     "properties": {
@@ -2008,7 +2026,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/158"
         },
         "flags": 2,
         "description": "The properties of the experiment execution details."
@@ -2042,7 +2060,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/165"
         },
         "flags": 2,
         "description": "Resource provisioning state. Not currently in use for executions."
@@ -2063,7 +2081,7 @@
       },
       "runInformation": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/166"
         },
         "flags": 2,
         "description": "The information of the experiment run."
@@ -2098,12 +2116,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/157"
-      },
-      {
-        "$ref": "#/158"
-      },
-      {
         "$ref": "#/159"
       },
       {
@@ -2116,6 +2128,12 @@
         "$ref": "#/162"
       },
       {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -2126,7 +2144,7 @@
     "properties": {
       "steps": {
         "type": {
-          "$ref": "#/173"
+          "$ref": "#/175"
         },
         "flags": 2,
         "description": "The steps of the experiment run."
@@ -2160,7 +2178,7 @@
       },
       "branches": {
         "type": {
-          "$ref": "#/172"
+          "$ref": "#/174"
         },
         "flags": 2,
         "description": "The array of branches."
@@ -2194,7 +2212,7 @@
       },
       "actions": {
         "type": {
-          "$ref": "#/171"
+          "$ref": "#/173"
         },
         "flags": 2,
         "description": "The array of actions."
@@ -2242,7 +2260,7 @@
       },
       "targets": {
         "type": {
-          "$ref": "#/170"
+          "$ref": "#/172"
         },
         "flags": 2,
         "description": "The array of targets."
@@ -2283,7 +2301,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/169"
+          "$ref": "#/171"
         },
         "flags": 2,
         "description": "The error of the action."
@@ -2313,6 +2331,18 @@
   {
     "$type": "ArrayType",
     "itemType": {
+      "$ref": "#/170"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/169"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
       "$ref": "#/168"
     }
   },
@@ -2323,24 +2353,12 @@
     }
   },
   {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/166"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/165"
-    }
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "getExecutionDetails",
     "resourceType": "Microsoft.Chaos/experiments/executions",
     "apiVersion": "2024-11-01-preview",
     "output": {
-      "$ref": "#/155"
+      "$ref": "#/157"
     }
   }
 ]

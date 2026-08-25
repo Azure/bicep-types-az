@@ -3293,6 +3293,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/247"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ServerGtidSetParameter",
     "properties": {
@@ -3306,12 +3318,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "resetGtid",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/247"
+    },
+    "input": {
+      "$ref": "#/249"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ServerRestartParameter",
     "properties": {
       "restartWithFailover": {
         "type": {
-          "$ref": "#/251"
+          "$ref": "#/254"
         },
         "flags": 0,
         "description": "Whether or not failover to standby server when restarting a server with high availability enabled."
@@ -3337,15 +3361,45 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/249"
+        "$ref": "#/252"
       },
       {
-        "$ref": "#/250"
+        "$ref": "#/253"
       },
       {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/247"
+    },
+    "input": {
+      "$ref": "#/251"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/247"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/247"
+    }
   },
   {
     "$type": "ObjectType",
@@ -3380,10 +3434,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/252"
+      "$ref": "#/258"
     },
     "input": {
-      "$ref": "#/252"
+      "$ref": "#/258"
     }
   },
   {
@@ -3392,14 +3446,14 @@
     "properties": {
       "targetDetails": {
         "type": {
-          "$ref": "#/255"
+          "$ref": "#/261"
         },
         "flags": 1,
         "description": "Backup Target Store Details"
       },
       "backupSettings": {
         "type": {
-          "$ref": "#/259"
+          "$ref": "#/265"
         },
         "flags": 1,
         "description": "Backup Settings"
@@ -3413,7 +3467,7 @@
     "baseProperties": {},
     "elements": {
       "FullBackupStoreDetails": {
-        "$ref": "#/256"
+        "$ref": "#/262"
       }
     }
   },
@@ -3423,14 +3477,14 @@
     "properties": {
       "sasUriList": {
         "type": {
-          "$ref": "#/257"
+          "$ref": "#/263"
         },
         "flags": 1,
         "description": "SASUriList of storage containers where backup data is to be streamed/copied."
       },
       "objectType": {
         "type": {
-          "$ref": "#/258"
+          "$ref": "#/264"
         },
         "flags": 1,
         "description": "Type of the specific object - used for deserializing"
@@ -3453,14 +3507,14 @@
     "properties": {
       "backupName": {
         "type": {
-          "$ref": "#/260"
+          "$ref": "#/266"
         },
         "flags": 1,
         "description": "The name of the backup."
       },
       "backupFormat": {
         "type": {
-          "$ref": "#/263"
+          "$ref": "#/269"
         },
         "flags": 0,
         "description": "Backup Format for the current backup. (CollatedFormat is INTERNAL – DO NOT USE)"
@@ -3483,10 +3537,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/261"
+        "$ref": "#/267"
       },
       {
-        "$ref": "#/262"
+        "$ref": "#/268"
       },
       {
         "$ref": "#/2"
@@ -3499,21 +3553,21 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/265"
+          "$ref": "#/271"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
       },
       "error": {
         "type": {
-          "$ref": "#/266"
+          "$ref": "#/272"
         },
         "flags": 0,
         "description": "The error object."
       },
       "status": {
         "type": {
-          "$ref": "#/277"
+          "$ref": "#/282"
         },
         "flags": 0,
         "description": "The operation status"
@@ -3534,7 +3588,7 @@
       },
       "percentComplete": {
         "type": {
-          "$ref": "#/278"
+          "$ref": "#/283"
         },
         "flags": 0,
         "description": "Operation progress (0-100)."
@@ -3623,14 +3677,14 @@
       },
       "details": {
         "type": {
-          "$ref": "#/267"
+          "$ref": "#/273"
         },
         "flags": 2,
         "description": "The error details."
       },
       "additionalInfo": {
         "type": {
-          "$ref": "#/270"
+          "$ref": "#/275"
         },
         "flags": 2,
         "description": "The error additional info."
@@ -3640,7 +3694,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/266"
+      "$ref": "#/272"
     }
   },
   {
@@ -3656,7 +3710,7 @@
       },
       "info": {
         "type": {
-          "$ref": "#/269"
+          "$ref": "#/247"
         },
         "flags": 2,
         "description": "The additional info."
@@ -3664,12 +3718,9 @@
     }
   },
   {
-    "$type": "AnyType"
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/268"
+      "$ref": "#/274"
     }
   },
   {
@@ -3700,22 +3751,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/271"
-      },
-      {
-        "$ref": "#/272"
-      },
-      {
-        "$ref": "#/273"
-      },
-      {
-        "$ref": "#/274"
-      },
-      {
-        "$ref": "#/275"
-      },
-      {
         "$ref": "#/276"
+      },
+      {
+        "$ref": "#/277"
+      },
+      {
+        "$ref": "#/278"
+      },
+      {
+        "$ref": "#/279"
+      },
+      {
+        "$ref": "#/280"
+      },
+      {
+        "$ref": "#/281"
       }
     ]
   },
@@ -3730,10 +3781,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/264"
+      "$ref": "#/270"
     },
     "input": {
-      "$ref": "#/254"
+      "$ref": "#/260"
     }
   },
   {
@@ -3742,7 +3793,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/281"
+          "$ref": "#/286"
         },
         "flags": 0,
         "description": "The response properties of a pre backup operation."
@@ -3768,7 +3819,7 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/280"
+      "$ref": "#/285"
     }
   },
   {
@@ -3777,14 +3828,14 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/286"
+          "$ref": "#/291"
         },
         "flags": 0,
         "description": "The list of server configurations."
       },
       "resetAllToDefault": {
         "type": {
-          "$ref": "#/289"
+          "$ref": "#/294"
         },
         "flags": 0,
         "description": "Whether to reset all server parameters to default."
@@ -3804,7 +3855,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/285"
+          "$ref": "#/290"
         },
         "flags": 0,
         "description": "The properties can be updated for a configuration."
@@ -3834,7 +3885,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/284"
+      "$ref": "#/289"
     }
   },
   {
@@ -3849,10 +3900,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/287"
+        "$ref": "#/292"
       },
       {
-        "$ref": "#/288"
+        "$ref": "#/293"
       },
       {
         "$ref": "#/2"
@@ -3865,7 +3916,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/292"
+          "$ref": "#/297"
         },
         "flags": 0,
         "description": "The Configuration items on this page"
@@ -3923,7 +3974,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/291"
+      "$ref": "#/296"
     }
   },
   {
@@ -3932,10 +3983,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/290"
+      "$ref": "#/295"
     },
     "input": {
-      "$ref": "#/283"
+      "$ref": "#/288"
     }
   },
   {
@@ -3980,7 +4031,7 @@
       },
       "nameAvailable": {
         "type": {
-          "$ref": "#/297"
+          "$ref": "#/302"
         },
         "flags": 0,
         "description": "Indicates whether the resource name is available."
@@ -4003,10 +4054,10 @@
     "resourceType": "Microsoft.DBforMySQL/locations",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/296"
+      "$ref": "#/301"
     },
     "input": {
-      "$ref": "#/295"
+      "$ref": "#/300"
     }
   },
   {
@@ -4042,7 +4093,7 @@
       },
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/302"
+          "$ref": "#/307"
         },
         "flags": 2,
         "description": "A list of delegated subnet usage"
@@ -4072,7 +4123,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/301"
+      "$ref": "#/306"
     }
   },
   {
@@ -4081,10 +4132,10 @@
     "resourceType": "Microsoft.DBforMySQL/locations",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/300"
+      "$ref": "#/305"
     },
     "input": {
-      "$ref": "#/299"
+      "$ref": "#/304"
     }
   }
 ]

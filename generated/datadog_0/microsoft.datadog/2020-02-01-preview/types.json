@@ -1134,12 +1134,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setDefaultKey",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2020-02-01-preview",
+    "output": {
+      "$ref": "#/95"
+    },
+    "input": {
+      "$ref": "#/91"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DatadogHostListResponse",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/102"
+          "$ref": "#/104"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1166,21 +1181,21 @@
       },
       "aliases": {
         "type": {
-          "$ref": "#/97"
+          "$ref": "#/99"
         },
         "flags": 0,
         "description": "The aliases for the host."
       },
       "apps": {
         "type": {
-          "$ref": "#/98"
+          "$ref": "#/100"
         },
         "flags": 0,
         "description": "The Datadog integrations reporting metrics for the host."
       },
       "meta": {
         "type": {
-          "$ref": "#/99"
+          "$ref": "#/101"
         },
         "flags": 0
       }
@@ -1211,13 +1226,13 @@
       },
       "installMethod": {
         "type": {
-          "$ref": "#/100"
+          "$ref": "#/102"
         },
         "flags": 0
       },
       "logsAgent": {
         "type": {
-          "$ref": "#/101"
+          "$ref": "#/103"
         },
         "flags": 0
       }
@@ -1266,7 +1281,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/96"
+      "$ref": "#/98"
     }
   },
   {
@@ -1275,7 +1290,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2020-02-01-preview",
     "output": {
-      "$ref": "#/95"
+      "$ref": "#/97"
     }
   },
   {
@@ -1284,7 +1299,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/106"
+          "$ref": "#/108"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1314,7 +1329,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/105"
+      "$ref": "#/107"
     }
   },
   {
@@ -1323,7 +1338,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2020-02-01-preview",
     "output": {
-      "$ref": "#/104"
+      "$ref": "#/106"
     }
   },
   {
@@ -1332,7 +1347,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/110"
+          "$ref": "#/112"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -1390,7 +1405,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/109"
+      "$ref": "#/111"
     }
   },
   {
@@ -1399,7 +1414,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2020-02-01-preview",
     "output": {
-      "$ref": "#/108"
+      "$ref": "#/110"
     }
   },
   {
@@ -1420,7 +1435,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2020-02-01-preview",
     "output": {
-      "$ref": "#/112"
+      "$ref": "#/114"
     }
   }
 ]

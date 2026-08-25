@@ -71,6 +71,23 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'PureStorage.Block/storagePools/avsVms/avsVmVolumes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disableAvsConnection (PureStorage.Block/storagePools@2024-11-01-preview)
+* **Resource**: PureStorage.Block/storagePools
+* **ApiVersion**: 2024-11-01-preview
+* **Output**: any
+
+## Function enableAvsConnection (PureStorage.Block/storagePools@2024-11-01-preview)
+* **Resource**: PureStorage.Block/storagePools
+* **ApiVersion**: 2024-11-01-preview
+* **Input**: [StoragePoolEnableAvsConnectionPost](#storagepoolenableavsconnectionpost)
+* **Output**: any
+
+## Function finalizeAvsConnection (PureStorage.Block/storagePools@2024-11-01-preview)
+* **Resource**: PureStorage.Block/storagePools
+* **ApiVersion**: 2024-11-01-preview
+* **Input**: [StoragePoolFinalizeAvsConnectionPost](#storagepoolfinalizeavsconnectionpost)
+* **Output**: any
+
 ## Function getAvsConnection (PureStorage.Block/storagePools@2024-11-01-preview)
 * **Resource**: PureStorage.Block/storagePools
 * **ApiVersion**: 2024-11-01-preview
@@ -100,6 +117,11 @@
 * **Resource**: PureStorage.Block/reservations
 * **ApiVersion**: 2024-11-01-preview
 * **Output**: [LimitDetails](#limitdetails)
+
+## Function repairAvsConnection (PureStorage.Block/storagePools@2024-11-01-preview)
+* **Resource**: PureStorage.Block/storagePools
+* **ApiVersion**: 2024-11-01-preview
+* **Output**: any
 
 ## Alert
 ### Properties
@@ -284,6 +306,13 @@
 * **reservationInternalId**: string (ReadOnly): Pure Storage's internal ID for the reservation
 * **user**: [UserDetails](#userdetails) (Required): User details
 
+## ServiceInitializationData
+### Properties
+* **serviceAccountPassword**: string {sensitive}: Service account password
+* **serviceAccountUsername**: string: Service account username
+* **vSphereCertificate**: string: AVS instance's vSphere certificate
+* **vSphereIp**: string: AVS instance's vSphere IP address
+
 ## ServiceInitializationHandle
 ### Properties
 * **sddcResourceId**: string: Azure resource ID of the AVS SDDC the pool is connecting to
@@ -300,6 +329,15 @@
 * **snapshots**: int (Required): Space occupied by data unique to one or more snapshots, in bytes
 * **totalUsed**: int (Required): Total space occupied by customer data (i.e., being billed for), in bytes
 * **unique**: int (Required): Unique space occupied by customer data, in bytes; for a volume, this is the amount of storage that would be freed by deleting the volume, since snapshot and shared data would be kept
+
+## StoragePoolEnableAvsConnectionPost
+### Properties
+* **sddcResourceId**: string (Required): Azure resource ID of the AVS SDDC to connect to
+
+## StoragePoolFinalizeAvsConnectionPost
+### Properties
+* **serviceInitializationData**: [ServiceInitializationData](#serviceinitializationdata): Explicit AVS connection information
+* **serviceInitializationDataEnc**: string: Encoded AVS connection information
 
 ## StoragePoolLimits
 ### Properties

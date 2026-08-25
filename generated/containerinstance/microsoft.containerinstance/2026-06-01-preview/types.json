@@ -3886,6 +3886,60 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2026-06-01-preview",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2026-06-01-preview",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2026-06-01-preview",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ContainerInstance/ngroups",
+    "apiVersion": "2026-06-01-preview",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ContainerInstance/ngroups",
+    "apiVersion": "2026-06-01-preview",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ContainerInstance/ngroups",
+    "apiVersion": "2026-06-01-preview",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SandboxGroupAccessToken",
     "properties": {
@@ -3918,7 +3972,7 @@
     "resourceType": "Microsoft.ContainerInstance/sandboxGroups",
     "apiVersion": "2026-06-01-preview",
     "output": {
-      "$ref": "#/271"
+      "$ref": "#/277"
     }
   },
   {
@@ -3947,7 +4001,7 @@
     "resourceType": "Microsoft.ContainerInstance/containerGroups/containers",
     "apiVersion": "2026-06-01-preview",
     "output": {
-      "$ref": "#/273"
+      "$ref": "#/279"
     }
   },
   {
@@ -3963,7 +4017,7 @@
       },
       "terminalSize": {
         "type": {
-          "$ref": "#/276"
+          "$ref": "#/282"
         },
         "flags": 0,
         "description": "The size of the terminal."
@@ -4016,10 +4070,10 @@
     "resourceType": "Microsoft.ContainerInstance/containerGroups/containers",
     "apiVersion": "2026-06-01-preview",
     "output": {
-      "$ref": "#/277"
+      "$ref": "#/283"
     },
     "input": {
-      "$ref": "#/275"
+      "$ref": "#/281"
     }
   }
 ]

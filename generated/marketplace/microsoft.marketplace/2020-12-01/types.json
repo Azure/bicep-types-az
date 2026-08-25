@@ -841,12 +841,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "acknowledgeNotification",
+    "resourceType": "Microsoft.Marketplace/privateStores/offers",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/11"
+    },
+    "input": {
+      "$ref": "#/52"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "QueryRequestApprovalProperties",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/57"
+          "$ref": "#/58"
         },
         "flags": 0,
         "description": "The details to get the request plans statuses"
@@ -866,7 +878,7 @@
       },
       "planIds": {
         "type": {
-          "$ref": "#/58"
+          "$ref": "#/59"
         },
         "flags": 0,
         "description": "Current plans list"
@@ -892,7 +904,7 @@
       },
       "plansDetails": {
         "type": {
-          "$ref": "#/60"
+          "$ref": "#/61"
         },
         "flags": 0,
         "description": "Gets or sets the plans details"
@@ -927,10 +939,10 @@
     "resourceType": "Microsoft.Marketplace/privateStores/requestApprovals",
     "apiVersion": "2020-12-01",
     "output": {
-      "$ref": "#/59"
+      "$ref": "#/60"
     },
     "input": {
-      "$ref": "#/56"
+      "$ref": "#/57"
     }
   },
   {
@@ -939,7 +951,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/63"
+          "$ref": "#/64"
         },
         "flags": 0,
         "description": "Withdraw properties details"
@@ -964,6 +976,18 @@
         "flags": 0,
         "description": "The offer's publisher id"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "withdrawPlan",
+    "resourceType": "Microsoft.Marketplace/privateStores/requestApprovals",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/11"
+    },
+    "input": {
+      "$ref": "#/63"
     }
   }
 ]

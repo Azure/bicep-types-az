@@ -3998,6 +3998,37 @@
   },
   {
     "$type": "ObjectType",
+    "name": "FailoverPolicies",
+    "properties": {
+      "failoverPolicies": {
+        "type": {
+          "$ref": "#/262"
+        },
+        "flags": 1,
+        "description": "List of failover policies."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failoverPriorityChange",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2019-12-12",
+    "output": {
+      "$ref": "#/41"
+    },
+    "input": {
+      "$ref": "#/261"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DatabaseAccountListKeysResult",
     "properties": {
       "primaryMasterKey": {
@@ -4036,7 +4067,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2019-12-12",
     "output": {
-      "$ref": "#/261"
+      "$ref": "#/264"
     }
   },
   {
@@ -4045,7 +4076,7 @@
     "properties": {
       "connectionStrings": {
         "type": {
-          "$ref": "#/265"
+          "$ref": "#/268"
         },
         "flags": 0,
         "description": "An array that contains the connection strings for the Cosmos DB account."
@@ -4075,7 +4106,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/264"
+      "$ref": "#/267"
     }
   },
   {
@@ -4084,7 +4115,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2019-12-12",
     "output": {
-      "$ref": "#/263"
+      "$ref": "#/266"
     }
   },
   {
@@ -4098,6 +4129,30 @@
         "flags": 1,
         "description": "Cosmos DB region, with spaces between words and each word capitalized."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "offlineRegion",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2019-12-12",
+    "output": {
+      "$ref": "#/41"
+    },
+    "input": {
+      "$ref": "#/270"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "onlineRegion",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2019-12-12",
+    "output": {
+      "$ref": "#/41"
+    },
+    "input": {
+      "$ref": "#/270"
     }
   },
   {
@@ -4126,7 +4181,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2019-12-12",
     "output": {
-      "$ref": "#/268"
+      "$ref": "#/273"
     }
   },
   {
@@ -4135,7 +4190,7 @@
     "properties": {
       "keyKind": {
         "type": {
-          "$ref": "#/275"
+          "$ref": "#/280"
         },
         "flags": 1,
         "description": "The access key to regenerate."
@@ -4162,21 +4217,33 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/271"
+        "$ref": "#/276"
       },
       {
-        "$ref": "#/272"
+        "$ref": "#/277"
       },
       {
-        "$ref": "#/273"
+        "$ref": "#/278"
       },
       {
-        "$ref": "#/274"
+        "$ref": "#/279"
       },
       {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2019-12-12",
+    "output": {
+      "$ref": "#/41"
+    },
+    "input": {
+      "$ref": "#/275"
+    }
   },
   {
     "$type": "ObjectType",
@@ -4204,7 +4271,25 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
     "apiVersion": "2019-12-12",
     "output": {
-      "$ref": "#/276"
+      "$ref": "#/282"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateAuthToken",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
+    "apiVersion": "2019-12-12",
+    "output": {
+      "$ref": "#/41"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
+    "apiVersion": "2019-12-12",
+    "output": {
+      "$ref": "#/41"
     }
   }
 ]

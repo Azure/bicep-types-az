@@ -1760,11 +1760,53 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ClusterIdentityResponse",
+    "name": "UploadCertificateRequest",
     "properties": {
       "properties": {
         "type": {
           "$ref": "#/155"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawCertificateData",
+    "properties": {
+      "certificates": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadCertificate",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2022-09-01",
+    "output": {
+      "$ref": "#/53"
+    },
+    "input": {
+      "$ref": "#/154"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterIdentityResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/159"
         },
         "flags": 2,
         "description": "Cluster identity properties."
@@ -1807,7 +1849,7 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters",
     "apiVersion": "2022-09-01",
     "output": {
-      "$ref": "#/154"
+      "$ref": "#/158"
     }
   },
   {
@@ -1816,7 +1858,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/158"
+          "$ref": "#/162"
         },
         "flags": 0
       }
@@ -1828,7 +1870,7 @@
     "properties": {
       "softwareAssuranceIntent": {
         "type": {
-          "$ref": "#/161"
+          "$ref": "#/165"
         },
         "flags": 0,
         "description": "Customer Intent for Software Assurance Benefit."
@@ -1847,10 +1889,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/159"
+        "$ref": "#/163"
       },
       {
-        "$ref": "#/160"
+        "$ref": "#/164"
       },
       {
         "$ref": "#/0"
@@ -1877,7 +1919,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1926,10 +1968,10 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters",
     "apiVersion": "2022-09-01",
     "output": {
-      "$ref": "#/162"
+      "$ref": "#/166"
     },
     "input": {
-      "$ref": "#/157"
+      "$ref": "#/161"
     }
   }
 ]

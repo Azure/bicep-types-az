@@ -3358,6 +3358,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "endGetAccess",
+    "resourceType": "Microsoft.Compute/disks",
+    "apiVersion": "2026-03-02",
+    "output": {
+      "$ref": "#/244"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "beginGetAccess",
     "resourceType": "Microsoft.Compute/snapshots",
@@ -3367,6 +3379,15 @@
     },
     "input": {
       "$ref": "#/234"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "endGetAccess",
+    "resourceType": "Microsoft.Compute/snapshots",
+    "apiVersion": "2026-03-02",
+    "output": {
+      "$ref": "#/244"
     }
   },
   {
@@ -3382,7 +3403,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/248"
+          "$ref": "#/251"
         },
         "flags": 1,
         "description": "The type of the immutability policy. 'Unlocked' allows the policy to be modified by privileged users; 'Locked' prevents reduction of the immutability duration but allows extension of the lock period."
@@ -3401,10 +3422,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/246"
+        "$ref": "#/249"
       },
       {
-        "$ref": "#/247"
+        "$ref": "#/250"
       },
       {
         "$ref": "#/0"
@@ -3445,7 +3466,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/250"
+          "$ref": "#/253"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -3501,10 +3522,10 @@
     "resourceType": "Microsoft.Compute/snapshots",
     "apiVersion": "2026-03-02",
     "output": {
-      "$ref": "#/249"
+      "$ref": "#/252"
     },
     "input": {
-      "$ref": "#/245"
+      "$ref": "#/248"
     }
   },
   {
@@ -3513,14 +3534,14 @@
     "properties": {
       "immutabilityDurationDays": {
         "type": {
-          "$ref": "#/253"
+          "$ref": "#/256"
         },
         "flags": 1,
         "description": "The immutability duration for the snapshot, in number of days."
       },
       "type": {
         "type": {
-          "$ref": "#/256"
+          "$ref": "#/259"
         },
         "flags": 1,
         "description": "The type of the immutability policy. 'Unlocked' allows the policy to be modified by privileged users; 'Locked' prevents reduction of the immutability duration but allows extension of the lock period."
@@ -3543,10 +3564,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/254"
+        "$ref": "#/257"
       },
       {
-        "$ref": "#/255"
+        "$ref": "#/258"
       },
       {
         "$ref": "#/0"
@@ -3559,10 +3580,10 @@
     "resourceType": "Microsoft.Compute/snapshots",
     "apiVersion": "2026-03-02",
     "output": {
-      "$ref": "#/249"
+      "$ref": "#/252"
     },
     "input": {
-      "$ref": "#/252"
+      "$ref": "#/255"
     }
   },
   {
@@ -3575,6 +3596,15 @@
     },
     "input": {
       "$ref": "#/234"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "endGetAccess",
+    "resourceType": "Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints",
+    "apiVersion": "2026-03-02",
+    "output": {
+      "$ref": "#/244"
     }
   }
 ]

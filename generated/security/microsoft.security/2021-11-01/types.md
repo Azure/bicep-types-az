@@ -10,6 +10,27 @@
 * **properties**: [AlertProperties](#alertproperties) (ReadOnly): describes security alert properties.
 * **type**: 'Microsoft.Security/locations/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activate (Microsoft.Security/locations/alerts@2021-11-01)
+* **Resource**: Microsoft.Security/locations/alerts
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function dismiss (Microsoft.Security/locations/alerts@2021-11-01)
+* **Resource**: Microsoft.Security/locations/alerts
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function resolve (Microsoft.Security/locations/alerts@2021-11-01)
+* **Resource**: Microsoft.Security/locations/alerts
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function simulate (Microsoft.Security/locations/alerts@2021-11-01)
+* **Resource**: Microsoft.Security/locations/alerts
+* **ApiVersion**: 2021-11-01
+* **Input**: [AlertSimulatorRequestBody](#alertsimulatorrequestbody)
+* **Output**: any
+
 ## AlertEntity
 ### Properties
 * **type**: string (ReadOnly): Type of entity
@@ -51,6 +72,21 @@
 * **systemAlertId**: string (ReadOnly): Unique identifier for the alert.
 * **timeGeneratedUtc**: string (ReadOnly): The UTC time the alert was generated in ISO8601 format.
 * **vendorName**: string (ReadOnly): The name of the vendor that raises the alert.
+
+## AlertSimulatorRequestBody
+### Properties
+* **properties**: [AlertSimulatorRequestProperties](#alertsimulatorrequestproperties): Alert Simulator request body data.
+
+## AlertSimulatorRequestProperties
+* **Discriminator**: kind
+
+### Base Properties
+
+### AlertSimulatorBundlesRequestProperties
+#### Properties
+* **bundles**: ('AppServices' | 'DNS' | 'KeyVaults' | 'KubernetesService' | 'ResourceManager' | 'SqlServers' | 'StorageAccounts' | 'VirtualMachines' | string)[]: Bundles list.
+* **kind**: 'Bundles' (Required): The kind of alert simulation.
+
 
 ## ResourceIdentifier
 * **Discriminator**: type

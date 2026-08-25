@@ -13010,5 +13010,97 @@
     "input": {
       "$ref": "#/1095"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ProviderHub/providerRegistrations/customRollouts",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/215"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ProviderHub/providerRegistrations/defaultRollouts",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/215"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ProviderHub/providerRegistrations/newRegionFrontloadRelease",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/215"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceManagementAction",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/1116"
+        },
+        "flags": 0,
+        "description": "resource management action content."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceManagementEntity",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource id."
+      },
+      "homeTenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The home tenant id."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The operation status."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1115"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteResources",
+    "resourceType": "Microsoft.ProviderHub/providerRegistrations/resourceActions",
+    "apiVersion": "2024-09-01",
+    "output": {
+      "$ref": "#/215"
+    },
+    "input": {
+      "$ref": "#/1114"
+    }
   }
 ]

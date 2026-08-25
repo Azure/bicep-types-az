@@ -69,6 +69,36 @@
 * **Input**: [ContainerExecRequest](#containerexecrequest)
 * **Output**: [ContainerExecResponse](#containerexecresponse)
 
+## Function restart (Microsoft.ContainerInstance/containerGroups@2025-09-01)
+* **Resource**: Microsoft.ContainerInstance/containerGroups
+* **ApiVersion**: 2025-09-01
+* **Output**: any
+
+## Function restart (Microsoft.ContainerInstance/ngroups@2025-09-01)
+* **Resource**: Microsoft.ContainerInstance/ngroups
+* **ApiVersion**: 2025-09-01
+* **Output**: any
+
+## Function start (Microsoft.ContainerInstance/containerGroups@2025-09-01)
+* **Resource**: Microsoft.ContainerInstance/containerGroups
+* **ApiVersion**: 2025-09-01
+* **Output**: any
+
+## Function start (Microsoft.ContainerInstance/ngroups@2025-09-01)
+* **Resource**: Microsoft.ContainerInstance/ngroups
+* **ApiVersion**: 2025-09-01
+* **Output**: any
+
+## Function stop (Microsoft.ContainerInstance/containerGroups@2025-09-01)
+* **Resource**: Microsoft.ContainerInstance/containerGroups
+* **ApiVersion**: 2025-09-01
+* **Output**: any
+
+## Function stop (Microsoft.ContainerInstance/ngroups@2025-09-01)
+* **Resource**: Microsoft.ContainerInstance/ngroups
+* **ApiVersion**: 2025-09-01
+* **Output**: any
+
 ## ApiEntityReference
 ### Properties
 * **id**: string: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...

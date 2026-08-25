@@ -91,11 +91,27 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function backupJobsExport (Microsoft.RecoveryServices/vaults@2019-06-15)
+* **Resource**: Microsoft.RecoveryServices/vaults
+* **ApiVersion**: 2019-06-15
+* **Output**: any
+
 ## Function backupValidateOperation (Microsoft.RecoveryServices/vaults@2019-06-15)
 * **Resource**: Microsoft.RecoveryServices/vaults
 * **ApiVersion**: 2019-06-15
 * **Input**: [ValidateOperationRequest](#validateoperationrequest)
 * **Output**: [ValidateOperationsResponse](#validateoperationsresponse)
+
+## Function cancel (Microsoft.RecoveryServices/vaults/backupJobs@2019-06-15)
+* **Resource**: Microsoft.RecoveryServices/vaults/backupJobs
+* **ApiVersion**: 2019-06-15
+* **Output**: any
+
+## Function restore (Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints@2019-06-15)
+* **Resource**: Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints
+* **ApiVersion**: 2019-06-15
+* **Input**: [RestoreRequestResource](#restorerequestresource)
+* **Output**: any
 
 ## AzureFileshareProtectedItemExtendedInfo
 ### Properties
@@ -815,6 +831,11 @@ Or when ListRecoveryPoints is called for Log RP only with ExtendedInfo query fil
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## RestoreFileSpecs
 ### Properties
 * **fileSpecType**: string: Indicates what the Path variable stands for
@@ -895,6 +916,16 @@ For e.g. /subscriptions/{subId}/resourcegroups/{rg}/provider/Microsoft.Compute/v
 * **virtualNetworkId**: string: This is the virtual network Id of the vnet that will be attached to the virtual machine.
 User will be validated for join action permissions in the linked access.
 
+
+## RestoreRequestResource
+### Properties
+* **eTag**: string: Optional ETag.
+* **id**: string (ReadOnly): Resource Id represents the complete path to the resource.
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): Resource name associated with the resource.
+* **properties**: [RestoreRequest](#restorerequest): RestoreRequestResource properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
 
 ## RetentionDuration
 ### Properties

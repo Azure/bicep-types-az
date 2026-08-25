@@ -13722,6 +13722,15 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2017-09-01-preview",
+    "output": {
+      "$ref": "#/15"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "IntegrationRuntimeRemoveNodeRequest",
     "properties": {
@@ -13738,6 +13747,27 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "removeNode",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2017-09-01-preview",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/819"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "syncCredentials",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2017-09-01-preview",
+    "output": {
+      "$ref": "#/15"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "IntegrationRuntimeMonitoringData",
     "properties": {
@@ -13750,7 +13780,7 @@
       },
       "nodes": {
         "type": {
-          "$ref": "#/821"
+          "$ref": "#/824"
         },
         "flags": 0,
         "description": "Integration runtime node monitoring data."
@@ -13825,7 +13855,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/820"
+      "$ref": "#/823"
     }
   },
   {
@@ -13834,7 +13864,16 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2017-09-01-preview",
     "output": {
-      "$ref": "#/819"
+      "$ref": "#/822"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2017-09-01-preview",
+    "output": {
+      "$ref": "#/15"
     }
   },
   {
@@ -13856,7 +13895,40 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes/nodes",
     "apiVersion": "2017-09-01-preview",
     "output": {
-      "$ref": "#/823"
+      "$ref": "#/827"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ParameterValueSpecification",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/15"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreateRunResponse",
+    "properties": {
+      "runId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Identifier of a run."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createRun",
+    "resourceType": "Microsoft.DataFactory/factories/pipelines",
+    "apiVersion": "2017-09-01-preview",
+    "output": {
+      "$ref": "#/830"
+    },
+    "input": {
+      "$ref": "#/829"
     }
   },
   {
@@ -13886,14 +13958,14 @@
       },
       "filters": {
         "type": {
-          "$ref": "#/838"
+          "$ref": "#/845"
         },
         "flags": 0,
         "description": "List of filters."
       },
       "orderBy": {
         "type": {
-          "$ref": "#/846"
+          "$ref": "#/853"
         },
         "flags": 0,
         "description": "List of OrderBy option."
@@ -13906,21 +13978,21 @@
     "properties": {
       "operand": {
         "type": {
-          "$ref": "#/831"
+          "$ref": "#/838"
         },
         "flags": 1,
         "description": "Parameter name to be used for filter."
       },
       "operator": {
         "type": {
-          "$ref": "#/836"
+          "$ref": "#/843"
         },
         "flags": 1,
         "description": "Operator to be used for filter."
       },
       "values": {
         "type": {
-          "$ref": "#/837"
+          "$ref": "#/844"
         },
         "flags": 1,
         "description": "List of filter values."
@@ -13947,16 +14019,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/827"
+        "$ref": "#/834"
       },
       {
-        "$ref": "#/828"
+        "$ref": "#/835"
       },
       {
-        "$ref": "#/829"
+        "$ref": "#/836"
       },
       {
-        "$ref": "#/830"
+        "$ref": "#/837"
       },
       {
         "$ref": "#/2"
@@ -13983,16 +14055,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/832"
+        "$ref": "#/839"
       },
       {
-        "$ref": "#/833"
+        "$ref": "#/840"
       },
       {
-        "$ref": "#/834"
+        "$ref": "#/841"
       },
       {
-        "$ref": "#/835"
+        "$ref": "#/842"
       },
       {
         "$ref": "#/2"
@@ -14008,7 +14080,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/826"
+      "$ref": "#/833"
     }
   },
   {
@@ -14017,14 +14089,14 @@
     "properties": {
       "orderBy": {
         "type": {
-          "$ref": "#/842"
+          "$ref": "#/849"
         },
         "flags": 1,
         "description": "Parameter name to be used for order by."
       },
       "order": {
         "type": {
-          "$ref": "#/845"
+          "$ref": "#/852"
         },
         "flags": 1,
         "description": "Sorting order of the parameter."
@@ -14043,10 +14115,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/840"
+        "$ref": "#/847"
       },
       {
-        "$ref": "#/841"
+        "$ref": "#/848"
       },
       {
         "$ref": "#/2"
@@ -14065,10 +14137,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/843"
+        "$ref": "#/850"
       },
       {
-        "$ref": "#/844"
+        "$ref": "#/851"
       },
       {
         "$ref": "#/2"
@@ -14078,7 +14150,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/839"
+      "$ref": "#/846"
     }
   },
   {
@@ -14087,7 +14159,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/851"
+          "$ref": "#/858"
         },
         "flags": 1,
         "description": "List of pipeline runs."
@@ -14121,14 +14193,14 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/849"
+          "$ref": "#/856"
         },
         "flags": 2,
         "description": "The full or partial list of parameter name, value pair used in the pipeline run."
       },
       "invokedBy": {
         "type": {
-          "$ref": "#/850"
+          "$ref": "#/857"
         },
         "flags": 2,
         "description": "Entity that started the pipeline run."
@@ -14211,7 +14283,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/848"
+      "$ref": "#/855"
     }
   },
   {
@@ -14220,10 +14292,28 @@
     "resourceType": "Microsoft.DataFactory/factories",
     "apiVersion": "2017-09-01-preview",
     "output": {
-      "$ref": "#/847"
+      "$ref": "#/854"
     },
     "input": {
-      "$ref": "#/825"
+      "$ref": "#/832"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DataFactory/factories/triggers",
+    "apiVersion": "2017-09-01-preview",
+    "output": {
+      "$ref": "#/15"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DataFactory/factories/triggers",
+    "apiVersion": "2017-09-01-preview",
+    "output": {
+      "$ref": "#/15"
     }
   }
 ]

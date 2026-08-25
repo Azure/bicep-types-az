@@ -1764,5 +1764,88 @@
     "input": {
       "$ref": "#/133"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VerificationParameter",
+    "properties": {
+      "verificationType": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 1,
+        "description": "Type of verification."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Domain"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SPF"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DKIM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DKIM2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DMARC"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelVerification",
+    "resourceType": "Microsoft.Communication/emailServices/domains",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/145"
+    },
+    "input": {
+      "$ref": "#/138"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateVerification",
+    "resourceType": "Microsoft.Communication/emailServices/domains",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/145"
+    },
+    "input": {
+      "$ref": "#/138"
+    }
   }
 ]

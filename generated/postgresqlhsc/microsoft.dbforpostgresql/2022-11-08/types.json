@@ -1850,5 +1850,44 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforPostgreSQL/serverGroupsv2",
+    "apiVersion": "2022-11-08",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforPostgreSQL/serverGroupsv2",
+    "apiVersion": "2022-11-08",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforPostgreSQL/serverGroupsv2",
+    "apiVersion": "2022-11-08",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "promote",
+    "resourceType": "Microsoft.DBforPostgreSQL/serverGroupsv2",
+    "apiVersion": "2022-11-08",
+    "output": {
+      "$ref": "#/125"
+    }
   }
 ]

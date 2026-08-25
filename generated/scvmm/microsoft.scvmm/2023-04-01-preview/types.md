@@ -166,6 +166,74 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ScVmm/vmmServers/inventoryItems' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createCheckpoint (Microsoft.ScVmm/virtualMachines@2023-04-01-preview)
+* **Resource**: Microsoft.ScVmm/virtualMachines
+* **ApiVersion**: 2023-04-01-preview
+* **Input**: [VirtualMachineCreateCheckpoint](#virtualmachinecreatecheckpoint)
+* **Output**: any
+
+## Function createCheckpoint (Microsoft.ScVmm/virtualMachineInstances@2023-04-01-preview)
+* **Resource**: Microsoft.ScVmm/virtualMachineInstances
+* **ApiVersion**: 2023-04-01-preview
+* **Input**: [VirtualMachineCreateCheckpoint](#virtualmachinecreatecheckpoint)
+* **Output**: any
+
+## Function deleteCheckpoint (Microsoft.ScVmm/virtualMachines@2023-04-01-preview)
+* **Resource**: Microsoft.ScVmm/virtualMachines
+* **ApiVersion**: 2023-04-01-preview
+* **Input**: [VirtualMachineDeleteCheckpoint](#virtualmachinedeletecheckpoint)
+* **Output**: any
+
+## Function deleteCheckpoint (Microsoft.ScVmm/virtualMachineInstances@2023-04-01-preview)
+* **Resource**: Microsoft.ScVmm/virtualMachineInstances
+* **ApiVersion**: 2023-04-01-preview
+* **Input**: [VirtualMachineDeleteCheckpoint](#virtualmachinedeletecheckpoint)
+* **Output**: any
+
+## Function restart (Microsoft.ScVmm/virtualMachines@2023-04-01-preview)
+* **Resource**: Microsoft.ScVmm/virtualMachines
+* **ApiVersion**: 2023-04-01-preview
+* **Output**: any
+
+## Function restart (Microsoft.ScVmm/virtualMachineInstances@2023-04-01-preview)
+* **Resource**: Microsoft.ScVmm/virtualMachineInstances
+* **ApiVersion**: 2023-04-01-preview
+* **Output**: any
+
+## Function restoreCheckpoint (Microsoft.ScVmm/virtualMachines@2023-04-01-preview)
+* **Resource**: Microsoft.ScVmm/virtualMachines
+* **ApiVersion**: 2023-04-01-preview
+* **Input**: [VirtualMachineRestoreCheckpoint](#virtualmachinerestorecheckpoint)
+* **Output**: any
+
+## Function restoreCheckpoint (Microsoft.ScVmm/virtualMachineInstances@2023-04-01-preview)
+* **Resource**: Microsoft.ScVmm/virtualMachineInstances
+* **ApiVersion**: 2023-04-01-preview
+* **Input**: [VirtualMachineRestoreCheckpoint](#virtualmachinerestorecheckpoint)
+* **Output**: any
+
+## Function start (Microsoft.ScVmm/virtualMachines@2023-04-01-preview)
+* **Resource**: Microsoft.ScVmm/virtualMachines
+* **ApiVersion**: 2023-04-01-preview
+* **Output**: any
+
+## Function start (Microsoft.ScVmm/virtualMachineInstances@2023-04-01-preview)
+* **Resource**: Microsoft.ScVmm/virtualMachineInstances
+* **ApiVersion**: 2023-04-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.ScVmm/virtualMachines@2023-04-01-preview)
+* **Resource**: Microsoft.ScVmm/virtualMachines
+* **ApiVersion**: 2023-04-01-preview
+* **Input**: [StopVirtualMachineOptions](#stopvirtualmachineoptions)
+* **Output**: any
+
+## Function stop (Microsoft.ScVmm/virtualMachineInstances@2023-04-01-preview)
+* **Resource**: Microsoft.ScVmm/virtualMachineInstances
+* **ApiVersion**: 2023-04-01-preview
+* **Input**: [StopVirtualMachineOptions](#stopvirtualmachineoptions)
+* **Output**: any
+
 ## AvailabilitySetListItem
 ### Properties
 * **id**: string: Gets the ARM Id of the microsoft.scvmm/availabilitySets resource.
@@ -397,6 +465,10 @@
 * **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Gets or sets the type of the os.
 * **osVersion**: string (ReadOnly): Gets os version.
 
+## StopVirtualMachineOptions
+### Properties
+* **skipShutdown**: bool: Gets or sets a value indicating whether to request non-graceful VM shutdown. True value for this flag indicates non-graceful shutdown whereas false indicates otherwise. Defaults to false.
+
 ## StorageProfile
 ### Properties
 * **disks**: [VirtualDisk](#virtualdisk)[]: Gets or sets the list of virtual disks associated with the virtual machine.
@@ -446,6 +518,15 @@
 * **vhdType**: string: Gets or sets the disk vhd type.
 * **volumeType**: string (ReadOnly): Gets or sets the disk volume type.
 
+## VirtualMachineCreateCheckpoint
+### Properties
+* **description**: string: Description of the checkpoint.
+* **name**: string: Name of the checkpoint.
+
+## VirtualMachineDeleteCheckpoint
+### Properties
+* **id**: string: ID of the checkpoint to be deleted.
+
 ## VirtualMachineInstanceProperties
 ### Properties
 * **availabilitySets**: [AvailabilitySetListItem](#availabilitysetlistitem)[]: Availability Sets in vm.
@@ -477,6 +558,10 @@
 * **uuid**: string: Unique ID of the virtual machine.
 * **vmmServerId**: string: ARM Id of the vmmServer resource in which this resource resides.
 * **vmName**: string {minLength: 1}: VMName is the name of VM on the SCVMM server.
+
+## VirtualMachineRestoreCheckpoint
+### Properties
+* **id**: string: ID of the checkpoint to be restored to.
 
 ## VirtualMachineTags
 ### Properties

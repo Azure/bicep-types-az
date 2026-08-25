@@ -1672,6 +1672,21 @@
     "value": "IaasVMRestoreRequest"
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backupCrossRegionRestore",
+    "resourceType": "Microsoft.RecoveryServices/locations",
+    "apiVersion": "2018-12-20",
+    "output": {
+      "$ref": "#/116"
+    },
+    "input": {
+      "$ref": "#/25"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CrrJobRequest",
     "properties": {
@@ -1697,7 +1712,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/118"
+          "$ref": "#/120"
         },
         "flags": 0,
         "description": "JobResource properties"
@@ -1732,7 +1747,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/232"
+          "$ref": "#/234"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1760,7 +1775,7 @@
       },
       "backupManagementType": {
         "type": {
-          "$ref": "#/128"
+          "$ref": "#/130"
         },
         "flags": 0,
         "description": "Backup management type to execute the current job."
@@ -1803,19 +1818,19 @@
     },
     "elements": {
       "AzureIaaSVMJob": {
-        "$ref": "#/129"
+        "$ref": "#/131"
       },
       "AzureStorageJob": {
-        "$ref": "#/144"
+        "$ref": "#/146"
       },
       "AzureWorkloadJob": {
-        "$ref": "#/158"
+        "$ref": "#/160"
       },
       "DpmJob": {
-        "$ref": "#/172"
+        "$ref": "#/174"
       },
       "MabJob": {
-        "$ref": "#/186"
+        "$ref": "#/188"
       }
     }
   },
@@ -1859,12 +1874,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/119"
-      },
-      {
-        "$ref": "#/120"
-      },
-      {
         "$ref": "#/121"
       },
       {
@@ -1886,6 +1895,12 @@
         "$ref": "#/127"
       },
       {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/129"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -1903,14 +1918,14 @@
       },
       "actionsInfo": {
         "type": {
-          "$ref": "#/134"
+          "$ref": "#/136"
         },
         "flags": 0,
         "description": "Gets or sets the state/actions applicable on this job like cancel/retry."
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/139"
         },
         "flags": 0,
         "description": "Error details on execution of this job."
@@ -1924,14 +1939,14 @@
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/138"
+          "$ref": "#/140"
         },
         "flags": 0,
         "description": "Additional information for this job."
       },
       "jobType": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/145"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -1954,20 +1969,20 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/130"
-      },
-      {
-        "$ref": "#/131"
-      },
-      {
         "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
+      },
+      {
+        "$ref": "#/134"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/133"
+      "$ref": "#/135"
     }
   },
   {
@@ -1997,7 +2012,7 @@
       },
       "recommendations": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/138"
         },
         "flags": 2,
         "description": "List of localized recommendations for above error code."
@@ -2013,7 +2028,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/135"
+      "$ref": "#/137"
     }
   },
   {
@@ -2022,21 +2037,21 @@
     "properties": {
       "tasksList": {
         "type": {
-          "$ref": "#/140"
+          "$ref": "#/142"
         },
         "flags": 0,
         "description": "List of tasks associated with this job."
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/143"
         },
         "flags": 0,
         "description": "Job properties."
       },
       "internalPropertyBag": {
         "type": {
-          "$ref": "#/142"
+          "$ref": "#/144"
         },
         "flags": 0,
         "description": "Job internal properties."
@@ -2129,7 +2144,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/139"
+      "$ref": "#/141"
     }
   },
   {
@@ -2165,14 +2180,14 @@
       },
       "actionsInfo": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/151"
         },
         "flags": 0,
         "description": "Gets or sets the state/actions applicable on this job like cancel/retry."
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/154"
         },
         "flags": 0,
         "description": "Error details on execution of this job."
@@ -2193,14 +2208,14 @@
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/153"
+          "$ref": "#/155"
         },
         "flags": 0,
         "description": "Additional information about the job."
       },
       "jobType": {
         "type": {
-          "$ref": "#/157"
+          "$ref": "#/159"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -2223,20 +2238,20 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/145"
-      },
-      {
-        "$ref": "#/146"
-      },
-      {
         "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/148"
+      "$ref": "#/150"
     }
   },
   {
@@ -2259,7 +2274,7 @@
       },
       "recommendations": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/153"
         },
         "flags": 0,
         "description": "List of localized recommendations for above error code."
@@ -2275,7 +2290,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/150"
+      "$ref": "#/152"
     }
   },
   {
@@ -2284,14 +2299,14 @@
     "properties": {
       "tasksList": {
         "type": {
-          "$ref": "#/155"
+          "$ref": "#/157"
         },
         "flags": 0,
         "description": "List of tasks for this job"
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/158"
         },
         "flags": 0,
         "description": "Job properties."
@@ -2328,7 +2343,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/154"
+      "$ref": "#/156"
     }
   },
   {
@@ -2363,28 +2378,28 @@
       },
       "actionsInfo": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/165"
         },
         "flags": 0,
         "description": "Gets or sets the state/actions applicable on this job like cancel/retry."
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/168"
         },
         "flags": 0,
         "description": "Error details on execution of this job."
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/167"
+          "$ref": "#/169"
         },
         "flags": 0,
         "description": "Additional information about the job."
       },
       "jobType": {
         "type": {
-          "$ref": "#/171"
+          "$ref": "#/173"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -2407,20 +2422,20 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/159"
-      },
-      {
-        "$ref": "#/160"
-      },
-      {
         "$ref": "#/161"
+      },
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/162"
+      "$ref": "#/164"
     }
   },
   {
@@ -2450,7 +2465,7 @@
       },
       "recommendations": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "List of localized recommendations for above error code."
@@ -2473,7 +2488,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/164"
+      "$ref": "#/166"
     }
   },
   {
@@ -2482,14 +2497,14 @@
     "properties": {
       "tasksList": {
         "type": {
-          "$ref": "#/169"
+          "$ref": "#/171"
         },
         "flags": 0,
         "description": "List of tasks for this job"
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/170"
+          "$ref": "#/172"
         },
         "flags": 0,
         "description": "Job properties."
@@ -2526,7 +2541,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/168"
+      "$ref": "#/170"
     }
   },
   {
@@ -2582,28 +2597,28 @@
       },
       "actionsInfo": {
         "type": {
-          "$ref": "#/177"
+          "$ref": "#/179"
         },
         "flags": 0,
         "description": "The state/actions applicable on this job like cancel/retry."
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/180"
+          "$ref": "#/182"
         },
         "flags": 0,
         "description": "The errors."
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/181"
+          "$ref": "#/183"
         },
         "flags": 0,
         "description": "Additional information for this job."
       },
       "jobType": {
         "type": {
-          "$ref": "#/185"
+          "$ref": "#/187"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -2626,20 +2641,20 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/173"
-      },
-      {
-        "$ref": "#/174"
-      },
-      {
         "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/176"
+      "$ref": "#/178"
     }
   },
   {
@@ -2655,7 +2670,7 @@
       },
       "recommendations": {
         "type": {
-          "$ref": "#/179"
+          "$ref": "#/181"
         },
         "flags": 0,
         "description": "List of localized recommendations for above error code."
@@ -2671,7 +2686,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/178"
+      "$ref": "#/180"
     }
   },
   {
@@ -2680,14 +2695,14 @@
     "properties": {
       "tasksList": {
         "type": {
-          "$ref": "#/183"
+          "$ref": "#/185"
         },
         "flags": 0,
         "description": "List of tasks associated with this job."
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/184"
+          "$ref": "#/186"
         },
         "flags": 0,
         "description": "The job properties."
@@ -2745,7 +2760,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/182"
+      "$ref": "#/184"
     }
   },
   {
@@ -2773,7 +2788,7 @@
       },
       "actionsInfo": {
         "type": {
-          "$ref": "#/191"
+          "$ref": "#/193"
         },
         "flags": 0,
         "description": "The state/actions applicable on jobs like cancel/retry."
@@ -2787,35 +2802,35 @@
       },
       "mabServerType": {
         "type": {
-          "$ref": "#/207"
+          "$ref": "#/209"
         },
         "flags": 0,
         "description": "Server type of MAB container."
       },
       "workloadType": {
         "type": {
-          "$ref": "#/223"
+          "$ref": "#/225"
         },
         "flags": 0,
         "description": "Workload type of backup item."
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/226"
+          "$ref": "#/228"
         },
         "flags": 0,
         "description": "The errors."
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/227"
+          "$ref": "#/229"
         },
         "flags": 0,
         "description": "Additional information on the job."
       },
       "jobType": {
         "type": {
-          "$ref": "#/231"
+          "$ref": "#/233"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -2838,20 +2853,20 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/187"
-      },
-      {
-        "$ref": "#/188"
-      },
-      {
         "$ref": "#/189"
+      },
+      {
+        "$ref": "#/190"
+      },
+      {
+        "$ref": "#/191"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/190"
+      "$ref": "#/192"
     }
   },
   {
@@ -2918,12 +2933,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/192"
-      },
-      {
-        "$ref": "#/193"
-      },
-      {
         "$ref": "#/194"
       },
       {
@@ -2961,6 +2970,12 @@
       },
       {
         "$ref": "#/206"
+      },
+      {
+        "$ref": "#/207"
+      },
+      {
+        "$ref": "#/208"
       },
       {
         "$ref": "#/2"
@@ -3031,12 +3046,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/208"
-      },
-      {
-        "$ref": "#/209"
-      },
-      {
         "$ref": "#/210"
       },
       {
@@ -3076,6 +3085,12 @@
         "$ref": "#/222"
       },
       {
+        "$ref": "#/223"
+      },
+      {
+        "$ref": "#/224"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -3093,7 +3108,7 @@
       },
       "recommendations": {
         "type": {
-          "$ref": "#/225"
+          "$ref": "#/227"
         },
         "flags": 2,
         "description": "List of localized recommendations."
@@ -3109,7 +3124,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/224"
+      "$ref": "#/226"
     }
   },
   {
@@ -3118,14 +3133,14 @@
     "properties": {
       "tasksList": {
         "type": {
-          "$ref": "#/229"
+          "$ref": "#/231"
         },
         "flags": 0,
         "description": "List of tasks for this job."
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/230"
+          "$ref": "#/232"
         },
         "flags": 0,
         "description": "The job properties."
@@ -3183,7 +3198,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/228"
+      "$ref": "#/230"
     }
   },
   {
@@ -3212,10 +3227,10 @@
     "resourceType": "Microsoft.RecoveryServices/locations",
     "apiVersion": "2018-12-20",
     "output": {
-      "$ref": "#/117"
+      "$ref": "#/119"
     },
     "input": {
-      "$ref": "#/116"
+      "$ref": "#/118"
     }
   },
   {
@@ -3224,7 +3239,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/235"
+          "$ref": "#/237"
         },
         "flags": 0,
         "description": "List of resources."
@@ -3241,7 +3256,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/117"
+      "$ref": "#/119"
     }
   },
   {
@@ -3250,10 +3265,10 @@
     "resourceType": "Microsoft.RecoveryServices/locations",
     "apiVersion": "2018-12-20",
     "output": {
-      "$ref": "#/234"
+      "$ref": "#/236"
     },
     "input": {
-      "$ref": "#/116"
+      "$ref": "#/118"
     }
   },
   {
@@ -3262,7 +3277,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/238"
+          "$ref": "#/240"
         },
         "flags": 0,
         "description": "AADPropertiesResource properties"
@@ -3297,7 +3312,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/239"
+          "$ref": "#/241"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -3396,7 +3411,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/241"
+          "$ref": "#/243"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -3424,10 +3439,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints",
     "apiVersion": "2018-12-20",
     "output": {
-      "$ref": "#/240"
+      "$ref": "#/242"
     },
     "input": {
-      "$ref": "#/237"
+      "$ref": "#/239"
     }
   }
 ]

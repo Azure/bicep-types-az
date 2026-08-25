@@ -1606,6 +1606,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Cache/redis",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/121"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExportRDBParameters",
     "properties": {
@@ -1637,6 +1649,18 @@
         "flags": 0,
         "description": "Preferred auth method to communicate to storage account used for data archive, specify SAS or ManagedIdentity, default value is SAS"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Cache/redis",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/124"
     }
   }
 ]

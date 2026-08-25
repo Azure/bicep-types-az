@@ -33,11 +33,23 @@
 * **properties**: [ScheduleEntries](#scheduleentries) (Required): List of patch schedules for a Redis cache.
 * **type**: 'Microsoft.Cache/Redis/patchSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function export (Microsoft.Cache/Redis@2016-04-01)
+* **Resource**: Microsoft.Cache/Redis
+* **ApiVersion**: 2016-04-01
+* **Input**: [ExportRDBParameters](#exportrdbparameters)
+* **Output**: any
+
 ## Function forceReboot (Microsoft.Cache/Redis@2016-04-01)
 * **Resource**: Microsoft.Cache/Redis
 * **ApiVersion**: 2016-04-01
 * **Input**: [RedisRebootParameters](#redisrebootparameters)
 * **Output**: [RedisForceRebootResponse](#redisforcerebootresponse)
+
+## Function import (Microsoft.Cache/Redis@2016-04-01)
+* **Resource**: Microsoft.Cache/Redis
+* **ApiVersion**: 2016-04-01
+* **Input**: [ImportRDBParameters](#importrdbparameters)
+* **Output**: any
 
 ## Function listKeys (Microsoft.Cache/Redis@2016-04-01)
 * **Resource**: Microsoft.Cache/Redis
@@ -49,6 +61,17 @@
 * **ApiVersion**: 2016-04-01
 * **Input**: [RedisRegenerateKeyParameters](#redisregeneratekeyparameters)
 * **Output**: [RedisAccessKeys](#redisaccesskeys)
+
+## ExportRDBParameters
+### Properties
+* **container**: string (Required): Container name to export to.
+* **format**: string: File format.
+* **prefix**: string (Required): Prefix to use for exported files.
+
+## ImportRDBParameters
+### Properties
+* **files**: string[] (Required): files to import.
+* **format**: string: File format.
 
 ## RedisAccessKeys
 ### Properties

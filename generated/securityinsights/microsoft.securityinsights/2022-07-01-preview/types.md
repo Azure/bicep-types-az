@@ -591,10 +591,22 @@
 * **ApiVersion**: 2022-07-01-preview
 * **Output**: [IncidentAlertList](#incidentalertlist)
 
+## Function appendTags (Microsoft.SecurityInsights/threatIntelligence/indicators@2022-07-01-preview)
+* **Resource**: Microsoft.SecurityInsights/threatIntelligence/indicators
+* **ApiVersion**: 2022-07-01-preview
+* **Input**: [ThreatIntelligenceAppendTags](#threatintelligenceappendtags)
+* **Output**: any
+
 ## Function bookmarks (Microsoft.SecurityInsights/incidents@2022-07-01-preview)
 * **Resource**: Microsoft.SecurityInsights/incidents
 * **ApiVersion**: 2022-07-01-preview
 * **Output**: [IncidentBookmarkList](#incidentbookmarklist)
+
+## Function connect (Microsoft.SecurityInsights/dataConnectors@2022-07-01-preview)
+* **Resource**: Microsoft.SecurityInsights/dataConnectors
+* **ApiVersion**: 2022-07-01-preview
+* **Input**: [DataConnectorConnectBody](#dataconnectorconnectbody)
+* **Output**: any
 
 ## Function createIndicator (Microsoft.SecurityInsights/threatIntelligence@2022-07-01-preview)
 * **Resource**: Microsoft.SecurityInsights/threatIntelligence
@@ -607,6 +619,11 @@
 * **ApiVersion**: 2022-07-01-preview
 * **Input**: [TeamProperties](#teamproperties)
 * **Output**: [TeamInformation](#teaminformation)
+
+## Function disconnect (Microsoft.SecurityInsights/dataConnectors@2022-07-01-preview)
+* **Resource**: Microsoft.SecurityInsights/dataConnectors
+* **ApiVersion**: 2022-07-01-preview
+* **Output**: any
 
 ## Function entities (Microsoft.SecurityInsights/incidents@2022-07-01-preview)
 * **Resource**: Microsoft.SecurityInsights/incidents
@@ -648,6 +665,12 @@
 * **ApiVersion**: 2022-07-01-preview
 * **Input**: [ThreatIntelligenceIndicatorModel](#threatintelligenceindicatormodel)
 * **Output**: [ThreatIntelligenceInformation](#threatintelligenceinformation)
+
+## Function runPlaybook (Microsoft.SecurityInsights/incidents@2022-07-01-preview)
+* **Resource**: Microsoft.SecurityInsights/incidents
+* **ApiVersion**: 2022-07-01-preview
+* **Input**: [ManualTriggerRequestBody](#manualtriggerrequestbody)
+* **Output**: any
 
 ## AADDataConnectorProperties
 ### Properties
@@ -1051,6 +1074,20 @@
 ### Properties
 * **additionalData**: any: key-value pairs for a connected entity mapping
 * **targetEntityId**: string: Entity Id of the connected entity
+
+## DataConnectorConnectBody
+### Properties
+* **apiKey**: string: The API key of the audit server.
+* **authorizationCode**: string: The authorization code used in OAuth 2.0 code flow to issue a token.
+* **clientId**: string: The client id of the OAuth 2.0 application.
+* **clientSecret**: string: The client secret of the OAuth 2.0 application.
+* **dataCollectionEndpoint**: string: Used in v2 logs connector. Represents the data collection ingestion endpoint in log analytics.
+* **dataCollectionRuleImmutableId**: string: Used in v2 logs connector. The data collection rule immutable id, the rule defines the transformation and data destination.
+* **kind**: 'APIKey' | 'Basic' | 'OAuth2' | string: The authentication kind used to poll the data
+* **outputStream**: string: Used in v2 logs connector. The stream we are sending the data to, this is the name of the streamDeclarations defined in the DCR.
+* **password**: string {sensitive}: The user password in the audit log server.
+* **requestConfigUserInputValues**: any[]
+* **userName**: string: The user name in the audit log server.
 
 ## DataConnectorDataTypeCommon
 ### Properties
@@ -1862,6 +1899,11 @@
 * **malwareName**: string (ReadOnly): The malware name by the vendor, e.g. Win32/Toga!rfn
 * **processEntityIds**: string[] (ReadOnly): List of linked process entity identifiers on which the malware was found.
 
+## ManualTriggerRequestBody
+### Properties
+* **logicAppsResourceId**: string (Required)
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}
+
 ## McasDataConnectorDataTypes
 ### Properties
 * **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon) (Required): Alerts data type connection.
@@ -2390,6 +2432,10 @@
 * **status**: 'Available' | 'Installed' | 'NotAvailable' | string: The alert rule template status.
 * **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule
 * **techniques**: string[]: The techniques of the alert rule
+
+## ThreatIntelligenceAppendTags
+### Properties
+* **threatIntelligenceTags**: string[]: List of tags to be appended.
 
 ## ThreatIntelligenceExternalReference
 ### Properties

@@ -936,6 +936,18 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "renew",
+    "resourceType": "Microsoft.DomainRegistration/domains",
+    "apiVersion": "2023-01-01",
+    "output": {
+      "$ref": "#/75"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "TopLevelDomainAgreementOption",
     "properties": {
@@ -961,7 +973,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/78"
+          "$ref": "#/80"
         },
         "flags": 1,
         "description": "Collection of resources."
@@ -1012,7 +1024,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/77"
+      "$ref": "#/79"
     }
   },
   {
@@ -1021,10 +1033,10 @@
     "resourceType": "Microsoft.DomainRegistration/topLevelDomains",
     "apiVersion": "2023-01-01",
     "output": {
-      "$ref": "#/76"
+      "$ref": "#/78"
     },
     "input": {
-      "$ref": "#/75"
+      "$ref": "#/77"
     }
   }
 ]

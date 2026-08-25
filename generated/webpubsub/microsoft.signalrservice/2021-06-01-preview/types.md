@@ -48,6 +48,17 @@
 * **ApiVersion**: 2021-06-01-preview
 * **Output**: [WebPubSubKeys](#webpubsubkeys)
 
+## Function regenerateKey (Microsoft.SignalRService/webPubSub@2021-06-01-preview)
+* **Resource**: Microsoft.SignalRService/webPubSub
+* **ApiVersion**: 2021-06-01-preview
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [WebPubSubKeys](#webpubsubkeys)
+
+## Function restart (Microsoft.SignalRService/webPubSub@2021-06-01-preview)
+* **Resource**: Microsoft.SignalRService/webPubSub
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
+
 ## DiagnosticConfiguration
 ### Properties
 * **enableConnectivityLogs**: string: Indicate whether or not enable Connectivity logs.
@@ -149,6 +160,10 @@ It also appears in the aud (audience) claim of the issued token.
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## RegenerateKeyParameters
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string: The keyType to regenerate. Must be either 'primary' or 'secondary'(case-insensitive).
 
 ## ResourceSku
 ### Properties

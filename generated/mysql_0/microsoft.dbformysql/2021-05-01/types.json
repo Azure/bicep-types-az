@@ -1437,12 +1437,21 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2021-05-01",
+    "output": {
+      "$ref": "#/6"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ServerRestartParameter",
     "properties": {
       "restartWithFailover": {
         "type": {
-          "$ref": "#/114"
+          "$ref": "#/115"
         },
         "flags": 0,
         "description": "Whether or not failover to standby server when restarting a server with high availability enabled."
@@ -1468,10 +1477,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/112"
+        "$ref": "#/113"
       },
       {
-        "$ref": "#/113"
+        "$ref": "#/114"
       },
       {
         "$ref": "#/0"
@@ -1479,12 +1488,42 @@
     ]
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2021-05-01",
+    "output": {
+      "$ref": "#/6"
+    },
+    "input": {
+      "$ref": "#/112"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2021-05-01",
+    "output": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2021-05-01",
+    "output": {
+      "$ref": "#/6"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ConfigurationListForBatchUpdate",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/118"
+          "$ref": "#/122"
         },
         "flags": 0,
         "description": "The list of server configurations."
@@ -1504,7 +1543,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/117"
+          "$ref": "#/121"
         },
         "flags": 0,
         "description": "The properties can be updated for a configuration."
@@ -1534,7 +1573,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/116"
+      "$ref": "#/120"
     }
   },
   {
@@ -1543,7 +1582,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/121"
+          "$ref": "#/125"
         },
         "flags": 0,
         "description": "The list of server configurations."
@@ -1601,7 +1640,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/120"
+      "$ref": "#/124"
     }
   },
   {
@@ -1610,10 +1649,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2021-05-01",
     "output": {
-      "$ref": "#/119"
+      "$ref": "#/123"
     },
     "input": {
-      "$ref": "#/115"
+      "$ref": "#/119"
     }
   },
   {
@@ -1649,7 +1688,7 @@
       },
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/126"
+          "$ref": "#/130"
         },
         "flags": 2,
         "description": "A list of delegated subnet usage"
@@ -1679,7 +1718,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/125"
+      "$ref": "#/129"
     }
   },
   {
@@ -1688,10 +1727,10 @@
     "resourceType": "Microsoft.DBforMySQL/locations",
     "apiVersion": "2021-05-01",
     "output": {
-      "$ref": "#/124"
+      "$ref": "#/128"
     },
     "input": {
-      "$ref": "#/123"
+      "$ref": "#/127"
     }
   },
   {
@@ -1727,7 +1766,7 @@
       },
       "nameAvailable": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/134"
         },
         "flags": 0,
         "description": "Indicates whether the resource name is available."
@@ -1750,10 +1789,10 @@
     "resourceType": "Microsoft.DBforMySQL/locations",
     "apiVersion": "2021-05-01",
     "output": {
-      "$ref": "#/129"
+      "$ref": "#/133"
     },
     "input": {
-      "$ref": "#/128"
+      "$ref": "#/132"
     }
   }
 ]

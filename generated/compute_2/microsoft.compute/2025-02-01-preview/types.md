@@ -55,6 +55,18 @@
 * **Input**: [AttributeBasedVMSizeRecommenderInput](#attributebasedvmsizerecommenderinput)
 * **Output**: [AttributeBasedVMSizeRecommenderResponse](#attributebasedvmsizerecommenderresponse)
 
+## Function registerStorageConfiguration (Microsoft.Compute/locations/diagnostics@2025-02-01-preview)
+* **Resource**: Microsoft.Compute/locations/diagnostics
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [StorageConfigurationInput](#storageconfigurationinput)
+* **Output**: any
+
+## Function run (Microsoft.Compute/locations/diagnostics@2025-02-01-preview)
+* **Resource**: Microsoft.Compute/locations/diagnostics
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [RunDiskInspectionInput](#rundiskinspectioninput)
+* **Output**: any
+
 ## Function validateStorageConfiguration (Microsoft.Compute/locations/diagnostics@2025-02-01-preview)
 * **Resource**: Microsoft.Compute/locations/diagnostics
 * **ApiVersion**: 2025-02-01-preview
@@ -87,6 +99,12 @@
 ### Properties
 * **sku**: string: The resource's CRP virtual machine SKU size.
 
+## RunDiskInspectionInput
+### Properties
+* **manifest**: string (Required): Name of manifest in order to trigger Disk Inspection.
+* **resourceId**: string (Required): Qualified ID of the resource.
+* **uploadSasUri**: string {sensitive} (Required): SAS uri to the blob where results will be uploaded.
+
 ## SpotPlacementRecommenderInput
 ### Properties
 * **availabilityZones**: bool: Defines if the scope is zonal or regional.
@@ -116,6 +134,10 @@
 * **desiredLocations**: string[]: The desired regions
 * **desiredSizes**: [ResourceSize](#resourcesize)[]: The desired resource SKUs.
 * **placementScores**: [PlacementScore](#placementscore)[]: The spot placement scores.
+
+## StorageConfigurationInput
+### Properties
+* **storageAccountId**: string (Required): Fully qualified storage account Id. Example: "/subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Storage/storageAccounts/{storageAccountName}"
 
 ## StorageConfigurationResponse
 ### Properties

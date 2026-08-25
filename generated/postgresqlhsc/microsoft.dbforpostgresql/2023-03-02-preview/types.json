@@ -2217,5 +2217,60 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PromoteRequest",
+    "properties": {
+      "enableGeoBackup": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Boolean property to enable geo-redundant replica promotion."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "promote",
+    "resourceType": "Microsoft.DBforPostgreSQL/serverGroupsv2",
+    "apiVersion": "2023-03-02-preview",
+    "output": {
+      "$ref": "#/158"
+    },
+    "input": {
+      "$ref": "#/157"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforPostgreSQL/serverGroupsv2",
+    "apiVersion": "2023-03-02-preview",
+    "output": {
+      "$ref": "#/158"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforPostgreSQL/serverGroupsv2",
+    "apiVersion": "2023-03-02-preview",
+    "output": {
+      "$ref": "#/158"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforPostgreSQL/serverGroupsv2",
+    "apiVersion": "2023-03-02-preview",
+    "output": {
+      "$ref": "#/158"
+    }
   }
 ]

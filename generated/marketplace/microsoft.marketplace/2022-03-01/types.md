@@ -55,6 +55,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
 * **type**: 'Microsoft.Marketplace/privateStores/requestApprovals' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function acknowledgeNotification (Microsoft.Marketplace/privateStores/offers@2022-03-01)
+* **Resource**: Microsoft.Marketplace/privateStores/offers
+* **ApiVersion**: 2022-03-01
+* **Input**: [AcknowledgeOfferNotificationProperties](#acknowledgeoffernotificationproperties)
+* **Output**: any
+
 ## Function anyExistingOffersInTheCollections (Microsoft.Marketplace/privateStores@2022-03-01)
 * **Resource**: Microsoft.Marketplace/privateStores
 * **ApiVersion**: 2022-03-01
@@ -147,6 +153,24 @@
 * **ApiVersion**: 2022-03-01
 * **Input**: [MultiContextAndPlansPayload](#multicontextandplanspayload)
 * **Output**: [Offer](#offer)
+
+## Function withdrawPlan (Microsoft.Marketplace/privateStores/requestApprovals@2022-03-01)
+* **Resource**: Microsoft.Marketplace/privateStores/requestApprovals
+* **ApiVersion**: 2022-03-01
+* **Input**: [WithdrawProperties](#withdrawproperties)
+* **Output**: any
+
+## AcknowledgeOfferNotificationDetails
+### Properties
+* **acknowledge**: bool: Gets or sets a value indicating whether acknowledge action flag is enabled
+* **addPlans**: string[]: Gets or sets added plans
+* **dismiss**: bool: Gets or sets a value indicating whether dismiss action flag is enabled
+* **removeOffer**: bool: Gets or sets a value indicating whether remove offer action flag is enabled
+* **removePlans**: string[]: Gets or sets remove plans
+
+## AcknowledgeOfferNotificationProperties
+### Properties
+* **properties**: [AcknowledgeOfferNotificationDetails](#acknowledgeoffernotificationdetails): Notification update request payload details
 
 ## AdminRequestApprovalProperties
 ### Properties
@@ -498,4 +522,13 @@
 * **subscriptionId**: string: Gets the subscription id that the user is requesting to add the plan to
 * **subscriptionName**: string: Gets the subscription name that the user is requesting to add the plan to
 * **user**: string (ReadOnly): Gets user id
+
+## WithdrawDetails
+### Properties
+* **planId**: string: Gets or sets Plan Id
+* **publisherId**: string: The offer's publisher id
+
+## WithdrawProperties
+### Properties
+* **properties**: [WithdrawDetails](#withdrawdetails): Withdraw properties details
 

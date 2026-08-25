@@ -12736,6 +12736,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "prepareDataMove",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupstorageconfig",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/615"
+    },
+    "input": {
+      "$ref": "#/1040"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "TriggerDataMoveRequest",
     "properties": {
@@ -12755,7 +12767,7 @@
       },
       "dataMoveLevel": {
         "type": {
-          "$ref": "#/1050"
+          "$ref": "#/1051"
         },
         "flags": 1,
         "description": "DataMove Level"
@@ -12769,7 +12781,7 @@
       },
       "sourceContainerArmIds": {
         "type": {
-          "$ref": "#/1051"
+          "$ref": "#/1052"
         },
         "flags": 0,
         "description": "Source Container ArmIds"
@@ -12799,13 +12811,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1047"
-      },
-      {
         "$ref": "#/1048"
       },
       {
         "$ref": "#/1049"
+      },
+      {
+        "$ref": "#/1050"
       },
       {
         "$ref": "#/2"
@@ -12819,53 +12831,174 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "triggerDataMove",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupstorageconfig",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/615"
+    },
+    "input": {
+      "$ref": "#/1047"
+    }
+  },
+  {
     "$type": "ObjectType",
-    "name": "ValidateOperationRequestResource",
+    "name": "MoveRPAcrossTiersRequest",
     "properties": {
+      "objectType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets the class type."
+      },
+      "sourceTierType": {
+        "type": {
+          "$ref": "#/1059"
+        },
+        "flags": 0,
+        "description": "Source tier from where RP needs to be moved"
+      },
+      "targetTierType": {
+        "type": {
+          "$ref": "#/1064"
+        },
+        "flags": 0,
+        "description": "Target tier where RP needs to be moved"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InstantRP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HardenedRP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArchivedRP"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1055"
+      },
+      {
+        "$ref": "#/1056"
+      },
+      {
+        "$ref": "#/1057"
+      },
+      {
+        "$ref": "#/1058"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InstantRP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HardenedRP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArchivedRP"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1060"
+      },
+      {
+        "$ref": "#/1061"
+      },
+      {
+        "$ref": "#/1062"
+      },
+      {
+        "$ref": "#/1063"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "move",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/615"
+    },
+    "input": {
+      "$ref": "#/1054"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreRequestResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1067"
+        },
+        "flags": 0,
+        "description": "RestoreRequestResource properties"
+      },
       "id": {
         "type": {
           "$ref": "#/2"
         },
-        "flags": 1,
-        "description": "Recovery point ID."
+        "flags": 2,
+        "description": "Resource Id represents the complete path to the resource."
       },
-      "properties": {
+      "name": {
         "type": {
-          "$ref": "#/1053"
+          "$ref": "#/2"
         },
-        "flags": 1,
-        "description": "ValidateOperationRequestResource properties"
-      }
-    }
-  },
-  {
-    "$type": "DiscriminatedObjectType",
-    "name": "ValidateOperationRequest",
-    "discriminator": "objectType",
-    "baseProperties": {},
-    "elements": {
-      "ValidateIaasVMRestoreOperationRequest": {
-        "$ref": "#/1054"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ValidateIaasVMRestoreOperationRequest",
-    "properties": {
-      "restoreRequest": {
+        "flags": 2,
+        "description": "Resource name associated with the resource."
+      },
+      "type": {
         "type": {
-          "$ref": "#/1055"
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Sets restore request to be validated"
+        "description": "Resource location."
       },
-      "objectType": {
+      "tags": {
         "type": {
-          "$ref": "#/1193"
+          "$ref": "#/1205"
         },
-        "flags": 1,
-        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
       }
     }
   },
@@ -12876,25 +13009,25 @@
     "baseProperties": {},
     "elements": {
       "AzureFileShareRestoreRequest": {
-        "$ref": "#/1056"
+        "$ref": "#/1068"
       },
       "AzureWorkloadPointInTimeRestoreRequest": {
-        "$ref": "#/1077"
+        "$ref": "#/1089"
       },
       "AzureWorkloadSAPHanaPointInTimeRestoreWithRehydrateRequest": {
-        "$ref": "#/1099"
+        "$ref": "#/1111"
       },
       "AzureWorkloadSAPHanaRestoreWithRehydrateRequest": {
-        "$ref": "#/1119"
+        "$ref": "#/1131"
       },
       "AzureWorkloadSQLPointInTimeRestoreWithRehydrateRequest": {
-        "$ref": "#/1135"
+        "$ref": "#/1147"
       },
       "AzureWorkloadSQLRestoreWithRehydrateRequest": {
-        "$ref": "#/1157"
+        "$ref": "#/1169"
       },
       "IaasVMRestoreWithRehydrationRequest": {
-        "$ref": "#/1174"
+        "$ref": "#/1186"
       }
     }
   },
@@ -12904,7 +13037,7 @@
     "properties": {
       "recoveryType": {
         "type": {
-          "$ref": "#/1062"
+          "$ref": "#/1074"
         },
         "flags": 0,
         "description": "Type of this recovery."
@@ -12918,35 +13051,35 @@
       },
       "copyOptions": {
         "type": {
-          "$ref": "#/1068"
+          "$ref": "#/1080"
         },
         "flags": 0,
         "description": "Options to resolve copy conflicts."
       },
       "restoreRequestType": {
         "type": {
-          "$ref": "#/1072"
+          "$ref": "#/1084"
         },
         "flags": 0,
         "description": "Restore Type (FullShareRestore or ItemLevelRestore)"
       },
       "restoreFileSpecs": {
         "type": {
-          "$ref": "#/1074"
+          "$ref": "#/1086"
         },
         "flags": 0,
         "description": "List of Source Files/Folders(which need to recover) and TargetFolderPath details"
       },
       "targetDetails": {
         "type": {
-          "$ref": "#/1075"
+          "$ref": "#/1087"
         },
         "flags": 0,
         "description": "Target File Share Details"
       },
       "objectType": {
         "type": {
-          "$ref": "#/1076"
+          "$ref": "#/1088"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -12977,19 +13110,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1057"
+        "$ref": "#/1069"
       },
       {
-        "$ref": "#/1058"
+        "$ref": "#/1070"
       },
       {
-        "$ref": "#/1059"
+        "$ref": "#/1071"
       },
       {
-        "$ref": "#/1060"
+        "$ref": "#/1072"
       },
       {
-        "$ref": "#/1061"
+        "$ref": "#/1073"
       },
       {
         "$ref": "#/2"
@@ -13020,19 +13153,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1063"
+        "$ref": "#/1075"
       },
       {
-        "$ref": "#/1064"
+        "$ref": "#/1076"
       },
       {
-        "$ref": "#/1065"
+        "$ref": "#/1077"
       },
       {
-        "$ref": "#/1066"
+        "$ref": "#/1078"
       },
       {
-        "$ref": "#/1067"
+        "$ref": "#/1079"
       },
       {
         "$ref": "#/2"
@@ -13055,13 +13188,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1069"
+        "$ref": "#/1081"
       },
       {
-        "$ref": "#/1070"
+        "$ref": "#/1082"
       },
       {
-        "$ref": "#/1071"
+        "$ref": "#/1083"
       },
       {
         "$ref": "#/2"
@@ -13098,7 +13231,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1073"
+      "$ref": "#/1085"
     }
   },
   {
@@ -13138,7 +13271,7 @@
       },
       "recoveryType": {
         "type": {
-          "$ref": "#/1083"
+          "$ref": "#/1095"
         },
         "flags": 0,
         "description": "Type of this recovery."
@@ -13152,21 +13285,21 @@
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/1084"
+          "$ref": "#/1096"
         },
         "flags": 0,
         "description": "Workload specific property bag."
       },
       "targetInfo": {
         "type": {
-          "$ref": "#/1085"
+          "$ref": "#/1097"
         },
         "flags": 0,
         "description": "Details of target database"
       },
       "recoveryMode": {
         "type": {
-          "$ref": "#/1096"
+          "$ref": "#/1108"
         },
         "flags": 0,
         "description": "Defines whether the current recovery mode is file restore or database restore"
@@ -13187,7 +13320,7 @@
       },
       "snapshotRestoreParameters": {
         "type": {
-          "$ref": "#/1097"
+          "$ref": "#/1109"
         },
         "flags": 0,
         "description": "Additional details for snapshot recovery\r\nCurrently used for snapshot for SAP Hana."
@@ -13201,7 +13334,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/1098"
+          "$ref": "#/1110"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -13232,19 +13365,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1078"
+        "$ref": "#/1090"
       },
       {
-        "$ref": "#/1079"
+        "$ref": "#/1091"
       },
       {
-        "$ref": "#/1080"
+        "$ref": "#/1092"
       },
       {
-        "$ref": "#/1081"
+        "$ref": "#/1093"
       },
       {
-        "$ref": "#/1082"
+        "$ref": "#/1094"
       },
       {
         "$ref": "#/2"
@@ -13265,7 +13398,7 @@
     "properties": {
       "overwriteOption": {
         "type": {
-          "$ref": "#/1089"
+          "$ref": "#/1101"
         },
         "flags": 0,
         "description": "Can Overwrite if Target DataBase already exists"
@@ -13309,13 +13442,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1086"
+        "$ref": "#/1098"
       },
       {
-        "$ref": "#/1087"
+        "$ref": "#/1099"
       },
       {
-        "$ref": "#/1088"
+        "$ref": "#/1100"
       },
       {
         "$ref": "#/2"
@@ -13350,22 +13483,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1090"
+        "$ref": "#/1102"
       },
       {
-        "$ref": "#/1091"
+        "$ref": "#/1103"
       },
       {
-        "$ref": "#/1092"
+        "$ref": "#/1104"
       },
       {
-        "$ref": "#/1093"
+        "$ref": "#/1105"
       },
       {
-        "$ref": "#/1094"
+        "$ref": "#/1106"
       },
       {
-        "$ref": "#/1095"
+        "$ref": "#/1107"
       },
       {
         "$ref": "#/2"
@@ -13400,7 +13533,7 @@
     "properties": {
       "recoveryPointRehydrationInfo": {
         "type": {
-          "$ref": "#/1100"
+          "$ref": "#/1112"
         },
         "flags": 0,
         "description": "RP Rehydration Info"
@@ -13414,7 +13547,7 @@
       },
       "recoveryType": {
         "type": {
-          "$ref": "#/1109"
+          "$ref": "#/1121"
         },
         "flags": 0,
         "description": "Type of this recovery."
@@ -13428,21 +13561,21 @@
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/1110"
+          "$ref": "#/1122"
         },
         "flags": 0,
         "description": "Workload specific property bag."
       },
       "targetInfo": {
         "type": {
-          "$ref": "#/1085"
+          "$ref": "#/1097"
         },
         "flags": 0,
         "description": "Details of target database"
       },
       "recoveryMode": {
         "type": {
-          "$ref": "#/1117"
+          "$ref": "#/1129"
         },
         "flags": 0,
         "description": "Defines whether the current recovery mode is file restore or database restore"
@@ -13463,7 +13596,7 @@
       },
       "snapshotRestoreParameters": {
         "type": {
-          "$ref": "#/1097"
+          "$ref": "#/1109"
         },
         "flags": 0,
         "description": "Additional details for snapshot recovery\r\nCurrently used for snapshot for SAP Hana."
@@ -13477,7 +13610,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/1118"
+          "$ref": "#/1130"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -13497,7 +13630,7 @@
       },
       "rehydrationPriority": {
         "type": {
-          "$ref": "#/1103"
+          "$ref": "#/1115"
         },
         "flags": 0,
         "description": "Rehydration Priority"
@@ -13516,10 +13649,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1101"
+        "$ref": "#/1113"
       },
       {
-        "$ref": "#/1102"
+        "$ref": "#/1114"
       },
       {
         "$ref": "#/2"
@@ -13550,19 +13683,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1104"
+        "$ref": "#/1116"
       },
       {
-        "$ref": "#/1105"
+        "$ref": "#/1117"
       },
       {
-        "$ref": "#/1106"
+        "$ref": "#/1118"
       },
       {
-        "$ref": "#/1107"
+        "$ref": "#/1119"
       },
       {
-        "$ref": "#/1108"
+        "$ref": "#/1120"
       },
       {
         "$ref": "#/2"
@@ -13605,22 +13738,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1111"
+        "$ref": "#/1123"
       },
       {
-        "$ref": "#/1112"
+        "$ref": "#/1124"
       },
       {
-        "$ref": "#/1113"
+        "$ref": "#/1125"
       },
       {
-        "$ref": "#/1114"
+        "$ref": "#/1126"
       },
       {
-        "$ref": "#/1115"
+        "$ref": "#/1127"
       },
       {
-        "$ref": "#/1116"
+        "$ref": "#/1128"
       },
       {
         "$ref": "#/2"
@@ -13637,14 +13770,14 @@
     "properties": {
       "recoveryPointRehydrationInfo": {
         "type": {
-          "$ref": "#/1100"
+          "$ref": "#/1112"
         },
         "flags": 0,
         "description": "RP Rehydration Info"
       },
       "recoveryType": {
         "type": {
-          "$ref": "#/1125"
+          "$ref": "#/1137"
         },
         "flags": 0,
         "description": "Type of this recovery."
@@ -13658,21 +13791,21 @@
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/1126"
+          "$ref": "#/1138"
         },
         "flags": 0,
         "description": "Workload specific property bag."
       },
       "targetInfo": {
         "type": {
-          "$ref": "#/1085"
+          "$ref": "#/1097"
         },
         "flags": 0,
         "description": "Details of target database"
       },
       "recoveryMode": {
         "type": {
-          "$ref": "#/1133"
+          "$ref": "#/1145"
         },
         "flags": 0,
         "description": "Defines whether the current recovery mode is file restore or database restore"
@@ -13693,7 +13826,7 @@
       },
       "snapshotRestoreParameters": {
         "type": {
-          "$ref": "#/1097"
+          "$ref": "#/1109"
         },
         "flags": 0,
         "description": "Additional details for snapshot recovery\r\nCurrently used for snapshot for SAP Hana."
@@ -13707,7 +13840,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/1134"
+          "$ref": "#/1146"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -13738,19 +13871,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1120"
+        "$ref": "#/1132"
       },
       {
-        "$ref": "#/1121"
+        "$ref": "#/1133"
       },
       {
-        "$ref": "#/1122"
+        "$ref": "#/1134"
       },
       {
-        "$ref": "#/1123"
+        "$ref": "#/1135"
       },
       {
-        "$ref": "#/1124"
+        "$ref": "#/1136"
       },
       {
         "$ref": "#/2"
@@ -13793,22 +13926,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1127"
+        "$ref": "#/1139"
       },
       {
-        "$ref": "#/1128"
+        "$ref": "#/1140"
       },
       {
-        "$ref": "#/1129"
+        "$ref": "#/1141"
       },
       {
-        "$ref": "#/1130"
+        "$ref": "#/1142"
       },
       {
-        "$ref": "#/1131"
+        "$ref": "#/1143"
       },
       {
-        "$ref": "#/1132"
+        "$ref": "#/1144"
       },
       {
         "$ref": "#/2"
@@ -13825,7 +13958,7 @@
     "properties": {
       "recoveryPointRehydrationInfo": {
         "type": {
-          "$ref": "#/1100"
+          "$ref": "#/1112"
         },
         "flags": 0,
         "description": "RP Rehydration Info"
@@ -13853,14 +13986,14 @@
       },
       "alternateDirectoryPaths": {
         "type": {
-          "$ref": "#/1141"
+          "$ref": "#/1153"
         },
         "flags": 0,
         "description": "Data directory details"
       },
       "recoveryType": {
         "type": {
-          "$ref": "#/1147"
+          "$ref": "#/1159"
         },
         "flags": 0,
         "description": "Type of this recovery."
@@ -13874,21 +14007,21 @@
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/1148"
+          "$ref": "#/1160"
         },
         "flags": 0,
         "description": "Workload specific property bag."
       },
       "targetInfo": {
         "type": {
-          "$ref": "#/1085"
+          "$ref": "#/1097"
         },
         "flags": 0,
         "description": "Details of target database"
       },
       "recoveryMode": {
         "type": {
-          "$ref": "#/1155"
+          "$ref": "#/1167"
         },
         "flags": 0,
         "description": "Defines whether the current recovery mode is file restore or database restore"
@@ -13909,7 +14042,7 @@
       },
       "snapshotRestoreParameters": {
         "type": {
-          "$ref": "#/1097"
+          "$ref": "#/1109"
         },
         "flags": 0,
         "description": "Additional details for snapshot recovery\r\nCurrently used for snapshot for SAP Hana."
@@ -13923,7 +14056,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/1156"
+          "$ref": "#/1168"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -13936,7 +14069,7 @@
     "properties": {
       "mappingType": {
         "type": {
-          "$ref": "#/1140"
+          "$ref": "#/1152"
         },
         "flags": 0,
         "description": "Type of data directory mapping"
@@ -13980,13 +14113,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1137"
+        "$ref": "#/1149"
       },
       {
-        "$ref": "#/1138"
+        "$ref": "#/1150"
       },
       {
-        "$ref": "#/1139"
+        "$ref": "#/1151"
       },
       {
         "$ref": "#/2"
@@ -13996,7 +14129,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1136"
+      "$ref": "#/1148"
     }
   },
   {
@@ -14023,19 +14156,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1142"
+        "$ref": "#/1154"
       },
       {
-        "$ref": "#/1143"
+        "$ref": "#/1155"
       },
       {
-        "$ref": "#/1144"
+        "$ref": "#/1156"
       },
       {
-        "$ref": "#/1145"
+        "$ref": "#/1157"
       },
       {
-        "$ref": "#/1146"
+        "$ref": "#/1158"
       },
       {
         "$ref": "#/2"
@@ -14078,22 +14211,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1149"
+        "$ref": "#/1161"
       },
       {
-        "$ref": "#/1150"
+        "$ref": "#/1162"
       },
       {
-        "$ref": "#/1151"
+        "$ref": "#/1163"
       },
       {
-        "$ref": "#/1152"
+        "$ref": "#/1164"
       },
       {
-        "$ref": "#/1153"
+        "$ref": "#/1165"
       },
       {
-        "$ref": "#/1154"
+        "$ref": "#/1166"
       },
       {
         "$ref": "#/2"
@@ -14110,7 +14243,7 @@
     "properties": {
       "recoveryPointRehydrationInfo": {
         "type": {
-          "$ref": "#/1100"
+          "$ref": "#/1112"
         },
         "flags": 0,
         "description": "RP Rehydration Info"
@@ -14131,14 +14264,14 @@
       },
       "alternateDirectoryPaths": {
         "type": {
-          "$ref": "#/1158"
+          "$ref": "#/1170"
         },
         "flags": 0,
         "description": "Data directory details"
       },
       "recoveryType": {
         "type": {
-          "$ref": "#/1164"
+          "$ref": "#/1176"
         },
         "flags": 0,
         "description": "Type of this recovery."
@@ -14152,21 +14285,21 @@
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/1165"
+          "$ref": "#/1177"
         },
         "flags": 0,
         "description": "Workload specific property bag."
       },
       "targetInfo": {
         "type": {
-          "$ref": "#/1085"
+          "$ref": "#/1097"
         },
         "flags": 0,
         "description": "Details of target database"
       },
       "recoveryMode": {
         "type": {
-          "$ref": "#/1172"
+          "$ref": "#/1184"
         },
         "flags": 0,
         "description": "Defines whether the current recovery mode is file restore or database restore"
@@ -14187,7 +14320,7 @@
       },
       "snapshotRestoreParameters": {
         "type": {
-          "$ref": "#/1097"
+          "$ref": "#/1109"
         },
         "flags": 0,
         "description": "Additional details for snapshot recovery\r\nCurrently used for snapshot for SAP Hana."
@@ -14201,7 +14334,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/1173"
+          "$ref": "#/1185"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -14211,7 +14344,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1136"
+      "$ref": "#/1148"
     }
   },
   {
@@ -14238,19 +14371,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1159"
+        "$ref": "#/1171"
       },
       {
-        "$ref": "#/1160"
+        "$ref": "#/1172"
       },
       {
-        "$ref": "#/1161"
+        "$ref": "#/1173"
       },
       {
-        "$ref": "#/1162"
+        "$ref": "#/1174"
       },
       {
-        "$ref": "#/1163"
+        "$ref": "#/1175"
       },
       {
         "$ref": "#/2"
@@ -14293,22 +14426,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1166"
+        "$ref": "#/1178"
       },
       {
-        "$ref": "#/1167"
+        "$ref": "#/1179"
       },
       {
-        "$ref": "#/1168"
+        "$ref": "#/1180"
       },
       {
-        "$ref": "#/1169"
+        "$ref": "#/1181"
       },
       {
-        "$ref": "#/1170"
+        "$ref": "#/1182"
       },
       {
-        "$ref": "#/1171"
+        "$ref": "#/1183"
       },
       {
         "$ref": "#/2"
@@ -14325,7 +14458,7 @@
     "properties": {
       "recoveryPointRehydrationInfo": {
         "type": {
-          "$ref": "#/1100"
+          "$ref": "#/1112"
         },
         "flags": 0,
         "description": "RP Rehydration Info"
@@ -14339,7 +14472,7 @@
       },
       "recoveryType": {
         "type": {
-          "$ref": "#/1180"
+          "$ref": "#/1192"
         },
         "flags": 0,
         "description": "Type of this recovery."
@@ -14423,14 +14556,14 @@
       },
       "encryptionDetails": {
         "type": {
-          "$ref": "#/1181"
+          "$ref": "#/1193"
         },
         "flags": 0,
         "description": "Details needed if the VM was encrypted at the time of backup."
       },
       "restoreDiskLunList": {
         "type": {
-          "$ref": "#/1182"
+          "$ref": "#/1194"
         },
         "flags": 0,
         "description": "List of Disk LUNs for partial restore"
@@ -14451,21 +14584,21 @@
       },
       "zones": {
         "type": {
-          "$ref": "#/1183"
+          "$ref": "#/1195"
         },
         "flags": 0,
         "description": "Target zone where the VM and its disks should be restored."
       },
       "identityInfo": {
         "type": {
-          "$ref": "#/1184"
+          "$ref": "#/1196"
         },
         "flags": 0,
         "description": "Managed Identity information required to access customer storage account."
       },
       "identityBasedRestoreDetails": {
         "type": {
-          "$ref": "#/1185"
+          "$ref": "#/1197"
         },
         "flags": 0,
         "description": "IaaS VM workload specific restore details for restores using managed identity."
@@ -14479,21 +14612,21 @@
       },
       "securedVMDetails": {
         "type": {
-          "$ref": "#/1186"
+          "$ref": "#/1198"
         },
         "flags": 0,
         "description": "Stores Secured VM Details"
       },
       "targetDiskNetworkAccessSettings": {
         "type": {
-          "$ref": "#/1187"
+          "$ref": "#/1199"
         },
         "flags": 0,
         "description": "Specifies target network access settings for disks of VM to be restored,"
       },
       "objectType": {
         "type": {
-          "$ref": "#/1192"
+          "$ref": "#/1204"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -14524,19 +14657,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1175"
+        "$ref": "#/1187"
       },
       {
-        "$ref": "#/1176"
+        "$ref": "#/1188"
       },
       {
-        "$ref": "#/1177"
+        "$ref": "#/1189"
       },
       {
-        "$ref": "#/1178"
+        "$ref": "#/1190"
       },
       {
-        "$ref": "#/1179"
+        "$ref": "#/1191"
       },
       {
         "$ref": "#/2"
@@ -14655,7 +14788,7 @@
     "properties": {
       "targetDiskNetworkAccessOption": {
         "type": {
-          "$ref": "#/1191"
+          "$ref": "#/1203"
         },
         "flags": 0,
         "description": "Network access settings to be used for restored disks"
@@ -14685,19 +14818,282 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1188"
+        "$ref": "#/1200"
       },
       {
-        "$ref": "#/1189"
+        "$ref": "#/1201"
       },
       {
-        "$ref": "#/1190"
+        "$ref": "#/1202"
       }
     ]
   },
   {
     "$type": "StringLiteralType",
     "value": "IaasVMRestoreWithRehydrationRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/615"
+    },
+    "input": {
+      "$ref": "#/1066"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ILRRequestResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1208"
+        },
+        "flags": 0,
+        "description": "ILRRequestResource properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id represents the complete path to the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name associated with the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/1213"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ILRRequest",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "AzureFileShareProvisionILRRequest": {
+        "$ref": "#/1209"
+      },
+      "IaasVMILRRegistrationRequest": {
+        "$ref": "#/1211"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFileShareProvisionILRRequest",
+    "properties": {
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Recovery point ID."
+      },
+      "sourceResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Source Storage account ARM Id"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/1210"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFileShareProvisionILRRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IaasVmilrRegistrationRequest",
+    "properties": {
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ID of the IaaS VM backup copy from where the files/folders have to be restored."
+      },
+      "virtualMachineId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ARM ID of the virtual machine whose the files / folders have to be restored."
+      },
+      "initiatorName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "iSCSI initiator name."
+      },
+      "renewExistingRegistration": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Whether to renew existing registration with the iSCSI server."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/1212"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IaasVMILRRegistrationRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "provisionInstantItemRecovery",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/615"
+    },
+    "input": {
+      "$ref": "#/1207"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revokeInstantItemRecovery",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/615"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupJobs",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/615"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backupJobsExport",
+    "resourceType": "Microsoft.RecoveryServices/vaults",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/615"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateOperationRequestResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Recovery point ID."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1219"
+        },
+        "flags": 1,
+        "description": "ValidateOperationRequestResource properties"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ValidateOperationRequest",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "ValidateIaasVMRestoreOperationRequest": {
+        "$ref": "#/1220"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateIaasVMRestoreOperationRequest",
+    "properties": {
+      "restoreRequest": {
+        "type": {
+          "$ref": "#/1067"
+        },
+        "flags": 0,
+        "description": "Sets restore request to be validated"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/1221"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
   },
   {
     "$type": "StringLiteralType",
@@ -14709,7 +15105,7 @@
     "properties": {
       "validateOperationResponse": {
         "type": {
-          "$ref": "#/1195"
+          "$ref": "#/1223"
         },
         "flags": 0,
         "description": "Base class for validate operation response."
@@ -14722,7 +15118,7 @@
     "properties": {
       "validationResults": {
         "type": {
-          "$ref": "#/1196"
+          "$ref": "#/1224"
         },
         "flags": 0,
         "description": "Gets the validation result"
@@ -14741,10 +15137,22 @@
     "resourceType": "Microsoft.RecoveryServices/vaults",
     "apiVersion": "2023-06-01",
     "output": {
-      "$ref": "#/1194"
+      "$ref": "#/1222"
     },
     "input": {
-      "$ref": "#/1052"
+      "$ref": "#/1218"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backupTriggerValidateOperation",
+    "resourceType": "Microsoft.RecoveryServices/vaults",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/615"
+    },
+    "input": {
+      "$ref": "#/1218"
     }
   },
   {
@@ -14753,7 +15161,7 @@
     "properties": {
       "resourceGuardOperationRequests": {
         "type": {
-          "$ref": "#/1199"
+          "$ref": "#/1228"
         },
         "flags": 0,
         "description": "ResourceGuard Operation Requests"
@@ -14799,10 +15207,270 @@
     "resourceType": "Microsoft.RecoveryServices/vaults",
     "apiVersion": "2023-06-01",
     "output": {
-      "$ref": "#/1200"
+      "$ref": "#/1229"
     },
     "input": {
-      "$ref": "#/1198"
+      "$ref": "#/1227"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "inquire",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/615"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshContainers",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/615"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupRequestResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1234"
+        },
+        "flags": 0,
+        "description": "BackupRequestResource properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource Id represents the complete path to the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name associated with the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/1250"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "BackupRequest",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "AzureFileShareBackupRequest": {
+        "$ref": "#/1235"
+      },
+      "AzureWorkloadBackupRequest": {
+        "$ref": "#/1237"
+      },
+      "IaasVMBackupRequest": {
+        "$ref": "#/1248"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFileShareBackupRequest",
+    "properties": {
+      "recoveryPointExpiryTimeInUTC": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Backup copy will expire after the time specified (UTC)."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/1236"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFileShareBackupRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureWorkloadBackupRequest",
+    "properties": {
+      "backupType": {
+        "type": {
+          "$ref": "#/1246"
+        },
+        "flags": 0,
+        "description": "Type of backup, viz. Full, Differential, Log or CopyOnlyFull"
+      },
+      "enableCompression": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Bool for Compression setting"
+      },
+      "recoveryPointExpiryTimeInUTC": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Backup copy will expire after the time specified (UTC)."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/1247"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Full"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Differential"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Log"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CopyOnlyFull"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SnapshotFull"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SnapshotCopyOnlyFull"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1238"
+      },
+      {
+        "$ref": "#/1239"
+      },
+      {
+        "$ref": "#/1240"
+      },
+      {
+        "$ref": "#/1241"
+      },
+      {
+        "$ref": "#/1242"
+      },
+      {
+        "$ref": "#/1243"
+      },
+      {
+        "$ref": "#/1244"
+      },
+      {
+        "$ref": "#/1245"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWorkloadBackupRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IaasVMBackupRequest",
+    "properties": {
+      "recoveryPointExpiryTimeInUTC": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Backup copy will expire after the time specified (UTC)."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/1249"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IaasVMBackupRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backup",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems",
+    "apiVersion": "2023-06-01",
+    "output": {
+      "$ref": "#/615"
+    },
+    "input": {
+      "$ref": "#/1233"
     }
   },
   {
@@ -14818,7 +15486,7 @@
       },
       "excludedRPList": {
         "type": {
-          "$ref": "#/1203"
+          "$ref": "#/1253"
         },
         "flags": 0,
         "description": "List of Recovery Points excluded from Move"
@@ -14837,7 +15505,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/1207"
+          "$ref": "#/1257"
         },
         "flags": 0,
         "description": "List of resources."
@@ -14892,7 +15560,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1206"
+          "$ref": "#/1256"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -14917,7 +15585,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1205"
+      "$ref": "#/1255"
     }
   },
   {
@@ -14926,10 +15594,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems",
     "apiVersion": "2023-06-01",
     "output": {
-      "$ref": "#/1204"
+      "$ref": "#/1254"
     },
     "input": {
-      "$ref": "#/1202"
+      "$ref": "#/1252"
     }
   },
   {
@@ -14938,7 +15606,7 @@
     "properties": {
       "resourceGuardOperationRequests": {
         "type": {
-          "$ref": "#/1210"
+          "$ref": "#/1260"
         },
         "flags": 0
       },
@@ -14975,10 +15643,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/backupResourceGuardProxies",
     "apiVersion": "2023-06-01",
     "output": {
-      "$ref": "#/1211"
+      "$ref": "#/1261"
     },
     "input": {
-      "$ref": "#/1209"
+      "$ref": "#/1259"
     }
   },
   {
@@ -14988,14 +15656,14 @@
     "baseProperties": {
       "sourceTierType": {
         "type": {
-          "$ref": "#/1218"
+          "$ref": "#/1268"
         },
         "flags": 1,
         "description": "Source tier for the request"
       },
       "targetTierType": {
         "type": {
-          "$ref": "#/1223"
+          "$ref": "#/1273"
         },
         "flags": 1,
         "description": "target tier for the request"
@@ -15003,16 +15671,16 @@
     },
     "elements": {
       "FetchTieringCostInfoForRehydrationRequest": {
-        "$ref": "#/1224"
+        "$ref": "#/1274"
       },
       "FetchTieringCostSavingsInfoForPolicyRequest": {
-        "$ref": "#/1229"
+        "$ref": "#/1279"
       },
       "FetchTieringCostSavingsInfoForProtectedItemRequest": {
-        "$ref": "#/1231"
+        "$ref": "#/1281"
       },
       "FetchTieringCostSavingsInfoForVaultRequest": {
-        "$ref": "#/1233"
+        "$ref": "#/1283"
       }
     }
   },
@@ -15036,16 +15704,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1214"
+        "$ref": "#/1264"
       },
       {
-        "$ref": "#/1215"
+        "$ref": "#/1265"
       },
       {
-        "$ref": "#/1216"
+        "$ref": "#/1266"
       },
       {
-        "$ref": "#/1217"
+        "$ref": "#/1267"
       }
     ]
   },
@@ -15069,16 +15737,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1219"
+        "$ref": "#/1269"
       },
       {
-        "$ref": "#/1220"
+        "$ref": "#/1270"
       },
       {
-        "$ref": "#/1221"
+        "$ref": "#/1271"
       },
       {
-        "$ref": "#/1222"
+        "$ref": "#/1272"
       }
     ]
   },
@@ -15109,14 +15777,14 @@
       },
       "rehydrationPriority": {
         "type": {
-          "$ref": "#/1227"
+          "$ref": "#/1277"
         },
         "flags": 1,
         "description": "Rehydration Priority"
       },
       "objectType": {
         "type": {
-          "$ref": "#/1228"
+          "$ref": "#/1278"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -15135,10 +15803,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1225"
+        "$ref": "#/1275"
       },
       {
-        "$ref": "#/1226"
+        "$ref": "#/1276"
       },
       {
         "$ref": "#/2"
@@ -15162,7 +15830,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/1230"
+          "$ref": "#/1280"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -15193,7 +15861,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/1232"
+          "$ref": "#/1282"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -15210,7 +15878,7 @@
     "properties": {
       "objectType": {
         "type": {
-          "$ref": "#/1234"
+          "$ref": "#/1284"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -15228,10 +15896,10 @@
     "baseProperties": {},
     "elements": {
       "TieringCostRehydrationInfo": {
-        "$ref": "#/1236"
+        "$ref": "#/1286"
       },
       "TieringCostSavingInfo": {
-        "$ref": "#/1238"
+        "$ref": "#/1288"
       }
     }
   },
@@ -15255,7 +15923,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/1237"
+          "$ref": "#/1287"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -15300,7 +15968,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/1239"
+          "$ref": "#/1289"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -15317,10 +15985,10 @@
     "resourceType": "Microsoft.RecoveryServices/vaults/backupTieringCost",
     "apiVersion": "2023-06-01",
     "output": {
-      "$ref": "#/1235"
+      "$ref": "#/1285"
     },
     "input": {
-      "$ref": "#/1213"
+      "$ref": "#/1263"
     }
   }
 ]

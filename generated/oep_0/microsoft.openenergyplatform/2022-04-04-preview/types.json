@@ -315,11 +315,48 @@
   },
   {
     "$type": "ObjectType",
+    "name": "DataPartitionAddOrRemoveRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The list of Energy services resource's Data Partition Names."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addPartition",
+    "resourceType": "Microsoft.OpenEnergyPlatform/energyServices",
+    "apiVersion": "2022-04-04-preview",
+    "output": {
+      "$ref": "#/28"
+    },
+    "input": {
+      "$ref": "#/28"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "removePartition",
+    "resourceType": "Microsoft.OpenEnergyPlatform/energyServices",
+    "apiVersion": "2022-04-04-preview",
+    "output": {
+      "$ref": "#/28"
+    },
+    "input": {
+      "$ref": "#/28"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DataPartitionsListResult",
     "properties": {
       "dataPartitionInfo": {
         "type": {
-          "$ref": "#/30"
+          "$ref": "#/33"
         },
         "flags": 0,
         "description": "List of data partitions along with their properties in a given OEP resource."
@@ -349,7 +386,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/29"
+      "$ref": "#/32"
     }
   },
   {
@@ -358,7 +395,7 @@
     "resourceType": "Microsoft.OpenEnergyPlatform/energyServices",
     "apiVersion": "2022-04-04-preview",
     "output": {
-      "$ref": "#/28"
+      "$ref": "#/31"
     }
   }
 ]

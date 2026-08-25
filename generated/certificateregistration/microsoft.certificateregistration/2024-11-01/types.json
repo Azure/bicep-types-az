@@ -1591,11 +1591,215 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ReissueCertificateOrderRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 0,
+        "description": "ReissueCertificateOrderRequest resource specific properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReissueCertificateOrderRequestProperties",
+    "properties": {
+      "keySize": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Certificate Key Size."
+      },
+      "delayExistingRevokeInHours": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Delay in hours to revoke existing certificate after the new certificate is issued."
+      },
+      "csr": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Csr to be used for re-key operation."
+      },
+      "isPrivateKeyExternal": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Should we change the ASC type (from managed private key to external private key and vice versa)."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reissue",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2024-11-01",
+    "output": {
+      "$ref": "#/132"
+    },
+    "input": {
+      "$ref": "#/130"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RenewCertificateOrderRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "RenewCertificateOrderRequest resource specific properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RenewCertificateOrderRequestProperties",
+    "properties": {
+      "keySize": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Certificate Key Size."
+      },
+      "csr": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Csr to be used for re-key operation."
+      },
+      "isPrivateKeyExternal": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Should we change the ASC type (from managed private key to external private key and vice versa)."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "renew",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2024-11-01",
+    "output": {
+      "$ref": "#/132"
+    },
+    "input": {
+      "$ref": "#/134"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resendEmail",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2024-11-01",
+    "output": {
+      "$ref": "#/132"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameIdentifier",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the object."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resendRequestEmails",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2024-11-01",
+    "output": {
+      "$ref": "#/132"
+    },
+    "input": {
+      "$ref": "#/138"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "CertificateOrderAction",
     "properties": {
       "actionType": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/155"
         },
         "flags": 2,
         "description": "Action type."
@@ -1669,36 +1873,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/131"
-      },
-      {
-        "$ref": "#/132"
-      },
-      {
-        "$ref": "#/133"
-      },
-      {
-        "$ref": "#/134"
-      },
-      {
-        "$ref": "#/135"
-      },
-      {
-        "$ref": "#/136"
-      },
-      {
-        "$ref": "#/137"
-      },
-      {
-        "$ref": "#/138"
-      },
-      {
-        "$ref": "#/139"
-      },
-      {
-        "$ref": "#/140"
-      },
-      {
         "$ref": "#/141"
       },
       {
@@ -1709,13 +1883,43 @@
       },
       {
         "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/154"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/130"
+      "$ref": "#/140"
     }
   },
   {
@@ -1724,7 +1928,7 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2024-11-01",
     "output": {
-      "$ref": "#/146"
+      "$ref": "#/156"
     }
   },
   {
@@ -1750,7 +1954,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/148"
+      "$ref": "#/158"
     }
   },
   {
@@ -1759,7 +1963,7 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2024-11-01",
     "output": {
-      "$ref": "#/149"
+      "$ref": "#/159"
     }
   },
   {
@@ -1801,10 +2005,19 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2024-11-01",
     "output": {
-      "$ref": "#/152"
+      "$ref": "#/162"
     },
     "input": {
-      "$ref": "#/151"
+      "$ref": "#/161"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "verifyDomainOwnership",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2024-11-01",
+    "output": {
+      "$ref": "#/132"
     }
   }
 ]

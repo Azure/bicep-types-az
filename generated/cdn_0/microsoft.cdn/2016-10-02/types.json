@@ -1139,6 +1139,145 @@
   },
   {
     "$type": "ObjectType",
+    "name": "Endpoint",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "The JSON object that contains the properties required to create an endpoint."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2016-10-02",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2016-10-02",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PurgeParameters",
+    "properties": {
+      "contentPaths": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 1,
+        "description": "The path to the content to be purged. Can describe a file path or a wild card directory."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2016-10-02",
+    "output": {
+      "$ref": "#/103"
+    },
+    "input": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LoadParameters",
+    "properties": {
+      "contentPaths": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 1,
+        "description": "The path to the content to be loaded. Path should be a relative file URL of the origin."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "load",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2016-10-02",
+    "output": {
+      "$ref": "#/103"
+    },
+    "input": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ValidateCustomDomainInput",
     "properties": {
       "hostName": {
@@ -1183,10 +1322,10 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2016-10-02",
     "output": {
-      "$ref": "#/98"
+      "$ref": "#/109"
     },
     "input": {
-      "$ref": "#/97"
+      "$ref": "#/108"
     }
   },
   {
@@ -1196,6 +1335,193 @@
     "apiVersion": "2016-10-02",
     "output": {
       "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomain",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 0,
+        "description": "The JSON object that contains the properties of the custom domain to create."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomainProperties",
+    "properties": {
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The host name of the custom domain. Must be a domain name."
+      },
+      "resourceState": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 2,
+        "description": "Resource status of the custom domain."
+      },
+      "customHttpsProvisioningState": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 2,
+        "description": "Provisioning state of Custom Https of the custom domain."
+      },
+      "validationData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Provisioning status of the custom domain."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableCustomHttps",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints/customDomains",
+    "apiVersion": "2016-10-02",
+    "output": {
+      "$ref": "#/112"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableCustomHttps",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints/customDomains",
+    "apiVersion": "2016-10-02",
+    "output": {
+      "$ref": "#/112"
     }
   }
 ]

@@ -5555,11 +5555,91 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RestartParameter",
+    "properties": {
+      "restartWithFailover": {
+        "type": {
+          "$ref": "#/332"
+        },
+        "flags": 0,
+        "description": "Indicates if restart the PostgreSQL database engine should failover or switch over from primary to standby. This only works if server has high availability enabled."
+      },
+      "failoverMode": {
+        "type": {
+          "$ref": "#/473"
+        },
+        "flags": 0,
+        "description": "Failover mode."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PlannedFailover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForcedFailover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PlannedSwitchover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForcedSwitchover"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/469"
+      },
+      {
+        "$ref": "#/470"
+      },
+      {
+        "$ref": "#/471"
+      },
+      {
+        "$ref": "#/472"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/474"
+    },
+    "input": {
+      "$ref": "#/468"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/474"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "StartMajorVersionUpgradePrecheckRequest",
     "properties": {
       "targetVersion": {
         "type": {
-          "$ref": "#/477"
+          "$ref": "#/486"
         },
         "flags": 1,
         "description": "The target major version to upgrade to."
@@ -5602,28 +5682,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/469"
+        "$ref": "#/478"
       },
       {
-        "$ref": "#/470"
+        "$ref": "#/479"
       },
       {
-        "$ref": "#/471"
+        "$ref": "#/480"
       },
       {
-        "$ref": "#/472"
+        "$ref": "#/481"
       },
       {
-        "$ref": "#/473"
+        "$ref": "#/482"
       },
       {
-        "$ref": "#/474"
+        "$ref": "#/483"
       },
       {
-        "$ref": "#/475"
+        "$ref": "#/484"
       },
       {
-        "$ref": "#/476"
+        "$ref": "#/485"
       },
       {
         "$ref": "#/2"
@@ -5650,7 +5730,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/483"
+          "$ref": "#/492"
         },
         "flags": 0,
         "description": "The status of the precheck validation."
@@ -5677,16 +5757,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/479"
+        "$ref": "#/488"
       },
       {
-        "$ref": "#/480"
+        "$ref": "#/489"
       },
       {
-        "$ref": "#/481"
+        "$ref": "#/490"
       },
       {
-        "$ref": "#/482"
+        "$ref": "#/491"
       },
       {
         "$ref": "#/2"
@@ -5699,10 +5779,19 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/478"
+      "$ref": "#/487"
     },
     "input": {
-      "$ref": "#/468"
+      "$ref": "#/477"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/474"
     }
   },
   {
@@ -5732,7 +5821,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/488"
+          "$ref": "#/498"
         },
         "flags": 2,
         "description": "Migration name availability reason."
@@ -5758,10 +5847,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/486"
+        "$ref": "#/496"
       },
       {
-        "$ref": "#/487"
+        "$ref": "#/497"
       },
       {
         "$ref": "#/2"
@@ -5774,10 +5863,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/485"
+      "$ref": "#/495"
     },
     "input": {
-      "$ref": "#/485"
+      "$ref": "#/495"
     }
   },
   {
@@ -5786,7 +5875,7 @@
     "properties": {
       "backupSettings": {
         "type": {
-          "$ref": "#/491"
+          "$ref": "#/501"
         },
         "flags": 1,
         "description": "Backup Settings"
@@ -5812,7 +5901,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/493"
+          "$ref": "#/503"
         },
         "flags": 1,
         "description": "Additional Properties for the pre backup response"
@@ -5838,10 +5927,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/492"
+      "$ref": "#/502"
     },
     "input": {
-      "$ref": "#/490"
+      "$ref": "#/500"
     }
   },
   {
@@ -5850,14 +5939,14 @@
     "properties": {
       "targetDetails": {
         "type": {
-          "$ref": "#/496"
+          "$ref": "#/506"
         },
         "flags": 1,
         "description": "Backup store detail for target server."
       },
       "backupSettings": {
         "type": {
-          "$ref": "#/491"
+          "$ref": "#/501"
         },
         "flags": 1,
         "description": "Backup Settings"
@@ -5870,7 +5959,7 @@
     "properties": {
       "sasUriList": {
         "type": {
-          "$ref": "#/497"
+          "$ref": "#/507"
         },
         "flags": 1,
         "description": "List of SAS uri of storage containers where backup data is to be streamed/copied."
@@ -5902,10 +5991,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/498"
+      "$ref": "#/508"
     },
     "input": {
-      "$ref": "#/495"
+      "$ref": "#/505"
     }
   },
   {
@@ -5928,7 +6017,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/506"
+          "$ref": "#/516"
         },
         "flags": 0,
         "description": "The status of the maintenance event."
@@ -5987,19 +6076,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/501"
+        "$ref": "#/511"
       },
       {
-        "$ref": "#/502"
+        "$ref": "#/512"
       },
       {
-        "$ref": "#/503"
+        "$ref": "#/513"
       },
       {
-        "$ref": "#/504"
+        "$ref": "#/514"
       },
       {
-        "$ref": "#/505"
+        "$ref": "#/515"
       },
       {
         "$ref": "#/2"
@@ -6012,7 +6101,7 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers/maintenanceEvents",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/500"
+      "$ref": "#/510"
     }
   },
   {
@@ -6034,10 +6123,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers/maintenanceEvents",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/500"
+      "$ref": "#/510"
     },
     "input": {
-      "$ref": "#/508"
+      "$ref": "#/518"
     }
   }
 ]

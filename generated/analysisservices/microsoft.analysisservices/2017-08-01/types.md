@@ -19,10 +19,25 @@
 * **Input**: [CheckServerNameAvailabilityParameters](#checkservernameavailabilityparameters)
 * **Output**: [CheckServerNameAvailabilityResult](#checkservernameavailabilityresult)
 
+## Function dissociateGateway (Microsoft.AnalysisServices/servers@2017-08-01)
+* **Resource**: Microsoft.AnalysisServices/servers
+* **ApiVersion**: 2017-08-01
+* **Output**: any
+
 ## Function listGatewayStatus (Microsoft.AnalysisServices/servers@2017-08-01)
 * **Resource**: Microsoft.AnalysisServices/servers
 * **ApiVersion**: 2017-08-01
 * **Output**: [GatewayListStatusLive](#gatewayliststatuslive)
+
+## Function resume (Microsoft.AnalysisServices/servers@2017-08-01)
+* **Resource**: Microsoft.AnalysisServices/servers
+* **ApiVersion**: 2017-08-01
+* **Output**: any
+
+## Function suspend (Microsoft.AnalysisServices/servers@2017-08-01)
+* **Resource**: Microsoft.AnalysisServices/servers
+* **ApiVersion**: 2017-08-01
+* **Output**: any
 
 ## AnalysisServicesServerProperties
 ### Properties

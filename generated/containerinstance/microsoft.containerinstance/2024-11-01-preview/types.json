@@ -3566,6 +3566,33 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2024-11-01-preview",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2024-11-01-preview",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2024-11-01-preview",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ContainerExecRequest",
     "properties": {
@@ -3578,7 +3605,7 @@
       },
       "terminalSize": {
         "type": {
-          "$ref": "#/246"
+          "$ref": "#/249"
         },
         "flags": 0,
         "description": "The size of the terminal."
@@ -3631,10 +3658,10 @@
     "resourceType": "Microsoft.ContainerInstance/containerGroups/containers",
     "apiVersion": "2024-11-01-preview",
     "output": {
-      "$ref": "#/247"
+      "$ref": "#/250"
     },
     "input": {
-      "$ref": "#/245"
+      "$ref": "#/248"
     }
   },
   {
@@ -3663,7 +3690,34 @@
     "resourceType": "Microsoft.ContainerInstance/containerGroups/containers",
     "apiVersion": "2024-11-01-preview",
     "output": {
-      "$ref": "#/249"
+      "$ref": "#/252"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ContainerInstance/ngroups",
+    "apiVersion": "2024-11-01-preview",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ContainerInstance/ngroups",
+    "apiVersion": "2024-11-01-preview",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ContainerInstance/ngroups",
+    "apiVersion": "2024-11-01-preview",
+    "output": {
+      "$ref": "#/86"
     }
   }
 ]

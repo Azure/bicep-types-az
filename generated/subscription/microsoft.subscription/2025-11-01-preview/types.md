@@ -36,10 +36,36 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Subscription/policies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function acceptChangeTenant (Microsoft.Subscription/subscriptions@2025-11-01-preview)
+* **Resource**: Microsoft.Subscription/subscriptions
+* **ApiVersion**: 2025-11-01-preview
+* **Output**: any
+
+## Function acceptOwnership (Microsoft.Subscription/subscriptions@2025-11-01-preview)
+* **Resource**: Microsoft.Subscription/subscriptions
+* **ApiVersion**: 2025-11-01-preview
+* **Input**: [AcceptOwnershipRequest](#acceptownershiprequest)
+* **Output**: any
+
 ## Function changeTenantStatus (Microsoft.Subscription/subscriptions@2025-11-01-preview)
 * **Resource**: Microsoft.Subscription/subscriptions
 * **ApiVersion**: 2025-11-01-preview
 * **Output**: [TargetDirectoryResultProperties](#targetdirectoryresultproperties)
+
+## AcceptOwnershipRequest
+### Properties
+* **properties**: [AcceptOwnershipRequestProperties](#acceptownershiprequestproperties): Accept subscription ownership request properties.
+
+## AcceptOwnershipRequestProperties
+### Properties
+* **displayName**: string (Required): The friendly name of the subscription.
+* **managementGroupId**: string: Management group Id for the subscription.
+* **tags**: [AcceptOwnershipRequestPropertiesTags](#acceptownershiprequestpropertiestags): Tags for the subscription
+
+## AcceptOwnershipRequestPropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## PutAliasRequestAdditionalProperties
 ### Properties

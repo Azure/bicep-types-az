@@ -168,6 +168,22 @@
 * **tags**: [VirtualNetworkTags](#virtualnetworktags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.ConnectedVMwarevSphere/virtualMachines@2020-10-01-preview)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachines
+* **ApiVersion**: 2020-10-01-preview
+* **Output**: any
+
+## Function start (Microsoft.ConnectedVMwarevSphere/virtualMachines@2020-10-01-preview)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachines
+* **ApiVersion**: 2020-10-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.ConnectedVMwarevSphere/virtualMachines@2020-10-01-preview)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachines
+* **ApiVersion**: 2020-10-01-preview
+* **Input**: [StopVirtualMachineOptions](#stopvirtualmachineoptions)
+* **Output**: any
+
 ## ClusterProperties
 ### Properties
 * **customResourceName**: string (ReadOnly): Gets the name of the corresponding resource in Kubernetes.
@@ -468,6 +484,10 @@ This property is used in relative allocation between resource consumers.
 * **severity**: string (ReadOnly): Severity with which to treat failures of this type of condition.
 * **status**: string (ReadOnly): Status of the condition.
 * **type**: string (ReadOnly): The type of the condition.
+
+## StopVirtualMachineOptions
+### Properties
+* **skipShutdown**: bool: Gets or sets a value indicating whether to request non-graceful VM shutdown. True value for this flag indicates non-graceful shutdown whereas false indicates otherwise. Defaults to false.
 
 ## StorageProfile
 ### Properties

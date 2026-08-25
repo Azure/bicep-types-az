@@ -40,6 +40,29 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CertificateRegistration/certificateOrders/detectors' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function reissue (Microsoft.CertificateRegistration/certificateOrders@2024-11-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2024-11-01
+* **Input**: [ReissueCertificateOrderRequest](#reissuecertificateorderrequest)
+* **Output**: any
+
+## Function renew (Microsoft.CertificateRegistration/certificateOrders@2024-11-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2024-11-01
+* **Input**: [RenewCertificateOrderRequest](#renewcertificateorderrequest)
+* **Output**: any
+
+## Function resendEmail (Microsoft.CertificateRegistration/certificateOrders@2024-11-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2024-11-01
+* **Output**: any
+
+## Function resendRequestEmails (Microsoft.CertificateRegistration/certificateOrders@2024-11-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2024-11-01
+* **Input**: [NameIdentifier](#nameidentifier)
+* **Output**: any
+
 ## Function retrieveCertificateActions (Microsoft.CertificateRegistration/certificateOrders@2024-11-01)
 * **Resource**: Microsoft.CertificateRegistration/certificateOrders
 * **ApiVersion**: 2024-11-01
@@ -55,6 +78,11 @@
 * **ApiVersion**: 2024-11-01
 * **Input**: [SiteSealRequest](#sitesealrequest)
 * **Output**: [SiteSeal](#siteseal)
+
+## Function verifyDomainOwnership (Microsoft.CertificateRegistration/certificateOrders@2024-11-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2024-11-01
+* **Output**: any
 
 ## AppServiceCertificate
 ### Properties
@@ -171,6 +199,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## NameIdentifier
+### Properties
+* **name**: string: Name of the object.
+
 ## QueryUtterancesResult
 ### Properties
 * **sampleUtterance**: [SampleUtterance](#sampleutterance): A sample utterance.
@@ -181,11 +213,40 @@
 * **query**: string: Search Query.
 * **results**: [QueryUtterancesResult](#queryutterancesresult)[]: Array of utterance results for search query.
 
+## ReissueCertificateOrderRequest
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [ReissueCertificateOrderRequestProperties](#reissuecertificateorderrequestproperties): ReissueCertificateOrderRequest resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## ReissueCertificateOrderRequestProperties
+### Properties
+* **csr**: string: Csr to be used for re-key operation.
+* **delayExistingRevokeInHours**: int: Delay in hours to revoke existing certificate after the new certificate is issued.
+* **isPrivateKeyExternal**: bool: Should we change the ASC type (from managed private key to external private key and vice versa).
+* **keySize**: int: Certificate Key Size.
+
 ## Rendering
 ### Properties
 * **description**: string: Description of the data that will help it be interpreted
 * **title**: string: Title of data
 * **type**: 'AppInsight' | 'AppInsightEnablement' | 'Card' | 'ChangeAnalysisOnboarding' | 'ChangeSets' | 'ChangesView' | 'DataSummary' | 'DependencyGraph' | 'Detector' | 'DownTime' | 'DropDown' | 'DynamicInsight' | 'Email' | 'Form' | 'Guage' | 'Insights' | 'Markdown' | 'NoGraph' | 'PieChart' | 'SearchComponent' | 'Solution' | 'SummaryCard' | 'Table' | 'TimeSeries' | 'TimeSeriesPerInstance': Rendering Type
+
+## RenewCertificateOrderRequest
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [RenewCertificateOrderRequestProperties](#renewcertificateorderrequestproperties): RenewCertificateOrderRequest resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## RenewCertificateOrderRequestProperties
+### Properties
+* **csr**: string: Csr to be used for re-key operation.
+* **isPrivateKeyExternal**: bool: Should we change the ASC type (from managed private key to external private key and vice versa).
+* **keySize**: int: Certificate Key Size.
 
 ## SampleUtterance
 ### Properties

@@ -161,10 +161,63 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.OperationalInsights/workspaces/tables' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancelSearch (Microsoft.OperationalInsights/workspaces/tables@2026-03-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces/tables
+* **ApiVersion**: 2026-03-01
+* **Output**: any
+
+## Function Disable (Microsoft.OperationalInsights/workspaces/intelligencePacks@2026-03-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces/intelligencePacks
+* **ApiVersion**: 2026-03-01
+* **Output**: any
+
+## Function Enable (Microsoft.OperationalInsights/workspaces/intelligencePacks@2026-03-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces/intelligencePacks
+* **ApiVersion**: 2026-03-01
+* **Output**: any
+
+## Function failback (Microsoft.OperationalInsights/workspaces@2026-03-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces
+* **ApiVersion**: 2026-03-01
+* **Output**: any
+
+## Function failover (Microsoft.OperationalInsights/locations/workspaces@2026-03-01)
+* **Resource**: Microsoft.OperationalInsights/locations/workspaces
+* **ApiVersion**: 2026-03-01
+* **Output**: any
+
+## Function migrate (Microsoft.OperationalInsights/workspaces/tables@2026-03-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces/tables
+* **ApiVersion**: 2026-03-01
+* **Output**: any
+
+## Function purge (Microsoft.OperationalInsights/workspaces@2026-03-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces
+* **ApiVersion**: 2026-03-01
+* **Input**: [WorkspacePurgeBody](#workspacepurgebody)
+* **Output**: [WorkspacePurgeResponse](#workspacepurgeresponse)
+
+## Function purgeLakeData (Microsoft.OperationalInsights/workspaces@2026-03-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces
+* **ApiVersion**: 2026-03-01
+* **Input**: [WorkspacePurgeLakeDataBody](#workspacepurgelakedatabody)
+* **Output**: any
+
+## Function reconcile (Microsoft.OperationalInsights/workspaces/networkSecurityPerimeterConfigurations@2026-03-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2026-03-01
+* **Output**: any
+
 ## Function regenerateSharedKey (Microsoft.OperationalInsights/workspaces@2026-03-01)
 * **Resource**: Microsoft.OperationalInsights/workspaces
 * **ApiVersion**: 2026-03-01
 * **Output**: [SharedKeys](#sharedkeys)
+
+## Function retrybin (Microsoft.OperationalInsights/workspaces/summaryLogs@2026-03-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces/summaryLogs
+* **ApiVersion**: 2026-03-01
+* **Input**: [SummaryLogsRetryBin](#summarylogsretrybin)
+* **Output**: any
 
 ## Function schema (Microsoft.OperationalInsights/workspaces@2026-03-01)
 * **Resource**: Microsoft.OperationalInsights/workspaces
@@ -175,6 +228,16 @@
 * **Resource**: Microsoft.OperationalInsights/workspaces
 * **ApiVersion**: 2026-03-01
 * **Output**: [SharedKeys](#sharedkeys)
+
+## Function start (Microsoft.OperationalInsights/workspaces/summaryLogs@2026-03-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces/summaryLogs
+* **ApiVersion**: 2026-03-01
+* **Output**: any
+
+## Function stop (Microsoft.OperationalInsights/workspaces/summaryLogs@2026-03-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces/summaryLogs
+* **ApiVersion**: 2026-03-01
+* **Output**: any
 
 ## AccessRule
 ### Properties
@@ -542,6 +605,14 @@
 * **ruleType**: 'User' | string: SummaryRules rule type: User.
 * **statusCode**: 'DataPlaneError' | 'UserAction' | string (ReadOnly): Indicates the reason for rule deactivation.
 
+## SummaryLogsRetryBin
+### Properties
+* **properties**: [SummaryLogsRetryBinProperties](#summarylogsretrybinproperties): Retry bin properties.
+
+## SummaryLogsRetryBinProperties
+### Properties
+* **retryBinStartTime**: string (Required): The time (UTC) of the bin to retry.
+
 ## SummaryLogsUserIdentityProperties
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
@@ -648,6 +719,32 @@
 * **retentionInDays**: int: The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
 * **sku**: [WorkspaceSku](#workspacesku): The SKU of the workspace.
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
+
+## WorkspacePurgeBody
+### Properties
+* **filters**: [WorkspacePurgeBodyFilters](#workspacepurgebodyfilters)[] (Required): The set of columns and filters (queries) to run over them to purge the resulting data.
+* **table**: string (Required): Table from which to purge data.
+
+## WorkspacePurgeBodyFilters
+### Properties
+* **column**: string: The column of the table over which the given query should run
+* **key**: string: When filtering over custom dimensions, this key will be used as the name of the custom dimension.
+* **operator**: string: A query operator to evaluate over the provided column and value(s). Supported operators are ==, =~, in, in~, >, >=, <, <=, between, and have the same behavior as they would in a KQL query.
+* **value**: any: the value for the operator to function over. This can be a number (e.g., > 100), a string (timestamp >= '2017-09-01') or array of values.
+
+## WorkspacePurgeLakeDataBody
+### Properties
+* **table**: string (Required): The name of the table from which to purge data lake data. Must be an Auxiliary table, or an Analytics table that is mirrored to the data lake.
+* **timeRange**: [WorkspacePurgeLakeDataTimeRange](#workspacepurgelakedatatimerange) (Required): The time range over which data lake data is purged.
+
+## WorkspacePurgeLakeDataTimeRange
+### Properties
+* **endTime**: string (Required): The exclusive end of the time range, in UTC. Must fall on an hour boundary and be earlier than the start of the current hour.
+* **startTime**: string (Required): The inclusive start of the time range, in UTC. Must fall on an hour boundary (minutes and seconds must be zero).
+
+## WorkspacePurgeResponse
+### Properties
+* **operationId**: string (Required): Id to use when querying for status for a particular purge operation.
 
 ## WorkspaceReplicationProperties
 ### Properties

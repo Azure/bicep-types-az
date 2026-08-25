@@ -6039,12 +6039,30 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "rotateNsxtPassword",
+    "resourceType": "Microsoft.AVS/privateClouds",
+    "apiVersion": "2023-09-01",
+    "output": {
+      "$ref": "#/269"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateVcenterPassword",
+    "resourceType": "Microsoft.AVS/privateClouds",
+    "apiVersion": "2023-09-01",
+    "output": {
+      "$ref": "#/269"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ClusterZoneList",
     "properties": {
       "zones": {
         "type": {
-          "$ref": "#/502"
+          "$ref": "#/504"
         },
         "flags": 0,
         "description": "Zone and associated hosts info"
@@ -6057,7 +6075,7 @@
     "properties": {
       "hosts": {
         "type": {
-          "$ref": "#/501"
+          "$ref": "#/503"
         },
         "flags": 2,
         "description": "List of hosts belonging to the availability zone in a cluster"
@@ -6080,7 +6098,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/500"
+      "$ref": "#/502"
     }
   },
   {
@@ -6089,7 +6107,54 @@
     "resourceType": "Microsoft.AVS/privateClouds/clusters",
     "apiVersion": "2023-09-01",
     "output": {
-      "$ref": "#/499"
+      "$ref": "#/501"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineRestrictMovement",
+    "properties": {
+      "restrictMovement": {
+        "type": {
+          "$ref": "#/509"
+        },
+        "flags": 0,
+        "description": "Whether VM DRS-driven movement is restricted (enabled) or not (disabled)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/507"
+      },
+      {
+        "$ref": "#/508"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restrictMovement",
+    "resourceType": "Microsoft.AVS/privateClouds/clusters/virtualMachines",
+    "apiVersion": "2023-09-01",
+    "output": {
+      "$ref": "#/269"
+    },
+    "input": {
+      "$ref": "#/506"
     }
   },
   {
@@ -6112,16 +6177,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/504"
+        "$ref": "#/511"
       },
       {
-        "$ref": "#/505"
+        "$ref": "#/512"
       },
       {
-        "$ref": "#/506"
+        "$ref": "#/513"
       },
       {
-        "$ref": "#/507"
+        "$ref": "#/514"
       },
       {
         "$ref": "#/2"
@@ -6131,7 +6196,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/508"
+      "$ref": "#/515"
     }
   },
   {
@@ -6181,10 +6246,10 @@
     "resourceType": "Microsoft.AVS/privateClouds/scriptExecutions",
     "apiVersion": "2023-09-01",
     "output": {
-      "$ref": "#/510"
+      "$ref": "#/517"
     },
     "input": {
-      "$ref": "#/509"
+      "$ref": "#/516"
     }
   }
 ]

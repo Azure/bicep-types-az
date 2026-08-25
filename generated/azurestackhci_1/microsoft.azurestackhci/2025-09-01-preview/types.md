@@ -225,6 +225,31 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureStackHCI/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function pause (Microsoft.AzureStackHCI/virtualMachineInstances@2025-09-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachineInstances
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
+
+## Function restart (Microsoft.AzureStackHCI/virtualMachineInstances@2025-09-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachineInstances
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
+
+## Function save (Microsoft.AzureStackHCI/virtualMachineInstances@2025-09-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachineInstances
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
+
+## Function start (Microsoft.AzureStackHCI/virtualMachineInstances@2025-09-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachineInstances
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.AzureStackHCI/virtualMachineInstances@2025-09-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachineInstances
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
+
 ## Function upload (Microsoft.AzureStackHCI/virtualHardDisks@2025-09-01-preview)
 * **Resource**: Microsoft.AzureStackHCI/virtualHardDisks
 * **ApiVersion**: 2025-09-01-preview

@@ -23,6 +23,18 @@
 * **tags**: [Tags](#tags): the resource tags.
 * **type**: 'Microsoft.ProfessionalService/resources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function unsubscribe (Microsoft.ProfessionalService/resources@2023-07-01-preview)
+* **Resource**: Microsoft.ProfessionalService/resources
+* **ApiVersion**: 2023-07-01-preview
+* **Input**: [DeleteOptions](#deleteoptions)
+* **Output**: any
+
+## DeleteOptions
+### Properties
+* **feedback**: string: the feedback
+* **reasonCode**: int: The reasonCode
+* **unsubscribeOnly**: bool: whether it is unsubscribeOnly
+
 ## ProfessionalServiceCreationPropertiesOrProfessionalServiceResourceProperties
 ### Properties
 * **autoRenew**: bool: Whether the ProfessionalService subscription will auto renew upon term end.

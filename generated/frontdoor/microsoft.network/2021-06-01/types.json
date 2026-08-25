@@ -4111,5 +4111,41 @@
     "itemType": {
       "$ref": "#/2"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.Network/frontDoors",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/387"
+    },
+    "input": {
+      "$ref": "#/385"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableHttps",
+    "resourceType": "Microsoft.Network/frontDoors/frontendEndpoints",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/387"
+    },
+    "input": {
+      "$ref": "#/216"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableHttps",
+    "resourceType": "Microsoft.Network/frontDoors/frontendEndpoints",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/387"
+    }
   }
 ]

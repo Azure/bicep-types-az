@@ -389,6 +389,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.MachineLearningServices/workspaces/jobs@2023-04-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/jobs
+* **ApiVersion**: 2023-04-01
+* **Output**: any
+
 ## Function diagnose (Microsoft.MachineLearningServices/workspaces@2023-04-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2023-04-01
@@ -451,11 +456,32 @@
 * **ApiVersion**: 2023-04-01
 * **Output**: [NotebookResourceInfo](#notebookresourceinfo)
 
+## Function regenerateKeys (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2023-04-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2023-04-01
+* **Input**: [RegenerateEndpointKeysRequest](#regenerateendpointkeysrequest)
+* **Output**: any
+
 ## Function removeRegions (Microsoft.MachineLearningServices/registries@2023-04-01)
 * **Resource**: Microsoft.MachineLearningServices/registries
 * **ApiVersion**: 2023-04-01
 * **Input**: [Registry](#registry)
 * **Output**: [Registry](#registry)
+
+## Function restart (Microsoft.MachineLearningServices/workspaces/computes@2023-04-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-04-01
+* **Output**: any
+
+## Function resyncKeys (Microsoft.MachineLearningServices/workspaces@2023-04-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2023-04-01
+* **Output**: any
+
+## Function start (Microsoft.MachineLearningServices/workspaces/computes@2023-04-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-04-01
+* **Output**: any
 
 ## Function startPendingUpload (Microsoft.MachineLearningServices/registries/codes/versions@2023-04-01)
 * **Resource**: Microsoft.MachineLearningServices/registries/codes/versions
@@ -480,6 +506,11 @@
 * **ApiVersion**: 2023-04-01
 * **Input**: [PendingUploadRequestDto](#pendinguploadrequestdto)
 * **Output**: [PendingUploadResponseDto](#pendinguploadresponsedto)
+
+## Function stop (Microsoft.MachineLearningServices/workspaces/computes@2023-04-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-04-01
+* **Output**: any
 
 ## Function token (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2023-04-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
@@ -2506,6 +2537,11 @@ TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.c
 * **minutes**: int[] (Required): [Required] List of minutes for the schedule.
 * **monthDays**: int[]: List of month days for the schedule
 * **weekDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: List of days for the schedule.
+
+## RegenerateEndpointKeysRequest
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string (Required): [Required] Specification for which type of key to generate. Primary or Secondary.
+* **keyValue**: string: The value the key is set to.
 
 ## Registry
 ### Properties

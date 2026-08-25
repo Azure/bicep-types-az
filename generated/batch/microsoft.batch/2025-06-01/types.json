@@ -5131,6 +5131,15 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "syncAutoStorageKeys",
+    "resourceType": "Microsoft.Batch/batchAccounts",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/155"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CheckNameAvailabilityParameters",
     "properties": {
@@ -5143,7 +5152,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/373"
+          "$ref": "#/374"
         },
         "flags": 1,
         "description": "The resource type."
@@ -5167,7 +5176,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/377"
+          "$ref": "#/378"
         },
         "flags": 2,
         "description": "Gets the reason that a Batch account name could not be used. The Reason element is only returned if NameAvailable is false."
@@ -5193,10 +5202,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/375"
+        "$ref": "#/376"
       },
       {
-        "$ref": "#/376"
+        "$ref": "#/377"
       }
     ]
   },
@@ -5206,10 +5215,10 @@
     "resourceType": "Microsoft.Batch/locations",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/374"
+      "$ref": "#/375"
     },
     "input": {
-      "$ref": "#/372"
+      "$ref": "#/373"
     }
   },
   {
@@ -5245,7 +5254,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/381"
+          "$ref": "#/382"
         },
         "flags": 0,
         "description": "The tags of the resource."
@@ -5294,10 +5303,19 @@
     "resourceType": "Microsoft.Batch/batchAccounts/applications/versions",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/380"
+      "$ref": "#/381"
     },
     "input": {
-      "$ref": "#/379"
+      "$ref": "#/380"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.Batch/batchAccounts/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/155"
     }
   },
   {
@@ -5327,7 +5345,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/384"
+          "$ref": "#/386"
         },
         "flags": 0,
         "description": "The tags of the resource."
@@ -5376,7 +5394,7 @@
     "resourceType": "Microsoft.Batch/batchAccounts/pools",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/383"
+      "$ref": "#/385"
     }
   },
   {
@@ -5385,7 +5403,7 @@
     "resourceType": "Microsoft.Batch/batchAccounts/pools",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/383"
+      "$ref": "#/385"
     }
   }
 ]

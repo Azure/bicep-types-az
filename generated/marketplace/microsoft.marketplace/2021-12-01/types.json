@@ -2204,12 +2204,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "withdrawPlan",
+    "resourceType": "Microsoft.Marketplace/privateStores/requestApprovals",
+    "apiVersion": "2021-12-01",
+    "output": {
+      "$ref": "#/36"
+    },
+    "input": {
+      "$ref": "#/146"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AcknowledgeOfferNotificationProperties",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/150"
         },
         "flags": 0,
         "description": "Notification update request payload details"
@@ -2243,14 +2255,14 @@
       },
       "addPlans": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/151"
         },
         "flags": 0,
         "description": "Gets or sets added plans"
       },
       "removePlans": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/152"
         },
         "flags": 0,
         "description": "Gets or sets remove plans"
@@ -2270,12 +2282,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "acknowledgeNotification",
+    "resourceType": "Microsoft.Marketplace/privateStores/offers",
+    "apiVersion": "2021-12-01",
+    "output": {
+      "$ref": "#/36"
+    },
+    "input": {
+      "$ref": "#/149"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "TransferOffersProperties",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/153"
+          "$ref": "#/155"
         },
         "flags": 0,
         "description": "transfer offers properties details"
@@ -2288,7 +2312,7 @@
     "properties": {
       "targetCollections": {
         "type": {
-          "$ref": "#/154"
+          "$ref": "#/156"
         },
         "flags": 0,
         "description": "Target collections ids"
@@ -2302,7 +2326,7 @@
       },
       "offerIdsList": {
         "type": {
-          "$ref": "#/155"
+          "$ref": "#/157"
         },
         "flags": 0,
         "description": "Offers ids list to transfer from source collection to target collection(s)"
@@ -2327,14 +2351,14 @@
     "properties": {
       "succeeded": {
         "type": {
-          "$ref": "#/157"
+          "$ref": "#/159"
         },
         "flags": 0,
         "description": "Succeeded collections"
       },
       "failed": {
         "type": {
-          "$ref": "#/158"
+          "$ref": "#/160"
         },
         "flags": 0,
         "description": "Failed collections"
@@ -2359,10 +2383,10 @@
     "resourceType": "Microsoft.Marketplace/privateStores/collections",
     "apiVersion": "2021-12-01",
     "output": {
-      "$ref": "#/156"
+      "$ref": "#/158"
     },
     "input": {
-      "$ref": "#/152"
+      "$ref": "#/154"
     }
   }
 ]

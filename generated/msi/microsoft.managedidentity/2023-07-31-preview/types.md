@@ -37,6 +37,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ManagedIdentity/userAssignedIdentities/federatedIdentityCredentials' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function revokeTokens (Microsoft.ManagedIdentity/userAssignedIdentities@2023-07-31-preview)
+* **Resource**: Microsoft.ManagedIdentity/userAssignedIdentities
+* **ApiVersion**: 2023-07-31-preview
+* **Output**: any
+
 ## FederatedIdentityCredentialProperties
 ### Properties
 * **audiences**: string[] (Required): The list of audiences that can appear in the issued token.

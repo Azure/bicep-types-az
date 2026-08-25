@@ -84,6 +84,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ContainerService/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function abort (Microsoft.ContainerService/managedclusters@2022-08-03-preview)
+* **Resource**: Microsoft.ContainerService/managedclusters
+* **ApiVersion**: 2022-08-03-preview
+* **Output**: any
+
+## Function abort (Microsoft.ContainerService/managedclusters/agentPools@2022-08-03-preview)
+* **Resource**: Microsoft.ContainerService/managedclusters/agentPools
+* **ApiVersion**: 2022-08-03-preview
+* **Output**: any
+
 ## Function listClusterAdminCredential (Microsoft.ContainerService/managedClusters@2022-08-03-preview)
 * **Resource**: Microsoft.ContainerService/managedClusters
 * **ApiVersion**: 2022-08-03-preview
@@ -104,11 +114,33 @@
 * **ApiVersion**: 2022-08-03-preview
 * **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
 
+## Function resetAADProfile (Microsoft.ContainerService/managedClusters@2022-08-03-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2022-08-03-preview
+* **Input**: [ManagedClusterAADProfile](#managedclusteraadprofile)
+* **Output**: any
+
+## Function resetServicePrincipalProfile (Microsoft.ContainerService/managedClusters@2022-08-03-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2022-08-03-preview
+* **Input**: [ManagedClusterServicePrincipalProfile](#managedclusterserviceprincipalprofile)
+* **Output**: any
+
 ## Function resolvePrivateLinkServiceId (Microsoft.ContainerService/managedClusters@2022-08-03-preview)
 * **Resource**: Microsoft.ContainerService/managedClusters
 * **ApiVersion**: 2022-08-03-preview
 * **Input**: [PrivateLinkResource](#privatelinkresource)
 * **Output**: [PrivateLinkResource](#privatelinkresource)
+
+## Function rotateClusterCertificates (Microsoft.ContainerService/managedClusters@2022-08-03-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2022-08-03-preview
+* **Output**: any
+
+## Function rotateServiceAccountSigningKeys (Microsoft.ContainerService/managedClusters@2022-08-03-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2022-08-03-preview
+* **Output**: any
 
 ## Function runCommand (Microsoft.ContainerService/managedClusters@2022-08-03-preview)
 * **Resource**: Microsoft.ContainerService/managedClusters
@@ -116,9 +148,31 @@
 * **Input**: [RunCommandRequest](#runcommandrequest)
 * **Output**: [RunCommandResult](#runcommandresult)
 
+## Function start (Microsoft.ContainerService/managedClusters@2022-08-03-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2022-08-03-preview
+* **Output**: any
+
+## Function stop (Microsoft.ContainerService/managedClusters@2022-08-03-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2022-08-03-preview
+* **Output**: any
+
+## Function upgradeNodeImageVersion (Microsoft.ContainerService/managedClusters/agentPools@2022-08-03-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters/agentPools
+* **ApiVersion**: 2022-08-03-preview
+* **Output**: [AgentPool](#agentpool)
+
 ## AccessProfile
 ### Properties
 * **kubeConfig**: any: Base64-encoded Kubernetes configuration file.
+
+## AgentPool
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **properties**: [ManagedClusterAgentPoolProfileProperties](#managedclusteragentpoolprofileproperties): Properties of an agent pool.
+* **type**: string (ReadOnly): Resource type
 
 ## AgentPoolNetworkProfile
 ### Properties

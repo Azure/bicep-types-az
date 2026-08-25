@@ -657,6 +657,78 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AcceptOwnershipRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Accept subscription ownership request properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcceptOwnershipRequestProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The friendly name of the subscription."
+      },
+      "managementGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Management group Id for the subscription."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "Tags for the subscription"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcceptOwnershipRequestPropertiesTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acceptOwnership",
+    "resourceType": "Microsoft.Subscription/subscriptions",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/50"
+    },
+    "input": {
+      "$ref": "#/47"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acceptChangeTenant",
+    "resourceType": "Microsoft.Subscription/subscriptions",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/50"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "TargetDirectoryStatusResult",
     "properties": {
       "status": {
@@ -674,7 +746,7 @@
     "resourceType": "Microsoft.Subscription/subscriptions",
     "apiVersion": "2024-08-01-preview",
     "output": {
-      "$ref": "#/47"
+      "$ref": "#/53"
     }
   }
 ]

@@ -12,11 +12,13 @@ warning | Skipping resource POST action path '/providers/Microsoft.Support/class
 warning | Skipping resource POST action path '/providers/Microsoft.Support/lookUpResourceId': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Support/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Support/classifyServices': Unable to find type segments
+warning | Resource action upload under path '/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}/upload' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/providers/Microsoft.Support/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Support/checkNameAvailability': Unable to find type segments
+warning | Resource action upload under path '/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}/upload' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -29,6 +31,7 @@ warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/pr
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Support/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.Support/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.Support/lookUpResourceId': Unable to find type segments
+warning | Resource action upload under path '/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}/upload' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -38,6 +41,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Support/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.Support/checkNameAvailability': Unable to find type segments
+warning | Resource action upload under path '/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}/upload' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'

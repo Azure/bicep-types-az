@@ -1440,11 +1440,54 @@ az sql elastic-pool list-editions -l <location> -o table
 * **Input**: [ServerDnsAliasAcquisition](#serverdnsaliasacquisition)
 * **Output**: [ServerDnsAlias](#serverdnsalias)
 
+## Function cancel (Microsoft.Sql/servers/databases/operations@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/operations
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function cancel (Microsoft.Sql/servers/elasticPools/operations@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/elasticPools/operations
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function cancel (Microsoft.Sql/servers/jobAgents/jobs/executions@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/jobAgents/jobs/executions
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function cancel (Microsoft.Sql/managedInstances/operations@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/operations
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function cancelMove (Microsoft.Sql/managedInstances/databases@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/databases
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [ManagedDatabaseMoveDefinition](#manageddatabasemovedefinition)
+* **Output**: any
+
+## Function cancelSync (Microsoft.Sql/servers/databases/syncGroups@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/syncGroups
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
 ## Function changeAccessTier (Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups
 * **ApiVersion**: 2025-02-01-preview
 * **Input**: [ChangeLongTermRetentionBackupAccessTierParameters](#changelongtermretentionbackupaccesstierparameters)
 * **Output**: [LongTermRetentionBackup](#longtermretentionbackup)
+
+## Function completeMove (Microsoft.Sql/managedInstances/databases@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/databases
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [ManagedDatabaseMoveDefinition](#manageddatabasemovedefinition)
+* **Output**: any
+
+## Function completeRestore (Microsoft.Sql/managedInstances/databases@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/databases
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [CompleteDatabaseRestoreDefinition](#completedatabaserestoredefinition)
+* **Output**: any
 
 ## Function copy (Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups
@@ -1457,10 +1500,30 @@ az sql elastic-pool list-editions -l <location> -o table
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [LedgerDigestUploads](#ledgerdigestuploads)
 
+## Function disable (Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
 ## Function disable (Microsoft.Sql/managedInstances/databases/ledgerDigestUploads@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/managedInstances/databases/ledgerDigestUploads
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [ManagedLedgerDigestUploads](#managedledgerdigestuploads)
+
+## Function disable (Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function enable (Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function enable (Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
 
 ## Function export (Microsoft.Sql/servers/databases@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/servers/databases
@@ -1478,11 +1541,21 @@ az sql elastic-pool list-editions -l <location> -o table
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [DatabaseVulnerabilityAssessmentScansExport](#databasevulnerabilityassessmentscansexport)
 
+## Function failover (Microsoft.Sql/servers/databases@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
 ## Function failover (Microsoft.Sql/managedInstances/distributedAvailabilityGroups@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/managedInstances/distributedAvailabilityGroups
 * **ApiVersion**: 2025-02-01-preview
 * **Input**: [DistributedAvailabilityGroupsFailoverRequest](#distributedavailabilitygroupsfailoverrequest)
 * **Output**: [DistributedAvailabilityGroup](#distributedavailabilitygroup)
+
+## Function failover (Microsoft.Sql/servers/elasticPools@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/elasticPools
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
 
 ## Function failover (Microsoft.Sql/servers/failoverGroups@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/servers/failoverGroups
@@ -1493,6 +1566,11 @@ az sql elastic-pool list-editions -l <location> -o table
 * **Resource**: Microsoft.Sql/locations/instanceFailoverGroups
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [InstanceFailoverGroup](#instancefailovergroup)
+
+## Function failover (Microsoft.Sql/managedInstances@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
 
 ## Function failover (Microsoft.Sql/servers/databases/replicationLinks@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/servers/databases/replicationLinks
@@ -1531,10 +1609,31 @@ az sql elastic-pool list-editions -l <location> -o table
 * **Input**: [ImportNewDatabaseDefinition](#importnewdatabasedefinition)
 * **Output**: [ImportExportOperationResult](#importexportoperationresult)
 
+## Function initiateScan (Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function initiateScan (Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function initiateScan (Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
 ## Function lockTimeBasedImmutability (Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [LongTermRetentionBackup](#longtermretentionbackup)
+
+## Function move (Microsoft.Sql/servers/databases@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [ResourceMoveDefinition](#resourcemovedefinition)
+* **Output**: any
 
 ## Function pause (Microsoft.Sql/servers/databases@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/servers/databases
@@ -1556,6 +1655,11 @@ az sql elastic-pool list-editions -l <location> -o table
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [ManagedDatabase](#manageddatabase)
 
+## Function reevaluateInaccessibleDatabaseState (Microsoft.Sql/managedInstances@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
 ## Function refreshExternalGovernanceStatus (Microsoft.Sql/managedInstances@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/managedInstances
 * **ApiVersion**: 2025-02-01-preview
@@ -1565,6 +1669,16 @@ az sql elastic-pool list-editions -l <location> -o table
 * **Resource**: Microsoft.Sql/servers
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [RefreshExternalGovernanceStatusOperationResult](#refreshexternalgovernancestatusoperationresult)
+
+## Function refreshHubSchema (Microsoft.Sql/servers/databases/syncGroups@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/syncGroups
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function refreshSchema (Microsoft.Sql/servers/databases/syncGroups/syncMembers@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/syncGroups/syncMembers
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
 
 ## Function removeLegalHoldImmutability (Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups
@@ -1592,6 +1706,26 @@ az sql elastic-pool list-editions -l <location> -o table
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [LogicalDatabaseTransparentDataEncryption](#logicaldatabasetransparentdataencryption)
 
+## Function revalidate (Microsoft.Sql/servers/databases/encryptionProtector@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/encryptionProtector
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function revalidate (Microsoft.Sql/servers/encryptionProtector@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/encryptionProtector
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function revalidate (Microsoft.Sql/managedInstances/encryptionProtector@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/encryptionProtector
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function revert (Microsoft.Sql/servers/databases/encryptionProtector@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/encryptionProtector
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
 ## Function setLegalHoldImmutability (Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups
 * **ApiVersion**: 2025-02-01-preview
@@ -1613,6 +1747,12 @@ az sql elastic-pool list-editions -l <location> -o table
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [ManagedInstance](#managedinstance)
 
+## Function startMove (Microsoft.Sql/managedInstances/databases@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/databases
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [ManagedDatabaseStartMoveDefinition](#manageddatabasestartmovedefinition)
+* **Output**: any
+
 ## Function stop (Microsoft.Sql/managedInstances@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/managedInstances
 * **ApiVersion**: 2025-02-01-preview
@@ -1622,6 +1762,23 @@ az sql elastic-pool list-editions -l <location> -o table
 * **Resource**: Microsoft.Sql/servers/databases/transparentDataEncryption
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [LogicalDatabaseTransparentDataEncryption](#logicaldatabasetransparentdataencryption)
+
+## Function tdeCertificates (Microsoft.Sql/managedInstances@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [TdeCertificate](#tdecertificate)
+* **Output**: any
+
+## Function tdeCertificates (Microsoft.Sql/servers@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [TdeCertificate](#tdecertificate)
+* **Output**: any
+
+## Function triggerSync (Microsoft.Sql/servers/databases/syncGroups@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/syncGroups
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
 
 ## Function tryPlannedBeforeForcedFailover (Microsoft.Sql/servers/failoverGroups@2025-02-01-preview)
 * **Resource**: Microsoft.Sql/servers/failoverGroups
@@ -1638,6 +1795,17 @@ az sql elastic-pool list-editions -l <location> -o table
 * **Resource**: Microsoft.Sql/virtualClusters
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [UpdateVirtualClusterDnsServersOperation](#updatevirtualclusterdnsserversoperation)
+
+## Function upgradeDataWarehouse (Microsoft.Sql/servers/databases@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
+## Function validateAzureKeyVaultEncryptionKey (Microsoft.Sql/managedInstances@2025-02-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [ManagedInstanceValidateAzureKeyVaultEncryptionKeyRequest](#managedinstancevalidateazurekeyvaultencryptionkeyrequest)
+* **Output**: any
 
 ## AdministratorProperties
 ### Properties
@@ -1721,6 +1889,10 @@ az sql elastic-pool list-editions -l <location> -o table
 ### Properties
 * **backupStorageAccessTier**: string (Required): The long term retention backup storage access tier
 * **operationMode**: string (Required): The operation mode when updating ltr backup storage access tier
+
+## CompleteDatabaseRestoreDefinition
+### Properties
+* **lastBackupName**: string (Required): The last backup name to apply
 
 ## CopyLongTermRetentionBackupParameters
 ### Properties
@@ -2766,6 +2938,10 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **inaccessibilityReasonKind**: 'DatabaseReplication' | 'TransparentDataEncryption' | 'Unknown' | string (Required, ReadOnly): Root cause kind. Allowed values are “TransparentDataEncryption”, “DatabaseReplication”, and “Unknown”.
 * **inaccessibilityReasonTdeKeyUri**: string (ReadOnly): For the root cause kind “TransparentDataEncryption”, the CMK URI.
 
+## ManagedDatabaseMoveDefinition
+### Properties
+* **destinationManagedDatabaseId**: string (Required): The destination managed database ID
+
 ## ManagedDatabaseMoveOperationResultProperties
 ### Properties
 * **errorCode**: int (ReadOnly): The operation error code.
@@ -2848,6 +3024,11 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## ManagedDatabaseRestoreDetailsUnrestorableFileProperties
 ### Properties
 * **name**: string (ReadOnly): File name.
+
+## ManagedDatabaseStartMoveDefinition
+### Properties
+* **destinationManagedDatabaseId**: string (Required): The destination managed database ID
+* **operationMode**: 'Copy' | 'Move' | string: The move operation mode.
 
 ## ManagedInstance
 ### Properties
@@ -3053,6 +3234,10 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **vCores**: int: The number of vCores. Allowed values: 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96, 128. Supported vCores depends on the selected hardware family and service tier.
 * **virtualClusterId**: string (ReadOnly): Virtual cluster resource id for the Managed Instance.
 * **zoneRedundant**: bool: Whether or not the zone-redundancy is enabled.
+
+## ManagedInstanceValidateAzureKeyVaultEncryptionKeyRequest
+### Properties
+* **tdeKeyUri**: string (Required, WriteOnly): The URI of the key.
 
 ## ManagedInstanceVulnerabilityAssessmentProperties
 ### Properties
@@ -3385,6 +3570,10 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentity](#useridentity)
+
+## ResourceMoveDefinition
+### Properties
+* **id**: string (Required): The target ID for the resource
 
 ## RestorableDroppedDatabaseProperties
 ### Properties
@@ -3832,6 +4021,19 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TdeCertificate
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [TdeCertificateProperties](#tdecertificateproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## TdeCertificateProperties
+### Properties
+* **certPassword**: string (WriteOnly): The certificate password.
+* **privateBlob**: string (Required, WriteOnly): The base64 encoded certificate private blob.
 
 ## TimeZoneProperties
 ### Properties

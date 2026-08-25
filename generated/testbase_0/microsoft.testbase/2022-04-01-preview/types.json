@@ -4095,6 +4095,18 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "offboard",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts",
+    "apiVersion": "2022-04-01-preview",
+    "output": {
+      "$ref": "#/336"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "GetFileUploadURLParameters",
     "properties": {
@@ -4133,10 +4145,10 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/337"
+      "$ref": "#/339"
     },
     "input": {
-      "$ref": "#/336"
+      "$ref": "#/338"
     }
   },
   {
@@ -4186,7 +4198,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/343"
+          "$ref": "#/345"
         },
         "flags": 0,
         "description": "The reason for unavailability of a name. Required if nameAvailable == false."
@@ -4212,10 +4224,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/341"
+        "$ref": "#/343"
       },
       {
-        "$ref": "#/342"
+        "$ref": "#/344"
       },
       {
         "$ref": "#/0"
@@ -4228,10 +4240,10 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/340"
+      "$ref": "#/342"
     },
     "input": {
-      "$ref": "#/339"
+      "$ref": "#/341"
     }
   },
   {
@@ -4246,7 +4258,7 @@
       },
       "incrementEntries": {
         "type": {
-          "$ref": "#/347"
+          "$ref": "#/349"
         },
         "flags": 0
       }
@@ -4285,7 +4297,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/346"
+      "$ref": "#/348"
     }
   },
   {
@@ -4294,7 +4306,7 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/345"
+      "$ref": "#/347"
     }
   },
   {
@@ -4351,13 +4363,13 @@
       },
       "packageUsageEntries": {
         "type": {
-          "$ref": "#/358"
+          "$ref": "#/360"
         },
         "flags": 0
       },
       "nextRequest": {
         "type": {
-          "$ref": "#/349"
+          "$ref": "#/351"
         },
         "flags": 0
       }
@@ -4405,7 +4417,7 @@
       },
       "usageEntriesGroupedByUpdateType": {
         "type": {
-          "$ref": "#/357"
+          "$ref": "#/359"
         },
         "flags": 0
       }
@@ -4441,7 +4453,7 @@
       },
       "usageGroups": {
         "type": {
-          "$ref": "#/356"
+          "$ref": "#/358"
         },
         "flags": 0
       }
@@ -4513,7 +4525,7 @@
       },
       "executionUsageDetails": {
         "type": {
-          "$ref": "#/355"
+          "$ref": "#/357"
         },
         "flags": 0
       }
@@ -4612,6 +4624,18 @@
   {
     "$type": "ArrayType",
     "itemType": {
+      "$ref": "#/356"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/355"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
       "$ref": "#/354"
     }
   },
@@ -4622,27 +4646,24 @@
     }
   },
   {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/352"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/351"
-    }
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "getUsage",
     "resourceType": "Microsoft.TestBase/testBaseAccounts",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/350"
+      "$ref": "#/352"
     },
     "input": {
-      "$ref": "#/349"
+      "$ref": "#/351"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "hardDelete",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/packages",
+    "apiVersion": "2022-04-01-preview",
+    "output": {
+      "$ref": "#/336"
     }
   },
   {
@@ -4651,7 +4672,7 @@
     "properties": {
       "downloadUrl": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/364"
         },
         "flags": 2,
         "description": "The download URL."
@@ -4675,7 +4696,7 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts/packages",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/360"
+      "$ref": "#/363"
     }
   },
   {
@@ -4684,14 +4705,14 @@
     "properties": {
       "testType": {
         "type": {
-          "$ref": "#/366"
+          "$ref": "#/369"
         },
         "flags": 1,
         "description": "The type of the test."
       },
       "osUpdateType": {
         "type": {
-          "$ref": "#/369"
+          "$ref": "#/372"
         },
         "flags": 0,
         "description": "Specifies the OS update type to test against."
@@ -4731,10 +4752,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/364"
+        "$ref": "#/367"
       },
       {
-        "$ref": "#/365"
+        "$ref": "#/368"
       },
       {
         "$ref": "#/0"
@@ -4753,10 +4774,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/367"
+        "$ref": "#/370"
       },
       {
-        "$ref": "#/368"
+        "$ref": "#/371"
       },
       {
         "$ref": "#/0"
@@ -4765,11 +4786,23 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "runTest",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/packages",
+    "apiVersion": "2022-04-01-preview",
+    "output": {
+      "$ref": "#/336"
+    },
+    "input": {
+      "$ref": "#/366"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "getDownloadUrl",
     "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/360"
+      "$ref": "#/363"
     }
   },
   {
@@ -4778,7 +4811,7 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/360"
+      "$ref": "#/363"
     }
   },
   {
@@ -4800,10 +4833,10 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/360"
+      "$ref": "#/363"
     },
     "input": {
-      "$ref": "#/372"
+      "$ref": "#/376"
     }
   }
 ]

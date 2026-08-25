@@ -6846,12 +6846,33 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs",
+    "apiVersion": "2024-05-01-preview",
+    "output": {
+      "$ref": "#/634"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "connect",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs",
+    "apiVersion": "2024-05-01-preview",
+    "output": {
+      "$ref": "#/634"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CatalogResourceValidationErrorDetails",
     "properties": {
       "errors": {
         "type": {
-          "$ref": "#/635"
+          "$ref": "#/638"
         },
         "flags": 2,
         "description": "Errors associated with resources synchronized from the catalog."
@@ -6870,7 +6891,7 @@
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions",
     "apiVersion": "2024-05-01-preview",
     "output": {
-      "$ref": "#/634"
+      "$ref": "#/637"
     }
   },
   {
@@ -6879,7 +6900,7 @@
     "resourceType": "Microsoft.DevCenter/projects/catalogs/environmentDefinitions",
     "apiVersion": "2024-05-01-preview",
     "output": {
-      "$ref": "#/634"
+      "$ref": "#/637"
     }
   },
   {
@@ -6893,8 +6914,44 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
+    "apiVersion": "2024-05-01-preview",
+    "output": {
+      "$ref": "#/634"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "connect",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
+    "apiVersion": "2024-05-01-preview",
+    "output": {
+      "$ref": "#/634"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "getErrorDetails",
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/tasks",
+    "apiVersion": "2024-05-01-preview",
+    "output": {
+      "$ref": "#/637"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runHealthChecks",
+    "resourceType": "Microsoft.DevCenter/projects/pools",
+    "apiVersion": "2024-05-01-preview",
+    "output": {
+      "$ref": "#/634"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runHealthChecks",
+    "resourceType": "Microsoft.DevCenter/networkConnections",
     "apiVersion": "2024-05-01-preview",
     "output": {
       "$ref": "#/634"

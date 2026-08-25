@@ -19,6 +19,16 @@
 * **Input**: [CheckServerNameAvailabilityParameters](#checkservernameavailabilityparameters)
 * **Output**: [CheckServerNameAvailabilityResult](#checkservernameavailabilityresult)
 
+## Function resume (Microsoft.AnalysisServices/servers@2016-05-16)
+* **Resource**: Microsoft.AnalysisServices/servers
+* **ApiVersion**: 2016-05-16
+* **Output**: any
+
+## Function suspend (Microsoft.AnalysisServices/servers@2016-05-16)
+* **Resource**: Microsoft.AnalysisServices/servers
+* **ApiVersion**: 2016-05-16
+* **Output**: any
+
 ## AnalysisServicesServerProperties
 ### Properties
 * **asAdministrators**: [ServerAdministrators](#serveradministrators): A collection of AS server administrators

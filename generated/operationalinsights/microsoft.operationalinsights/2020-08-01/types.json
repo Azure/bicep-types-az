@@ -2009,6 +2009,24 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "Disable",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/intelligencePacks",
+    "apiVersion": "2020-08-01",
+    "output": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Enable",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/intelligencePacks",
+    "apiVersion": "2020-08-01",
+    "output": {
+      "$ref": "#/17"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SharedKeys",
     "properties": {
@@ -2034,7 +2052,7 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2020-08-01",
     "output": {
-      "$ref": "#/173"
+      "$ref": "#/175"
     }
   },
   {
@@ -2043,7 +2061,7 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2020-08-01",
     "output": {
-      "$ref": "#/173"
+      "$ref": "#/175"
     }
   },
   {
@@ -2052,14 +2070,14 @@
     "properties": {
       "metadata": {
         "type": {
-          "$ref": "#/177"
+          "$ref": "#/179"
         },
         "flags": 0,
         "description": "The metadata from search results."
       },
       "value": {
         "type": {
-          "$ref": "#/188"
+          "$ref": "#/190"
         },
         "flags": 0,
         "description": "The array of result values."
@@ -2107,7 +2125,7 @@
       },
       "coreSummaries": {
         "type": {
-          "$ref": "#/179"
+          "$ref": "#/181"
         },
         "flags": 0,
         "description": "The core summaries."
@@ -2142,7 +2160,7 @@
       },
       "sort": {
         "type": {
-          "$ref": "#/184"
+          "$ref": "#/186"
         },
         "flags": 0,
         "description": "How the results are sorted."
@@ -2184,7 +2202,7 @@
       },
       "schema": {
         "type": {
-          "$ref": "#/185"
+          "$ref": "#/187"
         },
         "flags": 0,
         "description": "The schema."
@@ -2214,7 +2232,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/178"
+      "$ref": "#/180"
     }
   },
   {
@@ -2230,7 +2248,7 @@
       },
       "order": {
         "type": {
-          "$ref": "#/183"
+          "$ref": "#/185"
         },
         "flags": 0,
         "description": "The sort order of the search."
@@ -2249,10 +2267,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/181"
+        "$ref": "#/183"
       },
       {
-        "$ref": "#/182"
+        "$ref": "#/184"
       },
       {
         "$ref": "#/2"
@@ -2262,7 +2280,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/180"
+      "$ref": "#/182"
     }
   },
   {
@@ -2333,7 +2351,7 @@
       },
       "ownerType": {
         "type": {
-          "$ref": "#/187"
+          "$ref": "#/189"
         },
         "flags": 0,
         "description": "The array of workflows containing the field."
@@ -2349,7 +2367,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/186"
+      "$ref": "#/188"
     }
   },
   {
@@ -2358,7 +2376,92 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2020-08-01",
     "output": {
-      "$ref": "#/176"
+      "$ref": "#/178"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeBody",
+    "properties": {
+      "table": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Table from which to purge data."
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/194"
+        },
+        "flags": 1,
+        "description": "The set of columns and filters (queries) to run over them to purge the resulting data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeBodyFilters",
+    "properties": {
+      "column": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The column of the table over which the given query should run"
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A query operator to evaluate over the provided column and value(s). Supported operators are ==, =~, in, in~, >, >=, <, <=, between, and have the same behavior as they would in a KQL query."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "the value for the operator to function over. This can be a number (e.g., > 100), a string (timestamp >= '2017-09-01') or array of values."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "When filtering over custom dimensions, this key will be used as the name of the custom dimension."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/193"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeResponse",
+    "properties": {
+      "operationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Id to use when querying for status for a particular purge operation."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2020-08-01",
+    "output": {
+      "$ref": "#/195"
+    },
+    "input": {
+      "$ref": "#/192"
     }
   }
 ]

@@ -105,6 +105,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ContainerService/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function abort (Microsoft.ContainerService/managedclusters@2025-05-01)
+* **Resource**: Microsoft.ContainerService/managedclusters
+* **ApiVersion**: 2025-05-01
+* **Output**: any
+
+## Function abort (Microsoft.ContainerService/managedclusters/agentPools@2025-05-01)
+* **Resource**: Microsoft.ContainerService/managedclusters/agentPools
+* **ApiVersion**: 2025-05-01
+* **Output**: any
+
+## Function deleteMachines (Microsoft.ContainerService/managedClusters/agentPools@2025-05-01)
+* **Resource**: Microsoft.ContainerService/managedClusters/agentPools
+* **ApiVersion**: 2025-05-01
+* **Input**: [AgentPoolDeleteMachinesParameter](#agentpooldeletemachinesparameter)
+* **Output**: any
+
 ## Function listClusterAdminCredential (Microsoft.ContainerService/managedClusters@2025-05-01)
 * **Resource**: Microsoft.ContainerService/managedClusters
 * **ApiVersion**: 2025-05-01
@@ -125,17 +141,54 @@
 * **ApiVersion**: 2025-05-01
 * **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
 
+## Function resetAADProfile (Microsoft.ContainerService/managedClusters@2025-05-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2025-05-01
+* **Input**: [ManagedClusterAADProfile](#managedclusteraadprofile)
+* **Output**: any
+
+## Function resetServicePrincipalProfile (Microsoft.ContainerService/managedClusters@2025-05-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2025-05-01
+* **Input**: [ManagedClusterServicePrincipalProfile](#managedclusterserviceprincipalprofile)
+* **Output**: any
+
 ## Function resolvePrivateLinkServiceId (Microsoft.ContainerService/managedClusters@2025-05-01)
 * **Resource**: Microsoft.ContainerService/managedClusters
 * **ApiVersion**: 2025-05-01
 * **Input**: [PrivateLinkResource](#privatelinkresource)
 * **Output**: [PrivateLinkResource](#privatelinkresource)
 
+## Function rotateClusterCertificates (Microsoft.ContainerService/managedClusters@2025-05-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2025-05-01
+* **Output**: any
+
+## Function rotateServiceAccountSigningKeys (Microsoft.ContainerService/managedClusters@2025-05-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2025-05-01
+* **Output**: any
+
 ## Function runCommand (Microsoft.ContainerService/managedClusters@2025-05-01)
 * **Resource**: Microsoft.ContainerService/managedClusters
 * **ApiVersion**: 2025-05-01
 * **Input**: [RunCommandRequest](#runcommandrequest)
 * **Output**: [RunCommandResult](#runcommandresult)
+
+## Function start (Microsoft.ContainerService/managedClusters@2025-05-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2025-05-01
+* **Output**: any
+
+## Function stop (Microsoft.ContainerService/managedClusters@2025-05-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2025-05-01
+* **Output**: any
+
+## Function upgradeNodeImageVersion (Microsoft.ContainerService/managedClusters/agentPools@2025-05-01)
+* **Resource**: Microsoft.ContainerService/managedClusters/agentPools
+* **ApiVersion**: 2025-05-01
+* **Output**: [AgentPool](#agentpool)
 
 ## AbsoluteMonthlySchedule
 ### Properties
@@ -159,6 +212,17 @@
 ## AdvancedNetworkingSecurity
 ### Properties
 * **enabled**: bool: This feature allows user to configure network policy based on DNS (FQDN) names. It can be enabled only on cilium based clusters. If not specified, the default is false.
+
+## AgentPool
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **properties**: [ManagedClusterAgentPoolProfileProperties](#managedclusteragentpoolprofileproperties): Properties of an agent pool.
+* **type**: string (ReadOnly): Resource type
+
+## AgentPoolDeleteMachinesParameter
+### Properties
+* **machineNames**: string[] (Required): The agent pool machine names.
 
 ## AgentPoolGatewayProfile
 ### Properties

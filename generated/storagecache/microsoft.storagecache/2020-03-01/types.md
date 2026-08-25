@@ -27,6 +27,26 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function flush (Microsoft.StorageCache/caches@2020-03-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2020-03-01
+* **Output**: any
+
+## Function start (Microsoft.StorageCache/caches@2020-03-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2020-03-01
+* **Output**: any
+
+## Function stop (Microsoft.StorageCache/caches@2020-03-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2020-03-01
+* **Output**: any
+
+## Function upgrade (Microsoft.StorageCache/caches@2020-03-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2020-03-01
+* **Output**: any
+
 ## CacheEncryptionSettings
 ### Properties
 * **keyEncryptionKey**: [KeyVaultKeyReference](#keyvaultkeyreference): Specifies the location of the key encryption key in Key Vault.

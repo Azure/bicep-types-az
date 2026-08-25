@@ -581,5 +581,26 @@
     "input": {
       "$ref": "#/49"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.Fabric/capacities",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.Fabric/capacities",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/56"
+    }
   }
 ]

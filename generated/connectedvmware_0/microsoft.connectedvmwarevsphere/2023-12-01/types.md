@@ -151,6 +151,22 @@
 * **tags**: [VirtualNetworkTags](#virtualnetworktags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.ConnectedVMwarevSphere/virtualMachineInstances@2023-12-01)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachineInstances
+* **ApiVersion**: 2023-12-01
+* **Output**: any
+
+## Function start (Microsoft.ConnectedVMwarevSphere/virtualMachineInstances@2023-12-01)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachineInstances
+* **ApiVersion**: 2023-12-01
+* **Output**: any
+
+## Function stop (Microsoft.ConnectedVMwarevSphere/virtualMachineInstances@2023-12-01)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachineInstances
+* **ApiVersion**: 2023-12-01
+* **Input**: [StopVirtualMachineOptions](#stopvirtualmachineoptions)
+* **Output**: any
+
 ## ClusterProperties
 ### Properties
 * **customResourceName**: string (ReadOnly): Gets the name of the corresponding resource in Kubernetes.
@@ -466,6 +482,10 @@ This property is used in relative allocation between resource consumers.
 ## SecurityProfile
 ### Properties
 * **uefiSettings**: [UefiSettings](#uefisettings): Specifies the security settings like secure boot used while creating the virtual machine.
+
+## StopVirtualMachineOptions
+### Properties
+* **skipShutdown**: bool: Gets or sets a value indicating whether to request non-graceful VM shutdown. True value for this flag indicates non-graceful shutdown whereas false indicates otherwise. Defaults to false.
 
 ## StorageProfile
 ### Properties

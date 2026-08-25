@@ -1838,12 +1838,24 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.AppConfiguration/locations/deletedConfigurationStores",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/141"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ApiKeyListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/145"
         },
         "flags": 1,
         "description": "The ApiKey items on this page"
@@ -1908,7 +1920,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/142"
+      "$ref": "#/144"
     }
   },
   {
@@ -1917,7 +1929,7 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/141"
+      "$ref": "#/143"
     }
   },
   {
@@ -1939,10 +1951,10 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/142"
+      "$ref": "#/144"
     },
     "input": {
-      "$ref": "#/145"
+      "$ref": "#/147"
     }
   }
 ]

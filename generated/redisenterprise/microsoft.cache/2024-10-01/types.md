@@ -35,6 +35,36 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.Cache/redisEnterprise/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function export (Microsoft.Cache/redisEnterprise/databases@2024-10-01)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2024-10-01
+* **Input**: [ExportClusterParameters](#exportclusterparameters)
+* **Output**: any
+
+## Function flush (Microsoft.Cache/redisEnterprise/databases@2024-10-01)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2024-10-01
+* **Input**: [FlushParameters](#flushparameters)
+* **Output**: any
+
+## Function forceLinkToReplicationGroup (Microsoft.Cache/redisEnterprise/databases@2024-10-01)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2024-10-01
+* **Input**: [ForceLinkParameters](#forcelinkparameters)
+* **Output**: any
+
+## Function forceUnlink (Microsoft.Cache/redisEnterprise/databases@2024-10-01)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2024-10-01
+* **Input**: [ForceUnlinkParameters](#forceunlinkparameters)
+* **Output**: any
+
+## Function import (Microsoft.Cache/redisEnterprise/databases@2024-10-01)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2024-10-01
+* **Input**: [ImportClusterParameters](#importclusterparameters)
+* **Output**: any
+
 ## Function listKeys (Microsoft.Cache/redisEnterprise/databases@2024-10-01)
 * **Resource**: Microsoft.Cache/redisEnterprise/databases
 * **ApiVersion**: 2024-10-01
@@ -91,6 +121,31 @@
 ### Properties
 * **groupNickname**: string: Name for the group of linked database resources
 * **linkedDatabases**: [LinkedDatabase](#linkeddatabase)[]: List of database resources to link with this database
+
+## ExportClusterParameters
+### Properties
+* **sasUri**: string {sensitive} (Required): SAS URI for the target directory to export to
+
+## FlushParameters
+### Properties
+* **ids**: string[]: The identifiers of all the other database resources in the georeplication group to be flushed.
+
+## ForceLinkParameters
+### Properties
+* **geoReplication**: [ForceLinkParametersGeoReplication](#forcelinkparametersgeoreplication) (Required): Properties to configure geo replication for this database.
+
+## ForceLinkParametersGeoReplication
+### Properties
+* **groupNickname**: string: The name of the group of linked database resources. This should match the existing replication group name.
+* **linkedDatabases**: [LinkedDatabase](#linkeddatabase)[]: The resource IDs of the databases that are expected to be linked and included in the replication group. This parameter is used to validate that the linking is to the expected (unlinked) part of the replication group, if it is splintered.
+
+## ForceUnlinkParameters
+### Properties
+* **ids**: string[] (Required): The resource IDs of the database resources to be unlinked.
+
+## ImportClusterParameters
+### Properties
+* **sasUris**: string[] (Required): SAS URIs for the target blobs to import from
 
 ## LinkedDatabase
 ### Properties

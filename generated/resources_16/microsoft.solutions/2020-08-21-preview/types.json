@@ -1769,5 +1769,14 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshPermissions",
+    "resourceType": "Microsoft.Solutions/applications",
+    "apiVersion": "2020-08-21-preview",
+    "output": {
+      "$ref": "#/6"
+    }
   }
 ]

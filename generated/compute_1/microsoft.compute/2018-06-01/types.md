@@ -227,6 +227,53 @@
 * **Input**: [VirtualMachineCaptureParameters](#virtualmachinecaptureparameters)
 * **Output**: [VirtualMachineCaptureResult](#virtualmachinecaptureresult)
 
+## Function convertToManagedDisks (Microsoft.Compute/virtualMachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function deallocate (Microsoft.Compute/virtualMachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function deallocate (Microsoft.Compute/virtualMachineScaleSets@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2018-06-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function deallocate (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function delete (Microsoft.Compute/virtualMachineScaleSets@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2018-06-01
+* **Input**: [VirtualMachineScaleSetVMInstanceRequiredIDs](#virtualmachinescalesetvminstancerequiredids)
+* **Output**: any
+
+## Function endGetAccess (Microsoft.Compute/disks@2018-06-01)
+* **Resource**: Microsoft.Compute/disks
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function endGetAccess (Microsoft.Compute/snapshots@2018-06-01)
+* **Resource**: Microsoft.Compute/snapshots
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function extensionRollingUpgrade (Microsoft.Compute/virtualMachineScaleSets@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function generalize (Microsoft.Compute/virtualMachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
 ## Function getRequestRateByInterval (Microsoft.Compute/locations/logAnalytics@2018-06-01)
 * **Resource**: Microsoft.Compute/locations/logAnalytics
 * **ApiVersion**: 2018-06-01
@@ -239,6 +286,110 @@
 * **Input**: [ThrottledRequestsInput](#throttledrequestsinput)
 * **Output**: [LogAnalyticsOperationResult](#loganalyticsoperationresult)
 
+## Function manualupgrade (Microsoft.Compute/virtualMachineScaleSets@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2018-06-01
+* **Input**: [VirtualMachineScaleSetVMInstanceRequiredIDs](#virtualmachinescalesetvminstancerequiredids)
+* **Output**: any
+
+## Function osRollingUpgrade (Microsoft.Compute/virtualMachineScaleSets@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function performMaintenance (Microsoft.Compute/virtualMachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function performMaintenance (Microsoft.Compute/virtualMachineScaleSets@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2018-06-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function performMaintenance (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function powerOff (Microsoft.Compute/virtualMachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function poweroff (Microsoft.Compute/virtualMachineScaleSets@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2018-06-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function poweroff (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function redeploy (Microsoft.Compute/virtualMachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function redeploy (Microsoft.Compute/virtualMachineScaleSets@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2018-06-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function redeploy (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function reimage (Microsoft.Compute/virtualMachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-06-01
+* **Input**: [VirtualMachineReimageParameters](#virtualmachinereimageparameters)
+* **Output**: any
+
+## Function reimage (Microsoft.Compute/virtualMachineScaleSets@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2018-06-01
+* **Input**: [VirtualMachineScaleSetReimageParameters](#virtualmachinescalesetreimageparameters)
+* **Output**: any
+
+## Function reimage (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2018-06-01
+* **Input**: [VirtualMachineScaleSetVMReimageParameters](#virtualmachinescalesetvmreimageparameters)
+* **Output**: any
+
+## Function reimageall (Microsoft.Compute/virtualMachineScaleSets@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2018-06-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function reimageall (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function restart (Microsoft.Compute/virtualMachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function restart (Microsoft.Compute/virtualMachineScaleSets@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2018-06-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function restart (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
 ## Function runCommand (Microsoft.Compute/virtualMachines@2018-06-01)
 * **Resource**: Microsoft.Compute/virtualMachines
 * **ApiVersion**: 2018-06-01
@@ -250,6 +401,22 @@
 * **ApiVersion**: 2018-06-01
 * **Input**: [RunCommandInput](#runcommandinput)
 * **Output**: [RunCommandResult](#runcommandresult)
+
+## Function start (Microsoft.Compute/virtualMachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function start (Microsoft.Compute/virtualMachineScaleSets@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2018-06-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function start (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2018-06-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2018-06-01
+* **Output**: any
 
 ## AccessUri
 ### Properties
@@ -986,6 +1153,10 @@
 * **storageProfile**: [StorageProfile](#storageprofile): Specifies the storage settings for the virtual machine disks.
 * **vmId**: string (ReadOnly): Specifies the VM unique ID which is a 128-bits identifier that is encoded and stored in all Azure IaaS VMs SMBIOS and can be read using platform BIOS commands.
 
+## VirtualMachineReimageParameters
+### Properties
+* **tempDisk**: bool: Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk.
+
 ## VirtualMachineScaleSetDataDisk
 ### Properties
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
@@ -1136,11 +1307,24 @@
 * **ipTags**: [VirtualMachineScaleSetIpTag](#virtualmachinescalesetiptag)[]: The list of IP tags associated with the public IP address.
 * **publicIPPrefix**: [SubResource](#subresource): The PublicIPPrefix from which to allocate publicIP addresses.
 
+## VirtualMachineScaleSetReimageParameters
+### Properties
+* **instanceIds**: string[]: The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set.
+* **tempDisk**: bool: Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk.
+
 ## VirtualMachineScaleSetStorageProfile
 ### Properties
 * **dataDisks**: [VirtualMachineScaleSetDataDisk](#virtualmachinescalesetdatadisk)[]: Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
 * **imageReference**: [ImageReference](#imagereference): Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
 * **osDisk**: [VirtualMachineScaleSetOSDisk](#virtualmachinescalesetosdisk): Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+
+## VirtualMachineScaleSetVMInstanceIDs
+### Properties
+* **instanceIds**: string[]: The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set.
+
+## VirtualMachineScaleSetVMInstanceRequiredIDs
+### Properties
+* **instanceIds**: string[] (Required): The virtual machine scale set instance ids.
 
 ## VirtualMachineScaleSetVMInstanceView
 ### Properties
@@ -1182,6 +1366,10 @@
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **storageProfile**: [StorageProfile](#storageprofile): Specifies the storage settings for the virtual machine disks.
 * **vmId**: string (ReadOnly): Azure VM unique ID.
+
+## VirtualMachineScaleSetVMReimageParameters
+### Properties
+* **tempDisk**: bool: Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk.
 
 ## WindowsConfiguration
 ### Properties

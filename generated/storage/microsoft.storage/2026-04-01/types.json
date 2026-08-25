@@ -9487,26 +9487,47 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "aborthnsonmigration",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2026-04-01",
+    "output": {
+      "$ref": "#/671"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2026-04-01",
+    "output": {
+      "$ref": "#/671"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AccountSasParameters",
     "properties": {
       "signedServices": {
         "type": {
-          "$ref": "#/676"
+          "$ref": "#/679"
         },
         "flags": 1,
         "description": "The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f)."
       },
       "signedResourceTypes": {
         "type": {
-          "$ref": "#/680"
+          "$ref": "#/683"
         },
         "flags": 1,
         "description": "The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files."
       },
       "signedPermission": {
         "type": {
-          "$ref": "#/689"
+          "$ref": "#/692"
         },
         "flags": 1,
         "description": "The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p)."
@@ -9520,7 +9541,7 @@
       },
       "signedProtocol": {
         "type": {
-          "$ref": "#/692"
+          "$ref": "#/695"
         },
         "flags": 0,
         "description": "The protocol permitted for a request made with the account SAS."
@@ -9568,16 +9589,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/672"
-      },
-      {
-        "$ref": "#/673"
-      },
-      {
-        "$ref": "#/674"
-      },
-      {
         "$ref": "#/675"
+      },
+      {
+        "$ref": "#/676"
+      },
+      {
+        "$ref": "#/677"
+      },
+      {
+        "$ref": "#/678"
       },
       {
         "$ref": "#/2"
@@ -9600,13 +9621,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/677"
+        "$ref": "#/680"
       },
       {
-        "$ref": "#/678"
+        "$ref": "#/681"
       },
       {
-        "$ref": "#/679"
+        "$ref": "#/682"
       },
       {
         "$ref": "#/2"
@@ -9649,15 +9670,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/681"
-      },
-      {
-        "$ref": "#/682"
-      },
-      {
-        "$ref": "#/683"
-      },
-      {
         "$ref": "#/684"
       },
       {
@@ -9671,6 +9683,15 @@
       },
       {
         "$ref": "#/688"
+      },
+      {
+        "$ref": "#/689"
+      },
+      {
+        "$ref": "#/690"
+      },
+      {
+        "$ref": "#/691"
       },
       {
         "$ref": "#/2"
@@ -9689,10 +9710,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/690"
+        "$ref": "#/693"
       },
       {
-        "$ref": "#/691"
+        "$ref": "#/694"
       }
     ]
   },
@@ -9715,10 +9736,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/693"
+      "$ref": "#/696"
     },
     "input": {
-      "$ref": "#/671"
+      "$ref": "#/674"
     }
   },
   {
@@ -9727,7 +9748,7 @@
     "properties": {
       "keys": {
         "type": {
-          "$ref": "#/700"
+          "$ref": "#/703"
         },
         "flags": 2,
         "description": "Gets the list of storage account keys and their properties for the specified storage account."
@@ -9754,7 +9775,7 @@
       },
       "permissions": {
         "type": {
-          "$ref": "#/699"
+          "$ref": "#/702"
         },
         "flags": 2,
         "description": "Permissions for the key -- read-only or full permissions."
@@ -9780,17 +9801,17 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/697"
+        "$ref": "#/700"
       },
       {
-        "$ref": "#/698"
+        "$ref": "#/701"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/696"
+      "$ref": "#/699"
     }
   },
   {
@@ -9799,7 +9820,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/695"
+      "$ref": "#/698"
     }
   },
   {
@@ -9815,14 +9836,14 @@
       },
       "signedResource": {
         "type": {
-          "$ref": "#/707"
+          "$ref": "#/710"
         },
         "flags": 0,
         "description": "The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s)."
       },
       "signedPermission": {
         "type": {
-          "$ref": "#/716"
+          "$ref": "#/719"
         },
         "flags": 0,
         "description": "The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p)."
@@ -9836,7 +9857,7 @@
       },
       "signedProtocol": {
         "type": {
-          "$ref": "#/719"
+          "$ref": "#/722"
         },
         "flags": 0,
         "description": "The protocol permitted for a request made with the account SAS."
@@ -9857,7 +9878,7 @@
       },
       "signedIdentifier": {
         "type": {
-          "$ref": "#/720"
+          "$ref": "#/723"
         },
         "flags": 0,
         "description": "A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table."
@@ -9954,16 +9975,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/703"
-      },
-      {
-        "$ref": "#/704"
-      },
-      {
-        "$ref": "#/705"
-      },
-      {
         "$ref": "#/706"
+      },
+      {
+        "$ref": "#/707"
+      },
+      {
+        "$ref": "#/708"
+      },
+      {
+        "$ref": "#/709"
       },
       {
         "$ref": "#/2"
@@ -10006,15 +10027,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/708"
-      },
-      {
-        "$ref": "#/709"
-      },
-      {
-        "$ref": "#/710"
-      },
-      {
         "$ref": "#/711"
       },
       {
@@ -10028,6 +10040,15 @@
       },
       {
         "$ref": "#/715"
+      },
+      {
+        "$ref": "#/716"
+      },
+      {
+        "$ref": "#/717"
+      },
+      {
+        "$ref": "#/718"
       },
       {
         "$ref": "#/2"
@@ -10046,10 +10067,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/717"
+        "$ref": "#/720"
       },
       {
-        "$ref": "#/718"
+        "$ref": "#/721"
       }
     ]
   },
@@ -10076,10 +10097,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/721"
+      "$ref": "#/724"
     },
     "input": {
-      "$ref": "#/702"
+      "$ref": "#/705"
     }
   },
   {
@@ -10101,10 +10122,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/695"
+      "$ref": "#/698"
     },
     "input": {
-      "$ref": "#/723"
+      "$ref": "#/726"
     }
   },
   {
@@ -10117,6 +10138,15 @@
     },
     "input": {
       "$ref": "#/206"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revokeUserDelegationKeys",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2026-04-01",
+    "output": {
+      "$ref": "#/671"
     }
   },
   {
@@ -10161,6 +10191,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "startAccountMigration",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2026-04-01",
+    "output": {
+      "$ref": "#/671"
+    },
+    "input": {
+      "$ref": "#/730"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "LegalHold",
     "properties": {
@@ -10173,7 +10215,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/729"
+          "$ref": "#/734"
         },
         "flags": 1,
         "description": "Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP."
@@ -10195,7 +10237,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/728"
+      "$ref": "#/733"
     }
   },
   {
@@ -10204,10 +10246,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/727"
+      "$ref": "#/732"
     },
     "input": {
-      "$ref": "#/727"
+      "$ref": "#/732"
     }
   },
   {
@@ -10216,7 +10258,7 @@
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/737"
+          "$ref": "#/742"
         },
         "flags": 1,
         "description": "Specifies the lease action. Can be one of the available actions."
@@ -10275,19 +10317,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/732"
+        "$ref": "#/737"
       },
       {
-        "$ref": "#/733"
+        "$ref": "#/738"
       },
       {
-        "$ref": "#/734"
+        "$ref": "#/739"
       },
       {
-        "$ref": "#/735"
+        "$ref": "#/740"
       },
       {
-        "$ref": "#/736"
+        "$ref": "#/741"
       },
       {
         "$ref": "#/2"
@@ -10320,10 +10362,19 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/738"
+      "$ref": "#/743"
     },
     "input": {
-      "$ref": "#/731"
+      "$ref": "#/736"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
+    "apiVersion": "2026-04-01",
+    "output": {
+      "$ref": "#/671"
     }
   },
   {
@@ -10332,10 +10383,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/727"
+      "$ref": "#/732"
     },
     "input": {
-      "$ref": "#/727"
+      "$ref": "#/732"
     }
   },
   {
@@ -10392,10 +10443,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/741"
+      "$ref": "#/747"
     },
     "input": {
-      "$ref": "#/741"
+      "$ref": "#/747"
     }
   },
   {
@@ -10404,7 +10455,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/741"
+      "$ref": "#/747"
     }
   },
   {
@@ -10453,10 +10504,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/connectors",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/745"
+      "$ref": "#/751"
     },
     "input": {
-      "$ref": "#/744"
+      "$ref": "#/750"
     }
   },
   {
@@ -10465,7 +10516,7 @@
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/753"
+          "$ref": "#/759"
         },
         "flags": 1,
         "description": "Specifies the lease action. Can be one of the available actions."
@@ -10524,19 +10575,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/748"
+        "$ref": "#/754"
       },
       {
-        "$ref": "#/749"
+        "$ref": "#/755"
       },
       {
-        "$ref": "#/750"
+        "$ref": "#/756"
       },
       {
-        "$ref": "#/751"
+        "$ref": "#/757"
       },
       {
-        "$ref": "#/752"
+        "$ref": "#/758"
       },
       {
         "$ref": "#/2"
@@ -10569,10 +10620,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/fileServices/shares",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/754"
+      "$ref": "#/760"
     },
     "input": {
-      "$ref": "#/747"
+      "$ref": "#/753"
     }
   },
   {
@@ -10596,19 +10647,31 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.Storage/storageAccounts/fileServices/shares",
+    "apiVersion": "2026-04-01",
+    "output": {
+      "$ref": "#/671"
+    },
+    "input": {
+      "$ref": "#/762"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "LocalUserKeys",
     "properties": {
       "sshAuthorizedKeys": {
         "type": {
-          "$ref": "#/758"
+          "$ref": "#/765"
         },
         "flags": 0,
         "description": "Optional, local user ssh authorized keys for SFTP."
       },
       "sharedKey": {
         "type": {
-          "$ref": "#/759"
+          "$ref": "#/766"
         },
         "flags": 2,
         "description": "Auto generated by the server for SMB authentication."
@@ -10631,7 +10694,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts/localUsers",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/757"
+      "$ref": "#/764"
     }
   },
   {
@@ -10640,7 +10703,7 @@
     "properties": {
       "sshPassword": {
         "type": {
-          "$ref": "#/759"
+          "$ref": "#/766"
         },
         "flags": 2,
         "description": "Auto generated password by the server for SSH authentication if hasSshPassword is set to true on the creation of local user."
@@ -10653,7 +10716,25 @@
     "resourceType": "Microsoft.Storage/storageAccounts/localUsers",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/761"
+      "$ref": "#/768"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.Storage/storageAccounts/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2026-04-01",
+    "output": {
+      "$ref": "#/671"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopAssignment",
+    "resourceType": "Microsoft.Storage/storageAccounts/storageTaskAssignments",
+    "apiVersion": "2026-04-01",
+    "output": {
+      "$ref": "#/671"
     }
   }
 ]

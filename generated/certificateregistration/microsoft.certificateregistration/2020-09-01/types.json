@@ -817,6 +817,224 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ReissueCertificateOrderRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "ReissueCertificateOrderRequest resource specific properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReissueCertificateOrderRequestProperties",
+    "properties": {
+      "keySize": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Certificate Key Size."
+      },
+      "delayExistingRevokeInHours": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Delay in hours to revoke existing certificate after the new certificate is issued."
+      },
+      "csr": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Csr to be used for re-key operation."
+      },
+      "isPrivateKeyExternal": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Should we change the ASC type (from managed private key to external private key and vice versa)."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reissue",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2020-09-01",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RenewCertificateOrderRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "RenewCertificateOrderRequest resource specific properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RenewCertificateOrderRequestProperties",
+    "properties": {
+      "keySize": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Certificate Key Size."
+      },
+      "csr": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Csr to be used for re-key operation."
+      },
+      "isPrivateKeyExternal": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Should we change the ASC type (from managed private key to external private key and vice versa)."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "renew",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2020-09-01",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resendEmail",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2020-09-01",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameIdentifier",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the object."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resendRequestEmails",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2020-09-01",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/74"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SiteSealRequest",
     "properties": {
       "lightTheme": {
@@ -854,10 +1072,19 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2020-09-01",
     "output": {
-      "$ref": "#/67"
+      "$ref": "#/77"
     },
     "input": {
-      "$ref": "#/66"
+      "$ref": "#/76"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "verifyDomainOwnership",
+    "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
+    "apiVersion": "2020-09-01",
+    "output": {
+      "$ref": "#/68"
     }
   },
   {
@@ -866,7 +1093,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/70"
+          "$ref": "#/81"
         },
         "flags": 0,
         "description": "CertificateOrderAction resource specific properties"
@@ -914,7 +1141,7 @@
     "properties": {
       "actionType": {
         "type": {
-          "$ref": "#/85"
+          "$ref": "#/96"
         },
         "flags": 2,
         "description": "Action type."
@@ -988,39 +1215,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/71"
-      },
-      {
-        "$ref": "#/72"
-      },
-      {
-        "$ref": "#/73"
-      },
-      {
-        "$ref": "#/74"
-      },
-      {
-        "$ref": "#/75"
-      },
-      {
-        "$ref": "#/76"
-      },
-      {
-        "$ref": "#/77"
-      },
-      {
-        "$ref": "#/78"
-      },
-      {
-        "$ref": "#/79"
-      },
-      {
-        "$ref": "#/80"
-      },
-      {
-        "$ref": "#/81"
-      },
-      {
         "$ref": "#/82"
       },
       {
@@ -1028,13 +1222,46 @@
       },
       {
         "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/87"
+      },
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/69"
+      "$ref": "#/80"
     }
   },
   {
@@ -1043,7 +1270,7 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2020-09-01",
     "output": {
-      "$ref": "#/86"
+      "$ref": "#/97"
     }
   },
   {
@@ -1052,7 +1279,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/100"
         },
         "flags": 0,
         "description": "CertificateEmail resource specific properties"
@@ -1117,7 +1344,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/88"
+      "$ref": "#/99"
     }
   },
   {
@@ -1126,7 +1353,7 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2020-09-01",
     "output": {
-      "$ref": "#/90"
+      "$ref": "#/101"
     }
   }
 ]

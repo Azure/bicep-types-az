@@ -49,6 +49,17 @@
 * **Input**: [ListTokenRequest](#listtokenrequest)
 * **Output**: [ManagedIdentityTokenResult](#managedidentitytokenresult)
 
+## Function refreshPermissions (Microsoft.Solutions/applications@2018-09-01-preview)
+* **Resource**: Microsoft.Solutions/applications
+* **ApiVersion**: 2018-09-01-preview
+* **Output**: any
+
+## Function updateAccess (Microsoft.Solutions/applications@2018-09-01-preview)
+* **Resource**: Microsoft.Solutions/applications
+* **ApiVersion**: 2018-09-01-preview
+* **Input**: [UpdateAccessDefinition](#updateaccessdefinition)
+* **Output**: [UpdateAccessDefinition](#updateaccessdefinition)
+
 ## ApplicationArtifact
 ### Properties
 * **name**: 'Authorizations' | 'CustomRoleDefinition' | 'NotSpecified' | 'ViewDefinition' | string (Required): The managed application artifact name.
@@ -153,6 +164,13 @@
 * **principalId**: string (Required): The the principal id that will be granted JIT access.
 * **roleDefinitionId**: string (Required): The role definition id that will be granted to the Principal.
 
+## JitRequestMetadata
+### Properties
+* **originRequestId**: string: The origin request id.
+* **requestorId**: string: The requestor id.
+* **subjectDisplayName**: string: The subject display name.
+* **tenantDisplayName**: string: The publisher's tenant name.
+
 ## JitRequestProperties
 ### Properties
 * **applicationResourceId**: string (Required): The parent application id.
@@ -220,6 +238,13 @@
 * **name**: string (Required): The SKU name.
 * **size**: string: The SKU size.
 * **tier**: string: The SKU tier.
+
+## UpdateAccessDefinition
+### Properties
+* **approver**: string: The approver name.
+* **metadata**: [JitRequestMetadata](#jitrequestmetadata) (Required): The JIT request metadata.
+* **status**: 'Elevate' | 'NotSpecified' | 'Remove' | string (Required): The JIT status.
+* **subStatus**: 'Approved' | 'Denied' | 'Expired' | 'Failed' | 'NotSpecified' | 'Timeout' | string (Required): The JIT status.
 
 ## UserAssignedResourceIdentity
 ### Properties

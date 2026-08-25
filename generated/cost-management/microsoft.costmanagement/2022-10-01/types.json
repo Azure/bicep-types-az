@@ -3993,6 +3993,15 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.CostManagement/exports",
+    "apiVersion": "2022-10-01",
+    "output": {
+      "$ref": "#/221"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DownloadURL",
     "properties": {
@@ -4025,7 +4034,16 @@
     "resourceType": "Microsoft.CostManagement/pricesheets",
     "apiVersion": "2022-10-01",
     "output": {
-      "$ref": "#/323"
+      "$ref": "#/324"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "execute",
+    "resourceType": "Microsoft.CostManagement/scheduledActions",
+    "apiVersion": "2022-10-01",
+    "output": {
+      "$ref": "#/221"
     }
   }
 ]

@@ -468,5 +468,17 @@
     },
     "readableScopes": 31,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revokeTokens",
+    "resourceType": "Microsoft.ManagedIdentity/userAssignedIdentities",
+    "apiVersion": "2023-07-31-preview",
+    "output": {
+      "$ref": "#/33"
+    }
   }
 ]

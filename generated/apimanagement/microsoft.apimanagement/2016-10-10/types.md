@@ -289,6 +289,26 @@
 * **Input**: [ApiManagementServiceManageDeploymentsParameters](#apimanagementservicemanagedeploymentsparameters)
 * **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
 
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/subscriptions@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2016-10-10
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/tenant@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2016-10-10
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/subscriptions@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2016-10-10
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/tenant@2016-10-10)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2016-10-10
+* **Output**: any
+
 ## Function restore (Microsoft.ApiManagement/service@2016-10-10)
 * **Resource**: Microsoft.ApiManagement/service
 * **ApiVersion**: 2016-10-10

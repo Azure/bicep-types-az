@@ -46,6 +46,12 @@
 * **Input**: [EdgeActionAttachment](#edgeactionattachment)
 * **Output**: [EdgeActionAttachmentResponse](#edgeactionattachmentresponse)
 
+## Function deleteAttachment (Microsoft.Cdn/edgeActions@2025-09-01-preview)
+* **Resource**: Microsoft.Cdn/edgeActions
+* **ApiVersion**: 2025-09-01-preview
+* **Input**: [EdgeActionAttachment](#edgeactionattachment)
+* **Output**: any
+
 ## Function deployVersionCode (Microsoft.Cdn/edgeActions/versions@2025-09-01-preview)
 * **Resource**: Microsoft.Cdn/edgeActions/versions
 * **ApiVersion**: 2025-09-01-preview
@@ -56,6 +62,11 @@
 * **Resource**: Microsoft.Cdn/edgeActions/versions
 * **ApiVersion**: 2025-09-01-preview
 * **Output**: [VersionCode](#versioncode)
+
+## Function swapDefault (Microsoft.Cdn/edgeActions/versions@2025-09-01-preview)
+* **Resource**: Microsoft.Cdn/edgeActions/versions
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
 
 ## EdgeActionAttachment
 ### Properties

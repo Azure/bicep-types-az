@@ -190,6 +190,12 @@
 * **Input**: [DbNodeAction](#dbnodeaction)
 * **Output**: [DbNode](#dbnode)
 
+## Function addAzureSubscriptions (Oracle.Database/oracleSubscriptions@2024-06-01)
+* **Resource**: Oracle.Database/oracleSubscriptions
+* **ApiVersion**: 2024-06-01
+* **Input**: [AzureSubscriptions](#azuresubscriptions)
+* **Output**: any
+
 ## Function addStorageCapacity (Oracle.Database/cloudExadataInfrastructures@2024-06-01)
 * **Resource**: Oracle.Database/cloudExadataInfrastructures
 * **ApiVersion**: 2024-06-01
@@ -430,6 +436,10 @@
 * **isFreeTierEnabled**: bool: True if this version of the Oracle Database software can be used for Always-Free Autonomous Databases.
 * **isPaidEnabled**: bool: True if this version of the Oracle Database software has payments enabled.
 * **version**: string {minLength: 1, maxLength: 255} (Required): Supported Autonomous Db versions.
+
+## AzureSubscriptions
+### Properties
+* **azureSubscriptionIds**: string[] (Required): Azure Subscription Ids to be updated
 
 ## CloudAccountDetails
 ### Properties

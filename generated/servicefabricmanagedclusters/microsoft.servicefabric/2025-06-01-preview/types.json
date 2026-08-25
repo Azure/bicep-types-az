@@ -5185,6 +5185,15 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "applyMaintenanceWindow",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/249"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ManagedMaintenanceWindowStatus",
     "properties": {
@@ -5245,7 +5254,7 @@
     "resourceType": "Microsoft.ServiceFabric/managedClusters",
     "apiVersion": "2025-06-01-preview",
     "output": {
-      "$ref": "#/361"
+      "$ref": "#/362"
     }
   },
   {
@@ -5254,7 +5263,7 @@
     "properties": {
       "baseResourceStatus": {
         "type": {
-          "$ref": "#/365"
+          "$ref": "#/366"
         },
         "flags": 0,
         "description": "List of Managed VM Sizes for Service Fabric Managed Clusters."
@@ -5305,7 +5314,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/364"
+      "$ref": "#/365"
     }
   },
   {
@@ -5314,7 +5323,386 @@
     "resourceType": "Microsoft.ServiceFabric/managedClusters",
     "apiVersion": "2025-06-01-preview",
     "output": {
-      "$ref": "#/363"
+      "$ref": "#/364"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "fetchUpgradeStatus",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/applications",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/249"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RuntimeResumeApplicationUpgradeParameters",
+    "properties": {
+      "upgradeDomainName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The upgrade domain name. Expected to be the next upgrade domain if the application is upgrading."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resumeUpgrade",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/applications",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/249"
+    },
+    "input": {
+      "$ref": "#/369"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startRollback",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/applications",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/249"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RuntimeUpdateApplicationUpgradeParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the application, including the 'fabric:' URI scheme."
+      },
+      "upgradeKind": {
+        "type": {
+          "$ref": "#/374"
+        },
+        "flags": 1,
+        "description": "The kind of the upgrade."
+      },
+      "applicationHealthPolicy": {
+        "type": {
+          "$ref": "#/375"
+        },
+        "flags": 0,
+        "description": "Defines a health policy used to evaluate the health of an application or one of its children entities."
+      },
+      "updateDescription": {
+        "type": {
+          "$ref": "#/378"
+        },
+        "flags": 0,
+        "description": "Describes the parameters for updating a rolling upgrade of application or cluster and a monitoring policy."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rolling"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/373"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RuntimeApplicationHealthPolicy",
+    "properties": {
+      "considerWarningAsError": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 1,
+        "description": "Indicates whether warnings are treated with the same severity as errors."
+      },
+      "maxPercentUnhealthyDeployedApplications": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.\nThe percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.\nThis is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.\nThe computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero."
+      },
+      "defaultServiceTypeHealthPolicy": {
+        "type": {
+          "$ref": "#/376"
+        },
+        "flags": 0,
+        "description": "The health policy used by default to evaluate the health of a service type."
+      },
+      "serviceTypeHealthPolicyMap": {
+        "type": {
+          "$ref": "#/377"
+        },
+        "flags": 0,
+        "description": "The map with service type health policy per service type name. The map is empty by default."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RuntimeServiceTypeHealthPolicy",
+    "properties": {
+      "maxPercentUnhealthyServices": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 1,
+        "description": "The maximum allowed percentage of unhealthy services.\n\nThe percentage represents the maximum tolerated percentage of services that can be unhealthy before the application is considered in error.\nIf the percentage is respected but there is at least one unhealthy service, the health is evaluated as Warning.\nThis is calculated by dividing the number of unhealthy services of the specific service type over the total number of services of the specific service type.\nThe computation rounds up to tolerate one failure on small numbers of services."
+      },
+      "maxPercentUnhealthyPartitionsPerService": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 1,
+        "description": "The maximum allowed percentage of unhealthy partitions per service.\n\nThe percentage represents the maximum tolerated percentage of partitions that can be unhealthy before the service is considered in error.\nIf the percentage is respected but there is at least one unhealthy partition, the health is evaluated as Warning.\nThe percentage is calculated by dividing the number of unhealthy partitions over the total number of partitions in the service.\nThe computation rounds up to tolerate one failure on small numbers of partitions."
+      },
+      "maxPercentUnhealthyReplicasPerPartition": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 1,
+        "description": "The maximum allowed percentage of unhealthy replicas per partition.\n\nThe percentage represents the maximum tolerated percentage of replicas that can be unhealthy before the partition is considered in error.\nIf the percentage is respected but there is at least one unhealthy replica, the health is evaluated as Warning.\nThe percentage is calculated by dividing the number of unhealthy replicas over the total number of replicas in the partition.\nThe computation rounds up to tolerate one failure on small numbers of replicas."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RuntimeApplicationHealthPolicyServiceTypeHealthPolicyMap",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/376"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RuntimeRollingUpgradeUpdateMonitoringPolicy",
+    "properties": {
+      "rollingUpgradeMode": {
+        "type": {
+          "$ref": "#/382"
+        },
+        "flags": 1,
+        "description": "The mode used to monitor health during a rolling upgrade."
+      },
+      "forceRestart": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data)."
+      },
+      "replicaSetCheckTimeoutInMilliseconds": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer)."
+      },
+      "failureAction": {
+        "type": {
+          "$ref": "#/385"
+        },
+        "flags": 0,
+        "description": "The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations. Invalid indicates the failure action is invalid. Rollback specifies that the upgrade will start rolling back automatically. Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode"
+      },
+      "healthCheckWaitDurationInMilliseconds": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds."
+      },
+      "healthCheckStableDurationInMilliseconds": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds."
+      },
+      "healthCheckRetryTimeoutInMilliseconds": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds."
+      },
+      "upgradeTimeoutInMilliseconds": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The amount of time the overall upgrade has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds."
+      },
+      "upgradeDomainTimeoutInMilliseconds": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The amount of time each upgrade domain has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds."
+      },
+      "instanceCloseDelayDurationInSeconds": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Duration in seconds, to wait before a stateless instance is closed, to allow the active requests to drain gracefully. This would be effective when the instance is closing during the application/cluster upgrade, only for those instances which have a non-zero delay duration configured in the service description."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnmonitoredAuto"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnmonitoredManual"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Monitored"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/379"
+      },
+      {
+        "$ref": "#/380"
+      },
+      {
+        "$ref": "#/381"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rollback"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manual"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/383"
+      },
+      {
+        "$ref": "#/384"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateUpgrade",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/applications",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/249"
+    },
+    "input": {
+      "$ref": "#/372"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NodeTypeActionParameters",
+    "properties": {
+      "nodes": {
+        "type": {
+          "$ref": "#/388"
+        },
+        "flags": 0,
+        "description": "List of node names from the node type."
+      },
+      "force": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Force the action to go through."
+      },
+      "updateType": {
+        "type": {
+          "$ref": "#/391"
+        },
+        "flags": 0,
+        "description": "Specifies the way the operation will be performed."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ByUpgradeDomain"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/389"
+      },
+      {
+        "$ref": "#/390"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/249"
+    },
+    "input": {
+      "$ref": "#/387"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteNode",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/249"
+    },
+    "input": {
+      "$ref": "#/387"
     }
   },
   {
@@ -5336,6 +5724,54 @@
     "apiVersion": "2025-06-01-preview",
     "output": {
       "$ref": "#/355"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/249"
+    },
+    "input": {
+      "$ref": "#/387"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/249"
+    },
+    "input": {
+      "$ref": "#/387"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/249"
+    },
+    "input": {
+      "$ref": "#/387"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/249"
+    },
+    "input": {
+      "$ref": "#/387"
     }
   },
   {

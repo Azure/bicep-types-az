@@ -1166,5 +1166,20 @@
         "$ref": "#/0"
       }
     ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "vmCollectionUpdate",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2020-07-01-preview",
+    "output": {
+      "$ref": "#/94"
+    },
+    "input": {
+      "$ref": "#/90"
+    }
   }
 ]

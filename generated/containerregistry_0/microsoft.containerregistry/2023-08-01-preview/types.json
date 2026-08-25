@@ -4672,33 +4672,45 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deactivate",
+    "resourceType": "Microsoft.ContainerRegistry/registries/connectedRegistries",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/384"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ImportImageParameters",
     "properties": {
       "source": {
         "type": {
-          "$ref": "#/385"
+          "$ref": "#/387"
         },
         "flags": 1,
         "description": "The source of the image."
       },
       "targetTags": {
         "type": {
-          "$ref": "#/387"
+          "$ref": "#/389"
         },
         "flags": 0,
         "description": "List of strings of the form repo[:tag]. When tag is omitted the source will be used (or 'latest' if source tag is also omitted)."
       },
       "untaggedTargetRepositories": {
         "type": {
-          "$ref": "#/388"
+          "$ref": "#/390"
         },
         "flags": 0,
         "description": "List of strings of repository names to do a manifest only copy. No tag will be created."
       },
       "mode": {
         "type": {
-          "$ref": "#/391"
+          "$ref": "#/393"
         },
         "flags": 0,
         "description": "When Force, any existing target tags will be overwritten. When NoForce, any existing target tags will fail the operation before any copying begins."
@@ -4725,7 +4737,7 @@
       },
       "credentials": {
         "type": {
-          "$ref": "#/386"
+          "$ref": "#/388"
         },
         "flags": 0,
         "description": "Credentials used when importing from a registry uri."
@@ -4783,15 +4795,27 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/389"
+        "$ref": "#/391"
       },
       {
-        "$ref": "#/390"
+        "$ref": "#/392"
       },
       {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "importImage",
+    "resourceType": "Microsoft.ContainerRegistry/registries",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/384"
+    },
+    "input": {
+      "$ref": "#/386"
+    }
   },
   {
     "$type": "ObjectType",
@@ -4806,7 +4830,7 @@
       },
       "passwords": {
         "type": {
-          "$ref": "#/397"
+          "$ref": "#/400"
         },
         "flags": 0,
         "description": "The list of passwords for a container registry."
@@ -4819,7 +4843,7 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/396"
+          "$ref": "#/399"
         },
         "flags": 0,
         "description": "The password name."
@@ -4845,17 +4869,17 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/394"
+        "$ref": "#/397"
       },
       {
-        "$ref": "#/395"
+        "$ref": "#/398"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/393"
+      "$ref": "#/396"
     }
   },
   {
@@ -4864,7 +4888,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/392"
+      "$ref": "#/395"
     }
   },
   {
@@ -4873,7 +4897,7 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/402"
+          "$ref": "#/405"
         },
         "flags": 1,
         "description": "Specifies name of the password which should be regenerated -- password or password2."
@@ -4892,10 +4916,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/400"
+        "$ref": "#/403"
       },
       {
-        "$ref": "#/401"
+        "$ref": "#/404"
       }
     ]
   },
@@ -4905,10 +4929,10 @@
     "resourceType": "Microsoft.ContainerRegistry/registries",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/392"
+      "$ref": "#/395"
     },
     "input": {
-      "$ref": "#/399"
+      "$ref": "#/402"
     }
   },
   {
@@ -4931,7 +4955,7 @@
       },
       "name": {
         "type": {
-          "$ref": "#/407"
+          "$ref": "#/410"
         },
         "flags": 0,
         "description": "Specifies name of the password which should be regenerated if any -- password1 or password2."
@@ -4950,10 +4974,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/405"
+        "$ref": "#/408"
       },
       {
-        "$ref": "#/406"
+        "$ref": "#/409"
       },
       {
         "$ref": "#/2"
@@ -4973,7 +4997,7 @@
       },
       "passwords": {
         "type": {
-          "$ref": "#/409"
+          "$ref": "#/412"
         },
         "flags": 0,
         "description": "The list of passwords for a container registry."
@@ -4992,10 +5016,10 @@
     "resourceType": "Microsoft.ContainerRegistry/registries",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/408"
+      "$ref": "#/411"
     },
     "input": {
-      "$ref": "#/404"
+      "$ref": "#/407"
     }
   },
   {
@@ -5017,7 +5041,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/webhooks",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/411"
+      "$ref": "#/414"
     }
   },
   {
@@ -5026,7 +5050,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/424"
+          "$ref": "#/427"
         },
         "flags": 0,
         "description": "The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events."
@@ -5046,14 +5070,14 @@
     "properties": {
       "eventRequestMessage": {
         "type": {
-          "$ref": "#/415"
+          "$ref": "#/418"
         },
         "flags": 0,
         "description": "The event request message sent to the service URI."
       },
       "eventResponseMessage": {
         "type": {
-          "$ref": "#/422"
+          "$ref": "#/425"
         },
         "flags": 0,
         "description": "The event response message received from the service URI."
@@ -5073,14 +5097,14 @@
     "properties": {
       "content": {
         "type": {
-          "$ref": "#/416"
+          "$ref": "#/419"
         },
         "flags": 0,
         "description": "The content of the event request message."
       },
       "headers": {
         "type": {
-          "$ref": "#/421"
+          "$ref": "#/424"
         },
         "flags": 0,
         "description": "The headers of the event request message."
@@ -5135,28 +5159,28 @@
       },
       "target": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/420"
         },
         "flags": 0,
         "description": "The target of the event."
       },
       "request": {
         "type": {
-          "$ref": "#/418"
+          "$ref": "#/421"
         },
         "flags": 0,
         "description": "The request that generated the event."
       },
       "actor": {
         "type": {
-          "$ref": "#/419"
+          "$ref": "#/422"
         },
         "flags": 0,
         "description": "The agent that initiated the event. For most situations, this could be from the authorization context of the request."
       },
       "source": {
         "type": {
-          "$ref": "#/420"
+          "$ref": "#/423"
         },
         "flags": 0,
         "description": "The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it."
@@ -5327,7 +5351,7 @@
       },
       "headers": {
         "type": {
-          "$ref": "#/423"
+          "$ref": "#/426"
         },
         "flags": 0,
         "description": "The headers of the event response message."
@@ -5366,7 +5390,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/414"
+      "$ref": "#/417"
     }
   },
   {
@@ -5375,7 +5399,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/webhooks",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/413"
+      "$ref": "#/416"
     }
   },
   {
@@ -5391,7 +5415,7 @@
       },
       "customHeaders": {
         "type": {
-          "$ref": "#/427"
+          "$ref": "#/430"
         },
         "flags": 0,
         "description": "Custom headers that will be added to the webhook notifications."
@@ -5412,7 +5436,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/webhooks",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/426"
+      "$ref": "#/429"
     }
   }
 ]

@@ -26,6 +26,12 @@
 * **Input**: [ShipmentPickUpRequest](#shipmentpickuprequest)
 * **Output**: [ShipmentPickUpResponse](#shipmentpickupresponse)
 
+## Function cancel (Microsoft.DataBox/jobs@2020-04-01)
+* **Resource**: Microsoft.DataBox/jobs
+* **ApiVersion**: 2020-04-01
+* **Input**: [CancellationReason](#cancellationreason)
+* **Output**: any
+
 ## Function listCredentials (Microsoft.DataBox/jobs@2020-04-01)
 * **Resource**: Microsoft.DataBox/jobs
 * **ApiVersion**: 2020-04-01
@@ -100,6 +106,10 @@
 * **blobPathList**: string[]: List of full path of the blobs to be transferred.
 * **blobPrefixList**: string[]: Prefix list of the Azure blobs to be transferred.
 * **containerList**: string[]: List of blob containers to be transferred.
+
+## CancellationReason
+### Properties
+* **reason**: string (Required): Reason for cancellation.
 
 ## CloudError
 ### Properties

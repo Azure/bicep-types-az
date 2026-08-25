@@ -3276,5 +3276,136 @@
     "input": {
       "$ref": "#/263"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HealthReportRequest",
+    "properties": {
+      "signalName": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Name of the entity signal to report health for"
+      },
+      "healthState": {
+        "type": {
+          "$ref": "#/280"
+        },
+        "flags": 1,
+        "description": "Health state to report for the signal"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "Reported value of the signal"
+      },
+      "evaluationRules": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 0,
+        "description": "Evaluation rules that were used to determine the reported health state"
+      },
+      "expiresInMinutes": {
+        "type": {
+          "$ref": "#/282"
+        },
+        "flags": 0,
+        "description": "Number of minutes until the health report expires. Defaults to 60 (1 hour) if not specified."
+      },
+      "additionalContext": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "Optional additional context or description for the health report"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Degraded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/275"
+      },
+      {
+        "$ref": "#/276"
+      },
+      {
+        "$ref": "#/277"
+      },
+      {
+        "$ref": "#/278"
+      },
+      {
+        "$ref": "#/279"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HealthReportEvaluationRule",
+    "properties": {
+      "degradedRule": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "Degraded rule with static threshold."
+      },
+      "unhealthyRule": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 1,
+        "description": "Unhealthy rule with static threshold."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 10080
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "ingestHealthReport",
+    "resourceType": "Microsoft.CloudHealth/healthmodels/entities",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/283"
+    },
+    "input": {
+      "$ref": "#/274"
+    }
   }
 ]

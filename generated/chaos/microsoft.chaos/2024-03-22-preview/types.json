@@ -1786,6 +1786,24 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Chaos/experiments",
+    "apiVersion": "2024-03-22-preview",
+    "output": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Chaos/experiments",
+    "apiVersion": "2024-03-22-preview",
+    "output": {
+      "$ref": "#/56"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExperimentExecutionDetails",
     "properties": {
@@ -1812,7 +1830,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/135"
+          "$ref": "#/137"
         },
         "flags": 2,
         "description": "The properties of the experiment execution details."
@@ -1839,7 +1857,7 @@
       },
       "runInformation": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/138"
         },
         "flags": 2,
         "description": "The information of the experiment run."
@@ -1873,7 +1891,7 @@
     "properties": {
       "steps": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/147"
         },
         "flags": 2,
         "description": "The steps of the experiment run."
@@ -1907,7 +1925,7 @@
       },
       "branches": {
         "type": {
-          "$ref": "#/144"
+          "$ref": "#/146"
         },
         "flags": 2,
         "description": "The array of branches."
@@ -1941,7 +1959,7 @@
       },
       "actions": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/145"
         },
         "flags": 2,
         "description": "The array of actions."
@@ -1989,7 +2007,7 @@
       },
       "targets": {
         "type": {
-          "$ref": "#/142"
+          "$ref": "#/144"
         },
         "flags": 2,
         "description": "The array of targets."
@@ -2030,7 +2048,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/143"
         },
         "flags": 2,
         "description": "The error of the action."
@@ -2060,6 +2078,18 @@
   {
     "$type": "ArrayType",
     "itemType": {
+      "$ref": "#/142"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
       "$ref": "#/140"
     }
   },
@@ -2070,24 +2100,12 @@
     }
   },
   {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/138"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/137"
-    }
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "getExecutionDetails",
     "resourceType": "Microsoft.Chaos/experiments/executions",
     "apiVersion": "2024-03-22-preview",
     "output": {
-      "$ref": "#/134"
+      "$ref": "#/136"
     }
   }
 ]

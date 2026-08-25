@@ -5395,6 +5395,15 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "syncAutoStorageKeys",
+    "resourceType": "Microsoft.Batch/batchAccounts",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/167"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CheckNameAvailabilityParameters",
     "properties": {
@@ -5407,7 +5416,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/400"
+          "$ref": "#/401"
         },
         "flags": 1,
         "description": "The resource type."
@@ -5431,7 +5440,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/404"
+          "$ref": "#/405"
         },
         "flags": 2,
         "description": "Gets the reason that a Batch account name could not be used. The Reason element is only returned if NameAvailable is false."
@@ -5457,10 +5466,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/402"
+        "$ref": "#/403"
       },
       {
-        "$ref": "#/403"
+        "$ref": "#/404"
       }
     ]
   },
@@ -5470,10 +5479,10 @@
     "resourceType": "Microsoft.Batch/locations",
     "apiVersion": "2024-07-01",
     "output": {
-      "$ref": "#/401"
+      "$ref": "#/402"
     },
     "input": {
-      "$ref": "#/399"
+      "$ref": "#/400"
     }
   },
   {
@@ -5509,7 +5518,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/408"
+          "$ref": "#/409"
         },
         "flags": 0,
         "description": "The tags of the resource."
@@ -5558,10 +5567,10 @@
     "resourceType": "Microsoft.Batch/batchAccounts/applications/versions",
     "apiVersion": "2024-07-01",
     "output": {
-      "$ref": "#/407"
+      "$ref": "#/408"
     },
     "input": {
-      "$ref": "#/406"
+      "$ref": "#/407"
     }
   },
   {
@@ -5570,7 +5579,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/411"
+          "$ref": "#/412"
         },
         "flags": 0,
         "description": "The properties associated with the certificate."
@@ -5584,7 +5593,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/423"
+          "$ref": "#/424"
         },
         "flags": 0,
         "description": "The tags of the resource."
@@ -5625,7 +5634,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/415"
+          "$ref": "#/416"
         },
         "flags": 2,
         "description": "The provisioned state of the resource"
@@ -5639,7 +5648,7 @@
       },
       "previousProvisioningState": {
         "type": {
-          "$ref": "#/419"
+          "$ref": "#/420"
         },
         "flags": 2,
         "description": "The previous provisioned state of the resource"
@@ -5681,7 +5690,7 @@
       },
       "format": {
         "type": {
-          "$ref": "#/422"
+          "$ref": "#/423"
         },
         "flags": 0,
         "description": "The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx."
@@ -5704,13 +5713,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/412"
-      },
-      {
         "$ref": "#/413"
       },
       {
         "$ref": "#/414"
+      },
+      {
+        "$ref": "#/415"
       }
     ]
   },
@@ -5730,13 +5739,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/416"
-      },
-      {
         "$ref": "#/417"
       },
       {
         "$ref": "#/418"
+      },
+      {
+        "$ref": "#/419"
       }
     ]
   },
@@ -5752,10 +5761,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/420"
+        "$ref": "#/421"
       },
       {
-        "$ref": "#/421"
+        "$ref": "#/422"
       }
     ]
   },
@@ -5773,7 +5782,16 @@
     "resourceType": "Microsoft.Batch/batchAccounts/certificates",
     "apiVersion": "2024-07-01",
     "output": {
-      "$ref": "#/410"
+      "$ref": "#/411"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.Batch/batchAccounts/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/167"
     }
   },
   {
@@ -5803,7 +5821,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/426"
+          "$ref": "#/428"
         },
         "flags": 0,
         "description": "The tags of the resource."
@@ -5852,7 +5870,7 @@
     "resourceType": "Microsoft.Batch/batchAccounts/pools",
     "apiVersion": "2024-07-01",
     "output": {
-      "$ref": "#/425"
+      "$ref": "#/427"
     }
   },
   {
@@ -5861,7 +5879,7 @@
     "resourceType": "Microsoft.Batch/batchAccounts/pools",
     "apiVersion": "2024-07-01",
     "output": {
-      "$ref": "#/425"
+      "$ref": "#/427"
     }
   }
 ]

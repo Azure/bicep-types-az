@@ -54,6 +54,16 @@
 * **Input**: [ResourceDetachRequest](#resourcedetachrequest)
 * **Output**: [ResourceOperationResponse](#resourceoperationresponse)
 
+## Function disable (Microsoft.ComputeSchedule/scheduledActions@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions
+* **ApiVersion**: 2026-04-15-preview
+* **Output**: any
+
+## Function enable (Microsoft.ComputeSchedule/scheduledActions@2026-04-15-preview)
+* **Resource**: Microsoft.ComputeSchedule/scheduledActions
+* **ApiVersion**: 2026-04-15-preview
+* **Output**: any
+
 ## Function patchResources (Microsoft.ComputeSchedule/scheduledActions@2026-04-15-preview)
 * **Resource**: Microsoft.ComputeSchedule/scheduledActions
 * **ApiVersion**: 2026-04-15-preview

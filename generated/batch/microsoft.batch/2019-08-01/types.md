@@ -94,6 +94,11 @@
 * **ApiVersion**: 2019-08-01
 * **Output**: [Pool](#pool)
 
+## Function syncAutoStorageKeys (Microsoft.Batch/batchAccounts@2019-08-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2019-08-01
+* **Output**: any
+
 ## ActivateApplicationPackageParameters
 ### Properties
 * **format**: string (Required): The format of the application package binary file.

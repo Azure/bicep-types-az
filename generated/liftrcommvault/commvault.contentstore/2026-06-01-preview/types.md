@@ -81,6 +81,17 @@
 * **Input**: [RestoreProtectionItemRequest](#restoreprotectionitemrequest)
 * **Output**: [RestoreProtectionItemResponse](#restoreprotectionitemresponse)
 
+## Function resumeBackup (Commvault.ContentStore/cloudAccounts/protectionGroups@2026-06-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
+* **ApiVersion**: 2026-06-01-preview
+* **Output**: any
+
+## Function stopBackup (Commvault.ContentStore/cloudAccounts/protectionGroups@2026-06-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
+* **ApiVersion**: 2026-06-01-preview
+* **Input**: [StopBackupProtectionGroupRequest](#stopbackupprotectiongrouprequest)
+* **Output**: any
+
 ## BackupOptions
 ### Properties
 * **backupCopyImmediately**: bool (Required): Indicates whether to run backup immediately or not for the VM
@@ -217,6 +228,11 @@
 * **timeZone**: string: Time Zone
 * **weeklyDays**: ('FRIDAY' | 'MONDAY' | 'SATURDAY' | 'SUNDAY' | 'THURSDAY' | 'TUESDAY' | 'WEDNESDAY' | string)[]: Weekly Days List
 * **weekOfMonth**: 'FIRST' | 'FOURTH' | 'LAST' | 'SECOND' | 'THIRD' | string: Week of the month
+
+## StopBackupProtectionGroupRequest
+### Properties
+* **comment**: string: Any further comments
+* **reason**: string (Required): The reason for stopping the backup
 
 ## StoragePlan
 ### Properties

@@ -544,12 +544,21 @@
     "writableScopes": 8
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Resources/deployments",
+    "apiVersion": "2016-02-01",
+    "output": {
+      "$ref": "#/5"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "Deployment",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/34"
+          "$ref": "#/35"
         },
         "flags": 0,
         "description": "The deployment properties."
@@ -590,7 +599,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/38"
         },
         "flags": 1,
         "description": "The deployment mode."
@@ -616,10 +625,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/35"
+        "$ref": "#/36"
       },
       {
-        "$ref": "#/36"
+        "$ref": "#/37"
       }
     ]
   },
@@ -629,14 +638,14 @@
     "properties": {
       "error": {
         "type": {
-          "$ref": "#/39"
+          "$ref": "#/40"
         },
         "flags": 0,
         "description": "Validation error."
       },
       "properties": {
         "type": {
-          "$ref": "#/41"
+          "$ref": "#/42"
         },
         "flags": 0,
         "description": "The template deployment properties."
@@ -670,7 +679,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/40"
+          "$ref": "#/41"
         },
         "flags": 0,
         "description": "Validation error."
@@ -680,7 +689,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/39"
+      "$ref": "#/40"
     }
   },
   {
@@ -717,14 +726,14 @@
       },
       "providers": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/43"
         },
         "flags": 0,
         "description": "The list of resource providers needed for the deployment."
       },
       "dependencies": {
         "type": {
-          "$ref": "#/43"
+          "$ref": "#/44"
         },
         "flags": 0,
         "description": "The list of deployment dependencies."
@@ -759,7 +768,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/47"
         },
         "flags": 0,
         "description": "The deployment mode."
@@ -804,10 +813,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/44"
+        "$ref": "#/45"
       },
       {
-        "$ref": "#/45"
+        "$ref": "#/46"
       }
     ]
   },
@@ -817,10 +826,10 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2016-02-01",
     "output": {
-      "$ref": "#/38"
+      "$ref": "#/39"
     },
     "input": {
-      "$ref": "#/33"
+      "$ref": "#/34"
     }
   },
   {
@@ -842,7 +851,7 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2016-02-01",
     "output": {
-      "$ref": "#/48"
+      "$ref": "#/49"
     }
   }
 ]

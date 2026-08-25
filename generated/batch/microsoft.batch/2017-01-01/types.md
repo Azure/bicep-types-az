@@ -40,6 +40,12 @@
 * **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
 * **version**: string (ReadOnly): The version of the application package.
 
+## Function activate (Microsoft.Batch/batchAccounts/applications/versions@2017-01-01)
+* **Resource**: Microsoft.Batch/batchAccounts/applications/versions
+* **ApiVersion**: 2017-01-01
+* **Input**: [ActivateApplicationPackageParameters](#activateapplicationpackageparameters)
+* **Output**: any
+
 ## Function listKeys (Microsoft.Batch/batchAccounts@2017-01-01)
 * **Resource**: Microsoft.Batch/batchAccounts
 * **ApiVersion**: 2017-01-01
@@ -50,6 +56,15 @@
 * **ApiVersion**: 2017-01-01
 * **Input**: [BatchAccountRegenerateKeyParameters](#batchaccountregeneratekeyparameters)
 * **Output**: [BatchAccountKeys](#batchaccountkeys)
+
+## Function syncAutoStorageKeys (Microsoft.Batch/batchAccounts@2017-01-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2017-01-01
+* **Output**: any
+
+## ActivateApplicationPackageParameters
+### Properties
+* **format**: string (Required): The format of the application package binary file.
 
 ## ApplicationPackage
 ### Properties

@@ -3271,6 +3271,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2019-04-01",
+    "output": {
+      "$ref": "#/265"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revokeUserDelegationKeys",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2019-04-01",
+    "output": {
+      "$ref": "#/265"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "LegalHold",
     "properties": {
@@ -3283,7 +3304,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/267"
+          "$ref": "#/270"
         },
         "flags": 1,
         "description": "Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP."
@@ -3298,7 +3319,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/266"
+      "$ref": "#/269"
     }
   },
   {
@@ -3307,10 +3328,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2019-04-01",
     "output": {
-      "$ref": "#/265"
+      "$ref": "#/268"
     },
     "input": {
-      "$ref": "#/265"
+      "$ref": "#/268"
     }
   },
   {
@@ -3319,10 +3340,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2019-04-01",
     "output": {
-      "$ref": "#/265"
+      "$ref": "#/268"
     },
     "input": {
-      "$ref": "#/265"
+      "$ref": "#/268"
     }
   },
   {
@@ -3331,7 +3352,7 @@
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/276"
+          "$ref": "#/279"
         },
         "flags": 1,
         "description": "Specifies the lease action. Can be one of the available actions."
@@ -3390,19 +3411,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/271"
-      },
-      {
-        "$ref": "#/272"
-      },
-      {
-        "$ref": "#/273"
-      },
-      {
         "$ref": "#/274"
       },
       {
         "$ref": "#/275"
+      },
+      {
+        "$ref": "#/276"
+      },
+      {
+        "$ref": "#/277"
+      },
+      {
+        "$ref": "#/278"
       },
       {
         "$ref": "#/2"
@@ -3435,10 +3456,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2019-04-01",
     "output": {
-      "$ref": "#/277"
+      "$ref": "#/280"
     },
     "input": {
-      "$ref": "#/270"
+      "$ref": "#/273"
     }
   },
   {
@@ -3488,7 +3509,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
     "apiVersion": "2019-04-01",
     "output": {
-      "$ref": "#/279"
+      "$ref": "#/282"
     }
   },
   {
@@ -3497,10 +3518,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
     "apiVersion": "2019-04-01",
     "output": {
-      "$ref": "#/279"
+      "$ref": "#/282"
     },
     "input": {
-      "$ref": "#/279"
+      "$ref": "#/282"
     }
   }
 ]

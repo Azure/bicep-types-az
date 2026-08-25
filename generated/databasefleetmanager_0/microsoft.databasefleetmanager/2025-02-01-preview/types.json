@@ -1228,6 +1228,185 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RegisterServerProperties",
+    "properties": {
+      "tierName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Destination tier name."
+      },
+      "sourceSubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Source subscription id."
+      },
+      "sourceResourceGroupName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Source resource group name."
+      },
+      "sourceServerName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Source SQL Server name."
+      },
+      "destinationTierOverrides": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Destination tier overrides."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DestinationTierOverride",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 1,
+        "description": "Resource type."
+      },
+      "tierName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Destination tier name."
+      },
+      "resourceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Database"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pool"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/93"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "registerServer",
+    "resourceType": "Microsoft.DatabaseFleetManager/fleets/fleetspaces",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/98"
+    },
+    "input": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unregister",
+    "resourceType": "Microsoft.DatabaseFleetManager/fleets/fleetspaces",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/98"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseChangeTierProperties",
+    "properties": {
+      "targetTierName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A target tier name."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "changeTier",
+    "resourceType": "Microsoft.DatabaseFleetManager/fleets/fleetspaces/databases",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/98"
+    },
+    "input": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseRenameProperties",
+    "properties": {
+      "newName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "New database name."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rename",
+    "resourceType": "Microsoft.DatabaseFleetManager/fleets/fleetspaces/databases",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/98"
+    },
+    "input": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revert",
+    "resourceType": "Microsoft.DatabaseFleetManager/fleets/fleetspaces/databases",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/98"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "FleetTier",
     "properties": {
       "properties": {
@@ -1273,7 +1452,7 @@
     "resourceType": "Microsoft.DatabaseFleetManager/fleets/tiers",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/92"
+      "$ref": "#/106"
     }
   }
 ]

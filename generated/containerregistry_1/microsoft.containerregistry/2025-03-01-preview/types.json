@@ -2888,6 +2888,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.ContainerRegistry/registries/runs",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/202"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "RunGetLogResult",
     "properties": {
@@ -2913,7 +2925,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/runs",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/202"
+      "$ref": "#/204"
     }
   },
   {
@@ -2977,7 +2989,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/taskRuns",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/204"
+      "$ref": "#/206"
     }
   },
   {
@@ -3000,7 +3012,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/207"
+          "$ref": "#/209"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -3056,7 +3068,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/tasks",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/206"
+      "$ref": "#/208"
     }
   }
 ]

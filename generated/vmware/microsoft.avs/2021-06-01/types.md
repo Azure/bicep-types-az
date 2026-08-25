@@ -225,6 +225,16 @@
 * **ApiVersion**: 2021-06-01
 * **Output**: [AdminCredentials](#admincredentials)
 
+## Function rotateNsxtPassword (Microsoft.AVS/privateClouds@2021-06-01)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2021-06-01
+* **Output**: any
+
+## Function rotateVcenterPassword (Microsoft.AVS/privateClouds@2021-06-01)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2021-06-01
+* **Output**: any
+
 ## AddonProperties
 * **Discriminator**: addonType
 

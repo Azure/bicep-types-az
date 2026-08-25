@@ -29,6 +29,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Capacity/reservationOrders/reservations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function archive (Microsoft.Capacity/reservationOrders/reservations@2022-11-01)
+* **Resource**: Microsoft.Capacity/reservationOrders/reservations
+* **ApiVersion**: 2022-11-01
+* **Output**: any
+
 ## Function availableScopes (Microsoft.Capacity/reservationOrders/reservations@2022-11-01)
 * **Resource**: Microsoft.Capacity/reservationOrders/reservations
 * **ApiVersion**: 2022-11-01
@@ -64,6 +69,11 @@
 * **ApiVersion**: 2022-11-01
 * **Input**: [SplitRequest](#splitrequest)
 * **Output**: [ReservationResponse](#reservationresponse)[]
+
+## Function unarchive (Microsoft.Capacity/reservationOrders/reservations@2022-11-01)
+* **Resource**: Microsoft.Capacity/reservationOrders/reservations
+* **ApiVersion**: 2022-11-01
+* **Output**: any
 
 ## AppliedScopeProperties
 ### Properties

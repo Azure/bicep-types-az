@@ -163,6 +163,11 @@
 * **properties**: [HciEdgeDeviceJobProperties](#hciedgedevicejobproperties) (Required): HCI Edge device job properties
 
 
+## Function apply (Microsoft.AzureStackHCI/clusters/updates@2024-09-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters/updates
+* **ApiVersion**: 2024-09-01-preview
+* **Output**: any
+
 ## Function configureRemoteSupport (Microsoft.AzureStackHCI/clusters@2024-09-01-preview)
 * **Resource**: Microsoft.AzureStackHCI/clusters
 * **ApiVersion**: 2024-09-01-preview
@@ -195,6 +200,11 @@
 * **ApiVersion**: 2024-09-01-preview
 * **Output**: [PasswordCredential](#passwordcredential)
 
+## Function initializeDisableProcess (Microsoft.AzureStackHCI/clusters/arcSettings@2024-09-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2024-09-01-preview
+* **Output**: any
+
 ## Function triggerLogCollection (Microsoft.AzureStackHCI/clusters@2024-09-01-preview)
 * **Resource**: Microsoft.AzureStackHCI/clusters
 * **ApiVersion**: 2024-09-01-preview
@@ -206,6 +216,18 @@
 * **ApiVersion**: 2024-09-01-preview
 * **Input**: [SecretsLocationsChangeRequest](#secretslocationschangerequest)
 * **Output**: [Cluster](#cluster)
+
+## Function upgrade (Microsoft.AzureStackHCI/clusters/arcSettings/extensions@2024-09-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings/extensions
+* **ApiVersion**: 2024-09-01-preview
+* **Input**: [ExtensionUpgradeParameters](#extensionupgradeparameters)
+* **Output**: any
+
+## Function uploadCertificate (Microsoft.AzureStackHCI/clusters@2024-09-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2024-09-01-preview
+* **Input**: [UploadCertificateRequest](#uploadcertificaterequest)
+* **Output**: any
 
 ## Function validate (Microsoft.AzureStackHCI/edgeDevices@2024-09-01-preview)
 * **Resource**: Microsoft.AzureStackHCI/edgeDevices
@@ -501,6 +523,10 @@
 * **managedBy**: 'Azure' | 'User' | string (ReadOnly): Indicates if the extension is managed by azure or the user.
 * **perNodeExtensionDetails**: [PerNodeExtensionState](#pernodeextensionstate)[] (ReadOnly): State of Arc Extension in each of the nodes.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'DisableInProgress' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Extension proxy resource.
+
+## ExtensionUpgradeParameters
+### Properties
+* **targetVersion**: string: Extension Upgrade Target Version.
 
 ## HciEdgeDeviceAdapterPropertyOverrides
 ### Properties
@@ -823,6 +849,10 @@
 * **priorityValue8021Action_Cluster**: string: This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
 * **priorityValue8021Action_SMB**: string: This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
 
+## RawCertificateData
+### Properties
+* **certificates**: string[]
+
 ## RemoteSupportJobNodeSettings
 ### Properties
 * **connectionErrorMessage**: string (ReadOnly): The error message, if any, from the last connection attempt.
@@ -1075,6 +1105,10 @@
 * **packageVersions**: [PackageVersionInfo](#packageversioninfo)[]: Current version of each updatable component.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'DisableInProgress' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the UpdateSummaries proxy resource.
 * **state**: 'AppliedSuccessfully' | 'NeedsAttention' | 'PreparationFailed' | 'PreparationInProgress' | 'Unknown' | 'UpdateAvailable' | 'UpdateFailed' | 'UpdateInProgress' | string: Overall update state of the stamp.
+
+## UploadCertificateRequest
+### Properties
+* **properties**: [RawCertificateData](#rawcertificatedata)
 
 ## UserAssignedIdentities
 ### Properties

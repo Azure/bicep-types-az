@@ -132,11 +132,28 @@
 * **tags**: [VirtualNetworkTags](#virtualnetworktags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/virtualnetworks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function applyArtifacts (Microsoft.DevTestLab/labs/virtualmachines@2015-05-21-preview)
+* **Resource**: Microsoft.DevTestLab/labs/virtualmachines
+* **ApiVersion**: 2015-05-21-preview
+* **Input**: [ApplyArtifactsRequest](#applyartifactsrequest)
+* **Output**: any
+
+## Function createEnvironment (Microsoft.DevTestLab/labs@2015-05-21-preview)
+* **Resource**: Microsoft.DevTestLab/labs
+* **ApiVersion**: 2015-05-21-preview
+* **Input**: [LabVirtualMachine](#labvirtualmachine)
+* **Output**: any
+
 ## Function evaluatePolicies (Microsoft.DevTestLab/labs/policysets@2015-05-21-preview)
 * **Resource**: Microsoft.DevTestLab/labs/policysets
 * **ApiVersion**: 2015-05-21-preview
 * **Input**: [EvaluatePoliciesRequest](#evaluatepoliciesrequest)
 * **Output**: [EvaluatePoliciesResponse](#evaluatepoliciesresponse)
+
+## Function execute (Microsoft.DevTestLab/labs/schedules@2015-05-21-preview)
+* **Resource**: Microsoft.DevTestLab/labs/schedules
+* **ApiVersion**: 2015-05-21-preview
+* **Output**: any
 
 ## Function generateArmTemplate (Microsoft.DevTestLab/labs/artifactsources/artifacts@2015-05-21-preview)
 * **Resource**: Microsoft.DevTestLab/labs/artifactsources/artifacts
@@ -154,6 +171,30 @@
 * **Resource**: Microsoft.DevTestLab/labs
 * **ApiVersion**: 2015-05-21-preview
 * **Output**: [ResponseWithContinuationLabVhd](#responsewithcontinuationlabvhd)
+
+## Function refreshData (Microsoft.DevTestLab/labs/costinsights@2015-05-21-preview)
+* **Resource**: Microsoft.DevTestLab/labs/costinsights
+* **ApiVersion**: 2015-05-21-preview
+* **Output**: any
+
+## Function refreshData (Microsoft.DevTestLab/labs/costs@2015-05-21-preview)
+* **Resource**: Microsoft.DevTestLab/labs/costs
+* **ApiVersion**: 2015-05-21-preview
+* **Output**: any
+
+## Function start (Microsoft.DevTestLab/labs/virtualmachines@2015-05-21-preview)
+* **Resource**: Microsoft.DevTestLab/labs/virtualmachines
+* **ApiVersion**: 2015-05-21-preview
+* **Output**: any
+
+## Function stop (Microsoft.DevTestLab/labs/virtualmachines@2015-05-21-preview)
+* **Resource**: Microsoft.DevTestLab/labs/virtualmachines
+* **ApiVersion**: 2015-05-21-preview
+* **Output**: any
+
+## ApplyArtifactsRequest
+### Properties
+* **artifacts**: [ArtifactInstallProperties](#artifactinstallproperties)[]: The list of artifacts to apply.
 
 ## ArmTemplateInfo
 ### Properties

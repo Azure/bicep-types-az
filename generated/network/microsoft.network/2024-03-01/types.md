@@ -1478,11 +1478,40 @@
 * **ApiVersion**: 2024-03-01
 * **Output**: [PublicIpDdosProtectionStatusResult](#publicipddosprotectionstatusresult)
 
+## Function deleteShareableLinks (Microsoft.Network/bastionHosts@2024-03-01)
+* **Resource**: Microsoft.Network/bastionHosts
+* **ApiVersion**: 2024-03-01
+* **Input**: [BastionShareableLinkListRequest](#bastionshareablelinklistrequest)
+* **Output**: any
+
+## Function deleteShareableLinksByToken (Microsoft.Network/bastionHosts@2024-03-01)
+* **Resource**: Microsoft.Network/bastionHosts
+* **ApiVersion**: 2024-03-01
+* **Input**: [BastionShareableLinkTokenListRequest](#bastionshareablelinktokenlistrequest)
+* **Output**: any
+
+## Function deploy (Microsoft.Network/firewallPolicies@2024-03-01)
+* **Resource**: Microsoft.Network/firewallPolicies
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
 ## Function disconnectActiveSessions (Microsoft.Network/bastionHosts@2024-03-01)
 * **Resource**: Microsoft.Network/bastionHosts
 * **ApiVersion**: 2024-03-01
 * **Input**: [SessionIds](#sessionids)
 * **Output**: [BastionSessionDeleteResult](#bastionsessiondeleteresult)
+
+## Function disconnectP2sVpnConnections (Microsoft.Network/p2svpnGateways@2024-03-01)
+* **Resource**: Microsoft.Network/p2svpnGateways
+* **ApiVersion**: 2024-03-01
+* **Input**: [P2SVpnConnectionRequest](#p2svpnconnectionrequest)
+* **Output**: any
+
+## Function disconnectVirtualNetworkGatewayVpnConnections (Microsoft.Network/virtualNetworkGateways@2024-03-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-03-01
+* **Input**: [P2SVpnConnectionRequest](#p2svpnconnectionrequest)
+* **Output**: any
 
 ## Function effectiveNetworkSecurityGroups (Microsoft.Network/networkInterfaces@2024-03-01)
 * **Resource**: Microsoft.Network/networkInterfaces
@@ -1686,6 +1715,18 @@
 * **Input**: [GetOutboundRoutesParameters](#getoutboundroutesparameters)
 * **Output**: [EffectiveRouteMapRouteList](#effectiveroutemaproutelist)
 
+## Function packetCapture (Microsoft.Network/azureFirewalls@2024-03-01)
+* **Resource**: Microsoft.Network/azureFirewalls
+* **ApiVersion**: 2024-03-01
+* **Input**: [FirewallPacketCaptureParameters](#firewallpacketcaptureparameters)
+* **Output**: any
+
+## Function PrepareNetworkPolicies (Microsoft.Network/virtualNetworks/subnets@2024-03-01)
+* **Resource**: Microsoft.Network/virtualNetworks/subnets
+* **ApiVersion**: 2024-03-01
+* **Input**: [PrepareNetworkPoliciesRequest](#preparenetworkpoliciesrequest)
+* **Output**: any
+
 ## Function query (Microsoft.Network/networkWatchers/connectionMonitors@2024-03-01)
 * **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
 * **ApiVersion**: 2024-03-01
@@ -1729,6 +1770,21 @@
 * **ApiVersion**: 2024-03-01
 * **Output**: [P2SVpnGateway](#p2svpngateway)
 
+## Function resetconnection (Microsoft.Network/connections@2024-03-01)
+* **Resource**: Microsoft.Network/connections
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
+## Function resetconnection (Microsoft.Network/vpnGateways/vpnConnections/vpnLinkConnections@2024-03-01)
+* **Resource**: Microsoft.Network/vpnGateways/vpnConnections/vpnLinkConnections
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
+## Function resetvpnclientsharedkey (Microsoft.Network/virtualNetworkGateways@2024-03-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
 ## Function restart (Microsoft.Network/networkVirtualAppliances@2024-03-01)
 * **Resource**: Microsoft.Network/networkVirtualAppliances
 * **ApiVersion**: 2024-03-01
@@ -1741,11 +1797,27 @@
 * **Input**: [SecurityGroupViewParameters](#securitygroupviewparameters)
 * **Output**: [SecurityGroupViewResult](#securitygroupviewresult)
 
+## Function setLoadBalancerFrontendPublicIpAddresses (Microsoft.Network/locations@2024-03-01)
+* **Resource**: Microsoft.Network/locations
+* **ApiVersion**: 2024-03-01
+* **Input**: [LoadBalancerVipSwapRequest](#loadbalancervipswaprequest)
+* **Output**: any
+
 ## Function setvpnclientipsecparameters (Microsoft.Network/virtualNetworkGateways@2024-03-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
 * **ApiVersion**: 2024-03-01
 * **Input**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
 * **Output**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
+
+## Function start (Microsoft.Network/applicationGateways@2024-03-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
+## Function start (Microsoft.Network/networkWatchers/connectionMonitors@2024-03-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2024-03-01
+* **Output**: any
 
 ## Function startPacketCapture (Microsoft.Network/virtualNetworkGateways@2024-03-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
@@ -1770,6 +1842,21 @@
 * **ApiVersion**: 2024-03-01
 * **Input**: [VpnConnectionPacketCaptureStartParameters](#vpnconnectionpacketcapturestartparameters)
 * **Output**: string
+
+## Function stop (Microsoft.Network/applicationGateways@2024-03-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/packetCaptures@2024-03-01)
+* **Resource**: Microsoft.Network/networkWatchers/packetCaptures
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/connectionMonitors@2024-03-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2024-03-01
+* **Output**: any
 
 ## Function stopPacketCapture (Microsoft.Network/virtualNetworkGateways@2024-03-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
@@ -1811,6 +1898,18 @@
 * **ApiVersion**: 2024-03-01
 * **Input**: [TroubleshootingParameters](#troubleshootingparameters)
 * **Output**: [TroubleshootingResult](#troubleshootingresult)
+
+## Function UnprepareNetworkPolicies (Microsoft.Network/virtualNetworks/subnets@2024-03-01)
+* **Resource**: Microsoft.Network/virtualNetworks/subnets
+* **ApiVersion**: 2024-03-01
+* **Input**: [UnprepareNetworkPoliciesRequest](#unpreparenetworkpoliciesrequest)
+* **Output**: any
+
+## Function vpnConfiguration (Microsoft.Network/virtualWans@2024-03-01)
+* **Resource**: Microsoft.Network/virtualWans
+* **ApiVersion**: 2024-03-01
+* **Input**: [GetVpnSitesConfigurationRequest](#getvpnsitesconfigurationrequest)
+* **Output**: any
 
 ## Function vpndeviceconfigurationscript (Microsoft.Network/connections@2024-03-01)
 * **Resource**: Microsoft.Network/connections
@@ -2700,6 +2799,16 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the network rule collection resource.
 * **rules**: [AzureFirewallNetworkRule](#azurefirewallnetworkrule)[]: Collection of rules used by a network rule collection.
 
+## AzureFirewallPacketCaptureFlags
+### Properties
+* **type**: 'ack' | 'fin' | 'push' | 'rst' | 'syn' | 'urg' | string: Flags to capture
+
+## AzureFirewallPacketCaptureRule
+### Properties
+* **destinationPorts**: string[]: List of ports to be captured.
+* **destinations**: string[]: List of destination IP addresses/subnets to be captured.
+* **sources**: string[]: List of source IP addresses/subnets to be captured.
+
 ## AzureFirewallPropertiesFormat
 ### Properties
 * **additionalProperties**: [AzureFirewallAdditionalProperties](#azurefirewalladditionalproperties): The additional properties used to further config this azure firewall.
@@ -2868,6 +2977,10 @@
 ### Properties
 * **nextLink**: string: The URL to get the next set of results.
 * **value**: [BastionShareableLink](#bastionshareablelink)[]: List of Bastion Shareable Links for the request.
+
+## BastionShareableLinkTokenListRequest
+### Properties
+* **tokens**: string[]: List of Bastion Shareable Link Token.
 
 ## BgpConnectionProperties
 ### Properties
@@ -3692,6 +3805,16 @@
 * **field**: string: The name of the field we would like to filter
 * **values**: string[]: List of values to filter the current field by
 
+## FirewallPacketCaptureParameters
+### Properties
+* **durationInSeconds**: int {minValue: 30, maxValue: 1800}: Duration of packet capture in seconds.
+* **fileName**: string: Name of file to be uploaded to sasURL
+* **filters**: [AzureFirewallPacketCaptureRule](#azurefirewallpacketcapturerule)[]: Rules to filter packet captures.
+* **flags**: [AzureFirewallPacketCaptureFlags](#azurefirewallpacketcaptureflags)[]: The tcp-flag type to be captured. Used with protocol TCP
+* **numberOfPacketsToCapture**: int {minValue: 100, maxValue: 90000}: Number of packets to be captured.
+* **protocol**: 'Any' | 'ICMP' | 'TCP' | 'UDP' | string: The protocol of packets to capture
+* **sasUrl**: string: Upload capture location
+
 ## FirewallPolicyCertificateAuthority
 ### Properties
 * **keyVaultSecretId**: string: Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
@@ -4005,6 +4128,11 @@
 * **connectionType**: string: The type of the specified connection resource like ExpressRouteConnection, HubVirtualNetworkConnection, VpnConnection and P2SConnection.
 * **resourceUri**: string: The connection resource whose outbound routes are being requested.
 
+## GetVpnSitesConfigurationRequest
+### Properties
+* **outputBlobSasUrl**: string (Required): The sas-url to download the configurations for vpn-sites.
+* **vpnSites**: string[]: List of resource-ids of the vpn-sites for which config is to be downloaded.
+
 ## GroupByUserSession
 ### Properties
 * **groupByVariables**: [GroupByVariable](#groupbyvariable)[] (Required): List of group by clause variables.
@@ -4307,6 +4435,19 @@
 * **name**: 'Basic' | 'Gateway' | 'Standard' | string: Name of a load balancer SKU.
 * **tier**: 'Global' | 'Regional' | string: Tier of a load balancer SKU.
 
+## LoadBalancerVipSwapRequest
+### Properties
+* **frontendIPConfigurations**: [LoadBalancerVipSwapRequestFrontendIPConfiguration](#loadbalancervipswaprequestfrontendipconfiguration)[]: A list of frontend IP configuration resources that should swap VIPs.
+
+## LoadBalancerVipSwapRequestFrontendIPConfiguration
+### Properties
+* **id**: string: The ID of frontend IP configuration resource.
+* **properties**: [LoadBalancerVipSwapRequestFrontendIPConfigurationProperties](#loadbalancervipswaprequestfrontendipconfigurationproperties): The properties of VIP swap request's frontend IP configuration object.
+
+## LoadBalancerVipSwapRequestFrontendIPConfigurationProperties
+### Properties
+* **publicIPAddress**: [SubResource](#subresource): A reference to public IP address resource.
+
 ## LoadBalancingRule
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -4472,6 +4613,20 @@
 * **memberType**: 'Subnet' | 'VirtualNetwork' | string: The type of the group member.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the scope assignment resource.
 * **resourceGuid**: string (ReadOnly): Unique identifier for this resource.
+
+## NetworkIntentPolicy
+### Properties
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string: Resource ID.
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
+## NetworkIntentPolicyConfiguration
+### Properties
+* **networkIntentPolicyName**: string: The name of the Network Intent Policy for storing in target subscription.
+* **sourceNetworkIntentPolicy**: [NetworkIntentPolicy](#networkintentpolicy): Source network intent policy.
 
 ## NetworkInterface
 ### Properties
@@ -4817,6 +4972,10 @@
 * **outputBlobSasUrl**: string: The sas-url to download the P2S Vpn connection health detail.
 * **vpnUserNamesFilter**: string[]: The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.
 
+## P2SVpnConnectionRequest
+### Properties
+* **vpnConnectionIds**: string[]: List of p2s vpn connection Ids.
+
 ## P2SVpnGateway
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -4960,6 +5119,11 @@
 ### Properties
 * **scrubbingRules**: [WebApplicationFirewallScrubbingRules](#webapplicationfirewallscrubbingrules)[]: The rules that are applied to the logs for scrubbing.
 * **state**: 'Disabled' | 'Enabled' | string: State of the log scrubbing config. Default value is Enabled.
+
+## PrepareNetworkPoliciesRequest
+### Properties
+* **networkIntentPolicyConfigurations**: [NetworkIntentPolicyConfiguration](#networkintentpolicyconfiguration)[]: A list of NetworkIntentPolicyConfiguration.
+* **serviceName**: string: The name of the service for which subnet is being prepared for.
 
 ## PrivateDnsZoneConfig
 ### Properties
@@ -5271,6 +5435,11 @@
 * **link**: string: Link to the external resource.
 * **linkedResourceType**: string: Resource type of the linked resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource navigation link resource.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
@@ -6081,6 +6250,10 @@
 * **ingressBytesTransferred**: int (ReadOnly): The Ingress Bytes Transferred in this connection.
 * **lastConnectionEstablishedUtcTime**: string (ReadOnly): The time at which connection was established in Utc format.
 * **tunnel**: string (ReadOnly): Tunnel name.
+
+## UnprepareNetworkPoliciesRequest
+### Properties
+* **serviceName**: string: The name of the service for which subnet is being unprepared for.
 
 ## VerificationIPFlowParameters
 ### Properties

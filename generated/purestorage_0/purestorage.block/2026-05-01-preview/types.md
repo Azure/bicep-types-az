@@ -123,6 +123,23 @@
 * **Input**: [PlatformConsoleAuthConfig](#platformconsoleauthconfig)
 * **Output**: [PlatformConsoleAuthResult](#platformconsoleauthresult)
 
+## Function disableAvsConnection (PureStorage.Block/storagePools@2026-05-01-preview)
+* **Resource**: PureStorage.Block/storagePools
+* **ApiVersion**: 2026-05-01-preview
+* **Output**: any
+
+## Function enableAvsConnection (PureStorage.Block/storagePools@2026-05-01-preview)
+* **Resource**: PureStorage.Block/storagePools
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [StoragePoolEnableAvsConnectionPost](#storagepoolenableavsconnectionpost)
+* **Output**: any
+
+## Function finalizeAvsConnection (PureStorage.Block/storagePools@2026-05-01-preview)
+* **Resource**: PureStorage.Block/storagePools
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [StoragePoolFinalizeAvsConnectionPost](#storagepoolfinalizeavsconnectionpost)
+* **Output**: any
+
 ## Function getAvsConnection (PureStorage.Block/storagePools@2026-05-01-preview)
 * **Resource**: PureStorage.Block/storagePools
 * **ApiVersion**: 2026-05-01-preview
@@ -184,6 +201,23 @@
 * **ApiVersion**: 2026-05-01-preview
 * **Input**: [VolumeGroupSnapshotListRequest](#volumegroupsnapshotlistrequest)
 * **Output**: [VolumeGroupSnapshotPostListResult](#volumegroupsnapshotpostlistresult)
+
+## Function overwrite (PureStorage.Block/storagePools/volumeGroups@2026-05-01-preview)
+* **Resource**: PureStorage.Block/storagePools/volumeGroups
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [VolumeGroupOverwriteRequest](#volumegroupoverwriterequest)
+* **Output**: any
+
+## Function overwrite (PureStorage.Block/storagePools/volumeGroups/volumes@2026-05-01-preview)
+* **Resource**: PureStorage.Block/storagePools/volumeGroups/volumes
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [VolumeOverwriteRequest](#volumeoverwriterequest)
+* **Output**: any
+
+## Function repairAvsConnection (PureStorage.Block/storagePools@2026-05-01-preview)
+* **Resource**: PureStorage.Block/storagePools
+* **ApiVersion**: 2026-05-01-preview
+* **Output**: any
 
 ## Alert
 ### Properties
@@ -493,6 +527,13 @@
 * **reservationInternalId**: string (ReadOnly): Pure Storage's internal ID for the reservation
 * **user**: [UserDetails](#userdetails): User details
 
+## ServiceInitializationData
+### Properties
+* **serviceAccountPassword**: string {sensitive}: Service account password
+* **serviceAccountUsername**: string: Service account username
+* **vSphereCertificate**: string: AVS instance's vSphere certificate
+* **vSphereIp**: string: AVS instance's vSphere IP address
+
 ## ServiceInitializationHandle
 ### Properties
 * **sddcResourceId**: string: Azure resource ID of the AVS SDDC the pool is connecting to
@@ -509,6 +550,15 @@
 * **snapshots**: int (Required): Space occupied by data unique to one or more snapshots, in bytes
 * **totalUsed**: int (Required): Total space occupied by customer data (i.e., being billed for), in bytes
 * **unique**: int (Required): Unique space occupied by customer data, in bytes; for a volume, this is the amount of storage that would be freed by deleting the volume, since snapshot and shared data would be kept
+
+## StoragePoolEnableAvsConnectionPost
+### Properties
+* **sddcResourceId**: string (Required): Azure resource ID of the AVS SDDC to connect to
+
+## StoragePoolFinalizeAvsConnectionPost
+### Properties
+* **serviceInitializationData**: [ServiceInitializationData](#serviceinitializationdata): Explicit AVS connection information
+* **serviceInitializationDataEnc**: string: Encoded AVS connection information
 
 ## StoragePoolLimits
 ### Properties
@@ -582,6 +632,11 @@
 * **subnetId**: string (Required): Azure resource ID of the Virtual Network subnet where the storage pool will be connected
 * **vnetId**: string (Required): Azure resource ID of the Virtual Network in which the subnet is located
 
+## VolumeGroupOverwriteRequest
+### Properties
+* **sourceSnapshotResourceId**: string (Required): Azure resource ID of the volume group snapshot to restore from
+* **sourceVolumeGroupResourceId**: string (Required): Azure resource ID of the source volume group
+
 ## VolumeGroupProperties
 ### Properties
 * **performanceParameters**: [PerformanceParameters](#performanceparameters): Performance parameters for the volume group
@@ -633,6 +688,14 @@
 ## VolumeLimits
 ### Properties
 * **provisionedSize**: [RangeLimits](#rangelimits) (Required): Provisioned size limits for a volume, in bytes
+
+## VolumeOverwriteRequest
+### Properties
+* **sourceSerialNumber**: string: Serial number of the source volume to overwrite from. Used when sourceType is 'serialNumber'.
+* **sourceType**: 'none' | 'recoverableVolume' | 'serialNumber' | 'snapshot' | 'volume' | string (Required): Source type for the overwrite operation
+* **sourceVolumeGroupResourceId**: string: Azure resource ID of the source volume group. Required when sourceType is 'snapshot' or when the source volume belongs to a different volume group than the target.
+* **sourceVolumeResourceId**: string: Azure resource ID of the source volume to clone from. Used when sourceType is 'volume'.
+* **sourceVolumeSnapshot**: [VolumeSnapshotSource](#volumesnapshotsource): Source volume group snapshot and volume snapshot name to restore from. Used when sourceType is 'snapshot'.
 
 ## VolumeProperties
 ### Properties

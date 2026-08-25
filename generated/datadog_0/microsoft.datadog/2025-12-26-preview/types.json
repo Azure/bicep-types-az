@@ -2045,19 +2045,34 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setDefaultKey",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-12-26-preview",
+    "output": {
+      "$ref": "#/160"
+    },
+    "input": {
+      "$ref": "#/128"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "BillingInfoResponse",
     "properties": {
       "marketplaceSaasInfo": {
         "type": {
-          "$ref": "#/161"
+          "$ref": "#/163"
         },
         "flags": 0,
         "description": "Marketplace Subscription details"
       },
       "partnerBillingEntity": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/164"
         },
         "flags": 0,
         "description": "Partner Billing Entity details: Organization Info"
@@ -2145,7 +2160,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/160"
+      "$ref": "#/162"
     }
   },
   {
@@ -2174,7 +2189,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/164"
+      "$ref": "#/166"
     }
   },
   {
@@ -2202,7 +2217,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/167"
+          "$ref": "#/169"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2258,7 +2273,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/166"
+      "$ref": "#/168"
     },
     "input": {
       "$ref": "#/52"
@@ -2296,10 +2311,10 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/166"
+      "$ref": "#/168"
     },
     "input": {
-      "$ref": "#/169"
+      "$ref": "#/171"
     }
   }
 ]

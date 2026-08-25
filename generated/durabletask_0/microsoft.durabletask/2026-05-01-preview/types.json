@@ -1429,5 +1429,17 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DurableTask/schedulers",
+    "apiVersion": "2026-05-01-preview",
+    "output": {
+      "$ref": "#/126"
+    }
   }
 ]

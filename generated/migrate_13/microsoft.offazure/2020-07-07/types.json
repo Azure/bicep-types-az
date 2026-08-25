@@ -1314,12 +1314,24 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.OffAzure/HyperVSites",
+    "apiVersion": "2020-07-07",
+    "output": {
+      "$ref": "#/77"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SiteHealthSummaryCollection",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/80"
+          "$ref": "#/82"
         },
         "flags": 2,
         "description": "List of SiteHealthSummary."
@@ -1409,7 +1421,7 @@
       },
       "affectedResources": {
         "type": {
-          "$ref": "#/79"
+          "$ref": "#/81"
         },
         "flags": 0,
         "description": "Affected resources."
@@ -1425,7 +1437,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/78"
+      "$ref": "#/80"
     }
   },
   {
@@ -1434,7 +1446,7 @@
     "resourceType": "Microsoft.OffAzure/HyperVSites",
     "apiVersion": "2020-07-07",
     "output": {
-      "$ref": "#/77"
+      "$ref": "#/79"
     }
   },
   {
@@ -1477,7 +1489,34 @@
     "resourceType": "Microsoft.OffAzure/HyperVSites",
     "apiVersion": "2020-07-07",
     "output": {
-      "$ref": "#/82"
+      "$ref": "#/84"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.OffAzure/VMwareSites/machines",
+    "apiVersion": "2020-07-07",
+    "output": {
+      "$ref": "#/77"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.OffAzure/VMwareSites/machines",
+    "apiVersion": "2020-07-07",
+    "output": {
+      "$ref": "#/77"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.OffAzure/VMwareSites",
+    "apiVersion": "2020-07-07",
+    "output": {
+      "$ref": "#/77"
     }
   },
   {
@@ -1486,7 +1525,7 @@
     "resourceType": "Microsoft.OffAzure/VMwareSites",
     "apiVersion": "2020-07-07",
     "output": {
-      "$ref": "#/77"
+      "$ref": "#/79"
     }
   },
   {
@@ -1522,7 +1561,7 @@
     "resourceType": "Microsoft.OffAzure/VMwareSites",
     "apiVersion": "2020-07-07",
     "output": {
-      "$ref": "#/85"
+      "$ref": "#/90"
     }
   }
 ]

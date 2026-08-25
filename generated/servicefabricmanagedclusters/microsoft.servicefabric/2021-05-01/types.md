@@ -80,6 +80,24 @@
 * **tags**: [ManagedProxyResourceTags](#managedproxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function deleteNode (Microsoft.ServiceFabric/managedClusters/nodeTypes@2021-05-01)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2021-05-01
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
+## Function reimage (Microsoft.ServiceFabric/managedClusters/nodeTypes@2021-05-01)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2021-05-01
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
+## Function restart (Microsoft.ServiceFabric/managedClusters/nodeTypes@2021-05-01)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2021-05-01
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
 ## ApplicationHealthPolicy
 ### Properties
 * **considerWarningAsError**: bool (Required): Indicates whether warnings are treated with the same severity as errors.
@@ -211,6 +229,11 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **protocol**: 'ah' | 'esp' | 'http' | 'https' | 'icmp' | 'tcp' | 'udp' | string (Required): Network protocol this rule applies to.
 * **sourceAddressPrefixes**: string[]: The CIDR or source IP ranges.
 * **sourcePortRanges**: string[]: The source port ranges.
+
+## NodeTypeActionParameters
+### Properties
+* **force**: bool: Force the action to go through.
+* **nodes**: string[] (Required): List of node names from the node type.
 
 ## NodeTypeProperties
 ### Properties

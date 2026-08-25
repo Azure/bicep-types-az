@@ -103,6 +103,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Dictionary of <string>
 * **type**: 'Microsoft.DataMigration/sqlMigrationServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.DataMigration/databaseMigrations@2023-07-15-preview)
+* **Resource**: Microsoft.DataMigration/databaseMigrations
+* **ApiVersion**: 2023-07-15-preview
+* **Input**: [MigrationOperationInput](#migrationoperationinput)
+* **Output**: any
+
 ## Function cancel (Microsoft.DataMigration/services/projects/tasks@2023-07-15-preview)
 * **Resource**: Microsoft.DataMigration/services/projects/tasks
 * **ApiVersion**: 2023-07-15-preview
@@ -136,6 +142,12 @@
 * **Input**: [CommandProperties](#commandproperties)
 * **Output**: [CommandProperties](#commandproperties)
 
+## Function cutover (Microsoft.DataMigration/databaseMigrations@2023-07-15-preview)
+* **Resource**: Microsoft.DataMigration/databaseMigrations
+* **ApiVersion**: 2023-07-15-preview
+* **Input**: [MigrationOperationInput](#migrationoperationinput)
+* **Output**: any
+
 ## Function deleteNode (Microsoft.DataMigration/sqlMigrationServices@2023-07-15-preview)
 * **Resource**: Microsoft.DataMigration/sqlMigrationServices
 * **ApiVersion**: 2023-07-15-preview
@@ -167,6 +179,16 @@
 * **ApiVersion**: 2023-07-15-preview
 * **Input**: [RegenAuthKeys](#regenauthkeys)
 * **Output**: [RegenAuthKeys](#regenauthkeys)
+
+## Function start (Microsoft.DataMigration/services@2023-07-15-preview)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2023-07-15-preview
+* **Output**: any
+
+## Function stop (Microsoft.DataMigration/services@2023-07-15-preview)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2023-07-15-preview
+* **Output**: any
 
 ## AuthenticationKeys
 ### Properties
@@ -1570,6 +1592,10 @@
 ### Properties
 * **isEligibleForMigration**: bool (ReadOnly): Whether object is eligible for migration or not.
 * **validationMessages**: string[] (ReadOnly): Information about eligibility failure for the server object.
+
+## MigrationOperationInput
+### Properties
+* **migrationOperationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: ID tracking migration operation.
 
 ## MigrationReportResult
 ### Properties

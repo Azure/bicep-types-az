@@ -1445,5 +1445,50 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "debugInfo",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2020-10-01",
+    "output": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "flush",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2020-10-01",
+    "output": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2020-10-01",
+    "output": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2020-10-01",
+    "output": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2020-10-01",
+    "output": {
+      "$ref": "#/5"
+    }
   }
 ]

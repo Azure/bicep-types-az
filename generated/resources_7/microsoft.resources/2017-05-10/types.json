@@ -587,12 +587,21 @@
     "writableScopes": 8
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Resources/deployments",
+    "apiVersion": "2017-05-10",
+    "output": {
+      "$ref": "#/6"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "Deployment",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/38"
+          "$ref": "#/39"
         },
         "flags": 1,
         "description": "The deployment properties."
@@ -633,7 +642,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/41"
+          "$ref": "#/42"
         },
         "flags": 1,
         "description": "The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources."
@@ -659,10 +668,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/39"
+        "$ref": "#/40"
       },
       {
-        "$ref": "#/40"
+        "$ref": "#/41"
       }
     ]
   },
@@ -672,14 +681,14 @@
     "properties": {
       "error": {
         "type": {
-          "$ref": "#/43"
+          "$ref": "#/44"
         },
         "flags": 0,
         "description": "Validation error."
       },
       "properties": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/46"
         },
         "flags": 0,
         "description": "The template deployment properties."
@@ -713,7 +722,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/45"
         },
         "flags": 2,
         "description": "Validation error."
@@ -723,7 +732,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/43"
+      "$ref": "#/44"
     }
   },
   {
@@ -760,14 +769,14 @@
       },
       "providers": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/47"
         },
         "flags": 0,
         "description": "The list of resource providers needed for the deployment."
       },
       "dependencies": {
         "type": {
-          "$ref": "#/47"
+          "$ref": "#/48"
         },
         "flags": 0,
         "description": "The list of deployment dependencies."
@@ -802,7 +811,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/51"
         },
         "flags": 0,
         "description": "The deployment mode. Possible values are Incremental and Complete."
@@ -847,10 +856,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/48"
+        "$ref": "#/49"
       },
       {
-        "$ref": "#/49"
+        "$ref": "#/50"
       }
     ]
   },
@@ -860,10 +869,10 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2017-05-10",
     "output": {
-      "$ref": "#/42"
+      "$ref": "#/43"
     },
     "input": {
-      "$ref": "#/37"
+      "$ref": "#/38"
     }
   },
   {
@@ -885,7 +894,7 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2017-05-10",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/53"
     }
   }
 ]

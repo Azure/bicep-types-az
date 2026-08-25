@@ -134,6 +134,21 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureStackHCI/virtualnetworks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.AzureStackHCI/virtualmachines@2021-09-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualmachines
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: any
+
+## Function start (Microsoft.AzureStackHCI/virtualmachines@2021-09-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualmachines
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.AzureStackHCI/virtualmachines@2021-09-01-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualmachines
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: any
+
 ## ComponentsL15GkaSchemasVirtualnetworkspropertiesPropertiesSubnetsItemsPropertiesRoutetable
 ### Properties
 * **id**: string: Etag - Gets a unique read-only string that changes whenever the resource is updated.

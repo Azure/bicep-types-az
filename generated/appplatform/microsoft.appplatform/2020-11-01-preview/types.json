@@ -2068,6 +2068,15 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "disableTestEndpoint",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2020-11-01-preview",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "enableTestEndpoint",
     "resourceType": "Microsoft.AppPlatform/Spring",
     "apiVersion": "2020-11-01-preview",
@@ -2128,10 +2137,10 @@
     "resourceType": "Microsoft.AppPlatform/locations",
     "apiVersion": "2020-11-01-preview",
     "output": {
-      "$ref": "#/141"
+      "$ref": "#/142"
     },
     "input": {
-      "$ref": "#/140"
+      "$ref": "#/141"
     }
   },
   {
@@ -2160,7 +2169,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps",
     "apiVersion": "2020-11-01-preview",
     "output": {
-      "$ref": "#/143"
+      "$ref": "#/144"
     }
   },
   {
@@ -2202,10 +2211,37 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps",
     "apiVersion": "2020-11-01-preview",
     "output": {
-      "$ref": "#/146"
+      "$ref": "#/147"
     },
     "input": {
-      "$ref": "#/145"
+      "$ref": "#/146"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2020-11-01-preview",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2020-11-01-preview",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2020-11-01-preview",
+    "output": {
+      "$ref": "#/87"
     }
   },
   {
@@ -2227,7 +2263,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
     "apiVersion": "2020-11-01-preview",
     "output": {
-      "$ref": "#/148"
+      "$ref": "#/152"
     }
   }
 ]

@@ -10276,6 +10276,15 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "deleteMiLink",
+    "resourceType": "Microsoft.AzureArcData/sqlServerInstances/availabilityGroups",
+    "apiVersion": "2026-03-01-preview",
+    "output": {
+      "$ref": "#/14"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "failover",
     "resourceType": "Microsoft.AzureArcData/sqlServerInstances/availabilityGroups",
     "apiVersion": "2026-03-01-preview",
@@ -10312,7 +10321,7 @@
       "$ref": "#/480"
     },
     "input": {
-      "$ref": "#/765"
+      "$ref": "#/766"
     }
   },
   {

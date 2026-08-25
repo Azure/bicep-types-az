@@ -15,6 +15,11 @@
 * **ApiVersion**: 2019-10-01
 * **Output**: [SummarizeResults](#summarizeresults)
 
+## Function triggerEvaluation (Microsoft.PolicyInsights/policyStates@2019-10-01)
+* **Resource**: Microsoft.PolicyInsights/policyStates
+* **ApiVersion**: 2019-10-01
+* **Output**: any
+
 ## ComplianceDetail
 ### Properties
 * **complianceState**: string: The compliance state.

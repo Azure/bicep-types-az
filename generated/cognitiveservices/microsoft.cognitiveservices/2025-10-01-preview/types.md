@@ -390,6 +390,22 @@
 * **Input**: [CheckSkuAvailabilityParameter](#checkskuavailabilityparameter)
 * **Output**: [SkuAvailabilityListResult](#skuavailabilitylistresult)
 
+## Function deleteRaiBlocklistItems (Microsoft.CognitiveServices/accounts/raiBlocklists@2025-10-01-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/raiBlocklists
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: string[]
+* **Output**: any
+
+## Function disable (Microsoft.CognitiveServices/accounts/projects/applications@2025-10-01-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/projects/applications
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: any
+
+## Function enable (Microsoft.CognitiveServices/accounts/projects/applications@2025-10-01-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/projects/applications
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: any
+
 ## Function listAgents (Microsoft.CognitiveServices/accounts/projects/applications@2025-10-01-preview)
 * **Resource**: Microsoft.CognitiveServices/accounts/projects/applications
 * **ApiVersion**: 2025-10-01-preview
@@ -426,6 +442,16 @@
 * **Resource**: Microsoft.CognitiveServices/accounts/deployments
 * **ApiVersion**: 2025-10-01-preview
 * **Output**: [Deployment](#deployment)
+
+## Function start (Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments@2025-10-01-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments@2025-10-01-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments
+* **ApiVersion**: 2025-10-01-preview
+* **Output**: any
 
 ## AbusePenalty
 ### Properties

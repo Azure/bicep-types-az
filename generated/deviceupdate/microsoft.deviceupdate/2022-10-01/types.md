@@ -63,6 +63,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DeviceUpdate/accounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function updatePrivateEndpointProperties (Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies@2022-10-01)
+* **Resource**: Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies
+* **ApiVersion**: 2022-10-01
+* **Input**: [PrivateEndpointUpdate](#privateendpointupdate)
+* **Output**: any
+
+## Function validate (Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies@2022-10-01)
+* **Resource**: Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies
+* **ApiVersion**: 2022-10-01
+* **Input**: [PrivateEndpointConnectionProxy](#privateendpointconnectionproxy)
+* **Output**: any
+
 ## AccountProperties
 ### Properties
 * **hostName**: string (ReadOnly): API host name.
@@ -145,9 +157,28 @@
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the private endpoint connection resource.
 
+## PrivateEndpointConnectionProxy
+### Properties
+* **eTag**: string (ReadOnly): ETag from NRP.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PrivateEndpointConnectionProxyProperties](#privateendpointconnectionproxyproperties): Private endpoint connection proxy object property bag.
+* **remotePrivateEndpoint**: [RemotePrivateEndpoint](#remoteprivateendpoint): Remote private endpoint details.
+* **status**: string: Operation status.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## PrivateEndpointConnectionProxyProperties
 ### Properties
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the private endpoint connection proxy resource.
+
+## PrivateEndpointUpdate
+### Properties
+* **id**: string: Remote endpoint resource ID.
+* **immutableResourceId**: string: Original resource ID needed by Microsoft.Network.
+* **immutableSubscriptionId**: string: Original subscription ID needed by Microsoft.Network.
+* **location**: string: ARM location of the remote private endpoint.
+* **vnetTrafficTag**: string: Virtual network traffic tag.
 
 ## PrivateLinkServiceConnection
 ### Properties

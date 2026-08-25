@@ -38,6 +38,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function redeploy (Microsoft.SqlVirtualMachine/sqlVirtualMachines@2022-02-01)
+* **Resource**: Microsoft.SqlVirtualMachine/sqlVirtualMachines
+* **ApiVersion**: 2022-02-01
+* **Output**: any
+
+## Function startAssessment (Microsoft.SqlVirtualMachine/sqlVirtualMachines@2022-02-01)
+* **Resource**: Microsoft.SqlVirtualMachine/sqlVirtualMachines
+* **ApiVersion**: 2022-02-01
+* **Output**: any
+
 ## AdditionalFeaturesServerConfigurations
 ### Properties
 * **isRServicesEnabled**: bool: Enable or disable R services (SQL 2016 onwards).

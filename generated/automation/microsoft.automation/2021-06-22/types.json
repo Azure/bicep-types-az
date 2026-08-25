@@ -1168,5 +1168,17 @@
         "description": "Gets or sets the target hybrid runbook worker group."
       }
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "move",
+    "resourceType": "Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers",
+    "apiVersion": "2021-06-22",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/83"
+    }
   }
 ]

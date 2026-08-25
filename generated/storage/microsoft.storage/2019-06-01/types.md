@@ -173,6 +173,11 @@
 * **Input**: [ImmutabilityPolicy](#immutabilitypolicy)
 * **Output**: [ImmutabilityPolicy](#immutabilitypolicy)
 
+## Function failover (Microsoft.Storage/storageAccounts@2019-06-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2019-06-01
+* **Output**: any
+
 ## Function lease (Microsoft.Storage/storageAccounts/blobServices/containers@2019-06-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2019-06-01
@@ -207,11 +212,22 @@
 * **Input**: [StorageAccountRegenerateKeyParameters](#storageaccountregeneratekeyparameters)
 * **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
 
+## Function restore (Microsoft.Storage/storageAccounts/fileServices/shares@2019-06-01)
+* **Resource**: Microsoft.Storage/storageAccounts/fileServices/shares
+* **ApiVersion**: 2019-06-01
+* **Input**: [DeletedShare](#deletedshare)
+* **Output**: any
+
 ## Function restoreBlobRanges (Microsoft.Storage/storageAccounts@2019-06-01)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2019-06-01
 * **Input**: [BlobRestoreParameters](#blobrestoreparameters)
 * **Output**: [BlobRestoreStatus](#blobrestorestatus)
+
+## Function revokeUserDelegationKeys (Microsoft.Storage/storageAccounts@2019-06-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2019-06-01
+* **Output**: any
 
 ## Function setLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2019-06-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
@@ -356,6 +372,11 @@
 ### Properties
 * **daysAfterLastAccessTimeGreaterThan**: int {minValue: 0}: Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
 * **daysAfterModificationGreaterThan**: int {minValue: 0}: Value indicating the age in days after last modification
+
+## DeletedShare
+### Properties
+* **deletedShareName**: string (Required): Required. Identify the name of the deleted share that will be restored.
+* **deletedShareVersion**: string (Required): Required. Identify the version of the deleted share that will be restored.
 
 ## DeleteRetentionPolicy
 ### Properties

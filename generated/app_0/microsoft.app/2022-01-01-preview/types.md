@@ -106,6 +106,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/managedEnvironments/storages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activate (Microsoft.App/containerApps/revisions@2022-01-01-preview)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: any
+
+## Function deactivate (Microsoft.App/containerApps/revisions@2022-01-01-preview)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: any
+
 ## Function listCustomHostNameAnalysis (Microsoft.App/containerApps@2022-01-01-preview)
 * **Resource**: Microsoft.App/containerApps
 * **ApiVersion**: 2022-01-01-preview
@@ -115,6 +125,11 @@
 * **Resource**: Microsoft.App/containerApps
 * **ApiVersion**: 2022-01-01-preview
 * **Output**: [SecretsCollection](#secretscollection)
+
+## Function restart (Microsoft.App/containerApps/revisions@2022-01-01-preview)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: any
 
 ## AllowedAudiencesValidation
 ### Properties

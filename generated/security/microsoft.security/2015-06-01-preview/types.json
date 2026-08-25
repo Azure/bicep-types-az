@@ -1633,5 +1633,122 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dismiss",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2015-06-01-preview",
+    "output": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reactivate",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2015-06-01-preview",
+    "output": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessPolicyInitiateRequest",
+    "properties": {
+      "virtualMachines": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 1,
+        "description": "A list of virtual machines & ports to open access for"
+      },
+      "justification": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The justification for making the initiate request"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessPolicyInitiateVirtualMachine",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource ID of the virtual machine that is linked to this policy"
+      },
+      "ports": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 1,
+        "description": "The ports to open for the resource with the `id`"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JitNetworkAccessPolicyInitiatePort",
+    "properties": {
+      "number": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1
+      },
+      "allowedSourceAddressPrefix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Source of the allowed traffic. If omitted, the request will be for the source IP address of the initiate request."
+      },
+      "endTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The time to close the request in UTC"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/116"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/115"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "{jitNetworkAccessPolicyInitiateType}",
+    "resourceType": "Microsoft.Security/locations/jitNetworkAccessPolicies",
+    "apiVersion": "2015-06-01-preview",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/114"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "{taskUpdateActionType}",
+    "resourceType": "Microsoft.Security/locations/tasks",
+    "apiVersion": "2015-06-01-preview",
+    "output": {
+      "$ref": "#/40"
+    }
   }
 ]

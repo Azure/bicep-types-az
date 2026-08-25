@@ -10,8 +10,8 @@ warning | Modeler/MissingType | The schema 'OperationResponse-properties' has no
 warning | Skipping resource POST action path '/providers/Microsoft.Capacity/calculateExchange': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.Capacity/calculatePrice': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.Capacity/exchange': Unable to find type segments
-warning | Skipping resource action archive under path '/providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}/archive': failed to find a response schema
-warning | Skipping resource action unarchive under path '/providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}/unarchive': failed to find a response schema
+warning | Resource action archive under path '/providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}/archive' has no response schema. Returning 'any'.
+warning | Resource action unarchive under path '/providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}/unarchive' has no response schema. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'QuotaProperties-properties' has no type or format information whatsoever. Location:
@@ -21,8 +21,8 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping resource POST action path '/providers/Microsoft.Capacity/calculatePrice': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.Capacity/calculateExchange': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.Capacity/exchange': Unable to find type segments
-warning | Skipping resource action archive under path '/providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}/archive': failed to find a response schema
-warning | Skipping resource action unarchive under path '/providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}/unarchive': failed to find a response schema
+warning | Resource action archive under path '/providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}/archive' has no response schema. Returning 'any'.
+warning | Resource action unarchive under path '/providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}/unarchive' has no response schema. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/providers/Microsoft.Capacity/calculatePrice': Unable to find type segments
@@ -58,8 +58,8 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping GetCatalog due to required query parameter "reservedResourceType"
 warning | Skipping resource POST action path '/providers/Microsoft.Capacity/calculatePrice': Unable to find type segments
-warning | Skipping resource action archive under path '/providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}/archive': failed to find a response schema
-warning | Skipping resource action unarchive under path '/providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}/unarchive': failed to find a response schema
+warning | Resource action archive under path '/providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}/archive' has no response schema. Returning 'any'.
+warning | Resource action unarchive under path '/providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}/unarchive' has no response schema. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping GetCatalog due to required query parameter "reservedResourceType"

@@ -74,10 +74,47 @@
 * **tags**: [WorkloadInstanceModelTags](#workloadinstancemodeltags): Gets or sets the resource tags.
 * **type**: 'Microsoft.Migrate/modernizeProjects/workloadInstances' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function buildContainerImage (Microsoft.Migrate/modernizeProjects/workloadDeployments@2022-05-01-preview)
+* **Resource**: Microsoft.Migrate/modernizeProjects/workloadDeployments
+* **ApiVersion**: 2022-05-01-preview
+* **Input**: [BuildContainerImageModel](#buildcontainerimagemodel)
+* **Output**: any
+
+## Function completeMigration (Microsoft.Migrate/modernizeProjects/workloadInstances@2022-05-01-preview)
+* **Resource**: Microsoft.Migrate/modernizeProjects/workloadInstances
+* **ApiVersion**: 2022-05-01-preview
+* **Output**: any
+
+## Function disableReplication (Microsoft.Migrate/modernizeProjects/workloadInstances@2022-05-01-preview)
+* **Resource**: Microsoft.Migrate/modernizeProjects/workloadInstances
+* **ApiVersion**: 2022-05-01-preview
+* **Output**: any
+
 ## Function getSecrets (Microsoft.Migrate/modernizeProjects/workloadDeployments@2022-05-01-preview)
 * **Resource**: Microsoft.Migrate/modernizeProjects/workloadDeployments
 * **ApiVersion**: 2022-05-01-preview
 * **Output**: [WorkloadDeploymentModel](#workloaddeploymentmodel)
+
+## Function migrate (Microsoft.Migrate/modernizeProjects/workloadDeployments@2022-05-01-preview)
+* **Resource**: Microsoft.Migrate/modernizeProjects/workloadDeployments
+* **ApiVersion**: 2022-05-01-preview
+* **Output**: any
+
+## Function refresh (Microsoft.Migrate/modernizeProjects/migrateAgents@2022-05-01-preview)
+* **Resource**: Microsoft.Migrate/modernizeProjects/migrateAgents
+* **ApiVersion**: 2022-05-01-preview
+* **Output**: any
+
+## Function testMigrate (Microsoft.Migrate/modernizeProjects/workloadDeployments@2022-05-01-preview)
+* **Resource**: Microsoft.Migrate/modernizeProjects/workloadDeployments
+* **ApiVersion**: 2022-05-01-preview
+* **Input**: [TestMigrateModel](#testmigratemodel)
+* **Output**: any
+
+## Function testMigrateCleanup (Microsoft.Migrate/modernizeProjects/workloadDeployments@2022-05-01-preview)
+* **Resource**: Microsoft.Migrate/modernizeProjects/workloadDeployments
+* **ApiVersion**: 2022-05-01-preview
+* **Output**: any
 
 ## ACRProperties
 ### Properties
@@ -171,6 +208,10 @@ the container file system.
 * **port**: string: Gets or sets the application port.
 * **portMapping**: [PortMapping](#portmapping): WebApplication port mapping.
 * **protocol**: string: Gets or sets the protocol.
+
+## BuildContainerImageModel
+### Properties
+* **properties**: [ContainerImageProperties](#containerimageproperties): Class for container image properties.
 
 ## BuildContainerImageWorkflowModelCustomPropertiesContainerImageProperties
 ### Properties
@@ -582,6 +623,14 @@ PersistentVolume.
 ## TaskModelCustomProperties
 ### Properties
 * **instanceType**: string: Gets or sets the instance type.
+
+## TestMigrateModel
+### Properties
+* **properties**: [TestMigrateModelProperties](#testmigratemodelproperties): Test migrate model properties.
+
+## TestMigrateModelProperties
+### Properties
+* **customProperties**: [WorkloadDeploymentModelCustomProperties](#workloaddeploymentmodelcustomproperties): Workload deployment model custom properties.
 
 ## TestMigrateWorkflowModelCustomPropertiesDeployedResourcesProperties
 ### Properties

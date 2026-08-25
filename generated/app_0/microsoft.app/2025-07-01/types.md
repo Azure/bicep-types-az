@@ -357,6 +357,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.App/sessionPools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activate (Microsoft.App/containerApps/revisions@2025-07-01)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2025-07-01
+* **Output**: any
+
 ## Function checkNameAvailability (Microsoft.App/connectedEnvironments@2025-07-01)
 * **Resource**: Microsoft.App/connectedEnvironments
 * **ApiVersion**: 2025-07-01
@@ -368,6 +373,11 @@
 * **ApiVersion**: 2025-07-01
 * **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
 * **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## Function deactivate (Microsoft.App/containerApps/revisions@2025-07-01)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2025-07-01
+* **Output**: any
 
 ## Function getAuthtoken (Microsoft.App/containerApps@2025-07-01)
 * **Resource**: Microsoft.App/containerApps
@@ -409,6 +419,11 @@
 * **ApiVersion**: 2025-07-01
 * **Output**: [WorkflowEnvelope](#workflowenvelope)
 
+## Function restart (Microsoft.App/containerApps/revisions@2025-07-01)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2025-07-01
+* **Output**: any
+
 ## Function start (Microsoft.App/containerApps@2025-07-01)
 * **Resource**: Microsoft.App/containerApps
 * **ApiVersion**: 2025-07-01
@@ -429,6 +444,11 @@
 * **Resource**: Microsoft.App/jobs
 * **ApiVersion**: 2025-07-01
 * **Output**: [ContainerAppJobExecutions](#containerappjobexecutions)
+
+## Function stop (Microsoft.App/jobs/executions@2025-07-01)
+* **Resource**: Microsoft.App/jobs/executions
+* **ApiVersion**: 2025-07-01
+* **Output**: any
 
 ## AllowedAudiencesValidation
 ### Properties

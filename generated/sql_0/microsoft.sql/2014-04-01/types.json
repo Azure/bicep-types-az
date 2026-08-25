@@ -6297,12 +6297,33 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "pause",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2014-04-01",
+    "output": {
+      "$ref": "#/530"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2014-04-01",
+    "output": {
+      "$ref": "#/530"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExportRequest",
     "properties": {
       "storageKeyType": {
         "type": {
-          "$ref": "#/533"
+          "$ref": "#/536"
         },
         "flags": 1,
         "description": "The type of the storage key to use."
@@ -6337,7 +6358,7 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/536"
+          "$ref": "#/539"
         },
         "flags": 0,
         "description": "The authentication type."
@@ -6356,10 +6377,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/531"
+        "$ref": "#/534"
       },
       {
-        "$ref": "#/532"
+        "$ref": "#/535"
       }
     ]
   },
@@ -6375,10 +6396,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/534"
+        "$ref": "#/537"
       },
       {
-        "$ref": "#/535"
+        "$ref": "#/538"
       }
     ]
   },
@@ -6388,7 +6409,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/538"
+          "$ref": "#/541"
         },
         "flags": 0,
         "description": "The import/export operation properties."
@@ -6491,10 +6512,10 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2014-04-01",
     "output": {
-      "$ref": "#/537"
+      "$ref": "#/540"
     },
     "input": {
-      "$ref": "#/530"
+      "$ref": "#/533"
     }
   },
   {
@@ -6510,14 +6531,14 @@
       },
       "edition": {
         "type": {
-          "$ref": "#/555"
+          "$ref": "#/558"
         },
         "flags": 1,
         "description": "The edition for the database being created.\r\n\r\nThe list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:\r\n\r\n```azurecli\r\naz sql db list-editions -l <location> -o table\r\n````\r\n\r\n```powershell\r\nGet-AzSqlServerServiceObjective -Location <location>\r\n````"
       },
       "serviceObjectiveName": {
         "type": {
-          "$ref": "#/621"
+          "$ref": "#/624"
         },
         "flags": 1,
         "description": "The name of the service objective to assign to the database."
@@ -6531,7 +6552,7 @@
       },
       "storageKeyType": {
         "type": {
-          "$ref": "#/624"
+          "$ref": "#/627"
         },
         "flags": 1,
         "description": "The type of the storage key to use."
@@ -6566,7 +6587,7 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/627"
+          "$ref": "#/630"
         },
         "flags": 0,
         "description": "The authentication type."
@@ -6633,15 +6654,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/541"
-      },
-      {
-        "$ref": "#/542"
-      },
-      {
-        "$ref": "#/543"
-      },
-      {
         "$ref": "#/544"
       },
       {
@@ -6673,6 +6685,15 @@
       },
       {
         "$ref": "#/554"
+      },
+      {
+        "$ref": "#/555"
+      },
+      {
+        "$ref": "#/556"
+      },
+      {
+        "$ref": "#/557"
       },
       {
         "$ref": "#/0"
@@ -6943,15 +6964,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/556"
-      },
-      {
-        "$ref": "#/557"
-      },
-      {
-        "$ref": "#/558"
-      },
-      {
         "$ref": "#/559"
       },
       {
@@ -7138,6 +7150,15 @@
         "$ref": "#/620"
       },
       {
+        "$ref": "#/621"
+      },
+      {
+        "$ref": "#/622"
+      },
+      {
+        "$ref": "#/623"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -7154,10 +7175,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/622"
+        "$ref": "#/625"
       },
       {
-        "$ref": "#/623"
+        "$ref": "#/626"
       }
     ]
   },
@@ -7173,10 +7194,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/625"
+        "$ref": "#/628"
       },
       {
-        "$ref": "#/626"
+        "$ref": "#/629"
       }
     ]
   },
@@ -7186,10 +7207,71 @@
     "resourceType": "Microsoft.Sql/servers",
     "apiVersion": "2014-04-01",
     "output": {
-      "$ref": "#/537"
+      "$ref": "#/540"
     },
     "input": {
-      "$ref": "#/540"
+      "$ref": "#/543"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/servers/disasterRecoveryConfiguration",
+    "apiVersion": "2014-04-01",
+    "output": {
+      "$ref": "#/530"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forceFailoverAllowDataLoss",
+    "resourceType": "Microsoft.Sql/servers/disasterRecoveryConfiguration",
+    "apiVersion": "2014-04-01",
+    "output": {
+      "$ref": "#/530"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/servers/databases/replicationLinks",
+    "apiVersion": "2014-04-01",
+    "output": {
+      "$ref": "#/530"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forceFailoverAllowDataLoss",
+    "resourceType": "Microsoft.Sql/servers/databases/replicationLinks",
+    "apiVersion": "2014-04-01",
+    "output": {
+      "$ref": "#/530"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UnlinkParameters",
+    "properties": {
+      "forcedTermination": {
+        "type": {
+          "$ref": "#/315"
+        },
+        "flags": 0,
+        "description": "Determines whether link will be terminated in a forced or a friendly way."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unlink",
+    "resourceType": "Microsoft.Sql/servers/databases/replicationLinks",
+    "apiVersion": "2014-04-01",
+    "output": {
+      "$ref": "#/530"
+    },
+    "input": {
+      "$ref": "#/636"
     }
   }
 ]

@@ -81,6 +81,17 @@
 * **tags**: [ManagedProxyResourceTags](#managedproxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function applyMaintenanceWindow (Microsoft.ServiceFabric/managedClusters@2023-09-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters
+* **ApiVersion**: 2023-09-01-preview
+* **Output**: any
+
+## Function deleteNode (Microsoft.ServiceFabric/managedClusters/nodeTypes@2023-09-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2023-09-01-preview
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
 ## Function getazresiliencystatus (Microsoft.ServiceFabric/managedClusters@2023-09-01-preview)
 * **Resource**: Microsoft.ServiceFabric/managedClusters
 * **ApiVersion**: 2023-09-01-preview
@@ -90,6 +101,18 @@
 * **Resource**: Microsoft.ServiceFabric/managedClusters
 * **ApiVersion**: 2023-09-01-preview
 * **Output**: [ManagedMaintenanceWindowStatus](#managedmaintenancewindowstatus)
+
+## Function reimage (Microsoft.ServiceFabric/managedClusters/nodeTypes@2023-09-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2023-09-01-preview
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
+## Function restart (Microsoft.ServiceFabric/managedClusters/nodeTypes@2023-09-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2023-09-01-preview
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
 
 ## AdditionalNetworkInterfaceConfiguration
 ### Properties
@@ -293,6 +316,12 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **sourceAddressPrefixes**: string[]: The CIDR or source IP ranges.
 * **sourcePortRange**: string: The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
 * **sourcePortRanges**: string[]: The source port ranges.
+
+## NodeTypeActionParameters
+### Properties
+* **force**: bool: Force the action to go through.
+* **nodes**: string[]: List of node names from the node type.
+* **updateType**: 'ByUpgradeDomain' | 'Default' | string: Specifies the way the operation will be performed.
 
 ## NodeTypeProperties
 ### Properties

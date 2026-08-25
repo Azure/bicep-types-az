@@ -161,11 +161,21 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.EventHub/namespaces/schemagroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function breakPairing (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2026-01-01)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2026-01-01
+* **Output**: any
+
 ## Function failover (Microsoft.EventHub/namespaces@2026-01-01)
 * **Resource**: Microsoft.EventHub/namespaces
 * **ApiVersion**: 2026-01-01
 * **Input**: [FailOver](#failover)
 * **Output**: [FailOver](#failover)
+
+## Function failover (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2026-01-01)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2026-01-01
+* **Output**: any
 
 ## Function listKeys (Microsoft.EventHub/namespaces/authorizationRules@2026-01-01)
 * **Resource**: Microsoft.EventHub/namespaces/authorizationRules
@@ -181,6 +191,11 @@
 * **Resource**: Microsoft.EventHub/namespaces/eventhubs/authorizationRules
 * **ApiVersion**: 2026-01-01
 * **Output**: [AccessKeys](#accesskeys)
+
+## Function reconcile (Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations@2026-01-01)
+* **Resource**: Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2026-01-01
+* **Output**: any
 
 ## Function regenerateKeys (Microsoft.EventHub/namespaces/authorizationRules@2026-01-01)
 * **Resource**: Microsoft.EventHub/namespaces/authorizationRules

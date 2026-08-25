@@ -37,6 +37,12 @@
 * **systemData**: [ProxyResourceSystemData](#proxyresourcesystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Purview/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addRootCollectionAdmin (Microsoft.Purview/accounts@2021-12-01)
+* **Resource**: Microsoft.Purview/accounts
+* **ApiVersion**: 2021-12-01
+* **Input**: [CollectionAdminUpdate](#collectionadminupdate)
+* **Output**: any
+
 ## Function listFeatures (Microsoft.Purview/accounts@2021-12-01)
 * **Resource**: Microsoft.Purview/accounts
 * **ApiVersion**: 2021-12-01
@@ -123,6 +129,10 @@ External cloud identifier used as part of scanning configuration.
 ### Properties
 * **awsExternalId**: string (ReadOnly): AWS external identifier.
 Configured in AWS to allow use of the role arn used for scanning
+
+## CollectionAdminUpdate
+### Properties
+* **objectId**: string: Gets or sets the object identifier of the admin.
 
 ## Credentials
 ### Properties

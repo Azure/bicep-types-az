@@ -24,6 +24,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CodeSigning/codeSigningAccounts/certificateProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function revokeCertificate (Microsoft.CodeSigning/codeSigningAccounts/certificateProfiles@2024-02-05-preview)
+* **Resource**: Microsoft.CodeSigning/codeSigningAccounts/certificateProfiles
+* **ApiVersion**: 2024-02-05-preview
+* **Input**: [RevokeCertificate](#revokecertificate)
+* **Output**: any
+
 ## AccountSku
 ### Properties
 * **name**: 'Basic' | 'Premium' | string (Required): Name of the SKU.
@@ -74,6 +80,14 @@
 * **remarks**: string: Remarks for the revocation.
 * **requestedAt**: string: The timestamp when the revocation is requested.
 * **status**: 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Status of the revocation.
+
+## RevokeCertificate
+### Properties
+* **effectiveAt**: string (Required): The timestamp when the revocation is effective.
+* **reason**: string (Required): Reason for the revocation.
+* **remarks**: string: Remarks for the revocation.
+* **serialNumber**: string (Required): Serial number of the certificate.
+* **thumbprint**: string (Required): Thumbprint of the certificate.
 
 ## SystemData
 ### Properties

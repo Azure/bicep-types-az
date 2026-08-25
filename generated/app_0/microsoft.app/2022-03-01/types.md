@@ -106,11 +106,21 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/managedEnvironments/storages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activate (Microsoft.App/containerApps/revisions@2022-03-01)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2022-03-01
+* **Output**: any
+
 ## Function checkNameAvailability (Microsoft.App/managedEnvironments@2022-03-01)
 * **Resource**: Microsoft.App/managedEnvironments
 * **ApiVersion**: 2022-03-01
 * **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
 * **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## Function deactivate (Microsoft.App/containerApps/revisions@2022-03-01)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2022-03-01
+* **Output**: any
 
 ## Function listCustomHostNameAnalysis (Microsoft.App/containerApps@2022-03-01)
 * **Resource**: Microsoft.App/containerApps
@@ -126,6 +136,11 @@
 * **Resource**: Microsoft.App/managedEnvironments/daprComponents
 * **ApiVersion**: 2022-03-01
 * **Output**: [DaprSecretsCollection](#daprsecretscollection)
+
+## Function restart (Microsoft.App/containerApps/revisions@2022-03-01)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2022-03-01
+* **Output**: any
 
 ## AllowedAudiencesValidation
 ### Properties

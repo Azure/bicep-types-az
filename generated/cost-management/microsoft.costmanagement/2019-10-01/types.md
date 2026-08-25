@@ -11,6 +11,11 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function run (Microsoft.CostManagement/exports@2019-10-01)
+* **Resource**: Microsoft.CostManagement/exports
+* **ApiVersion**: 2019-10-01
+* **Output**: any
+
 ## ExportDeliveryDestination
 ### Properties
 * **container**: string (Required): The name of the container where exports will be uploaded.

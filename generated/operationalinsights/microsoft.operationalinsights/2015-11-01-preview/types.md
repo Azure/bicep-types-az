@@ -36,6 +36,16 @@
 * **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required): The properties of the linked service.
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function Disable (Microsoft.OperationalInsights/workspaces/intelligencePacks@2015-11-01-preview)
+* **Resource**: Microsoft.OperationalInsights/workspaces/intelligencePacks
+* **ApiVersion**: 2015-11-01-preview
+* **Output**: any
+
+## Function Enable (Microsoft.OperationalInsights/workspaces/intelligencePacks@2015-11-01-preview)
+* **Resource**: Microsoft.OperationalInsights/workspaces/intelligencePacks
+* **ApiVersion**: 2015-11-01-preview
+* **Output**: any
+
 ## Function sharedKeys (Microsoft.OperationalInsights/workspaces@2015-11-01-preview)
 * **Resource**: Microsoft.OperationalInsights/workspaces
 * **ApiVersion**: 2015-11-01-preview

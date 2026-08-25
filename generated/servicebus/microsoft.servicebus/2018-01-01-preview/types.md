@@ -154,6 +154,17 @@
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties supplied to create or update VirtualNetworkRules
 * **type**: 'Microsoft.ServiceBus/namespaces/virtualnetworkrules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function breakPairing (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2018-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: any
+
+## Function failover (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2018-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2018-01-01-preview
+* **Input**: [FailoverProperties](#failoverproperties)
+* **Output**: any
+
 ## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2018-01-01-preview)
 * **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
 * **ApiVersion**: 2018-01-01-preview
@@ -174,6 +185,12 @@
 * **ApiVersion**: 2018-01-01-preview
 * **Output**: [AccessKeys](#accesskeys)
 
+## Function migrate (Microsoft.ServiceBus/namespaces@2018-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces
+* **ApiVersion**: 2018-01-01-preview
+* **Input**: [SBNamespaceMigrate](#sbnamespacemigrate)
+* **Output**: any
+
 ## Function regenerateKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2018-01-01-preview)
 * **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
 * **ApiVersion**: 2018-01-01-preview
@@ -191,6 +208,16 @@
 * **ApiVersion**: 2018-01-01-preview
 * **Input**: [RegenerateAccessKeyParameters](#regenerateaccesskeyparameters)
 * **Output**: [AccessKeys](#accesskeys)
+
+## Function revert (Microsoft.ServiceBus/namespaces/migrationConfigurations@2018-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/migrationConfigurations
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: any
+
+## Function upgrade (Microsoft.ServiceBus/namespaces/migrationConfigurations@2018-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/migrationConfigurations
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: any
 
 ## AccessKeys
 ### Properties
@@ -243,6 +270,14 @@
 ### Properties
 * **keySource**: 'Microsoft.KeyVault': Enumerates the possible value of keySource for Encryption
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Properties of KeyVault
+
+## FailoverProperties
+### Properties
+* **properties**: [FailoverPropertiesProperties](#failoverpropertiesproperties): Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary.
+
+## FailoverPropertiesProperties
+### Properties
+* **IsSafeFailover**: bool: Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary.
 
 ## Identity
 ### Properties
@@ -318,6 +353,10 @@
 ## SBAuthorizationRuleProperties
 ### Properties
 * **rights**: ('Listen' | 'Manage' | 'Send')[] (Required): The rights associated with the rule.
+
+## SBNamespaceMigrate
+### Properties
+* **targetNamespaceType**: 'EventHub' | 'Messaging' | 'Mixed' | 'NotificationHub' | 'Relay' (Required): Type of namespaces
 
 ## SBNamespaceProperties
 ### Properties

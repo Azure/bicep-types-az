@@ -204,6 +204,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkSecurityPerimeters/resourceAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function commit (Microsoft.Network/networkManagers@2021-02-01-preview)
+* **Resource**: Microsoft.Network/networkManagers
+* **ApiVersion**: 2021-02-01-preview
+* **Input**: [NetworkManagerCommit](#networkmanagercommit)
+* **Output**: [NetworkManagerCommit](#networkmanagercommit)
+
 ## Function listActiveConnectivityConfigurations (Microsoft.Network/networkManagers@2021-02-01-preview)
 * **Resource**: Microsoft.Network/networkManagers
 * **ApiVersion**: 2021-02-01-preview
@@ -474,6 +480,13 @@
 * **groupMembers**: [GroupMembersItem](#groupmembersitem)[]: Group members of network group.
 * **memberType**: string: Group member type.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the scope assignment resource.
+
+## NetworkManagerCommit
+### Properties
+* **commitId**: string (ReadOnly): Commit Id.
+* **commitType**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string: Commit Type.
+* **configurationIds**: string[]: List of configuration ids.
+* **targetLocations**: string[]: List of target locations.
 
 ## NetworkManagerDeploymentStatus
 ### Properties

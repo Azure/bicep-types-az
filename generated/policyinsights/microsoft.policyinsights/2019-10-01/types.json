@@ -1099,5 +1099,14 @@
     "output": {
       "$ref": "#/22"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "triggerEvaluation",
+    "resourceType": "Microsoft.PolicyInsights/policyStates",
+    "apiVersion": "2019-10-01",
+    "output": {
+      "$ref": "#/3"
+    }
   }
 ]

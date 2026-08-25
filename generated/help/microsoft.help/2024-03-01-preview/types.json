@@ -2467,6 +2467,162 @@
   },
   {
     "$type": "ObjectType",
+    "name": "SolutionWarmUpRequestBody",
+    "properties": {
+      "parameters": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 0,
+        "description": "Dictionary of <string>"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SolutionWarmUpRequestBodyParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "warmup",
+    "resourceType": "Microsoft.Help/solutions",
+    "apiVersion": "2024-03-01-preview",
+    "output": {
+      "$ref": "#/176"
+    },
+    "input": {
+      "$ref": "#/192"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContinueRequestBody",
+    "properties": {
+      "stepId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Unique id of the result."
+      },
+      "responses": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TroubleshooterResponse",
+    "properties": {
+      "questionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "id of the question."
+      },
+      "questionType": {
+        "type": {
+          "$ref": "#/203"
+        },
+        "flags": 0,
+        "description": "Type of Question"
+      },
+      "response": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Response key for SingleInput. For Multi-line test/open ended question it is free form text"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RadioButton"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dropdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TextInput"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MultiLineInfoBox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DateTimePicker"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MultiSelect"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/197"
+      },
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/196"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "continue",
+    "resourceType": "Microsoft.Help/troubleshooters",
+    "apiVersion": "2024-03-01-preview",
+    "output": {
+      "$ref": "#/176"
+    },
+    "input": {
+      "$ref": "#/195"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "end",
+    "resourceType": "Microsoft.Help/troubleshooters",
+    "apiVersion": "2024-03-01-preview",
+    "output": {
+      "$ref": "#/176"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "RestartTroubleshooterResponse",
     "properties": {
       "troubleshooterResourceName": {
@@ -2484,7 +2640,7 @@
     "resourceType": "Microsoft.Help/troubleshooters",
     "apiVersion": "2024-03-01-preview",
     "output": {
-      "$ref": "#/192"
+      "$ref": "#/207"
     }
   }
 ]

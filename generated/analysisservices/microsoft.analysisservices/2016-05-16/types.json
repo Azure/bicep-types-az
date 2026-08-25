@@ -418,6 +418,27 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.AnalysisServices/servers",
+    "apiVersion": "2016-05-16",
+    "output": {
+      "$ref": "#/43"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.AnalysisServices/servers",
+    "apiVersion": "2016-05-16",
+    "output": {
+      "$ref": "#/43"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CheckServerNameAvailabilityParameters",
     "properties": {
@@ -443,7 +464,7 @@
     "properties": {
       "nameAvailable": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/48"
         },
         "flags": 0,
         "description": "Indicator of available of the server name."
@@ -473,10 +494,10 @@
     "resourceType": "Microsoft.AnalysisServices/locations",
     "apiVersion": "2016-05-16",
     "output": {
-      "$ref": "#/44"
+      "$ref": "#/47"
     },
     "input": {
-      "$ref": "#/43"
+      "$ref": "#/46"
     }
   }
 ]

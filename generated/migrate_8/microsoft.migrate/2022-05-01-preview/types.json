@@ -5638,6 +5638,15 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.Migrate/modernizeProjects/migrateAgents",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/160"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "WorkloadDeploymentModel",
     "properties": {
@@ -5677,7 +5686,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/339"
+          "$ref": "#/340"
         },
         "flags": 0,
         "description": "Gets or sets the resource tags."
@@ -5698,7 +5707,106 @@
     "resourceType": "Microsoft.Migrate/modernizeProjects/workloadDeployments",
     "apiVersion": "2022-05-01-preview",
     "output": {
-      "$ref": "#/338"
+      "$ref": "#/339"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BuildContainerImageModel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 0,
+        "description": "Class for container image properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "buildContainerImage",
+    "resourceType": "Microsoft.Migrate/modernizeProjects/workloadDeployments",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/160"
+    },
+    "input": {
+      "$ref": "#/342"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestMigrateModel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/345"
+        },
+        "flags": 0,
+        "description": "Test migrate model properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestMigrateModelProperties",
+    "properties": {
+      "customProperties": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 0,
+        "description": "Workload deployment model custom properties."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "testMigrate",
+    "resourceType": "Microsoft.Migrate/modernizeProjects/workloadDeployments",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/160"
+    },
+    "input": {
+      "$ref": "#/344"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "testMigrateCleanup",
+    "resourceType": "Microsoft.Migrate/modernizeProjects/workloadDeployments",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/160"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.Migrate/modernizeProjects/workloadDeployments",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/160"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "completeMigration",
+    "resourceType": "Microsoft.Migrate/modernizeProjects/workloadInstances",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/160"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableReplication",
+    "resourceType": "Microsoft.Migrate/modernizeProjects/workloadInstances",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/160"
     }
   }
 ]

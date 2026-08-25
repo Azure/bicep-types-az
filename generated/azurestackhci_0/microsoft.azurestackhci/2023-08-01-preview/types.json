@@ -6232,12 +6232,63 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "initializeDisableProcess",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/64"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UploadCertificateRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/534"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawCertificateData",
+    "properties": {
+      "certificates": {
+        "type": {
+          "$ref": "#/535"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadCertificate",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/64"
+    },
+    "input": {
+      "$ref": "#/533"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ClusterIdentityResponse",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/533"
+          "$ref": "#/538"
         },
         "flags": 2,
         "description": "Cluster identity properties."
@@ -6280,7 +6331,7 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/532"
+      "$ref": "#/537"
     }
   },
   {
@@ -6289,7 +6340,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/536"
+          "$ref": "#/541"
         },
         "flags": 0
       }
@@ -6301,7 +6352,7 @@
     "properties": {
       "softwareAssuranceIntent": {
         "type": {
-          "$ref": "#/539"
+          "$ref": "#/544"
         },
         "flags": 0,
         "description": "Customer Intent for Software Assurance Benefit."
@@ -6320,10 +6371,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/537"
+        "$ref": "#/542"
       },
       {
-        "$ref": "#/538"
+        "$ref": "#/543"
       },
       {
         "$ref": "#/0"
@@ -6350,7 +6401,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/541"
+          "$ref": "#/546"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -6406,10 +6457,44 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/540"
+      "$ref": "#/545"
     },
     "input": {
-      "$ref": "#/535"
+      "$ref": "#/540"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtensionUpgradeParameters",
+    "properties": {
+      "targetVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Extension Upgrade Target Version."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings/extensions",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/64"
+    },
+    "input": {
+      "$ref": "#/548"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "apply",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/updates",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/64"
     }
   },
   {
@@ -6418,7 +6503,7 @@
     "properties": {
       "edgeDeviceIds": {
         "type": {
-          "$ref": "#/544"
+          "$ref": "#/552"
         },
         "flags": 1,
         "description": "Node Ids against which, current node has to be validated."
@@ -6457,10 +6542,10 @@
     "resourceType": "Microsoft.AzureStackHCI/edgeDevices",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/545"
+      "$ref": "#/553"
     },
     "input": {
-      "$ref": "#/543"
+      "$ref": "#/551"
     }
   }
 ]

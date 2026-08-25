@@ -2730,6 +2730,18 @@
     ]
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "executeRequest",
+    "resourceType": "Microsoft.HybridNetwork/networkFunctions",
+    "apiVersion": "2022-01-01-preview",
+    "output": {
+      "$ref": "#/59"
+    },
+    "input": {
+      "$ref": "#/241"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SkuCredential",
     "properties": {
@@ -2756,7 +2768,7 @@
       },
       "repositories": {
         "type": {
-          "$ref": "#/251"
+          "$ref": "#/252"
         },
         "flags": 0,
         "description": "The repositories that could be accessed using the current credential."
@@ -2782,7 +2794,34 @@
     "resourceType": "Microsoft.HybridNetwork/vendors/vendorSkus",
     "apiVersion": "2022-01-01-preview",
     "output": {
-      "$ref": "#/250"
+      "$ref": "#/251"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances",
+    "apiVersion": "2022-01-01-preview",
+    "output": {
+      "$ref": "#/59"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances",
+    "apiVersion": "2022-01-01-preview",
+    "output": {
+      "$ref": "#/59"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances",
+    "apiVersion": "2022-01-01-preview",
+    "output": {
+      "$ref": "#/59"
     }
   }
 ]

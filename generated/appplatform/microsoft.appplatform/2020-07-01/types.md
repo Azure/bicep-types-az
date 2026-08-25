@@ -92,6 +92,11 @@
 * **Input**: [NameAvailabilityParameters](#nameavailabilityparameters)
 * **Output**: [NameAvailability](#nameavailability)
 
+## Function disableTestEndpoint (Microsoft.AppPlatform/Spring@2020-07-01)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2020-07-01
+* **Output**: any
+
 ## Function enableTestEndpoint (Microsoft.AppPlatform/Spring@2020-07-01)
 * **Resource**: Microsoft.AppPlatform/Spring
 * **ApiVersion**: 2020-07-01
@@ -117,6 +122,21 @@
 * **ApiVersion**: 2020-07-01
 * **Input**: [RegenerateTestKeyRequestPayload](#regeneratetestkeyrequestpayload)
 * **Output**: [TestKeys](#testkeys)
+
+## Function restart (Microsoft.AppPlatform/Spring/apps/deployments@2020-07-01)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2020-07-01
+* **Output**: any
+
+## Function start (Microsoft.AppPlatform/Spring/apps/deployments@2020-07-01)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2020-07-01
+* **Output**: any
+
+## Function stop (Microsoft.AppPlatform/Spring/apps/deployments@2020-07-01)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2020-07-01
+* **Output**: any
 
 ## Function validateDomain (Microsoft.AppPlatform/Spring/apps@2020-07-01)
 * **Resource**: Microsoft.AppPlatform/Spring/apps

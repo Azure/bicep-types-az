@@ -5459,5 +5459,26 @@
     "additionalProperties": {
       "$ref": "#/402"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeExtensions",
+    "resourceType": "Microsoft.HybridCompute/machines",
+    "apiVersion": "2024-03-31-preview",
+    "output": {
+      "$ref": "#/138"
+    },
+    "input": {
+      "$ref": "#/401"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2024-03-31-preview",
+    "output": {
+      "$ref": "#/138"
+    }
   }
 ]

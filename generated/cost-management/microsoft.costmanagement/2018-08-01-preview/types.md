@@ -24,6 +24,11 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.CostManagement/reports' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function run (Microsoft.CostManagement/reports@2018-08-01-preview)
+* **Resource**: Microsoft.CostManagement/reports
+* **ApiVersion**: 2018-08-01-preview
+* **Output**: any
+
 ## ConnectorCollectionErrorInfo
 ### Properties
 * **errorCode**: string (ReadOnly): Short error message

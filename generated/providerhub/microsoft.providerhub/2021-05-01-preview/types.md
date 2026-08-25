@@ -116,6 +116,11 @@
 * **ApiVersion**: 2021-05-01-preview
 * **Output**: [OperationsDefinition](#operationsdefinition)[]
 
+## Function stop (Microsoft.ProviderHub/providerRegistrations/defaultRollouts@2021-05-01-preview)
+* **Resource**: Microsoft.ProviderHub/providerRegistrations/defaultRollouts
+* **ApiVersion**: 2021-05-01-preview
+* **Output**: any
+
 ## AuthorizationActionMapping
 ### Properties
 * **desired**: string

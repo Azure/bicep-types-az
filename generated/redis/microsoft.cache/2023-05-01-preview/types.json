@@ -1957,6 +1957,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Cache/redis",
+    "apiVersion": "2023-05-01-preview",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/151"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExportRDBParameters",
     "properties": {
@@ -1995,6 +2007,18 @@
         "flags": 0,
         "description": "Subscription id of the storage container for data to be exported using ManagedIdentity."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Cache/redis",
+    "apiVersion": "2023-05-01-preview",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/154"
     }
   }
 ]

@@ -5375,6 +5375,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2020-08-01-preview",
+    "output": {
+      "$ref": "#/397"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "restoreBlobRanges",
     "resourceType": "Microsoft.Storage/storageAccounts",
@@ -5384,6 +5396,15 @@
     },
     "input": {
       "$ref": "#/123"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revokeUserDelegationKeys",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2020-08-01-preview",
+    "output": {
+      "$ref": "#/397"
     }
   },
   {
@@ -5399,7 +5420,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/400"
+          "$ref": "#/403"
         },
         "flags": 1,
         "description": "Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP."
@@ -5414,7 +5435,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/399"
+      "$ref": "#/402"
     }
   },
   {
@@ -5423,10 +5444,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2020-08-01-preview",
     "output": {
-      "$ref": "#/398"
+      "$ref": "#/401"
     },
     "input": {
-      "$ref": "#/398"
+      "$ref": "#/401"
     }
   },
   {
@@ -5435,10 +5456,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2020-08-01-preview",
     "output": {
-      "$ref": "#/398"
+      "$ref": "#/401"
     },
     "input": {
-      "$ref": "#/398"
+      "$ref": "#/401"
     }
   },
   {
@@ -5447,7 +5468,7 @@
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/409"
+          "$ref": "#/412"
         },
         "flags": 1,
         "description": "Specifies the lease action. Can be one of the available actions."
@@ -5506,19 +5527,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/404"
-      },
-      {
-        "$ref": "#/405"
-      },
-      {
-        "$ref": "#/406"
-      },
-      {
         "$ref": "#/407"
       },
       {
         "$ref": "#/408"
+      },
+      {
+        "$ref": "#/409"
+      },
+      {
+        "$ref": "#/410"
+      },
+      {
+        "$ref": "#/411"
       },
       {
         "$ref": "#/2"
@@ -5551,10 +5572,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2020-08-01-preview",
     "output": {
-      "$ref": "#/410"
+      "$ref": "#/413"
     },
     "input": {
-      "$ref": "#/403"
+      "$ref": "#/406"
     }
   },
   {
@@ -5604,7 +5625,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
     "apiVersion": "2020-08-01-preview",
     "output": {
-      "$ref": "#/412"
+      "$ref": "#/415"
     }
   },
   {
@@ -5613,10 +5634,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
     "apiVersion": "2020-08-01-preview",
     "output": {
-      "$ref": "#/412"
+      "$ref": "#/415"
     },
     "input": {
-      "$ref": "#/412"
+      "$ref": "#/415"
     }
   },
   {
@@ -5637,6 +5658,18 @@
         "flags": 1,
         "description": "Required. Identify the version of the deleted share that will be restored."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.Storage/storageAccounts/fileServices/shares",
+    "apiVersion": "2020-08-01-preview",
+    "output": {
+      "$ref": "#/397"
+    },
+    "input": {
+      "$ref": "#/418"
     }
   }
 ]

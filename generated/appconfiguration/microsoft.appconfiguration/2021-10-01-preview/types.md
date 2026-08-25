@@ -46,6 +46,11 @@
 * **ApiVersion**: 2021-10-01-preview
 * **Output**: [ApiKeyListResult](#apikeylistresult)
 
+## Function purge (Microsoft.AppConfiguration/locations/deletedConfigurationStores@2021-10-01-preview)
+* **Resource**: Microsoft.AppConfiguration/locations/deletedConfigurationStores
+* **ApiVersion**: 2021-10-01-preview
+* **Output**: any
+
 ## Function regenerateKey (Microsoft.AppConfiguration/configurationStores@2021-10-01-preview)
 * **Resource**: Microsoft.AppConfiguration/configurationStores
 * **ApiVersion**: 2021-10-01-preview

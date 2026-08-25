@@ -2827,6 +2827,37 @@
   },
   {
     "$type": "ObjectType",
+    "name": "FailoverPolicies",
+    "properties": {
+      "failoverPolicies": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 1,
+        "description": "List of failover policies."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failoverPriorityChange",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2016-03-31",
+    "output": {
+      "$ref": "#/42"
+    },
+    "input": {
+      "$ref": "#/188"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DatabaseAccountListKeysResult",
     "properties": {
       "primaryMasterKey": {
@@ -2865,7 +2896,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2016-03-31",
     "output": {
-      "$ref": "#/188"
+      "$ref": "#/191"
     }
   },
   {
@@ -2874,7 +2905,7 @@
     "properties": {
       "connectionStrings": {
         "type": {
-          "$ref": "#/192"
+          "$ref": "#/195"
         },
         "flags": 0,
         "description": "An array that contains the connection strings for the Cosmos DB account."
@@ -2904,7 +2935,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/191"
+      "$ref": "#/194"
     }
   },
   {
@@ -2913,7 +2944,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2016-03-31",
     "output": {
-      "$ref": "#/190"
+      "$ref": "#/193"
     }
   },
   {
@@ -2927,6 +2958,30 @@
         "flags": 1,
         "description": "Cosmos DB region, with spaces between words and each word capitalized."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "offlineRegion",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2016-03-31",
+    "output": {
+      "$ref": "#/42"
+    },
+    "input": {
+      "$ref": "#/197"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "onlineRegion",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2016-03-31",
+    "output": {
+      "$ref": "#/42"
+    },
+    "input": {
+      "$ref": "#/197"
     }
   },
   {
@@ -2955,7 +3010,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2016-03-31",
     "output": {
-      "$ref": "#/195"
+      "$ref": "#/200"
     }
   },
   {
@@ -2964,7 +3019,7 @@
     "properties": {
       "keyKind": {
         "type": {
-          "$ref": "#/202"
+          "$ref": "#/207"
         },
         "flags": 1,
         "description": "The access key to regenerate."
@@ -2991,20 +3046,32 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/198"
+        "$ref": "#/203"
       },
       {
-        "$ref": "#/199"
+        "$ref": "#/204"
       },
       {
-        "$ref": "#/200"
+        "$ref": "#/205"
       },
       {
-        "$ref": "#/201"
+        "$ref": "#/206"
       },
       {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2016-03-31",
+    "output": {
+      "$ref": "#/42"
+    },
+    "input": {
+      "$ref": "#/202"
+    }
   }
 ]

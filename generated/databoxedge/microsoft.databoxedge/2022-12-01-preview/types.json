@@ -7247,6 +7247,18 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadUpdates",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2022-12-01-preview",
+    "output": {
+      "$ref": "#/574"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "GenerateCertResponse",
     "properties": {
@@ -7279,7 +7291,7 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
     "apiVersion": "2022-12-01-preview",
     "output": {
-      "$ref": "#/574"
+      "$ref": "#/576"
     }
   },
   {
@@ -7288,7 +7300,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/577"
+          "$ref": "#/579"
         },
         "flags": 0,
         "description": "The extended info properties."
@@ -7378,21 +7390,21 @@
       },
       "keyVaultSyncStatus": {
         "type": {
-          "$ref": "#/584"
+          "$ref": "#/586"
         },
         "flags": 0,
         "description": "Key vault sync status"
       },
       "deviceSecrets": {
         "type": {
-          "$ref": "#/586"
+          "$ref": "#/588"
         },
         "flags": 2,
         "description": "Device secrets, will be returned only with ODataFilter $expand=deviceSecrets"
       },
       "clusterWitnessType": {
         "type": {
-          "$ref": "#/590"
+          "$ref": "#/592"
         },
         "flags": 2,
         "description": "Cluster Witness Type"
@@ -7462,12 +7474,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/578"
-      },
-      {
-        "$ref": "#/579"
-      },
-      {
         "$ref": "#/580"
       },
       {
@@ -7478,6 +7484,12 @@
       },
       {
         "$ref": "#/583"
+      },
+      {
+        "$ref": "#/584"
+      },
+      {
+        "$ref": "#/585"
       },
       {
         "$ref": "#/0"
@@ -7509,7 +7521,7 @@
     "name": "DataBoxEdgeDeviceExtendedInfoPropertiesDeviceSecrets",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/585"
+      "$ref": "#/587"
     }
   },
   {
@@ -7528,13 +7540,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/587"
-      },
-      {
-        "$ref": "#/588"
-      },
-      {
         "$ref": "#/589"
+      },
+      {
+        "$ref": "#/590"
+      },
+      {
+        "$ref": "#/591"
       },
       {
         "$ref": "#/0"
@@ -7547,7 +7559,25 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
     "apiVersion": "2022-12-01-preview",
     "output": {
-      "$ref": "#/576"
+      "$ref": "#/578"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "installUpdates",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2022-12-01-preview",
+    "output": {
+      "$ref": "#/574"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "scanForUpdates",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2022-12-01-preview",
+    "output": {
+      "$ref": "#/574"
     }
   },
   {
@@ -7584,7 +7614,7 @@
       },
       "syncStatus": {
         "type": {
-          "$ref": "#/599"
+          "$ref": "#/603"
         },
         "flags": 0,
         "description": "For changing or to initiate the resync to key-vault set the status to KeyVaultSyncPending, rest of the status will not be applicable."
@@ -7619,22 +7649,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/593"
-      },
-      {
-        "$ref": "#/594"
-      },
-      {
-        "$ref": "#/595"
-      },
-      {
-        "$ref": "#/596"
-      },
-      {
         "$ref": "#/597"
       },
       {
         "$ref": "#/598"
+      },
+      {
+        "$ref": "#/599"
+      },
+      {
+        "$ref": "#/600"
+      },
+      {
+        "$ref": "#/601"
+      },
+      {
+        "$ref": "#/602"
       },
       {
         "$ref": "#/0"
@@ -7647,10 +7677,10 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
     "apiVersion": "2022-12-01-preview",
     "output": {
-      "$ref": "#/576"
+      "$ref": "#/578"
     },
     "input": {
-      "$ref": "#/592"
+      "$ref": "#/596"
     }
   },
   {
@@ -7659,7 +7689,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/602"
+          "$ref": "#/606"
         },
         "flags": 1,
         "description": "The Base 64 encoded certificate raw data."
@@ -7672,7 +7702,7 @@
     "properties": {
       "authenticationType": {
         "type": {
-          "$ref": "#/605"
+          "$ref": "#/609"
         },
         "flags": 0,
         "description": "The authentication type."
@@ -7698,10 +7728,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/603"
+        "$ref": "#/607"
       },
       {
-        "$ref": "#/604"
+        "$ref": "#/608"
       },
       {
         "$ref": "#/0"
@@ -7714,7 +7744,7 @@
     "properties": {
       "authType": {
         "type": {
-          "$ref": "#/609"
+          "$ref": "#/613"
         },
         "flags": 0,
         "description": "Specifies authentication type."
@@ -7782,10 +7812,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/607"
+        "$ref": "#/611"
       },
       {
-        "$ref": "#/608"
+        "$ref": "#/612"
       },
       {
         "$ref": "#/0"
@@ -7798,10 +7828,10 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
     "apiVersion": "2022-12-01-preview",
     "output": {
-      "$ref": "#/606"
+      "$ref": "#/610"
     },
     "input": {
-      "$ref": "#/601"
+      "$ref": "#/605"
     }
   },
   {
@@ -7810,7 +7840,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/612"
+          "$ref": "#/616"
         },
         "flags": 1,
         "description": "The properties of the Device Capacity Request."
@@ -7823,14 +7853,14 @@
     "properties": {
       "vmPlacementQuery": {
         "type": {
-          "$ref": "#/614"
+          "$ref": "#/618"
         },
         "flags": 1,
         "description": "Array containing the sizes of the VMs for checking if its feasible to create them on the appliance."
       },
       "vmPlacementResults": {
         "type": {
-          "$ref": "#/618"
+          "$ref": "#/622"
         },
         "flags": 0,
         "description": "Array of the VMs of the sizes in VmSizes can be provisioned on the appliance."
@@ -7846,7 +7876,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/613"
+      "$ref": "#/617"
     }
   },
   {
@@ -7855,14 +7885,14 @@
     "properties": {
       "vmSize": {
         "type": {
-          "$ref": "#/616"
+          "$ref": "#/620"
         },
         "flags": 0,
         "description": "List of VM sizes being checked."
       },
       "isFeasible": {
         "type": {
-          "$ref": "#/617"
+          "$ref": "#/621"
         },
         "flags": 0,
         "description": "Boolean value indicating if the VM(s) in VmSize can be created."
@@ -7895,6 +7925,18 @@
   {
     "$type": "ArrayType",
     "itemType": {
+      "$ref": "#/619"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deviceCapacityCheck",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2022-12-01-preview",
+    "output": {
+      "$ref": "#/574"
+    },
+    "input": {
       "$ref": "#/615"
     }
   },
@@ -7904,7 +7946,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/620"
+          "$ref": "#/625"
         },
         "flags": 1,
         "description": "The TriggerSupportPackageRequest properties."
@@ -7960,12 +8002,83 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "triggerSupportPackage",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2022-12-01-preview",
+    "output": {
+      "$ref": "#/574"
+    },
+    "input": {
+      "$ref": "#/624"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecuritySettings",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/628"
+        },
+        "flags": 1,
+        "description": "Properties of the security settings."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The path ID that uniquely identifies the object."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The object name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The hierarchical type of the object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecuritySettingsProperties",
+    "properties": {
+      "deviceAdminPassword": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 1,
+        "description": "Device administrator password as an encrypted string (encrypted using RSA PKCS #1) is used to sign into the  local web UI of the device. The Actual password should have at least 8 characters that are a combination of  uppercase, lowercase, numeric, and special characters."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "update",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/securitySettings",
+    "apiVersion": "2022-12-01-preview",
+    "output": {
+      "$ref": "#/574"
+    },
+    "input": {
+      "$ref": "#/627"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DCAccessCode",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/622"
+          "$ref": "#/631"
         },
         "flags": 0,
         "description": "DCAccessCode properties."
@@ -7991,7 +8104,7 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders",
     "apiVersion": "2022-12-01-preview",
     "output": {
-      "$ref": "#/621"
+      "$ref": "#/630"
     }
   },
   {
@@ -8018,7 +8131,25 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/publishers/offers/skus/versions",
     "apiVersion": "2022-12-01-preview",
     "output": {
-      "$ref": "#/624"
+      "$ref": "#/633"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares",
+    "apiVersion": "2022-12-01-preview",
+    "output": {
+      "$ref": "#/574"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers",
+    "apiVersion": "2022-12-01-preview",
+    "output": {
+      "$ref": "#/574"
     }
   }
 ]

@@ -38,6 +38,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function redeploy (Microsoft.SqlVirtualMachine/sqlVirtualMachines@2023-01-01-preview)
+* **Resource**: Microsoft.SqlVirtualMachine/sqlVirtualMachines
+* **ApiVersion**: 2023-01-01-preview
+* **Output**: any
+
+## Function startAssessment (Microsoft.SqlVirtualMachine/sqlVirtualMachines@2023-01-01-preview)
+* **Resource**: Microsoft.SqlVirtualMachine/sqlVirtualMachines
+* **ApiVersion**: 2023-01-01-preview
+* **Output**: any
+
 ## Function troubleshoot (Microsoft.SqlVirtualMachine/sqlVirtualMachines@2023-01-01-preview)
 * **Resource**: Microsoft.SqlVirtualMachine/sqlVirtualMachines
 * **ApiVersion**: 2023-01-01-preview

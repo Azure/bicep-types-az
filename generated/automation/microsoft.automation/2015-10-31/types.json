@@ -3838,5 +3838,77 @@
     "output": {
       "$ref": "#/237"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+    "apiVersion": "2015-10-31",
+    "output": {
+      "$ref": "#/190"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+    "apiVersion": "2015-10-31",
+    "output": {
+      "$ref": "#/190"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+    "apiVersion": "2015-10-31",
+    "output": {
+      "$ref": "#/190"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.Automation/automationAccounts/runbooks/draft",
+    "apiVersion": "2015-10-31",
+    "output": {
+      "$ref": "#/190"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Automation/automationAccounts/runbooks/draft",
+    "apiVersion": "2015-10-31",
+    "output": {
+      "$ref": "#/190"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.Automation/automationAccounts/runbooks/draft",
+    "apiVersion": "2015-10-31",
+    "output": {
+      "$ref": "#/190"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Automation/automationAccounts/watchers",
+    "apiVersion": "2015-10-31",
+    "output": {
+      "$ref": "#/190"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Automation/automationAccounts/watchers",
+    "apiVersion": "2015-10-31",
+    "output": {
+      "$ref": "#/190"
+    }
   }
 ]

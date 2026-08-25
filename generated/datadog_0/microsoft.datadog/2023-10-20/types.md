@@ -93,6 +93,12 @@
 * **ApiVersion**: 2023-10-20
 * **Output**: [DatadogSetPasswordLink](#datadogsetpasswordlink)
 
+## Function setDefaultKey (Microsoft.Datadog/monitors@2023-10-20)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2023-10-20
+* **Input**: [DatadogApiKey](#datadogapikey)
+* **Output**: any
+
 ## BillingInfoResponse
 ### Properties
 * **marketplaceSaasInfo**: [MarketplaceSaaSInfo](#marketplacesaasinfo): Marketplace Subscription details

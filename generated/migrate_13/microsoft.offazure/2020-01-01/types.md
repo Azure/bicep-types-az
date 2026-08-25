@@ -66,6 +66,26 @@
 * **ApiVersion**: 2020-01-01
 * **Output**: [SiteHealthSummaryCollection](#sitehealthsummarycollection)
 
+## Function refresh (Microsoft.OffAzure/HyperVSites@2020-01-01)
+* **Resource**: Microsoft.OffAzure/HyperVSites
+* **ApiVersion**: 2020-01-01
+* **Output**: any
+
+## Function refresh (Microsoft.OffAzure/VMwareSites@2020-01-01)
+* **Resource**: Microsoft.OffAzure/VMwareSites
+* **ApiVersion**: 2020-01-01
+* **Output**: any
+
+## Function start (Microsoft.OffAzure/VMwareSites/machines@2020-01-01)
+* **Resource**: Microsoft.OffAzure/VMwareSites/machines
+* **ApiVersion**: 2020-01-01
+* **Output**: any
+
+## Function stop (Microsoft.OffAzure/VMwareSites/machines@2020-01-01)
+* **Resource**: Microsoft.OffAzure/VMwareSites/machines
+* **ApiVersion**: 2020-01-01
+* **Output**: any
+
 ## Function summary (Microsoft.OffAzure/HyperVSites@2020-01-01)
 * **Resource**: Microsoft.OffAzure/HyperVSites
 * **ApiVersion**: 2020-01-01

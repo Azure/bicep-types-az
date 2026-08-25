@@ -166,17 +166,54 @@
 * **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
 * **Output**: [VirtualNetworkSubnetUsageResult](#virtualnetworksubnetusageresult)
 
+## Function disable (Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions@2025-01-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions
+* **ApiVersion**: 2025-01-01-preview
+* **Output**: any
+
+## Function enable (Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions@2025-01-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions
+* **ApiVersion**: 2025-01-01-preview
+* **Output**: any
+
 ## Function ltrPreBackup (Microsoft.DBforPostgreSQL/flexibleServers@2025-01-01-preview)
 * **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
 * **ApiVersion**: 2025-01-01-preview
 * **Input**: [LtrPreBackupRequest](#ltrprebackuprequest)
 * **Output**: [LtrPreBackupResponse](#ltrprebackupresponse)
 
+## Function restart (Microsoft.DBforPostgreSQL/flexibleServers@2025-01-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2025-01-01-preview
+* **Input**: [RestartParameter](#restartparameter)
+* **Output**: any
+
+## Function start (Microsoft.DBforPostgreSQL/flexibleServers@2025-01-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2025-01-01-preview
+* **Output**: any
+
 ## Function startLtrBackup (Microsoft.DBforPostgreSQL/flexibleServers@2025-01-01-preview)
 * **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
 * **ApiVersion**: 2025-01-01-preview
 * **Input**: [LtrBackupRequest](#ltrbackuprequest)
 * **Output**: [LtrBackupResponse](#ltrbackupresponse)
+
+## Function startSession (Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions@2025-01-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions
+* **ApiVersion**: 2025-01-01-preview
+* **Input**: [ConfigTuningRequestParameter](#configtuningrequestparameter)
+* **Output**: any
+
+## Function stop (Microsoft.DBforPostgreSQL/flexibleServers@2025-01-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2025-01-01-preview
+* **Output**: any
+
+## Function stopSession (Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions@2025-01-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions
+* **ApiVersion**: 2025-01-01-preview
+* **Output**: any
 
 ## AdminCredentials
 ### Properties
@@ -218,6 +255,13 @@
 ## Cluster
 ### Properties
 * **clusterSize**: int: Number of nodes assigned to the elastic cluster.
+
+## ConfigTuningRequestParameter
+### Properties
+* **allowServerRestarts**: bool: Indicates whether PG should be restarted during a tuning session.
+* **configTuningUsageMode**: bool: The mode with which the feature will be enabled.
+* **serverName**: string: The name of server.
+* **targetImprovementMetric**: string: The target metric the tuning session is trying to improve.
 
 ## ConfigurationProperties
 ### Properties
@@ -449,6 +493,11 @@
 * **promoteOption**: 'forced' | 'planned' | string (WriteOnly): Data synchronization option to use when processing the operation specified in the promoteMode property This property is write only. Planned means that the operation will wait for data in the read replica to be fully synchronized with its source server before it initiates the operation. Forced means that the operation will not wait for data in the read replica to be synchronized with its source server before it initiates the operation.
 * **replicationState**: 'Active' | 'Broken' | 'Catchup' | 'Provisioning' | 'Reconfiguring' | 'Updating' | string (ReadOnly): Indicates the replication state of a read replica. This property is returned only when the target flexible server is a read replica. Possible  values are Active, Broken, Catchup, Provisioning, Reconfiguring, and Updating
 * **role**: 'AsyncReplica' | 'GeoAsyncReplica' | 'None' | 'Primary' | string: Role of the server in a replication set.
+
+## RestartParameter
+### Properties
+* **failoverMode**: 'ForcedFailover' | 'ForcedSwitchover' | 'PlannedFailover' | 'PlannedSwitchover' | string: Failover mode.
+* **restartWithFailover**: bool: Indicates if restart the PostgreSQL database engine should failover or switch over from primary to standby. This only works if flexible server has high availability enabled.
 
 ## ServerBackupProperties
 ### Properties

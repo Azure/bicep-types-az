@@ -113,6 +113,12 @@
 * **ApiVersion**: 2025-09-01-preview
 * **Output**: [ProjectTask](#projecttask)
 
+## Function cancel (Microsoft.DataMigration/databaseMigrations@2025-09-01-preview)
+* **Resource**: Microsoft.DataMigration/databaseMigrations
+* **ApiVersion**: 2025-09-01-preview
+* **Input**: [MigrationOperationInput](#migrationoperationinput)
+* **Output**: any
+
 ## Function checkNameAvailability (Microsoft.DataMigration/locations@2025-09-01-preview)
 * **Resource**: Microsoft.DataMigration/locations
 * **ApiVersion**: 2025-09-01-preview
@@ -135,6 +141,12 @@
 * **ApiVersion**: 2025-09-01-preview
 * **Input**: [CommandProperties](#commandproperties)
 * **Output**: [CommandProperties](#commandproperties)
+
+## Function cutover (Microsoft.DataMigration/databaseMigrations@2025-09-01-preview)
+* **Resource**: Microsoft.DataMigration/databaseMigrations
+* **ApiVersion**: 2025-09-01-preview
+* **Input**: [MigrationOperationInput](#migrationoperationinput)
+* **Output**: any
 
 ## Function deleteNode (Microsoft.DataMigration/sqlMigrationServices@2025-09-01-preview)
 * **Resource**: Microsoft.DataMigration/sqlMigrationServices
@@ -173,6 +185,16 @@
 * **ApiVersion**: 2025-09-01-preview
 * **Input**: [MigrationOperationInput](#migrationoperationinput)
 * **Output**: [DatabaseMigrationSqlDb](#databasemigrationsqldb)
+
+## Function start (Microsoft.DataMigration/services@2025-09-01-preview)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.DataMigration/services@2025-09-01-preview)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2025-09-01-preview
+* **Output**: any
 
 ## AuthenticationKeys
 ### Properties

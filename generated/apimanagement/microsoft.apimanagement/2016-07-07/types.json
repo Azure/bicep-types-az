@@ -2613,6 +2613,24 @@
     "writableScopes": 8
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/subscriptions",
+    "apiVersion": "2016-07-07",
+    "output": {
+      "$ref": "#/14"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/subscriptions",
+    "apiVersion": "2016-07-07",
+    "output": {
+      "$ref": "#/14"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "GenerateSsoUrlResult",
     "properties": {
@@ -2631,7 +2649,25 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2016-07-07",
     "output": {
-      "$ref": "#/193"
+      "$ref": "#/195"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2016-07-07",
+    "output": {
+      "$ref": "#/14"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2016-07-07",
+    "output": {
+      "$ref": "#/14"
     }
   },
   {
@@ -2667,7 +2703,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/201"
+          "$ref": "#/205"
         },
         "flags": 0,
         "description": "Status of an async operation."
@@ -2695,7 +2731,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/202"
+          "$ref": "#/206"
         },
         "flags": 0,
         "description": "Error Body contract."
@@ -2722,16 +2758,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/197"
+        "$ref": "#/201"
       },
       {
-        "$ref": "#/198"
+        "$ref": "#/202"
       },
       {
-        "$ref": "#/199"
+        "$ref": "#/203"
       },
       {
-        "$ref": "#/200"
+        "$ref": "#/204"
       }
     ]
   },
@@ -2755,7 +2791,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/204"
+          "$ref": "#/208"
         },
         "flags": 0,
         "description": "The list of invalid fields send in request, in case of validation error."
@@ -2792,7 +2828,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/203"
+      "$ref": "#/207"
     }
   },
   {
@@ -2801,10 +2837,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2016-07-07",
     "output": {
-      "$ref": "#/196"
+      "$ref": "#/200"
     },
     "input": {
-      "$ref": "#/195"
+      "$ref": "#/199"
     }
   },
   {
@@ -2833,10 +2869,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2016-07-07",
     "output": {
-      "$ref": "#/196"
+      "$ref": "#/200"
     },
     "input": {
-      "$ref": "#/206"
+      "$ref": "#/210"
     }
   },
   {
@@ -2845,10 +2881,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2016-07-07",
     "output": {
-      "$ref": "#/196"
+      "$ref": "#/200"
     },
     "input": {
-      "$ref": "#/195"
+      "$ref": "#/199"
     }
   },
   {
@@ -2864,7 +2900,7 @@
       },
       "skuType": {
         "type": {
-          "$ref": "#/213"
+          "$ref": "#/217"
         },
         "flags": 1,
         "description": "SKU type of the API Management service."
@@ -2878,7 +2914,7 @@
       },
       "additionalLocations": {
         "type": {
-          "$ref": "#/214"
+          "$ref": "#/218"
         },
         "flags": 0,
         "description": "Additional data center locations for the API Management service."
@@ -2892,7 +2928,7 @@
       },
       "vpnType": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/222"
         },
         "flags": 0,
         "description": "The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that the API Management service deployment is set up inside a Virtual Network having an Intranet Facing Endpoint only. When vpnConfiguration is specified, vpnType must be specified."
@@ -2915,13 +2951,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/210"
+        "$ref": "#/214"
       },
       {
-        "$ref": "#/211"
+        "$ref": "#/215"
       },
       {
-        "$ref": "#/212"
+        "$ref": "#/216"
       }
     ]
   },
@@ -2947,13 +2983,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/215"
+        "$ref": "#/219"
       },
       {
-        "$ref": "#/216"
+        "$ref": "#/220"
       },
       {
-        "$ref": "#/217"
+        "$ref": "#/221"
       }
     ]
   },
@@ -2998,7 +3034,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/220"
+          "$ref": "#/224"
         },
         "flags": 0,
         "description": "API Management service tags. A maximum of 10 tags can be provided for a resource, and each tag must have a key no greater than 128 characters (and a value no greater than 256 characters)."
@@ -3033,10 +3069,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2016-07-07",
     "output": {
-      "$ref": "#/219"
+      "$ref": "#/223"
     },
     "input": {
-      "$ref": "#/209"
+      "$ref": "#/213"
     }
   },
   {
@@ -3079,10 +3115,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2016-07-07",
     "output": {
-      "$ref": "#/219"
+      "$ref": "#/223"
     },
     "input": {
-      "$ref": "#/222"
+      "$ref": "#/226"
     }
   },
   {
@@ -3091,10 +3127,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2016-07-07",
     "output": {
-      "$ref": "#/219"
+      "$ref": "#/223"
     },
     "input": {
-      "$ref": "#/222"
+      "$ref": "#/226"
     }
   },
   {
@@ -3103,7 +3139,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/230"
+          "$ref": "#/234"
         },
         "flags": 1,
         "description": "Hostname type."
@@ -3144,16 +3180,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/226"
+        "$ref": "#/230"
       },
       {
-        "$ref": "#/227"
+        "$ref": "#/231"
       },
       {
-        "$ref": "#/228"
+        "$ref": "#/232"
       },
       {
-        "$ref": "#/229"
+        "$ref": "#/233"
       }
     ]
   },
@@ -3166,7 +3202,7 @@
       "$ref": "#/170"
     },
     "input": {
-      "$ref": "#/225"
+      "$ref": "#/229"
     }
   },
   {
@@ -3175,14 +3211,14 @@
     "properties": {
       "update": {
         "type": {
-          "$ref": "#/233"
+          "$ref": "#/237"
         },
         "flags": 0,
         "description": "Hostnames to create or update."
       },
       "delete": {
         "type": {
-          "$ref": "#/239"
+          "$ref": "#/243"
         },
         "flags": 0,
         "description": "Hostnames types to delete."
@@ -3215,23 +3251,23 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/234"
+        "$ref": "#/238"
       },
       {
-        "$ref": "#/235"
+        "$ref": "#/239"
       },
       {
-        "$ref": "#/236"
+        "$ref": "#/240"
       },
       {
-        "$ref": "#/237"
+        "$ref": "#/241"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/238"
+      "$ref": "#/242"
     }
   },
   {
@@ -3240,10 +3276,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2016-07-07",
     "output": {
-      "$ref": "#/219"
+      "$ref": "#/223"
     },
     "input": {
-      "$ref": "#/232"
+      "$ref": "#/236"
     }
   }
 ]

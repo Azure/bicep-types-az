@@ -102,6 +102,21 @@
 * **Input**: [GrantAccessData](#grantaccessdata)
 * **Output**: [AccessUri](#accessuri)
 
+## Function endGetAccess (Microsoft.Compute/disks@2026-03-02)
+* **Resource**: Microsoft.Compute/disks
+* **ApiVersion**: 2026-03-02
+* **Output**: any
+
+## Function endGetAccess (Microsoft.Compute/snapshots@2026-03-02)
+* **Resource**: Microsoft.Compute/snapshots
+* **ApiVersion**: 2026-03-02
+* **Output**: any
+
+## Function endGetAccess (Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints@2026-03-02)
+* **Resource**: Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints
+* **ApiVersion**: 2026-03-02
+* **Output**: any
+
 ## Function updateImmutabilityPolicy (Microsoft.Compute/snapshots@2026-03-02)
 * **Resource**: Microsoft.Compute/snapshots
 * **ApiVersion**: 2026-03-02

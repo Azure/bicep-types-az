@@ -5783,6 +5783,66 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "resetServicePrincipalProfile",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2022-06-02-preview",
+    "output": {
+      "$ref": "#/384"
+    },
+    "input": {
+      "$ref": "#/91"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetAADProfile",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2022-06-02-preview",
+    "output": {
+      "$ref": "#/384"
+    },
+    "input": {
+      "$ref": "#/158"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateClusterCertificates",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2022-06-02-preview",
+    "output": {
+      "$ref": "#/384"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateServiceAccountSigningKeys",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2022-06-02-preview",
+    "output": {
+      "$ref": "#/384"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2022-06-02-preview",
+    "output": {
+      "$ref": "#/384"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2022-06-02-preview",
+    "output": {
+      "$ref": "#/384"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "RunCommandRequest",
     "properties": {
@@ -5822,7 +5882,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/395"
+          "$ref": "#/401"
         },
         "flags": 0,
         "description": "Properties of command result."
@@ -5883,10 +5943,10 @@
     "resourceType": "Microsoft.ContainerService/managedClusters",
     "apiVersion": "2022-06-02-preview",
     "output": {
-      "$ref": "#/394"
+      "$ref": "#/400"
     },
     "input": {
-      "$ref": "#/393"
+      "$ref": "#/399"
     }
   },
   {
@@ -5903,11 +5963,54 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AgentPool",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/238"
+        },
+        "flags": 0,
+        "description": "Properties of an agent pool."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeNodeImageVersion",
+    "resourceType": "Microsoft.ContainerService/managedClusters/agentPools",
+    "apiVersion": "2022-06-02-preview",
+    "output": {
+      "$ref": "#/404"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "FleetCredentialResults",
     "properties": {
       "kubeconfigs": {
         "type": {
-          "$ref": "#/400"
+          "$ref": "#/408"
         },
         "flags": 2,
         "description": "Base64-encoded Kubernetes configuration file."
@@ -5937,7 +6040,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/399"
+      "$ref": "#/407"
     }
   },
   {
@@ -5946,7 +6049,7 @@
     "resourceType": "Microsoft.ContainerService/fleets",
     "apiVersion": "2022-06-02-preview",
     "output": {
-      "$ref": "#/398"
+      "$ref": "#/406"
     }
   }
 ]

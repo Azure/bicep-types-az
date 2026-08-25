@@ -841,5 +841,35 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.Insights/actionGroups/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.Insights/dataCollectionEndpoints/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.Insights/scheduledQueryRules/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/70"
+    }
   }
 ]

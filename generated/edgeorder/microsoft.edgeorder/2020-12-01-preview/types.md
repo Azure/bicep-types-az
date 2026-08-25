@@ -37,6 +37,18 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EdgeOrder/orderItems' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.EdgeOrder/orderItems@2020-12-01-preview)
+* **Resource**: Microsoft.EdgeOrder/orderItems
+* **ApiVersion**: 2020-12-01-preview
+* **Input**: [CancellationReason](#cancellationreason)
+* **Output**: any
+
+## Function return (Microsoft.EdgeOrder/orderItems@2020-12-01-preview)
+* **Resource**: Microsoft.EdgeOrder/orderItems
+* **ApiVersion**: 2020-12-01-preview
+* **Input**: [ReturnOrderItemDetails](#returnorderitemdetails)
+* **Output**: any
+
 ## AddressDetails
 ### Properties
 * **forwardAddress**: [AddressProperties](#addressproperties) (Required): Customer address and contact details. It should be address resource
@@ -46,6 +58,10 @@
 ### Properties
 * **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact details for the address
 * **shippingAddress**: [ShippingAddress](#shippingaddress): Shipping details for the address
+
+## CancellationReason
+### Properties
+* **reason**: string (Required): Reason for cancellation.
 
 ## ContactDetails
 ### Properties
@@ -156,6 +172,13 @@
 ## ResourceProviderDetails
 ### Properties
 * **resourceProviderNamespace**: string (ReadOnly): Resource provider namespace
+
+## ReturnOrderItemDetails
+### Properties
+* **returnAddress**: [AddressProperties](#addressproperties): customer return address.
+* **returnReason**: string (Required): Return Reason.
+* **serviceTag**: string: Service tag (located on the bottom-right corner of the device)
+* **shippingBoxRequired**: bool: Shipping Box required
 
 ## ReverseShippingDetails
 ### Properties

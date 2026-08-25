@@ -68,6 +68,11 @@
 * **Input**: [QueryDefinition](#querydefinition)
 * **Output**: [QueryResult](#queryresult)
 
+## Function run (Microsoft.CostManagement/exports@2019-11-01)
+* **Resource**: Microsoft.CostManagement/exports
+* **ApiVersion**: 2019-11-01
+* **Output**: any
+
 ## AlertProperties
 ### Properties
 * **closeTime**: string: dateTime in which alert was closed

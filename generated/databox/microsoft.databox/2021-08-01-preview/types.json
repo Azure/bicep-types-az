@@ -3802,6 +3802,31 @@
   },
   {
     "$type": "ObjectType",
+    "name": "MarkDevicesShippedRequest",
+    "properties": {
+      "deliverToDcPackageDetails": {
+        "type": {
+          "$ref": "#/278"
+        },
+        "flags": 1,
+        "description": "Delivery package details"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "markDevicesShipped",
+    "resourceType": "Microsoft.DataBox/jobs",
+    "apiVersion": "2021-08-01-preview",
+    "output": {
+      "$ref": "#/35"
+    },
+    "input": {
+      "$ref": "#/325"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ShipmentPickUpRequest",
     "properties": {
       "startTime": {
@@ -3853,10 +3878,35 @@
     "resourceType": "Microsoft.DataBox/jobs",
     "apiVersion": "2021-08-01-preview",
     "output": {
-      "$ref": "#/326"
+      "$ref": "#/328"
     },
     "input": {
-      "$ref": "#/325"
+      "$ref": "#/327"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CancellationReason",
+    "properties": {
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Reason for cancellation."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DataBox/jobs",
+    "apiVersion": "2021-08-01-preview",
+    "output": {
+      "$ref": "#/35"
+    },
+    "input": {
+      "$ref": "#/330"
     }
   },
   {
@@ -3865,7 +3915,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/369"
+          "$ref": "#/373"
         },
         "flags": 0,
         "description": "List of unencrypted credentials."
@@ -3892,7 +3942,7 @@
       },
       "jobSecrets": {
         "type": {
-          "$ref": "#/330"
+          "$ref": "#/334"
         },
         "flags": 2,
         "description": "Secrets related to this job."
@@ -3906,7 +3956,7 @@
     "baseProperties": {
       "dcAccessSecurityCode": {
         "type": {
-          "$ref": "#/331"
+          "$ref": "#/335"
         },
         "flags": 2,
         "description": "Dc Access Security Code for Customer Managed Shipping"
@@ -3921,16 +3971,16 @@
     },
     "elements": {
       "DataBox": {
-        "$ref": "#/332"
+        "$ref": "#/336"
       },
       "DataBoxCustomerDisk": {
-        "$ref": "#/356"
-      },
-      "DataBoxDisk": {
         "$ref": "#/360"
       },
+      "DataBoxDisk": {
+        "$ref": "#/364"
+      },
       "DataBoxHeavy": {
-        "$ref": "#/363"
+        "$ref": "#/367"
       }
     }
   },
@@ -3960,14 +4010,14 @@
     "properties": {
       "podSecrets": {
         "type": {
-          "$ref": "#/354"
+          "$ref": "#/358"
         },
         "flags": 0,
         "description": "Contains the list of secret objects for a job."
       },
       "jobSecretsType": {
         "type": {
-          "$ref": "#/355"
+          "$ref": "#/359"
         },
         "flags": 1,
         "description": "Used to indicate what type of job secrets object."
@@ -3994,7 +4044,7 @@
       },
       "networkConfigurations": {
         "type": {
-          "$ref": "#/335"
+          "$ref": "#/339"
         },
         "flags": 2,
         "description": "Network configuration of the appliance."
@@ -4008,7 +4058,7 @@
       },
       "accountCredentialDetails": {
         "type": {
-          "$ref": "#/353"
+          "$ref": "#/357"
         },
         "flags": 2,
         "description": "Per account level access credentials."
@@ -4038,7 +4088,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/334"
+      "$ref": "#/338"
     }
   },
   {
@@ -4054,7 +4104,7 @@
       },
       "dataAccountType": {
         "type": {
-          "$ref": "#/339"
+          "$ref": "#/343"
         },
         "flags": 2,
         "description": "Type of the account."
@@ -4068,7 +4118,7 @@
       },
       "shareCredentialDetails": {
         "type": {
-          "$ref": "#/352"
+          "$ref": "#/356"
         },
         "flags": 2,
         "description": "Per share level unencrypted access credentials."
@@ -4087,10 +4137,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/337"
+        "$ref": "#/341"
       },
       {
-        "$ref": "#/338"
+        "$ref": "#/342"
       }
     ]
   },
@@ -4107,7 +4157,7 @@
       },
       "shareType": {
         "type": {
-          "$ref": "#/347"
+          "$ref": "#/351"
         },
         "flags": 2,
         "description": "Type of the share."
@@ -4128,7 +4178,7 @@
       },
       "supportedAccessProtocols": {
         "type": {
-          "$ref": "#/351"
+          "$ref": "#/355"
         },
         "flags": 2,
         "description": "Access protocols supported on the device."
@@ -4163,22 +4213,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/341"
-      },
-      {
-        "$ref": "#/342"
-      },
-      {
-        "$ref": "#/343"
-      },
-      {
-        "$ref": "#/344"
-      },
-      {
         "$ref": "#/345"
       },
       {
         "$ref": "#/346"
+      },
+      {
+        "$ref": "#/347"
+      },
+      {
+        "$ref": "#/348"
+      },
+      {
+        "$ref": "#/349"
+      },
+      {
+        "$ref": "#/350"
       }
     ]
   },
@@ -4194,17 +4244,23 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/348"
+        "$ref": "#/352"
       },
       {
-        "$ref": "#/349"
+        "$ref": "#/353"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/350"
+      "$ref": "#/354"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/344"
     }
   },
   {
@@ -4216,13 +4272,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/336"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/333"
+      "$ref": "#/337"
     }
   },
   {
@@ -4235,7 +4285,7 @@
     "properties": {
       "diskSecrets": {
         "type": {
-          "$ref": "#/358"
+          "$ref": "#/362"
         },
         "flags": 2,
         "description": "Contains the list of secrets object for that device."
@@ -4249,7 +4299,7 @@
       },
       "jobSecretsType": {
         "type": {
-          "$ref": "#/359"
+          "$ref": "#/363"
         },
         "flags": 1,
         "description": "Used to indicate what type of job secrets object."
@@ -4279,7 +4329,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/357"
+      "$ref": "#/361"
     }
   },
   {
@@ -4292,7 +4342,7 @@
     "properties": {
       "diskSecrets": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/365"
         },
         "flags": 2,
         "description": "Contains the list of secrets object for that device."
@@ -4313,7 +4363,7 @@
       },
       "jobSecretsType": {
         "type": {
-          "$ref": "#/362"
+          "$ref": "#/366"
         },
         "flags": 1,
         "description": "Used to indicate what type of job secrets object."
@@ -4323,7 +4373,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/357"
+      "$ref": "#/361"
     }
   },
   {
@@ -4336,14 +4386,14 @@
     "properties": {
       "cabinetPodSecrets": {
         "type": {
-          "$ref": "#/367"
+          "$ref": "#/371"
         },
         "flags": 2,
         "description": "Contains the list of secret objects for a databox heavy job."
       },
       "jobSecretsType": {
         "type": {
-          "$ref": "#/368"
+          "$ref": "#/372"
         },
         "flags": 1,
         "description": "Used to indicate what type of job secrets object."
@@ -4370,7 +4420,7 @@
       },
       "networkConfigurations": {
         "type": {
-          "$ref": "#/365"
+          "$ref": "#/369"
         },
         "flags": 2,
         "description": "Network configuration of the appliance."
@@ -4384,7 +4434,7 @@
       },
       "accountCredentialDetails": {
         "type": {
-          "$ref": "#/366"
+          "$ref": "#/370"
         },
         "flags": 2,
         "description": "Per account level access credentials."
@@ -4394,19 +4444,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/334"
+      "$ref": "#/338"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/336"
+      "$ref": "#/340"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/364"
+      "$ref": "#/368"
     }
   },
   {
@@ -4416,7 +4466,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/329"
+      "$ref": "#/333"
     }
   },
   {
@@ -4425,7 +4475,58 @@
     "resourceType": "Microsoft.DataBox/jobs",
     "apiVersion": "2021-08-01-preview",
     "output": {
-      "$ref": "#/328"
+      "$ref": "#/332"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MitigateJobRequest",
+    "properties": {
+      "customerResolutionCode": {
+        "type": {
+          "$ref": "#/379"
+        },
+        "flags": 1,
+        "description": "Resolution code for the job"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveToCleanUpDevice"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resume"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/376"
+      },
+      {
+        "$ref": "#/377"
+      },
+      {
+        "$ref": "#/378"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "mitigate",
+    "resourceType": "Microsoft.DataBox/jobs",
+    "apiVersion": "2021-08-01-preview",
+    "output": {
+      "$ref": "#/35"
+    },
+    "input": {
+      "$ref": "#/375"
     }
   },
   {
@@ -4434,7 +4535,7 @@
     "properties": {
       "transferType": {
         "type": {
-          "$ref": "#/374"
+          "$ref": "#/384"
         },
         "flags": 1,
         "description": "Type of the transfer."
@@ -4455,7 +4556,7 @@
       },
       "skuNames": {
         "type": {
-          "$ref": "#/380"
+          "$ref": "#/390"
         },
         "flags": 0,
         "description": "Sku Names to filter for available skus"
@@ -4474,10 +4575,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/372"
+        "$ref": "#/382"
       },
       {
-        "$ref": "#/373"
+        "$ref": "#/383"
       }
     ]
   },
@@ -4501,23 +4602,23 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/375"
+        "$ref": "#/385"
       },
       {
-        "$ref": "#/376"
+        "$ref": "#/386"
       },
       {
-        "$ref": "#/377"
+        "$ref": "#/387"
       },
       {
-        "$ref": "#/378"
+        "$ref": "#/388"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/379"
+      "$ref": "#/389"
     }
   },
   {
@@ -4526,7 +4627,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/397"
+          "$ref": "#/407"
         },
         "flags": 2,
         "description": "List of available skus."
@@ -4560,7 +4661,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/383"
+          "$ref": "#/393"
         },
         "flags": 2,
         "description": "Properties of the sku."
@@ -4573,35 +4674,35 @@
     "properties": {
       "dataLocationToServiceLocationMap": {
         "type": {
-          "$ref": "#/385"
+          "$ref": "#/395"
         },
         "flags": 2,
         "description": "The map of data location to service location."
       },
       "capacity": {
         "type": {
-          "$ref": "#/386"
+          "$ref": "#/396"
         },
         "flags": 2,
         "description": "Capacity of the Sku."
       },
       "costs": {
         "type": {
-          "$ref": "#/388"
+          "$ref": "#/398"
         },
         "flags": 2,
         "description": "Cost of the Sku."
       },
       "apiVersions": {
         "type": {
-          "$ref": "#/389"
+          "$ref": "#/399"
         },
         "flags": 2,
         "description": "Api versions that support this Sku."
       },
       "disabledReason": {
         "type": {
-          "$ref": "#/396"
+          "$ref": "#/406"
         },
         "flags": 2,
         "description": "Reason why the Sku is disabled."
@@ -4645,7 +4746,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/384"
+      "$ref": "#/394"
     }
   },
   {
@@ -4698,7 +4799,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/387"
+      "$ref": "#/397"
     }
   },
   {
@@ -4735,29 +4836,29 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/390"
+        "$ref": "#/400"
       },
       {
-        "$ref": "#/391"
+        "$ref": "#/401"
       },
       {
-        "$ref": "#/392"
+        "$ref": "#/402"
       },
       {
-        "$ref": "#/393"
+        "$ref": "#/403"
       },
       {
-        "$ref": "#/394"
+        "$ref": "#/404"
       },
       {
-        "$ref": "#/395"
+        "$ref": "#/405"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/382"
+      "$ref": "#/392"
     }
   },
   {
@@ -4766,10 +4867,10 @@
     "resourceType": "Microsoft.DataBox/locations",
     "apiVersion": "2021-08-01-preview",
     "output": {
-      "$ref": "#/381"
+      "$ref": "#/391"
     },
     "input": {
-      "$ref": "#/371"
+      "$ref": "#/381"
     }
   },
   {
@@ -4785,7 +4886,7 @@
       },
       "deviceType": {
         "type": {
-          "$ref": "#/404"
+          "$ref": "#/414"
         },
         "flags": 1,
         "description": "Device type to be used for the job."
@@ -4799,7 +4900,7 @@
       },
       "validationType": {
         "type": {
-          "$ref": "#/411"
+          "$ref": "#/421"
         },
         "flags": 1,
         "description": "Identifies the type of validation request."
@@ -4826,16 +4927,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/400"
+        "$ref": "#/410"
       },
       {
-        "$ref": "#/401"
+        "$ref": "#/411"
       },
       {
-        "$ref": "#/402"
+        "$ref": "#/412"
       },
       {
-        "$ref": "#/403"
+        "$ref": "#/413"
       }
     ]
   },
@@ -4867,22 +4968,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/405"
+        "$ref": "#/415"
       },
       {
-        "$ref": "#/406"
+        "$ref": "#/416"
       },
       {
-        "$ref": "#/407"
+        "$ref": "#/417"
       },
       {
-        "$ref": "#/408"
+        "$ref": "#/418"
       },
       {
-        "$ref": "#/409"
+        "$ref": "#/419"
       },
       {
-        "$ref": "#/410"
+        "$ref": "#/420"
       }
     ]
   },
@@ -4892,7 +4993,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/413"
+          "$ref": "#/423"
         },
         "flags": 2,
         "description": "The address validation properties."
@@ -4905,21 +5006,21 @@
     "properties": {
       "validationStatus": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/427"
         },
         "flags": 2,
         "description": "The address validation status."
       },
       "alternateAddresses": {
         "type": {
-          "$ref": "#/418"
+          "$ref": "#/428"
         },
         "flags": 2,
         "description": "List of alternate addresses."
       },
       "validationType": {
         "type": {
-          "$ref": "#/425"
+          "$ref": "#/435"
         },
         "flags": 1,
         "description": "Identifies the type of validation response."
@@ -4949,13 +5050,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/414"
+        "$ref": "#/424"
       },
       {
-        "$ref": "#/415"
+        "$ref": "#/425"
       },
       {
-        "$ref": "#/416"
+        "$ref": "#/426"
       }
     ]
   },
@@ -4993,22 +5094,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/419"
+        "$ref": "#/429"
       },
       {
-        "$ref": "#/420"
+        "$ref": "#/430"
       },
       {
-        "$ref": "#/421"
+        "$ref": "#/431"
       },
       {
-        "$ref": "#/422"
+        "$ref": "#/432"
       },
       {
-        "$ref": "#/423"
+        "$ref": "#/433"
       },
       {
-        "$ref": "#/424"
+        "$ref": "#/434"
       }
     ]
   },
@@ -5018,10 +5119,10 @@
     "resourceType": "Microsoft.DataBox/locations",
     "apiVersion": "2021-08-01-preview",
     "output": {
-      "$ref": "#/412"
+      "$ref": "#/422"
     },
     "input": {
-      "$ref": "#/399"
+      "$ref": "#/409"
     }
   },
   {
@@ -5031,7 +5132,7 @@
     "baseProperties": {
       "individualRequestDetails": {
         "type": {
-          "$ref": "#/474"
+          "$ref": "#/484"
         },
         "flags": 1,
         "description": "List of request details contain validationType and its request as key and value respectively."
@@ -5039,7 +5140,7 @@
     },
     "elements": {
       "JobCreationValidation": {
-        "$ref": "#/475"
+        "$ref": "#/485"
       }
     }
   },
@@ -5050,22 +5151,22 @@
     "baseProperties": {},
     "elements": {
       "ValidateAddress": {
-        "$ref": "#/429"
+        "$ref": "#/439"
       },
       "ValidateCreateOrderLimit": {
-        "$ref": "#/436"
+        "$ref": "#/446"
       },
       "ValidateDataTransferDetails": {
-        "$ref": "#/443"
+        "$ref": "#/453"
       },
       "ValidatePreferences": {
-        "$ref": "#/455"
+        "$ref": "#/465"
       },
       "ValidateSkuAvailability": {
-        "$ref": "#/462"
+        "$ref": "#/472"
       },
       "ValidateSubscriptionIsAllowedToCreateJob": {
-        "$ref": "#/472"
+        "$ref": "#/482"
       }
     }
   },
@@ -5082,7 +5183,7 @@
       },
       "deviceType": {
         "type": {
-          "$ref": "#/434"
+          "$ref": "#/444"
         },
         "flags": 1,
         "description": "Device type to be used for the job."
@@ -5096,7 +5197,7 @@
       },
       "validationType": {
         "type": {
-          "$ref": "#/435"
+          "$ref": "#/445"
         },
         "flags": 1,
         "description": "Identifies the type of validation request."
@@ -5123,16 +5224,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/430"
+        "$ref": "#/440"
       },
       {
-        "$ref": "#/431"
+        "$ref": "#/441"
       },
       {
-        "$ref": "#/432"
+        "$ref": "#/442"
       },
       {
-        "$ref": "#/433"
+        "$ref": "#/443"
       }
     ]
   },
@@ -5146,14 +5247,14 @@
     "properties": {
       "deviceType": {
         "type": {
-          "$ref": "#/441"
+          "$ref": "#/451"
         },
         "flags": 1,
         "description": "Device type to be used for the job."
       },
       "validationType": {
         "type": {
-          "$ref": "#/442"
+          "$ref": "#/452"
         },
         "flags": 1,
         "description": "Identifies the type of validation request."
@@ -5180,16 +5281,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/437"
+        "$ref": "#/447"
       },
       {
-        "$ref": "#/438"
+        "$ref": "#/448"
       },
       {
-        "$ref": "#/439"
+        "$ref": "#/449"
       },
       {
-        "$ref": "#/440"
+        "$ref": "#/450"
       }
     ]
   },
@@ -5203,35 +5304,35 @@
     "properties": {
       "dataExportDetails": {
         "type": {
-          "$ref": "#/444"
+          "$ref": "#/454"
         },
         "flags": 0,
         "description": "List of DataTransfer details to be used to export data from azure."
       },
       "dataImportDetails": {
         "type": {
-          "$ref": "#/445"
+          "$ref": "#/455"
         },
         "flags": 0,
         "description": "List of DataTransfer details to be used to import data to azure."
       },
       "deviceType": {
         "type": {
-          "$ref": "#/450"
+          "$ref": "#/460"
         },
         "flags": 1,
         "description": "Device type."
       },
       "transferType": {
         "type": {
-          "$ref": "#/453"
+          "$ref": "#/463"
         },
         "flags": 1,
         "description": "Type of the transfer."
       },
       "validationType": {
         "type": {
-          "$ref": "#/454"
+          "$ref": "#/464"
         },
         "flags": 1,
         "description": "Identifies the type of validation request."
@@ -5270,16 +5371,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/446"
+        "$ref": "#/456"
       },
       {
-        "$ref": "#/447"
+        "$ref": "#/457"
       },
       {
-        "$ref": "#/448"
+        "$ref": "#/458"
       },
       {
-        "$ref": "#/449"
+        "$ref": "#/459"
       }
     ]
   },
@@ -5295,10 +5396,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/451"
+        "$ref": "#/461"
       },
       {
-        "$ref": "#/452"
+        "$ref": "#/462"
       }
     ]
   },
@@ -5319,88 +5420,10 @@
       },
       "deviceType": {
         "type": {
-          "$ref": "#/460"
-        },
-        "flags": 1,
-        "description": "Device type to be used for the job."
-      },
-      "validationType": {
-        "type": {
-          "$ref": "#/461"
-        },
-        "flags": 1,
-        "description": "Identifies the type of validation request."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "DataBox"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "DataBoxDisk"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "DataBoxHeavy"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "DataBoxCustomerDisk"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/456"
-      },
-      {
-        "$ref": "#/457"
-      },
-      {
-        "$ref": "#/458"
-      },
-      {
-        "$ref": "#/459"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ValidatePreferences"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SkuAvailabilityValidationRequest",
-    "properties": {
-      "deviceType": {
-        "type": {
-          "$ref": "#/467"
-        },
-        "flags": 1,
-        "description": "Device type to be used for the job."
-      },
-      "transferType": {
-        "type": {
           "$ref": "#/470"
         },
         "flags": 1,
-        "description": "Type of the transfer."
-      },
-      "country": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "ISO country code. Country for hardware shipment. For codes check: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements"
-      },
-      "location": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "Location for data transfer. For locations check: https://management.azure.com/subscriptions/SUBSCRIPTIONID/locations?api-version=2018-01-01"
+        "description": "Device type to be used for the job."
       },
       "validationType": {
         "type": {
@@ -5431,16 +5454,94 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/463"
-      },
-      {
-        "$ref": "#/464"
-      },
-      {
-        "$ref": "#/465"
-      },
-      {
         "$ref": "#/466"
+      },
+      {
+        "$ref": "#/467"
+      },
+      {
+        "$ref": "#/468"
+      },
+      {
+        "$ref": "#/469"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidatePreferences"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuAvailabilityValidationRequest",
+    "properties": {
+      "deviceType": {
+        "type": {
+          "$ref": "#/477"
+        },
+        "flags": 1,
+        "description": "Device type to be used for the job."
+      },
+      "transferType": {
+        "type": {
+          "$ref": "#/480"
+        },
+        "flags": 1,
+        "description": "Type of the transfer."
+      },
+      "country": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "ISO country code. Country for hardware shipment. For codes check: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Location for data transfer. For locations check: https://management.azure.com/subscriptions/SUBSCRIPTIONID/locations?api-version=2018-01-01"
+      },
+      "validationType": {
+        "type": {
+          "$ref": "#/481"
+        },
+        "flags": 1,
+        "description": "Identifies the type of validation request."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataBox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataBoxDisk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataBoxHeavy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataBoxCustomerDisk"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/473"
+      },
+      {
+        "$ref": "#/474"
+      },
+      {
+        "$ref": "#/475"
+      },
+      {
+        "$ref": "#/476"
       }
     ]
   },
@@ -5456,10 +5557,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/468"
+        "$ref": "#/478"
       },
       {
-        "$ref": "#/469"
+        "$ref": "#/479"
       }
     ]
   },
@@ -5473,7 +5574,7 @@
     "properties": {
       "validationType": {
         "type": {
-          "$ref": "#/473"
+          "$ref": "#/483"
         },
         "flags": 1,
         "description": "Identifies the type of validation request."
@@ -5487,7 +5588,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/428"
+      "$ref": "#/438"
     }
   },
   {
@@ -5496,7 +5597,7 @@
     "properties": {
       "validationCategory": {
         "type": {
-          "$ref": "#/476"
+          "$ref": "#/486"
         },
         "flags": 1,
         "description": "Identify the nature of validation."
@@ -5513,7 +5614,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/478"
+          "$ref": "#/488"
         },
         "flags": 2,
         "description": "Properties of pre job creation validation response."
@@ -5526,14 +5627,14 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/482"
+          "$ref": "#/492"
         },
         "flags": 2,
         "description": "Overall validation status."
       },
       "individualResponseDetails": {
         "type": {
-          "$ref": "#/521"
+          "$ref": "#/531"
         },
         "flags": 2,
         "description": "List of response details contain validationType and its response as key and value respectively."
@@ -5556,13 +5657,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/479"
+        "$ref": "#/489"
       },
       {
-        "$ref": "#/480"
+        "$ref": "#/490"
       },
       {
-        "$ref": "#/481"
+        "$ref": "#/491"
       }
     ]
   },
@@ -5581,22 +5682,22 @@
     },
     "elements": {
       "ValidateAddress": {
-        "$ref": "#/484"
+        "$ref": "#/494"
       },
       "ValidateCreateOrderLimit": {
-        "$ref": "#/491"
+        "$ref": "#/501"
       },
       "ValidateDataTransferDetails": {
-        "$ref": "#/497"
+        "$ref": "#/507"
       },
       "ValidatePreferences": {
-        "$ref": "#/503"
+        "$ref": "#/513"
       },
       "ValidateSkuAvailability": {
-        "$ref": "#/509"
+        "$ref": "#/519"
       },
       "ValidateSubscriptionIsAllowedToCreateJob": {
-        "$ref": "#/515"
+        "$ref": "#/525"
       }
     }
   },
@@ -5606,21 +5707,21 @@
     "properties": {
       "validationStatus": {
         "type": {
-          "$ref": "#/488"
+          "$ref": "#/498"
         },
         "flags": 2,
         "description": "The address validation status."
       },
       "alternateAddresses": {
         "type": {
-          "$ref": "#/489"
+          "$ref": "#/499"
         },
         "flags": 2,
         "description": "List of alternate addresses."
       },
       "validationType": {
         "type": {
-          "$ref": "#/490"
+          "$ref": "#/500"
         },
         "flags": 1,
         "description": "Identifies the type of validation response."
@@ -5643,13 +5744,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/485"
+        "$ref": "#/495"
       },
       {
-        "$ref": "#/486"
+        "$ref": "#/496"
       },
       {
-        "$ref": "#/487"
+        "$ref": "#/497"
       }
     ]
   },
@@ -5669,14 +5770,14 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/495"
+          "$ref": "#/505"
         },
         "flags": 2,
         "description": "Create order limit validation status."
       },
       "validationType": {
         "type": {
-          "$ref": "#/496"
+          "$ref": "#/506"
         },
         "flags": 1,
         "description": "Identifies the type of validation response."
@@ -5699,13 +5800,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/492"
+        "$ref": "#/502"
       },
       {
-        "$ref": "#/493"
+        "$ref": "#/503"
       },
       {
-        "$ref": "#/494"
+        "$ref": "#/504"
       }
     ]
   },
@@ -5719,14 +5820,14 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/501"
+          "$ref": "#/511"
         },
         "flags": 2,
         "description": "Data transfer details validation status."
       },
       "validationType": {
         "type": {
-          "$ref": "#/502"
+          "$ref": "#/512"
         },
         "flags": 1,
         "description": "Identifies the type of validation response."
@@ -5749,13 +5850,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/498"
+        "$ref": "#/508"
       },
       {
-        "$ref": "#/499"
+        "$ref": "#/509"
       },
       {
-        "$ref": "#/500"
+        "$ref": "#/510"
       }
     ]
   },
@@ -5769,14 +5870,14 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/507"
+          "$ref": "#/517"
         },
         "flags": 2,
         "description": "Validation status of requested data center and transport."
       },
       "validationType": {
         "type": {
-          "$ref": "#/508"
+          "$ref": "#/518"
         },
         "flags": 1,
         "description": "Identifies the type of validation response."
@@ -5799,13 +5900,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/504"
+        "$ref": "#/514"
       },
       {
-        "$ref": "#/505"
+        "$ref": "#/515"
       },
       {
-        "$ref": "#/506"
+        "$ref": "#/516"
       }
     ]
   },
@@ -5819,14 +5920,14 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/513"
+          "$ref": "#/523"
         },
         "flags": 2,
         "description": "Sku availability validation status."
       },
       "validationType": {
         "type": {
-          "$ref": "#/514"
+          "$ref": "#/524"
         },
         "flags": 1,
         "description": "Identifies the type of validation response."
@@ -5849,13 +5950,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/510"
+        "$ref": "#/520"
       },
       {
-        "$ref": "#/511"
+        "$ref": "#/521"
       },
       {
-        "$ref": "#/512"
+        "$ref": "#/522"
       }
     ]
   },
@@ -5869,14 +5970,14 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/519"
+          "$ref": "#/529"
         },
         "flags": 2,
         "description": "Validation status of subscription permission to create job."
       },
       "validationType": {
         "type": {
-          "$ref": "#/520"
+          "$ref": "#/530"
         },
         "flags": 1,
         "description": "Identifies the type of validation response."
@@ -5899,13 +6000,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/516"
+        "$ref": "#/526"
       },
       {
-        "$ref": "#/517"
+        "$ref": "#/527"
       },
       {
-        "$ref": "#/518"
+        "$ref": "#/528"
       }
     ]
   },
@@ -5916,7 +6017,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/483"
+      "$ref": "#/493"
     }
   },
   {
@@ -5925,10 +6026,10 @@
     "resourceType": "Microsoft.DataBox/locations",
     "apiVersion": "2021-08-01-preview",
     "output": {
-      "$ref": "#/477"
+      "$ref": "#/487"
     },
     "input": {
-      "$ref": "#/427"
+      "$ref": "#/437"
     }
   },
   {
@@ -5937,21 +6038,21 @@
     "properties": {
       "scheduleAvailabilityRequest": {
         "type": {
-          "$ref": "#/524"
+          "$ref": "#/534"
         },
         "flags": 0,
         "description": "Request body to get the availability for scheduling orders."
       },
       "transportAvailabilityRequest": {
         "type": {
-          "$ref": "#/531"
+          "$ref": "#/541"
         },
         "flags": 0,
         "description": "Request body to get the transport availability for given sku."
       },
       "datacenterAddressRequest": {
         "type": {
-          "$ref": "#/537"
+          "$ref": "#/547"
         },
         "flags": 0,
         "description": "Request body to get the datacenter address for given sku."
@@ -5980,13 +6081,13 @@
     },
     "elements": {
       "DataBox": {
-        "$ref": "#/525"
+        "$ref": "#/535"
       },
       "DataBoxDisk": {
-        "$ref": "#/527"
+        "$ref": "#/537"
       },
       "DataBoxHeavy": {
-        "$ref": "#/529"
+        "$ref": "#/539"
       }
     }
   },
@@ -5996,7 +6097,7 @@
     "properties": {
       "skuName": {
         "type": {
-          "$ref": "#/526"
+          "$ref": "#/536"
         },
         "flags": 1,
         "description": "Sku Name for which the order is to be scheduled."
@@ -6020,7 +6121,7 @@
       },
       "skuName": {
         "type": {
-          "$ref": "#/528"
+          "$ref": "#/538"
         },
         "flags": 1,
         "description": "Sku Name for which the order is to be scheduled."
@@ -6037,7 +6138,7 @@
     "properties": {
       "skuName": {
         "type": {
-          "$ref": "#/530"
+          "$ref": "#/540"
         },
         "flags": 1,
         "description": "Sku Name for which the order is to be scheduled."
@@ -6054,7 +6155,7 @@
     "properties": {
       "skuName": {
         "type": {
-          "$ref": "#/536"
+          "$ref": "#/546"
         },
         "flags": 0,
         "description": "Type of the device."
@@ -6081,16 +6182,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/532"
+        "$ref": "#/542"
       },
       {
-        "$ref": "#/533"
+        "$ref": "#/543"
       },
       {
-        "$ref": "#/534"
+        "$ref": "#/544"
       },
       {
-        "$ref": "#/535"
+        "$ref": "#/545"
       }
     ]
   },
@@ -6107,7 +6208,7 @@
       },
       "skuName": {
         "type": {
-          "$ref": "#/542"
+          "$ref": "#/552"
         },
         "flags": 1,
         "description": "Sku Name for which the data center address requested."
@@ -6134,16 +6235,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/538"
+        "$ref": "#/548"
       },
       {
-        "$ref": "#/539"
+        "$ref": "#/549"
       },
       {
-        "$ref": "#/540"
+        "$ref": "#/550"
       },
       {
-        "$ref": "#/541"
+        "$ref": "#/551"
       }
     ]
   },
@@ -6153,14 +6254,14 @@
     "properties": {
       "scheduleAvailabilityResponse": {
         "type": {
-          "$ref": "#/544"
+          "$ref": "#/554"
         },
         "flags": 2,
         "description": "Schedule availability for given sku in a region."
       },
       "transportAvailabilityResponse": {
         "type": {
-          "$ref": "#/546"
+          "$ref": "#/556"
         },
         "flags": 2,
         "description": "Transport options available for given sku in a region."
@@ -6180,7 +6281,7 @@
     "properties": {
       "availableDates": {
         "type": {
-          "$ref": "#/545"
+          "$ref": "#/555"
         },
         "flags": 2,
         "description": "List of dates available to schedule"
@@ -6199,7 +6300,7 @@
     "properties": {
       "transportAvailabilityDetails": {
         "type": {
-          "$ref": "#/551"
+          "$ref": "#/561"
         },
         "flags": 2,
         "description": "List of transport availability details for given region"
@@ -6212,7 +6313,7 @@
     "properties": {
       "shipmentType": {
         "type": {
-          "$ref": "#/550"
+          "$ref": "#/560"
         },
         "flags": 2,
         "description": "Transport Shipment Type supported for given region."
@@ -6231,17 +6332,17 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/548"
+        "$ref": "#/558"
       },
       {
-        "$ref": "#/549"
+        "$ref": "#/559"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/547"
+      "$ref": "#/557"
     }
   },
   {
@@ -6250,10 +6351,10 @@
     "resourceType": "Microsoft.DataBox/locations",
     "apiVersion": "2021-08-01-preview",
     "output": {
-      "$ref": "#/543"
+      "$ref": "#/553"
     },
     "input": {
-      "$ref": "#/523"
+      "$ref": "#/533"
     }
   }
 ]

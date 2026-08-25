@@ -50,6 +50,12 @@
 * **ApiVersion**: 2022-05-01
 * **Output**: [PasswordCredential](#passwordcredential)
 
+## Function uploadCertificate (Microsoft.AzureStackHCI/clusters@2022-05-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2022-05-01
+* **Input**: [UploadCertificateRequest](#uploadcertificaterequest)
+* **Output**: any
+
 ## ArcIdentityResponse
 ### Properties
 * **properties**: [ArcIdentityResponseProperties](#arcidentityresponseproperties) (ReadOnly): ArcIdentity properties.
@@ -167,6 +173,10 @@
 * **name**: string (ReadOnly): Name of the Node in HCI Cluster
 * **state**: 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'Disconnected' | 'Error' | 'Failed' | 'Moving' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): State of Arc agent in this node.
 
+## RawCertificateData
+### Properties
+* **certificates**: string[]
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -180,4 +190,8 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UploadCertificateRequest
+### Properties
+* **properties**: [RawCertificateData](#rawcertificatedata)
 

@@ -22,6 +22,21 @@
 * **properties**: [JobProperties](#jobproperties): Gets or sets the job properties.
 * **type**: 'Microsoft.Scheduler/jobCollections/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disable (Microsoft.Scheduler/jobCollections@2014-08-01-preview)
+* **Resource**: Microsoft.Scheduler/jobCollections
+* **ApiVersion**: 2014-08-01-preview
+* **Output**: any
+
+## Function enable (Microsoft.Scheduler/jobCollections@2014-08-01-preview)
+* **Resource**: Microsoft.Scheduler/jobCollections
+* **ApiVersion**: 2014-08-01-preview
+* **Output**: any
+
+## Function run (Microsoft.Scheduler/jobCollections/jobs@2014-08-01-preview)
+* **Resource**: Microsoft.Scheduler/jobCollections/jobs
+* **ApiVersion**: 2014-08-01-preview
+* **Output**: any
+
 ## HttpAuthentication
 ### Properties
 * **type**: 'ActiveDirectoryOAuth' | 'Basic' | 'ClientCertificate' | 'NotSpecified': Gets or sets the http authentication type.

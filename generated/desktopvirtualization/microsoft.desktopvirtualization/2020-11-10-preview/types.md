@@ -98,11 +98,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disconnect (Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2020-11-10-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions
+* **ApiVersion**: 2020-11-10-preview
+* **Output**: any
+
 ## Function expandMsixImage (Microsoft.DesktopVirtualization/hostPools@2020-11-10-preview)
 * **Resource**: Microsoft.DesktopVirtualization/hostPools
 * **ApiVersion**: 2020-11-10-preview
 * **Input**: [MsixImageURI](#msiximageuri)
 * **Output**: [ExpandMsixImageList](#expandmsiximagelist)
+
+## Function sendMessage (Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2020-11-10-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions
+* **ApiVersion**: 2020-11-10-preview
+* **Input**: [SendMessage](#sendmessage)
+* **Output**: any
 
 ## ApplicationGroupProperties
 ### Properties
@@ -259,6 +270,11 @@
 * **rampUpLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
 * **rampUpMinimumHostsPct**: int {minValue: 0, maxValue: 100}: Minimum host percentage for ramp up period.
 * **rampUpStartTime**: string: Starting time for ramp up period.
+
+## SendMessage
+### Properties
+* **messageBody**: string: Body of message.
+* **messageTitle**: string: Title of message.
 
 ## SessionHostProperties
 ### Properties

@@ -1917,12 +1917,33 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "archive",
+    "resourceType": "Microsoft.Capacity/reservationOrders/reservations",
+    "apiVersion": "2019-04-01",
+    "output": {
+      "$ref": "#/161"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unarchive",
+    "resourceType": "Microsoft.Capacity/reservationOrders/reservations",
+    "apiVersion": "2019-04-01",
+    "output": {
+      "$ref": "#/161"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SplitRequest",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/165"
         },
         "flags": 0
       }
@@ -1934,7 +1955,7 @@
     "properties": {
       "quantities": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/166"
         },
         "flags": 0,
         "description": "List of the quantities in the new reservations to create."
@@ -1966,10 +1987,10 @@
     "resourceType": "Microsoft.Capacity/reservationOrders",
     "apiVersion": "2019-04-01",
     "output": {
-      "$ref": "#/164"
+      "$ref": "#/167"
     },
     "input": {
-      "$ref": "#/161"
+      "$ref": "#/164"
     }
   },
   {
@@ -1978,7 +1999,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/167"
+          "$ref": "#/170"
         },
         "flags": 0
       }
@@ -1990,7 +2011,7 @@
     "properties": {
       "sources": {
         "type": {
-          "$ref": "#/168"
+          "$ref": "#/171"
         },
         "flags": 0,
         "description": "Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}"
@@ -2015,10 +2036,10 @@
     "resourceType": "Microsoft.Capacity/reservationOrders",
     "apiVersion": "2019-04-01",
     "output": {
-      "$ref": "#/169"
+      "$ref": "#/172"
     },
     "input": {
-      "$ref": "#/166"
+      "$ref": "#/169"
     }
   }
 ]

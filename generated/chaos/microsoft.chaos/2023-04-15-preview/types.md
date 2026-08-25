@@ -61,6 +61,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The standard system metadata of a resource type.
 * **type**: 'Microsoft.Chaos/targets/capabilities' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.Chaos/experiments@2023-04-15-preview)
+* **Resource**: Microsoft.Chaos/experiments
+* **ApiVersion**: 2023-04-15-preview
+* **Output**: [ExperimentCancelOperationResult](#experimentcanceloperationresult)
+
+## Function start (Microsoft.Chaos/experiments@2023-04-15-preview)
+* **Resource**: Microsoft.Chaos/experiments
+* **ApiVersion**: 2023-04-15-preview
+* **Output**: [ExperimentStartOperationResult](#experimentstartoperationresult)
+
 ## Action
 * **Discriminator**: type
 
@@ -116,11 +126,21 @@
 ### Properties
 * **kind**: string (ReadOnly): String of the kind of the resource's action type (continuous or discrete).
 
+## ExperimentCancelOperationResult
+### Properties
+* **name**: string (ReadOnly): String of the Experiment name.
+* **statusUrl**: string {maxLength: 2048} (ReadOnly): URL to retrieve the Experiment status.
+
 ## ExperimentProperties
 ### Properties
 * **selectors**: [Selector](#selector)[] {minLength: 1} (Required): List of selectors.
 * **startOnCreation**: bool: A boolean value that indicates if experiment should be started on creation or not.
 * **steps**: [Step](#step)[] {minLength: 1} (Required): List of steps.
+
+## ExperimentStartOperationResult
+### Properties
+* **name**: string (ReadOnly): String of the Experiment name.
+* **statusUrl**: string {maxLength: 2048} (ReadOnly): URL to retrieve the Experiment status.
 
 ## Filter
 * **Discriminator**: type

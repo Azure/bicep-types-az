@@ -4329,12 +4329,39 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/206"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deactivate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/206"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/206"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DaprSecretsCollection",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/273"
+          "$ref": "#/276"
         },
         "flags": 1,
         "description": "Collection of secrets for ListSecrets Action"
@@ -4364,7 +4391,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/272"
+      "$ref": "#/275"
     }
   },
   {
@@ -4373,7 +4400,7 @@
     "resourceType": "Microsoft.App/managedEnvironments/daprComponents",
     "apiVersion": "2022-03-01",
     "output": {
-      "$ref": "#/271"
+      "$ref": "#/274"
     }
   },
   {
@@ -4409,7 +4436,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/279"
+          "$ref": "#/282"
         },
         "flags": 0,
         "description": "The reason why the given name is not available."
@@ -4435,10 +4462,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/277"
+        "$ref": "#/280"
       },
       {
-        "$ref": "#/278"
+        "$ref": "#/281"
       },
       {
         "$ref": "#/0"
@@ -4451,10 +4478,10 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2022-03-01",
     "output": {
-      "$ref": "#/276"
+      "$ref": "#/279"
     },
     "input": {
-      "$ref": "#/275"
+      "$ref": "#/278"
     }
   }
 ]

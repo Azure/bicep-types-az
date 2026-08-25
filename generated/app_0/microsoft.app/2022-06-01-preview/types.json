@@ -6159,12 +6159,39 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-06-01-preview",
+    "output": {
+      "$ref": "#/226"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deactivate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-06-01-preview",
+    "output": {
+      "$ref": "#/226"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-06-01-preview",
+    "output": {
+      "$ref": "#/226"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DaprSecretsCollection",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/381"
+          "$ref": "#/384"
         },
         "flags": 1,
         "description": "Collection of secrets used by a Dapr component"
@@ -6194,7 +6221,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/380"
+      "$ref": "#/383"
     }
   },
   {
@@ -6203,7 +6230,7 @@
     "resourceType": "Microsoft.App/managedEnvironments/daprComponents",
     "apiVersion": "2022-06-01-preview",
     "output": {
-      "$ref": "#/379"
+      "$ref": "#/382"
     }
   },
   {
@@ -6212,14 +6239,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/384"
+          "$ref": "#/387"
         },
         "flags": 0,
         "description": "Environment auth token resource specific properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/385"
+          "$ref": "#/388"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -6295,7 +6322,7 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2022-06-01-preview",
     "output": {
-      "$ref": "#/383"
+      "$ref": "#/386"
     }
   },
   {
@@ -6331,7 +6358,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/391"
+          "$ref": "#/394"
         },
         "flags": 0,
         "description": "The reason why the given name is not available."
@@ -6357,10 +6384,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/389"
+        "$ref": "#/392"
       },
       {
-        "$ref": "#/390"
+        "$ref": "#/393"
       },
       {
         "$ref": "#/0"
@@ -6373,10 +6400,10 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2022-06-01-preview",
     "output": {
-      "$ref": "#/388"
+      "$ref": "#/391"
     },
     "input": {
-      "$ref": "#/387"
+      "$ref": "#/390"
     }
   },
   {
@@ -6385,10 +6412,10 @@
     "resourceType": "Microsoft.App/connectedEnvironments",
     "apiVersion": "2022-06-01-preview",
     "output": {
-      "$ref": "#/388"
+      "$ref": "#/391"
     },
     "input": {
-      "$ref": "#/387"
+      "$ref": "#/390"
     }
   },
   {
@@ -6397,7 +6424,7 @@
     "resourceType": "Microsoft.App/connectedEnvironments/daprComponents",
     "apiVersion": "2022-06-01-preview",
     "output": {
-      "$ref": "#/379"
+      "$ref": "#/382"
     }
   }
 ]

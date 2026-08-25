@@ -104,6 +104,44 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function backup (Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2016-06-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems
+* **ApiVersion**: 2016-06-01
+* **Input**: [BackupRequestResource](#backuprequestresource)
+* **Output**: any
+
+## Function backupJobsExport (Microsoft.RecoveryServices/vaults@2016-06-01)
+* **Resource**: Microsoft.RecoveryServices/vaults
+* **ApiVersion**: 2016-06-01
+* **Output**: any
+
+## Function cancel (Microsoft.RecoveryServices/vaults/backupJobs@2016-06-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/backupJobs
+* **ApiVersion**: 2016-06-01
+* **Output**: any
+
+## Function provisionInstantItemRecovery (Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints@2016-06-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints
+* **ApiVersion**: 2016-06-01
+* **Input**: [ILRRequestResource](#ilrrequestresource)
+* **Output**: any
+
+## Function refreshContainers (Microsoft.RecoveryServices/vaults/backupFabrics@2016-06-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/backupFabrics
+* **ApiVersion**: 2016-06-01
+* **Output**: any
+
+## Function restore (Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints@2016-06-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints
+* **ApiVersion**: 2016-06-01
+* **Input**: [RestoreRequestResource](#restorerequestresource)
+* **Output**: any
+
+## Function revokeInstantItemRecovery (Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints@2016-06-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints
+* **ApiVersion**: 2016-06-01
+* **Output**: any
+
 ## AzureIaaSVMErrorInfo
 ### Properties
 * **errorCode**: int: Error code.
@@ -144,6 +182,27 @@
 * **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
 * **policyState**: string: The state of the backup policy associated with this backup item.
 * **recoveryPointCount**: int: The number of available backup copies for this backup item.
+
+## BackupRequest
+* **Discriminator**: objectType
+
+### Base Properties
+
+### IaasVMBackupRequest
+#### Properties
+* **objectType**: 'IaasVMBackupRequest' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **recoveryPointExpiryTimeInUTC**: string: The backup copy will expire after the time specified. The time is in UTC format.
+
+
+## BackupRequestResource
+### Properties
+* **eTag**: string: Optional ETag.
+* **id**: string: Resource ID represents the complete path to the resource.
+* **location**: string: Resource location.
+* **name**: string: Resource name associated with the resource.
+* **properties**: [BackupRequest](#backuprequest): The base class for a backup request. Workload-specific backup requests are derived from this class.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string: Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
 
 ## BEKDetails
 ### Properties
@@ -188,6 +247,38 @@
 * **startTime**: string: The start time.
 * **status**: string: The status.
 * **taskId**: string: The task display name.
+
+## EncryptionDetails
+### Properties
+* **encryptionEnabled**: bool: Identifies whether the backup copy represents an encrypted VM at the time of backup.
+* **kekUrl**: string: URL of the Key Encryption Key (KEK).
+* **kekVaultId**: string: The ID of Key Vault where the Key Encryption Key (KEK) is stored.
+* **secretKeyUrl**: string: URL of the Bitlocker Encryption Key (BEK).
+* **secretKeyVaultId**: string: The ID of Key Vault where the Bitlocker Encryption Key (BEK), or Secret, is stored.
+
+## ILRRequest
+* **Discriminator**: objectType
+
+### Base Properties
+
+### IaasVmilrRegistrationRequest
+#### Properties
+* **initiatorName**: string: The iSCSI initiator name.
+* **objectType**: 'IaasVMILRRegistrationRequest' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **recoveryPointId**: string: The ID of the IaaS VM recovery point used to restore the files or folders.
+* **renewExistingRegistration**: bool: Whether to renew the existing registration with the iSCSI server.
+* **virtualMachineId**: string: The fully qualified Resource Manager ID of the VM used to restore the files or folders.
+
+
+## ILRRequestResource
+### Properties
+* **eTag**: string: Optional ETag.
+* **id**: string: Resource ID represents the complete path to the resource.
+* **location**: string: Resource location.
+* **name**: string: Resource name associated with the resource.
+* **properties**: [ILRRequest](#ilrrequest): Parameters to restore file or folders API.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string: Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
 
 ## Job
 * **Discriminator**: jobType
@@ -467,6 +558,57 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RestoreRequest
+* **Discriminator**: objectType
+
+### Base Properties
+
+### IaasVMRestoreRequest
+#### Properties
+* **affinityGroup**: string: The affinity group associated with the VM to be restored. Affinity groups are used only for Classic-deployed virtual machines.
+* **createNewCloudService**: bool: Asks the question if a new cloud service should be created while restoring the VM. If the answer is false, the VM is restored to the same cloud service.
+* **encryptionDetails**: [EncryptionDetails](#encryptiondetails): If the VM was encrypted at the time of backup, these details are needed.
+* **objectType**: 'IaasVMRestoreRequest' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
+* **recoveryPointId**: string: The ID of the backup copy to be recovered.
+* **recoveryType**: 'AlternateLocation' | 'Invalid' | 'OriginalLocation' | 'RestoreDisks': The type of this recovery.
+* **region**: string: The region where the virtual machine is restored.
+* **sourceResourceId**: string: The fully qualified Resource Manager ID of the VM being recovered.
+* **storageAccountId**: string: The fully qualified Resource Manager ID of the storage account where the VM will be restored.
+* **subnetId**: string: Subnet ID is the identifier for the VM to be restored. For Classic VMs the subnet ID would be {VnetID}/Subnet/{SubnetName}, and for the Resource Manager VMs, the subnet ID would be the Resource Manager resource ID used to represent the subnet.
+* **targetDomainNameId**: string: The fully qualified Resource Manager ID of the domain name to be associated with the VM being restored. Use the Resource Manager ID to identify the domain, only for Classic-deployed virtual machines.
+* **targetResourceGroupId**: string: The Resource Manager ID of the resource group you're creating for this VM and other artifacts.
+    For example: /subscriptions/{subId}/resourcegroups/{rg}
+* **targetVirtualMachineId**: string: The complete Resource Manager ID of the VM that will be created.
+            For example: /subscriptions/{subId}/resourcegroups/{rg}/provider/Microsoft.Compute/virtualmachines/{vm}
+* **virtualNetworkId**: string: This is the virtual network ID of the vnet that is attached to the virtual machine.
+            Your join action permissions are validated during the linked access.
+
+
+## RestoreRequestResource
+### Properties
+* **eTag**: string: Optional ETag.
+* **id**: string: Resource ID represents the complete path to the resource.
+* **location**: string: Resource location.
+* **name**: string: Resource name associated with the resource.
+* **properties**: [RestoreRequest](#restorerequest): The base class for restore requests. Workload-specific restore requests are derived from this class.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string: Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
 
 ## RetentionDuration
 ### Properties

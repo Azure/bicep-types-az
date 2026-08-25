@@ -57,6 +57,17 @@
 * **ApiVersion**: 2017-10-12
 * **Output**: [ResourceUsageListResult](#resourceusagelistresult)
 
+## Function disableCustomHttps (Microsoft.Cdn/profiles/endpoints/customDomains@2017-10-12)
+* **Resource**: Microsoft.Cdn/profiles/endpoints/customDomains
+* **ApiVersion**: 2017-10-12
+* **Output**: [CustomDomain](#customdomain)
+
+## Function enableCustomHttps (Microsoft.Cdn/profiles/endpoints/customDomains@2017-10-12)
+* **Resource**: Microsoft.Cdn/profiles/endpoints/customDomains
+* **ApiVersion**: 2017-10-12
+* **Input**: [CustomDomainHttpsParameters](#customdomainhttpsparameters)
+* **Output**: [CustomDomain](#customdomain)
+
 ## Function generateSsoUri (Microsoft.Cdn/profiles@2017-10-12)
 * **Resource**: Microsoft.Cdn/profiles
 * **ApiVersion**: 2017-10-12
@@ -66,6 +77,18 @@
 * **Resource**: Microsoft.Cdn/profiles
 * **ApiVersion**: 2017-10-12
 * **Output**: [SupportedOptimizationTypesListResult](#supportedoptimizationtypeslistresult)
+
+## Function load (Microsoft.Cdn/profiles/endpoints@2017-10-12)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2017-10-12
+* **Input**: [LoadParameters](#loadparameters)
+* **Output**: any
+
+## Function purge (Microsoft.Cdn/profiles/endpoints@2017-10-12)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2017-10-12
+* **Input**: [PurgeParameters](#purgeparameters)
+* **Output**: any
 
 ## Function start (Microsoft.Cdn/profiles/endpoints@2017-10-12)
 * **Resource**: Microsoft.Cdn/profiles/endpoints
@@ -89,6 +112,44 @@
 * **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' | string (Required): Caching behavior for the requests that include query strings.
 * **cacheDuration**: string: The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
 * **cacheType**: 'All' | string (Required): The level at which the content needs to be cached.
+
+## CdnCertificateSourceParameters
+### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.CdnCertificateSourceParameters' | string (Required)
+* **certificateType**: 'Dedicated' | 'Shared' | string (Required): Type of certificate used
+
+## CustomDomain
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [CustomDomainProperties](#customdomainproperties): The JSON object that contains the properties of the custom domain to create.
+* **type**: string (ReadOnly): Resource type.
+
+## CustomDomainHttpsParameters
+* **Discriminator**: certificateSource
+
+### Base Properties
+* **protocolType**: 'IPBased' | 'ServerNameIndication' | string (Required): Defines the TLS extension protocol that is used for secure delivery.
+
+### UserManagedHttpsParameters
+#### Properties
+* **certificateSource**: 'AzureKeyVault' (Required): Defines the source of the SSL certificate.
+* **certificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters) (Required): Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
+
+### CdnManagedHttpsParameters
+#### Properties
+* **certificateSource**: 'Cdn' (Required): Defines the source of the SSL certificate.
+* **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (Required): Defines the certificate source parameters using CDN managed certificate for enabling SSL.
+
+
+## CustomDomainProperties
+### Properties
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning status of Custom Https of the custom domain.
+* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' | string (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
+* **provisioningState**: string (ReadOnly): Provisioning status of the custom domain.
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the custom domain.
+* **validationData**: string: Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
 
 ## CustomDomainPropertiesParametersOrCustomDomainProperties
 ### Properties
@@ -181,6 +242,21 @@
 * **countryCodes**: string[] (Required): Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
 * **relativePath**: string (Required): Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
 
+## KeyVaultCertificateSourceParameters
+### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.KeyVaultCertificateSourceParameters' | string (Required)
+* **deleteRule**: 'NoAction' | string (Required): Describes the action that shall be taken when the certificate is removed from Key Vault.
+* **resourceGroupName**: string (Required): Resource group of the user's Key Vault containing the SSL certificate
+* **secretName**: string (Required): The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
+* **secretVersion**: string (Required): The version(GUID) of Key Vault Secret in Key Vault.
+* **subscriptionId**: string (Required): Subscription Id of the user's Key Vault containing the SSL certificate
+* **updateRule**: 'NoAction' | string (Required): Describes the action that shall be taken when the certificate is updated in Key Vault.
+* **vaultName**: string (Required): The name of the user's Key Vault containing the SSL certificate
+
+## LoadParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be loaded. Path should be a relative file URL of the origin.
+
 ## OriginProperties
 ### Properties
 * **hostName**: string (Required): The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.
@@ -193,6 +269,10 @@
 ### Properties
 * **provisioningState**: string (ReadOnly): Provisioning status of the profile.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | string (ReadOnly): Resource status of the profile.
+
+## PurgeParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be purged. Can describe a file path or a wild card directory.
 
 ## ResourceUsage
 ### Properties

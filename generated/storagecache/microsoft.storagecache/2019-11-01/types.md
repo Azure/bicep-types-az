@@ -38,6 +38,11 @@
 * **ApiVersion**: 2019-11-01
 * **Output**: any
 
+## Function upgrade (Microsoft.StorageCache/caches@2019-11-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2019-11-01
+* **Output**: any
+
 ## CacheHealth
 ### Properties
 * **state**: 'Degraded' | 'Down' | 'Flushing' | 'Healthy' | 'Stopped' | 'Stopping' | 'Transitioning' | 'Unknown' | 'Upgrading' | string: List of Cache health states.

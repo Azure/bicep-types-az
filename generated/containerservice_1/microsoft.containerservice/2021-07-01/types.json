@@ -4009,6 +4009,57 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "resetServicePrincipalProfile",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/258"
+    },
+    "input": {
+      "$ref": "#/84"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetAADProfile",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/258"
+    },
+    "input": {
+      "$ref": "#/140"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateClusterCertificates",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/258"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/258"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/258"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "RunCommandRequest",
     "properties": {
@@ -4048,7 +4099,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/269"
+          "$ref": "#/274"
         },
         "flags": 0,
         "description": "Properties of command result."
@@ -4109,10 +4160,10 @@
     "resourceType": "Microsoft.ContainerService/managedClusters",
     "apiVersion": "2021-07-01",
     "output": {
-      "$ref": "#/268"
+      "$ref": "#/273"
     },
     "input": {
-      "$ref": "#/267"
+      "$ref": "#/272"
     }
   },
   {
@@ -4125,6 +4176,49 @@
     },
     "input": {
       "$ref": "#/158"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentPool",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 0,
+        "description": "Properties of an agent pool."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeNodeImageVersion",
+    "resourceType": "Microsoft.ContainerService/managedClusters/agentPools",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/277"
     }
   }
 ]

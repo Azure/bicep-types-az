@@ -65,6 +65,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AzureStack/registrations/products' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function enableRemoteManagement (Microsoft.AzureStack/registrations@2020-06-01-preview)
+* **Resource**: Microsoft.AzureStack/registrations
+* **ApiVersion**: 2020-06-01-preview
+* **Output**: any
+
 ## Function getactivationkey (Microsoft.AzureStack/registrations@2020-06-01-preview)
 * **Resource**: Microsoft.AzureStack/registrations
 * **ApiVersion**: 2020-06-01-preview

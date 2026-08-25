@@ -60,6 +60,16 @@
 * **ApiVersion**: 2017-11-15-preview
 * **Output**: [DataMigrationServiceStatusResponse](#datamigrationservicestatusresponse)
 
+## Function start (Microsoft.DataMigration/services@2017-11-15-preview)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2017-11-15-preview
+* **Output**: any
+
+## Function stop (Microsoft.DataMigration/services@2017-11-15-preview)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2017-11-15-preview
+* **Output**: any
+
 ## ConnectionInfo
 * **Discriminator**: type
 

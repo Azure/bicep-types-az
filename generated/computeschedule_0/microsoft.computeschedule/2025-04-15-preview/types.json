@@ -2514,12 +2514,30 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.ComputeSchedule/scheduledActions",
+    "apiVersion": "2025-04-15-preview",
+    "output": {
+      "$ref": "#/127"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.ComputeSchedule/scheduledActions",
+    "apiVersion": "2025-04-15-preview",
+    "output": {
+      "$ref": "#/127"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ResourcePatchRequest",
     "properties": {
       "resources": {
         "type": {
-          "$ref": "#/194"
+          "$ref": "#/196"
         },
         "flags": 1,
         "description": "The list of resources we watch to patch"
@@ -2541,7 +2559,7 @@
       "$ref": "#/180"
     },
     "input": {
-      "$ref": "#/193"
+      "$ref": "#/195"
     }
   },
   {
@@ -2591,7 +2609,7 @@
     "resourceType": "Microsoft.ComputeSchedule/scheduledActions",
     "apiVersion": "2025-04-15-preview",
     "output": {
-      "$ref": "#/196"
+      "$ref": "#/198"
     }
   },
   {
@@ -2619,7 +2637,7 @@
       },
       "resourceIds": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/202"
         },
         "flags": 1,
         "description": "The resources that should be delayed. If empty, the delay will apply to the all resources in the occurrence."
@@ -2641,7 +2659,7 @@
       "$ref": "#/180"
     },
     "input": {
-      "$ref": "#/199"
+      "$ref": "#/201"
     }
   }
 ]

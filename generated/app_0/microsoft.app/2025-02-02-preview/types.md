@@ -450,6 +450,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.App/sessionPools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activate (Microsoft.App/containerApps/revisions@2025-02-02-preview)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2025-02-02-preview
+* **Output**: any
+
 ## Function apply (Microsoft.App/containerApps/patches@2025-02-02-preview)
 * **Resource**: Microsoft.App/containerApps/patches
 * **ApiVersion**: 2025-02-02-preview
@@ -466,6 +471,17 @@
 * **ApiVersion**: 2025-02-02-preview
 * **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
 * **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## Function deactivate (Microsoft.App/containerApps/revisions@2025-02-02-preview)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2025-02-02-preview
+* **Output**: any
+
+## Function deployWorkflowArtifacts (Microsoft.App/logicApps@2025-02-02-preview)
+* **Resource**: Microsoft.App/logicApps
+* **ApiVersion**: 2025-02-02-preview
+* **Input**: [WorkflowArtifacts](#workflowartifacts)
+* **Output**: any
 
 ## Function getAuthtoken (Microsoft.App/containerApps@2025-02-02-preview)
 * **Resource**: Microsoft.App/containerApps
@@ -517,10 +533,21 @@
 * **ApiVersion**: 2025-02-02-preview
 * **Output**: [WorkflowEnvelope](#workflowenvelope)
 
+## Function restart (Microsoft.App/containerApps/revisions@2025-02-02-preview)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2025-02-02-preview
+* **Output**: any
+
 ## Function resume (Microsoft.App/jobs@2025-02-02-preview)
 * **Resource**: Microsoft.App/jobs
 * **ApiVersion**: 2025-02-02-preview
 * **Output**: [Job](#job)
+
+## Function skipConfig (Microsoft.App/containerApps/patches@2025-02-02-preview)
+* **Resource**: Microsoft.App/containerApps/patches
+* **ApiVersion**: 2025-02-02-preview
+* **Input**: [PatchSkipConfig](#patchskipconfig)
+* **Output**: any
 
 ## Function start (Microsoft.App/containerApps@2025-02-02-preview)
 * **Resource**: Microsoft.App/containerApps
@@ -542,6 +569,11 @@
 * **Resource**: Microsoft.App/jobs
 * **ApiVersion**: 2025-02-02-preview
 * **Output**: [ContainerAppJobExecutions](#containerappjobexecutions)
+
+## Function stop (Microsoft.App/jobs/executions@2025-02-02-preview)
+* **Resource**: Microsoft.App/jobs/executions
+* **ApiVersion**: 2025-02-02-preview
+* **Output**: any
 
 ## Function suspend (Microsoft.App/jobs@2025-02-02-preview)
 * **Resource**: Microsoft.App/jobs
@@ -1939,6 +1971,10 @@ Note that URLs within the current domain are always implicitly allowed.
 * **targetEnvironmentId**: string: The Azure resource id of the target environment for the patch.
 * **targetRevisionId**: string: The Azure resource id of the target revision for the patch.
 
+## PatchSkipConfig
+### Properties
+* **skip**: bool: The flag to indicate whether to skip the patch or not.
+
 ## PreBuildStep
 ### Properties
 * **description**: string: Description of the pre-build step.
@@ -2424,6 +2460,12 @@ application used for sign-in.
 * **mountPath**: string: Path within the container at which the volume should be mounted.Must not contain ':'.
 * **subPath**: string: Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
 * **volumeName**: string: This must match the Name of a Volume.
+
+## WorkflowArtifacts
+### Properties
+* **appSettings**: any: Application settings of the workflow.
+* **files**: any: Files of the app.
+* **filesToDelete**: string[]: Files of the app to delete.
 
 ## WorkflowEnvelope
 ### Properties

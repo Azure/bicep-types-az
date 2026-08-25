@@ -5009,6 +5009,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "rotateVcenterPassword",
+    "resourceType": "Microsoft.AVS/privateClouds",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/344"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateNsxtPassword",
+    "resourceType": "Microsoft.AVS/privateClouds",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/344"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AdminCredentials",
     "properties": {
@@ -5048,7 +5066,7 @@
     "resourceType": "Microsoft.AVS/privateClouds",
     "apiVersion": "2022-05-01",
     "output": {
-      "$ref": "#/415"
+      "$ref": "#/417"
     }
   },
   {
@@ -5057,7 +5075,7 @@
     "properties": {
       "zones": {
         "type": {
-          "$ref": "#/420"
+          "$ref": "#/422"
         },
         "flags": 0,
         "description": "Zone and associated hosts info"
@@ -5070,7 +5088,7 @@
     "properties": {
       "hosts": {
         "type": {
-          "$ref": "#/419"
+          "$ref": "#/421"
         },
         "flags": 2,
         "description": "List of hosts belonging to the availability zone in a cluster"
@@ -5093,7 +5111,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/418"
+      "$ref": "#/420"
     }
   },
   {
@@ -5102,7 +5120,54 @@
     "resourceType": "Microsoft.AVS/privateClouds/clusters",
     "apiVersion": "2022-05-01",
     "output": {
-      "$ref": "#/417"
+      "$ref": "#/419"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineRestrictMovement",
+    "properties": {
+      "restrictMovement": {
+        "type": {
+          "$ref": "#/427"
+        },
+        "flags": 0,
+        "description": "Whether VM DRS-driven movement is restricted (enabled) or not (disabled)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/425"
+      },
+      {
+        "$ref": "#/426"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restrictMovement",
+    "resourceType": "Microsoft.AVS/privateClouds/clusters/virtualMachines",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/344"
+    },
+    "input": {
+      "$ref": "#/424"
     }
   },
   {
@@ -5125,16 +5190,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/422"
+        "$ref": "#/429"
       },
       {
-        "$ref": "#/423"
+        "$ref": "#/430"
       },
       {
-        "$ref": "#/424"
+        "$ref": "#/431"
       },
       {
-        "$ref": "#/425"
+        "$ref": "#/432"
       },
       {
         "$ref": "#/0"
@@ -5144,7 +5209,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/426"
+      "$ref": "#/433"
     }
   },
   {
@@ -5187,10 +5252,10 @@
     "resourceType": "Microsoft.AVS/privateClouds/scriptExecutions",
     "apiVersion": "2022-05-01",
     "output": {
-      "$ref": "#/428"
+      "$ref": "#/435"
     },
     "input": {
-      "$ref": "#/427"
+      "$ref": "#/434"
     }
   }
 ]

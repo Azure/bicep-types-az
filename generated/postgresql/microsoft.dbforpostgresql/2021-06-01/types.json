@@ -1174,6 +1174,39 @@
     ]
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/92"
+    },
+    "input": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/92"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "VirtualNetworkSubnetUsageParameter",
     "properties": {
@@ -1206,7 +1239,7 @@
       },
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/99"
         },
         "flags": 2
       }
@@ -1235,7 +1268,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/94"
+      "$ref": "#/98"
     }
   },
   {
@@ -1244,10 +1277,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2021-06-01",
     "output": {
-      "$ref": "#/93"
+      "$ref": "#/97"
     },
     "input": {
-      "$ref": "#/92"
+      "$ref": "#/96"
     }
   }
 ]

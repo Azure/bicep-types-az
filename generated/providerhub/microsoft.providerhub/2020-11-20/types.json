@@ -4677,18 +4677,27 @@
     "writableScopes": 4
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ProviderHub/providerRegistrations/defaultRollouts",
+    "apiVersion": "2020-11-20",
+    "output": {
+      "$ref": "#/103"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ResourceProviderManifest",
     "properties": {
       "providerAuthentication": {
         "type": {
-          "$ref": "#/445"
+          "$ref": "#/446"
         },
         "flags": 0
       },
       "providerAuthorizations": {
         "type": {
-          "$ref": "#/447"
+          "$ref": "#/448"
         },
         "flags": 0
       },
@@ -4706,43 +4715,43 @@
       },
       "providerType": {
         "type": {
-          "$ref": "#/456"
+          "$ref": "#/457"
         },
         "flags": 0
       },
       "requiredFeatures": {
         "type": {
-          "$ref": "#/457"
+          "$ref": "#/458"
         },
         "flags": 0
       },
       "featuresRule": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/459"
         },
         "flags": 0
       },
       "requestHeaderOptions": {
         "type": {
-          "$ref": "#/462"
+          "$ref": "#/463"
         },
         "flags": 0
       },
       "resourceTypes": {
         "type": {
-          "$ref": "#/551"
+          "$ref": "#/552"
         },
         "flags": 0
       },
       "management": {
         "type": {
-          "$ref": "#/552"
+          "$ref": "#/553"
         },
         "flags": 0
       },
       "capabilities": {
         "type": {
-          "$ref": "#/561"
+          "$ref": "#/562"
         },
         "flags": 0
       },
@@ -4755,13 +4764,13 @@
       },
       "globalNotificationEndpoints": {
         "type": {
-          "$ref": "#/562"
+          "$ref": "#/563"
         },
         "flags": 0
       },
       "reRegisterSubscriptionMetadata": {
         "type": {
-          "$ref": "#/563"
+          "$ref": "#/564"
         },
         "flags": 0
       }
@@ -4773,7 +4782,7 @@
     "properties": {
       "allowedAudiences": {
         "type": {
-          "$ref": "#/446"
+          "$ref": "#/447"
         },
         "flags": 1
       }
@@ -4827,9 +4836,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/448"
-      },
-      {
         "$ref": "#/449"
       },
       {
@@ -4851,6 +4857,9 @@
         "$ref": "#/455"
       },
       {
+        "$ref": "#/456"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -4867,7 +4876,7 @@
     "properties": {
       "requiredFeaturesPolicy": {
         "type": {
-          "$ref": "#/461"
+          "$ref": "#/462"
         },
         "flags": 1
       }
@@ -4885,10 +4894,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/459"
+        "$ref": "#/460"
       },
       {
-        "$ref": "#/460"
+        "$ref": "#/461"
       },
       {
         "$ref": "#/0"
@@ -4901,7 +4910,7 @@
     "properties": {
       "optInHeaders": {
         "type": {
-          "$ref": "#/468"
+          "$ref": "#/469"
         },
         "flags": 0
       }
@@ -4931,9 +4940,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/463"
-      },
-      {
         "$ref": "#/464"
       },
       {
@@ -4944,6 +4950,9 @@
       },
       {
         "$ref": "#/467"
+      },
+      {
+        "$ref": "#/468"
       },
       {
         "$ref": "#/0"
@@ -4962,31 +4971,31 @@
       },
       "routingType": {
         "type": {
-          "$ref": "#/479"
+          "$ref": "#/480"
         },
         "flags": 0
       },
       "resourceValidation": {
         "type": {
-          "$ref": "#/483"
+          "$ref": "#/484"
         },
         "flags": 0
       },
       "allowedUnauthorizedActions": {
         "type": {
-          "$ref": "#/484"
+          "$ref": "#/485"
         },
         "flags": 0
       },
       "authorizationActionMappings": {
         "type": {
-          "$ref": "#/485"
+          "$ref": "#/486"
         },
         "flags": 0
       },
       "linkedAccessChecks": {
         "type": {
-          "$ref": "#/486"
+          "$ref": "#/487"
         },
         "flags": 0
       },
@@ -4998,31 +5007,31 @@
       },
       "loggingRules": {
         "type": {
-          "$ref": "#/487"
+          "$ref": "#/488"
         },
         "flags": 0
       },
       "throttlingRules": {
         "type": {
-          "$ref": "#/488"
+          "$ref": "#/489"
         },
         "flags": 0
       },
       "endpoints": {
         "type": {
-          "$ref": "#/497"
+          "$ref": "#/498"
         },
         "flags": 0
       },
       "marketplaceType": {
         "type": {
-          "$ref": "#/502"
+          "$ref": "#/503"
         },
         "flags": 0
       },
       "identityManagement": {
         "type": {
-          "$ref": "#/503"
+          "$ref": "#/504"
         },
         "flags": 0
       },
@@ -5035,31 +5044,31 @@
       },
       "requiredFeatures": {
         "type": {
-          "$ref": "#/510"
+          "$ref": "#/511"
         },
         "flags": 0
       },
       "featuresRule": {
         "type": {
-          "$ref": "#/511"
+          "$ref": "#/512"
         },
         "flags": 0
       },
       "subscriptionStateRules": {
         "type": {
-          "$ref": "#/515"
+          "$ref": "#/516"
         },
         "flags": 0
       },
       "serviceTreeInfos": {
         "type": {
-          "$ref": "#/516"
+          "$ref": "#/517"
         },
         "flags": 0
       },
       "requestHeaderOptions": {
         "type": {
-          "$ref": "#/517"
+          "$ref": "#/518"
         },
         "flags": 0
       },
@@ -5071,31 +5080,31 @@
       },
       "disallowedActionVerbs": {
         "type": {
-          "$ref": "#/524"
+          "$ref": "#/525"
         },
         "flags": 0
       },
       "templateDeploymentPolicy": {
         "type": {
-          "$ref": "#/525"
+          "$ref": "#/526"
         },
         "flags": 0
       },
       "extendedLocations": {
         "type": {
-          "$ref": "#/535"
+          "$ref": "#/536"
         },
         "flags": 0
       },
       "linkedOperationRules": {
         "type": {
-          "$ref": "#/546"
+          "$ref": "#/547"
         },
         "flags": 0
       },
       "resourceDeletionPolicy": {
         "type": {
-          "$ref": "#/550"
+          "$ref": "#/551"
         },
         "flags": 0
       }
@@ -5141,9 +5150,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/470"
-      },
-      {
         "$ref": "#/471"
       },
       {
@@ -5168,6 +5174,9 @@
         "$ref": "#/478"
       },
       {
+        "$ref": "#/479"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -5188,13 +5197,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/480"
-      },
-      {
         "$ref": "#/481"
       },
       {
         "$ref": "#/482"
+      },
+      {
+        "$ref": "#/483"
       },
       {
         "$ref": "#/0"
@@ -5243,7 +5252,7 @@
       },
       "apiVersions": {
         "type": {
-          "$ref": "#/490"
+          "$ref": "#/491"
         },
         "flags": 0
       },
@@ -5255,19 +5264,19 @@
       },
       "locations": {
         "type": {
-          "$ref": "#/491"
+          "$ref": "#/492"
         },
         "flags": 0
       },
       "requiredFeatures": {
         "type": {
-          "$ref": "#/492"
+          "$ref": "#/493"
         },
         "flags": 0
       },
       "featuresRule": {
         "type": {
-          "$ref": "#/493"
+          "$ref": "#/494"
         },
         "flags": 0
       },
@@ -5303,7 +5312,7 @@
     "properties": {
       "requiredFeaturesPolicy": {
         "type": {
-          "$ref": "#/496"
+          "$ref": "#/497"
         },
         "flags": 1
       }
@@ -5321,10 +5330,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/494"
+        "$ref": "#/495"
       },
       {
-        "$ref": "#/495"
+        "$ref": "#/496"
       },
       {
         "$ref": "#/0"
@@ -5334,7 +5343,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/489"
+      "$ref": "#/490"
     }
   },
   {
@@ -5357,9 +5366,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/498"
-      },
-      {
         "$ref": "#/499"
       },
       {
@@ -5367,6 +5373,9 @@
       },
       {
         "$ref": "#/501"
+      },
+      {
+        "$ref": "#/502"
       }
     ]
   },
@@ -5376,7 +5385,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/509"
+          "$ref": "#/510"
         },
         "flags": 0
       }
@@ -5406,9 +5415,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/504"
-      },
-      {
         "$ref": "#/505"
       },
       {
@@ -5419,6 +5425,9 @@
       },
       {
         "$ref": "#/508"
+      },
+      {
+        "$ref": "#/509"
       },
       {
         "$ref": "#/0"
@@ -5437,7 +5446,7 @@
     "properties": {
       "requiredFeaturesPolicy": {
         "type": {
-          "$ref": "#/514"
+          "$ref": "#/515"
         },
         "flags": 1
       }
@@ -5455,10 +5464,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/512"
+        "$ref": "#/513"
       },
       {
-        "$ref": "#/513"
+        "$ref": "#/514"
       },
       {
         "$ref": "#/0"
@@ -5483,7 +5492,7 @@
     "properties": {
       "optInHeaders": {
         "type": {
-          "$ref": "#/523"
+          "$ref": "#/524"
         },
         "flags": 0
       }
@@ -5513,9 +5522,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/518"
-      },
-      {
         "$ref": "#/519"
       },
       {
@@ -5526,6 +5532,9 @@
       },
       {
         "$ref": "#/522"
+      },
+      {
+        "$ref": "#/523"
       },
       {
         "$ref": "#/0"
@@ -5544,13 +5553,13 @@
     "properties": {
       "capabilities": {
         "type": {
-          "$ref": "#/528"
+          "$ref": "#/529"
         },
         "flags": 1
       },
       "preflightOptions": {
         "type": {
-          "$ref": "#/534"
+          "$ref": "#/535"
         },
         "flags": 1
       }
@@ -5568,10 +5577,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/526"
+        "$ref": "#/527"
       },
       {
-        "$ref": "#/527"
+        "$ref": "#/528"
       },
       {
         "$ref": "#/0"
@@ -5602,9 +5611,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/529"
-      },
-      {
         "$ref": "#/530"
       },
       {
@@ -5615,6 +5621,9 @@
       },
       {
         "$ref": "#/533"
+      },
+      {
+        "$ref": "#/534"
       },
       {
         "$ref": "#/0"
@@ -5633,13 +5642,13 @@
     "properties": {
       "linkedOperation": {
         "type": {
-          "$ref": "#/540"
+          "$ref": "#/541"
         },
         "flags": 1
       },
       "linkedAction": {
         "type": {
-          "$ref": "#/545"
+          "$ref": "#/546"
         },
         "flags": 1
       }
@@ -5661,13 +5670,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/537"
-      },
-      {
         "$ref": "#/538"
       },
       {
         "$ref": "#/539"
+      },
+      {
+        "$ref": "#/540"
       },
       {
         "$ref": "#/0"
@@ -5694,9 +5703,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/541"
-      },
-      {
         "$ref": "#/542"
       },
       {
@@ -5706,6 +5712,9 @@
         "$ref": "#/544"
       },
       {
+        "$ref": "#/545"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -5713,7 +5722,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/536"
+      "$ref": "#/537"
     }
   },
   {
@@ -5732,13 +5741,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/547"
-      },
-      {
         "$ref": "#/548"
       },
       {
         "$ref": "#/549"
+      },
+      {
+        "$ref": "#/550"
       },
       {
         "$ref": "#/0"
@@ -5748,7 +5757,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/469"
+      "$ref": "#/470"
     }
   },
   {
@@ -5757,13 +5766,13 @@
     "properties": {
       "schemaOwners": {
         "type": {
-          "$ref": "#/553"
+          "$ref": "#/554"
         },
         "flags": 0
       },
       "manifestOwners": {
         "type": {
-          "$ref": "#/554"
+          "$ref": "#/555"
         },
         "flags": 0
       },
@@ -5787,19 +5796,19 @@
       },
       "serviceTreeInfos": {
         "type": {
-          "$ref": "#/555"
+          "$ref": "#/556"
         },
         "flags": 0
       },
       "resourceAccessPolicy": {
         "type": {
-          "$ref": "#/559"
+          "$ref": "#/560"
         },
         "flags": 0
       },
       "resourceAccessRoles": {
         "type": {
-          "$ref": "#/560"
+          "$ref": "#/561"
         },
         "flags": 0
       }
@@ -5839,13 +5848,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/556"
-      },
-      {
         "$ref": "#/557"
       },
       {
         "$ref": "#/558"
+      },
+      {
+        "$ref": "#/559"
       }
     ]
   },
@@ -5864,7 +5873,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/489"
+      "$ref": "#/490"
     }
   },
   {
@@ -5891,7 +5900,7 @@
     "resourceType": "Microsoft.ProviderHub/providerRegistrations",
     "apiVersion": "2020-11-20",
     "output": {
-      "$ref": "#/444"
+      "$ref": "#/445"
     }
   },
   {
@@ -5950,10 +5959,10 @@
     "resourceType": "Microsoft.ProviderHub/providerRegistrations",
     "apiVersion": "2020-11-20",
     "output": {
-      "$ref": "#/566"
+      "$ref": "#/567"
     },
     "input": {
-      "$ref": "#/565"
+      "$ref": "#/566"
     }
   },
   {
@@ -5968,7 +5977,7 @@
     "resourceType": "Microsoft.ProviderHub/providerRegistrations",
     "apiVersion": "2020-11-20",
     "output": {
-      "$ref": "#/568"
+      "$ref": "#/569"
     }
   }
 ]

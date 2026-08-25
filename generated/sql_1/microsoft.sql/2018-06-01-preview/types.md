@@ -205,6 +205,32 @@
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function completeRestore (Microsoft.Sql/managedInstances/databases@2018-06-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/databases
+* **ApiVersion**: 2018-06-01-preview
+* **Input**: [CompleteDatabaseRestoreDefinition](#completedatabaserestoredefinition)
+* **Output**: any
+
+## Function disable (Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels@2018-06-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: any
+
+## Function enable (Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels@2018-06-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: any
+
+## Function failover (Microsoft.Sql/servers/elasticPools@2018-06-01-preview)
+* **Resource**: Microsoft.Sql/servers/elasticPools
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: any
+
+## Function failover (Microsoft.Sql/servers/databases@2018-06-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: any
+
 ## AdministratorProperties
 ### Properties
 * **administratorType**: 'ActiveDirectory' | string (Required): Type of the sever administrator.
@@ -218,6 +244,10 @@
 * **weeklyRetention**: string: The weekly retention policy for an LTR backup in an ISO 8601 format.
 * **weekOfYear**: int: The week of year to take the yearly backup in an ISO 8601 format.
 * **yearlyRetention**: string: The yearly retention policy for an LTR backup in an ISO 8601 format.
+
+## CompleteDatabaseRestoreDefinition
+### Properties
+* **lastBackupName**: string (Required): The last backup name to apply
 
 ## DatabaseColumnProperties
 ### Properties

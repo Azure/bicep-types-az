@@ -123,6 +123,11 @@
 * **ApiVersion**: 2025-03-01
 * **Output**: [OperationStatus](#operationstatus)
 
+## Function execute (Microsoft.CostManagement/scheduledActions@2025-03-01)
+* **Resource**: Microsoft.CostManagement/scheduledActions
+* **ApiVersion**: 2025-03-01
+* **Output**: any
+
 ## Function forecast (Microsoft.CostManagement/externalSubscriptions@2025-03-01)
 * **Resource**: Microsoft.CostManagement/externalSubscriptions
 * **ApiVersion**: 2025-03-01
@@ -146,6 +151,12 @@
 * **ApiVersion**: 2025-03-01
 * **Input**: [QueryDefinition](#querydefinition)
 * **Output**: [QueryResult](#queryresult)
+
+## Function run (Microsoft.CostManagement/exports@2025-03-01)
+* **Resource**: Microsoft.CostManagement/exports
+* **ApiVersion**: 2025-03-01
+* **Input**: [ExportRunRequest](#exportrunrequest)
+* **Output**: any
 
 ## AlertProperties
 ### Properties
@@ -429,6 +440,10 @@ Required for CategoryType(s): Cost, ReservationUtilization.
 * **status**: 'Completed' | 'DataNotAvailable' | 'Failed' | 'InProgress' | 'NewDataNotAvailable' | 'Queued' | 'Timeout' | string: The last known status of the export run.
 * **submittedBy**: string: The identifier for the entity that triggered the export. For on-demand runs it is the user email. For scheduled runs it is 'System'.
 * **submittedTime**: string: The time when export was queued to be run.
+
+## ExportRunRequest
+### Properties
+* **timePeriod**: [ExportTimePeriod](#exporttimeperiod): Has time period for pulling data for the export.
 
 ## ExportSchedule
 ### Properties

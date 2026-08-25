@@ -172,6 +172,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridNetwork/sites' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function executeRequest (Microsoft.HybridNetwork/networkFunctions@2023-09-01)
+* **Resource**: Microsoft.HybridNetwork/networkFunctions
+* **ApiVersion**: 2023-09-01
+* **Input**: [ExecuteRequestParameters](#executerequestparameters)
+* **Output**: any
+
 ## Function listCredential (Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests@2023-09-01)
 * **Resource**: Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests
 * **ApiVersion**: 2023-09-01
@@ -469,6 +475,11 @@
 * **resources**: [Resources](#resources): The resource related to the component resource.
 * **status**: 'Deployed' | 'Downloading' | 'Failed' | 'Installing' | 'Pending-Install' | 'Pending-Rollback' | 'Pending-Upgrade' | 'Reinstalling' | 'Rollingback' | 'Superseded' | 'Uninstalled' | 'Uninstalling' | 'Unknown' | 'Upgrading' | string: The status of the component resource.
 
+## ExecuteRequestParameters
+### Properties
+* **requestMetadata**: [RequestMetadata](#requestmetadata) (Required): The request metadata.
+* **serviceEndpoint**: string (Required): The endpoint of service to call.
+
 ## HelmArtifactProfile
 ### Properties
 * **helmPackageName**: string: Helm package name.
@@ -679,6 +690,13 @@
 * **name**: string: The name of the replicaSet.
 * **namespace**: string: The namespace of the replicaSet.
 * **ready**: int: Number of ready pods.
+
+## RequestMetadata
+### Properties
+* **apiVersion**: string: The api version of the request.
+* **httpMethod**: 'Delete' | 'Get' | 'Patch' | 'Post' | 'Put' | 'Unknown' | string (Required): The http method of the request.
+* **relativePath**: string (Required): The relative path of the request.
+* **serializedBody**: string (Required): The serialized body of the request.
 
 ## ResourceElementTemplate
 * **Discriminator**: type

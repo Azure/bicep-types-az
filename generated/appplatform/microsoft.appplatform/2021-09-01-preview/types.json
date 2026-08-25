@@ -2662,11 +2662,38 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "disableTestEndpoint",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/100"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "enableTestEndpoint",
     "resourceType": "Microsoft.AppPlatform/Spring",
     "apiVersion": "2021-09-01-preview",
     "output": {
       "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/100"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/100"
     }
   },
   {
@@ -2722,10 +2749,10 @@
     "resourceType": "Microsoft.AppPlatform/locations",
     "apiVersion": "2021-09-01-preview",
     "output": {
-      "$ref": "#/184"
+      "$ref": "#/187"
     },
     "input": {
-      "$ref": "#/183"
+      "$ref": "#/186"
     }
   },
   {
@@ -2754,7 +2781,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps",
     "apiVersion": "2021-09-01-preview",
     "output": {
-      "$ref": "#/186"
+      "$ref": "#/189"
     }
   },
   {
@@ -2796,10 +2823,37 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps",
     "apiVersion": "2021-09-01-preview",
     "output": {
-      "$ref": "#/189"
+      "$ref": "#/192"
     },
     "input": {
-      "$ref": "#/188"
+      "$ref": "#/191"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/100"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/100"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/100"
     }
   },
   {
@@ -2821,7 +2875,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
     "apiVersion": "2021-09-01-preview",
     "output": {
-      "$ref": "#/191"
+      "$ref": "#/197"
     }
   },
   {
@@ -2849,6 +2903,42 @@
         "flags": 0,
         "description": "Duration of your JFR. 1 min can be represented by 1m or 60s."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateHeapDump",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/100"
+    },
+    "input": {
+      "$ref": "#/199"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateThreadDump",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/100"
+    },
+    "input": {
+      "$ref": "#/199"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "StartJFR",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/100"
+    },
+    "input": {
+      "$ref": "#/199"
     }
   }
 ]

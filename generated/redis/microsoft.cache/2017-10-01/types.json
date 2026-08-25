@@ -876,6 +876,21 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Cache/Redis",
+    "apiVersion": "2017-10-01",
+    "output": {
+      "$ref": "#/72"
+    },
+    "input": {
+      "$ref": "#/70"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExportRDBParameters",
     "properties": {
@@ -900,6 +915,18 @@
         "flags": 1,
         "description": "Container name to export to."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Cache/Redis",
+    "apiVersion": "2017-10-01",
+    "output": {
+      "$ref": "#/72"
+    },
+    "input": {
+      "$ref": "#/74"
     }
   }
 ]

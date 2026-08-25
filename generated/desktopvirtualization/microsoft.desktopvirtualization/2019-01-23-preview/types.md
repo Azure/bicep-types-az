@@ -76,6 +76,17 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disconnect (Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2019-01-23-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions
+* **ApiVersion**: 2019-01-23-preview
+* **Output**: any
+
+## Function sendMessage (Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2019-01-23-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions
+* **ApiVersion**: 2019-01-23-preview
+* **Input**: [SendMessage](#sendmessage)
+* **Output**: any
+
 ## ApplicationGroupProperties
 ### Properties
 * **applicationGroupType**: 'Desktop' | 'RemoteApp' | string (Required): Resource Type of ApplicationGroup.
@@ -126,6 +137,11 @@
 * **expirationTime**: string: Expiration time of registration token.
 * **resetToken**: bool: Update registration token.
 * **token**: string: The registration token base64 encoded string.
+
+## SendMessage
+### Properties
+* **messageBody**: string: Body of message.
+* **messageTitle**: string: Title of message.
 
 ## SessionHostProperties
 ### Properties

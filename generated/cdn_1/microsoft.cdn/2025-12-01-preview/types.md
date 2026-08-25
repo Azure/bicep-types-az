@@ -51,6 +51,11 @@
 * **ApiVersion**: 2025-12-01-preview
 * **Output**: [VersionCode](#versioncode)
 
+## Function swapDefault (Microsoft.Cdn/edgeActions/versions@2025-12-01-preview)
+* **Resource**: Microsoft.Cdn/edgeActions/versions
+* **ApiVersion**: 2025-12-01-preview
+* **Output**: any
+
 ## EdgeActionAttachment
 ### Properties
 * **attachedResourceId**: string (Required): The attached resource Id

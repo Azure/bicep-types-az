@@ -2680,12 +2680,36 @@
     ]
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.ServiceBus/namespaces",
+    "apiVersion": "2018-01-01-preview",
+    "output": {
+      "$ref": "#/188"
+    },
+    "input": {
+      "$ref": "#/181"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "breakPairing",
+    "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
+    "apiVersion": "2018-01-01-preview",
+    "output": {
+      "$ref": "#/188"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "FailoverProperties",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/189"
+          "$ref": "#/192"
         },
         "flags": 0,
         "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
@@ -2703,6 +2727,18 @@
         "flags": 0,
         "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
+    "apiVersion": "2018-01-01-preview",
+    "output": {
+      "$ref": "#/188"
+    },
+    "input": {
+      "$ref": "#/191"
     }
   },
   {
@@ -2754,6 +2790,24 @@
     },
     "input": {
       "$ref": "#/176"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
+    "apiVersion": "2018-01-01-preview",
+    "output": {
+      "$ref": "#/188"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revert",
+    "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
+    "apiVersion": "2018-01-01-preview",
+    "output": {
+      "$ref": "#/188"
     }
   }
 ]

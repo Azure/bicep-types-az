@@ -27,10 +27,28 @@
 * **Input**: [ShipmentPickUpRequest](#shipmentpickuprequest)
 * **Output**: [ShipmentPickUpResponse](#shipmentpickupresponse)
 
+## Function cancel (Microsoft.DataBox/jobs@2021-08-01-preview)
+* **Resource**: Microsoft.DataBox/jobs
+* **ApiVersion**: 2021-08-01-preview
+* **Input**: [CancellationReason](#cancellationreason)
+* **Output**: any
+
 ## Function listCredentials (Microsoft.DataBox/jobs@2021-08-01-preview)
 * **Resource**: Microsoft.DataBox/jobs
 * **ApiVersion**: 2021-08-01-preview
 * **Output**: [UnencryptedCredentialsList](#unencryptedcredentialslist)
+
+## Function markDevicesShipped (Microsoft.DataBox/jobs@2021-08-01-preview)
+* **Resource**: Microsoft.DataBox/jobs
+* **ApiVersion**: 2021-08-01-preview
+* **Input**: [MarkDevicesShippedRequest](#markdevicesshippedrequest)
+* **Output**: any
+
+## Function mitigate (Microsoft.DataBox/jobs@2021-08-01-preview)
+* **Resource**: Microsoft.DataBox/jobs
+* **ApiVersion**: 2021-08-01-preview
+* **Input**: [MitigateJobRequest](#mitigatejobrequest)
+* **Output**: any
 
 ## Function regionConfiguration (Microsoft.DataBox/locations@2021-08-01-preview)
 * **Resource**: Microsoft.DataBox/locations
@@ -101,6 +119,10 @@
 * **blobPathList**: string[]: List of full path of the blobs to be transferred.
 * **blobPrefixList**: string[]: Prefix list of the Azure blobs to be transferred.
 * **containerList**: string[]: List of blob containers to be transferred.
+
+## CancellationReason
+### Properties
+* **reason**: string (Required): Reason for cancellation.
 
 ## CloudError
 ### Properties
@@ -467,6 +489,14 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **customerResolution**: 'MoveToCleanUpDevice' | 'None' | 'Resume': Resolution code provided by customer
 * **isPerformedByCustomer**: bool: Action performed by customer,
 possibility is that mitigation might happen by customer or service or by ops
+
+## MarkDevicesShippedRequest
+### Properties
+* **deliverToDcPackageDetails**: [PackageCarrierInfo](#packagecarrierinfo) (Required): Delivery package details
+
+## MitigateJobRequest
+### Properties
+* **customerResolutionCode**: 'MoveToCleanUpDevice' | 'None' | 'Resume' (Required): Resolution code for the job
 
 ## NotificationPreference
 ### Properties

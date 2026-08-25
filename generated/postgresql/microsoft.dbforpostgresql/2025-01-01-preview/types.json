@@ -4754,12 +4754,45 @@
     ]
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/400"
+    },
+    "input": {
+      "$ref": "#/394"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/400"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/400"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "LtrPreBackupRequest",
     "properties": {
       "backupSettings": {
         "type": {
-          "$ref": "#/401"
+          "$ref": "#/405"
         },
         "flags": 1,
         "description": "Backup Settings"
@@ -4785,7 +4818,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/403"
+          "$ref": "#/407"
         },
         "flags": 1,
         "description": "Additional Properties for the pre backup response"
@@ -4811,10 +4844,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/402"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/400"
+      "$ref": "#/404"
     }
   },
   {
@@ -4823,14 +4856,14 @@
     "properties": {
       "targetDetails": {
         "type": {
-          "$ref": "#/406"
+          "$ref": "#/410"
         },
         "flags": 1,
         "description": "Backup store detail for target server"
       },
       "backupSettings": {
         "type": {
-          "$ref": "#/401"
+          "$ref": "#/405"
         },
         "flags": 1,
         "description": "Backup Settings"
@@ -4843,7 +4876,7 @@
     "properties": {
       "sasUriList": {
         "type": {
-          "$ref": "#/407"
+          "$ref": "#/411"
         },
         "flags": 1,
         "description": "List of SAS uri of storage containers where backup data is to be streamed/copied."
@@ -4875,10 +4908,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/408"
+      "$ref": "#/412"
     },
     "input": {
-      "$ref": "#/405"
+      "$ref": "#/409"
     }
   },
   {
@@ -4908,7 +4941,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/413"
+          "$ref": "#/417"
         },
         "flags": 2,
         "description": "Migration name availability reason."
@@ -4934,10 +4967,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/411"
+        "$ref": "#/415"
       },
       {
-        "$ref": "#/412"
+        "$ref": "#/416"
       },
       {
         "$ref": "#/0"
@@ -4950,10 +4983,83 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/410"
+      "$ref": "#/414"
     },
     "input": {
-      "$ref": "#/410"
+      "$ref": "#/414"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/400"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/400"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigTuningRequestParameter",
+    "properties": {
+      "serverName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of server."
+      },
+      "allowServerRestarts": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Indicates whether PG should be restarted during a tuning session."
+      },
+      "targetImprovementMetric": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target metric the tuning session is trying to improve."
+      },
+      "configTuningUsageMode": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "The mode with which the feature will be enabled."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startSession",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/400"
+    },
+    "input": {
+      "$ref": "#/421"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopSession",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/400"
     }
   }
 ]

@@ -25,9 +25,9 @@ warning | Modeler/MissingType | The schema 'components·fo83vm·schemas·redisco
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/Redis/preview/2025-08-01-preview/redis.json#/components/schemas/components·fo83vm·schemas·rediscommonpropertiesredisconfiguration·additionalproperties
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/checkNameAvailability': Unable to find type segments
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export': failed to find a response schema
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export' has no response schema. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -43,9 +43,9 @@ warning | Modeler/MissingType | The schema 'components·fo83vm·schemas·redisco
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/Redis/stable/2024-11-01/redis.json#/components/schemas/components·fo83vm·schemas·rediscommonpropertiesredisconfiguration·additionalproperties
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/checkNameAvailability': Unable to find type segments
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export': failed to find a response schema
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export' has no response schema. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -131,8 +131,8 @@ warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operati
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/Redis/preview/2024-04-01-preview/redis.json#/components/schemas/components·pgz285·schemas·operationstatus·properties·properties·additionalproperties
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export' has no response schema. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -219,8 +219,8 @@ warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operati
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/Redis/stable/2024-03-01/redis.json#/components/schemas/components·pgz285·schemas·operationstatus·properties·properties·additionalproperties
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export' has no response schema. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -307,8 +307,8 @@ warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operati
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/Redis/stable/2023-08-01/redis.json#/components/schemas/components·pgz285·schemas·operationstatus·properties·properties·additionalproperties
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export' has no response schema. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -398,8 +398,8 @@ warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operati
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -488,8 +488,8 @@ warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operati
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -578,8 +578,8 @@ warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operati
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -668,8 +668,8 @@ warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operati
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -758,8 +758,8 @@ warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operati
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -841,8 +841,8 @@ warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' wit
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -936,8 +936,8 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (4 differ
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/export' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1025,8 +1025,8 @@ warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' wit
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/export' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1112,8 +1112,8 @@ warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' wit
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/export' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1199,8 +1199,8 @@ warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' wit
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping Redis_ListUpgradeNotifications due to required query parameter "history"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cache/CheckNameAvailability': Unable to find type segments
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/export' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1276,8 +1276,8 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/Redis/stable/2017-02-01/redis.json:1854:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/export' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1335,8 +1335,8 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/Redis/stable/2016-04-01/redis.json:1504:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/import': failed to find a response schema
-warning | Skipping resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/export': failed to find a response schema
+warning | Resource action import under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/import' has no response schema. Returning 'any'.
+warning | Resource action export under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/export' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1372,4 +1372,4 @@ warning | PreCheck/SchemaMissingType | The schema 'RedisRegenerateKeyParameters'
 warning | PreCheck/SchemaMissingType | The schema 'RedisRebootParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/Redis/stable/2015-08-01/redis.json:648:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource action forceReboot under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/forceReboot': failed to find a response schema
+warning | Resource action forceReboot under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/forceReboot' has no response schema. Returning 'any'.

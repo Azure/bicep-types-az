@@ -1309,6 +1309,21 @@
     "sensitive": true
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2021-02-01-preview",
+    "output": {
+      "$ref": "#/129"
+    },
+    "input": {
+      "$ref": "#/127"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExportClusterParameters",
     "properties": {
@@ -1322,12 +1337,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2021-02-01-preview",
+    "output": {
+      "$ref": "#/129"
+    },
+    "input": {
+      "$ref": "#/131"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ForceUnlinkParameters",
     "properties": {
       "ids": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/134"
         },
         "flags": 1,
         "description": "The resource IDs of the database resources to be unlinked."
@@ -1338,6 +1365,18 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forceUnlink",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2021-02-01-preview",
+    "output": {
+      "$ref": "#/129"
+    },
+    "input": {
+      "$ref": "#/133"
     }
   }
 ]

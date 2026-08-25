@@ -2476,12 +2476,33 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "archive",
+    "resourceType": "Microsoft.Capacity/reservationOrders/reservations",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/221"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unarchive",
+    "resourceType": "Microsoft.Capacity/reservationOrders/reservations",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/221"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SplitRequest",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/222"
+          "$ref": "#/225"
         },
         "flags": 0
       }
@@ -2493,7 +2514,7 @@
     "properties": {
       "quantities": {
         "type": {
-          "$ref": "#/223"
+          "$ref": "#/226"
         },
         "flags": 0,
         "description": "List of the quantities in the new reservations to create."
@@ -2525,10 +2546,10 @@
     "resourceType": "Microsoft.Capacity/reservationOrders",
     "apiVersion": "2022-03-01",
     "output": {
-      "$ref": "#/224"
+      "$ref": "#/227"
     },
     "input": {
-      "$ref": "#/221"
+      "$ref": "#/224"
     }
   },
   {
@@ -2537,7 +2558,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/227"
+          "$ref": "#/230"
         },
         "flags": 0
       }
@@ -2549,7 +2570,7 @@
     "properties": {
       "sources": {
         "type": {
-          "$ref": "#/228"
+          "$ref": "#/231"
         },
         "flags": 0,
         "description": "Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}"
@@ -2574,10 +2595,10 @@
     "resourceType": "Microsoft.Capacity/reservationOrders",
     "apiVersion": "2022-03-01",
     "output": {
-      "$ref": "#/229"
+      "$ref": "#/232"
     },
     "input": {
-      "$ref": "#/226"
+      "$ref": "#/229"
     }
   },
   {
@@ -2599,14 +2620,14 @@
     "properties": {
       "reservationOrder": {
         "type": {
-          "$ref": "#/233"
+          "$ref": "#/236"
         },
         "flags": 0,
         "description": "Change directory result for reservation order or reservation"
       },
       "reservations": {
         "type": {
-          "$ref": "#/234"
+          "$ref": "#/237"
         },
         "flags": 0
       }
@@ -2649,7 +2670,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/233"
+      "$ref": "#/236"
     }
   },
   {
@@ -2658,10 +2679,10 @@
     "resourceType": "Microsoft.Capacity/reservationOrders",
     "apiVersion": "2022-03-01",
     "output": {
-      "$ref": "#/232"
+      "$ref": "#/235"
     },
     "input": {
-      "$ref": "#/231"
+      "$ref": "#/234"
     }
   },
   {
@@ -2677,7 +2698,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/237"
+          "$ref": "#/240"
         },
         "flags": 0
       }
@@ -2696,7 +2717,7 @@
       },
       "reservationToReturn": {
         "type": {
-          "$ref": "#/238"
+          "$ref": "#/241"
         },
         "flags": 0,
         "description": "Reservation to return"
@@ -2736,7 +2757,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/240"
+          "$ref": "#/243"
         },
         "flags": 0
       }
@@ -2774,14 +2795,14 @@
       },
       "policyResult": {
         "type": {
-          "$ref": "#/241"
+          "$ref": "#/244"
         },
         "flags": 0,
         "description": "Refund policy result"
       },
       "billingInformation": {
         "type": {
-          "$ref": "#/304"
+          "$ref": "#/307"
         },
         "flags": 0,
         "description": "billing information"
@@ -2794,7 +2815,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/242"
+          "$ref": "#/245"
         },
         "flags": 0,
         "description": "Refund policy result property"
@@ -2819,7 +2840,7 @@
       },
       "policyErrors": {
         "type": {
-          "$ref": "#/303"
+          "$ref": "#/306"
         },
         "flags": 0,
         "description": "Refund Policy errors"
@@ -2832,7 +2853,7 @@
     "properties": {
       "code": {
         "type": {
-          "$ref": "#/302"
+          "$ref": "#/305"
         },
         "flags": 0
       },
@@ -3080,15 +3101,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/244"
-      },
-      {
-        "$ref": "#/245"
-      },
-      {
-        "$ref": "#/246"
-      },
-      {
         "$ref": "#/247"
       },
       {
@@ -3254,6 +3266,15 @@
         "$ref": "#/301"
       },
       {
+        "$ref": "#/302"
+      },
+      {
+        "$ref": "#/303"
+      },
+      {
+        "$ref": "#/304"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -3261,7 +3282,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/243"
+      "$ref": "#/246"
     }
   },
   {
@@ -3270,7 +3291,7 @@
     "properties": {
       "billingPlan": {
         "type": {
-          "$ref": "#/307"
+          "$ref": "#/310"
         },
         "flags": 0,
         "description": "Represent the billing plans."
@@ -3321,10 +3342,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/305"
+        "$ref": "#/308"
       },
       {
-        "$ref": "#/306"
+        "$ref": "#/309"
       },
       {
         "$ref": "#/0"
@@ -3337,10 +3358,87 @@
     "resourceType": "Microsoft.Capacity/reservationOrders",
     "apiVersion": "2022-03-01",
     "output": {
-      "$ref": "#/239"
+      "$ref": "#/242"
     },
     "input": {
-      "$ref": "#/236"
+      "$ref": "#/239"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefundRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/313"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefundRequestProperties",
+    "properties": {
+      "sessionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "SessionId that was returned by CalculateRefund API."
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The scope of the refund, e.g. Reservation"
+      },
+      "reservationToReturn": {
+        "type": {
+          "$ref": "#/241"
+        },
+        "flags": 0,
+        "description": "Reservation to return"
+      },
+      "returnReason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The reason of returning the reservation"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RefundResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified identifier of the reservation being returned"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "return",
+    "resourceType": "Microsoft.Capacity/reservationOrders",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/314"
+    },
+    "input": {
+      "$ref": "#/312"
     }
   }
 ]

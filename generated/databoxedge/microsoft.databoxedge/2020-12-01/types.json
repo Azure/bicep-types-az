@@ -5695,6 +5695,18 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadUpdates",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/452"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "GenerateCertResponse",
     "properties": {
@@ -5727,7 +5739,7 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
     "apiVersion": "2020-12-01",
     "output": {
-      "$ref": "#/452"
+      "$ref": "#/454"
     }
   },
   {
@@ -5736,7 +5748,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/455"
+          "$ref": "#/457"
         },
         "flags": 0,
         "description": "The extended info properties."
@@ -5819,14 +5831,14 @@
       },
       "keyVaultSyncStatus": {
         "type": {
-          "$ref": "#/461"
+          "$ref": "#/463"
         },
         "flags": 0,
         "description": "Key vault sync status"
       },
       "deviceSecrets": {
         "type": {
-          "$ref": "#/462"
+          "$ref": "#/464"
         },
         "flags": 2,
         "description": "Device secrets, will be returned only with ODataFilter $expand=deviceSecrets"
@@ -5857,12 +5869,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/456"
-      },
-      {
-        "$ref": "#/457"
-      },
-      {
         "$ref": "#/458"
       },
       {
@@ -5870,6 +5876,12 @@
       },
       {
         "$ref": "#/460"
+      },
+      {
+        "$ref": "#/461"
+      },
+      {
+        "$ref": "#/462"
       },
       {
         "$ref": "#/0"
@@ -5882,56 +5894,56 @@
     "properties": {
       "hcsDataVolumeBitLockerExternalKey": {
         "type": {
-          "$ref": "#/463"
+          "$ref": "#/465"
         },
         "flags": 0,
         "description": "Keyvault Id of HcsDataVolumeBitLockerExternalKey"
       },
       "hcsInternalVolumeBitLockerExternalKey": {
         "type": {
-          "$ref": "#/463"
+          "$ref": "#/465"
         },
         "flags": 0,
         "description": "Keyvault Id of HcsInternalVolumeBitLockerExternalKey"
       },
       "systemVolumeBitLockerRecoveryKey": {
         "type": {
-          "$ref": "#/463"
+          "$ref": "#/465"
         },
         "flags": 0,
         "description": "Keyvault Id of SystemVolumeBitLockerRecoveryKey"
       },
       "sedEncryptionExternalKeyId": {
         "type": {
-          "$ref": "#/463"
+          "$ref": "#/465"
         },
         "flags": 0,
         "description": "Keyvault Id of SEDEncryptionExternalKeyId"
       },
       "sedEncryptionExternalKey": {
         "type": {
-          "$ref": "#/463"
+          "$ref": "#/465"
         },
         "flags": 0,
         "description": "Keyvault Id of SEDEncryptionExternalKey"
       },
       "bmcDefaultUserPassword": {
         "type": {
-          "$ref": "#/463"
+          "$ref": "#/465"
         },
         "flags": 0,
         "description": "Keyvault Id of BMCDefaultUserPassword"
       },
       "rotateKeyForDataVolumeBitlocker": {
         "type": {
-          "$ref": "#/463"
+          "$ref": "#/465"
         },
         "flags": 0,
         "description": "Keyvault Id of RotateKeyForDataVolumeBitlocker"
       },
       "rotateKeysForSedDrivesSerialized": {
         "type": {
-          "$ref": "#/463"
+          "$ref": "#/465"
         },
         "flags": 0,
         "description": "Keyvault Id of RotateKeysForSedDrivesSerialized"
@@ -5964,7 +5976,25 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
     "apiVersion": "2020-12-01",
     "output": {
-      "$ref": "#/454"
+      "$ref": "#/456"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "installUpdates",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/452"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "scanForUpdates",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/452"
     }
   },
   {
@@ -6001,7 +6031,7 @@
       },
       "syncStatus": {
         "type": {
-          "$ref": "#/471"
+          "$ref": "#/475"
         },
         "flags": 0,
         "description": "For changing or to initiate the resync to key-vault set the status to KeyVaultSyncPending, rest of the status will not be applicable."
@@ -6032,19 +6062,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/466"
-      },
-      {
-        "$ref": "#/467"
-      },
-      {
-        "$ref": "#/468"
-      },
-      {
-        "$ref": "#/469"
-      },
-      {
         "$ref": "#/470"
+      },
+      {
+        "$ref": "#/471"
+      },
+      {
+        "$ref": "#/472"
+      },
+      {
+        "$ref": "#/473"
+      },
+      {
+        "$ref": "#/474"
       },
       {
         "$ref": "#/0"
@@ -6057,10 +6087,10 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
     "apiVersion": "2020-12-01",
     "output": {
-      "$ref": "#/454"
+      "$ref": "#/456"
     },
     "input": {
-      "$ref": "#/465"
+      "$ref": "#/469"
     }
   },
   {
@@ -6069,7 +6099,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/474"
+          "$ref": "#/478"
         },
         "flags": 1,
         "description": "The Base 64 encoded certificate raw data."
@@ -6082,7 +6112,7 @@
     "properties": {
       "authenticationType": {
         "type": {
-          "$ref": "#/477"
+          "$ref": "#/481"
         },
         "flags": 0,
         "description": "The authentication type."
@@ -6108,10 +6138,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/475"
+        "$ref": "#/479"
       },
       {
-        "$ref": "#/476"
+        "$ref": "#/480"
       },
       {
         "$ref": "#/0"
@@ -6124,7 +6154,7 @@
     "properties": {
       "authType": {
         "type": {
-          "$ref": "#/481"
+          "$ref": "#/485"
         },
         "flags": 0,
         "description": "Specifies authentication type."
@@ -6192,10 +6222,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/479"
+        "$ref": "#/483"
       },
       {
-        "$ref": "#/480"
+        "$ref": "#/484"
       },
       {
         "$ref": "#/0"
@@ -6208,10 +6238,69 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
     "apiVersion": "2020-12-01",
     "output": {
-      "$ref": "#/478"
+      "$ref": "#/482"
     },
     "input": {
-      "$ref": "#/473"
+      "$ref": "#/477"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecuritySettings",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/488"
+        },
+        "flags": 1,
+        "description": "Properties of the security settings."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The path ID that uniquely identifies the object."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The object name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The hierarchical type of the object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecuritySettingsProperties",
+    "properties": {
+      "deviceAdminPassword": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 1,
+        "description": "Device administrator password as an encrypted string (encrypted using RSA PKCS #1) is used to sign into the  local web UI of the device. The Actual password should have at least 8 characters that are a combination of  uppercase, lowercase, numeric, and special characters."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "update",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/securitySettings",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/452"
+    },
+    "input": {
+      "$ref": "#/487"
     }
   },
   {
@@ -6220,7 +6309,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/484"
+          "$ref": "#/491"
         },
         "flags": 0,
         "description": "DCAccessCode properties."
@@ -6246,7 +6335,25 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders",
     "apiVersion": "2020-12-01",
     "output": {
-      "$ref": "#/483"
+      "$ref": "#/490"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/452"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers",
+    "apiVersion": "2020-12-01",
+    "output": {
+      "$ref": "#/452"
     }
   }
 ]

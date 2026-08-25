@@ -4787,6 +4787,161 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.OperationalInsights/locations/workspaces",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failback",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeBody",
+    "properties": {
+      "table": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Table from which to purge data."
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/380"
+        },
+        "flags": 1,
+        "description": "The set of columns and filters (queries) to run over them to purge the resulting data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeBodyFilters",
+    "properties": {
+      "column": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The column of the table over which the given query should run"
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A query operator to evaluate over the provided column and value(s). Supported operators are ==, =~, in, in~, >, >=, <, <=, between, and have the same behavior as they would in a KQL query."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "the value for the operator to function over. This can be a number (e.g., > 100), a string (timestamp >= '2017-09-01') or array of values."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When filtering over custom dimensions, this key will be used as the name of the custom dimension."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/379"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeResponse",
+    "properties": {
+      "operationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Id to use when querying for status for a particular purge operation."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/381"
+    },
+    "input": {
+      "$ref": "#/378"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeLakeDataBody",
+    "properties": {
+      "table": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the table from which to purge data lake data. Must be an Auxiliary table, or an Analytics table that is mirrored to the data lake."
+      },
+      "timeRange": {
+        "type": {
+          "$ref": "#/384"
+        },
+        "flags": 1,
+        "description": "The time range over which data lake data is purged."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeLakeDataTimeRange",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The inclusive start of the time range, in UTC. Must fall on an hour boundary (minutes and seconds must be zero)."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The exclusive end of the time range, in UTC. Must fall on an hour boundary and be earlier than the start of the current hour."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purgeLakeData",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/105"
+    },
+    "input": {
+      "$ref": "#/383"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SharedKeys",
     "properties": {
@@ -4812,7 +4967,7 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/376"
+      "$ref": "#/386"
     }
   },
   {
@@ -4821,7 +4976,7 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/376"
+      "$ref": "#/386"
     }
   },
   {
@@ -4830,14 +4985,14 @@
     "properties": {
       "metadata": {
         "type": {
-          "$ref": "#/380"
+          "$ref": "#/390"
         },
         "flags": 0,
         "description": "The metadata from search results."
       },
       "value": {
         "type": {
-          "$ref": "#/391"
+          "$ref": "#/401"
         },
         "flags": 0,
         "description": "The array of result values."
@@ -4885,7 +5040,7 @@
       },
       "coreSummaries": {
         "type": {
-          "$ref": "#/382"
+          "$ref": "#/392"
         },
         "flags": 0,
         "description": "The core summaries."
@@ -4920,7 +5075,7 @@
       },
       "sort": {
         "type": {
-          "$ref": "#/387"
+          "$ref": "#/397"
         },
         "flags": 0,
         "description": "How the results are sorted."
@@ -4962,7 +5117,7 @@
       },
       "schema": {
         "type": {
-          "$ref": "#/388"
+          "$ref": "#/398"
         },
         "flags": 0,
         "description": "The schema."
@@ -4992,7 +5147,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/381"
+      "$ref": "#/391"
     }
   },
   {
@@ -5008,7 +5163,7 @@
       },
       "order": {
         "type": {
-          "$ref": "#/386"
+          "$ref": "#/396"
         },
         "flags": 0,
         "description": "The sort order of the search."
@@ -5027,10 +5182,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/384"
+        "$ref": "#/394"
       },
       {
-        "$ref": "#/385"
+        "$ref": "#/395"
       },
       {
         "$ref": "#/0"
@@ -5040,7 +5195,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/383"
+      "$ref": "#/393"
     }
   },
   {
@@ -5111,7 +5266,7 @@
       },
       "ownerType": {
         "type": {
-          "$ref": "#/390"
+          "$ref": "#/400"
         },
         "flags": 0,
         "description": "The array of workflows containing the field."
@@ -5127,7 +5282,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/389"
+      "$ref": "#/399"
     }
   },
   {
@@ -5136,7 +5291,108 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/379"
+      "$ref": "#/389"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Disable",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/intelligencePacks",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Enable",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/intelligencePacks",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SummaryLogsRetryBin",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/407"
+        },
+        "flags": 0,
+        "description": "Retry bin properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SummaryLogsRetryBinProperties",
+    "properties": {
+      "retryBinStartTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The time (UTC) of the bin to retry."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retrybin",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/summaryLogs",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/105"
+    },
+    "input": {
+      "$ref": "#/406"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/summaryLogs",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/summaryLogs",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelSearch",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/tables",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/tables",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/105"
     }
   }
 ]

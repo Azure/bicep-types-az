@@ -11782,6 +11782,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrationCommit",
+    "resourceType": "Microsoft.Cdn/profiles",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1117"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SsoUri",
     "properties": {
@@ -11800,7 +11812,7 @@
     "resourceType": "Microsoft.Cdn/profiles",
     "apiVersion": "2022-05-01-preview",
     "output": {
-      "$ref": "#/1117"
+      "$ref": "#/1119"
     }
   },
   {
@@ -11809,7 +11821,7 @@
     "properties": {
       "supportedOptimizationTypes": {
         "type": {
-          "$ref": "#/1126"
+          "$ref": "#/1128"
         },
         "flags": 2,
         "description": "Supported optimization types for a profile."
@@ -11840,12 +11852,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1120"
-      },
-      {
-        "$ref": "#/1121"
-      },
-      {
         "$ref": "#/1122"
       },
       {
@@ -11855,6 +11861,12 @@
         "$ref": "#/1124"
       },
       {
+        "$ref": "#/1125"
+      },
+      {
+        "$ref": "#/1126"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -11862,7 +11874,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1125"
+      "$ref": "#/1127"
     }
   },
   {
@@ -11871,7 +11883,7 @@
     "resourceType": "Microsoft.Cdn/profiles",
     "apiVersion": "2022-05-01-preview",
     "output": {
-      "$ref": "#/1119"
+      "$ref": "#/1121"
     }
   },
   {
@@ -11880,7 +11892,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/1132"
+          "$ref": "#/1134"
         },
         "flags": 2,
         "description": "List of resource usages."
@@ -11907,7 +11919,7 @@
       },
       "unit": {
         "type": {
-          "$ref": "#/1131"
+          "$ref": "#/1133"
         },
         "flags": 2,
         "description": "Unit of the usage. e.g. count."
@@ -11936,7 +11948,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1130"
+        "$ref": "#/1132"
       },
       {
         "$ref": "#/0"
@@ -11946,7 +11958,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1129"
+      "$ref": "#/1131"
     }
   },
   {
@@ -11955,7 +11967,16 @@
     "resourceType": "Microsoft.Cdn/profiles",
     "apiVersion": "2022-05-01-preview",
     "output": {
-      "$ref": "#/1128"
+      "$ref": "#/1130"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshValidationToken",
+    "resourceType": "Microsoft.Cdn/profiles/customDomains",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1117"
     }
   },
   {
@@ -11964,14 +11985,14 @@
     "properties": {
       "contentPaths": {
         "type": {
-          "$ref": "#/1135"
+          "$ref": "#/1138"
         },
         "flags": 1,
         "description": "The path to the content to be purged. Can describe a file path or a wild card directory."
       },
       "domains": {
         "type": {
-          "$ref": "#/1136"
+          "$ref": "#/1139"
         },
         "flags": 0,
         "description": "List of domains."
@@ -11988,6 +12009,18 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.Cdn/profiles/afdEndpoints",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1117"
+    },
+    "input": {
+      "$ref": "#/1137"
     }
   },
   {
@@ -12045,10 +12078,10 @@
     "resourceType": "Microsoft.Cdn/profiles/afdEndpoints",
     "apiVersion": "2022-05-01-preview",
     "output": {
-      "$ref": "#/1139"
+      "$ref": "#/1143"
     },
     "input": {
-      "$ref": "#/1138"
+      "$ref": "#/1142"
     }
   },
   {
@@ -12089,7 +12122,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1144"
+          "$ref": "#/1148"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -12138,7 +12171,7 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2022-05-01-preview",
     "output": {
-      "$ref": "#/1143"
+      "$ref": "#/1147"
     }
   },
   {
@@ -12147,7 +12180,7 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2022-05-01-preview",
     "output": {
-      "$ref": "#/1143"
+      "$ref": "#/1147"
     }
   },
   {
@@ -12156,7 +12189,7 @@
     "properties": {
       "contentPaths": {
         "type": {
-          "$ref": "#/1148"
+          "$ref": "#/1152"
         },
         "flags": 1,
         "description": "The path to the content to be purged. Can describe a file path or a wild card directory."
@@ -12170,12 +12203,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1117"
+    },
+    "input": {
+      "$ref": "#/1151"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "LoadParameters",
     "properties": {
       "contentPaths": {
         "type": {
-          "$ref": "#/1150"
+          "$ref": "#/1155"
         },
         "flags": 1,
         "description": "The path to the content to be loaded. Path should be a relative file URL of the origin."
@@ -12190,14 +12235,26 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "load",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2022-05-01-preview",
+    "output": {
+      "$ref": "#/1117"
+    },
+    "input": {
+      "$ref": "#/1154"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "validateCustomDomain",
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2022-05-01-preview",
     "output": {
-      "$ref": "#/1139"
+      "$ref": "#/1143"
     },
     "input": {
-      "$ref": "#/1138"
+      "$ref": "#/1142"
     }
   },
   {
@@ -12206,7 +12263,7 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2022-05-01-preview",
     "output": {
-      "$ref": "#/1128"
+      "$ref": "#/1130"
     }
   },
   {
@@ -12215,7 +12272,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1154"
+          "$ref": "#/1160"
         },
         "flags": 0,
         "description": "The JSON object that contains the properties of the custom domain to create."
@@ -12263,21 +12320,21 @@
       },
       "resourceState": {
         "type": {
-          "$ref": "#/1158"
+          "$ref": "#/1164"
         },
         "flags": 2,
         "description": "Resource status of the custom domain."
       },
       "customHttpsProvisioningState": {
         "type": {
-          "$ref": "#/1164"
+          "$ref": "#/1170"
         },
         "flags": 2,
         "description": "Provisioning status of the custom domain."
       },
       "customHttpsProvisioningSubstate": {
         "type": {
-          "$ref": "#/1175"
+          "$ref": "#/1181"
         },
         "flags": 2,
         "description": "Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step."
@@ -12298,7 +12355,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/1181"
+          "$ref": "#/1187"
         },
         "flags": 2,
         "description": "Provisioning status of Custom Https of the custom domain."
@@ -12321,13 +12378,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1155"
+        "$ref": "#/1161"
       },
       {
-        "$ref": "#/1156"
+        "$ref": "#/1162"
       },
       {
-        "$ref": "#/1157"
+        "$ref": "#/1163"
       },
       {
         "$ref": "#/0"
@@ -12358,19 +12415,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1159"
+        "$ref": "#/1165"
       },
       {
-        "$ref": "#/1160"
+        "$ref": "#/1166"
       },
       {
-        "$ref": "#/1161"
+        "$ref": "#/1167"
       },
       {
-        "$ref": "#/1162"
+        "$ref": "#/1168"
       },
       {
-        "$ref": "#/1163"
+        "$ref": "#/1169"
       },
       {
         "$ref": "#/0"
@@ -12421,24 +12478,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1165"
-      },
-      {
-        "$ref": "#/1166"
-      },
-      {
-        "$ref": "#/1167"
-      },
-      {
-        "$ref": "#/1168"
-      },
-      {
-        "$ref": "#/1169"
-      },
-      {
-        "$ref": "#/1170"
-      },
-      {
         "$ref": "#/1171"
       },
       {
@@ -12449,6 +12488,24 @@
       },
       {
         "$ref": "#/1174"
+      },
+      {
+        "$ref": "#/1175"
+      },
+      {
+        "$ref": "#/1176"
+      },
+      {
+        "$ref": "#/1177"
+      },
+      {
+        "$ref": "#/1178"
+      },
+      {
+        "$ref": "#/1179"
+      },
+      {
+        "$ref": "#/1180"
       },
       {
         "$ref": "#/0"
@@ -12479,19 +12536,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1176"
+        "$ref": "#/1182"
       },
       {
-        "$ref": "#/1177"
+        "$ref": "#/1183"
       },
       {
-        "$ref": "#/1178"
+        "$ref": "#/1184"
       },
       {
-        "$ref": "#/1179"
+        "$ref": "#/1185"
       },
       {
-        "$ref": "#/1180"
+        "$ref": "#/1186"
       },
       {
         "$ref": "#/0"
@@ -12504,7 +12561,7 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints/customDomains",
     "apiVersion": "2022-05-01-preview",
     "output": {
-      "$ref": "#/1153"
+      "$ref": "#/1159"
     }
   },
   {
@@ -12513,7 +12570,7 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints/customDomains",
     "apiVersion": "2022-05-01-preview",
     "output": {
-      "$ref": "#/1153"
+      "$ref": "#/1159"
     },
     "input": {
       "$ref": "#/970"

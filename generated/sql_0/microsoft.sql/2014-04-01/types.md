@@ -319,11 +319,47 @@
 * **Input**: [ExportRequest](#exportrequest)
 * **Output**: [ImportExportResponse](#importexportresponse)
 
+## Function failover (Microsoft.Sql/servers/disasterRecoveryConfiguration@2014-04-01)
+* **Resource**: Microsoft.Sql/servers/disasterRecoveryConfiguration
+* **ApiVersion**: 2014-04-01
+* **Output**: any
+
+## Function failover (Microsoft.Sql/servers/databases/replicationLinks@2014-04-01)
+* **Resource**: Microsoft.Sql/servers/databases/replicationLinks
+* **ApiVersion**: 2014-04-01
+* **Output**: any
+
+## Function forceFailoverAllowDataLoss (Microsoft.Sql/servers/disasterRecoveryConfiguration@2014-04-01)
+* **Resource**: Microsoft.Sql/servers/disasterRecoveryConfiguration
+* **ApiVersion**: 2014-04-01
+* **Output**: any
+
+## Function forceFailoverAllowDataLoss (Microsoft.Sql/servers/databases/replicationLinks@2014-04-01)
+* **Resource**: Microsoft.Sql/servers/databases/replicationLinks
+* **ApiVersion**: 2014-04-01
+* **Output**: any
+
 ## Function import (Microsoft.Sql/servers@2014-04-01)
 * **Resource**: Microsoft.Sql/servers
 * **ApiVersion**: 2014-04-01
 * **Input**: [ImportRequest](#importrequest)
 * **Output**: [ImportExportResponse](#importexportresponse)
+
+## Function pause (Microsoft.Sql/servers/databases@2014-04-01)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2014-04-01
+* **Output**: any
+
+## Function resume (Microsoft.Sql/servers/databases@2014-04-01)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2014-04-01
+* **Output**: any
+
+## Function unlink (Microsoft.Sql/servers/databases/replicationLinks@2014-04-01)
+* **Resource**: Microsoft.Sql/servers/databases/replicationLinks
+* **ApiVersion**: 2014-04-01
+* **Input**: [UnlinkParameters](#unlinkparameters)
+* **Output**: any
 
 ## AdvisorProperties
 ### Properties
@@ -761,4 +797,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 ## TransparentDataEncryptionProperties
 ### Properties
 * **status**: 'Disabled' | 'Enabled': The status of the database transparent data encryption.
+
+## UnlinkParameters
+### Properties
+* **forcedTermination**: bool: Determines whether link will be terminated in a forced or a friendly way.
 

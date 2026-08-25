@@ -36,6 +36,21 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "manageInventoryMetadata",
+    "resourceType": "Microsoft.EdgeOrderPartner/locations/productFamilies/inventories",
+    "apiVersion": "2020-12-01-preview",
+    "output": {
+      "$ref": "#/3"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ManageLinkRequest",
     "properties": {
@@ -48,7 +63,7 @@
       },
       "operation": {
         "type": {
-          "$ref": "#/7"
+          "$ref": "#/9"
         },
         "flags": 1,
         "description": "Operation to be performed - Link, Unlink, Relink"
@@ -78,14 +93,26 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/4"
-      },
-      {
-        "$ref": "#/5"
-      },
-      {
         "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "manageLink",
+    "resourceType": "Microsoft.EdgeOrderPartner/locations/productFamilies/inventories",
+    "apiVersion": "2020-12-01-preview",
+    "output": {
+      "$ref": "#/3"
+    },
+    "input": {
+      "$ref": "#/5"
+    }
   }
 ]

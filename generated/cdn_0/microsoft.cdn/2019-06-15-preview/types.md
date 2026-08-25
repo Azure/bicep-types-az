@@ -71,6 +71,17 @@
 * **ApiVersion**: 2019-06-15-preview
 * **Output**: [ResourceUsageListResult](#resourceusagelistresult)
 
+## Function disableCustomHttps (Microsoft.Cdn/profiles/endpoints/customDomains@2019-06-15-preview)
+* **Resource**: Microsoft.Cdn/profiles/endpoints/customDomains
+* **ApiVersion**: 2019-06-15-preview
+* **Output**: [CustomDomain](#customdomain)
+
+## Function enableCustomHttps (Microsoft.Cdn/profiles/endpoints/customDomains@2019-06-15-preview)
+* **Resource**: Microsoft.Cdn/profiles/endpoints/customDomains
+* **ApiVersion**: 2019-06-15-preview
+* **Input**: [CustomDomainHttpsParameters](#customdomainhttpsparameters)
+* **Output**: [CustomDomain](#customdomain)
+
 ## Function generateSsoUri (Microsoft.Cdn/profiles@2019-06-15-preview)
 * **Resource**: Microsoft.Cdn/profiles
 * **ApiVersion**: 2019-06-15-preview
@@ -80,6 +91,18 @@
 * **Resource**: Microsoft.Cdn/profiles
 * **ApiVersion**: 2019-06-15-preview
 * **Output**: [SupportedOptimizationTypesListResult](#supportedoptimizationtypeslistresult)
+
+## Function load (Microsoft.Cdn/profiles/endpoints@2019-06-15-preview)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2019-06-15-preview
+* **Input**: [LoadParameters](#loadparameters)
+* **Output**: any
+
+## Function purge (Microsoft.Cdn/profiles/endpoints@2019-06-15-preview)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2019-06-15-preview
+* **Input**: [PurgeParameters](#purgeparameters)
+* **Output**: any
 
 ## Function start (Microsoft.Cdn/profiles/endpoints@2019-06-15-preview)
 * **Resource**: Microsoft.Cdn/profiles/endpoints
@@ -138,6 +161,13 @@
 * **selector**: string (Required): Name of Cookies to be matched
 * **transforms**: ('Lowercase' | 'Uppercase' | string)[]: List of transforms
 
+## CustomDomain
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [CustomDomainProperties](#customdomainproperties): The JSON object that contains the properties of the custom domain to create.
+* **type**: string (ReadOnly): Resource type.
+
 ## CustomDomainHttpsParameters
 * **Discriminator**: certificateSource
 
@@ -155,6 +185,16 @@
 * **certificateSource**: 'Cdn' (Required): Defines the source of the SSL certificate.
 * **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (Required): Defines the certificate source parameters using CDN managed certificate for enabling SSL.
 
+
+## CustomDomainProperties
+### Properties
+* **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters): Certificate parameters for securing custom HTTPS
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning status of Custom Https of the custom domain.
+* **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' | string (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
+* **provisioningState**: string (ReadOnly): Provisioning status of the custom domain.
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the custom domain.
+* **validationData**: string: Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
 
 ## CustomDomainPropertiesParametersOrCustomDomainProperties
 ### Properties
@@ -384,6 +424,10 @@
 * **updateRule**: 'NoAction' | string (Required): Describes the action that shall be taken when the certificate is updated in Key Vault.
 * **vaultName**: string (Required): The name of the user's Key Vault containing the SSL certificate
 
+## LoadParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be loaded. Path should be a relative file URL of the origin.
+
 ## ManagedRuleGroupOverride
 ### Properties
 * **ruleGroupName**: string (Required): Describes the managed rule group within the rule set to override
@@ -444,6 +488,10 @@
 ### Properties
 * **provisioningState**: string (ReadOnly): Provisioning status of the profile.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | string (ReadOnly): Resource status of the profile.
+
+## PurgeParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be purged. Can describe a file path or a wild card directory.
 
 ## QueryStringMatchConditionParameters
 ### Properties

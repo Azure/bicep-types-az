@@ -1430,5 +1430,17 @@
     "itemType": {
       "$ref": "#/2"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resources",
+    "resourceType": "Microsoft.DevOpsInfrastructure/pools",
+    "apiVersion": "2026-06-02",
+    "output": {
+      "$ref": "#/36"
+    },
+    "input": {
+      "$ref": "#/116"
+    }
   }
 ]

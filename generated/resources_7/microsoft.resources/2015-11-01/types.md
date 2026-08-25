@@ -10,6 +10,11 @@
 * **properties**: [DeploymentPropertiesOrDeploymentPropertiesExtended](#deploymentpropertiesordeploymentpropertiesextended): Gets or sets the deployment properties.
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.Resources/deployments@2015-11-01)
+* **Resource**: Microsoft.Resources/deployments
+* **ApiVersion**: 2015-11-01
+* **Output**: any
+
 ## Function validate (Microsoft.Resources/deployments@2015-11-01)
 * **Resource**: Microsoft.Resources/deployments
 * **ApiVersion**: 2015-11-01

@@ -1548,6 +1548,41 @@
   },
   {
     "$type": "ObjectType",
+    "name": "UploadFile",
+    "properties": {
+      "content": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "File Content in base64 encoded format"
+      },
+      "chunkIndex": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Index of the uploaded chunk (Index starts at 0)"
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upload",
+    "resourceType": "Microsoft.Support/fileWorkspaces/files",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/105"
+    },
+    "input": {
+      "$ref": "#/104"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ProblemClassificationsClassificationInput",
     "properties": {
       "issueSummary": {
@@ -1572,7 +1607,7 @@
     "properties": {
       "problemClassificationResults": {
         "type": {
-          "$ref": "#/109"
+          "$ref": "#/112"
         },
         "flags": 0,
         "description": "Set of problem classification objects classified."
@@ -1620,7 +1655,7 @@
       },
       "relatedService": {
         "type": {
-          "$ref": "#/107"
+          "$ref": "#/110"
         },
         "flags": 0,
         "description": "Related service."
@@ -1647,7 +1682,7 @@
       },
       "resourceTypes": {
         "type": {
-          "$ref": "#/108"
+          "$ref": "#/111"
         },
         "flags": 0,
         "description": "List of applicable ARM resource types for this service."
@@ -1663,7 +1698,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/106"
+      "$ref": "#/109"
     }
   },
   {
@@ -1672,10 +1707,10 @@
     "resourceType": "Microsoft.Support/services",
     "apiVersion": "2025-06-01-preview",
     "output": {
-      "$ref": "#/105"
+      "$ref": "#/108"
     },
     "input": {
-      "$ref": "#/104"
+      "$ref": "#/107"
     }
   },
   {
@@ -1691,7 +1726,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/114"
+          "$ref": "#/117"
         },
         "flags": 1,
         "description": "The type of resource."
@@ -1710,10 +1745,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/112"
+        "$ref": "#/115"
       },
       {
-        "$ref": "#/113"
+        "$ref": "#/116"
       }
     ]
   },
@@ -1750,10 +1785,10 @@
     "resourceType": "Microsoft.Support/supportTickets",
     "apiVersion": "2025-06-01-preview",
     "output": {
-      "$ref": "#/115"
+      "$ref": "#/118"
     },
     "input": {
-      "$ref": "#/111"
+      "$ref": "#/114"
     }
   }
 ]

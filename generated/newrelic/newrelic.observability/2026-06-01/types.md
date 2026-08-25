@@ -92,6 +92,11 @@
 * **ApiVersion**: 2026-06-01
 * **Output**: [MonitoredResourceListResponse](#monitoredresourcelistresponse)
 
+## Function refreshIngestionKey (NewRelic.Observability/monitors@2026-06-01)
+* **Resource**: NewRelic.Observability/monitors
+* **ApiVersion**: 2026-06-01
+* **Output**: any
+
 ## Function resubscribe (NewRelic.Observability/monitors@2026-06-01)
 * **Resource**: NewRelic.Observability/monitors
 * **ApiVersion**: 2026-06-01

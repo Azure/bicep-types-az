@@ -147,6 +147,11 @@
 * **Input**: [CrossRegionRestoreRequestObject](#crossregionrestorerequestobject)
 * **Output**: [OperationJobExtendedInfo](#operationjobextendedinfo)
 
+## Function exportBackupJobs (Microsoft.DataProtection/backupVaults@2024-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
 ## Function fetchCrossRegionRestoreJob (Microsoft.DataProtection/locations@2024-03-01)
 * **Resource**: Microsoft.DataProtection/locations
 * **ApiVersion**: 2024-03-01
@@ -171,11 +176,48 @@
 * **Input**: [AzureBackupFindRestorableTimeRangesRequest](#azurebackupfindrestorabletimerangesrequest)
 * **Output**: [AzureBackupFindRestorableTimeRangesResponseResource](#azurebackupfindrestorabletimerangesresponseresource)
 
+## Function rehydrate (Microsoft.DataProtection/backupVaults/backupInstances@2024-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2024-03-01
+* **Input**: [AzureBackupRehydrationRequest](#azurebackuprehydrationrequest)
+* **Output**: any
+
 ## Function restore (Microsoft.DataProtection/backupVaults/backupInstances@2024-03-01)
 * **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
 * **ApiVersion**: 2024-03-01
 * **Input**: [AzureBackupRestoreRequest](#azurebackuprestorerequest)
 * **Output**: [OperationJobExtendedInfo](#operationjobextendedinfo)
+
+## Function resumeBackups (Microsoft.DataProtection/backupVaults/backupInstances@2024-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
+## Function resumeProtection (Microsoft.DataProtection/backupVaults/backupInstances@2024-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
+## Function stopProtection (Microsoft.DataProtection/backupVaults/backupInstances@2024-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
+## Function suspendBackups (Microsoft.DataProtection/backupVaults/backupInstances@2024-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
+## Function sync (Microsoft.DataProtection/backupVaults/backupInstances@2024-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2024-03-01
+* **Input**: [SyncBackupInstanceRequest](#syncbackupinstancerequest)
+* **Output**: any
+
+## Function undelete (Microsoft.DataProtection/backupVaults/deletedBackupInstances@2024-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/deletedBackupInstances
+* **ApiVersion**: 2024-03-01
+* **Output**: any
 
 ## Function unlockDelete (Microsoft.DataProtection/backupVaults/backupResourceGuardProxies@2024-03-01)
 * **Resource**: Microsoft.DataProtection/backupVaults/backupResourceGuardProxies
@@ -324,6 +366,12 @@
 ### Properties
 * **nextLink**: string: The uri to fetch the next page of resources. Call ListNext() fetches next page of resources.
 * **value**: [AzureBackupRecoveryPointResource](#azurebackuprecoverypointresource)[]: List of resources.
+
+## AzureBackupRehydrationRequest
+### Properties
+* **recoveryPointId**: string (Required): Id of the recovery point to be recovered
+* **rehydrationPriority**: 'High' | 'Invalid' | 'Standard' | string: Priority to be used for rehydration. Values High or Standard
+* **rehydrationRetentionDuration**: string (Required): Retention duration in ISO 8601 format i.e P10D .
 
 ## AzureBackupRestoreRequest
 * **Discriminator**: objectType
@@ -1009,6 +1057,10 @@ If it is null, default will be considered as System Assigned.
 * **exposureControlledFeatures**: string[]: support feature type.
 * **featureName**: string: support feature type.
 * **supportStatus**: 'AlphaPreview' | 'GenerallyAvailable' | 'Invalid' | 'NotSupported' | 'PrivatePreview' | 'PublicPreview' | string: feature support status
+
+## SyncBackupInstanceRequest
+### Properties
+* **syncType**: 'Default' | 'ForceResync' | string: Field indicating sync type e.g. to sync only in case of failure or in all cases
 
 ## SystemData
 ### Properties

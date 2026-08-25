@@ -5819,12 +5819,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeExtensions",
+    "resourceType": "Microsoft.HybridCompute/machines",
+    "apiVersion": "2025-01-13",
+    "output": {
+      "$ref": "#/103"
+    },
+    "input": {
+      "$ref": "#/422"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SetupExtensionRequest",
     "properties": {
       "extensions": {
         "type": {
-          "$ref": "#/426"
+          "$ref": "#/427"
         },
         "flags": 0,
         "description": "The list of extensions"
@@ -5843,10 +5855,10 @@
     "resourceType": "Microsoft.HybridCompute/machines",
     "apiVersion": "2025-01-13",
     "output": {
-      "$ref": "#/425"
+      "$ref": "#/426"
     },
     "input": {
-      "$ref": "#/425"
+      "$ref": "#/426"
     }
   },
   {
@@ -5868,7 +5880,7 @@
     "resourceType": "Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations",
     "apiVersion": "2025-01-13",
     "output": {
-      "$ref": "#/428"
+      "$ref": "#/429"
     }
   }
 ]

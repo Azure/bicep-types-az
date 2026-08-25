@@ -3573,6 +3573,60 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ContainerInstance/ngroups",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ContainerInstance/ngroups",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ContainerInstance/ngroups",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/86"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ContainerAttachResponse",
     "properties": {
@@ -3598,7 +3652,7 @@
     "resourceType": "Microsoft.ContainerInstance/containerGroups/containers",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/245"
+      "$ref": "#/251"
     }
   },
   {
@@ -3614,7 +3668,7 @@
       },
       "terminalSize": {
         "type": {
-          "$ref": "#/248"
+          "$ref": "#/254"
         },
         "flags": 0,
         "description": "The size of the terminal."
@@ -3667,10 +3721,10 @@
     "resourceType": "Microsoft.ContainerInstance/containerGroups/containers",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/249"
+      "$ref": "#/255"
     },
     "input": {
-      "$ref": "#/247"
+      "$ref": "#/253"
     }
   }
 ]

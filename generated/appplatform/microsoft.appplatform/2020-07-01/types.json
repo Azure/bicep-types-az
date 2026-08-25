@@ -2029,6 +2029,15 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "disableTestEndpoint",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2020-07-01",
+    "output": {
+      "$ref": "#/85"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "enableTestEndpoint",
     "resourceType": "Microsoft.AppPlatform/Spring",
     "apiVersion": "2020-07-01",
@@ -2089,10 +2098,10 @@
     "resourceType": "Microsoft.AppPlatform/locations",
     "apiVersion": "2020-07-01",
     "output": {
-      "$ref": "#/139"
+      "$ref": "#/140"
     },
     "input": {
-      "$ref": "#/138"
+      "$ref": "#/139"
     }
   },
   {
@@ -2121,7 +2130,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps",
     "apiVersion": "2020-07-01",
     "output": {
-      "$ref": "#/141"
+      "$ref": "#/142"
     }
   },
   {
@@ -2163,10 +2172,37 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps",
     "apiVersion": "2020-07-01",
     "output": {
-      "$ref": "#/144"
+      "$ref": "#/145"
     },
     "input": {
-      "$ref": "#/143"
+      "$ref": "#/144"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2020-07-01",
+    "output": {
+      "$ref": "#/85"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2020-07-01",
+    "output": {
+      "$ref": "#/85"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2020-07-01",
+    "output": {
+      "$ref": "#/85"
     }
   },
   {
@@ -2188,7 +2224,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
     "apiVersion": "2020-07-01",
     "output": {
-      "$ref": "#/146"
+      "$ref": "#/150"
     }
   }
 ]

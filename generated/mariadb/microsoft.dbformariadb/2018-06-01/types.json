@@ -2072,12 +2072,21 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforMariaDB/servers",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/131"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ConfigurationListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/148"
         },
         "flags": 0,
         "description": "The list of server configurations."
@@ -2121,7 +2130,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/146"
+      "$ref": "#/147"
     }
   },
   {
@@ -2130,10 +2139,10 @@
     "resourceType": "Microsoft.DBforMariaDB/servers",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/145"
+      "$ref": "#/146"
     },
     "input": {
-      "$ref": "#/145"
+      "$ref": "#/146"
     }
   },
   {
@@ -2142,7 +2151,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/153"
         },
         "flags": 0,
         "description": "Indicates result of the operation."
@@ -2168,10 +2177,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/150"
+        "$ref": "#/151"
       },
       {
-        "$ref": "#/151"
+        "$ref": "#/152"
       },
       {
         "$ref": "#/0"
@@ -2184,7 +2193,7 @@
     "resourceType": "Microsoft.DBforMariaDB/servers",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/149"
+      "$ref": "#/150"
     }
   }
 ]

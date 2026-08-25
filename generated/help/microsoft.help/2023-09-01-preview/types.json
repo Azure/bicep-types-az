@@ -2007,6 +2007,115 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ContinueRequestBody",
+    "properties": {
+      "stepId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Unique id of the result."
+      },
+      "responses": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TroubleshooterResponse",
+    "properties": {
+      "questionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "id of the question."
+      },
+      "questionType": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "Type of Question"
+      },
+      "response": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Response key for SingleInput. For Multi-line test/open ended question it is free form text"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RadioButton"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dropdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TextInput"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MultiLineInfoBox"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
+      },
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "continue",
+    "resourceType": "Microsoft.Help/troubleshooters",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/154"
+    },
+    "input": {
+      "$ref": "#/158"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "end",
+    "resourceType": "Microsoft.Help/troubleshooters",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/154"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "RestartTroubleshooterResponse",
     "properties": {
       "troubleshooterResourceName": {
@@ -2024,7 +2133,7 @@
     "resourceType": "Microsoft.Help/troubleshooters",
     "apiVersion": "2023-09-01-preview",
     "output": {
-      "$ref": "#/158"
+      "$ref": "#/168"
     }
   }
 ]

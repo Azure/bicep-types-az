@@ -47,6 +47,12 @@
 * **ApiVersion**: 2021-09-01-preview
 * **Output**: [VMHostListResponse](#vmhostlistresponse)
 
+## Function vmCollectionUpdate (Microsoft.Elastic/monitors@2021-09-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2021-09-01-preview
+* **Input**: [VMCollectionUpdate](#vmcollectionupdate)
+* **Output**: any
+
 ## Function vmIngestionDetails (Microsoft.Elastic/monitors@2021-09-01-preview)
 * **Resource**: Microsoft.Elastic/monitors
 * **ApiVersion**: 2021-09-01-preview
@@ -169,6 +175,11 @@
 * **emailAddress**: string {pattern: "^([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@"]+)*)@(([a-zA-Z-_0-9]+\.)+[a-zA-Z]{2,})$"}: Email of the user used by Elastic for contacting them if needed
 * **firstName**: string {maxLength: 50}: First name of the user
 * **lastName**: string {maxLength: 50}: Last name of the user
+
+## VMCollectionUpdate
+### Properties
+* **operationName**: 'Add' | 'Delete' | string: Operation to be performed for given VM.
+* **vmResourceId**: string: ARM id of the VM resource.
 
 ## VMHostListResponse
 ### Properties

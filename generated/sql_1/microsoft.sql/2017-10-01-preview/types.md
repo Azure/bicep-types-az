@@ -137,6 +137,16 @@ az sql elastic-pool list-editions -l <location> -o table
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.Sql/servers/databases/operations@2017-10-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/operations
+* **ApiVersion**: 2017-10-01-preview
+* **Output**: any
+
+## Function cancel (Microsoft.Sql/servers/elasticPools/operations@2017-10-01-preview)
+* **Resource**: Microsoft.Sql/servers/elasticPools/operations
+* **ApiVersion**: 2017-10-01-preview
+* **Output**: any
+
 ## Function export (Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans@2017-10-01-preview)
 * **Resource**: Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans
 * **ApiVersion**: 2017-10-01-preview
@@ -157,6 +167,22 @@ az sql elastic-pool list-editions -l <location> -o table
 * **ApiVersion**: 2017-10-01-preview
 * **Output**: [InstanceFailoverGroup](#instancefailovergroup)
 
+## Function initiateScan (Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans@2017-10-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans
+* **ApiVersion**: 2017-10-01-preview
+* **Output**: any
+
+## Function initiateScan (Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans@2017-10-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans
+* **ApiVersion**: 2017-10-01-preview
+* **Output**: any
+
+## Function move (Microsoft.Sql/servers/databases@2017-10-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2017-10-01-preview
+* **Input**: [ResourceMoveDefinition](#resourcemovedefinition)
+* **Output**: any
+
 ## Function pause (Microsoft.Sql/servers/databases@2017-10-01-preview)
 * **Resource**: Microsoft.Sql/servers/databases
 * **ApiVersion**: 2017-10-01-preview
@@ -166,6 +192,28 @@ az sql elastic-pool list-editions -l <location> -o table
 * **Resource**: Microsoft.Sql/servers/databases
 * **ApiVersion**: 2017-10-01-preview
 * **Output**: [Database](#database)
+
+## Function revalidate (Microsoft.Sql/managedInstances/encryptionProtector@2017-10-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances/encryptionProtector
+* **ApiVersion**: 2017-10-01-preview
+* **Output**: any
+
+## Function tdeCertificates (Microsoft.Sql/servers@2017-10-01-preview)
+* **Resource**: Microsoft.Sql/servers
+* **ApiVersion**: 2017-10-01-preview
+* **Input**: [TdeCertificate](#tdecertificate)
+* **Output**: any
+
+## Function tdeCertificates (Microsoft.Sql/managedInstances@2017-10-01-preview)
+* **Resource**: Microsoft.Sql/managedInstances
+* **ApiVersion**: 2017-10-01-preview
+* **Input**: [TdeCertificate](#tdecertificate)
+* **Output**: any
+
+## Function upgradeDataWarehouse (Microsoft.Sql/servers/databases@2017-10-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2017-10-01-preview
+* **Output**: any
 
 ## BackupShortTermRetentionPolicyProperties
 ### Properties
@@ -336,6 +384,10 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 ### Properties
 * **lastAvailableBackupDate**: string (ReadOnly): The last available backup date.
 
+## ResourceMoveDefinition
+### Properties
+* **id**: string (Required): The target ID for the resource
+
 ## Sku
 ### Properties
 * **capacity**: int: Capacity of the particular SKU.
@@ -343,6 +395,18 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.
 * **size**: string: Size of the particular SKU
 * **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
+
+## TdeCertificate
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [TdeCertificateProperties](#tdecertificateproperties): Resource properties.
+* **type**: string (ReadOnly): Resource type.
+
+## TdeCertificateProperties
+### Properties
+* **certPassword**: string (WriteOnly): The certificate password.
+* **privateBlob**: string (Required, WriteOnly): The base64 encoded certificate private blob.
 
 ## TrackedResourceTags
 ### Properties

@@ -74,6 +74,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function upgradeExtensions (Microsoft.HybridCompute/machines@2022-12-27-preview)
+* **Resource**: Microsoft.HybridCompute/machines
+* **ApiVersion**: 2022-12-27-preview
+* **Input**: [MachineExtensionUpgrade](#machineextensionupgrade)
+* **Output**: any
+
 ## AgentConfiguration
 ### Properties
 * **configMode**: 'full' | 'monitor' | string (ReadOnly): Name of configuration mode to use. Modes are pre-defined configurations of security controls, extension allowlists and guest configuration, maintained by Microsoft.
@@ -120,6 +126,15 @@
 * **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
 * **message**: string (ReadOnly): The error message.
 * **target**: string (ReadOnly): The error target.
+
+## ExtensionTarget
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ExtensionTargetProperties](#extensiontargetproperties)
+
+## ExtensionTargetProperties
+### Properties
+* **targetVersion**: string: Properties for the specified Extension to Upgrade.
 
 ## ExtensionValueProperties
 ### Properties
@@ -194,6 +209,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## MachineExtensionUpgrade
+### Properties
+* **extensionTargets**: [ExtensionTarget](#extensiontarget): Describes the Extension Target Properties.
 
 ## MachineProperties
 ### Properties

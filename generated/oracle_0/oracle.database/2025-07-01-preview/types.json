@@ -10328,6 +10328,40 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AzureSubscriptions",
+    "properties": {
+      "azureSubscriptionIds": {
+        "type": {
+          "$ref": "#/723"
+        },
+        "flags": 1,
+        "description": "Azure Subscription Ids to be updated"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addAzureSubscriptions",
+    "resourceType": "Oracle.Database/oracleSubscriptions",
+    "apiVersion": "2025-07-01-preview",
+    "output": {
+      "$ref": "#/724"
+    },
+    "input": {
+      "$ref": "#/722"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ActivationLinks",
     "properties": {
       "newCloudAccountActivationLink": {
@@ -10352,7 +10386,7 @@
     "resourceType": "Oracle.Database/oracleSubscriptions",
     "apiVersion": "2025-07-01-preview",
     "output": {
-      "$ref": "#/722"
+      "$ref": "#/726"
     }
   },
   {
@@ -10381,7 +10415,7 @@
     "resourceType": "Oracle.Database/oracleSubscriptions",
     "apiVersion": "2025-07-01-preview",
     "output": {
-      "$ref": "#/724"
+      "$ref": "#/728"
     }
   },
   {
@@ -10480,7 +10514,7 @@
     "resourceType": "Oracle.Database/oracleSubscriptions",
     "apiVersion": "2025-07-01-preview",
     "output": {
-      "$ref": "#/726"
+      "$ref": "#/730"
     }
   },
   {
@@ -10489,7 +10523,7 @@
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/733"
+          "$ref": "#/737"
         },
         "flags": 1,
         "description": "Db action"
@@ -10516,16 +10550,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/729"
+        "$ref": "#/733"
       },
       {
-        "$ref": "#/730"
+        "$ref": "#/734"
       },
       {
-        "$ref": "#/731"
+        "$ref": "#/735"
       },
       {
-        "$ref": "#/732"
+        "$ref": "#/736"
       },
       {
         "$ref": "#/2"
@@ -10579,10 +10613,10 @@
     "resourceType": "Oracle.Database/cloudVmClusters/dbNodes",
     "apiVersion": "2025-07-01-preview",
     "output": {
-      "$ref": "#/734"
+      "$ref": "#/738"
     },
     "input": {
-      "$ref": "#/728"
+      "$ref": "#/732"
     }
   },
   {
@@ -10591,7 +10625,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/741"
+          "$ref": "#/745"
         },
         "flags": 2,
         "description": "ExascaleDbNode provisioning state"
@@ -10618,16 +10652,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/737"
+        "$ref": "#/741"
       },
       {
-        "$ref": "#/738"
+        "$ref": "#/742"
       },
       {
-        "$ref": "#/739"
+        "$ref": "#/743"
       },
       {
-        "$ref": "#/740"
+        "$ref": "#/744"
       },
       {
         "$ref": "#/2"
@@ -10640,10 +10674,10 @@
     "resourceType": "Oracle.Database/exadbVmClusters/dbNodes",
     "apiVersion": "2025-07-01-preview",
     "output": {
-      "$ref": "#/736"
+      "$ref": "#/740"
     },
     "input": {
-      "$ref": "#/728"
+      "$ref": "#/732"
     }
   }
 ]

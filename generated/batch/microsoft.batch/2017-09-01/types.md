@@ -62,6 +62,12 @@
 * **properties**: [PoolProperties](#poolproperties): The properties associated with the pool.
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activate (Microsoft.Batch/batchAccounts/applications/versions@2017-09-01)
+* **Resource**: Microsoft.Batch/batchAccounts/applications/versions
+* **ApiVersion**: 2017-09-01
+* **Input**: [ActivateApplicationPackageParameters](#activateapplicationpackageparameters)
+* **Output**: any
+
 ## Function cancelDelete (Microsoft.Batch/batchAccounts/certificates@2017-09-01)
 * **Resource**: Microsoft.Batch/batchAccounts/certificates
 * **ApiVersion**: 2017-09-01
@@ -93,6 +99,15 @@
 * **Resource**: Microsoft.Batch/batchAccounts/pools
 * **ApiVersion**: 2017-09-01
 * **Output**: [Pool](#pool)
+
+## Function syncAutoStorageKeys (Microsoft.Batch/batchAccounts@2017-09-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2017-09-01
+* **Output**: any
+
+## ActivateApplicationPackageParameters
+### Properties
+* **format**: string (Required): The format of the application package binary file.
 
 ## ApplicationPackage
 ### Properties

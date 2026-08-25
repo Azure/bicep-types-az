@@ -179,6 +179,22 @@
 * **Input**: [VirtualMachineInstallPatchesParameters](#virtualmachineinstallpatchesparameters)
 * **Output**: [VirtualMachineInstallPatchesResult](#virtualmachineinstallpatchesresult)
 
+## Function restart (Microsoft.ConnectedVMwarevSphere/virtualMachines@2022-01-10-preview)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachines
+* **ApiVersion**: 2022-01-10-preview
+* **Output**: any
+
+## Function start (Microsoft.ConnectedVMwarevSphere/virtualMachines@2022-01-10-preview)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachines
+* **ApiVersion**: 2022-01-10-preview
+* **Output**: any
+
+## Function stop (Microsoft.ConnectedVMwarevSphere/virtualMachines@2022-01-10-preview)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachines
+* **ApiVersion**: 2022-01-10-preview
+* **Input**: [StopVirtualMachineOptions](#stopvirtualmachineoptions)
+* **Output**: any
+
 ## AvailablePatchCountByClassification
 ### Properties
 * **critical**: int (ReadOnly): Number of critical patches available for installation.
@@ -519,6 +535,10 @@ This property is used in relative allocation between resource consumers.
 ## SecurityProfile
 ### Properties
 * **uefiSettings**: [UefiSettings](#uefisettings): Specifies the security settings like secure boot used while creating the virtual machine.
+
+## StopVirtualMachineOptions
+### Properties
+* **skipShutdown**: bool: Gets or sets a value indicating whether to request non-graceful VM shutdown. True value for this flag indicates non-graceful shutdown whereas false indicates otherwise. Defaults to false.
 
 ## StorageProfile
 ### Properties

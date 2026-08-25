@@ -22,6 +22,8 @@ warning | Skipping Transactions_ListByBillingProfile due to required query param
 warning | Skipping Transactions_ListByBillingProfile due to required query parameter "periodEndDate"
 warning | Skipping Transactions_ListByBillingProfile due to required query parameter "type"
 warning | Skipping resource POST action path '/providers/Microsoft.Billing/validateAddress': Unable to find type segments
+warning | Resource action cancel under path '/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingSubscriptions/{billingSubscriptionName}/cancel' has no response schema. Returning 'any'.
+warning | Resource action amend under path '/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/invoices/{invoiceName}/amend' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -361,6 +363,7 @@ warning | Skipping Invoices_ListByBillingProfile due to required query parameter
 warning | Skipping Invoices_ListByBillingSubscription due to required query parameter "periodStartDate"
 warning | Skipping Invoices_ListByBillingSubscription due to required query parameter "periodEndDate"
 warning | Skipping resource POST action path '/providers/Microsoft.Billing/validateAddress': Unable to find type segments
+warning | Resource action elevate under path '/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/invoiceSections/{invoiceSectionName}/elevate' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -493,6 +496,10 @@ warning | Skipping Transactions_ListByInvoiceSectionName due to required query p
 warning | Skipping Transactions_ListByInvoiceSectionName due to required query parameter "endDate"
 warning | Skipping path '/subscriptions/{subscriptionId}/providers/Microsoft.Billing/billingProperty': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping resource POST action path '/providers/Microsoft.Billing/validateAddress': Unable to find type segments
+warning | Skipping resource POST action path '/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/providers/Microsoft.Billing/createBillingRoleAssignment': Unable to find type segments
+warning | Skipping resource POST action path '/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/invoiceSections/{invoiceSectionName}/providers/Microsoft.Billing/createBillingRoleAssignment': Unable to find type segments
+warning | Skipping resource POST action path '/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/providers/Microsoft.Billing/createBillingRoleAssignment': Unable to find type segments
+warning | Resource action elevate under path '/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/invoiceSections/{invoiceSectionName}/elevate' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.

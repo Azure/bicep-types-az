@@ -6871,6 +6871,75 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "resetServicePrincipalProfile",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/473"
+    },
+    "input": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetAADProfile",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/473"
+    },
+    "input": {
+      "$ref": "#/200"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateClusterCertificates",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/473"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "abort",
+    "resourceType": "Microsoft.ContainerService/managedclusters",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/473"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateServiceAccountSigningKeys",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/473"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/473"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/473"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "RunCommandRequest",
     "properties": {
@@ -6910,7 +6979,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/484"
+          "$ref": "#/491"
         },
         "flags": 0,
         "description": "Properties of command result."
@@ -6971,10 +7040,10 @@
     "resourceType": "Microsoft.ContainerService/managedClusters",
     "apiVersion": "2024-10-01",
     "output": {
-      "$ref": "#/483"
+      "$ref": "#/490"
     },
     "input": {
-      "$ref": "#/482"
+      "$ref": "#/489"
     }
   },
   {
@@ -6987,6 +7056,89 @@
     },
     "input": {
       "$ref": "#/225"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "abort",
+    "resourceType": "Microsoft.ContainerService/managedclusters/agentPools",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/473"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentPoolDeleteMachinesParameter",
+    "properties": {
+      "machineNames": {
+        "type": {
+          "$ref": "#/496"
+        },
+        "flags": 1,
+        "description": "The agent pool machine names."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteMachines",
+    "resourceType": "Microsoft.ContainerService/managedClusters/agentPools",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/473"
+    },
+    "input": {
+      "$ref": "#/495"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentPool",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/347"
+        },
+        "flags": 0,
+        "description": "Properties of an agent pool."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeNodeImageVersion",
+    "resourceType": "Microsoft.ContainerService/managedClusters/agentPools",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/498"
     }
   }
 ]

@@ -7188,5 +7188,98 @@
         "description": "Gets or sets the target hybrid runbook worker group."
       }
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "move",
+    "resourceType": "Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers",
+    "apiVersion": "2023-05-15-preview",
+    "output": {
+      "$ref": "#/87"
+    },
+    "input": {
+      "$ref": "#/470"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+    "apiVersion": "2023-05-15-preview",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+    "apiVersion": "2023-05-15-preview",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+    "apiVersion": "2023-05-15-preview",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "publish",
+    "resourceType": "Microsoft.Automation/automationAccounts/runbooks",
+    "apiVersion": "2023-05-15-preview",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.Automation/automationAccounts/runbooks/draft",
+    "apiVersion": "2023-05-15-preview",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Automation/automationAccounts/runbooks/draft",
+    "apiVersion": "2023-05-15-preview",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.Automation/automationAccounts/runbooks/draft",
+    "apiVersion": "2023-05-15-preview",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Automation/automationAccounts/watchers",
+    "apiVersion": "2023-05-15-preview",
+    "output": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Automation/automationAccounts/watchers",
+    "apiVersion": "2023-05-15-preview",
+    "output": {
+      "$ref": "#/87"
+    }
   }
 ]

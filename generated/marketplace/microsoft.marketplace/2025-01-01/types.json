@@ -2393,12 +2393,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "acknowledgeNotification",
+    "resourceType": "Microsoft.Marketplace/privateStores/offers",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/50"
+    },
+    "input": {
+      "$ref": "#/160"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "QueryRequestApprovalProperties",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/166"
         },
         "flags": 0,
         "description": "The details to get the request plans statuses"
@@ -2418,7 +2430,7 @@
       },
       "planIds": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "Current plans list"
@@ -2451,7 +2463,7 @@
       },
       "plansDetails": {
         "type": {
-          "$ref": "#/168"
+          "$ref": "#/169"
         },
         "flags": 0,
         "description": "Gets or sets the plans details"
@@ -2486,10 +2498,10 @@
     "resourceType": "Microsoft.Marketplace/privateStores/requestApprovals",
     "apiVersion": "2025-01-01",
     "output": {
-      "$ref": "#/167"
+      "$ref": "#/168"
     },
     "input": {
-      "$ref": "#/164"
+      "$ref": "#/165"
     }
   },
   {
@@ -2498,7 +2510,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/171"
+          "$ref": "#/172"
         },
         "flags": 0,
         "description": "Withdraw properties details"
@@ -2523,6 +2535,18 @@
         "flags": 0,
         "description": "The offer's publisher id"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "withdrawPlan",
+    "resourceType": "Microsoft.Marketplace/privateStores/requestApprovals",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/50"
+    },
+    "input": {
+      "$ref": "#/171"
     }
   },
   {
@@ -2572,7 +2596,7 @@
     "resourceType": "Microsoft.Marketplace/privateStores/collections",
     "apiVersion": "2025-01-01",
     "output": {
-      "$ref": "#/172"
+      "$ref": "#/174"
     }
   },
   {
@@ -2581,7 +2605,7 @@
     "resourceType": "Microsoft.Marketplace/privateStores/collections",
     "apiVersion": "2025-01-01",
     "output": {
-      "$ref": "#/172"
+      "$ref": "#/174"
     }
   },
   {
@@ -2590,7 +2614,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/176"
+          "$ref": "#/178"
         },
         "flags": 0,
         "description": "transfer offers properties details"
@@ -2603,7 +2627,7 @@
     "properties": {
       "targetCollections": {
         "type": {
-          "$ref": "#/177"
+          "$ref": "#/179"
         },
         "flags": 0,
         "description": "Target collections ids"
@@ -2617,7 +2641,7 @@
       },
       "offerIdsList": {
         "type": {
-          "$ref": "#/178"
+          "$ref": "#/180"
         },
         "flags": 0,
         "description": "Offers ids list to transfer from source collection to target collection(s)"
@@ -2642,14 +2666,14 @@
     "properties": {
       "succeeded": {
         "type": {
-          "$ref": "#/180"
+          "$ref": "#/182"
         },
         "flags": 0,
         "description": "Succeeded collections"
       },
       "failed": {
         "type": {
-          "$ref": "#/181"
+          "$ref": "#/183"
         },
         "flags": 0,
         "description": "Failed collections"
@@ -2674,10 +2698,10 @@
     "resourceType": "Microsoft.Marketplace/privateStores/collections",
     "apiVersion": "2025-01-01",
     "output": {
-      "$ref": "#/179"
+      "$ref": "#/181"
     },
     "input": {
-      "$ref": "#/175"
+      "$ref": "#/177"
     }
   },
   {
@@ -2686,7 +2710,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/184"
+          "$ref": "#/186"
         },
         "flags": 0,
         "description": "Subscriptions ids list"
@@ -2699,7 +2723,7 @@
     "properties": {
       "subscriptionIds": {
         "type": {
-          "$ref": "#/185"
+          "$ref": "#/187"
         },
         "flags": 0,
         "description": "Subscription ids list"
@@ -2718,7 +2742,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/190"
+          "$ref": "#/192"
         },
         "flags": 2
       },
@@ -2744,7 +2768,7 @@
       },
       "offers": {
         "type": {
-          "$ref": "#/188"
+          "$ref": "#/190"
         },
         "flags": 0,
         "description": "List of offers"
@@ -2757,7 +2781,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/189"
+          "$ref": "#/191"
         },
         "flags": 0
       }
@@ -2772,7 +2796,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/187"
+      "$ref": "#/189"
     }
   },
   {
@@ -2781,10 +2805,10 @@
     "resourceType": "Microsoft.Marketplace/privateStores/collections",
     "apiVersion": "2025-01-01",
     "output": {
-      "$ref": "#/186"
+      "$ref": "#/188"
     },
     "input": {
-      "$ref": "#/183"
+      "$ref": "#/185"
     }
   },
   {
@@ -2802,7 +2826,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/194"
+          "$ref": "#/196"
         },
         "flags": 0
       },
@@ -2819,6 +2843,18 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/59"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setRules",
+    "resourceType": "Microsoft.Marketplace/privateStores/collections",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/50"
+    },
+    "input": {
+      "$ref": "#/195"
     }
   },
   {
@@ -2868,10 +2904,10 @@
     "resourceType": "Microsoft.Marketplace/privateStores/collections/offers",
     "apiVersion": "2025-01-01",
     "output": {
-      "$ref": "#/195"
+      "$ref": "#/198"
     },
     "input": {
-      "$ref": "#/183"
+      "$ref": "#/185"
     }
   },
   {
@@ -2880,7 +2916,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/198"
+          "$ref": "#/201"
         },
         "flags": 0,
         "description": "Object describes multiple context and plans."
@@ -2907,7 +2943,7 @@
       },
       "plansContext": {
         "type": {
-          "$ref": "#/201"
+          "$ref": "#/204"
         },
         "flags": 0
       }
@@ -2926,7 +2962,7 @@
       },
       "planIds": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/203"
         },
         "flags": 0,
         "description": "List of plan IDs."
@@ -2942,7 +2978,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/199"
+      "$ref": "#/202"
     }
   },
   {
@@ -2951,10 +2987,10 @@
     "resourceType": "Microsoft.Marketplace/privateStores/collections/offers",
     "apiVersion": "2025-01-01",
     "output": {
-      "$ref": "#/195"
+      "$ref": "#/198"
     },
     "input": {
-      "$ref": "#/197"
+      "$ref": "#/200"
     }
   }
 ]

@@ -68,6 +68,26 @@
 * **ApiVersion**: 2020-08-01
 * **Output**: [NotebookResourceInfo](#notebookresourceinfo)
 
+## Function restart (Microsoft.MachineLearningServices/workspaces/computes@2020-08-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2020-08-01
+* **Output**: any
+
+## Function resyncKeys (Microsoft.MachineLearningServices/workspaces@2020-08-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2020-08-01
+* **Output**: any
+
+## Function start (Microsoft.MachineLearningServices/workspaces/computes@2020-08-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2020-08-01
+* **Output**: any
+
+## Function stop (Microsoft.MachineLearningServices/workspaces/computes@2020-08-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2020-08-01
+* **Output**: any
+
 ## Function updateQuotas (Microsoft.MachineLearningServices/locations@2020-08-01)
 * **Resource**: Microsoft.MachineLearningServices/locations
 * **ApiVersion**: 2020-08-01

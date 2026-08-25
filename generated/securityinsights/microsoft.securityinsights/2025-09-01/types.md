@@ -373,6 +373,12 @@
 * **ApiVersion**: 2025-09-01
 * **Output**: [IncidentAlertList](#incidentalertlist)
 
+## Function appendTags (Microsoft.SecurityInsights/threatIntelligence/indicators@2025-09-01)
+* **Resource**: Microsoft.SecurityInsights/threatIntelligence/indicators
+* **ApiVersion**: 2025-09-01
+* **Input**: [ThreatIntelligenceAppendTags](#threatintelligenceappendtags)
+* **Output**: any
+
 ## Function bookmarks (Microsoft.SecurityInsights/incidents@2025-09-01)
 * **Resource**: Microsoft.SecurityInsights/incidents
 * **ApiVersion**: 2025-09-01
@@ -406,6 +412,18 @@
 * **ApiVersion**: 2025-09-01
 * **Input**: [ThreatIntelligenceIndicatorModel](#threatintelligenceindicatormodel)
 * **Output**: [ThreatIntelligenceInformation](#threatintelligenceinformation)
+
+## Function runPlaybook (Microsoft.SecurityInsights/entities@2025-09-01)
+* **Resource**: Microsoft.SecurityInsights/entities
+* **ApiVersion**: 2025-09-01
+* **Input**: [EntityManualTriggerRequestBody](#entitymanualtriggerrequestbody)
+* **Output**: any
+
+## Function runPlaybook (Microsoft.SecurityInsights/incidents@2025-09-01)
+* **Resource**: Microsoft.SecurityInsights/incidents
+* **ApiVersion**: 2025-09-01
+* **Input**: [ManualTriggerRequestBody](#manualtriggerrequestbody)
+* **Output**: any
 
 ## AADDataConnectorProperties
 ### Properties
@@ -1081,6 +1099,12 @@ The logo value should be in SVG format.
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## EntityManualTriggerRequestBody
+### Properties
+* **incidentArmId**: string: Incident ARM id.
+* **logicAppsResourceId**: string (Required): The resource id of the playbook resource.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The tenant id of the playbook resource.
+
 ## EntityMapping
 ### Properties
 * **entityType**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'IP' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string: The V3 type of the mapped entity
@@ -1446,6 +1470,11 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 * **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
 * **malwareName**: string (ReadOnly): The malware name by the vendor, e.g. Win32/Toga!rfn
 * **processEntityIds**: string[] (ReadOnly): List of linked process entity identifiers on which the malware was found.
+
+## ManualTriggerRequestBody
+### Properties
+* **logicAppsResourceId**: string (Required): Related Analytic rule resource id
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Universally Unique Identifier
 
 ## McasDataConnectorDataTypes
 ### Properties
@@ -2058,6 +2087,10 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 * **threatDescription**: string (ReadOnly): Threat description (free text)
 * **threatName**: string (ReadOnly): Threat name (e.g. "Jedobot malware")
 * **threatType**: string (ReadOnly): Threat type (e.g. "Botnet")
+
+## ThreatIntelligenceAppendTags
+### Properties
+* **threatIntelligenceTags**: string[]: List of tags to be appended.
 
 ## ThreatIntelligenceExternalReference
 ### Properties

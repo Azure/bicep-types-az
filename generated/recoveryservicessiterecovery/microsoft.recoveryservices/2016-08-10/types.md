@@ -234,6 +234,11 @@
 * **ApiVersion**: 2016-08-10
 * **Output**: [RecoveryPlan](#recoveryplan)
 
+## Function migratetoaad (Microsoft.RecoveryServices/vaults/replicationFabrics@2016-08-10)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics
+* **ApiVersion**: 2016-08-10
+* **Output**: any
+
 ## Function plannedFailover (Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems@2016-08-10)
 * **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems
 * **ApiVersion**: 2016-08-10
@@ -256,6 +261,33 @@
 * **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders
 * **ApiVersion**: 2016-08-10
 * **Output**: [RecoveryServicesProvider](#recoveryservicesprovider)
+
+## Function remove (Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems@2016-08-10)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems
+* **ApiVersion**: 2016-08-10
+* **Input**: [DisableProtectionInput](#disableprotectioninput)
+* **Output**: any
+
+## Function remove (Microsoft.RecoveryServices/vaults/replicationFabrics@2016-08-10)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics
+* **ApiVersion**: 2016-08-10
+* **Output**: any
+
+## Function remove (Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders@2016-08-10)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders
+* **ApiVersion**: 2016-08-10
+* **Output**: any
+
+## Function remove (Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers@2016-08-10)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers
+* **ApiVersion**: 2016-08-10
+* **Output**: any
+
+## Function remove (Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings@2016-08-10)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings
+* **ApiVersion**: 2016-08-10
+* **Input**: [RemoveProtectionContainerMappingInput](#removeprotectioncontainermappinginput)
+* **Output**: any
 
 ## Function renewCertificate (Microsoft.RecoveryServices/vaults/replicationFabrics@2016-08-10)
 * **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics
@@ -613,6 +645,26 @@
 * **symbolicName**: string: The symbolic name of data store.
 * **type**: string: The type of data store.
 * **uuid**: string: The uuid of data store.
+
+## DisableProtectionInput
+### Properties
+* **properties**: [DisableProtectionInputProperties](#disableprotectioninputproperties): Disable protection input properties.
+
+## DisableProtectionInputProperties
+### Properties
+* **disableProtectionReason**: 'MigrationComplete' | 'NotSpecified': Disable protection reason. It can have values NotSpecified/MigrationComplete.
+* **replicationProviderInput**: [DisableProtectionProviderSpecificInput](#disableprotectionproviderspecificinput): Replication provider specific input.
+
+## DisableProtectionProviderSpecificInput
+* **Discriminator**: instanceType
+
+### Base Properties
+
+### InMageDisableProtectionProviderSpecificInput
+#### Properties
+* **instanceType**: 'InMage' (Required): The class type.
+* **replicaVmDeletionStatus**: string: A value indicating whether the replica VM should be destroyed or retained. Values from Delete and Retain.
+
 
 ## DiscoverProtectableItemRequest
 ### Properties
@@ -1973,6 +2025,14 @@
 * **providerVersionState**: string: DRA version status.
 * **serverVersion**: string: The fabric provider.
 
+## RemoveProtectionContainerMappingInput
+### Properties
+* **properties**: [RemoveProtectionContainerMappingInputProperties](#removeprotectioncontainermappinginputproperties): Configure protection input properties.
+
+## RemoveProtectionContainerMappingInputProperties
+### Properties
+* **providerSpecificInput**: [ReplicationProviderContainerUnmappingInput](#replicationprovidercontainerunmappinginput): Provider specific input for unpairing.
+
 ## RenewCertificateInput
 ### Properties
 * **properties**: [RenewCertificateInputProperties](#renewcertificateinputproperties): Renew certificate input properties.
@@ -2018,6 +2078,10 @@
 * **replicationHealthErrors**: [HealthError](#healtherror)[]: List of replication health errors.
 * **testFailoverState**: string: The Test failover state.
 * **testFailoverStateDescription**: string: The Test failover state description.
+
+## ReplicationProviderContainerUnmappingInput
+### Properties
+* **instanceType**: string: The class type.
 
 ## ReplicationProviderSpecificContainerCreationInput
 * **Discriminator**: instanceType

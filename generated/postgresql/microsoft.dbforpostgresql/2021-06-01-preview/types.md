@@ -78,6 +78,22 @@
 * **ApiVersion**: 2021-06-01-preview
 * **Output**: [QueryPerformanceInsightResetDataResult](#queryperformanceinsightresetdataresult)
 
+## Function restart (Microsoft.DBforPostgreSQL/flexibleServers@2021-06-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2021-06-01-preview
+* **Input**: [RestartParameter](#restartparameter)
+* **Output**: any
+
+## Function start (Microsoft.DBforPostgreSQL/flexibleServers@2021-06-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.DBforPostgreSQL/flexibleServers@2021-06-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
+
 ## Backup
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
@@ -141,6 +157,11 @@
 ### Properties
 * **queryId**: string: Query identifier unique to the server.
 * **queryText**: string: Query text.
+
+## RestartParameter
+### Properties
+* **failoverMode**: 'ForcedFailover' | 'ForcedSwitchover' | 'PlannedFailover' | 'PlannedSwitchover' | string: Failover mode.
+* **restartWithFailover**: bool: Indicates whether to restart the server with failover.
 
 ## ServerProperties
 ### Properties

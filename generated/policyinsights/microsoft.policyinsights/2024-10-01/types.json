@@ -2169,6 +2169,15 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "triggerEvaluation",
+    "resourceType": "Microsoft.PolicyInsights/policyStates",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/11"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "Remediation",
     "properties": {
@@ -2215,7 +2224,7 @@
     "resourceType": "Microsoft.PolicyInsights/remediations",
     "apiVersion": "2024-10-01",
     "output": {
-      "$ref": "#/87"
+      "$ref": "#/88"
     }
   },
   {
@@ -2224,7 +2233,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/96"
         },
         "flags": 3,
         "description": "The RemediationDeployment items on this page"
@@ -2272,7 +2281,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/92"
         },
         "flags": 2,
         "description": "Error encountered while remediated the resource."
@@ -2320,14 +2329,14 @@
       },
       "details": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/93"
         },
         "flags": 2,
         "description": "Internal error details."
       },
       "additionalInfo": {
         "type": {
-          "$ref": "#/94"
+          "$ref": "#/95"
         },
         "flags": 2,
         "description": "Additional scenario specific error details."
@@ -2337,7 +2346,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/91"
+      "$ref": "#/92"
     }
   },
   {
@@ -2363,13 +2372,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/93"
+      "$ref": "#/94"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/90"
+      "$ref": "#/91"
     }
   },
   {
@@ -2378,7 +2387,7 @@
     "resourceType": "Microsoft.PolicyInsights/remediations",
     "apiVersion": "2024-10-01",
     "output": {
-      "$ref": "#/89"
+      "$ref": "#/90"
     }
   }
 ]

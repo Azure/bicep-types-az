@@ -555,12 +555,24 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "syncAutoStorageKeys",
+    "resourceType": "Microsoft.Batch/batchAccounts",
+    "apiVersion": "2017-05-01",
+    "output": {
+      "$ref": "#/40"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "BatchAccountRegenerateKeyParameters",
     "properties": {
       "keyName": {
         "type": {
-          "$ref": "#/43"
+          "$ref": "#/45"
         },
         "flags": 1,
         "description": "The type of account key to regenerate."
@@ -579,10 +591,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/41"
+        "$ref": "#/43"
       },
       {
-        "$ref": "#/42"
+        "$ref": "#/44"
       }
     ]
   },
@@ -619,10 +631,10 @@
     "resourceType": "Microsoft.Batch/batchAccounts",
     "apiVersion": "2017-05-01",
     "output": {
-      "$ref": "#/44"
+      "$ref": "#/46"
     },
     "input": {
-      "$ref": "#/40"
+      "$ref": "#/42"
     }
   },
   {
@@ -631,7 +643,32 @@
     "resourceType": "Microsoft.Batch/batchAccounts",
     "apiVersion": "2017-05-01",
     "output": {
-      "$ref": "#/44"
+      "$ref": "#/46"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActivateApplicationPackageParameters",
+    "properties": {
+      "format": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The format of the application package binary file."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.Batch/batchAccounts/applications/versions",
+    "apiVersion": "2017-05-01",
+    "output": {
+      "$ref": "#/40"
+    },
+    "input": {
+      "$ref": "#/49"
     }
   },
   {
@@ -647,7 +684,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/48"
+          "$ref": "#/52"
         },
         "flags": 1,
         "description": "The resource type. Must be set to Microsoft.Batch/batchAccounts"
@@ -671,7 +708,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/52"
+          "$ref": "#/56"
         },
         "flags": 2,
         "description": "Gets the reason that a Batch account name could not be used. The Reason element is only returned if NameAvailable is false."
@@ -697,10 +734,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/50"
+        "$ref": "#/54"
       },
       {
-        "$ref": "#/51"
+        "$ref": "#/55"
       }
     ]
   },
@@ -710,10 +747,10 @@
     "resourceType": "Microsoft.Batch/locations",
     "apiVersion": "2017-05-01",
     "output": {
-      "$ref": "#/49"
+      "$ref": "#/53"
     },
     "input": {
-      "$ref": "#/47"
+      "$ref": "#/51"
     }
   }
 ]

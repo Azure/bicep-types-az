@@ -2485,6 +2485,27 @@
     ]
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs",
+    "apiVersion": "2016-03-01",
+    "output": {
+      "$ref": "#/25"
+    },
+    "input": {
+      "$ref": "#/142"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs",
+    "apiVersion": "2016-03-01",
+    "output": {
+      "$ref": "#/25"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ResourceTestStatus",
     "properties": {
@@ -2497,7 +2518,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/150"
         },
         "flags": 2,
         "description": "Describes the error that occurred."
@@ -2530,7 +2551,7 @@
     "resourceType": "Microsoft.StreamAnalytics/streamingjobs/inputs",
     "apiVersion": "2016-03-01",
     "output": {
-      "$ref": "#/147"
+      "$ref": "#/149"
     },
     "input": {
       "$ref": "#/21"
@@ -2542,7 +2563,7 @@
     "resourceType": "Microsoft.StreamAnalytics/streamingjobs/outputs",
     "apiVersion": "2016-03-01",
     "output": {
-      "$ref": "#/147"
+      "$ref": "#/149"
     },
     "input": {
       "$ref": "#/67"
@@ -2554,7 +2575,7 @@
     "resourceType": "Microsoft.StreamAnalytics/streamingjobs/functions",
     "apiVersion": "2016-03-01",
     "output": {
-      "$ref": "#/147"
+      "$ref": "#/149"
     },
     "input": {
       "$ref": "#/102"
@@ -2567,10 +2588,10 @@
     "baseProperties": {},
     "elements": {
       "Microsoft.MachineLearning/WebService": {
-        "$ref": "#/153"
+        "$ref": "#/155"
       },
       "Microsoft.StreamAnalytics/JavascriptUdf": {
-        "$ref": "#/157"
+        "$ref": "#/159"
       }
     }
   },
@@ -2580,14 +2601,14 @@
     "properties": {
       "bindingRetrievalProperties": {
         "type": {
-          "$ref": "#/154"
+          "$ref": "#/156"
         },
         "flags": 0,
         "description": "The binding retrieval properties associated with an Azure Machine learning web service."
       },
       "bindingType": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/158"
         },
         "flags": 1,
         "description": "Indicates the function binding type."
@@ -2607,7 +2628,7 @@
       },
       "udfType": {
         "type": {
-          "$ref": "#/155"
+          "$ref": "#/157"
         },
         "flags": 0,
         "description": "The function type."
@@ -2628,14 +2649,14 @@
     "properties": {
       "bindingRetrievalProperties": {
         "type": {
-          "$ref": "#/158"
+          "$ref": "#/160"
         },
         "flags": 0,
         "description": "The binding retrieval properties associated with a JavaScript function."
       },
       "bindingType": {
         "type": {
-          "$ref": "#/160"
+          "$ref": "#/162"
         },
         "flags": 1,
         "description": "Indicates the function binding type."
@@ -2655,7 +2676,7 @@
       },
       "udfType": {
         "type": {
-          "$ref": "#/159"
+          "$ref": "#/161"
         },
         "flags": 0,
         "description": "The function type."
@@ -2679,7 +2700,7 @@
       "$ref": "#/102"
     },
     "input": {
-      "$ref": "#/152"
+      "$ref": "#/154"
     }
   }
 ]

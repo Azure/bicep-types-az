@@ -1459,5 +1459,20 @@
     "input": {
       "$ref": "#/104"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setBackgroundVisualization",
+    "resourceType": "Microsoft.Monitor/accounts/issues",
+    "apiVersion": "2025-10-03-preview",
+    "output": {
+      "$ref": "#/111"
+    },
+    "input": {
+      "$ref": "#/100"
+    }
   }
 ]

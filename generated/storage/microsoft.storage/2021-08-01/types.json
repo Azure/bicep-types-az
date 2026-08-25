@@ -6386,6 +6386,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2021-08-01",
+    "output": {
+      "$ref": "#/464"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "aborthnsonmigration",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2021-08-01",
+    "output": {
+      "$ref": "#/464"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "restoreBlobRanges",
     "resourceType": "Microsoft.Storage/storageAccounts",
@@ -6398,12 +6419,21 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "revokeUserDelegationKeys",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2021-08-01",
+    "output": {
+      "$ref": "#/464"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "LocalUserKeys",
     "properties": {
       "sshAuthorizedKeys": {
         "type": {
-          "$ref": "#/466"
+          "$ref": "#/470"
         },
         "flags": 0,
         "description": "Optional, local user ssh authorized keys for SFTP."
@@ -6429,7 +6459,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts/localUsers",
     "apiVersion": "2021-08-01",
     "output": {
-      "$ref": "#/465"
+      "$ref": "#/469"
     }
   },
   {
@@ -6438,7 +6468,7 @@
     "properties": {
       "sshPassword": {
         "type": {
-          "$ref": "#/469"
+          "$ref": "#/473"
         },
         "flags": 2,
         "description": "Auto generated password by the server for SSH authentication if hasSshPassword is set to true on the creation of local user."
@@ -6455,7 +6485,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts/localUsers",
     "apiVersion": "2021-08-01",
     "output": {
-      "$ref": "#/468"
+      "$ref": "#/472"
     }
   },
   {
@@ -6471,7 +6501,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/473"
+          "$ref": "#/477"
         },
         "flags": 1,
         "description": "Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP."
@@ -6493,7 +6523,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/472"
+      "$ref": "#/476"
     }
   },
   {
@@ -6502,10 +6532,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2021-08-01",
     "output": {
-      "$ref": "#/471"
+      "$ref": "#/475"
     },
     "input": {
-      "$ref": "#/471"
+      "$ref": "#/475"
     }
   },
   {
@@ -6514,10 +6544,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2021-08-01",
     "output": {
-      "$ref": "#/471"
+      "$ref": "#/475"
     },
     "input": {
-      "$ref": "#/471"
+      "$ref": "#/475"
     }
   },
   {
@@ -6526,7 +6556,7 @@
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/482"
+          "$ref": "#/486"
         },
         "flags": 1,
         "description": "Specifies the lease action. Can be one of the available actions."
@@ -6585,19 +6615,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/477"
-      },
-      {
-        "$ref": "#/478"
-      },
-      {
-        "$ref": "#/479"
-      },
-      {
-        "$ref": "#/480"
-      },
-      {
         "$ref": "#/481"
+      },
+      {
+        "$ref": "#/482"
+      },
+      {
+        "$ref": "#/483"
+      },
+      {
+        "$ref": "#/484"
+      },
+      {
+        "$ref": "#/485"
       },
       {
         "$ref": "#/2"
@@ -6630,10 +6660,19 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2021-08-01",
     "output": {
-      "$ref": "#/483"
+      "$ref": "#/487"
     },
     "input": {
-      "$ref": "#/476"
+      "$ref": "#/480"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
+    "apiVersion": "2021-08-01",
+    "output": {
+      "$ref": "#/464"
     }
   },
   {
@@ -6683,7 +6722,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
     "apiVersion": "2021-08-01",
     "output": {
-      "$ref": "#/485"
+      "$ref": "#/490"
     }
   },
   {
@@ -6692,10 +6731,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
     "apiVersion": "2021-08-01",
     "output": {
-      "$ref": "#/485"
+      "$ref": "#/490"
     },
     "input": {
-      "$ref": "#/485"
+      "$ref": "#/490"
     }
   },
   {
@@ -6719,12 +6758,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.Storage/storageAccounts/fileServices/shares",
+    "apiVersion": "2021-08-01",
+    "output": {
+      "$ref": "#/464"
+    },
+    "input": {
+      "$ref": "#/493"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "LeaseShareRequest",
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/495"
+          "$ref": "#/501"
         },
         "flags": 1,
         "description": "Specifies the lease action. Can be one of the available actions."
@@ -6783,19 +6834,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/490"
+        "$ref": "#/496"
       },
       {
-        "$ref": "#/491"
+        "$ref": "#/497"
       },
       {
-        "$ref": "#/492"
+        "$ref": "#/498"
       },
       {
-        "$ref": "#/493"
+        "$ref": "#/499"
       },
       {
-        "$ref": "#/494"
+        "$ref": "#/500"
       },
       {
         "$ref": "#/2"
@@ -6828,10 +6879,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/fileServices/shares",
     "apiVersion": "2021-08-01",
     "output": {
-      "$ref": "#/496"
+      "$ref": "#/502"
     },
     "input": {
-      "$ref": "#/489"
+      "$ref": "#/495"
     }
   }
 ]

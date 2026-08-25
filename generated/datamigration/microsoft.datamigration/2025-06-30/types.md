@@ -103,6 +103,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DataMigration/sqlMigrationServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.DataMigration/databaseMigrations@2025-06-30)
+* **Resource**: Microsoft.DataMigration/databaseMigrations
+* **ApiVersion**: 2025-06-30
+* **Input**: [MigrationOperationInput](#migrationoperationinput)
+* **Output**: any
+
 ## Function cancel (Microsoft.DataMigration/services/projects/tasks@2025-06-30)
 * **Resource**: Microsoft.DataMigration/services/projects/tasks
 * **ApiVersion**: 2025-06-30
@@ -136,6 +142,12 @@
 * **Input**: [CommandProperties](#commandproperties)
 * **Output**: [CommandProperties](#commandproperties)
 
+## Function cutover (Microsoft.DataMigration/databaseMigrations@2025-06-30)
+* **Resource**: Microsoft.DataMigration/databaseMigrations
+* **ApiVersion**: 2025-06-30
+* **Input**: [MigrationOperationInput](#migrationoperationinput)
+* **Output**: any
+
 ## Function deleteNode (Microsoft.DataMigration/sqlMigrationServices@2025-06-30)
 * **Resource**: Microsoft.DataMigration/sqlMigrationServices
 * **ApiVersion**: 2025-06-30
@@ -167,6 +179,22 @@
 * **ApiVersion**: 2025-06-30
 * **Input**: [RegenAuthKeys](#regenauthkeys)
 * **Output**: [RegenAuthKeys](#regenauthkeys)
+
+## Function retry (Microsoft.DataMigration/databaseMigrations@2025-06-30)
+* **Resource**: Microsoft.DataMigration/databaseMigrations
+* **ApiVersion**: 2025-06-30
+* **Input**: [MigrationOperationInput](#migrationoperationinput)
+* **Output**: [DatabaseMigrationSqlDb](#databasemigrationsqldb)
+
+## Function start (Microsoft.DataMigration/services@2025-06-30)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2025-06-30
+* **Output**: any
+
+## Function stop (Microsoft.DataMigration/services@2025-06-30)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2025-06-30
+* **Output**: any
 
 ## AuthenticationKeys
 ### Properties
@@ -508,6 +536,20 @@
 * **targetServerVersion**: string (ReadOnly): Target server version
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
 
+## CopyProgressDetails
+### Properties
+* **copyDuration**: int (ReadOnly): Copy Duration in seconds
+* **copyStart**: string (ReadOnly): Copy Start
+* **copyThroughput**: int (ReadOnly): Copy throughput in KBps
+* **dataRead**: int (ReadOnly): Bytes read
+* **dataWritten**: int (ReadOnly): Bytes written
+* **parallelCopyType**: string (ReadOnly): Type of parallel copy (Dynamic range, Physical partition, none).
+* **rowsCopied**: int (ReadOnly): Rows Copied
+* **rowsRead**: int (ReadOnly): Rows read
+* **status**: string (ReadOnly): Status of the Copy activity (InProgress, Succeeded, Failed, Canceled).
+* **tableName**: string (ReadOnly): Table Name
+* **usedParallelCopies**: int (ReadOnly): The degree of parallelization.
+
 ## DatabaseBackupInfo
 ### Properties
 * **backupFiles**: string[] (ReadOnly): The list of backup files for the current database.
@@ -548,6 +590,35 @@
 * **sourceMongoConnection**: [MongoConnectionInformation](#mongoconnectioninformation): Source Mongo connection details.
 * **startedOn**: string (ReadOnly): Database migration start time.
 * **targetMongoConnection**: [MongoConnectionInformation](#mongoconnectioninformation): Target Cosmos DB Mongo connection details.
+
+## DatabaseMigrationPropertiesSqlDb
+### Properties
+* **endedOn**: string (ReadOnly): Database migration end time.
+* **kind**: 'MongoToCosmosDbMongo' | 'SqlDb' | 'SqlMi' | 'SqlVm' | string (Required)
+* **migrationFailureError**: [ErrorInfo](#errorinfo) (ReadOnly): Error details in case of migration failure.
+* **migrationOperationId**: string: ID for current migration operation.
+* **migrationService**: string: Resource Id of the Migration Service.
+* **migrationStatus**: string (ReadOnly): Migration status.
+* **migrationStatusDetails**: [SqlDbMigrationStatusDetails](#sqldbmigrationstatusdetails) (ReadOnly): Detailed migration status. Not included by default.
+* **offlineConfiguration**: [SqlDbOfflineConfiguration](#sqldbofflineconfiguration) (ReadOnly): Offline configuration.
+* **provisioningError**: string: Error message for migration provisioning failure, if any.
+* **provisioningState**: 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning State of migration. ProvisioningState as Succeeded implies that validations have been performed and migration has started.
+* **scope**: string: Resource Id of the target resource.
+* **sourceDatabaseName**: string: Name of the source database.
+* **sourceServerName**: string (ReadOnly): Name of the source sql server.
+* **sourceSqlConnection**: [SqlConnectionInformation](#sqlconnectioninformation): Source SQL Server connection details.
+* **startedOn**: string (ReadOnly): Database migration start time.
+* **tableList**: string[]: List of tables to copy.
+* **targetDatabaseCollation**: string: Database collation to be used for the target database.
+* **targetSqlConnection**: [SqlConnectionInformation](#sqlconnectioninformation): Target SQL DB connection details.
+
+## DatabaseMigrationSqlDb
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [DatabaseMigrationPropertiesSqlDb](#databasemigrationpropertiessqldb): Database Migration Resource properties for SQL database.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## DatabaseTable
 ### Properties
@@ -1571,6 +1642,10 @@
 * **isEligibleForMigration**: bool (ReadOnly): Whether object is eligible for migration or not.
 * **validationMessages**: string[] (ReadOnly): Information about eligibility failure for the server object.
 
+## MigrationOperationInput
+### Properties
+* **migrationOperationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: ID tracking migration operation.
+
 ## MigrationReportResult
 ### Properties
 * **id**: string: Migration validation result identifier
@@ -2359,6 +2434,25 @@
 * **trustServerCertificate**: bool: Whether to trust the server certificate
 * **type**: string (Required): Type of connection info
 * **userName**: string: User name
+
+## SqlConnectionInformation
+### Properties
+* **authentication**: string: Authentication type.
+* **dataSource**: string: Data source.
+* **encryptConnection**: bool: Whether to encrypt connection or not.
+* **password**: string {sensitive}: Password to connect to source SQL.
+* **trustServerCertificate**: bool: Whether to trust server certificate or not.
+* **userName**: string: User name to connect to source SQL.
+
+## SqlDbMigrationStatusDetails
+### Properties
+* **listOfCopyProgressDetails**: [CopyProgressDetails](#copyprogressdetails)[] (ReadOnly): Details on progress of ADF copy activities.
+* **migrationState**: string (ReadOnly): Current State of Migration.
+* **sqlDataCopyErrors**: string[] (ReadOnly): Sql Data Copy errors, if any.
+
+## SqlDbOfflineConfiguration
+### Properties
+* **offline**: bool (ReadOnly): Offline migration
 
 ## SqlMigrationServiceProperties
 ### Properties

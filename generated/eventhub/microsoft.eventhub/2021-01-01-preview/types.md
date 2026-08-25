@@ -103,6 +103,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.EventHub/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function breakPairing (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2021-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2021-01-01-preview
+* **Output**: any
+
+## Function failover (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2021-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2021-01-01-preview
+* **Output**: any
+
 ## Function listKeys (Microsoft.EventHub/namespaces/authorizationRules@2021-01-01-preview)
 * **Resource**: Microsoft.EventHub/namespaces/authorizationRules
 * **ApiVersion**: 2021-01-01-preview

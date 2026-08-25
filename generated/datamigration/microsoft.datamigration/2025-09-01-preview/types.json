@@ -17765,6 +17765,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/647"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/647"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DeleteNode",
     "properties": {
@@ -17790,10 +17808,10 @@
     "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1262"
+      "$ref": "#/1264"
     },
     "input": {
-      "$ref": "#/1262"
+      "$ref": "#/1264"
     }
   },
   {
@@ -17822,7 +17840,7 @@
     "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1264"
+      "$ref": "#/1266"
     }
   },
   {
@@ -17838,7 +17856,7 @@
       },
       "nodes": {
         "type": {
-          "$ref": "#/1269"
+          "$ref": "#/1271"
         },
         "flags": 2,
         "description": "Integration Runtime node monitoring data."
@@ -17851,7 +17869,7 @@
     "properties": {
       "additionalProperties": {
         "type": {
-          "$ref": "#/1268"
+          "$ref": "#/1270"
         },
         "flags": 2,
         "description": "Unmatched properties from the message are deserialized in this collection."
@@ -17925,7 +17943,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1267"
+      "$ref": "#/1269"
     }
   },
   {
@@ -17934,7 +17952,7 @@
     "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1266"
+      "$ref": "#/1268"
     }
   },
   {
@@ -17970,10 +17988,10 @@
     "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1271"
+      "$ref": "#/1273"
     },
     "input": {
-      "$ref": "#/1271"
+      "$ref": "#/1273"
     }
   },
   {
@@ -17989,7 +18007,7 @@
       },
       "headers": {
         "type": {
-          "$ref": "#/1274"
+          "$ref": "#/1276"
         },
         "flags": 0,
         "description": "Dictionary of <string>"
@@ -18010,7 +18028,7 @@
     "resourceType": "Microsoft.DataMigration/services/projects/files",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1273"
+      "$ref": "#/1275"
     }
   },
   {
@@ -18019,7 +18037,7 @@
     "resourceType": "Microsoft.DataMigration/services/projects/files",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1273"
+      "$ref": "#/1275"
     }
   },
   {
@@ -18076,7 +18094,7 @@
     "resourceType": "Microsoft.DataMigration/services/projects/tasks",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1277"
+      "$ref": "#/1279"
     }
   },
   {
@@ -18097,7 +18115,7 @@
     "resourceType": "Microsoft.DataMigration/services/serviceTasks",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1277"
+      "$ref": "#/1279"
     }
   },
   {
@@ -18106,7 +18124,7 @@
     "properties": {
       "migrationOperationId": {
         "type": {
-          "$ref": "#/1282"
+          "$ref": "#/1284"
         },
         "flags": 0,
         "description": "ID tracking migration operation."
@@ -18120,12 +18138,36 @@
     "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DataMigration/databaseMigrations",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/647"
+    },
+    "input": {
+      "$ref": "#/1283"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cutover",
+    "resourceType": "Microsoft.DataMigration/databaseMigrations",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/647"
+    },
+    "input": {
+      "$ref": "#/1283"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DatabaseMigrationSqlDb",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1284"
+          "$ref": "#/1288"
         },
         "flags": 0,
         "description": "Database Migration Resource properties for SQL database."
@@ -18166,35 +18208,35 @@
     "properties": {
       "migrationStatusDetails": {
         "type": {
-          "$ref": "#/1285"
+          "$ref": "#/1289"
         },
         "flags": 2,
         "description": "Detailed migration status. Not included by default."
       },
       "targetSqlConnection": {
         "type": {
-          "$ref": "#/1289"
+          "$ref": "#/1293"
         },
         "flags": 0,
         "description": "Target SQL DB connection details."
       },
       "offlineConfiguration": {
         "type": {
-          "$ref": "#/1290"
+          "$ref": "#/1294"
         },
         "flags": 2,
         "description": "Offline configuration."
       },
       "tableList": {
         "type": {
-          "$ref": "#/1291"
+          "$ref": "#/1295"
         },
         "flags": 0,
         "description": "List of tables to copy."
       },
       "sourceSqlConnection": {
         "type": {
-          "$ref": "#/1289"
+          "$ref": "#/1293"
         },
         "flags": 0,
         "description": "Source SQL Server connection details."
@@ -18229,7 +18271,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1297"
+          "$ref": "#/1301"
         },
         "flags": 1
       },
@@ -18242,7 +18284,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/1303"
+          "$ref": "#/1307"
         },
         "flags": 2,
         "description": "Provisioning State of migration. ProvisioningState as Succeeded implies that validations have been performed and migration has started."
@@ -18311,14 +18353,14 @@
       },
       "sqlDataCopyErrors": {
         "type": {
-          "$ref": "#/1286"
+          "$ref": "#/1290"
         },
         "flags": 2,
         "description": "Sql Data Copy errors, if any."
       },
       "listOfCopyProgressDetails": {
         "type": {
-          "$ref": "#/1288"
+          "$ref": "#/1292"
         },
         "flags": 2,
         "description": "Details on progress of ADF copy activities."
@@ -18417,7 +18459,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1287"
+      "$ref": "#/1291"
     }
   },
   {
@@ -18511,19 +18553,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1292"
-      },
-      {
-        "$ref": "#/1293"
-      },
-      {
-        "$ref": "#/1294"
-      },
-      {
-        "$ref": "#/1295"
-      },
-      {
         "$ref": "#/1296"
+      },
+      {
+        "$ref": "#/1297"
+      },
+      {
+        "$ref": "#/1298"
+      },
+      {
+        "$ref": "#/1299"
+      },
+      {
+        "$ref": "#/1300"
       },
       {
         "$ref": "#/0"
@@ -18554,19 +18596,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1298"
-      },
-      {
-        "$ref": "#/1299"
-      },
-      {
-        "$ref": "#/1300"
-      },
-      {
-        "$ref": "#/1301"
-      },
-      {
         "$ref": "#/1302"
+      },
+      {
+        "$ref": "#/1303"
+      },
+      {
+        "$ref": "#/1304"
+      },
+      {
+        "$ref": "#/1305"
+      },
+      {
+        "$ref": "#/1306"
       },
       {
         "$ref": "#/0"
@@ -18579,10 +18621,10 @@
     "resourceType": "Microsoft.DataMigration/databaseMigrations",
     "apiVersion": "2025-09-01-preview",
     "output": {
-      "$ref": "#/1283"
+      "$ref": "#/1287"
     },
     "input": {
-      "$ref": "#/1281"
+      "$ref": "#/1283"
     }
   }
 ]

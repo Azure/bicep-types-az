@@ -1654,6 +1654,36 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "associateTrafficFilter",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createAndAssociateIPFilter",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createAndAssociatePLFilter",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExternalUserInfo",
     "properties": {
@@ -1687,7 +1717,7 @@
       },
       "roles": {
         "type": {
-          "$ref": "#/126"
+          "$ref": "#/130"
         },
         "flags": 0,
         "description": "Roles to be assigned for  created or updated user"
@@ -1719,9 +1749,36 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/127"
+      "$ref": "#/131"
     },
     "input": {
+      "$ref": "#/129"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteTrafficFilter",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "detachAndDeleteTrafficFilter",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "detachTrafficFilter",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2025-06-01",
+    "output": {
       "$ref": "#/125"
     }
   },
@@ -1731,14 +1788,14 @@
     "properties": {
       "marketplaceSaasInfo": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/137"
         },
         "flags": 0,
         "description": "Marketplace Subscription details"
       },
       "partnerBillingEntity": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/139"
         },
         "flags": 0,
         "description": "Partner Billing Entity details: Organization Info"
@@ -1751,7 +1808,7 @@
     "properties": {
       "marketplaceSubscription": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/138"
         },
         "flags": 0,
         "description": "Marketplace Subscription"
@@ -1853,7 +1910,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/129"
+      "$ref": "#/136"
     }
   },
   {
@@ -1862,7 +1919,7 @@
     "properties": {
       "rulesets": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/148"
         },
         "flags": 0,
         "description": "List of elastic traffic filters in the account"
@@ -1903,7 +1960,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/138"
+          "$ref": "#/145"
         },
         "flags": 0,
         "description": "Type of the elastic filter"
@@ -1917,7 +1974,7 @@
       },
       "rules": {
         "type": {
-          "$ref": "#/140"
+          "$ref": "#/147"
         },
         "flags": 0,
         "description": "Rules in the elastic filter"
@@ -1936,10 +1993,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/136"
+        "$ref": "#/143"
       },
       {
-        "$ref": "#/137"
+        "$ref": "#/144"
       },
       {
         "$ref": "#/2"
@@ -1990,13 +2047,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/139"
+      "$ref": "#/146"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/135"
+      "$ref": "#/142"
     }
   },
   {
@@ -2005,7 +2062,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/134"
+      "$ref": "#/141"
     }
   },
   {
@@ -2014,7 +2071,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/134"
+      "$ref": "#/141"
     }
   },
   {
@@ -2023,7 +2080,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/154"
         },
         "flags": 1,
         "description": "The ConnectedPartnerResourcesListFormat items on this page"
@@ -2043,7 +2100,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/146"
+          "$ref": "#/153"
         },
         "flags": 0,
         "description": "Connected Partner Resource Properties"
@@ -2094,7 +2151,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/145"
+      "$ref": "#/152"
     }
   },
   {
@@ -2103,7 +2160,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/144"
+      "$ref": "#/151"
     }
   },
   {
@@ -2112,7 +2169,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/159"
         },
         "flags": 2,
         "description": "The Elastic deployment status."
@@ -2154,7 +2211,7 @@
       },
       "marketplaceSaasInfo": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/137"
         },
         "flags": 2,
         "description": "Marketplace SaaS Info of the resource."
@@ -2187,10 +2244,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/150"
+        "$ref": "#/157"
       },
       {
-        "$ref": "#/151"
+        "$ref": "#/158"
       },
       {
         "$ref": "#/2"
@@ -2203,7 +2260,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/149"
+      "$ref": "#/156"
     }
   },
   {
@@ -2212,7 +2269,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/159"
+          "$ref": "#/166"
         },
         "flags": 1,
         "description": "The MonitoredResource items on this page"
@@ -2239,7 +2296,7 @@
       },
       "sendingLogs": {
         "type": {
-          "$ref": "#/158"
+          "$ref": "#/165"
         },
         "flags": 0,
         "description": "Flag indicating the status of the resource for sending logs operation to Elastic."
@@ -2265,10 +2322,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/156"
+        "$ref": "#/163"
       },
       {
-        "$ref": "#/157"
+        "$ref": "#/164"
       },
       {
         "$ref": "#/2"
@@ -2278,7 +2335,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/155"
+      "$ref": "#/162"
     }
   },
   {
@@ -2287,7 +2344,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/154"
+      "$ref": "#/161"
     }
   },
   {
@@ -2303,7 +2360,7 @@
       },
       "upgradableVersions": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/169"
         },
         "flags": 0,
         "description": "Stack Versions that this version can upgrade to"
@@ -2322,7 +2379,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/161"
+      "$ref": "#/168"
     }
   },
   {
@@ -2331,7 +2388,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/173"
         },
         "flags": 1,
         "description": "The VMResources items on this page"
@@ -2361,7 +2418,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/165"
+      "$ref": "#/172"
     }
   },
   {
@@ -2370,7 +2427,32 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/164"
+      "$ref": "#/171"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElasticMonitorUpgrade",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Version to which the elastic monitor should be upgraded to"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/125"
+    },
+    "input": {
+      "$ref": "#/175"
     }
   },
   {
@@ -2386,7 +2468,7 @@
       },
       "operationName": {
         "type": {
-          "$ref": "#/171"
+          "$ref": "#/180"
         },
         "flags": 0,
         "description": "Operation to be performed for given VM."
@@ -2405,15 +2487,27 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/169"
+        "$ref": "#/178"
       },
       {
-        "$ref": "#/170"
+        "$ref": "#/179"
       },
       {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "vmCollectionUpdate",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/125"
+    },
+    "input": {
+      "$ref": "#/177"
+    }
   },
   {
     "$type": "ObjectType",
@@ -2441,7 +2535,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/172"
+      "$ref": "#/182"
     }
   },
   {
@@ -2450,7 +2544,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/175"
+          "$ref": "#/185"
         },
         "flags": 0,
         "description": "Status of the OpenAI Integration"
@@ -2476,7 +2570,7 @@
     "resourceType": "Microsoft.Elastic/monitors/openAIIntegrations",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/174"
+      "$ref": "#/184"
     }
   }
 ]

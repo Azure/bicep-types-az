@@ -60,6 +60,16 @@
 * **ApiVersion**: 2018-03-31-preview
 * **Output**: [DataMigrationServiceStatusResponse](#datamigrationservicestatusresponse)
 
+## Function start (Microsoft.DataMigration/services@2018-03-31-preview)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2018-03-31-preview
+* **Output**: any
+
+## Function stop (Microsoft.DataMigration/services@2018-03-31-preview)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2018-03-31-preview
+* **Output**: any
+
 ## BlobShare
 ### Properties
 * **sasUri**: string (Required): SAS URI of Azure Storage Account Container.

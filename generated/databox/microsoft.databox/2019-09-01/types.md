@@ -25,6 +25,12 @@
 * **Input**: [ShipmentPickUpRequest](#shipmentpickuprequest)
 * **Output**: [ShipmentPickUpResponse](#shipmentpickupresponse)
 
+## Function cancel (Microsoft.DataBox/jobs@2019-09-01)
+* **Resource**: Microsoft.DataBox/jobs
+* **ApiVersion**: 2019-09-01
+* **Input**: [CancellationReason](#cancellationreason)
+* **Output**: any
+
 ## Function listCredentials (Microsoft.DataBox/jobs@2019-09-01)
 * **Resource**: Microsoft.DataBox/jobs
 * **ApiVersion**: 2019-09-01
@@ -82,6 +88,10 @@
 ### Properties
 * **nextLink**: string: Link for the next set of skus.
 * **value**: [SkuInformation](#skuinformation)[] (ReadOnly): List of available skus.
+
+## CancellationReason
+### Properties
+* **reason**: string (Required): Reason for cancellation.
 
 ## ContactDetails
 ### Properties

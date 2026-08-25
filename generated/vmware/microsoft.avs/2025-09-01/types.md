@@ -327,6 +327,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkAvailability (Microsoft.AVS/locations/serviceComponents@2025-09-01)
+* **Resource**: Microsoft.AVS/locations/serviceComponents
+* **ApiVersion**: 2025-09-01
+* **Output**: any
+
 ## Function checkQuotaAvailability (Microsoft.AVS/locations@2025-09-01)
 * **Resource**: Microsoft.AVS/locations
 * **ApiVersion**: 2025-09-01
@@ -374,6 +379,22 @@
 * **ApiVersion**: 2025-09-01
 * **Input**: [MaintenanceReschedule](#maintenancereschedule)
 * **Output**: [Maintenance](#maintenance)
+
+## Function restrictMovement (Microsoft.AVS/privateClouds/clusters/virtualMachines@2025-09-01)
+* **Resource**: Microsoft.AVS/privateClouds/clusters/virtualMachines
+* **ApiVersion**: 2025-09-01
+* **Input**: [VirtualMachineRestrictMovement](#virtualmachinerestrictmovement)
+* **Output**: any
+
+## Function rotateNsxtPassword (Microsoft.AVS/privateClouds@2025-09-01)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2025-09-01
+* **Output**: any
+
+## Function rotateVcenterPassword (Microsoft.AVS/privateClouds@2025-09-01)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2025-09-01
+* **Output**: any
 
 ## Function schedule (Microsoft.AVS/privateClouds/maintenances@2025-09-01)
 * **Resource**: Microsoft.AVS/privateClouds/maintenances
@@ -963,6 +984,10 @@ when executing
 * **moRefId**: string (ReadOnly): vCenter managed object reference ID of the virtual machine
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource.
 * **restrictMovement**: 'Disabled' | 'Enabled' | string (ReadOnly): Whether VM DRS-driven movement is restricted (enabled) or not (disabled)
+
+## VirtualMachineRestrictMovement
+### Properties
+* **restrictMovement**: 'Disabled' | 'Enabled' | string: Whether VM DRS-driven movement is restricted (enabled) or not (disabled)
 
 ## WorkloadNetworkDhcpEntity
 * **Discriminator**: dhcpType

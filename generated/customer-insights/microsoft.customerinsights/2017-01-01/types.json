@@ -4468,5 +4468,14 @@
     "output": {
       "$ref": "#/138"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reprocess",
+    "resourceType": "Microsoft.CustomerInsights/hubs/kpi",
+    "apiVersion": "2017-01-01",
+    "output": {
+      "$ref": "#/156"
+    }
   }
 ]

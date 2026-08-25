@@ -199,11 +199,27 @@
 * **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat)
 * **type**: 'Microsoft.Network/virtualnetworks/subnets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generatevpnclientpackage (Microsoft.Network/virtualNetworkGateways@2015-06-15)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2015-06-15
+* **Input**: [VpnClientParameters](#vpnclientparameters)
+* **Output**: string
+
 ## Function reset (Microsoft.Network/virtualNetworkGateways@2015-06-15)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
 * **ApiVersion**: 2015-06-15
 * **Input**: [VirtualNetworkGateway](#virtualnetworkgateway)
 * **Output**: [VirtualNetworkGateway](#virtualnetworkgateway)
+
+## Function start (Microsoft.Network/applicationGateways@2015-06-15)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2015-06-15
+* **Output**: any
+
+## Function stop (Microsoft.Network/applicationGateways@2015-06-15)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2015-06-15
+* **Output**: any
 
 ## AddressSpace
 ### Properties
@@ -961,6 +977,10 @@
 * **vpnClientAddressPool**: [AddressSpace](#addressspace): Gets or sets the reference of the Address space resource which represents Address space for P2S VpnClient.
 * **vpnClientRevokedCertificates**: [VpnClientRevokedCertificate](#vpnclientrevokedcertificate)[]: VpnClientRevokedCertificate for Virtual network gateway.
 * **vpnClientRootCertificates**: [VpnClientRootCertificate](#vpnclientrootcertificate)[]: VpnClientRootCertificate for Virtual network gateway.
+
+## VpnClientParameters
+### Properties
+* **ProcessorArchitecture**: 'Amd64' | 'X86' | string: VPN client Processor Architecture. Possible values are: 'AMD64' and 'X86'.
 
 ## VpnClientRevokedCertificate
 ### Properties

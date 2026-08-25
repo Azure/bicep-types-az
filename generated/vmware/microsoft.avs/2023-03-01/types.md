@@ -261,6 +261,22 @@
 * **ApiVersion**: 2023-03-01
 * **Output**: [ClusterZoneList](#clusterzonelist)
 
+## Function restrictMovement (Microsoft.AVS/privateClouds/clusters/virtualMachines@2023-03-01)
+* **Resource**: Microsoft.AVS/privateClouds/clusters/virtualMachines
+* **ApiVersion**: 2023-03-01
+* **Input**: [VirtualMachineRestrictMovement](#virtualmachinerestrictmovement)
+* **Output**: any
+
+## Function rotateNsxtPassword (Microsoft.AVS/privateClouds@2023-03-01)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2023-03-01
+* **Output**: any
+
+## Function rotateVcenterPassword (Microsoft.AVS/privateClouds@2023-03-01)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2023-03-01
+* **Output**: any
+
 ## AddonProperties
 * **Discriminator**: addonType
 
@@ -566,6 +582,10 @@
 * **folderPath**: string (ReadOnly): Path to virtual machine's folder starting from datacenter virtual machine folder
 * **moRefId**: string (ReadOnly): Virtual machine managed object reference id
 * **restrictMovement**: 'Disabled' | 'Enabled' | string (ReadOnly): Whether VM DRS-driven movement is restricted (enabled) or not (disabled)
+
+## VirtualMachineRestrictMovement
+### Properties
+* **restrictMovement**: 'Disabled' | 'Enabled' | string: Whether VM DRS-driven movement is restricted (enabled) or not (disabled)
 
 ## WorkloadNetworkDhcpEntity
 * **Discriminator**: dhcpType

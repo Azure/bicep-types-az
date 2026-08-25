@@ -22,6 +22,21 @@
 * **properties**: [JobProperties](#jobproperties): Gets or sets the job properties.
 * **type**: 'Microsoft.Scheduler/jobCollections/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disable (Microsoft.Scheduler/jobCollections@2016-03-01)
+* **Resource**: Microsoft.Scheduler/jobCollections
+* **ApiVersion**: 2016-03-01
+* **Output**: any
+
+## Function enable (Microsoft.Scheduler/jobCollections@2016-03-01)
+* **Resource**: Microsoft.Scheduler/jobCollections
+* **ApiVersion**: 2016-03-01
+* **Output**: any
+
+## Function run (Microsoft.Scheduler/jobCollections/jobs@2016-03-01)
+* **Resource**: Microsoft.Scheduler/jobCollections/jobs
+* **ApiVersion**: 2016-03-01
+* **Output**: any
+
 ## HttpAuthentication
 * **Discriminator**: type
 

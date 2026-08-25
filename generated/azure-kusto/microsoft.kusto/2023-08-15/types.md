@@ -158,6 +158,12 @@
 * **properties**: [SandboxCustomImageProperties](#sandboxcustomimageproperties): A sandbox custom image.
 * **type**: 'Microsoft.Kusto/clusters/sandboxCustomImages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addLanguageExtensions (Microsoft.Kusto/clusters@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2023-08-15
+* **Input**: [LanguageExtensionsList](#languageextensionslist)
+* **Output**: any
+
 ## Function addPrincipals (Microsoft.Kusto/clusters/databases@2023-08-15)
 * **Resource**: Microsoft.Kusto/clusters/databases
 * **ApiVersion**: 2023-08-15
@@ -206,6 +212,12 @@
 * **Input**: [DataConnectionValidation](#dataconnectionvalidation)
 * **Output**: [DataConnectionValidationListResult](#dataconnectionvalidationlistresult)
 
+## Function detachFollowerDatabases (Microsoft.Kusto/clusters@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2023-08-15
+* **Input**: [FollowerDatabaseDefinition](#followerdatabasedefinition)
+* **Output**: any
+
 ## Function diagnoseVirtualNetwork (Microsoft.Kusto/clusters@2023-08-15)
 * **Resource**: Microsoft.Kusto/clusters
 * **ApiVersion**: 2023-08-15
@@ -238,6 +250,18 @@
 * **Input**: [ManagedPrivateEndpointsCheckNameRequest](#managedprivateendpointschecknamerequest)
 * **Output**: [CheckNameResult](#checknameresult)
 
+## Function migrate (Microsoft.Kusto/clusters@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2023-08-15
+* **Input**: [ClusterMigrateRequest](#clustermigraterequest)
+* **Output**: any
+
+## Function removeLanguageExtensions (Microsoft.Kusto/clusters@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2023-08-15
+* **Input**: [LanguageExtensionsList](#languageextensionslist)
+* **Output**: any
+
 ## Function removePrincipals (Microsoft.Kusto/clusters/databases@2023-08-15)
 * **Resource**: Microsoft.Kusto/clusters/databases
 * **ApiVersion**: 2023-08-15
@@ -255,6 +279,16 @@
 * **ApiVersion**: 2023-08-15
 * **Input**: [ScriptCheckNameRequest](#scriptchecknamerequest)
 * **Output**: [CheckNameResult](#checknameresult)
+
+## Function start (Microsoft.Kusto/clusters@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2023-08-15
+* **Output**: any
+
+## Function stop (Microsoft.Kusto/clusters@2023-08-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2023-08-15
+* **Output**: any
 
 ## AcceptedAudiences
 ### Properties
@@ -298,6 +332,10 @@
 ### Properties
 * **name**: string (Required): Cluster name.
 * **type**: 'Microsoft.Kusto/clusters' (Required): The type of resource, Microsoft.Kusto/clusters.
+
+## ClusterMigrateRequest
+### Properties
+* **clusterResourceId**: string (Required): Resource ID of the destination cluster or kusto pool.
 
 ## ClusterPrincipalAssignmentCheckNameRequest
 ### Properties

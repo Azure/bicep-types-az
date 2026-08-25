@@ -1595,6 +1595,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Cache/redis",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/120"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExportRDBParameters",
     "properties": {
@@ -1619,6 +1631,18 @@
         "flags": 1,
         "description": "Container name to export to."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Cache/redis",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/123"
     }
   }
 ]

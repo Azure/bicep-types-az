@@ -4458,12 +4458,55 @@
     "writableScopes": 8
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "fetchUpgradeStatus",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/applications",
+    "apiVersion": "2024-04-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startRollback",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/applications",
+    "apiVersion": "2024-04-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RuntimeResumeApplicationUpgradeParameters",
+    "properties": {
+      "upgradeDomainName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The upgrade domain name. Expected to be the next upgrade domain if the application is upgrading."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resumeUpgrade",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/applications",
+    "apiVersion": "2024-04-01",
+    "output": {
+      "$ref": "#/231"
+    },
+    "input": {
+      "$ref": "#/298"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ManagedAzResiliencyStatus",
     "properties": {
       "baseResourceStatus": {
         "type": {
-          "$ref": "#/298"
+          "$ref": "#/302"
         },
         "flags": 0,
         "description": "List of Managed VM Sizes for Service Fabric Managed Clusters."
@@ -4514,7 +4557,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/297"
+      "$ref": "#/301"
     }
   },
   {
@@ -4523,7 +4566,7 @@
     "resourceType": "Microsoft.ServiceFabric/managedClusters",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/296"
+      "$ref": "#/300"
     }
   },
   {
@@ -4587,7 +4630,16 @@
     "resourceType": "Microsoft.ServiceFabric/managedClusters",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/300"
+      "$ref": "#/304"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "applyMaintenanceWindow",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters",
+    "apiVersion": "2024-04-01",
+    "output": {
+      "$ref": "#/231"
     }
   },
   {
@@ -4596,7 +4648,7 @@
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/303"
+          "$ref": "#/308"
         },
         "flags": 0,
         "description": "List of node names from the node type."
@@ -4610,7 +4662,7 @@
       },
       "updateType": {
         "type": {
-          "$ref": "#/306"
+          "$ref": "#/311"
         },
         "flags": 0,
         "description": "Specifies the way the operation will be performed."
@@ -4635,14 +4687,50 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/304"
+        "$ref": "#/309"
       },
       {
-        "$ref": "#/305"
+        "$ref": "#/310"
       },
       {
         "$ref": "#/0"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2024-04-01",
+    "output": {
+      "$ref": "#/231"
+    },
+    "input": {
+      "$ref": "#/307"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2024-04-01",
+    "output": {
+      "$ref": "#/231"
+    },
+    "input": {
+      "$ref": "#/307"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteNode",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2024-04-01",
+    "output": {
+      "$ref": "#/231"
+    },
+    "input": {
+      "$ref": "#/307"
+    }
   }
 ]

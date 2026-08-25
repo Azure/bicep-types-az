@@ -785,5 +785,17 @@
     "output": {
       "$ref": "#/62"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "swapDefault",
+    "resourceType": "Microsoft.Cdn/edgeActions/versions",
+    "apiVersion": "2025-12-01-preview",
+    "output": {
+      "$ref": "#/65"
+    }
   }
 ]

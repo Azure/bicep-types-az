@@ -1641,6 +1641,21 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies",
+    "apiVersion": "2022-10-01",
+    "output": {
+      "$ref": "#/122"
+    },
+    "input": {
+      "$ref": "#/121"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "PrivateEndpointUpdate",
     "properties": {
@@ -1679,6 +1694,18 @@
         "flags": 0,
         "description": "Virtual network traffic tag."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updatePrivateEndpointProperties",
+    "resourceType": "Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies",
+    "apiVersion": "2022-10-01",
+    "output": {
+      "$ref": "#/122"
+    },
+    "input": {
+      "$ref": "#/124"
     }
   }
 ]

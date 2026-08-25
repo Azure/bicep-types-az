@@ -4166,6 +4166,15 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "disableTestEndpoint",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2022-04-01",
+    "output": {
+      "$ref": "#/170"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "enableTestEndpoint",
     "resourceType": "Microsoft.AppPlatform/Spring",
     "apiVersion": "2022-04-01",
@@ -4226,10 +4235,10 @@
     "resourceType": "Microsoft.AppPlatform/locations",
     "apiVersion": "2022-04-01",
     "output": {
-      "$ref": "#/291"
+      "$ref": "#/292"
     },
     "input": {
-      "$ref": "#/290"
+      "$ref": "#/291"
     }
   },
   {
@@ -4238,7 +4247,7 @@
     "properties": {
       "gitPropertyValidationResult": {
         "type": {
-          "$ref": "#/294"
+          "$ref": "#/295"
         },
         "flags": 0,
         "description": "Validation result for configuration service settings"
@@ -4258,7 +4267,7 @@
       },
       "gitReposValidationResult": {
         "type": {
-          "$ref": "#/297"
+          "$ref": "#/298"
         },
         "flags": 0,
         "description": "The detail validation results"
@@ -4278,7 +4287,7 @@
       },
       "messages": {
         "type": {
-          "$ref": "#/296"
+          "$ref": "#/297"
         },
         "flags": 0,
         "description": "Detailed validation messages."
@@ -4294,7 +4303,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/295"
+      "$ref": "#/296"
     }
   },
   {
@@ -4303,7 +4312,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/configurationServices",
     "apiVersion": "2022-04-01",
     "output": {
-      "$ref": "#/293"
+      "$ref": "#/294"
     },
     "input": {
       "$ref": "#/76"
@@ -4328,7 +4337,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/buildServices/builds/results",
     "apiVersion": "2022-04-01",
     "output": {
-      "$ref": "#/299"
+      "$ref": "#/300"
     }
   },
   {
@@ -4357,7 +4366,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/buildServices",
     "apiVersion": "2022-04-01",
     "output": {
-      "$ref": "#/301"
+      "$ref": "#/302"
     }
   },
   {
@@ -4366,7 +4375,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps",
     "apiVersion": "2022-04-01",
     "output": {
-      "$ref": "#/301"
+      "$ref": "#/302"
     }
   },
   {
@@ -4375,7 +4384,7 @@
     "properties": {
       "activeDeploymentNames": {
         "type": {
-          "$ref": "#/305"
+          "$ref": "#/306"
         },
         "flags": 0,
         "description": "Collection of Deployment name."
@@ -4449,10 +4458,10 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps",
     "apiVersion": "2022-04-01",
     "output": {
-      "$ref": "#/306"
+      "$ref": "#/307"
     },
     "input": {
-      "$ref": "#/304"
+      "$ref": "#/305"
     }
   },
   {
@@ -4494,10 +4503,37 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps",
     "apiVersion": "2022-04-01",
     "output": {
-      "$ref": "#/309"
+      "$ref": "#/310"
     },
     "input": {
-      "$ref": "#/308"
+      "$ref": "#/309"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2022-04-01",
+    "output": {
+      "$ref": "#/170"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2022-04-01",
+    "output": {
+      "$ref": "#/170"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2022-04-01",
+    "output": {
+      "$ref": "#/170"
     }
   },
   {
@@ -4519,7 +4555,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
     "apiVersion": "2022-04-01",
     "output": {
-      "$ref": "#/311"
+      "$ref": "#/315"
     }
   },
   {
@@ -4547,6 +4583,42 @@
         "flags": 0,
         "description": "Duration of your JFR. 1 min can be represented by 1m or 60s."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateHeapDump",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2022-04-01",
+    "output": {
+      "$ref": "#/170"
+    },
+    "input": {
+      "$ref": "#/317"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateThreadDump",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2022-04-01",
+    "output": {
+      "$ref": "#/170"
+    },
+    "input": {
+      "$ref": "#/317"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startJFR",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2022-04-01",
+    "output": {
+      "$ref": "#/170"
+    },
+    "input": {
+      "$ref": "#/317"
     }
   }
 ]

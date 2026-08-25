@@ -2556,6 +2556,39 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "saveImage",
+    "resourceType": "Microsoft.LabServices/labPlans",
+    "apiVersion": "2023-06-07",
+    "output": {
+      "$ref": "#/212"
+    },
+    "input": {
+      "$ref": "#/211"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "publish",
+    "resourceType": "Microsoft.LabServices/labs",
+    "apiVersion": "2023-06-07",
+    "output": {
+      "$ref": "#/212"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "syncGroup",
+    "resourceType": "Microsoft.LabServices/labs",
+    "apiVersion": "2023-06-07",
+    "output": {
+      "$ref": "#/212"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "InviteBody",
     "properties": {
@@ -2566,6 +2599,54 @@
         "flags": 0,
         "description": "Custom text for the invite email."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "invite",
+    "resourceType": "Microsoft.LabServices/labs/users",
+    "apiVersion": "2023-06-07",
+    "output": {
+      "$ref": "#/212"
+    },
+    "input": {
+      "$ref": "#/216"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.LabServices/labs/virtualMachines",
+    "apiVersion": "2023-06-07",
+    "output": {
+      "$ref": "#/212"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.LabServices/labs/virtualMachines",
+    "apiVersion": "2023-06-07",
+    "output": {
+      "$ref": "#/212"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.LabServices/labs/virtualMachines",
+    "apiVersion": "2023-06-07",
+    "output": {
+      "$ref": "#/212"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.LabServices/labs/virtualMachines",
+    "apiVersion": "2023-06-07",
+    "output": {
+      "$ref": "#/212"
     }
   },
   {
@@ -2586,6 +2667,18 @@
         "flags": 5,
         "description": "The password"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetPassword",
+    "resourceType": "Microsoft.LabServices/labs/virtualMachines",
+    "apiVersion": "2023-06-07",
+    "output": {
+      "$ref": "#/212"
+    },
+    "input": {
+      "$ref": "#/222"
     }
   }
 ]

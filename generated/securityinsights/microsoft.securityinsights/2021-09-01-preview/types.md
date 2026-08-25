@@ -553,10 +553,22 @@
 * **ApiVersion**: 2021-09-01-preview
 * **Output**: [IncidentAlertList](#incidentalertlist)
 
+## Function appendTags (Microsoft.SecurityInsights/threatIntelligence/indicators@2021-09-01-preview)
+* **Resource**: Microsoft.SecurityInsights/threatIntelligence/indicators
+* **ApiVersion**: 2021-09-01-preview
+* **Input**: [ThreatIntelligenceAppendTags](#threatintelligenceappendtags)
+* **Output**: any
+
 ## Function bookmarks (Microsoft.SecurityInsights/incidents@2021-09-01-preview)
 * **Resource**: Microsoft.SecurityInsights/incidents
 * **ApiVersion**: 2021-09-01-preview
 * **Output**: [IncidentBookmarkList](#incidentbookmarklist)
+
+## Function connect (Microsoft.SecurityInsights/dataConnectors@2021-09-01-preview)
+* **Resource**: Microsoft.SecurityInsights/dataConnectors
+* **ApiVersion**: 2021-09-01-preview
+* **Input**: [DataConnectorConnectBody](#dataconnectorconnectbody)
+* **Output**: any
 
 ## Function createIndicator (Microsoft.SecurityInsights/threatIntelligence@2021-09-01-preview)
 * **Resource**: Microsoft.SecurityInsights/threatIntelligence
@@ -569,6 +581,11 @@
 * **ApiVersion**: 2021-09-01-preview
 * **Input**: [TeamProperties](#teamproperties)
 * **Output**: [TeamInformation](#teaminformation)
+
+## Function disconnect (Microsoft.SecurityInsights/dataConnectors@2021-09-01-preview)
+* **Resource**: Microsoft.SecurityInsights/dataConnectors
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: any
 
 ## Function entities (Microsoft.SecurityInsights/incidents@2021-09-01-preview)
 * **Resource**: Microsoft.SecurityInsights/incidents
@@ -981,6 +998,17 @@
 ### Properties
 * **additionalData**: any: key-value pairs for a connected entity mapping
 * **targetEntityId**: string: Entity Id of the connected entity
+
+## DataConnectorConnectBody
+### Properties
+* **apiKey**: string: The API key of the audit server.
+* **authorizationCode**: string: The authorization code used in OAuth 2.0 code flow to issue a token.
+* **clientId**: string: The client id of the OAuth 2.0 application.
+* **clientSecret**: string: The client secret of the OAuth 2.0 application.
+* **kind**: 'APIKey' | 'Basic' | 'OAuth2' | string: The authentication kind used to poll the data
+* **password**: string {sensitive}: The user password in the audit log server.
+* **requestConfigUserInputValues**: any[]
+* **userName**: string: The user name in the audit log server.
 
 ## DataConnectorDataTypeCommon
 ### Properties
@@ -2154,6 +2182,10 @@
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity for alerts created by this alert rule.
 * **status**: 'Available' | 'Installed' | 'NotAvailable' | string: The alert rule template status.
 * **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string)[]: The tactics of the alert rule template
+
+## ThreatIntelligenceAppendTags
+### Properties
+* **threatIntelligenceTags**: string[]: List of tags to be appended.
 
 ## ThreatIntelligenceExternalReference
 ### Properties

@@ -259,6 +259,51 @@
 * **ApiVersion**: 2019-06-01
 * **Output**: [KeyListResult](#keylistresult)
 
+## Function publish (Microsoft.Automation/automationAccounts/runbooks@2019-06-01)
+* **Resource**: Microsoft.Automation/automationAccounts/runbooks
+* **ApiVersion**: 2019-06-01
+* **Output**: any
+
+## Function resume (Microsoft.Automation/automationAccounts/runbooks/draft@2019-06-01)
+* **Resource**: Microsoft.Automation/automationAccounts/runbooks/draft
+* **ApiVersion**: 2019-06-01
+* **Output**: any
+
+## Function resume (Microsoft.Automation/automationAccounts/jobs@2019-06-01)
+* **Resource**: Microsoft.Automation/automationAccounts/jobs
+* **ApiVersion**: 2019-06-01
+* **Output**: any
+
+## Function start (Microsoft.Automation/automationAccounts/watchers@2019-06-01)
+* **Resource**: Microsoft.Automation/automationAccounts/watchers
+* **ApiVersion**: 2019-06-01
+* **Output**: any
+
+## Function stop (Microsoft.Automation/automationAccounts/runbooks/draft@2019-06-01)
+* **Resource**: Microsoft.Automation/automationAccounts/runbooks/draft
+* **ApiVersion**: 2019-06-01
+* **Output**: any
+
+## Function stop (Microsoft.Automation/automationAccounts/jobs@2019-06-01)
+* **Resource**: Microsoft.Automation/automationAccounts/jobs
+* **ApiVersion**: 2019-06-01
+* **Output**: any
+
+## Function stop (Microsoft.Automation/automationAccounts/watchers@2019-06-01)
+* **Resource**: Microsoft.Automation/automationAccounts/watchers
+* **ApiVersion**: 2019-06-01
+* **Output**: any
+
+## Function suspend (Microsoft.Automation/automationAccounts/runbooks/draft@2019-06-01)
+* **Resource**: Microsoft.Automation/automationAccounts/runbooks/draft
+* **ApiVersion**: 2019-06-01
+* **Output**: any
+
+## Function suspend (Microsoft.Automation/automationAccounts/jobs@2019-06-01)
+* **Resource**: Microsoft.Automation/automationAccounts/jobs
+* **ApiVersion**: 2019-06-01
+* **Output**: any
+
 ## AdvancedSchedule
 ### Properties
 * **monthDays**: int[]: Days of the month that the job should execute on. Must be between 1 and 31.

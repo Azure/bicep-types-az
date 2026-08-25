@@ -83,6 +83,12 @@
 * **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
 * **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
 
+## Function upload (Microsoft.Support/fileWorkspaces/files@2024-04-01)
+* **Resource**: Microsoft.Support/fileWorkspaces/files
+* **ApiVersion**: 2024-04-01
+* **Input**: [UploadFile](#uploadfile)
+* **Output**: any
+
 ## ChatTranscriptDetailsProperties
 ### Properties
 * **messages**: [MessageProperties](#messageproperties)[]: List of chat transcript communication resources.
@@ -223,4 +229,9 @@
 ## TechnicalTicketDetails
 ### Properties
 * **resourceId**: string: This is the resource Id of the Azure service resource (For example: A virtual machine resource or an HDInsight resource) for which the support ticket is created.
+
+## UploadFile
+### Properties
+* **chunkIndex**: int: Index of the uploaded chunk (Index starts at 0)
+* **content**: string: File Content in base64 encoded format
 

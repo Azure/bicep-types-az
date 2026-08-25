@@ -48,6 +48,17 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function authorizeReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2019-10-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2019-10-01
+* **Input**: [AuthorizeRequest](#authorizerequest)
+* **Output**: any
+
+## Function breakReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2019-10-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2019-10-01
+* **Output**: any
+
 ## Function checkFilePathAvailability (Microsoft.NetApp/locations@2019-10-01)
 * **Resource**: Microsoft.NetApp/locations
 * **ApiVersion**: 2019-10-01
@@ -59,6 +70,16 @@
 * **ApiVersion**: 2019-10-01
 * **Input**: [ResourceNameAvailabilityRequest](#resourcenameavailabilityrequest)
 * **Output**: [ResourceNameAvailability](#resourcenameavailability)
+
+## Function deleteReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2019-10-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2019-10-01
+* **Output**: any
+
+## Function resyncReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2019-10-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2019-10-01
+* **Output**: any
 
 ## AccountProperties
 ### Properties
@@ -75,6 +96,10 @@
 * **smbServerName**: string: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
 * **status**: string: Status of the Active Directory
 * **username**: string: Username of Active Directory domain administrator
+
+## AuthorizeRequest
+### Properties
+* **remoteVolumeResourceId**: string: Resource id
 
 ## ExportPolicyRule
 ### Properties

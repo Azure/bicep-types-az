@@ -969,6 +969,18 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableKeyVault",
+    "resourceType": "Microsoft.DataLakeStore/accounts",
+    "apiVersion": "2016-11-01",
+    "output": {
+      "$ref": "#/82"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CheckNameAvailabilityParameters",
     "properties": {
@@ -981,7 +993,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/84"
+          "$ref": "#/86"
         },
         "flags": 1,
         "description": "The resource type. Note: This should not be set by the user, as the constant value is Microsoft.DataLakeStore/accounts"
@@ -996,7 +1008,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/83"
+        "$ref": "#/85"
       },
       {
         "$ref": "#/0"
@@ -1009,7 +1021,7 @@
     "properties": {
       "nameAvailable": {
         "type": {
-          "$ref": "#/86"
+          "$ref": "#/88"
         },
         "flags": 2,
         "description": "The Boolean value of true or false to indicate whether the Data Lake Store account name is available or not."
@@ -1039,10 +1051,10 @@
     "resourceType": "Microsoft.DataLakeStore/locations",
     "apiVersion": "2016-11-01",
     "output": {
-      "$ref": "#/85"
+      "$ref": "#/87"
     },
     "input": {
-      "$ref": "#/82"
+      "$ref": "#/84"
     }
   }
 ]

@@ -98,6 +98,12 @@
 * **ApiVersion**: 2026-05-01-preview
 * **Output**: [GetSignalRecommendationsResponse](#getsignalrecommendationsresponse)
 
+## Function ingestHealthReport (Microsoft.CloudHealth/healthmodels/entities@2026-05-01-preview)
+* **Resource**: Microsoft.CloudHealth/healthmodels/entities
+* **ApiVersion**: 2026-05-01-preview
+* **Input**: [HealthReportRequest](#healthreportrequest)
+* **Output**: any
+
 ## AddDataAnnotationRequest
 ### Properties
 * **annotationDetails**: [AddDataAnnotationRequestAnnotationDetails](#adddataannotationrequestannotationdetails) (Required): Annotation details as a dynamic key-value pair bag. Service-enforced limits: a maximum of 10 entries per annotation and a maximum value length of 256 characters. Requests exceeding these limits will be rejected with a 400 response.
@@ -311,6 +317,20 @@
 ## HealthModelProperties
 ### Properties
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last operation.
+
+## HealthReportEvaluationRule
+### Properties
+* **degradedRule**: [ThresholdRuleV2](#thresholdrulev2): Degraded rule with static threshold.
+* **unhealthyRule**: [ThresholdRuleV2](#thresholdrulev2) (Required): Unhealthy rule with static threshold.
+
+## HealthReportRequest
+### Properties
+* **additionalContext**: string {maxLength: 4096}: Optional additional context or description for the health report
+* **evaluationRules**: [HealthReportEvaluationRule](#healthreportevaluationrule): Evaluation rules that were used to determine the reported health state
+* **expiresInMinutes**: int {minValue: 1, maxValue: 10080}: Number of minutes until the health report expires. Defaults to 60 (1 hour) if not specified.
+* **healthState**: 'Degraded' | 'Deleted' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (Required): Health state to report for the signal
+* **signalName**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"} (Required): Name of the entity signal to report health for
+* **value**: int: Reported value of the signal
 
 ## HealthStateTransition
 ### Properties

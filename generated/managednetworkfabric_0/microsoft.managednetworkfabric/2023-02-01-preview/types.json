@@ -5818,5 +5818,859 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateAdministrativeState",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/448"
+        },
+        "flags": 0,
+        "description": "Administrative state."
+      },
+      "resourceIds": {
+        "type": {
+          "$ref": "#/449"
+        },
+        "flags": 0,
+        "description": "Network Fabrics or Network Rack resource Id."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/446"
+      },
+      {
+        "$ref": "#/447"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l2IsolationDomains",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnableDisableOnResources",
+    "properties": {
+      "resourceIds": {
+        "type": {
+          "$ref": "#/453"
+        },
+        "flags": 0,
+        "description": "Network Fabrics or Network Rack resource Id."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clearArpTable",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l2IsolationDomains",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/452"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clearNeighborTable",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l2IsolationDomains",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/452"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ARPProperties",
+    "properties": {
+      "address": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Ipv4 or Ipv6 address"
+      },
+      "age": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Duration in seconds."
+      },
+      "macAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Hardware address."
+      },
+      "interface": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Layer 2 interface name."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARP status"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetARPResponse",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/456"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getArpEntries",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l2IsolationDomains",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/457"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateOptionBAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clearArpTable",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/452"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clearNeighborTable",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/452"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateBgpAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateBfdForBgpAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clearIpv6Neighbors",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/452"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clearArpEntries",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/452"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateBfdForStaticRouteAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateBgpAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateBfdForBgpAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clearIpv6Neighbors",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/452"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clearArpEntries",
+    "resourceType": "Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/452"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reboot",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreConfig",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateVersionProperties",
+    "properties": {
+      "skuVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The supported version defined in network device SKU."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateVersion",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/476"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SupportPackageProperties",
+    "properties": {
+      "supportPackageURL": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The URL to fetch the generated support package from."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateSupportPackage",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/478"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdatePowerCycleProperties",
+    "properties": {
+      "powerEnd": {
+        "type": {
+          "$ref": "#/483"
+        },
+        "flags": 1,
+        "description": "Primary or Secondary power end."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/486"
+        },
+        "flags": 1,
+        "description": "On or Off toggle state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/481"
+      },
+      {
+        "$ref": "#/482"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "On"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Off"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/484"
+      },
+      {
+        "$ref": "#/485"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updatePowerCycle",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/480"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetDeviceStatusProperties",
+    "properties": {
+      "operationalStatus": {
+        "type": {
+          "$ref": "#/492"
+        },
+        "flags": 1,
+        "description": "Primary or Secondary power end."
+      },
+      "powerCycleState": {
+        "type": {
+          "$ref": "#/495"
+        },
+        "flags": 1,
+        "description": "On or Off power cycle state."
+      },
+      "serialNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The serial number of the device"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Booted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BootPrompt"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ztp"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/489"
+      },
+      {
+        "$ref": "#/490"
+      },
+      {
+        "$ref": "#/491"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "On"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Off"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/493"
+      },
+      {
+        "$ref": "#/494"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getStatus",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/488"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetStaticInterfaceMapsPropertiesItem",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The interface name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The interface description."
+      },
+      "identifier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The interface identifier."
+      },
+      "interfaceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The interface type. Example: Ethernet"
+      },
+      "connectorType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The physical cable connector type. Example: Optical"
+      },
+      "connectedTo": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Connected to ARM resource or external interface"
+      },
+      "speed": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The interface speed. Example: 100"
+      },
+      "channelGroupId": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The port channel group id."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/497"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getStaticInterfaceMaps",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/498"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetDynamicInterfaceMapsPropertiesItem",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The interface name."
+      },
+      "administrativeState": {
+        "type": {
+          "$ref": "#/503"
+        },
+        "flags": 2,
+        "description": "The interface administrative state."
+      },
+      "operationalStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The interface operational status."
+      },
+      "phyStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The physical status."
+      },
+      "transceiverStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The interface transceiver type. Example: up or down"
+      },
+      "connectedTo": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Connected to ARM resource or external interface"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/501"
+      },
+      {
+        "$ref": "#/502"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/500"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDynamicInterfaceMaps",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/504"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InterfaceStatus",
+    "properties": {
+      "administrativeState": {
+        "type": {
+          "$ref": "#/509"
+        },
+        "flags": 2,
+        "description": "The interface administrative state."
+      },
+      "operationalStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The interface operational status."
+      },
+      "phyStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The physical status."
+      },
+      "transceiverStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The interface transceiver type. Example: up or down"
+      },
+      "connectedTo": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Connected to ARM resource or external interface"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/507"
+      },
+      {
+        "$ref": "#/508"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getStatus",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/506"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAdministrativeState",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    },
+    "input": {
+      "$ref": "#/445"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableWorkloadManagementNetwork",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabricControllers",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableWorkloadManagementNetwork",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabricControllers",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "provision",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deprovision",
+    "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/450"
+    }
   }
 ]

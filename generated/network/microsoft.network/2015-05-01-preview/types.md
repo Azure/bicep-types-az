@@ -205,6 +205,16 @@
 * **Input**: [VirtualNetworkGateway](#virtualnetworkgateway)
 * **Output**: [VirtualNetworkGateway](#virtualnetworkgateway)
 
+## Function start (Microsoft.Network/applicationGateways@2015-05-01-preview)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2015-05-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.Network/applicationGateways@2015-05-01-preview)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2015-05-01-preview
+* **Output**: any
+
 ## AddressSpace
 ### Properties
 * **addressPrefixes**: string[]: Gets or sets List of address blocks reserved for this virtual network in CIDR notation

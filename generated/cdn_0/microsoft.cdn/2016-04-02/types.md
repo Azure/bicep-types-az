@@ -50,6 +50,28 @@
 * **ApiVersion**: 2016-04-02
 * **Output**: [SsoUri](#ssouri)
 
+## Function load (Microsoft.Cdn/profiles/endpoints@2016-04-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2016-04-02
+* **Input**: [LoadParameters](#loadparameters)
+* **Output**: any
+
+## Function purge (Microsoft.Cdn/profiles/endpoints@2016-04-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2016-04-02
+* **Input**: [PurgeParameters](#purgeparameters)
+* **Output**: any
+
+## Function start (Microsoft.Cdn/profiles/endpoints@2016-04-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2016-04-02
+* **Output**: [Endpoint](#endpoint)
+
+## Function stop (Microsoft.Cdn/profiles/endpoints@2016-04-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2016-04-02
+* **Output**: [Endpoint](#endpoint)
+
 ## Function validateCustomDomain (Microsoft.Cdn/profiles/endpoints@2016-04-02)
 * **Resource**: Microsoft.Cdn/profiles/endpoints
 * **ApiVersion**: 2016-04-02
@@ -73,10 +95,33 @@
 * **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535
 * **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535
 
+## Endpoint
+### Properties
+* **id**: string (ReadOnly): Resource ID
+* **location**: string (Required): Resource location
+* **name**: string (ReadOnly): Resource name
+* **properties**: [EndpointProperties](#endpointproperties)
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (Required): Resource tags
+* **type**: string (ReadOnly): Resource type
+
 ## EndpointCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## EndpointProperties
+### Properties
+* **contentTypesToCompress**: string[]: List of content types on which compression will be applied. The value for the elements should be a valid MIME type.
+* **hostName**: string (ReadOnly): The host name of the endpoint {endpointName}.{DNSZone}
+* **isCompressionEnabled**: bool: Indicates whether the compression is enabled. Default value is false. If compression is enabled, the content transferred from cdn endpoint to end user will be compressed. The requested content must be larger than 1 byte and smaller than 1 MB.
+* **isHttpAllowed**: bool: Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
+* **isHttpsAllowed**: bool: Indicates whether https traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
+* **originHostHeader**: string: The host header the CDN provider will send along with content requests to origins. The default value is the host name of the origin.
+* **originPath**: string: The path used for origin requests.
+* **origins**: [DeepCreatedOrigin](#deepcreatedorigin)[]: The set of origins for the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options.
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the endpoint.
+* **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString': Defines the query string caching behavior.
+* **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Resource status of the endpoint.
 
 ## EndpointPropertiesCreateParametersOrEndpointProperties
 ### Properties
@@ -91,6 +136,10 @@
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the endpoint.
 * **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString': Defines the query string caching behavior.
 * **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Resource status of the endpoint.
+
+## LoadParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be loaded. Should describe a file path.
 
 ## OriginPropertiesParametersOrOriginProperties
 ### Properties
@@ -110,6 +159,10 @@
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning status of the profile.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly): Resource status of the profile.
 
+## PurgeParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be purged. Can describe a file path or a wild card directory.
+
 ## Sku
 ### Properties
 * **name**: 'Custom_Verizon' | 'Premium_Verizon' | 'Standard_Akamai' | 'Standard_Verizon': Name of the pricing tier
@@ -117,6 +170,11 @@
 ## SsoUri
 ### Properties
 * **ssoUriValue**: string: The URI used to login to third party web portal.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ValidateCustomDomainInput
 ### Properties

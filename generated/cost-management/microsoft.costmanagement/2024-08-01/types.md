@@ -91,6 +91,11 @@
 * **ApiVersion**: 2024-08-01
 * **Output**: [DownloadURL](#downloadurl)
 
+## Function execute (Microsoft.CostManagement/scheduledActions@2024-08-01)
+* **Resource**: Microsoft.CostManagement/scheduledActions
+* **ApiVersion**: 2024-08-01
+* **Output**: any
+
 ## Function forecast (Microsoft.CostManagement/externalSubscriptions@2024-08-01)
 * **Resource**: Microsoft.CostManagement/externalSubscriptions
 * **ApiVersion**: 2024-08-01
@@ -114,6 +119,11 @@
 * **ApiVersion**: 2024-08-01
 * **Input**: [QueryDefinition](#querydefinition)
 * **Output**: [QueryResult](#queryresult)
+
+## Function run (Microsoft.CostManagement/exports@2024-08-01)
+* **Resource**: Microsoft.CostManagement/exports
+* **ApiVersion**: 2024-08-01
+* **Output**: any
 
 ## AlertProperties
 ### Properties

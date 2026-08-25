@@ -4191,19 +4191,40 @@
     ]
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs",
+    "apiVersion": "2017-04-01-preview",
+    "output": {
+      "$ref": "#/44"
+    },
+    "input": {
+      "$ref": "#/265"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs",
+    "apiVersion": "2017-04-01-preview",
+    "output": {
+      "$ref": "#/44"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "TestQuery",
     "properties": {
       "diagnostics": {
         "type": {
-          "$ref": "#/271"
+          "$ref": "#/273"
         },
         "flags": 0,
         "description": "Diagnostics information related to query testing."
       },
       "streamingJob": {
         "type": {
-          "$ref": "#/272"
+          "$ref": "#/274"
         },
         "flags": 1,
         "description": "Stream analytics job object which defines the input, output, and transformation for the query testing."
@@ -4250,7 +4271,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/273"
+          "$ref": "#/275"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -4299,7 +4320,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/281"
+          "$ref": "#/283"
         },
         "flags": 2,
         "description": "The status of the query testing request."
@@ -4313,7 +4334,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/282"
+          "$ref": "#/284"
         },
         "flags": 0,
         "description": "Error definition properties."
@@ -4348,12 +4369,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/275"
-      },
-      {
-        "$ref": "#/276"
-      },
-      {
         "$ref": "#/277"
       },
       {
@@ -4364,6 +4379,12 @@
       },
       {
         "$ref": "#/280"
+      },
+      {
+        "$ref": "#/281"
+      },
+      {
+        "$ref": "#/282"
       },
       {
         "$ref": "#/0"
@@ -4397,7 +4418,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/284"
+          "$ref": "#/286"
         },
         "flags": 0,
         "description": "Error details."
@@ -4434,7 +4455,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/283"
+      "$ref": "#/285"
     }
   },
   {
@@ -4443,10 +4464,10 @@
     "resourceType": "Microsoft.StreamAnalytics/locations",
     "apiVersion": "2017-04-01-preview",
     "output": {
-      "$ref": "#/274"
+      "$ref": "#/276"
     },
     "input": {
-      "$ref": "#/270"
+      "$ref": "#/272"
     }
   },
   {
@@ -4462,28 +4483,28 @@
       },
       "inputs": {
         "type": {
-          "$ref": "#/288"
+          "$ref": "#/290"
         },
         "flags": 0,
         "description": "The inputs for the query compilation."
       },
       "functions": {
         "type": {
-          "$ref": "#/291"
+          "$ref": "#/293"
         },
         "flags": 0,
         "description": "The functions for the query compilation."
       },
       "jobType": {
         "type": {
-          "$ref": "#/294"
+          "$ref": "#/296"
         },
         "flags": 1,
         "description": "Describes the type of the job. Valid values are `Cloud` and 'Edge'."
       },
       "compatibilityLevel": {
         "type": {
-          "$ref": "#/296"
+          "$ref": "#/298"
         },
         "flags": 0,
         "description": "The query to compile."
@@ -4513,7 +4534,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/287"
+      "$ref": "#/289"
     }
   },
   {
@@ -4543,7 +4564,7 @@
       },
       "inputs": {
         "type": {
-          "$ref": "#/290"
+          "$ref": "#/292"
         },
         "flags": 1,
         "description": "The inputs for the function."
@@ -4566,7 +4587,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/289"
+      "$ref": "#/291"
     }
   },
   {
@@ -4581,10 +4602,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/292"
+        "$ref": "#/294"
       },
       {
-        "$ref": "#/293"
+        "$ref": "#/295"
       },
       {
         "$ref": "#/0"
@@ -4599,7 +4620,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/295"
+        "$ref": "#/297"
       },
       {
         "$ref": "#/0"
@@ -4612,35 +4633,35 @@
     "properties": {
       "errors": {
         "type": {
-          "$ref": "#/299"
+          "$ref": "#/301"
         },
         "flags": 2,
         "description": "Error messages produced by the compiler."
       },
       "warnings": {
         "type": {
-          "$ref": "#/300"
+          "$ref": "#/302"
         },
         "flags": 2,
         "description": "Warning messages produced by the compiler."
       },
       "inputs": {
         "type": {
-          "$ref": "#/301"
+          "$ref": "#/303"
         },
         "flags": 2,
         "description": "All input names used by the query."
       },
       "outputs": {
         "type": {
-          "$ref": "#/302"
+          "$ref": "#/304"
         },
         "flags": 2,
         "description": "All output names used by the query."
       },
       "functions": {
         "type": {
-          "$ref": "#/303"
+          "$ref": "#/305"
         },
         "flags": 2,
         "description": "All function names used by the query."
@@ -4698,7 +4719,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/298"
+      "$ref": "#/300"
     }
   },
   {
@@ -4731,10 +4752,224 @@
     "resourceType": "Microsoft.StreamAnalytics/locations",
     "apiVersion": "2017-04-01-preview",
     "output": {
-      "$ref": "#/297"
+      "$ref": "#/299"
     },
     "input": {
-      "$ref": "#/286"
+      "$ref": "#/288"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SampleInput",
+    "properties": {
+      "input": {
+        "type": {
+          "$ref": "#/217"
+        },
+        "flags": 0,
+        "description": "The stream analytics input to sample."
+      },
+      "compatibilityLevel": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Defaults to the default ASA job compatibility level. Today it is 1.2"
+      },
+      "eventsUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The SAS URI of the storage blob for service to write the sampled events to. If this parameter is not provided, service will write events to he system account and share a temporary SAS URI to it."
+      },
+      "dataLocale": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Defaults to en-US."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SampleInputResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/312"
+        },
+        "flags": 2,
+        "description": "The status of the sample input request."
+      },
+      "diagnostics": {
+        "type": {
+          "$ref": "#/313"
+        },
+        "flags": 2,
+        "description": "Diagnostics messages. E.g. message indicating some partitions from the input have no data."
+      },
+      "eventsDownloadUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A SAS URL to download the sampled input data."
+      },
+      "lastArrivalTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The timestamp for the last event in the data. It is in DateTime format."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/284"
+        },
+        "flags": 0,
+        "description": "Error definition properties."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadAllEventsInRange"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoEventsFoundInRange"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ErrorConnectingToInput"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/309"
+      },
+      {
+        "$ref": "#/310"
+      },
+      {
+        "$ref": "#/311"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sampleInput",
+    "resourceType": "Microsoft.StreamAnalytics/locations",
+    "apiVersion": "2017-04-01-preview",
+    "output": {
+      "$ref": "#/308"
+    },
+    "input": {
+      "$ref": "#/307"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestInput",
+    "properties": {
+      "input": {
+        "type": {
+          "$ref": "#/217"
+        },
+        "flags": 1,
+        "description": "The stream analytics input to test."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestDatasourceResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/319"
+        },
+        "flags": 2,
+        "description": "The status of the sample output request."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/284"
+        },
+        "flags": 0,
+        "description": "Error definition properties."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TestSucceeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TestFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/317"
+      },
+      {
+        "$ref": "#/318"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "testInput",
+    "resourceType": "Microsoft.StreamAnalytics/locations",
+    "apiVersion": "2017-04-01-preview",
+    "output": {
+      "$ref": "#/316"
+    },
+    "input": {
+      "$ref": "#/315"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestOutput",
+    "properties": {
+      "output": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 1,
+        "description": "The stream analytics output to test."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "testOutput",
+    "resourceType": "Microsoft.StreamAnalytics/locations",
+    "apiVersion": "2017-04-01-preview",
+    "output": {
+      "$ref": "#/316"
+    },
+    "input": {
+      "$ref": "#/321"
     }
   }
 ]

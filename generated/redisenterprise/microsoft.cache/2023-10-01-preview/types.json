@@ -1701,12 +1701,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/162"
+    },
+    "input": {
+      "$ref": "#/160"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExportClusterParameters",
     "properties": {
       "sasUri": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/165"
         },
         "flags": 1,
         "description": "SAS URI for the target directory to export to"
@@ -1718,12 +1733,24 @@
     "sensitive": true
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/162"
+    },
+    "input": {
+      "$ref": "#/164"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ForceUnlinkParameters",
     "properties": {
       "ids": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/168"
         },
         "flags": 1,
         "description": "The resource IDs of the database resources to be unlinked."
@@ -1737,12 +1764,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "forceUnlink",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/162"
+    },
+    "input": {
+      "$ref": "#/167"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "FlushParameters",
     "properties": {
       "ids": {
         "type": {
-          "$ref": "#/167"
+          "$ref": "#/171"
         },
         "flags": 0,
         "description": "The identifiers of all the other database resources in the georeplication group to be flushed."
@@ -1753,6 +1792,18 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "flush",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/162"
+    },
+    "input": {
+      "$ref": "#/170"
     }
   }
 ]

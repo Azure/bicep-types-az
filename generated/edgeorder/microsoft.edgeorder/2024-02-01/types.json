@@ -2333,6 +2333,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.EdgeOrder/orderItems",
+    "apiVersion": "2024-02-01",
+    "output": {
+      "$ref": "#/152"
+    },
+    "input": {
+      "$ref": "#/176"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ReturnOrderItemDetails",
     "properties": {
@@ -2364,6 +2376,18 @@
         "flags": 0,
         "description": "Shipping Box required."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "return",
+    "resourceType": "Microsoft.EdgeOrder/orderItems",
+    "apiVersion": "2024-02-01",
+    "output": {
+      "$ref": "#/152"
+    },
+    "input": {
+      "$ref": "#/178"
     }
   }
 ]

@@ -26,11 +26,41 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
 * **type**: 'Microsoft.Elastic/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function associateTrafficFilter (Microsoft.Elastic/monitors@2023-02-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: any
+
+## Function createAndAssociateIPFilter (Microsoft.Elastic/monitors@2023-02-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: any
+
+## Function createAndAssociatePLFilter (Microsoft.Elastic/monitors@2023-02-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: any
+
 ## Function createOrUpdateExternalUser (Microsoft.Elastic/monitors@2023-02-01-preview)
 * **Resource**: Microsoft.Elastic/monitors
 * **ApiVersion**: 2023-02-01-preview
 * **Input**: [ExternalUserInfo](#externaluserinfo)
 * **Output**: [ExternalUserCreationResponse](#externalusercreationresponse)
+
+## Function deleteTrafficFilter (Microsoft.Elastic/monitors@2023-02-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: any
+
+## Function detachAndDeleteTrafficFilter (Microsoft.Elastic/monitors@2023-02-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: any
+
+## Function detachTrafficFilter (Microsoft.Elastic/monitors@2023-02-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: any
 
 ## Function listAllTrafficFilters (Microsoft.Elastic/monitors@2023-02-01-preview)
 * **Resource**: Microsoft.Elastic/monitors
@@ -61,6 +91,18 @@
 * **Resource**: Microsoft.Elastic/monitors
 * **ApiVersion**: 2023-02-01-preview
 * **Output**: [VMHostListResponse](#vmhostlistresponse)
+
+## Function upgrade (Microsoft.Elastic/monitors@2023-02-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [ElasticMonitorUpgrade](#elasticmonitorupgrade)
+* **Output**: any
+
+## Function vmCollectionUpdate (Microsoft.Elastic/monitors@2023-02-01-preview)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [VMCollectionUpdate](#vmcollectionupdate)
+* **Output**: any
 
 ## Function vmIngestionDetails (Microsoft.Elastic/monitors@2023-02-01-preview)
 * **Resource**: Microsoft.Elastic/monitors
@@ -104,6 +146,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ElasticMonitorUpgrade
+### Properties
+* **version**: string: Version to which the elastic monitor should be upgraded to
 
 ## ElasticProperties
 ### Properties
@@ -225,6 +271,11 @@
 * **emailAddress**: string {pattern: "^([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@"]+)*)@(([a-zA-Z-_0-9]+\.)+[a-zA-Z]{2,})$"}: Email of the user used by Elastic for contacting them if needed
 * **firstName**: string {maxLength: 50}: First name of the user
 * **lastName**: string {maxLength: 50}: Last name of the user
+
+## VMCollectionUpdate
+### Properties
+* **operationName**: 'Add' | 'Delete' | string: Operation to be performed for given VM.
+* **vmResourceId**: string: ARM id of the VM resource.
 
 ## VMHostListResponse
 ### Properties

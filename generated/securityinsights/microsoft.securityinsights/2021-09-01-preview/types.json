@@ -18215,6 +18215,27 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "connect",
+    "resourceType": "Microsoft.SecurityInsights/dataConnectors",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/593"
+    },
+    "input": {
+      "$ref": "#/1442"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disconnect",
+    "resourceType": "Microsoft.SecurityInsights/dataConnectors",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/593"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ThreatIntelligenceIndicatorModelForRequestBody",
     "properties": {
@@ -18234,7 +18255,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1450"
+          "$ref": "#/1452"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -18249,7 +18270,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1449"
+        "$ref": "#/1451"
       },
       {
         "$ref": "#/0"
@@ -18269,7 +18290,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1453"
+          "$ref": "#/1455"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -18312,7 +18333,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1452"
+        "$ref": "#/1454"
       },
       {
         "$ref": "#/0"
@@ -18325,10 +18346,10 @@
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence",
     "apiVersion": "2021-09-01-preview",
     "output": {
-      "$ref": "#/1451"
+      "$ref": "#/1453"
     },
     "input": {
-      "$ref": "#/1448"
+      "$ref": "#/1450"
     }
   },
   {
@@ -18379,42 +18400,42 @@
       },
       "sortBy": {
         "type": {
-          "$ref": "#/1461"
+          "$ref": "#/1463"
         },
         "flags": 0,
         "description": "Columns to sort by and sorting order"
       },
       "sources": {
         "type": {
-          "$ref": "#/1462"
+          "$ref": "#/1464"
         },
         "flags": 0,
         "description": "Sources of threat intelligence indicators"
       },
       "patternTypes": {
         "type": {
-          "$ref": "#/1463"
+          "$ref": "#/1465"
         },
         "flags": 0,
         "description": "Pattern types"
       },
       "threatTypes": {
         "type": {
-          "$ref": "#/1464"
+          "$ref": "#/1466"
         },
         "flags": 0,
         "description": "Threat types of threat intelligence indicators"
       },
       "ids": {
         "type": {
-          "$ref": "#/1465"
+          "$ref": "#/1467"
         },
         "flags": 0,
         "description": "Ids of threat intelligence indicators"
       },
       "keywords": {
         "type": {
-          "$ref": "#/1466"
+          "$ref": "#/1468"
         },
         "flags": 0,
         "description": "Keywords for searching threat intelligence indicators"
@@ -18441,7 +18462,7 @@
       },
       "sortOrder": {
         "type": {
-          "$ref": "#/1460"
+          "$ref": "#/1462"
         },
         "flags": 0,
         "description": "Sorting order (ascending/descending/unsorted)."
@@ -18464,13 +18485,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1457"
-      },
-      {
-        "$ref": "#/1458"
-      },
-      {
         "$ref": "#/1459"
+      },
+      {
+        "$ref": "#/1460"
+      },
+      {
+        "$ref": "#/1461"
       },
       {
         "$ref": "#/0"
@@ -18480,7 +18501,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1456"
+      "$ref": "#/1458"
     }
   },
   {
@@ -18526,7 +18547,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/1468"
+          "$ref": "#/1470"
         },
         "flags": 1,
         "description": "Array of threat intelligence information objects."
@@ -18536,7 +18557,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1451"
+      "$ref": "#/1453"
     }
   },
   {
@@ -18545,10 +18566,10 @@
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence",
     "apiVersion": "2021-09-01-preview",
     "output": {
-      "$ref": "#/1467"
+      "$ref": "#/1469"
     },
     "input": {
-      "$ref": "#/1455"
+      "$ref": "#/1457"
     }
   },
   {
@@ -18557,7 +18578,7 @@
     "properties": {
       "threatIntelligenceTags": {
         "type": {
-          "$ref": "#/1471"
+          "$ref": "#/1473"
         },
         "flags": 0,
         "description": "List of tags to be appended."
@@ -18572,14 +18593,26 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "appendTags",
+    "resourceType": "Microsoft.SecurityInsights/threatIntelligence/indicators",
+    "apiVersion": "2021-09-01-preview",
+    "output": {
+      "$ref": "#/593"
+    },
+    "input": {
+      "$ref": "#/1472"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "replaceTags",
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence/indicators",
     "apiVersion": "2021-09-01-preview",
     "output": {
-      "$ref": "#/1451"
+      "$ref": "#/1453"
     },
     "input": {
-      "$ref": "#/1448"
+      "$ref": "#/1450"
     }
   }
 ]

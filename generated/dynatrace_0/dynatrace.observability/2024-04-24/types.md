@@ -86,6 +86,18 @@
 * **Input**: [LogStatusRequest](#logstatusrequest)
 * **Output**: [MonitoredResourceListResponse](#monitoredresourcelistresponse)
 
+## Function manageAgentInstallation (Dynatrace.Observability/monitors@2024-04-24)
+* **Resource**: Dynatrace.Observability/monitors
+* **ApiVersion**: 2024-04-24
+* **Input**: [ManageAgentInstallationRequest](#manageagentinstallationrequest)
+* **Output**: any
+
+## Function upgradePlan (Dynatrace.Observability/monitors@2024-04-24)
+* **Resource**: Dynatrace.Observability/monitors
+* **ApiVersion**: 2024-04-24
+* **Input**: [UpgradePlanRequest](#upgradeplanrequest)
+* **Output**: any
+
 ## AccountInfo
 ### Properties
 * **accountId**: string: Account Id of the account this environment is linked to
@@ -178,6 +190,15 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 ### Properties
 * **monitoredResourceIds**: string[]: List of azure resource Id of monitored resources for which we get the log status
 
+## ManageAgentInstallationRequest
+### Properties
+* **action**: 'Install' | 'Uninstall' | string (Required): Install/Uninstall action.
+* **manageAgentInstallationList**: [ManageAgentList](#manageagentlist)[] (Required): The list of resources.
+
+## ManageAgentList
+### Properties
+* **id**: string: The ARM id of the resource to install/uninstall agent.
+
 ## MetricRules
 ### Properties
 * **filteringTags**: [FilteringTag](#filteringtag)[]: List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
@@ -267,6 +288,10 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UpgradePlanRequest
+### Properties
+* **planData**: [PlanData](#plandata): The new Billing plan information.
 
 ## UserAssignedIdentity
 ### Properties

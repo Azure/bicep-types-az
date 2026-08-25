@@ -548,12 +548,33 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.AnalysisServices/servers",
+    "apiVersion": "2017-08-01",
+    "output": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.AnalysisServices/servers",
+    "apiVersion": "2017-08-01",
+    "output": {
+      "$ref": "#/51"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "GatewayListStatusLive",
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/52"
+          "$ref": "#/55"
         },
         "flags": 0,
         "description": "Live message of list gateway. Status: 0 - Live"
@@ -567,6 +588,15 @@
   {
     "$type": "ResourceFunctionType",
     "name": "listGatewayStatus",
+    "resourceType": "Microsoft.AnalysisServices/servers",
+    "apiVersion": "2017-08-01",
+    "output": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dissociateGateway",
     "resourceType": "Microsoft.AnalysisServices/servers",
     "apiVersion": "2017-08-01",
     "output": {
@@ -626,10 +656,10 @@
     "resourceType": "Microsoft.AnalysisServices/locations",
     "apiVersion": "2017-08-01",
     "output": {
-      "$ref": "#/55"
+      "$ref": "#/59"
     },
     "input": {
-      "$ref": "#/54"
+      "$ref": "#/58"
     }
   }
 ]

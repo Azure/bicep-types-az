@@ -88,6 +88,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/roleManagementPolicyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.Authorization/roleAssignmentScheduleRequests@2024-09-01-preview)
+* **Resource**: Microsoft.Authorization/roleAssignmentScheduleRequests
+* **ApiVersion**: 2024-09-01-preview
+* **Output**: any
+
+## Function cancel (Microsoft.Authorization/roleEligibilityScheduleRequests@2024-09-01-preview)
+* **Resource**: Microsoft.Authorization/roleEligibilityScheduleRequests
+* **ApiVersion**: 2024-09-01-preview
+* **Output**: any
+
 ## Function validate (Microsoft.Authorization/roleAssignmentScheduleRequests@2024-09-01-preview)
 * **Resource**: Microsoft.Authorization/roleAssignmentScheduleRequests
 * **ApiVersion**: 2024-09-01-preview

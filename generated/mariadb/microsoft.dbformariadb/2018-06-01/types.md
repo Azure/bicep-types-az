@@ -138,6 +138,11 @@
 * **ApiVersion**: 2018-06-01
 * **Output**: [QueryPerformanceInsightResetDataResult](#queryperformanceinsightresetdataresult)
 
+## Function restart (Microsoft.DBforMariaDB/servers@2018-06-01)
+* **Resource**: Microsoft.DBforMariaDB/servers
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
 ## Function updateConfigurations (Microsoft.DBforMariaDB/servers@2018-06-01)
 * **Resource**: Microsoft.DBforMariaDB/servers
 * **ApiVersion**: 2018-06-01

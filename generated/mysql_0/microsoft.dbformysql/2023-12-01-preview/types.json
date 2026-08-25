@@ -1740,6 +1740,15 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/8"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "HighAvailabilityValidationEstimation",
     "properties": {
@@ -1772,10 +1781,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/135"
+      "$ref": "#/136"
     },
     "input": {
-      "$ref": "#/135"
+      "$ref": "#/136"
     }
   },
   {
@@ -1784,7 +1793,7 @@
     "properties": {
       "restartWithFailover": {
         "type": {
-          "$ref": "#/140"
+          "$ref": "#/141"
         },
         "flags": 0,
         "description": "Whether or not failover to standby server when restarting a server with high availability enabled."
@@ -1810,15 +1819,45 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/138"
+        "$ref": "#/139"
       },
       {
-        "$ref": "#/139"
+        "$ref": "#/140"
       },
       {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/8"
+    },
+    "input": {
+      "$ref": "#/138"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/8"
+    }
   },
   {
     "$type": "ObjectType",
@@ -1831,6 +1870,18 @@
         "flags": 0,
         "description": "The Gtid set of server."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetGtid",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/8"
+    },
+    "input": {
+      "$ref": "#/145"
     }
   },
   {
@@ -1860,7 +1911,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/148"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1916,7 +1967,7 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/142"
+      "$ref": "#/147"
     }
   },
   {
@@ -1952,7 +2003,7 @@
       },
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/153"
         },
         "flags": 2,
         "description": "A list of delegated subnet usage"
@@ -1982,7 +2033,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/147"
+      "$ref": "#/152"
     }
   },
   {
@@ -1991,10 +2042,10 @@
     "resourceType": "Microsoft.DBforMySQL/locations",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/146"
+      "$ref": "#/151"
     },
     "input": {
-      "$ref": "#/145"
+      "$ref": "#/150"
     }
   },
   {
@@ -2030,7 +2081,7 @@
       },
       "nameAvailable": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/157"
         },
         "flags": 0,
         "description": "Indicates whether the resource name is available."
@@ -2053,10 +2104,10 @@
     "resourceType": "Microsoft.DBforMySQL/locations",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/151"
+      "$ref": "#/156"
     },
     "input": {
-      "$ref": "#/150"
+      "$ref": "#/155"
     }
   }
 ]

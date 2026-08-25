@@ -1849,5 +1849,17 @@
     "output": {
       "$ref": "#/116"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startFailedServerlessRuntime",
+    "resourceType": "Informatica.DataManagement/organizations/serverlessRuntimes",
+    "apiVersion": "2025-11-27",
+    "output": {
+      "$ref": "#/118"
+    }
   }
 ]

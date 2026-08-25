@@ -6933,12 +6933,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2020-04-15",
+    "output": {
+      "$ref": "#/660"
+    },
+    "input": {
+      "$ref": "#/658"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "LoadParameters",
     "properties": {
       "contentPaths": {
         "type": {
-          "$ref": "#/661"
+          "$ref": "#/663"
         },
         "flags": 1,
         "description": "The path to the content to be loaded. Path should be a relative file URL of the origin."
@@ -6949,6 +6964,18 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "load",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2020-04-15",
+    "output": {
+      "$ref": "#/660"
+    },
+    "input": {
+      "$ref": "#/662"
     }
   },
   {
@@ -6997,10 +7024,10 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2020-04-15",
     "output": {
-      "$ref": "#/663"
+      "$ref": "#/666"
     },
     "input": {
-      "$ref": "#/662"
+      "$ref": "#/665"
     }
   },
   {
@@ -7010,6 +7037,266 @@
     "apiVersion": "2020-04-15",
     "output": {
       "$ref": "#/650"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomain",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/670"
+        },
+        "flags": 0,
+        "description": "The JSON object that contains the properties of the custom domain to create."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomainProperties",
+    "properties": {
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The host name of the custom domain. Must be a domain name."
+      },
+      "resourceState": {
+        "type": {
+          "$ref": "#/674"
+        },
+        "flags": 2,
+        "description": "Resource status of the custom domain."
+      },
+      "customHttpsProvisioningState": {
+        "type": {
+          "$ref": "#/680"
+        },
+        "flags": 2,
+        "description": "Provisioning status of Custom Https of the custom domain."
+      },
+      "customHttpsProvisioningSubstate": {
+        "type": {
+          "$ref": "#/691"
+        },
+        "flags": 2,
+        "description": "Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step."
+      },
+      "customHttpsParameters": {
+        "type": {
+          "$ref": "#/502"
+        },
+        "flags": 0,
+        "description": "Certificate parameters for securing custom HTTPS"
+      },
+      "validationData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Provisioning status of the custom domain."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/671"
+      },
+      {
+        "$ref": "#/672"
+      },
+      {
+        "$ref": "#/673"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/675"
+      },
+      {
+        "$ref": "#/676"
+      },
+      {
+        "$ref": "#/677"
+      },
+      {
+        "$ref": "#/678"
+      },
+      {
+        "$ref": "#/679"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmittingDomainControlValidationRequest"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingDomainControlValidationREquestApproval"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DomainControlValidationRequestApproved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DomainControlValidationRequestRejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DomainControlValidationRequestTimedOut"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IssuingCertificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeployingCertificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateDeployed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeletingCertificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateDeleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/681"
+      },
+      {
+        "$ref": "#/682"
+      },
+      {
+        "$ref": "#/683"
+      },
+      {
+        "$ref": "#/684"
+      },
+      {
+        "$ref": "#/685"
+      },
+      {
+        "$ref": "#/686"
+      },
+      {
+        "$ref": "#/687"
+      },
+      {
+        "$ref": "#/688"
+      },
+      {
+        "$ref": "#/689"
+      },
+      {
+        "$ref": "#/690"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableCustomHttps",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints/customDomains",
+    "apiVersion": "2020-04-15",
+    "output": {
+      "$ref": "#/669"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableCustomHttps",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints/customDomains",
+    "apiVersion": "2020-04-15",
+    "output": {
+      "$ref": "#/669"
+    },
+    "input": {
+      "$ref": "#/502"
     }
   }
 ]

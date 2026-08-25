@@ -1880,6 +1880,33 @@
     "writableScopes": 8
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2022-10-01-preview",
+    "output": {
+      "$ref": "#/82"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2022-10-01-preview",
+    "output": {
+      "$ref": "#/82"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ContainerInstance/containerGroups",
+    "apiVersion": "2022-10-01-preview",
+    "output": {
+      "$ref": "#/82"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ContainerExecRequest",
     "properties": {
@@ -1892,7 +1919,7 @@
       },
       "terminalSize": {
         "type": {
-          "$ref": "#/120"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "The size of the terminal."
@@ -1945,10 +1972,10 @@
     "resourceType": "Microsoft.ContainerInstance/containerGroups/containers",
     "apiVersion": "2022-10-01-preview",
     "output": {
-      "$ref": "#/121"
+      "$ref": "#/124"
     },
     "input": {
-      "$ref": "#/119"
+      "$ref": "#/122"
     }
   },
   {
@@ -1977,7 +2004,7 @@
     "resourceType": "Microsoft.ContainerInstance/containerGroups/containers",
     "apiVersion": "2022-10-01-preview",
     "output": {
-      "$ref": "#/123"
+      "$ref": "#/126"
     }
   }
 ]

@@ -2158,6 +2158,15 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "disconnect",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions",
+    "apiVersion": "2020-11-10-preview",
+    "output": {
+      "$ref": "#/69"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SendMessage",
     "properties": {
@@ -2175,6 +2184,18 @@
         "flags": 0,
         "description": "Body of message."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sendMessage",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions",
+    "apiVersion": "2020-11-10-preview",
+    "output": {
+      "$ref": "#/69"
+    },
+    "input": {
+      "$ref": "#/153"
     }
   },
   {
@@ -2196,7 +2217,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/159"
+          "$ref": "#/161"
         },
         "flags": 0,
         "description": "List of MSIX package properties from give MSIX Image."
@@ -2216,7 +2237,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/158"
         },
         "flags": 0,
         "description": "Detailed properties for ExpandMsixImage"
@@ -2313,7 +2334,7 @@
       },
       "packageDependencies": {
         "type": {
-          "$ref": "#/157"
+          "$ref": "#/159"
         },
         "flags": 0,
         "description": "List of package dependencies."
@@ -2334,7 +2355,7 @@
       },
       "packageApplications": {
         "type": {
-          "$ref": "#/158"
+          "$ref": "#/160"
         },
         "flags": 0,
         "description": "List of package applications."
@@ -2356,7 +2377,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/155"
+      "$ref": "#/157"
     }
   },
   {
@@ -2365,10 +2386,10 @@
     "resourceType": "Microsoft.DesktopVirtualization/hostPools",
     "apiVersion": "2020-11-10-preview",
     "output": {
-      "$ref": "#/154"
+      "$ref": "#/156"
     },
     "input": {
-      "$ref": "#/153"
+      "$ref": "#/155"
     }
   }
 ]
