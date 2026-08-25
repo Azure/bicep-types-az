@@ -19,6 +19,16 @@
 * **Input**: [CheckCapacityNameAvailabilityParameters](#checkcapacitynameavailabilityparameters)
 * **Output**: [CheckCapacityNameAvailabilityResult](#checkcapacitynameavailabilityresult)
 
+## Function resume (Microsoft.PowerBIDedicated/capacities@2017-10-01)
+* **Resource**: Microsoft.PowerBIDedicated/capacities
+* **ApiVersion**: 2017-10-01
+* **Output**: any
+
+## Function suspend (Microsoft.PowerBIDedicated/capacities@2017-10-01)
+* **Resource**: Microsoft.PowerBIDedicated/capacities
+* **ApiVersion**: 2017-10-01
+* **Output**: any
+
 ## CheckCapacityNameAvailabilityParameters
 ### Properties
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"}: Name for checking availability.

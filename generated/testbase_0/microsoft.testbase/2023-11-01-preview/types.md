@@ -287,6 +287,24 @@
 * **Input**: [PackageCheckNameAvailabilityParameters](#packagechecknameavailabilityparameters)
 * **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
 
+## Function copyFromPackage (Microsoft.TestBase/testBaseAccounts/draftPackages@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/draftPackages
+* **ApiVersion**: 2023-11-01-preview
+* **Input**: [CopyFromPackageOperationParameters](#copyfrompackageoperationparameters)
+* **Output**: any
+
+## Function extractFile (Microsoft.TestBase/testBaseAccounts/draftPackages@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/draftPackages
+* **ApiVersion**: 2023-11-01-preview
+* **Input**: [ExtractFileOperationParameters](#extractfileoperationparameters)
+* **Output**: any
+
+## Function generateFoldersAndScripts (Microsoft.TestBase/testBaseAccounts/draftPackages@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/draftPackages
+* **ApiVersion**: 2023-11-01-preview
+* **Input**: [GenerateOperationParameters](#generateoperationparameters)
+* **Output**: any
+
 ## Function getConsoleLogDownloadUrl (Microsoft.TestBase/testBaseAccounts/packages/testResults@2023-11-01-preview)
 * **Resource**: Microsoft.TestBase/testBaseAccounts/packages/testResults
 * **ApiVersion**: 2023-11-01-preview
@@ -329,6 +347,22 @@
 * **Resource**: Microsoft.TestBase/testBaseAccounts/packages/testResults
 * **ApiVersion**: 2023-11-01-preview
 * **Output**: [DownloadURLResponse](#downloadurlresponse)
+
+## Function hardDelete (Microsoft.TestBase/testBaseAccounts/packages@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/packages
+* **ApiVersion**: 2023-11-01-preview
+* **Output**: any
+
+## Function offboard (Microsoft.TestBase/testBaseAccounts@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts
+* **ApiVersion**: 2023-11-01-preview
+* **Output**: any
+
+## Function runTest (Microsoft.TestBase/testBaseAccounts/packages@2023-11-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/packages
+* **ApiVersion**: 2023-11-01-preview
+* **Input**: [PackageRunTestParameters](#packageruntestparameters)
+* **Output**: any
 
 ## ActionRequestProperties
 ### Properties
@@ -524,6 +558,10 @@
 * **runAsInteractive**: bool: Specifies whether to run the command in interactive mode.
 * **runElevated**: bool: Specifies whether to run the command as administrator.
 
+## CopyFromPackageOperationParameters
+### Properties
+* **packageId**: string (Required): The id of the package to copy from.
+
 ## CredentialProperties
 * **Discriminator**: credentialType
 
@@ -641,6 +679,12 @@
 * **appName**: string (Required): Intune app name.
 * **expectedInstallationPath**: string (Required): Intune app expected installation path.
 
+## ExtractFileOperationParameters
+### Properties
+* **fileType**: 'IntuneWinPackage' | 'TestBasePackage' | string: The type of file to extract.
+* **intuneAppId**: string: Intune application id.
+* **sourceFile**: string (Required): Relative path of the file to be extracted, the path must under working path of this draft package.
+
 ## FavoriteProcessProperties
 ### Properties
 * **actualProcessName**: string (Required): The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
@@ -697,6 +741,10 @@
 * **licenseUrl**: string: The license URL of a winget gallery application SKU.
 * **version**: string: The version of a winget gallery application SKU.
 
+
+## GenerateOperationParameters
+### Properties
+* **forceGenerate**: bool: Force to generate package files even if no metadata changed.
 
 ## GetFileUploadURLParameters
 ### Properties
@@ -838,6 +886,15 @@
 * **testTypes**: ('FlowDrivenTest' | 'FunctionalTest' | 'OutOfBoxTest' | string)[] (ReadOnly): OOB, functional or flow driven. Mapped to the data in 'tests' property.
 * **validationResults**: [PackageValidationResult](#packagevalidationresult)[] (ReadOnly): The validation results. There's validation on package when it's created or updated.
 * **version**: string (Required): Application version
+
+## PackageRunTestParameters
+### Properties
+* **customImageId**: string: The tested custom image id. 'osName', 'release', 'buildVersion' and 'mediaPackageVersion' would be ignored when it's eligible.'
+* **flightingRing**: string: The flighting ring, only for release of feature updates.
+* **osName**: string: The operating system name. e.g. Windows 10 1809.
+* **osUpdateType**: 'FeatureUpdate' | 'InplaceUpgrade' | 'SecurityUpdate' | string: Specifies the OS update type to test against.
+* **releaseName**: string: The name of the tested release (OS update).
+* **testType**: 'FlowDrivenTest' | 'FunctionalTest' | 'OutOfBoxTest' | string: The type of the test.
 
 ## PackageValidationResult
 ### Properties

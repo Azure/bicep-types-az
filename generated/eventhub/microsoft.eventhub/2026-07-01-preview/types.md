@@ -189,11 +189,21 @@
 * **ApiVersion**: 2026-07-01-preview
 * **Output**: [FabricShortcut](#fabricshortcut)
 
+## Function breakPairing (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2026-07-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2026-07-01-preview
+* **Output**: any
+
 ## Function failover (Microsoft.EventHub/namespaces@2026-07-01-preview)
 * **Resource**: Microsoft.EventHub/namespaces
 * **ApiVersion**: 2026-07-01-preview
 * **Input**: [FailOver](#failover)
 * **Output**: [FailOver](#failover)
+
+## Function failover (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2026-07-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2026-07-01-preview
+* **Output**: any
 
 ## Function listKeys (Microsoft.EventHub/namespaces/authorizationRules@2026-07-01-preview)
 * **Resource**: Microsoft.EventHub/namespaces/authorizationRules
@@ -209,6 +219,11 @@
 * **Resource**: Microsoft.EventHub/namespaces/eventhubs/authorizationRules
 * **ApiVersion**: 2026-07-01-preview
 * **Output**: [AccessKeys](#accesskeys)
+
+## Function reconcile (Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations@2026-07-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2026-07-01-preview
+* **Output**: any
 
 ## Function regenerateKeys (Microsoft.EventHub/namespaces/authorizationRules@2026-07-01-preview)
 * **Resource**: Microsoft.EventHub/namespaces/authorizationRules

@@ -46,6 +46,11 @@
 * **ApiVersion**: 2025-11-27
 * **Output**: [InformaticaServerlessRuntimeResource](#informaticaserverlessruntimeresource)
 
+## Function startFailedServerlessRuntime (Informatica.DataManagement/organizations/serverlessRuntimes@2025-11-27)
+* **Resource**: Informatica.DataManagement/organizations/serverlessRuntimes
+* **ApiVersion**: 2025-11-27
+* **Output**: any
+
 ## AdvancedCustomProperties
 ### Properties
 * **key**: string: advanced custom properties key

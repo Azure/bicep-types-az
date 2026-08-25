@@ -1174,12 +1174,24 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforMariaDB/servers",
+    "apiVersion": "2018-06-01-preview",
+    "output": {
+      "$ref": "#/89"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ConfigurationListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/93"
         },
         "flags": 0,
         "description": "The list of server configurations."
@@ -1223,7 +1235,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/90"
+      "$ref": "#/92"
     }
   },
   {
@@ -1232,10 +1244,10 @@
     "resourceType": "Microsoft.DBforMariaDB/servers",
     "apiVersion": "2018-06-01-preview",
     "output": {
-      "$ref": "#/89"
+      "$ref": "#/91"
     },
     "input": {
-      "$ref": "#/89"
+      "$ref": "#/91"
     }
   }
 ]

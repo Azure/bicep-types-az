@@ -2262,5 +2262,71 @@
     "output": {
       "$ref": "#/187"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/194"
+        },
+        "flags": 0,
+        "description": "The type of access key."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Salt"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/191"
+      },
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.SignalRService/signalR",
+    "apiVersion": "2023-02-01",
+    "output": {
+      "$ref": "#/187"
+    },
+    "input": {
+      "$ref": "#/190"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.SignalRService/signalR",
+    "apiVersion": "2023-02-01",
+    "output": {
+      "$ref": "#/196"
+    }
   }
 ]

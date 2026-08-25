@@ -2290,12 +2290,21 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "approve",
+    "resourceType": "Microsoft.Advisor/triageRecommendations",
+    "apiVersion": "2025-05-01-preview",
+    "output": {
+      "$ref": "#/80"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "RecommendationRejectBody",
     "properties": {
       "reasonForRejection": {
         "type": {
-          "$ref": "#/177"
+          "$ref": "#/178"
         },
         "flags": 0,
         "description": "Reason for rejecting recommendation."
@@ -2314,14 +2323,35 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/175"
+        "$ref": "#/176"
       },
       {
-        "$ref": "#/176"
+        "$ref": "#/177"
       },
       {
         "$ref": "#/0"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reject",
+    "resourceType": "Microsoft.Advisor/triageRecommendations",
+    "apiVersion": "2025-05-01-preview",
+    "output": {
+      "$ref": "#/80"
+    },
+    "input": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reset",
+    "resourceType": "Microsoft.Advisor/triageRecommendations",
+    "apiVersion": "2025-05-01-preview",
+    "output": {
+      "$ref": "#/80"
+    }
   }
 ]

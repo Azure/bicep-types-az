@@ -618,6 +618,12 @@
 * **ApiVersion**: 2020-12-01
 * **Output**: [NamedValueSecretContract](#namedvaluesecretcontract)
 
+## Function reconnect (Microsoft.ApiManagement/service/backends@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/backends
+* **ApiVersion**: 2020-12-01
+* **Input**: [BackendReconnectContract](#backendreconnectcontract)
+* **Output**: any
+
 ## Function refreshSecret (Microsoft.ApiManagement/service/certificates@2020-12-01)
 * **Resource**: Microsoft.ApiManagement/service/certificates
 * **ApiVersion**: 2020-12-01
@@ -627,6 +633,32 @@
 * **Resource**: Microsoft.ApiManagement/service/namedValues
 * **ApiVersion**: 2020-12-01
 * **Output**: [NamedValueContract](#namedvaluecontract)
+
+## Function regenerateKey (Microsoft.ApiManagement/service/gateways@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/gateways
+* **ApiVersion**: 2020-12-01
+* **Input**: [GatewayKeyRegenerationRequestContract](#gatewaykeyregenerationrequestcontract)
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/subscriptions@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2020-12-01
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/tenant@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2020-12-01
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/subscriptions@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2020-12-01
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/tenant@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2020-12-01
+* **Output**: any
 
 ## Function restore (Microsoft.ApiManagement/service@2020-12-01)
 * **Resource**: Microsoft.ApiManagement/service
@@ -639,6 +671,11 @@
 * **ApiVersion**: 2020-12-01
 * **Input**: [SaveConfigurationParameter](#saveconfigurationparameter)
 * **Output**: [OperationResultContract](#operationresultcontract)
+
+## Function send (Microsoft.ApiManagement/service/users/confirmations@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/users/confirmations
+* **ApiVersion**: 2020-12-01
+* **Output**: any
 
 ## Function token (Microsoft.ApiManagement/service/users@2020-12-01)
 * **Resource**: Microsoft.ApiManagement/service/users
@@ -908,6 +945,17 @@ dictionary key references will be ARM resource ids in the form:
 * **url**: string {minLength: 1, maxLength: 2000} (Required): WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
 * **username**: string: Username to connect to the WebProxy server
 
+## BackendReconnectContract
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [BackendReconnectProperties](#backendreconnectproperties): Reconnect request properties.
+* **type**: string (ReadOnly): Resource type for API Management resource.
+
+## BackendReconnectProperties
+### Properties
+* **after**: string: Duration in ISO8601 format after which reconnect will be initiated. Minimum duration of the Reconnect is PT2M.
+
 ## BackendServiceFabricClusterProperties
 ### Properties
 * **clientCertificateId**: string: The client certificate id for the management endpoint.
@@ -1068,6 +1116,10 @@ dictionary key references will be ARM resource ids in the form:
 * **negotiateClientCertificate**: bool: Determines whether gateway requests client certificate
 * **tls10Enabled**: bool: Specifies if TLS 1.0 is supported
 * **tls11Enabled**: bool: Specifies if TLS 1.1 is supported
+
+## GatewayKeyRegenerationRequestContract
+### Properties
+* **keyType**: 'primary' | 'secondary' (Required): The Key being regenerated.
 
 ## GatewayKeysContract
 ### Properties

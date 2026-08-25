@@ -11815,6 +11815,18 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "appendTags",
+    "resourceType": "Microsoft.SecurityInsights/threatIntelligence/indicators",
+    "apiVersion": "2022-11-01",
+    "output": {
+      "$ref": "#/476"
+    },
+    "input": {
+      "$ref": "#/938"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "replaceTags",
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence/indicators",
     "apiVersion": "2022-11-01",

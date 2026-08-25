@@ -135,6 +135,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/workspaceSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function dismiss (Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedAlerts@2017-08-01-preview)
+* **Resource**: Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedAlerts
+* **ApiVersion**: 2017-08-01-preview
+* **Output**: any
+
 ## AdvancedThreatProtectionProperties
 ### Properties
 * **isEnabled**: bool: Indicates whether Advanced Threat Protection is enabled.

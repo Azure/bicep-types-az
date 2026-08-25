@@ -6454,6 +6454,77 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "AzureBackupRehydrationRequest",
+    "properties": {
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Id of the recovery point to be recovered"
+      },
+      "rehydrationPriority": {
+        "type": {
+          "$ref": "#/487"
+        },
+        "flags": 0,
+        "description": "Priority to be used for rehydration. Values High or Standard"
+      },
+      "rehydrationRetentionDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Retention duration in ISO 8601 format i.e P10D ."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/484"
+      },
+      {
+        "$ref": "#/485"
+      },
+      {
+        "$ref": "#/486"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rehydrate",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/488"
+    },
+    "input": {
+      "$ref": "#/483"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "restore",
     "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
@@ -6466,12 +6537,30 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "resumeBackups",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/488"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resumeProtection",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/488"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "StopProtectionRequest",
     "properties": {
       "resourceGuardOperationRequests": {
         "type": {
-          "$ref": "#/485"
+          "$ref": "#/494"
         },
         "flags": 0,
         "description": "ResourceGuardOperationRequests on which LAC check will be performed"
@@ -6482,6 +6571,18 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopProtection",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/488"
+    },
+    "input": {
+      "$ref": "#/493"
     }
   },
   {
@@ -6490,7 +6591,7 @@
     "properties": {
       "resourceGuardOperationRequests": {
         "type": {
-          "$ref": "#/487"
+          "$ref": "#/497"
         },
         "flags": 0,
         "description": "ResourceGuardOperationRequests on which LAC check will be performed"
@@ -6504,12 +6605,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "suspendBackups",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/488"
+    },
+    "input": {
+      "$ref": "#/496"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SyncBackupInstanceRequest",
     "properties": {
       "syncType": {
         "type": {
-          "$ref": "#/491"
+          "$ref": "#/502"
         },
         "flags": 0,
         "description": "Field indicating sync type e.g. to sync only in case of failure or in all cases"
@@ -6528,15 +6641,27 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/489"
+        "$ref": "#/500"
       },
       {
-        "$ref": "#/490"
+        "$ref": "#/501"
       },
       {
         "$ref": "#/0"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/488"
+    },
+    "input": {
+      "$ref": "#/499"
+    }
   },
   {
     "$type": "ObjectType",
@@ -6560,7 +6685,7 @@
       "$ref": "#/461"
     },
     "input": {
-      "$ref": "#/492"
+      "$ref": "#/504"
     }
   },
   {
@@ -6569,7 +6694,7 @@
     "properties": {
       "sourceDataStoreType": {
         "type": {
-          "$ref": "#/498"
+          "$ref": "#/510"
         },
         "flags": 1,
         "description": "Gets or sets the type of the source data store."
@@ -6606,13 +6731,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/495"
+        "$ref": "#/507"
       },
       {
-        "$ref": "#/496"
+        "$ref": "#/508"
       },
       {
-        "$ref": "#/497"
+        "$ref": "#/509"
       },
       {
         "$ref": "#/0"
@@ -6625,7 +6750,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/500"
+          "$ref": "#/512"
         },
         "flags": 0,
         "description": "AzureBackupFindRestorableTimeRangesResponseResource properties"
@@ -6666,7 +6791,7 @@
     "properties": {
       "restorableTimeRanges": {
         "type": {
-          "$ref": "#/502"
+          "$ref": "#/514"
         },
         "flags": 0,
         "description": "Returns the Restore Ranges available on the Backup Instance."
@@ -6708,7 +6833,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/501"
+      "$ref": "#/513"
     }
   },
   {
@@ -6717,10 +6842,10 @@
     "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
     "apiVersion": "2025-01-01",
     "output": {
-      "$ref": "#/499"
+      "$ref": "#/511"
     },
     "input": {
-      "$ref": "#/494"
+      "$ref": "#/506"
     }
   },
   {
@@ -6745,7 +6870,25 @@
       "$ref": "#/461"
     },
     "input": {
-      "$ref": "#/504"
+      "$ref": "#/516"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportBackupJobs",
+    "resourceType": "Microsoft.DataProtection/backupVaults",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/488"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "undelete",
+    "resourceType": "Microsoft.DataProtection/backupVaults/deletedBackupInstances",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/488"
     }
   },
   {
@@ -6754,7 +6897,7 @@
     "properties": {
       "resourceGuardOperationRequests": {
         "type": {
-          "$ref": "#/507"
+          "$ref": "#/521"
         },
         "flags": 0,
         "description": "ResourceGuardOperationRequests on which LAC check will be performed"
@@ -6792,10 +6935,10 @@
     "resourceType": "Microsoft.DataProtection/backupVaults/backupResourceGuardProxies",
     "apiVersion": "2025-01-01",
     "output": {
-      "$ref": "#/508"
+      "$ref": "#/522"
     },
     "input": {
-      "$ref": "#/506"
+      "$ref": "#/520"
     }
   }
 ]

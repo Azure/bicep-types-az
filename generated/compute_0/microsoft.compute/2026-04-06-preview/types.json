@@ -4540,12 +4540,21 @@
     "writableScopes": 8
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Compute/locations/launchBulkInstancesOperations",
+    "apiVersion": "2026-04-06-preview",
+    "output": {
+      "$ref": "#/310"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CancelOperationsRequest",
     "properties": {
       "operationIds": {
         "type": {
-          "$ref": "#/357"
+          "$ref": "#/358"
         },
         "flags": 1,
         "description": "The list of operation ids to cancel operations on"
@@ -4564,7 +4573,7 @@
     "properties": {
       "results": {
         "type": {
-          "$ref": "#/391"
+          "$ref": "#/392"
         },
         "flags": 1,
         "description": "An array of resource operations that were successfully cancelled"
@@ -4598,7 +4607,7 @@
       },
       "operation": {
         "type": {
-          "$ref": "#/360"
+          "$ref": "#/361"
         },
         "flags": 0,
         "description": "Details of the operation performed on a resource"
@@ -4625,7 +4634,7 @@
       },
       "opType": {
         "type": {
-          "$ref": "#/367"
+          "$ref": "#/368"
         },
         "flags": 0,
         "description": "Type of operation performed on the resources"
@@ -4646,14 +4655,14 @@
       },
       "deadlineType": {
         "type": {
-          "$ref": "#/371"
+          "$ref": "#/372"
         },
         "flags": 0,
         "description": "Type of deadline of the operation"
       },
       "state": {
         "type": {
-          "$ref": "#/381"
+          "$ref": "#/382"
         },
         "flags": 2,
         "description": "Current state of the operation"
@@ -4667,14 +4676,14 @@
       },
       "resourceOperationError": {
         "type": {
-          "$ref": "#/382"
+          "$ref": "#/383"
         },
         "flags": 0,
         "description": "Operation level errors if they exist"
       },
       "fallbackOperationInfo": {
         "type": {
-          "$ref": "#/383"
+          "$ref": "#/384"
         },
         "flags": 0,
         "description": "Fallback operation details if a fallback was performed"
@@ -4723,9 +4732,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/361"
-      },
-      {
         "$ref": "#/362"
       },
       {
@@ -4739,6 +4745,9 @@
       },
       {
         "$ref": "#/366"
+      },
+      {
+        "$ref": "#/367"
       },
       {
         "$ref": "#/2"
@@ -4761,13 +4770,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/368"
-      },
-      {
         "$ref": "#/369"
       },
       {
         "$ref": "#/370"
+      },
+      {
+        "$ref": "#/371"
       },
       {
         "$ref": "#/2"
@@ -4814,9 +4823,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/372"
-      },
-      {
         "$ref": "#/373"
       },
       {
@@ -4839,6 +4845,9 @@
       },
       {
         "$ref": "#/380"
+      },
+      {
+        "$ref": "#/381"
       },
       {
         "$ref": "#/2"
@@ -4871,7 +4880,7 @@
     "properties": {
       "lastOpType": {
         "type": {
-          "$ref": "#/390"
+          "$ref": "#/391"
         },
         "flags": 1,
         "description": "The last operation type that was performed as a fallback"
@@ -4885,7 +4894,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/382"
+          "$ref": "#/383"
         },
         "flags": 0,
         "description": "The error code if the fallback operation failed"
@@ -4920,9 +4929,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/384"
-      },
-      {
         "$ref": "#/385"
       },
       {
@@ -4938,6 +4944,9 @@
         "$ref": "#/389"
       },
       {
+        "$ref": "#/390"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -4945,7 +4954,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/359"
+      "$ref": "#/360"
     }
   },
   {
@@ -4954,10 +4963,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-04-06-preview",
     "output": {
-      "$ref": "#/358"
+      "$ref": "#/359"
     },
     "input": {
-      "$ref": "#/356"
+      "$ref": "#/357"
     }
   },
   {
@@ -4966,14 +4975,14 @@
     "properties": {
       "resourceConfigParameters": {
         "type": {
-          "$ref": "#/394"
+          "$ref": "#/395"
         },
         "flags": 1,
         "description": "resource creation payload"
       },
       "executionParameters": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/418"
         },
         "flags": 1,
         "description": "The execution parameters for the request"
@@ -4986,14 +4995,14 @@
     "properties": {
       "baseProfile": {
         "type": {
-          "$ref": "#/395"
+          "$ref": "#/396"
         },
         "flags": 0,
         "description": "Bulk Actions Virtual Machine Profile object that contains VM properties that are common across all VMs in this batch"
       },
       "resourceOverrides": {
         "type": {
-          "$ref": "#/416"
+          "$ref": "#/417"
         },
         "flags": 0,
         "description": "Bulk Actions Virtual Machine Profile array, that contains VM properties that should be overridden for each VM in the batch"
@@ -5027,35 +5036,35 @@
       },
       "zones": {
         "type": {
-          "$ref": "#/396"
+          "$ref": "#/397"
         },
         "flags": 0,
         "description": "The availability zones."
       },
       "identity": {
         "type": {
-          "$ref": "#/397"
+          "$ref": "#/398"
         },
         "flags": 0,
         "description": "The identity of the virtual machine, if configured."
       },
       "extendedLocation": {
         "type": {
-          "$ref": "#/405"
+          "$ref": "#/406"
         },
         "flags": 0,
         "description": "The extended location of the Virtual Machine."
       },
       "placement": {
         "type": {
-          "$ref": "#/409"
+          "$ref": "#/410"
         },
         "flags": 0,
         "description": "Placement constraints for virtual machine hardware placement - see specification/compute/Compute.Management/models.tsp#Placement"
       },
       "tags": {
         "type": {
-          "$ref": "#/415"
+          "$ref": "#/416"
         },
         "flags": 0,
         "description": "Resource tags to apply to the virtual machines created by this bulk action."
@@ -5109,14 +5118,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/402"
+          "$ref": "#/403"
         },
         "flags": 0,
         "description": "The type of identity used for the virtual machine. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/404"
+          "$ref": "#/405"
         },
         "flags": 0,
         "description": "The list of user identities associated with the Virtual Machine. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
@@ -5143,9 +5152,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/398"
-      },
-      {
         "$ref": "#/399"
       },
       {
@@ -5153,6 +5159,9 @@
       },
       {
         "$ref": "#/401"
+      },
+      {
+        "$ref": "#/402"
       }
     ]
   },
@@ -5181,7 +5190,7 @@
     "name": "VirtualMachineIdentityUserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/403"
+      "$ref": "#/404"
     }
   },
   {
@@ -5197,7 +5206,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/408"
+          "$ref": "#/409"
         },
         "flags": 1,
         "description": "The type of the extended location."
@@ -5216,10 +5225,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/406"
+        "$ref": "#/407"
       },
       {
-        "$ref": "#/407"
+        "$ref": "#/408"
       },
       {
         "$ref": "#/2"
@@ -5232,21 +5241,21 @@
     "properties": {
       "zonePlacementPolicy": {
         "type": {
-          "$ref": "#/412"
+          "$ref": "#/413"
         },
         "flags": 0,
         "description": "Specifies the policy for resource's placement in availability zone. Possible values are: **Any** (used for Virtual Machines), **Auto** (used for Virtual Machine Scale Sets) - An availability zone will be automatically picked by system as part of resource creation."
       },
       "includeZones": {
         "type": {
-          "$ref": "#/413"
+          "$ref": "#/414"
         },
         "flags": 0,
         "description": "This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any'/'Auto', availability zone selected by the system must be present in the list of availability zones passed with 'includeZones'. If 'includeZones' is not provided, all availability zones in region will be considered for selection."
       },
       "excludeZones": {
         "type": {
-          "$ref": "#/414"
+          "$ref": "#/415"
         },
         "flags": 0,
         "description": "This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any'/'Auto', availability zone selected by the system must not be present in the list of availability zones passed with 'excludeZones'. If 'excludeZones' is not provided, all availability zones in region will be considered for selection."
@@ -5265,10 +5274,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/410"
+        "$ref": "#/411"
       },
       {
-        "$ref": "#/411"
+        "$ref": "#/412"
       },
       {
         "$ref": "#/2"
@@ -5298,7 +5307,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/395"
+      "$ref": "#/396"
     }
   },
   {
@@ -5341,7 +5350,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/419"
+          "$ref": "#/420"
         },
         "flags": 0,
         "description": "The results from the create request if no errors exist"
@@ -5351,7 +5360,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/359"
+      "$ref": "#/360"
     }
   },
   {
@@ -5360,10 +5369,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-04-06-preview",
     "output": {
-      "$ref": "#/418"
+      "$ref": "#/419"
     },
     "input": {
-      "$ref": "#/393"
+      "$ref": "#/394"
     }
   },
   {
@@ -5372,14 +5381,14 @@
     "properties": {
       "executionParameters": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/418"
         },
         "flags": 1,
         "description": "The execution parameters for the request"
       },
       "resources": {
         "type": {
-          "$ref": "#/422"
+          "$ref": "#/423"
         },
         "flags": 1,
         "description": "The resources for the request"
@@ -5392,7 +5401,7 @@
     "properties": {
       "ids": {
         "type": {
-          "$ref": "#/423"
+          "$ref": "#/424"
         },
         "flags": 1,
         "description": "The resource ids used for the request"
@@ -5432,7 +5441,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/425"
+          "$ref": "#/426"
         },
         "flags": 0,
         "description": "The results from the deallocate request if no errors exist"
@@ -5442,7 +5451,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/359"
+      "$ref": "#/360"
     }
   },
   {
@@ -5451,10 +5460,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-04-06-preview",
     "output": {
-      "$ref": "#/424"
+      "$ref": "#/425"
     },
     "input": {
-      "$ref": "#/421"
+      "$ref": "#/422"
     }
   },
   {
@@ -5463,14 +5472,14 @@
     "properties": {
       "executionParameters": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/418"
         },
         "flags": 1,
         "description": "The execution parameters for the request"
       },
       "resources": {
         "type": {
-          "$ref": "#/422"
+          "$ref": "#/423"
         },
         "flags": 1,
         "description": "The resources for the request"
@@ -5511,7 +5520,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/429"
+          "$ref": "#/430"
         },
         "flags": 0,
         "description": "The results from the delete request if no errors exist"
@@ -5521,7 +5530,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/359"
+      "$ref": "#/360"
     }
   },
   {
@@ -5530,10 +5539,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-04-06-preview",
     "output": {
-      "$ref": "#/428"
+      "$ref": "#/429"
     },
     "input": {
-      "$ref": "#/427"
+      "$ref": "#/428"
     }
   },
   {
@@ -5542,7 +5551,7 @@
     "properties": {
       "operationIds": {
         "type": {
-          "$ref": "#/432"
+          "$ref": "#/433"
         },
         "flags": 1,
         "description": "The list of operation ids to get the status of"
@@ -5561,7 +5570,7 @@
     "properties": {
       "results": {
         "type": {
-          "$ref": "#/434"
+          "$ref": "#/435"
         },
         "flags": 1,
         "description": "An array of resource operations based on their operation ids"
@@ -5571,7 +5580,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/359"
+      "$ref": "#/360"
     }
   },
   {
@@ -5580,10 +5589,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-04-06-preview",
     "output": {
-      "$ref": "#/433"
+      "$ref": "#/434"
     },
     "input": {
-      "$ref": "#/431"
+      "$ref": "#/432"
     }
   },
   {
@@ -5592,14 +5601,14 @@
     "properties": {
       "executionParameters": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/418"
         },
         "flags": 1,
         "description": "The execution parameters for the request"
       },
       "resources": {
         "type": {
-          "$ref": "#/422"
+          "$ref": "#/423"
         },
         "flags": 1,
         "description": "The resources for the request"
@@ -5633,7 +5642,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/438"
+          "$ref": "#/439"
         },
         "flags": 0,
         "description": "The results from the Hibernate request if no errors exist"
@@ -5643,7 +5652,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/359"
+      "$ref": "#/360"
     }
   },
   {
@@ -5652,10 +5661,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-04-06-preview",
     "output": {
-      "$ref": "#/437"
+      "$ref": "#/438"
     },
     "input": {
-      "$ref": "#/436"
+      "$ref": "#/437"
     }
   },
   {
@@ -5664,21 +5673,21 @@
     "properties": {
       "executionParameters": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/418"
         },
         "flags": 1,
         "description": "The execution parameters for the request"
       },
       "resources": {
         "type": {
-          "$ref": "#/422"
+          "$ref": "#/423"
         },
         "flags": 1,
         "description": "The resources for the request"
       },
       "reimageParameters": {
         "type": {
-          "$ref": "#/441"
+          "$ref": "#/442"
         },
         "flags": 0,
         "description": "Reimage parameters including base profile and per-resource overrides"
@@ -5691,14 +5700,14 @@
     "properties": {
       "baseProfile": {
         "type": {
-          "$ref": "#/442"
+          "$ref": "#/443"
         },
         "flags": 0,
         "description": "Common reimage profile applied to all resources unless overridden"
       },
       "resourceOverrides": {
         "type": {
-          "$ref": "#/445"
+          "$ref": "#/446"
         },
         "flags": 0,
         "description": "Per-resource reimage overrides"
@@ -5725,7 +5734,7 @@
       },
       "osProfile": {
         "type": {
-          "$ref": "#/443"
+          "$ref": "#/444"
         },
         "flags": 0,
         "description": "Specifies information required for reimaging the non-ephemeral OS disk."
@@ -5765,7 +5774,7 @@
       },
       "profile": {
         "type": {
-          "$ref": "#/442"
+          "$ref": "#/443"
         },
         "flags": 1,
         "description": "Per-resource reimage profile override"
@@ -5775,7 +5784,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/444"
+      "$ref": "#/445"
     }
   },
   {
@@ -5805,7 +5814,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/447"
+          "$ref": "#/448"
         },
         "flags": 0,
         "description": "The results from the reimage request if no errors exist"
@@ -5815,7 +5824,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/359"
+      "$ref": "#/360"
     }
   },
   {
@@ -5824,10 +5833,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-04-06-preview",
     "output": {
-      "$ref": "#/446"
+      "$ref": "#/447"
     },
     "input": {
-      "$ref": "#/440"
+      "$ref": "#/441"
     }
   },
   {
@@ -5836,14 +5845,14 @@
     "properties": {
       "executionParameters": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/418"
         },
         "flags": 1,
         "description": "The execution parameters for the request"
       },
       "resources": {
         "type": {
-          "$ref": "#/422"
+          "$ref": "#/423"
         },
         "flags": 1,
         "description": "The resources for the request"
@@ -5877,7 +5886,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/451"
+          "$ref": "#/452"
         },
         "flags": 0,
         "description": "The results from the start request if no errors exist"
@@ -5887,7 +5896,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/359"
+      "$ref": "#/360"
     }
   },
   {
@@ -5896,10 +5905,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-04-06-preview",
     "output": {
-      "$ref": "#/450"
+      "$ref": "#/451"
     },
     "input": {
-      "$ref": "#/449"
+      "$ref": "#/450"
     }
   },
   {
@@ -5908,14 +5917,14 @@
     "properties": {
       "resourceConfigParameters": {
         "type": {
-          "$ref": "#/454"
+          "$ref": "#/455"
         },
         "flags": 1,
         "description": "resource creation payload"
       },
       "executionParameters": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/418"
         },
         "flags": 1,
         "description": "The execution parameters for the request"
@@ -5928,14 +5937,14 @@
     "properties": {
       "baseProfile": {
         "type": {
-          "$ref": "#/395"
+          "$ref": "#/396"
         },
         "flags": 0,
         "description": "Bulk Actions Virtual Machine Profile object that contains VM properties that are common across all VMs in this batch"
       },
       "resourceOverrides": {
         "type": {
-          "$ref": "#/455"
+          "$ref": "#/456"
         },
         "flags": 0,
         "description": "Bulk Actions Virtual Machine Profile array, that contains VM properties that should be overridden for each VM in the batch"
@@ -5956,7 +5965,7 @@
       },
       "flexProperties": {
         "type": {
-          "$ref": "#/456"
+          "$ref": "#/457"
         },
         "flags": 1,
         "description": "Flex properties used for VDI resource creation scenarios"
@@ -5966,7 +5975,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/395"
+      "$ref": "#/396"
     }
   },
   {
@@ -5975,14 +5984,14 @@
     "properties": {
       "vmSizeProfiles": {
         "type": {
-          "$ref": "#/457"
+          "$ref": "#/458"
         },
         "flags": 1,
         "description": "The list of VM size profiles to use for flex creation"
       },
       "osType": {
         "type": {
-          "$ref": "#/460"
+          "$ref": "#/461"
         },
         "flags": 1,
         "description": "The operating system type for the VMs"
@@ -6023,10 +6032,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/458"
+        "$ref": "#/459"
       },
       {
-        "$ref": "#/459"
+        "$ref": "#/460"
       },
       {
         "$ref": "#/2"
@@ -6039,10 +6048,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-04-06-preview",
     "output": {
-      "$ref": "#/418"
+      "$ref": "#/419"
     },
     "input": {
-      "$ref": "#/453"
+      "$ref": "#/454"
     }
   }
 ]

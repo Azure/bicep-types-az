@@ -543,6 +543,24 @@
     "writableScopes": 8
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "Disable",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/intelligencePacks",
+    "apiVersion": "2015-11-01-preview",
+    "output": {
+      "$ref": "#/9"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Enable",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/intelligencePacks",
+    "apiVersion": "2015-11-01-preview",
+    "output": {
+      "$ref": "#/9"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SharedKeys",
     "properties": {
@@ -568,7 +586,7 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2015-11-01-preview",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/54"
     }
   }
 ]

@@ -7135,6 +7135,40 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AzureSubscriptions",
+    "properties": {
+      "azureSubscriptionIds": {
+        "type": {
+          "$ref": "#/518"
+        },
+        "flags": 1,
+        "description": "Azure Subscription Ids to be updated"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addAzureSubscriptions",
+    "resourceType": "Oracle.Database/oracleSubscriptions",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/519"
+    },
+    "input": {
+      "$ref": "#/517"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ActivationLinks",
     "properties": {
       "newCloudAccountActivationLink": {
@@ -7159,7 +7193,7 @@
     "resourceType": "Oracle.Database/oracleSubscriptions",
     "apiVersion": "2024-08-01-preview",
     "output": {
-      "$ref": "#/517"
+      "$ref": "#/521"
     }
   },
   {
@@ -7188,7 +7222,7 @@
     "resourceType": "Oracle.Database/oracleSubscriptions",
     "apiVersion": "2024-08-01-preview",
     "output": {
-      "$ref": "#/519"
+      "$ref": "#/523"
     }
   },
   {
@@ -7287,7 +7321,7 @@
     "resourceType": "Oracle.Database/oracleSubscriptions",
     "apiVersion": "2024-08-01-preview",
     "output": {
-      "$ref": "#/521"
+      "$ref": "#/525"
     }
   },
   {
@@ -7296,7 +7330,7 @@
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/528"
+          "$ref": "#/532"
         },
         "flags": 1,
         "description": "Db action"
@@ -7323,16 +7357,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/524"
+        "$ref": "#/528"
       },
       {
-        "$ref": "#/525"
+        "$ref": "#/529"
       },
       {
-        "$ref": "#/526"
+        "$ref": "#/530"
       },
       {
-        "$ref": "#/527"
+        "$ref": "#/531"
       },
       {
         "$ref": "#/2"
@@ -7386,10 +7420,10 @@
     "resourceType": "Oracle.Database/cloudVmClusters/dbNodes",
     "apiVersion": "2024-08-01-preview",
     "output": {
-      "$ref": "#/529"
+      "$ref": "#/533"
     },
     "input": {
-      "$ref": "#/523"
+      "$ref": "#/527"
     }
   }
 ]

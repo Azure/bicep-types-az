@@ -1870,12 +1870,21 @@
     "writableScopes": 8
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "refreshPermissions",
+    "resourceType": "Microsoft.Solutions/applications",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/6"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AllowedUpgradePlansResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/148"
         },
         "flags": 0,
         "description": "The array of plans."
@@ -1894,7 +1903,7 @@
     "resourceType": "Microsoft.Solutions/applications",
     "apiVersion": "2021-07-01",
     "output": {
-      "$ref": "#/146"
+      "$ref": "#/147"
     }
   },
   {
@@ -1910,21 +1919,21 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/151"
         },
         "flags": 1,
         "description": "The JIT request metadata."
       },
       "status": {
         "type": {
-          "$ref": "#/154"
+          "$ref": "#/155"
         },
         "flags": 1,
         "description": "The JIT status."
       },
       "subStatus": {
         "type": {
-          "$ref": "#/161"
+          "$ref": "#/162"
         },
         "flags": 1,
         "description": "The JIT status."
@@ -1981,13 +1990,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/151"
-      },
-      {
         "$ref": "#/152"
       },
       {
         "$ref": "#/153"
+      },
+      {
+        "$ref": "#/154"
       },
       {
         "$ref": "#/2"
@@ -2022,9 +2031,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/155"
-      },
-      {
         "$ref": "#/156"
       },
       {
@@ -2040,9 +2046,24 @@
         "$ref": "#/160"
       },
       {
+        "$ref": "#/161"
+      },
+      {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAccess",
+    "resourceType": "Microsoft.Solutions/applications",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/150"
+    },
+    "input": {
+      "$ref": "#/150"
+    }
   },
   {
     "$type": "ObjectType",
@@ -2057,7 +2078,7 @@
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/165"
         },
         "flags": 0,
         "description": "The user assigned identities."
@@ -2076,7 +2097,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/168"
         },
         "flags": 0,
         "description": "The array of managed identity tokens."
@@ -2141,7 +2162,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/165"
+      "$ref": "#/167"
     }
   },
   {
@@ -2150,10 +2171,10 @@
     "resourceType": "Microsoft.Solutions/applications",
     "apiVersion": "2021-07-01",
     "output": {
-      "$ref": "#/164"
+      "$ref": "#/166"
     },
     "input": {
-      "$ref": "#/162"
+      "$ref": "#/164"
     }
   }
 ]

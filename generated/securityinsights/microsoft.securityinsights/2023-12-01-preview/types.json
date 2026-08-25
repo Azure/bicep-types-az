@@ -23115,6 +23115,45 @@
   },
   {
     "$type": "ObjectType",
+    "name": "EntityManualTriggerRequestBody",
+    "properties": {
+      "incidentArmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Incident ARM id."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/444"
+        },
+        "flags": 0,
+        "description": "The tenant id of the playbook resource."
+      },
+      "logicAppsResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource id of the playbook resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runPlaybook",
+    "resourceType": "Microsoft.SecurityInsights/entities",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/646"
+    },
+    "input": {
+      "$ref": "#/1824"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "EntityExpandParameters",
     "properties": {
       "endTime": {
@@ -23146,14 +23185,14 @@
     "properties": {
       "metaData": {
         "type": {
-          "$ref": "#/1826"
+          "$ref": "#/1828"
         },
         "flags": 0,
         "description": "The metadata from the expansion operation results."
       },
       "value": {
         "type": {
-          "$ref": "#/1852"
+          "$ref": "#/1854"
         },
         "flags": 0,
         "description": "The expansion result values."
@@ -23166,7 +23205,7 @@
     "properties": {
       "aggregations": {
         "type": {
-          "$ref": "#/1851"
+          "$ref": "#/1853"
         },
         "flags": 0,
         "description": "Information of the aggregated nodes in the expansion result."
@@ -23200,7 +23239,7 @@
       },
       "entityKind": {
         "type": {
-          "$ref": "#/1850"
+          "$ref": "#/1852"
         },
         "flags": 1,
         "description": "The kind of the aggregated entity."
@@ -23299,12 +23338,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1828"
-      },
-      {
-        "$ref": "#/1829"
-      },
-      {
         "$ref": "#/1830"
       },
       {
@@ -23365,6 +23398,12 @@
         "$ref": "#/1849"
       },
       {
+        "$ref": "#/1850"
+      },
+      {
+        "$ref": "#/1851"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -23372,7 +23411,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1827"
+      "$ref": "#/1829"
     }
   },
   {
@@ -23381,14 +23420,14 @@
     "properties": {
       "entities": {
         "type": {
-          "$ref": "#/1898"
+          "$ref": "#/1900"
         },
         "flags": 0,
         "description": "Array of the expansion result entities."
       },
       "edges": {
         "type": {
-          "$ref": "#/1901"
+          "$ref": "#/1903"
         },
         "flags": 0,
         "description": "Array of edges that connects the entity to the list of entities."
@@ -23431,70 +23470,70 @@
     },
     "elements": {
       "Account": {
-        "$ref": "#/1854"
-      },
-      "AzureResource": {
         "$ref": "#/1856"
       },
-      "Bookmark": {
+      "AzureResource": {
         "$ref": "#/1858"
       },
-      "CloudApplication": {
+      "Bookmark": {
         "$ref": "#/1860"
       },
-      "DnsResolution": {
+      "CloudApplication": {
         "$ref": "#/1862"
       },
-      "File": {
+      "DnsResolution": {
         "$ref": "#/1864"
       },
-      "FileHash": {
+      "File": {
         "$ref": "#/1866"
       },
-      "Host": {
+      "FileHash": {
         "$ref": "#/1868"
       },
-      "IoTDevice": {
+      "Host": {
         "$ref": "#/1870"
       },
-      "Ip": {
+      "IoTDevice": {
         "$ref": "#/1872"
       },
-      "MailCluster": {
+      "Ip": {
         "$ref": "#/1874"
       },
-      "MailMessage": {
+      "MailCluster": {
         "$ref": "#/1876"
       },
-      "Mailbox": {
+      "MailMessage": {
         "$ref": "#/1878"
       },
-      "Malware": {
+      "Mailbox": {
         "$ref": "#/1880"
       },
-      "Nic": {
+      "Malware": {
         "$ref": "#/1882"
       },
-      "Process": {
+      "Nic": {
         "$ref": "#/1884"
       },
-      "RegistryKey": {
+      "Process": {
         "$ref": "#/1886"
       },
-      "RegistryValue": {
+      "RegistryKey": {
         "$ref": "#/1888"
       },
-      "SecurityAlert": {
+      "RegistryValue": {
         "$ref": "#/1890"
       },
-      "SecurityGroup": {
+      "SecurityAlert": {
         "$ref": "#/1892"
       },
-      "SubmissionMail": {
+      "SecurityGroup": {
         "$ref": "#/1894"
       },
-      "Url": {
+      "SubmissionMail": {
         "$ref": "#/1896"
+      },
+      "Url": {
+        "$ref": "#/1898"
       }
     }
   },
@@ -23511,7 +23550,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1855"
+          "$ref": "#/1857"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23535,7 +23574,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1857"
+          "$ref": "#/1859"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23559,7 +23598,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1859"
+          "$ref": "#/1861"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23583,7 +23622,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1861"
+          "$ref": "#/1863"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23607,7 +23646,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1863"
+          "$ref": "#/1865"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23631,7 +23670,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1865"
+          "$ref": "#/1867"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23655,7 +23694,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1867"
+          "$ref": "#/1869"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23679,7 +23718,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1869"
+          "$ref": "#/1871"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23703,7 +23742,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1871"
+          "$ref": "#/1873"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23727,7 +23766,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1873"
+          "$ref": "#/1875"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23751,7 +23790,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1875"
+          "$ref": "#/1877"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23775,7 +23814,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1877"
+          "$ref": "#/1879"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23799,7 +23838,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1879"
+          "$ref": "#/1881"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23823,7 +23862,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1881"
+          "$ref": "#/1883"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23847,7 +23886,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1883"
+          "$ref": "#/1885"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23871,7 +23910,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1885"
+          "$ref": "#/1887"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23895,7 +23934,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1887"
+          "$ref": "#/1889"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23919,7 +23958,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1889"
+          "$ref": "#/1891"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23943,7 +23982,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1891"
+          "$ref": "#/1893"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23967,7 +24006,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1893"
+          "$ref": "#/1895"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -23991,7 +24030,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1895"
+          "$ref": "#/1897"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -24015,7 +24054,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1897"
+          "$ref": "#/1899"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -24029,7 +24068,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1853"
+      "$ref": "#/1855"
     }
   },
   {
@@ -24045,7 +24084,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1900"
+          "$ref": "#/1902"
         },
         "flags": 0,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -24063,7 +24102,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1899"
+      "$ref": "#/1901"
     }
   },
   {
@@ -24072,10 +24111,10 @@
     "resourceType": "Microsoft.SecurityInsights/entities",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/1825"
+      "$ref": "#/1827"
     },
     "input": {
-      "$ref": "#/1824"
+      "$ref": "#/1826"
     }
   },
   {
@@ -24105,7 +24144,7 @@
       },
       "insightQueryIds": {
         "type": {
-          "$ref": "#/1904"
+          "$ref": "#/1906"
         },
         "flags": 0,
         "description": "List of Insights Query Id. If empty, default value is all insights of this entity"
@@ -24124,14 +24163,14 @@
     "properties": {
       "metaData": {
         "type": {
-          "$ref": "#/1906"
+          "$ref": "#/1908"
         },
         "flags": 0,
         "description": "The metadata from the get insights operation results."
       },
       "value": {
         "type": {
-          "$ref": "#/1919"
+          "$ref": "#/1921"
         },
         "flags": 0,
         "description": "The insights result values."
@@ -24151,7 +24190,7 @@
       },
       "errors": {
         "type": {
-          "$ref": "#/1910"
+          "$ref": "#/1912"
         },
         "flags": 0,
         "description": "information about the failed queries"
@@ -24164,7 +24203,7 @@
     "properties": {
       "kind": {
         "type": {
-          "$ref": "#/1909"
+          "$ref": "#/1911"
         },
         "flags": 1,
         "description": "the query kind"
@@ -24193,7 +24232,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1908"
+        "$ref": "#/1910"
       },
       {
         "$ref": "#/0"
@@ -24203,7 +24242,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1907"
+      "$ref": "#/1909"
     }
   },
   {
@@ -24219,21 +24258,21 @@
       },
       "queryTimeInterval": {
         "type": {
-          "$ref": "#/1912"
+          "$ref": "#/1914"
         },
         "flags": 0,
         "description": "The Time interval that the query actually executed on."
       },
       "tableQueryResults": {
         "type": {
-          "$ref": "#/1913"
+          "$ref": "#/1915"
         },
         "flags": 0,
         "description": "Query results for table insights query."
       },
       "chartQueryResults": {
         "type": {
-          "$ref": "#/1918"
+          "$ref": "#/1920"
         },
         "flags": 0,
         "description": "Query results for table insights query."
@@ -24266,14 +24305,14 @@
     "properties": {
       "columns": {
         "type": {
-          "$ref": "#/1915"
+          "$ref": "#/1917"
         },
         "flags": 0,
         "description": "Columns Metadata of the table"
       },
       "rows": {
         "type": {
-          "$ref": "#/1917"
+          "$ref": "#/1919"
         },
         "flags": 0,
         "description": "Rows data of the table"
@@ -24303,7 +24342,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1914"
+      "$ref": "#/1916"
     }
   },
   {
@@ -24315,7 +24354,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1916"
+      "$ref": "#/1918"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1915"
     }
   },
   {
@@ -24325,21 +24370,15 @@
     }
   },
   {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/1911"
-    }
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "getInsights",
     "resourceType": "Microsoft.SecurityInsights/entities",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/1905"
+      "$ref": "#/1907"
     },
     "input": {
-      "$ref": "#/1903"
+      "$ref": "#/1905"
     }
   },
   {
@@ -24348,7 +24387,7 @@
     "properties": {
       "kinds": {
         "type": {
-          "$ref": "#/1927"
+          "$ref": "#/1929"
         },
         "flags": 0,
         "description": "Array of timeline Item kinds."
@@ -24396,16 +24435,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1922"
-      },
-      {
-        "$ref": "#/1923"
-      },
-      {
         "$ref": "#/1924"
       },
       {
         "$ref": "#/1925"
+      },
+      {
+        "$ref": "#/1926"
+      },
+      {
+        "$ref": "#/1927"
       },
       {
         "$ref": "#/0"
@@ -24415,7 +24454,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1926"
+      "$ref": "#/1928"
     }
   },
   {
@@ -24424,14 +24463,14 @@
     "properties": {
       "metaData": {
         "type": {
-          "$ref": "#/1929"
+          "$ref": "#/1931"
         },
         "flags": 0,
         "description": "The metadata from the timeline operation results."
       },
       "value": {
         "type": {
-          "$ref": "#/1977"
+          "$ref": "#/1979"
         },
         "flags": 0,
         "description": "The timeline result values."
@@ -24451,14 +24490,14 @@
       },
       "aggregations": {
         "type": {
-          "$ref": "#/1936"
+          "$ref": "#/1938"
         },
         "flags": 1,
         "description": "timeline aggregation per kind"
       },
       "errors": {
         "type": {
-          "$ref": "#/1943"
+          "$ref": "#/1945"
         },
         "flags": 0,
         "description": "information about the failure queries"
@@ -24478,7 +24517,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1935"
+          "$ref": "#/1937"
         },
         "flags": 1,
         "description": "the query kind"
@@ -24505,16 +24544,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1931"
-      },
-      {
-        "$ref": "#/1932"
-      },
-      {
         "$ref": "#/1933"
       },
       {
         "$ref": "#/1934"
+      },
+      {
+        "$ref": "#/1935"
+      },
+      {
+        "$ref": "#/1936"
       },
       {
         "$ref": "#/0"
@@ -24524,7 +24563,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1930"
+      "$ref": "#/1932"
     }
   },
   {
@@ -24533,7 +24572,7 @@
     "properties": {
       "kind": {
         "type": {
-          "$ref": "#/1942"
+          "$ref": "#/1944"
         },
         "flags": 1,
         "description": "the query kind"
@@ -24574,16 +24613,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1938"
-      },
-      {
-        "$ref": "#/1939"
-      },
-      {
         "$ref": "#/1940"
       },
       {
         "$ref": "#/1941"
+      },
+      {
+        "$ref": "#/1942"
+      },
+      {
+        "$ref": "#/1943"
       },
       {
         "$ref": "#/0"
@@ -24593,7 +24632,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1937"
+      "$ref": "#/1939"
     }
   },
   {
@@ -24603,16 +24642,16 @@
     "baseProperties": {},
     "elements": {
       "Activity": {
-        "$ref": "#/1945"
-      },
-      "Anomaly": {
         "$ref": "#/1947"
       },
+      "Anomaly": {
+        "$ref": "#/1949"
+      },
       "Bookmark": {
-        "$ref": "#/1951"
+        "$ref": "#/1953"
       },
       "SecurityAlert": {
-        "$ref": "#/1954"
+        "$ref": "#/1956"
       }
     }
   },
@@ -24671,7 +24710,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1946"
+          "$ref": "#/1948"
         },
         "flags": 1,
         "description": "The entity query kind type."
@@ -24751,21 +24790,21 @@
       },
       "techniques": {
         "type": {
-          "$ref": "#/1948"
+          "$ref": "#/1950"
         },
         "flags": 0,
         "description": "The techniques of the anomaly."
       },
       "reasons": {
         "type": {
-          "$ref": "#/1949"
+          "$ref": "#/1951"
         },
         "flags": 0,
         "description": "The reasons that cause the anomaly."
       },
       "kind": {
         "type": {
-          "$ref": "#/1950"
+          "$ref": "#/1952"
         },
         "flags": 1,
         "description": "The entity query kind type."
@@ -24843,14 +24882,14 @@
       },
       "labels": {
         "type": {
-          "$ref": "#/1952"
+          "$ref": "#/1954"
         },
         "flags": 0,
         "description": "List of labels relevant to this bookmark"
       },
       "kind": {
         "type": {
-          "$ref": "#/1953"
+          "$ref": "#/1955"
         },
         "flags": 1,
         "description": "The entity query kind type."
@@ -24901,7 +24940,7 @@
       },
       "severity": {
         "type": {
-          "$ref": "#/1959"
+          "$ref": "#/1961"
         },
         "flags": 1,
         "description": "The alert severity."
@@ -24936,21 +24975,21 @@
       },
       "intent": {
         "type": {
-          "$ref": "#/1974"
+          "$ref": "#/1976"
         },
         "flags": 2,
         "description": "The intent of the alert."
       },
       "techniques": {
         "type": {
-          "$ref": "#/1975"
+          "$ref": "#/1977"
         },
         "flags": 0,
         "description": "The techniques of the alert."
       },
       "kind": {
         "type": {
-          "$ref": "#/1976"
+          "$ref": "#/1978"
         },
         "flags": 1,
         "description": "The entity query kind type."
@@ -24977,16 +25016,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1955"
-      },
-      {
-        "$ref": "#/1956"
-      },
-      {
         "$ref": "#/1957"
       },
       {
         "$ref": "#/1958"
+      },
+      {
+        "$ref": "#/1959"
+      },
+      {
+        "$ref": "#/1960"
       },
       {
         "$ref": "#/0"
@@ -25053,12 +25092,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1960"
-      },
-      {
-        "$ref": "#/1961"
-      },
-      {
         "$ref": "#/1962"
       },
       {
@@ -25095,6 +25128,12 @@
         "$ref": "#/1973"
       },
       {
+        "$ref": "#/1974"
+      },
+      {
+        "$ref": "#/1975"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -25112,7 +25151,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1944"
+      "$ref": "#/1946"
     }
   },
   {
@@ -25121,10 +25160,40 @@
     "resourceType": "Microsoft.SecurityInsights/entities",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/1928"
+      "$ref": "#/1930"
     },
     "input": {
-      "$ref": "#/1921"
+      "$ref": "#/1923"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManualTriggerRequestBody",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/444"
+        },
+        "flags": 0
+      },
+      "logicAppsResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runPlaybook",
+    "resourceType": "Microsoft.SecurityInsights/incidents",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/646"
+    },
+    "input": {
+      "$ref": "#/1981"
     }
   },
   {
@@ -25145,7 +25214,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/2005"
+          "$ref": "#/2009"
         },
         "flags": 1,
         "description": "Array of incident alerts."
@@ -25165,7 +25234,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/2004"
+          "$ref": "#/2008"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -25291,18 +25360,6 @@
   {
     "$type": "UnionType",
     "elements": [
-      {
-        "$ref": "#/1982"
-      },
-      {
-        "$ref": "#/1983"
-      },
-      {
-        "$ref": "#/1984"
-      },
-      {
-        "$ref": "#/1985"
-      },
       {
         "$ref": "#/1986"
       },
@@ -25358,6 +25415,18 @@
         "$ref": "#/2003"
       },
       {
+        "$ref": "#/2004"
+      },
+      {
+        "$ref": "#/2005"
+      },
+      {
+        "$ref": "#/2006"
+      },
+      {
+        "$ref": "#/2007"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -25365,7 +25434,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1981"
+      "$ref": "#/1985"
     }
   },
   {
@@ -25374,7 +25443,7 @@
     "resourceType": "Microsoft.SecurityInsights/incidents",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/1980"
+      "$ref": "#/1984"
     }
   },
   {
@@ -25383,7 +25452,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/2032"
+          "$ref": "#/2036"
         },
         "flags": 1,
         "description": "Array of incident bookmarks."
@@ -25403,7 +25472,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/2031"
+          "$ref": "#/2035"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -25530,18 +25599,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2009"
-      },
-      {
-        "$ref": "#/2010"
-      },
-      {
-        "$ref": "#/2011"
-      },
-      {
-        "$ref": "#/2012"
-      },
-      {
         "$ref": "#/2013"
       },
       {
@@ -25596,6 +25653,18 @@
         "$ref": "#/2030"
       },
       {
+        "$ref": "#/2031"
+      },
+      {
+        "$ref": "#/2032"
+      },
+      {
+        "$ref": "#/2033"
+      },
+      {
+        "$ref": "#/2034"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -25603,7 +25672,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2008"
+      "$ref": "#/2012"
     }
   },
   {
@@ -25612,7 +25681,7 @@
     "resourceType": "Microsoft.SecurityInsights/incidents",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/2007"
+      "$ref": "#/2011"
     }
   },
   {
@@ -25621,14 +25690,14 @@
     "properties": {
       "entities": {
         "type": {
-          "$ref": "#/2035"
+          "$ref": "#/2039"
         },
         "flags": 0,
         "description": "Array of the incident related entities."
       },
       "metaData": {
         "type": {
-          "$ref": "#/2060"
+          "$ref": "#/2064"
         },
         "flags": 0,
         "description": "The metadata from the incident related entities results."
@@ -25638,7 +25707,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1853"
+      "$ref": "#/1855"
     }
   },
   {
@@ -25647,7 +25716,7 @@
     "properties": {
       "entityKind": {
         "type": {
-          "$ref": "#/2059"
+          "$ref": "#/2063"
         },
         "flags": 1,
         "description": "The kind of the aggregated entity."
@@ -25753,18 +25822,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2037"
-      },
-      {
-        "$ref": "#/2038"
-      },
-      {
-        "$ref": "#/2039"
-      },
-      {
-        "$ref": "#/2040"
-      },
-      {
         "$ref": "#/2041"
       },
       {
@@ -25819,6 +25876,18 @@
         "$ref": "#/2058"
       },
       {
+        "$ref": "#/2059"
+      },
+      {
+        "$ref": "#/2060"
+      },
+      {
+        "$ref": "#/2061"
+      },
+      {
+        "$ref": "#/2062"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -25826,7 +25895,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2036"
+      "$ref": "#/2040"
     }
   },
   {
@@ -25835,7 +25904,7 @@
     "resourceType": "Microsoft.SecurityInsights/incidents",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/2034"
+      "$ref": "#/2038"
     }
   },
   {
@@ -25871,14 +25940,14 @@
     "properties": {
       "metaData": {
         "type": {
-          "$ref": "#/1826"
+          "$ref": "#/1828"
         },
         "flags": 0,
         "description": "The metadata from the expansion operation results."
       },
       "value": {
         "type": {
-          "$ref": "#/2064"
+          "$ref": "#/2068"
         },
         "flags": 0,
         "description": "The expansion result values."
@@ -25891,14 +25960,14 @@
     "properties": {
       "entities": {
         "type": {
-          "$ref": "#/2065"
+          "$ref": "#/2069"
         },
         "flags": 0,
         "description": "Array of the expansion result entities."
       },
       "edges": {
         "type": {
-          "$ref": "#/2067"
+          "$ref": "#/2071"
         },
         "flags": 0,
         "description": "Array of expansion result connected entities"
@@ -25908,7 +25977,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1853"
+      "$ref": "#/1855"
     }
   },
   {
@@ -25934,7 +26003,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2066"
+      "$ref": "#/2070"
     }
   },
   {
@@ -25943,10 +26012,10 @@
     "resourceType": "Microsoft.SecurityInsights/bookmarks",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/2063"
+      "$ref": "#/2067"
     },
     "input": {
-      "$ref": "#/2062"
+      "$ref": "#/2066"
     }
   },
   {
@@ -25962,7 +26031,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/2071"
+          "$ref": "#/2075"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -26012,7 +26081,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2070"
+        "$ref": "#/2074"
       },
       {
         "$ref": "#/0"
@@ -26062,7 +26131,7 @@
     },
     "elements": {
       "indicator": {
-        "$ref": "#/2073"
+        "$ref": "#/2077"
       }
     }
   },
@@ -26079,7 +26148,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/2074"
+          "$ref": "#/2078"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -26096,10 +26165,10 @@
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/2072"
+      "$ref": "#/2076"
     },
     "input": {
-      "$ref": "#/2069"
+      "$ref": "#/2073"
     }
   },
   {
@@ -26150,42 +26219,42 @@
       },
       "sortBy": {
         "type": {
-          "$ref": "#/2082"
+          "$ref": "#/2086"
         },
         "flags": 0,
         "description": "Columns to sort by and sorting order"
       },
       "sources": {
         "type": {
-          "$ref": "#/2083"
+          "$ref": "#/2087"
         },
         "flags": 0,
         "description": "Sources of threat intelligence indicators"
       },
       "patternTypes": {
         "type": {
-          "$ref": "#/2084"
+          "$ref": "#/2088"
         },
         "flags": 0,
         "description": "Pattern types"
       },
       "threatTypes": {
         "type": {
-          "$ref": "#/2085"
+          "$ref": "#/2089"
         },
         "flags": 0,
         "description": "Threat types of threat intelligence indicators"
       },
       "ids": {
         "type": {
-          "$ref": "#/2086"
+          "$ref": "#/2090"
         },
         "flags": 0,
         "description": "Ids of threat intelligence indicators"
       },
       "keywords": {
         "type": {
-          "$ref": "#/2087"
+          "$ref": "#/2091"
         },
         "flags": 0,
         "description": "Keywords for searching threat intelligence indicators"
@@ -26212,7 +26281,7 @@
       },
       "sortOrder": {
         "type": {
-          "$ref": "#/2081"
+          "$ref": "#/2085"
         },
         "flags": 0,
         "description": "Sorting order (ascending/descending/unsorted)."
@@ -26235,13 +26304,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2078"
+        "$ref": "#/2082"
       },
       {
-        "$ref": "#/2079"
+        "$ref": "#/2083"
       },
       {
-        "$ref": "#/2080"
+        "$ref": "#/2084"
       },
       {
         "$ref": "#/0"
@@ -26251,7 +26320,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2077"
+      "$ref": "#/2081"
     }
   },
   {
@@ -26297,7 +26366,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/2089"
+          "$ref": "#/2093"
         },
         "flags": 1,
         "description": "Array of threat intelligence information objects."
@@ -26307,7 +26376,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2072"
+      "$ref": "#/2076"
     }
   },
   {
@@ -26316,10 +26385,10 @@
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/2088"
+      "$ref": "#/2092"
     },
     "input": {
-      "$ref": "#/2076"
+      "$ref": "#/2080"
     }
   },
   {
@@ -26328,7 +26397,7 @@
     "properties": {
       "threatIntelligenceTags": {
         "type": {
-          "$ref": "#/2092"
+          "$ref": "#/2096"
         },
         "flags": 0,
         "description": "List of tags to be appended."
@@ -26343,14 +26412,63 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "appendTags",
+    "resourceType": "Microsoft.SecurityInsights/threatIntelligence/indicators",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/646"
+    },
+    "input": {
+      "$ref": "#/2095"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "replaceTags",
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence/indicators",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/2072"
+      "$ref": "#/2076"
     },
     "input": {
-      "$ref": "#/2069"
+      "$ref": "#/2073"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnalyticsRuleRunTrigger",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2100"
+        },
+        "flags": 1,
+        "description": "The analytics Rule Run Trigger request"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AnalyticsRuleRunTriggerProperties",
+    "properties": {
+      "executionTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "triggerRuleRun",
+    "resourceType": "Microsoft.SecurityInsights/alertRules",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/646"
+    },
+    "input": {
+      "$ref": "#/2099"
     }
   },
   {
@@ -26407,7 +26525,7 @@
     "resourceType": "Microsoft.SecurityInsights/workspaceManagerAssignments",
     "apiVersion": "2023-12-01-preview",
     "output": {
-      "$ref": "#/2094"
+      "$ref": "#/2102"
     }
   },
   {
@@ -26416,7 +26534,7 @@
     "properties": {
       "kind": {
         "type": {
-          "$ref": "#/2100"
+          "$ref": "#/2108"
         },
         "flags": 0,
         "description": "The authentication kind used to poll the data"
@@ -26486,7 +26604,7 @@
       },
       "requestConfigUserInputValues": {
         "type": {
-          "$ref": "#/2101"
+          "$ref": "#/2109"
         },
         "flags": 0
       }
@@ -26508,13 +26626,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2097"
+        "$ref": "#/2105"
       },
       {
-        "$ref": "#/2098"
+        "$ref": "#/2106"
       },
       {
-        "$ref": "#/2099"
+        "$ref": "#/2107"
       },
       {
         "$ref": "#/0"
@@ -26524,6 +26642,27 @@
   {
     "$type": "ArrayType",
     "itemType": {
+      "$ref": "#/646"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "connect",
+    "resourceType": "Microsoft.SecurityInsights/dataConnectors",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/646"
+    },
+    "input": {
+      "$ref": "#/2104"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disconnect",
+    "resourceType": "Microsoft.SecurityInsights/dataConnectors",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
       "$ref": "#/646"
     }
   }

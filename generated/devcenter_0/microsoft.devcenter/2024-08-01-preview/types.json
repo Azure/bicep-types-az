@@ -8012,12 +8012,30 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/60"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "connect",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/60"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CatalogResourceValidationErrorDetails",
     "properties": {
       "errors": {
         "type": {
-          "$ref": "#/730"
+          "$ref": "#/732"
         },
         "flags": 2,
         "description": "Errors associated with resources synchronized from the catalog."
@@ -8036,7 +8054,7 @@
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions",
     "apiVersion": "2024-08-01-preview",
     "output": {
-      "$ref": "#/729"
+      "$ref": "#/731"
     }
   },
   {
@@ -8045,7 +8063,7 @@
     "resourceType": "Microsoft.DevCenter/projects/catalogs/environmentDefinitions",
     "apiVersion": "2024-08-01-preview",
     "output": {
-      "$ref": "#/729"
+      "$ref": "#/731"
     }
   },
   {
@@ -8059,11 +8077,47 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/60"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "connect",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/60"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "getErrorDetails",
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/tasks",
     "apiVersion": "2024-08-01-preview",
     "output": {
-      "$ref": "#/729"
+      "$ref": "#/731"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "buildImage",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/60"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/60"
     }
   },
   {
@@ -8079,7 +8133,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/742"
+          "$ref": "#/748"
         },
         "flags": 2,
         "description": "The status of the build."
@@ -8107,7 +8161,7 @@
       },
       "taskGroups": {
         "type": {
-          "$ref": "#/762"
+          "$ref": "#/768"
         },
         "flags": 2,
         "description": "The list of task groups executed during the image definition build."
@@ -8170,22 +8224,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/736"
+        "$ref": "#/742"
       },
       {
-        "$ref": "#/737"
+        "$ref": "#/743"
       },
       {
-        "$ref": "#/738"
+        "$ref": "#/744"
       },
       {
-        "$ref": "#/739"
+        "$ref": "#/745"
       },
       {
-        "$ref": "#/740"
+        "$ref": "#/746"
       },
       {
-        "$ref": "#/741"
+        "$ref": "#/747"
       },
       {
         "$ref": "#/2"
@@ -8205,7 +8259,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/750"
+          "$ref": "#/756"
         },
         "flags": 2,
         "description": "The status of the task group."
@@ -8226,7 +8280,7 @@
       },
       "tasks": {
         "type": {
-          "$ref": "#/761"
+          "$ref": "#/767"
         },
         "flags": 2,
         "description": "The list of tasks executed during the task group."
@@ -8261,22 +8315,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/744"
+        "$ref": "#/750"
       },
       {
-        "$ref": "#/745"
+        "$ref": "#/751"
       },
       {
-        "$ref": "#/746"
+        "$ref": "#/752"
       },
       {
-        "$ref": "#/747"
+        "$ref": "#/753"
       },
       {
-        "$ref": "#/748"
+        "$ref": "#/754"
       },
       {
-        "$ref": "#/749"
+        "$ref": "#/755"
       },
       {
         "$ref": "#/2"
@@ -8296,7 +8350,7 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/753"
+          "$ref": "#/759"
         },
         "flags": 0,
         "description": "Parameters for the task."
@@ -8331,7 +8385,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/760"
+          "$ref": "#/766"
         },
         "flags": 2,
         "description": "The status of the task."
@@ -8366,7 +8420,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/752"
+      "$ref": "#/758"
     }
   },
   {
@@ -8397,22 +8451,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/754"
+        "$ref": "#/760"
       },
       {
-        "$ref": "#/755"
+        "$ref": "#/761"
       },
       {
-        "$ref": "#/756"
+        "$ref": "#/762"
       },
       {
-        "$ref": "#/757"
+        "$ref": "#/763"
       },
       {
-        "$ref": "#/758"
+        "$ref": "#/764"
       },
       {
-        "$ref": "#/759"
+        "$ref": "#/765"
       },
       {
         "$ref": "#/2"
@@ -8422,13 +8476,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/751"
+      "$ref": "#/757"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/743"
+      "$ref": "#/749"
     }
   },
   {
@@ -8437,7 +8491,25 @@
     "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds",
     "apiVersion": "2024-08-01-preview",
     "output": {
-      "$ref": "#/735"
+      "$ref": "#/741"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runHealthChecks",
+    "resourceType": "Microsoft.DevCenter/projects/pools",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/60"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runHealthChecks",
+    "resourceType": "Microsoft.DevCenter/networkConnections",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/60"
     }
   }
 ]

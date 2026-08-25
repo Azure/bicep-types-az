@@ -2534,6 +2534,34 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "IssueCreationRequest",
+    "properties": {
+      "securityAssessmentResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The security assessment resource id that the issue will be opened based on."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "issues",
+    "resourceType": "Microsoft.Security/securityConnectors/devops/gitHubOwners/repos",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/217"
+    },
+    "input": {
+      "$ref": "#/216"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listSubgroups",
     "resourceType": "Microsoft.Security/securityConnectors/devops/gitLabGroups",

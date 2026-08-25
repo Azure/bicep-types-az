@@ -159,11 +159,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function breakPairing (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2023-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2023-01-01-preview
+* **Output**: any
+
 ## Function failover (Microsoft.ServiceBus/namespaces@2023-01-01-preview)
 * **Resource**: Microsoft.ServiceBus/namespaces
 * **ApiVersion**: 2023-01-01-preview
 * **Input**: [FailOver](#failover)
 * **Output**: [FailOver](#failover)
+
+## Function failover (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2023-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2023-01-01-preview
+* **Input**: [FailoverProperties](#failoverproperties)
+* **Output**: any
 
 ## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2023-01-01-preview)
 * **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
@@ -202,6 +213,16 @@
 * **ApiVersion**: 2023-01-01-preview
 * **Input**: [RegenerateAccessKeyParameters](#regenerateaccesskeyparameters)
 * **Output**: [AccessKeys](#accesskeys)
+
+## Function revert (Microsoft.ServiceBus/namespaces/migrationConfigurations@2023-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/migrationConfigurations
+* **ApiVersion**: 2023-01-01-preview
+* **Output**: any
+
+## Function upgrade (Microsoft.ServiceBus/namespaces/migrationConfigurations@2023-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/migrationConfigurations
+* **ApiVersion**: 2023-01-01-preview
+* **Output**: any
 
 ## AccessKeys
 ### Properties
@@ -264,6 +285,14 @@
 ### Properties
 * **force**: bool: If Force is false then graceful failover is attempted after ensuring no data loss. If Force flag is set to true, Forced failover is attempted with possible data loss.
 * **primaryLocation**: string: Query parameter for the new primary location after failover.
+
+## FailoverProperties
+### Properties
+* **properties**: [FailoverPropertiesProperties](#failoverpropertiesproperties): Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary.
+
+## FailoverPropertiesProperties
+### Properties
+* **IsSafeFailover**: bool: Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary.
 
 ## GeoDataReplicationProperties
 ### Properties

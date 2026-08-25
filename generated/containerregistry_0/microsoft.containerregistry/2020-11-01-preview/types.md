@@ -122,6 +122,11 @@
 * **tags**: [WebhookCreateParametersTags](#webhookcreateparameterstags): The tags for the webhook.
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function deactivate (Microsoft.ContainerRegistry/registries/connectedRegistries@2020-11-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/connectedRegistries
+* **ApiVersion**: 2020-11-01-preview
+* **Output**: any
+
 ## Function generateCredentials (Microsoft.ContainerRegistry/registries@2020-11-01-preview)
 * **Resource**: Microsoft.ContainerRegistry/registries
 * **ApiVersion**: 2020-11-01-preview
@@ -132,6 +137,12 @@
 * **Resource**: Microsoft.ContainerRegistry/registries/webhooks
 * **ApiVersion**: 2020-11-01-preview
 * **Output**: [CallbackConfig](#callbackconfig)
+
+## Function importImage (Microsoft.ContainerRegistry/registries@2020-11-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2020-11-01-preview
+* **Input**: [ImportImageParameters](#importimageparameters)
+* **Output**: any
 
 ## Function listCredentials (Microsoft.ContainerRegistry/registries@2020-11-01-preview)
 * **Resource**: Microsoft.ContainerRegistry/registries
@@ -282,6 +293,13 @@ dictionary key references will be ARM resource ids in the form:
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
 
+## ImportImageParameters
+### Properties
+* **mode**: 'Force' | 'NoForce' | string: When Force, any existing target tags will be overwritten. When NoForce, any existing target tags will fail the operation before any copying begins.
+* **source**: [ImportSource](#importsource) (Required): The source of the image.
+* **targetTags**: string[]: List of strings of the form repo[:tag]. When tag is omitted the source will be used (or 'latest' if source tag is also omitted).
+* **untaggedTargetRepositories**: string[]: List of strings of repository names to do a manifest only copy. No tag will be created.
+
 ## ImportPipelineProperties
 ### Properties
 * **options**: ('ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags' | string)[]: The list of all options configured for the pipeline.
@@ -296,6 +314,21 @@ dictionary key references will be ARM resource ids in the form:
 * **uri**: string: The source uri of the import pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
 When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"
+
+## ImportSource
+### Properties
+* **credentials**: [ImportSourceCredentials](#importsourcecredentials): Credentials used when importing from a registry uri.
+* **registryUri**: string: The address of the source registry (e.g. 'mcr.microsoft.com').
+* **resourceId**: string: The resource identifier of the source Azure Container Registry.
+* **sourceImage**: string (Required): Repository name of the source image.
+Specify an image by repository ('hello-world'). This will use the 'latest' tag.
+Specify an image by tag ('hello-world:latest').
+Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
+
+## ImportSourceCredentials
+### Properties
+* **password**: string (Required): The password used to authenticate with the source registry.
+* **username**: string: The username to authenticate with the source registry.
 
 ## IPRule
 ### Properties

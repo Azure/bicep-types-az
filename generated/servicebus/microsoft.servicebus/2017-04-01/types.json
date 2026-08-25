@@ -2195,6 +2195,21 @@
     ]
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.ServiceBus/namespaces",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/151"
+    },
+    "input": {
+      "$ref": "#/144"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
@@ -2234,6 +2249,24 @@
     },
     "input": {
       "$ref": "#/139"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "breakPairing",
+    "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/151"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/151"
     }
   },
   {
@@ -2243,6 +2276,24 @@
     "apiVersion": "2017-04-01",
     "output": {
       "$ref": "#/137"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/151"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revert",
+    "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/151"
     }
   }
 ]

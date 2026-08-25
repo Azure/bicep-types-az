@@ -6005,6 +6005,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeExtensions",
+    "resourceType": "Microsoft.HybridCompute/machines",
+    "apiVersion": "2026-06-04-preview",
+    "output": {
+      "$ref": "#/143"
+    },
+    "input": {
+      "$ref": "#/436"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "NetworkSecurityPerimeterConfigurationReconcileResult",
     "properties": {
@@ -6023,7 +6035,7 @@
     "resourceType": "Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations",
     "apiVersion": "2026-06-04-preview",
     "output": {
-      "$ref": "#/439"
+      "$ref": "#/440"
     }
   }
 ]

@@ -761,5 +761,61 @@
     "output": {
       "$ref": "#/59"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiKeys",
+    "properties": {
+      "keys": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "A list of api key names."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/65"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.Quantum/workspaces",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/67"
+    },
+    "input": {
+      "$ref": "#/62"
+    }
   }
 ]

@@ -143,6 +143,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Kusto/clusters/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addLanguageExtensions (Microsoft.Kusto/clusters@2021-08-27)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2021-08-27
+* **Input**: [LanguageExtensionsList](#languageextensionslist)
+* **Output**: any
+
 ## Function addPrincipals (Microsoft.Kusto/clusters/databases@2021-08-27)
 * **Resource**: Microsoft.Kusto/clusters/databases
 * **ApiVersion**: 2021-08-27
@@ -191,6 +197,12 @@
 * **Input**: [DataConnectionValidation](#dataconnectionvalidation)
 * **Output**: [DataConnectionValidationListResult](#dataconnectionvalidationlistresult)
 
+## Function detachFollowerDatabases (Microsoft.Kusto/clusters@2021-08-27)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2021-08-27
+* **Input**: [FollowerDatabaseDefinition](#followerdatabasedefinition)
+* **Output**: any
+
 ## Function diagnoseVirtualNetwork (Microsoft.Kusto/clusters@2021-08-27)
 * **Resource**: Microsoft.Kusto/clusters
 * **ApiVersion**: 2021-08-27
@@ -217,6 +229,12 @@
 * **Input**: [ManagedPrivateEndpointsCheckNameRequest](#managedprivateendpointschecknamerequest)
 * **Output**: [CheckNameResult](#checknameresult)
 
+## Function removeLanguageExtensions (Microsoft.Kusto/clusters@2021-08-27)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2021-08-27
+* **Input**: [LanguageExtensionsList](#languageextensionslist)
+* **Output**: any
+
 ## Function removePrincipals (Microsoft.Kusto/clusters/databases@2021-08-27)
 * **Resource**: Microsoft.Kusto/clusters/databases
 * **ApiVersion**: 2021-08-27
@@ -228,6 +246,16 @@
 * **ApiVersion**: 2021-08-27
 * **Input**: [ScriptCheckNameRequest](#scriptchecknamerequest)
 * **Output**: [CheckNameResult](#checknameresult)
+
+## Function start (Microsoft.Kusto/clusters@2021-08-27)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2021-08-27
+* **Output**: any
+
+## Function stop (Microsoft.Kusto/clusters@2021-08-27)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2021-08-27
+* **Output**: any
 
 ## AcceptedAudiences
 ### Properties

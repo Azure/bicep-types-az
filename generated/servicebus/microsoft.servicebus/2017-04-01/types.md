@@ -123,6 +123,16 @@
 * **properties**: [Ruleproperties](#ruleproperties): Properties of Rule resource
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function breakPairing (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2017-04-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2017-04-01
+* **Output**: any
+
+## Function failover (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2017-04-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2017-04-01
+* **Output**: any
+
 ## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2017-04-01)
 * **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
 * **ApiVersion**: 2017-04-01
@@ -143,6 +153,12 @@
 * **ApiVersion**: 2017-04-01
 * **Output**: [AccessKeys](#accesskeys)
 
+## Function migrate (Microsoft.ServiceBus/namespaces@2017-04-01)
+* **Resource**: Microsoft.ServiceBus/namespaces
+* **ApiVersion**: 2017-04-01
+* **Input**: [SBNamespaceMigrate](#sbnamespacemigrate)
+* **Output**: any
+
 ## Function regenerateKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2017-04-01)
 * **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
 * **ApiVersion**: 2017-04-01
@@ -160,6 +176,16 @@
 * **ApiVersion**: 2017-04-01
 * **Input**: [RegenerateAccessKeyParameters](#regenerateaccesskeyparameters)
 * **Output**: [AccessKeys](#accesskeys)
+
+## Function revert (Microsoft.ServiceBus/namespaces/migrationConfigurations@2017-04-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/migrationConfigurations
+* **ApiVersion**: 2017-04-01
+* **Output**: any
+
+## Function upgrade (Microsoft.ServiceBus/namespaces/migrationConfigurations@2017-04-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/migrationConfigurations
+* **ApiVersion**: 2017-04-01
+* **Output**: any
 
 ## AccessKeys
 ### Properties
@@ -250,6 +276,10 @@
 ## SBAuthorizationRuleProperties
 ### Properties
 * **rights**: ('Listen' | 'Manage' | 'Send')[] (Required): The rights associated with the rule.
+
+## SBNamespaceMigrate
+### Properties
+* **targetNamespaceType**: 'EventHub' | 'Messaging' | 'Mixed' | 'NotificationHub' | 'Relay' (Required): Type of namespaces
 
 ## SBNamespaceProperties
 ### Properties

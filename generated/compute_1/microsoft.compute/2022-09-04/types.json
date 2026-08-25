@@ -728,12 +728,57 @@
     "writableScopes": 8
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/cloudServices/roleInstances",
+    "apiVersion": "2022-09-04",
+    "output": {
+      "$ref": "#/35"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.Compute/cloudServices/roleInstances",
+    "apiVersion": "2022-09-04",
+    "output": {
+      "$ref": "#/35"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rebuild",
+    "resourceType": "Microsoft.Compute/cloudServices/roleInstances",
+    "apiVersion": "2022-09-04",
+    "output": {
+      "$ref": "#/35"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/cloudServices",
+    "apiVersion": "2022-09-04",
+    "output": {
+      "$ref": "#/35"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "poweroff",
+    "resourceType": "Microsoft.Compute/cloudServices",
+    "apiVersion": "2022-09-04",
+    "output": {
+      "$ref": "#/35"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "RoleInstances",
     "properties": {
       "roleInstances": {
         "type": {
-          "$ref": "#/47"
+          "$ref": "#/52"
         },
         "flags": 1,
         "description": "List of cloud service role instance names. Value of '*' will signify all role instances of the cloud service."
@@ -744,6 +789,54 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/cloudServices",
+    "apiVersion": "2022-09-04",
+    "output": {
+      "$ref": "#/35"
+    },
+    "input": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.Compute/cloudServices",
+    "apiVersion": "2022-09-04",
+    "output": {
+      "$ref": "#/35"
+    },
+    "input": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rebuild",
+    "resourceType": "Microsoft.Compute/cloudServices",
+    "apiVersion": "2022-09-04",
+    "output": {
+      "$ref": "#/35"
+    },
+    "input": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "delete",
+    "resourceType": "Microsoft.Compute/cloudServices",
+    "apiVersion": "2022-09-04",
+    "output": {
+      "$ref": "#/35"
+    },
+    "input": {
+      "$ref": "#/51"
     }
   }
 ]

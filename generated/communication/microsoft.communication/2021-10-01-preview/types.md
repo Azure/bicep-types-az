@@ -39,6 +39,18 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Communication/emailServices/domains' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancelVerification (Microsoft.Communication/emailServices/domains@2021-10-01-preview)
+* **Resource**: Microsoft.Communication/emailServices/domains
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [VerificationParameter](#verificationparameter)
+* **Output**: any
+
+## Function initiateVerification (Microsoft.Communication/emailServices/domains@2021-10-01-preview)
+* **Resource**: Microsoft.Communication/emailServices/domains
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [VerificationParameter](#verificationparameter)
+* **Output**: any
+
 ## Function linkNotificationHub (Microsoft.Communication/communicationServices@2021-10-01-preview)
 * **Resource**: Microsoft.Communication/communicationServices
 * **ApiVersion**: 2021-10-01-preview
@@ -154,6 +166,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## VerificationParameter
+### Properties
+* **verificationType**: 'DKIM' | 'DKIM2' | 'DMARC' | 'Domain' | 'SPF' | string (Required): Type of verification.
 
 ## VerificationStatusRecord
 ### Properties

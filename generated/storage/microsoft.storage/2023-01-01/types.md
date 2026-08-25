@@ -183,6 +183,11 @@
 * **properties**: [TableProperties](#tableproperties): Table resource properties.
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices/tables' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function aborthnsonmigration (Microsoft.Storage/storageAccounts@2023-01-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2023-01-01
+* **Output**: any
+
 ## Function clearLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2023-01-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2023-01-01
@@ -194,6 +199,11 @@
 * **ApiVersion**: 2023-01-01
 * **Input**: [ImmutabilityPolicy](#immutabilitypolicy)
 * **Output**: [ImmutabilityPolicy](#immutabilitypolicy)
+
+## Function failover (Microsoft.Storage/storageAccounts@2023-01-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2023-01-01
+* **Output**: any
 
 ## Function lease (Microsoft.Storage/storageAccounts/blobServices/containers@2023-01-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
@@ -234,6 +244,11 @@
 * **ApiVersion**: 2023-01-01
 * **Output**: [ImmutabilityPolicy](#immutabilitypolicy)
 
+## Function migrate (Microsoft.Storage/storageAccounts/blobServices/containers@2023-01-01)
+* **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
+* **ApiVersion**: 2023-01-01
+* **Output**: any
+
 ## Function regenerateKey (Microsoft.Storage/storageAccounts@2023-01-01)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2023-01-01
@@ -245,17 +260,34 @@
 * **ApiVersion**: 2023-01-01
 * **Output**: [LocalUserRegeneratePasswordResult](#localuserregeneratepasswordresult)
 
+## Function restore (Microsoft.Storage/storageAccounts/fileServices/shares@2023-01-01)
+* **Resource**: Microsoft.Storage/storageAccounts/fileServices/shares
+* **ApiVersion**: 2023-01-01
+* **Input**: [DeletedShare](#deletedshare)
+* **Output**: any
+
 ## Function restoreBlobRanges (Microsoft.Storage/storageAccounts@2023-01-01)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2023-01-01
 * **Input**: [BlobRestoreParameters](#blobrestoreparameters)
 * **Output**: [BlobRestoreStatus](#blobrestorestatus)
 
+## Function revokeUserDelegationKeys (Microsoft.Storage/storageAccounts@2023-01-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2023-01-01
+* **Output**: any
+
 ## Function setLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2023-01-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2023-01-01
 * **Input**: [LegalHold](#legalhold)
 * **Output**: [LegalHold](#legalhold)
+
+## Function startAccountMigration (Microsoft.Storage/storageAccounts@2023-01-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2023-01-01
+* **Input**: [StorageAccountMigration](#storageaccountmigration)
+* **Output**: any
 
 ## AccessPolicy
 ### Properties
@@ -435,6 +467,11 @@
 * **location**: string (ReadOnly): Location of the deleted account.
 * **restoreReference**: string (ReadOnly): Can be used to attempt recovering this deleted account via PutStorageAccount API.
 * **storageAccountResourceId**: string (ReadOnly): Full resource id of the original storage account.
+
+## DeletedShare
+### Properties
+* **deletedShareName**: string (Required): Required. Identify the name of the deleted share that will be restored.
+* **deletedShareVersion**: string (Required): Required. Identify the version of the deleted share that will be restored.
 
 ## DeleteRetentionPolicy
 ### Properties
@@ -919,6 +956,20 @@
 * **queue**: string (ReadOnly): Gets the queue endpoint.
 * **table**: string (ReadOnly): Gets the table endpoint.
 * **web**: string (ReadOnly): Gets the web endpoint.
+
+## StorageAccountMigration
+### Properties
+* **id**: string (ReadOnly): Migration Resource Id
+* **name**: string: current value is 'default' for customer initiated migration
+* **properties**: [StorageAccountMigrationProperties](#storageaccountmigrationproperties) (Required): The properties of a storage account’s ongoing or enqueued migration.
+* **type**: string: SrpAccountMigrationType in ARM contract which is 'accountMigrations'
+
+## StorageAccountMigrationProperties
+### Properties
+* **migrationFailedDetailedReason**: string (ReadOnly): Reason for migration failure
+* **migrationFailedReason**: string (ReadOnly): Error code for migration failure
+* **migrationStatus**: 'Complete' | 'Failed' | 'InProgress' | 'Invalid' | 'SubmittedForConversion' | string (ReadOnly): Current status of migration
+* **targetSkuName**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_GRS' | 'Standard_GZRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_RAGZRS' | 'Standard_ZRS' | string (Required): Target sku name for the account
 
 ## StorageAccountPropertiesCreateParametersOrStorageAccountProperties
 ### Properties

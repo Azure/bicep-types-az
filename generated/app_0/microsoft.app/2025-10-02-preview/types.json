@@ -14972,12 +14972,21 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.App/jobs/executions",
+    "apiVersion": "2025-10-02-preview",
+    "output": {
+      "$ref": "#/256"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "JobSecretsCollection",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/987"
+          "$ref": "#/988"
         },
         "flags": 1,
         "description": "Collection of resources."
@@ -14996,7 +15005,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/986"
+      "$ref": "#/987"
     }
   },
   {
@@ -15026,7 +15035,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/990"
+          "$ref": "#/991"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -15082,7 +15091,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/989"
+      "$ref": "#/990"
     }
   },
   {
@@ -15111,7 +15120,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/992"
+      "$ref": "#/993"
     },
     "input": {
       "$ref": "#/751"
@@ -15123,7 +15132,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/996"
+          "$ref": "#/997"
         },
         "flags": 1,
         "description": "The JobExecution items on this page"
@@ -15181,7 +15190,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/995"
+      "$ref": "#/996"
     }
   },
   {
@@ -15190,7 +15199,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/994"
+      "$ref": "#/995"
     }
   },
   {
@@ -15199,7 +15208,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/989"
+      "$ref": "#/990"
     }
   },
   {
@@ -15208,14 +15217,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1000"
+          "$ref": "#/1001"
         },
         "flags": 0,
         "description": "Environment auth token resource specific properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/1001"
+          "$ref": "#/1002"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -15291,7 +15300,7 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/999"
+      "$ref": "#/1000"
     }
   },
   {
@@ -15325,7 +15334,7 @@
     "resourceType": "Microsoft.App/sessionPools",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/1004"
+      "$ref": "#/1005"
     }
   },
   {
@@ -15334,7 +15343,7 @@
     "resourceType": "Microsoft.App/sessionPools",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/1004"
+      "$ref": "#/1005"
     }
   },
   {
@@ -15363,7 +15372,7 @@
     "resourceType": "Microsoft.App/builders/builds",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/1007"
+      "$ref": "#/1008"
     }
   },
   {
@@ -15372,7 +15381,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/1011"
+          "$ref": "#/1012"
         },
         "flags": 1,
         "description": "Collection of secrets used by a Dapr component"
@@ -15402,7 +15411,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1010"
+      "$ref": "#/1011"
     }
   },
   {
@@ -15411,7 +15420,7 @@
     "resourceType": "Microsoft.App/connectedEnvironments/daprComponents",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/1009"
+      "$ref": "#/1010"
     }
   },
   {
@@ -15461,7 +15470,32 @@
     "resourceType": "Microsoft.App/containerApps/patches",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/1013"
+      "$ref": "#/1014"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PatchSkipConfig",
+    "properties": {
+      "skip": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "The flag to indicate whether to skip the patch or not."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "skipConfig",
+    "resourceType": "Microsoft.App/containerApps/patches",
+    "apiVersion": "2025-10-02-preview",
+    "output": {
+      "$ref": "#/256"
+    },
+    "input": {
+      "$ref": "#/1016"
     }
   },
   {
@@ -15484,7 +15518,7 @@
       },
       "filesToDelete": {
         "type": {
-          "$ref": "#/1016"
+          "$ref": "#/1019"
         },
         "flags": 0,
         "description": "Files of the app to delete."
@@ -15496,6 +15530,18 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deployWorkflowArtifacts",
+    "resourceType": "Microsoft.App/logicApps",
+    "apiVersion": "2025-10-02-preview",
+    "output": {
+      "$ref": "#/256"
+    },
+    "input": {
+      "$ref": "#/1018"
     }
   },
   {
@@ -15511,7 +15557,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1021"
+          "$ref": "#/1025"
         },
         "flags": 0,
         "description": "Gets the logic app hybrid workflow kind."
@@ -15562,13 +15608,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1018"
+        "$ref": "#/1022"
       },
       {
-        "$ref": "#/1019"
+        "$ref": "#/1023"
       },
       {
-        "$ref": "#/1020"
+        "$ref": "#/1024"
       },
       {
         "$ref": "#/2"
@@ -15581,7 +15627,34 @@
     "resourceType": "Microsoft.App/logicApps",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/1017"
+      "$ref": "#/1021"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2025-10-02-preview",
+    "output": {
+      "$ref": "#/256"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deactivate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2025-10-02-preview",
+    "output": {
+      "$ref": "#/256"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2025-10-02-preview",
+    "output": {
+      "$ref": "#/256"
     }
   },
   {
@@ -15599,7 +15672,7 @@
     "resourceType": "Microsoft.App/managedEnvironments/daprComponents",
     "apiVersion": "2025-10-02-preview",
     "output": {
-      "$ref": "#/1009"
+      "$ref": "#/1010"
     }
   }
 ]

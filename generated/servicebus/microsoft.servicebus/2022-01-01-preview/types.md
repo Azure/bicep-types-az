@@ -159,6 +159,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function breakPairing (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2022-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: any
+
+## Function failover (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2022-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2022-01-01-preview
+* **Input**: [FailoverProperties](#failoverproperties)
+* **Output**: any
+
 ## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2022-01-01-preview)
 * **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
 * **ApiVersion**: 2022-01-01-preview
@@ -196,6 +207,16 @@
 * **ApiVersion**: 2022-01-01-preview
 * **Input**: [RegenerateAccessKeyParameters](#regenerateaccesskeyparameters)
 * **Output**: [AccessKeys](#accesskeys)
+
+## Function revert (Microsoft.ServiceBus/namespaces/migrationConfigurations@2022-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/migrationConfigurations
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: any
+
+## Function upgrade (Microsoft.ServiceBus/namespaces/migrationConfigurations@2022-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/migrationConfigurations
+* **ApiVersion**: 2022-01-01-preview
+* **Output**: any
 
 ## AccessKeys
 ### Properties
@@ -249,6 +270,14 @@
 * **keySource**: 'Microsoft.KeyVault' | string: Enumerates the possible value of keySource for Encryption
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)[]: Properties of KeyVault
 * **requireInfrastructureEncryption**: bool: Enable Infrastructure Encryption (Double Encryption)
+
+## FailoverProperties
+### Properties
+* **properties**: [FailoverPropertiesProperties](#failoverpropertiesproperties): Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary.
+
+## FailoverPropertiesProperties
+### Properties
+* **IsSafeFailover**: bool: Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary.
 
 ## Identity
 ### Properties

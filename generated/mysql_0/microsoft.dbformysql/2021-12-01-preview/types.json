@@ -1816,12 +1816,21 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/51"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ServerRestartParameter",
     "properties": {
       "restartWithFailover": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/142"
         },
         "flags": 0,
         "description": "Whether or not failover to standby server when restarting a server with high availability enabled."
@@ -1847,15 +1856,45 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/139"
+        "$ref": "#/140"
       },
       {
-        "$ref": "#/140"
+        "$ref": "#/141"
       },
       {
         "$ref": "#/0"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/51"
+    },
+    "input": {
+      "$ref": "#/139"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/51"
+    }
   },
   {
     "$type": "ObjectType",
@@ -1890,7 +1929,7 @@
       },
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/149"
         },
         "flags": 2,
         "description": "A list of delegated subnet usage"
@@ -1920,7 +1959,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/144"
+      "$ref": "#/148"
     }
   },
   {
@@ -1929,10 +1968,10 @@
     "resourceType": "Microsoft.DBforMySQL/locations",
     "apiVersion": "2021-12-01-preview",
     "output": {
-      "$ref": "#/143"
+      "$ref": "#/147"
     },
     "input": {
-      "$ref": "#/142"
+      "$ref": "#/146"
     }
   },
   {
@@ -1968,7 +2007,7 @@
       },
       "nameAvailable": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/153"
         },
         "flags": 0,
         "description": "Indicates whether the resource name is available."
@@ -1991,10 +2030,10 @@
     "resourceType": "Microsoft.DBforMySQL/locations",
     "apiVersion": "2021-12-01-preview",
     "output": {
-      "$ref": "#/148"
+      "$ref": "#/152"
     },
     "input": {
-      "$ref": "#/147"
+      "$ref": "#/151"
     }
   }
 ]

@@ -88,6 +88,12 @@
 * **ApiVersion**: 2023-01-01
 * **Output**: [DatadogSetPasswordLink](#datadogsetpasswordlink)
 
+## Function setDefaultKey (Microsoft.Datadog/monitors@2023-01-01)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2023-01-01
+* **Input**: [DatadogApiKey](#datadogapikey)
+* **Output**: any
+
 ## DatadogAgreementProperties
 ### Properties
 * **accepted**: bool: If any version of the terms have been accepted, otherwise false.

@@ -711,6 +711,12 @@
 * **Input**: [SasUriResponse](#sasuriresponse)
 * **Output**: [SasUriResponse](#sasuriresponse)
 
+## Function importUri (Microsoft.OffAzure/masterSites/sqlSites@2024-12-01-preview)
+* **Resource**: Microsoft.OffAzure/masterSites/sqlSites
+* **ApiVersion**: 2024-12-01-preview
+* **Input**: [SQLInventoryImportBody](#sqlinventoryimportbody)
+* **Output**: any
+
 ## Function listHealthSummary (Microsoft.OffAzure/serverSites@2024-12-01-preview)
 * **Resource**: Microsoft.OffAzure/serverSites
 * **ApiVersion**: 2024-12-01-preview

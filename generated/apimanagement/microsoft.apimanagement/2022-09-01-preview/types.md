@@ -994,6 +994,12 @@
 * **Input**: [ApiManagementServiceBackupRestoreParameters](#apimanagementservicebackuprestoreparameters)
 * **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
 
+## Function confirmConsentCode (Microsoft.ApiManagement/service/authorizationProviders/authorizations@2022-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/authorizationProviders/authorizations
+* **ApiVersion**: 2022-09-01-preview
+* **Input**: [AuthorizationConfirmConsentCodeRequestContract](#authorizationconfirmconsentcoderequestcontract)
+* **Output**: any
+
 ## Function connectivityCheck (Microsoft.ApiManagement/service@2022-09-01-preview)
 * **Resource**: Microsoft.ApiManagement/service
 * **ApiVersion**: 2022-09-01-preview
@@ -1093,6 +1099,12 @@
 * **ApiVersion**: 2022-09-01-preview
 * **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
 
+## Function reconnect (Microsoft.ApiManagement/service/backends@2022-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/backends
+* **ApiVersion**: 2022-09-01-preview
+* **Input**: [BackendReconnectContract](#backendreconnectcontract)
+* **Output**: any
+
 ## Function refreshSecret (Microsoft.ApiManagement/service/certificates@2022-09-01-preview)
 * **Resource**: Microsoft.ApiManagement/service/certificates
 * **ApiVersion**: 2022-09-01-preview
@@ -1108,6 +1120,42 @@
 * **ApiVersion**: 2022-09-01-preview
 * **Output**: [NamedValueContract](#namedvaluecontract)
 
+## Function regenerateKey (Microsoft.ApiManagement/service/gateways@2022-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/gateways
+* **ApiVersion**: 2022-09-01-preview
+* **Input**: [GatewayKeyRegenerationRequestContract](#gatewaykeyregenerationrequestcontract)
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/subscriptions@2022-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2022-09-01-preview
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/tenant@2022-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2022-09-01-preview
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/workspaces/subscriptions@2022-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/workspaces/subscriptions
+* **ApiVersion**: 2022-09-01-preview
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/subscriptions@2022-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2022-09-01-preview
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/tenant@2022-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2022-09-01-preview
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/workspaces/subscriptions@2022-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/workspaces/subscriptions
+* **ApiVersion**: 2022-09-01-preview
+* **Output**: any
+
 ## Function restore (Microsoft.ApiManagement/service@2022-09-01-preview)
 * **Resource**: Microsoft.ApiManagement/service
 * **ApiVersion**: 2022-09-01-preview
@@ -1119,6 +1167,11 @@
 * **ApiVersion**: 2022-09-01-preview
 * **Input**: [SaveConfigurationParameter](#saveconfigurationparameter)
 * **Output**: [OperationResultContract](#operationresultcontract)
+
+## Function send (Microsoft.ApiManagement/service/users/confirmations@2022-09-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/users/confirmations
+* **ApiVersion**: 2022-09-01-preview
+* **Output**: any
 
 ## Function token (Microsoft.ApiManagement/service/users@2022-09-01-preview)
 * **Resource**: Microsoft.ApiManagement/service/users
@@ -1359,6 +1412,10 @@ dictionary key references will be ARM resource ids in the form:
 * **objectId**: string: The Object Id
 * **tenantId**: string: The Tenant Id
 
+## AuthorizationConfirmConsentCodeRequestContract
+### Properties
+* **consentCode**: string: The consent code from the authorization server after authorizing and consenting.
+
 ## AuthorizationContractProperties
 ### Properties
 * **authorizationType**: 'OAuth2' | string: Authorization type options
@@ -1487,6 +1544,17 @@ dictionary key references will be ARM resource ids in the form:
 * **password**: string: Password to connect to the WebProxy Server
 * **url**: string {minLength: 1, maxLength: 2000} (Required): WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
 * **username**: string: Username to connect to the WebProxy server
+
+## BackendReconnectContract
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [BackendReconnectProperties](#backendreconnectproperties): Reconnect request properties.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## BackendReconnectProperties
+### Properties
+* **after**: string: Duration in ISO8601 format after which reconnect will be initiated. Minimum duration of the Reconnect is PT2M.
 
 ## BackendServiceFabricClusterProperties
 ### Properties
@@ -1726,6 +1794,10 @@ dictionary key references will be ARM resource ids in the form:
 * **negotiateClientCertificate**: bool: Determines whether gateway requests client certificate
 * **tls10Enabled**: bool: Specifies if TLS 1.0 is supported
 * **tls11Enabled**: bool: Specifies if TLS 1.1 is supported
+
+## GatewayKeyRegenerationRequestContract
+### Properties
+* **keyType**: 'primary' | 'secondary' (Required): The Key being regenerated.
 
 ## GatewayKeysContract
 ### Properties

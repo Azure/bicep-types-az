@@ -3096,6 +3096,18 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Devices/IotHubs",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/174"
+    },
+    "input": {
+      "$ref": "#/227"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listkeys",
     "resourceType": "Microsoft.Devices/IotHubs/IotHubKeys",
     "apiVersion": "2021-07-01",
@@ -3109,7 +3121,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/230"
+          "$ref": "#/231"
         },
         "flags": 0,
         "description": "The description of an X509 CA Certificate including the challenge nonce issued for the Proof-Of-Possession flow."
@@ -3212,7 +3224,7 @@
     "resourceType": "Microsoft.Devices/IotHubs/certificates",
     "apiVersion": "2021-07-01",
     "output": {
-      "$ref": "#/229"
+      "$ref": "#/230"
     }
   },
   {
@@ -3275,10 +3287,10 @@
     "resourceType": "Microsoft.Devices/IotHubs/certificates",
     "apiVersion": "2021-07-01",
     "output": {
-      "$ref": "#/233"
+      "$ref": "#/234"
     },
     "input": {
-      "$ref": "#/232"
+      "$ref": "#/233"
     }
   }
 ]

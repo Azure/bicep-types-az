@@ -10817,6 +10817,48 @@
   },
   {
     "$type": "ObjectType",
+    "name": "UploadCertificateRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/860"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawCertificateData",
+    "properties": {
+      "certificates": {
+        "type": {
+          "$ref": "#/861"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadCertificate",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/414"
+    },
+    "input": {
+      "$ref": "#/859"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ArcSetting",
     "properties": {
       "properties": {
@@ -10862,7 +10904,7 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2025-11-01-preview",
     "output": {
-      "$ref": "#/859"
+      "$ref": "#/863"
     }
   },
   {
@@ -10871,7 +10913,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/862"
+          "$ref": "#/866"
         },
         "flags": 2,
         "description": "ArcIdentity properties."
@@ -10914,7 +10956,7 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2025-11-01-preview",
     "output": {
-      "$ref": "#/861"
+      "$ref": "#/865"
     }
   },
   {
@@ -10953,7 +10995,16 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2025-11-01-preview",
     "output": {
-      "$ref": "#/864"
+      "$ref": "#/868"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initializeDisableProcess",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/414"
     }
   },
   {
@@ -10962,7 +11013,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/867"
+          "$ref": "#/872"
         },
         "flags": 0,
         "description": "List of Arc Nodes in the cluster"
@@ -10975,7 +11026,7 @@
     "properties": {
       "clusterNodes": {
         "type": {
-          "$ref": "#/868"
+          "$ref": "#/873"
         },
         "flags": 0
       }
@@ -10993,10 +11044,44 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2025-11-01-preview",
     "output": {
-      "$ref": "#/859"
+      "$ref": "#/863"
     },
     "input": {
-      "$ref": "#/866"
+      "$ref": "#/871"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtensionUpgradeParameters",
+    "properties": {
+      "targetVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Extension Upgrade Target Version."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings/extensions",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/414"
+    },
+    "input": {
+      "$ref": "#/875"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "apply",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/updates",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/414"
     }
   }
 ]

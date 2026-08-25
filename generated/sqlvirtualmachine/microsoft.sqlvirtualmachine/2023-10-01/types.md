@@ -38,6 +38,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function fetchDCAssessment (Microsoft.SqlVirtualMachine/sqlVirtualMachines@2023-10-01)
+* **Resource**: Microsoft.SqlVirtualMachine/sqlVirtualMachines
+* **ApiVersion**: 2023-10-01
+* **Input**: [DiskConfigAssessmentRequest](#diskconfigassessmentrequest)
+* **Output**: any
+
+## Function redeploy (Microsoft.SqlVirtualMachine/sqlVirtualMachines@2023-10-01)
+* **Resource**: Microsoft.SqlVirtualMachine/sqlVirtualMachines
+* **ApiVersion**: 2023-10-01
+* **Output**: any
+
+## Function startAssessment (Microsoft.SqlVirtualMachine/sqlVirtualMachines@2023-10-01)
+* **Resource**: Microsoft.SqlVirtualMachine/sqlVirtualMachines
+* **ApiVersion**: 2023-10-01
+* **Output**: any
+
 ## Function troubleshoot (Microsoft.SqlVirtualMachine/sqlVirtualMachines@2023-10-01)
 * **Resource**: Microsoft.SqlVirtualMachine/sqlVirtualMachines
 * **ApiVersion**: 2023-10-01
@@ -104,6 +120,10 @@
 * **multiSubnetIpConfigurations**: [MultiSubnetIpConfiguration](#multisubnetipconfiguration)[]: List of multi subnet IP configurations for an AG listener.
 * **port**: int: Listener port.
 * **provisioningState**: string (ReadOnly): Provisioning state to track the async operation status.
+
+## DiskConfigAssessmentRequest
+### Properties
+* **runDiskConfigRules**: bool: Boolean to run disk config Assessment. Use false to fetch past Assessment.
 
 ## KeyVaultCredentialSettings
 ### Properties

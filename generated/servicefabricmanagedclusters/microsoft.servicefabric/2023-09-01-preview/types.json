@@ -4388,12 +4388,21 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "applyMaintenanceWindow",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/227"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "NodeTypeActionParameters",
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/296"
+          "$ref": "#/297"
         },
         "flags": 0,
         "description": "List of node names from the node type."
@@ -4407,7 +4416,7 @@
       },
       "updateType": {
         "type": {
-          "$ref": "#/299"
+          "$ref": "#/300"
         },
         "flags": 0,
         "description": "Specifies the way the operation will be performed."
@@ -4432,14 +4441,50 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/297"
+        "$ref": "#/298"
       },
       {
-        "$ref": "#/298"
+        "$ref": "#/299"
       },
       {
         "$ref": "#/0"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/227"
+    },
+    "input": {
+      "$ref": "#/296"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/227"
+    },
+    "input": {
+      "$ref": "#/296"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteNode",
+    "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/227"
+    },
+    "input": {
+      "$ref": "#/296"
+    }
   }
 ]

@@ -3063,6 +3063,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "endGetAccess",
+    "resourceType": "Microsoft.Compute/disks",
+    "apiVersion": "2024-03-02",
+    "output": {
+      "$ref": "#/217"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "beginGetAccess",
     "resourceType": "Microsoft.Compute/snapshots",
@@ -3076,6 +3088,15 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "endGetAccess",
+    "resourceType": "Microsoft.Compute/snapshots",
+    "apiVersion": "2024-03-02",
+    "output": {
+      "$ref": "#/217"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "beginGetAccess",
     "resourceType": "Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints",
     "apiVersion": "2024-03-02",
@@ -3084,6 +3105,15 @@
     },
     "input": {
       "$ref": "#/207"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "endGetAccess",
+    "resourceType": "Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints",
+    "apiVersion": "2024-03-02",
+    "output": {
+      "$ref": "#/217"
     }
   }
 ]

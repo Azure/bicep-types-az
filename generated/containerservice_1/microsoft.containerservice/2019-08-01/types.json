@@ -3821,5 +3821,38 @@
     "output": {
       "$ref": "#/440"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetServicePrincipalProfile",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2019-08-01",
+    "output": {
+      "$ref": "#/437"
+    },
+    "input": {
+      "$ref": "#/207"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetAADProfile",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2019-08-01",
+    "output": {
+      "$ref": "#/437"
+    },
+    "input": {
+      "$ref": "#/232"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateClusterCertificates",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2019-08-01",
+    "output": {
+      "$ref": "#/437"
+    }
   }
 ]

@@ -380,6 +380,23 @@
 * **properties**: [LocationProperties](#locationproperties) (ReadOnly): Cosmos DB location metadata
 * **type**: 'Microsoft.DocumentDB/locations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function deallocate (Microsoft.DocumentDB/cassandraClusters@2022-08-15)
+* **Resource**: Microsoft.DocumentDB/cassandraClusters
+* **ApiVersion**: 2022-08-15
+* **Output**: any
+
+## Function failoverPriorityChange (Microsoft.DocumentDB/databaseAccounts@2022-08-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2022-08-15
+* **Input**: [FailoverPolicies](#failoverpolicies)
+* **Output**: any
+
+## Function invokeCommand (Microsoft.DocumentDB/cassandraClusters@2022-08-15)
+* **Resource**: Microsoft.DocumentDB/cassandraClusters
+* **ApiVersion**: 2022-08-15
+* **Input**: [CommandPostBody](#commandpostbody)
+* **Output**: [CommandOutput](#commandoutput)
+
 ## Function listConnectionInfo (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2022-08-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
 * **ApiVersion**: 2022-08-15
@@ -485,10 +502,33 @@
 * **ApiVersion**: 2022-08-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
+## Function offlineRegion (Microsoft.DocumentDB/databaseAccounts@2022-08-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2022-08-15
+* **Input**: [RegionForOnlineOffline](#regionforonlineoffline)
+* **Output**: any
+
+## Function onlineRegion (Microsoft.DocumentDB/databaseAccounts@2022-08-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2022-08-15
+* **Input**: [RegionForOnlineOffline](#regionforonlineoffline)
+* **Output**: any
+
 ## Function readonlykeys (Microsoft.DocumentDB/databaseAccounts@2022-08-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts
 * **ApiVersion**: 2022-08-15
 * **Output**: [DatabaseAccountListReadOnlyKeysResult](#databaseaccountlistreadonlykeysresult)
+
+## Function regenerateAuthToken (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2022-08-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
+* **ApiVersion**: 2022-08-15
+* **Output**: any
+
+## Function regenerateKey (Microsoft.DocumentDB/databaseAccounts@2022-08-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2022-08-15
+* **Input**: [DatabaseAccountRegenerateKeyParameters](#databaseaccountregeneratekeyparameters)
+* **Output**: any
 
 ## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2022-08-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
@@ -501,6 +541,16 @@
 * **ApiVersion**: 2022-08-15
 * **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
 * **Output**: [BackupInformation](#backupinformation)
+
+## Function start (Microsoft.DocumentDB/cassandraClusters@2022-08-15)
+* **Resource**: Microsoft.DocumentDB/cassandraClusters
+* **ApiVersion**: 2022-08-15
+* **Output**: any
+
+## Function start (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2022-08-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
+* **ApiVersion**: 2022-08-15
+* **Output**: any
 
 ## AccountKeyMetadata
 ### Properties
@@ -632,6 +682,23 @@
 ### Properties
 * **name**: string: Name of the Cosmos DB Cassandra table column
 * **type**: string: Type of the Cosmos DB Cassandra table column
+
+## CommandOutput
+### Properties
+* **commandOutput**: string: Output of the command.
+
+## CommandPostBody
+### Properties
+* **arguments**: [CommandPostBodyArguments](#commandpostbodyarguments): The arguments for the command to be run
+* **cassandra-stop-start**: bool: If true, stops cassandra before executing the command and then start it again
+* **command**: string (Required): The command which should be run
+* **host**: string (Required): IP address of the cassandra host to run the command on
+* **readwrite**: bool: If true, allows the command to *write* to the cassandra directory, otherwise read-only.
+
+## CommandPostBodyArguments
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
@@ -795,6 +862,10 @@
 * **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
 
+## DatabaseAccountRegenerateKeyParameters
+### Properties
+* **keyKind**: 'primary' | 'primaryReadonly' | 'secondary' | 'secondaryReadonly' | string (Required): The access key to regenerate.
+
 ## DatabaseRestoreResource
 ### Properties
 * **collectionNames**: string[]: The names of the collections available for restore.
@@ -818,6 +889,10 @@
 ## ExcludedPath
 ### Properties
 * **path**: string: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+
+## FailoverPolicies
+### Properties
+* **failoverPolicies**: [FailoverPolicy](#failoverpolicy)[] (Required): List of failover policies.
 
 ## FailoverPolicy
 ### Properties
@@ -1030,6 +1105,10 @@
 ### Properties
 * **collection**: string: The collection name the role is applied.
 * **db**: string: The database name the role is applied.
+
+## RegionForOnlineOffline
+### Properties
+* **region**: string (Required): Cosmos DB region, with spaces between words and each word capitalized.
 
 ## RestoreParameters
 ### Properties

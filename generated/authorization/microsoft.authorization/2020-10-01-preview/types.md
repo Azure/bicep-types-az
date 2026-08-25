@@ -40,6 +40,16 @@
 * **properties**: [RoleManagementPolicyAssignmentProperties](#rolemanagementpolicyassignmentproperties): Role management policy properties.
 * **type**: 'Microsoft.Authorization/roleManagementPolicyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.Authorization/roleAssignmentScheduleRequests@2020-10-01-preview)
+* **Resource**: Microsoft.Authorization/roleAssignmentScheduleRequests
+* **ApiVersion**: 2020-10-01-preview
+* **Output**: any
+
+## Function cancel (Microsoft.Authorization/roleEligibilityScheduleRequests@2020-10-01-preview)
+* **Resource**: Microsoft.Authorization/roleEligibilityScheduleRequests
+* **ApiVersion**: 2020-10-01-preview
+* **Output**: any
+
 ## Function validate (Microsoft.Authorization/roleAssignments@2020-10-01-preview)
 * **Resource**: Microsoft.Authorization/roleAssignments
 * **ApiVersion**: 2020-10-01-preview

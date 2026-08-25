@@ -88,6 +88,36 @@
 * **Input**: [ContainerExecRequest](#containerexecrequest)
 * **Output**: [ContainerExecResponse](#containerexecresponse)
 
+## Function restart (Microsoft.ContainerInstance/containerGroups@2026-08-01-preview)
+* **Resource**: Microsoft.ContainerInstance/containerGroups
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
+## Function restart (Microsoft.ContainerInstance/ngroups@2026-08-01-preview)
+* **Resource**: Microsoft.ContainerInstance/ngroups
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
+## Function start (Microsoft.ContainerInstance/containerGroups@2026-08-01-preview)
+* **Resource**: Microsoft.ContainerInstance/containerGroups
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
+## Function start (Microsoft.ContainerInstance/ngroups@2026-08-01-preview)
+* **Resource**: Microsoft.ContainerInstance/ngroups
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.ContainerInstance/containerGroups@2026-08-01-preview)
+* **Resource**: Microsoft.ContainerInstance/containerGroups
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.ContainerInstance/ngroups@2026-08-01-preview)
+* **Resource**: Microsoft.ContainerInstance/ngroups
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
 ## AiAgentsGroupAccessToken
 ### Properties
 * **accessToken**: string {sensitive} (Required): The access token used to authenticate against the endpoint.

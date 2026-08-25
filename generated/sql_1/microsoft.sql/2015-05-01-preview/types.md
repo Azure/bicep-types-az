@@ -193,6 +193,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Sql/virtualClusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancelSync (Microsoft.Sql/servers/databases/syncGroups@2015-05-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/syncGroups
+* **ApiVersion**: 2015-05-01-preview
+* **Output**: any
+
 ## Function failover (Microsoft.Sql/servers/failoverGroups@2015-05-01-preview)
 * **Resource**: Microsoft.Sql/servers/failoverGroups
 * **ApiVersion**: 2015-05-01-preview
@@ -207,6 +212,26 @@
 * **Resource**: Microsoft.Sql/servers/syncAgents
 * **ApiVersion**: 2015-05-01-preview
 * **Output**: [SyncAgentKeyProperties](#syncagentkeyproperties)
+
+## Function refreshHubSchema (Microsoft.Sql/servers/databases/syncGroups@2015-05-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/syncGroups
+* **ApiVersion**: 2015-05-01-preview
+* **Output**: any
+
+## Function refreshSchema (Microsoft.Sql/servers/databases/syncGroups/syncMembers@2015-05-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/syncGroups/syncMembers
+* **ApiVersion**: 2015-05-01-preview
+* **Output**: any
+
+## Function revalidate (Microsoft.Sql/servers/encryptionProtector@2015-05-01-preview)
+* **Resource**: Microsoft.Sql/servers/encryptionProtector
+* **ApiVersion**: 2015-05-01-preview
+* **Output**: any
+
+## Function triggerSync (Microsoft.Sql/servers/databases/syncGroups@2015-05-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/syncGroups
+* **ApiVersion**: 2015-05-01-preview
+* **Output**: any
 
 ## AdvisorProperties
 ### Properties

@@ -46,6 +46,11 @@
 * **properties**: [ProductNestedProperties](#productnestedproperties) (ReadOnly): Properties of the product resource.
 * **type**: 'Microsoft.AzureStack/registrations/products' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function enableRemoteManagement (Microsoft.AzureStack/registrations@2022-06-01)
+* **Resource**: Microsoft.AzureStack/registrations
+* **ApiVersion**: 2022-06-01
+* **Output**: any
+
 ## Function getactivationkey (Microsoft.AzureStack/registrations@2022-06-01)
 * **Resource**: Microsoft.AzureStack/registrations
 * **ApiVersion**: 2022-06-01

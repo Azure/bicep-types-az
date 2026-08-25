@@ -500,6 +500,31 @@
 * **Input**: [SecurityGroupViewParameters](#securitygroupviewparameters)
 * **Output**: [SecurityGroupViewResult](#securitygroupviewresult)
 
+## Function start (Microsoft.Network/applicationGateways@2017-10-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2017-10-01
+* **Output**: any
+
+## Function start (Microsoft.Network/networkWatchers/connectionMonitors@2017-10-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2017-10-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/applicationGateways@2017-10-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2017-10-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/packetCaptures@2017-10-01)
+* **Resource**: Microsoft.Network/networkWatchers/packetCaptures
+* **ApiVersion**: 2017-10-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/connectionMonitors@2017-10-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2017-10-01
+* **Output**: any
+
 ## Function supportedvpndevices (Microsoft.Network/virtualNetworkGateways@2017-10-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
 * **ApiVersion**: 2017-10-01

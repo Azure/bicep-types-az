@@ -29,6 +29,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Capacity/reservationOrders/reservations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function archive (Microsoft.Capacity/reservationOrders/reservations@2022-03-01)
+* **Resource**: Microsoft.Capacity/reservationOrders/reservations
+* **ApiVersion**: 2022-03-01
+* **Output**: any
+
 ## Function availableScopes (Microsoft.Capacity/reservationOrders/reservations@2022-03-01)
 * **Resource**: Microsoft.Capacity/reservationOrders/reservations
 * **ApiVersion**: 2022-03-01
@@ -53,11 +58,22 @@
 * **Input**: [MergeRequest](#mergerequest)
 * **Output**: [ReservationResponse](#reservationresponse)[]
 
+## Function return (Microsoft.Capacity/reservationOrders@2022-03-01)
+* **Resource**: Microsoft.Capacity/reservationOrders
+* **ApiVersion**: 2022-03-01
+* **Input**: [RefundRequest](#refundrequest)
+* **Output**: [RefundResponse](#refundresponse)
+
 ## Function split (Microsoft.Capacity/reservationOrders@2022-03-01)
 * **Resource**: Microsoft.Capacity/reservationOrders
 * **ApiVersion**: 2022-03-01
 * **Input**: [SplitRequest](#splitrequest)
 * **Output**: [ReservationResponse](#reservationresponse)[]
+
+## Function unarchive (Microsoft.Capacity/reservationOrders/reservations@2022-03-01)
+* **Resource**: Microsoft.Capacity/reservationOrders/reservations
+* **ApiVersion**: 2022-03-01
+* **Output**: any
 
 ## AppliedScopeProperties
 ### Properties
@@ -203,6 +219,22 @@
 * **consumedRefundsTotal**: [Price](#price)
 * **maxRefundLimit**: [Price](#price)
 * **policyErrors**: [RefundPolicyError](#refundpolicyerror)[]: Refund Policy errors
+
+## RefundRequest
+### Properties
+* **properties**: [RefundRequestProperties](#refundrequestproperties)
+
+## RefundRequestProperties
+### Properties
+* **reservationToReturn**: [ReservationToReturn](#reservationtoreturn): Reservation to return
+* **returnReason**: string: The reason of returning the reservation
+* **scope**: string: The scope of the refund, e.g. Reservation
+* **sessionId**: string: SessionId that was returned by CalculateRefund API.
+
+## RefundResponse
+### Properties
+* **id**: string: Fully qualified identifier of the reservation being returned
+* **properties**: [RefundResponseProperties](#refundresponseproperties)
 
 ## RefundResponseProperties
 ### Properties

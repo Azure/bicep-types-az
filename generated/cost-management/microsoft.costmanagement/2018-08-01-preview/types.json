@@ -890,5 +890,17 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.CostManagement/reports",
+    "apiVersion": "2018-08-01-preview",
+    "output": {
+      "$ref": "#/63"
+    }
   }
 ]

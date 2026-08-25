@@ -586,6 +586,17 @@
 * **Input**: [FeaturesetVersionBackfillRequest](#featuresetversionbackfillrequest)
 * **Output**: [FeaturesetVersionBackfillResponse](#featuresetversionbackfillresponse)
 
+## Function cancel (Microsoft.MachineLearningServices/workspaces/jobs@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/jobs
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: any
+
+## Function customServices (Microsoft.MachineLearningServices/workspaces/computes@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [CustomService](#customservice)[]
+* **Output**: any
+
 ## Function diagnose (Microsoft.MachineLearningServices/workspaces@2024-01-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2024-01-01-preview
@@ -712,11 +723,47 @@
 * **Input**: [ManagedNetworkProvisionOptions](#managednetworkprovisionoptions)
 * **Output**: [ManagedNetworkProvisionStatus](#managednetworkprovisionstatus)
 
+## Function publish (Microsoft.MachineLearningServices/workspaces/codes/versions@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/codes/versions
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [DestinationAsset](#destinationasset)
+* **Output**: any
+
+## Function publish (Microsoft.MachineLearningServices/workspaces/components/versions@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/components/versions
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [DestinationAsset](#destinationasset)
+* **Output**: any
+
+## Function publish (Microsoft.MachineLearningServices/workspaces/data/versions@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/data/versions
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [DestinationAsset](#destinationasset)
+* **Output**: any
+
+## Function publish (Microsoft.MachineLearningServices/workspaces/environments/versions@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/environments/versions
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [DestinationAsset](#destinationasset)
+* **Output**: any
+
+## Function publish (Microsoft.MachineLearningServices/workspaces/models/versions@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/models/versions
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [DestinationAsset](#destinationasset)
+* **Output**: any
+
 ## Function regenerateKey (Microsoft.MachineLearningServices/workspaces/endpoints@2024-01-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/endpoints
 * **ApiVersion**: 2024-01-01-preview
 * **Input**: [RegenerateServiceAccountKeyContent](#regenerateserviceaccountkeycontent)
 * **Output**: [AccountApiKeys](#accountapikeys)
+
+## Function regenerateKeys (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [RegenerateEndpointKeysRequest](#regenerateendpointkeysrequest)
+* **Output**: any
 
 ## Function regenerateKeys (Microsoft.MachineLearningServices/workspaces/serverlessEndpoints@2024-01-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/serverlessEndpoints
@@ -730,10 +777,31 @@
 * **Input**: [Registry](#registry)
 * **Output**: [Registry](#registry)
 
+## Function resize (Microsoft.MachineLearningServices/workspaces/computes@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [ResizeSchema](#resizeschema)
+* **Output**: any
+
+## Function restart (Microsoft.MachineLearningServices/workspaces/computes@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: any
+
 ## Function resume (Microsoft.MachineLearningServices/workspaces/labelingJobs@2024-01-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/labelingJobs
 * **ApiVersion**: 2024-01-01-preview
 * **Output**: [LabelingJobProperties](#labelingjobproperties)
+
+## Function resyncKeys (Microsoft.MachineLearningServices/workspaces@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: any
+
+## Function start (Microsoft.MachineLearningServices/workspaces/computes@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: any
 
 ## Function startPendingUpload (Microsoft.MachineLearningServices/registries/codes/versions@2024-01-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/registries/codes/versions
@@ -759,6 +827,17 @@
 * **Input**: [PendingUploadRequestDto](#pendinguploadrequestdto)
 * **Output**: [PendingUploadResponseDto](#pendinguploadresponsedto)
 
+## Function stop (Microsoft.MachineLearningServices/workspaces/computes@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: any
+
+## Function testconnection (Microsoft.MachineLearningServices/workspaces/connections@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/connections
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [WorkspaceConnectionPropertiesV2BasicResource](#workspaceconnectionpropertiesv2basicresource)
+* **Output**: any
+
 ## Function token (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2024-01-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
 * **ApiVersion**: 2024-01-01-preview
@@ -769,6 +848,18 @@
 * **ApiVersion**: 2024-01-01-preview
 * **Input**: [TriggerOnceRequest](#triggeroncerequest)
 * **Output**: [TriggerRunSubmissionDto](#triggerrunsubmissiondto)
+
+## Function updateDataMounts (Microsoft.MachineLearningServices/workspaces/computes@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [ComputeInstanceDataMount](#computeinstancedatamount)[]
+* **Output**: any
+
+## Function updateIdleShutdownSetting (Microsoft.MachineLearningServices/workspaces/computes@2024-01-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2024-01-01-preview
+* **Input**: [IdleShutdownSetting](#idleshutdownsetting)
+* **Output**: any
 
 ## Function updateQuotas (Microsoft.MachineLearningServices/locations@2024-01-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/locations
@@ -1926,6 +2017,12 @@ The other benefit of rolling path is that model monitoring ui is able to select 
 For use with elastic training, currently supported by PyTorch distribution type only.
 * **properties**: [ResourceConfigurationProperties](#resourceconfigurationproperties): Additional properties bag.
 
+## DestinationAsset
+### Properties
+* **destinationName**: string: Destination asset name
+* **destinationVersion**: string: Destination asset version
+* **registryName**: string: Destination registry name
+
 ## DiagnoseRequestProperties
 ### Properties
 * **applicationInsights**: [DiagnoseRequestPropertiesApplicationInsights](#diagnoserequestpropertiesapplicationinsights): Setting for diagnosing dependent application insights
@@ -2565,6 +2662,10 @@ If null, a default value will be set depending on the selected metric.
 ## IdentityForCmk
 ### Properties
 * **userAssignedIdentity**: string: UserAssignedIdentity to be used to fetch the encryption key from keyVault
+
+## IdleShutdownSetting
+### Properties
+* **idleTimeBeforeShutdown**: string: Time is defined in ISO8601 format. Minimum is 15 min, maximum is 3 days.
 
 ## Image
 ### Properties
@@ -4365,6 +4466,10 @@ Defaults to 5000ms.
 ## RequestLogging
 ### Properties
 * **captureHeaders**: string[]: For payload logging, we only collect payload by default. If customers also want to collect the specified headers, they can set them in captureHeaders so that backend will collect those headers along with payload.
+
+## ResizeSchema
+### Properties
+* **targetVMSize**: string: The name of the virtual machine size.
 
 ## ResourceBaseProperties
 ### Properties

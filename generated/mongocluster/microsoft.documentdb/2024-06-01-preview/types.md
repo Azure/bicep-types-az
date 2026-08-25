@@ -46,6 +46,12 @@
 * **ApiVersion**: 2024-06-01-preview
 * **Output**: [ListConnectionStringsResult](#listconnectionstringsresult)
 
+## Function promote (Microsoft.DocumentDB/mongoClusters@2024-06-01-preview)
+* **Resource**: Microsoft.DocumentDB/mongoClusters
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [PromoteReplicaRequest](#promotereplicarequest)
+* **Output**: any
+
 ## CheckNameAvailabilityRequest
 ### Properties
 * **name**: string: The name of the resource for which availability needs to be checked.
@@ -133,6 +139,11 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## PromoteReplicaRequest
+### Properties
+* **mode**: 'Switchover' | string: The mode to apply to the promote operation. Value is optional and default value is 'Switchover'.
+* **promoteOption**: 'Forced' | string (Required): The promote option to apply to the operation.
 
 ## ReplicationProperties
 ### Properties

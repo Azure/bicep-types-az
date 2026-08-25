@@ -122,7 +122,7 @@ warning | Modeler/MissingType | The schema 'PolicyMetadataSlimProperties-metadat
 warning | Skipping resource POST action path '/providers/{managementGroupsNamespace}/managementGroups/{managementGroupId}/providers/Microsoft.PolicyInsights/checkPolicyRestrictions': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/checkPolicyRestrictions': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PolicyInsights/checkPolicyRestrictions': Unable to find type segments
-warning | Skipping resource action triggerEvaluation under path '/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/policyStates/latest/triggerEvaluation': failed to find a response schema
+warning | Resource action triggerEvaluation under path '/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/policyStates/latest/triggerEvaluation' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -233,7 +233,7 @@ warning | Modeler/MissingType | The schema 'TypedErrorInfo-info' has no type or 
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/stable/2019-10-01/policyMetadata.json#/components/schemas/TypedErrorInfo-info
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action triggerEvaluation under path '/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/policyStates/latest/triggerEvaluation': failed to find a response schema
+warning | Resource action triggerEvaluation under path '/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/policyStates/latest/triggerEvaluation' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.

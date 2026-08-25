@@ -840,6 +840,12 @@
 * **Input**: [NextHopParameters](#nexthopparameters)
 * **Output**: [NextHopResult](#nexthopresult)
 
+## Function PrepareNetworkPolicies (Microsoft.Network/virtualNetworks/subnets@2018-12-01)
+* **Resource**: Microsoft.Network/virtualNetworks/subnets
+* **ApiVersion**: 2018-12-01
+* **Input**: [PrepareNetworkPoliciesRequest](#preparenetworkpoliciesrequest)
+* **Output**: any
+
 ## Function query (Microsoft.Network/networkWatchers/connectionMonitors@2018-12-01)
 * **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
 * **ApiVersion**: 2018-12-01
@@ -867,6 +873,11 @@
 * **ApiVersion**: 2018-12-01
 * **Output**: [VirtualNetworkGateway](#virtualnetworkgateway)
 
+## Function resetvpnclientsharedkey (Microsoft.Network/virtualNetworkGateways@2018-12-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2018-12-01
+* **Output**: any
+
 ## Function securityGroupView (Microsoft.Network/networkWatchers@2018-12-01)
 * **Resource**: Microsoft.Network/networkWatchers
 * **ApiVersion**: 2018-12-01
@@ -878,6 +889,31 @@
 * **ApiVersion**: 2018-12-01
 * **Input**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
 * **Output**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
+
+## Function start (Microsoft.Network/applicationGateways@2018-12-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2018-12-01
+* **Output**: any
+
+## Function start (Microsoft.Network/networkWatchers/connectionMonitors@2018-12-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2018-12-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/applicationGateways@2018-12-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2018-12-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/packetCaptures@2018-12-01)
+* **Resource**: Microsoft.Network/networkWatchers/packetCaptures
+* **ApiVersion**: 2018-12-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/connectionMonitors@2018-12-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2018-12-01
+* **Output**: any
 
 ## Function supportedvpndevices (Microsoft.Network/virtualNetworkGateways@2018-12-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
@@ -895,6 +931,12 @@
 * **ApiVersion**: 2018-12-01
 * **Input**: [TroubleshootingParameters](#troubleshootingparameters)
 * **Output**: [TroubleshootingResult](#troubleshootingresult)
+
+## Function vpnConfiguration (Microsoft.Network/virtualWans@2018-12-01)
+* **Resource**: Microsoft.Network/virtualWans
+* **ApiVersion**: 2018-12-01
+* **Input**: [GetVpnSitesConfigurationRequest](#getvpnsitesconfigurationrequest)
+* **Output**: any
 
 ## Function vpndeviceconfigurationscript (Microsoft.Network/connections@2018-12-01)
 * **Resource**: Microsoft.Network/connections
@@ -2052,6 +2094,11 @@
 ### Properties
 * **value**: [GatewayRoute](#gatewayroute)[]: List of gateway routes
 
+## GetVpnSitesConfigurationRequest
+### Properties
+* **outputBlobSasUrl**: string: The sas-url to download the configurations for vpn-sites
+* **vpnSites**: string[]: List of resource-ids of the vpn-sites for which config is to be downloaded.
+
 ## HttpConfiguration
 ### Properties
 * **headers**: [HttpHeader](#httpheader)[]: List of HTTP headers.
@@ -2300,6 +2347,20 @@
 ### Properties
 * **networkSecurityGroupResult**: [NetworkSecurityGroupResult](#networksecuritygroupresult): Network configuration diagnostic result corresponded provided traffic query.
 * **profile**: [NetworkConfigurationDiagnosticProfile](#networkconfigurationdiagnosticprofile): Parameters to compare with network configuration.
+
+## NetworkIntentPolicy
+### Properties
+* **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
+* **id**: string: Resource ID.
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
+## NetworkIntentPolicyConfiguration
+### Properties
+* **networkIntentPolicyName**: string: The name of the Network Intent Policy for storing in target subscription.
+* **sourceNetworkIntentPolicy**: [NetworkIntentPolicy](#networkintentpolicy): Network Intent Policy resource.
 
 ## NetworkInterface
 ### Properties
@@ -2587,6 +2648,12 @@
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the policy is in enabled state or disabled state
 * **mode**: 'Detection' | 'Prevention' | string: Describes if it is in detection mode  or prevention mode at policy level
 
+## PrepareNetworkPoliciesRequest
+### Properties
+* **networkIntentPolicyConfigurations**: [NetworkIntentPolicyConfiguration](#networkintentpolicyconfiguration)[]: A list of NetworkIntentPolicyConfiguration.
+* **resourceGroupName**: string: The name of the resource group where the Network Intent Policy will be stored.
+* **serviceName**: string: The name of the service for which subnet is being prepared for.
+
 ## Probe
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -2686,6 +2753,11 @@
 * **link**: string: Link to the external resource
 * **linkedResourceType**: string: Resource type of the linked resource.
 * **provisioningState**: string (ReadOnly): Provisioning state of the ResourceNavigationLink resource.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

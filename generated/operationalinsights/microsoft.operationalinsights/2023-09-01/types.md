@@ -131,6 +131,32 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.OperationalInsights/workspaces/tables' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancelSearch (Microsoft.OperationalInsights/workspaces/tables@2023-09-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces/tables
+* **ApiVersion**: 2023-09-01
+* **Output**: any
+
+## Function Disable (Microsoft.OperationalInsights/workspaces/intelligencePacks@2023-09-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces/intelligencePacks
+* **ApiVersion**: 2023-09-01
+* **Output**: any
+
+## Function Enable (Microsoft.OperationalInsights/workspaces/intelligencePacks@2023-09-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces/intelligencePacks
+* **ApiVersion**: 2023-09-01
+* **Output**: any
+
+## Function migrate (Microsoft.OperationalInsights/workspaces/tables@2023-09-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces/tables
+* **ApiVersion**: 2023-09-01
+* **Output**: any
+
+## Function purge (Microsoft.OperationalInsights/workspaces@2023-09-01)
+* **Resource**: Microsoft.OperationalInsights/workspaces
+* **ApiVersion**: 2023-09-01
+* **Input**: [WorkspacePurgeBody](#workspacepurgebody)
+* **Output**: [WorkspacePurgeResponse](#workspacepurgeresponse)
+
 ## Function regenerateSharedKey (Microsoft.OperationalInsights/workspaces@2023-09-01)
 * **Resource**: Microsoft.OperationalInsights/workspaces
 * **ApiVersion**: 2023-09-01
@@ -503,6 +529,22 @@
 * **retentionInDays**: int: The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
 * **sku**: [WorkspaceSku](#workspacesku): The SKU of the workspace.
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
+
+## WorkspacePurgeBody
+### Properties
+* **filters**: [WorkspacePurgeBodyFilters](#workspacepurgebodyfilters)[] (Required): The set of columns and filters (queries) to run over them to purge the resulting data.
+* **table**: string (Required): Table from which to purge data.
+
+## WorkspacePurgeBodyFilters
+### Properties
+* **column**: string: The column of the table over which the given query should run
+* **key**: string: When filtering over custom dimensions, this key will be used as the name of the custom dimension.
+* **operator**: string: A query operator to evaluate over the provided column and value(s). Supported operators are ==, =~, in, in~, >, >=, <, <=, between, and have the same behavior as they would in a KQL query.
+* **value**: any: the value for the operator to function over. This can be a number (e.g., > 100), a string (timestamp >= '2017-09-01') or array of values.
+
+## WorkspacePurgeResponse
+### Properties
+* **operationId**: string (Required): Id to use when querying for status for a particular purge operation.
 
 ## WorkspaceSku
 ### Properties

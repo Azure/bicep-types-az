@@ -32,6 +32,24 @@
 * **Input**: [ExportDependenciesRequest](#exportdependenciesrequest)
 * **Output**: [ExportDependenciesOperationResult](#exportdependenciesoperationresult)
 
+## Function getConnectionsForProcessOnFocusedMachine (Microsoft.DependencyMap/maps@2025-05-01-preview)
+* **Resource**: Microsoft.DependencyMap/maps
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [GetConnectionsForProcessOnFocusedMachineRequest](#getconnectionsforprocessonfocusedmachinerequest)
+* **Output**: any
+
+## Function getConnectionsWithConnectedMachineForFocusedMachine (Microsoft.DependencyMap/maps@2025-05-01-preview)
+* **Resource**: Microsoft.DependencyMap/maps
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [GetConnectionsWithConnectedMachineForFocusedMachineRequest](#getconnectionswithconnectedmachineforfocusedmachinerequest)
+* **Output**: any
+
+## Function getDependencyViewForFocusedMachine (Microsoft.DependencyMap/maps@2025-05-01-preview)
+* **Resource**: Microsoft.DependencyMap/maps
+* **ApiVersion**: 2025-05-01-preview
+* **Input**: [GetDependencyViewForFocusedMachineRequest](#getdependencyviewforfocusedmachinerequest)
+* **Output**: any
+
 ## DateTimeFilter
 ### Properties
 * **endDateTimeUtc**: string: End date time for dependency map visualization query
@@ -92,6 +110,23 @@
 * **additionalInfo**: [ExportDependenciesAdditionalInfo](#exportdependenciesadditionalinfo): Additional information about the exported data.
 * **exportedDataSasUri**: string: The SAS URI of the blob containing the exported dependencies data.
 * **statusCode**: 'CompleteMatch' | 'NoMatch' | 'PartialMatch' | string: A status code returned by the service with additional context about the export dependencies operation.
+
+## GetConnectionsForProcessOnFocusedMachineRequest
+### Properties
+* **filters**: [DependencyMapVisualizationFilter](#dependencymapvisualizationfilter): Filters for GetProcessNetworkConnections
+* **focusedMachineId**: string (Required): Machine arm id
+* **processIdOnFocusedMachine**: string (Required): Process id
+
+## GetConnectionsWithConnectedMachineForFocusedMachineRequest
+### Properties
+* **connectedMachineId**: string (Required): Destination machine arm id
+* **filters**: [DependencyMapVisualizationFilter](#dependencymapvisualizationfilter): Filters for GetNetworkConnectionsBetweenMachines
+* **focusedMachineId**: string (Required): Source machine arm id
+
+## GetDependencyViewForFocusedMachineRequest
+### Properties
+* **filters**: [DependencyMapVisualizationFilter](#dependencymapvisualizationfilter): Filters for GetSingleMachineDependencyView
+* **focusedMachineId**: string (Required): Machine arm id
 
 ## MapsResourceProperties
 ### Properties

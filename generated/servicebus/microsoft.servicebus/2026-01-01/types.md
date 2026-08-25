@@ -171,11 +171,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function breakPairing (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2026-01-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2026-01-01
+* **Output**: any
+
 ## Function failover (Microsoft.ServiceBus/namespaces@2026-01-01)
 * **Resource**: Microsoft.ServiceBus/namespaces
 * **ApiVersion**: 2026-01-01
 * **Input**: [FailOver](#failover)
 * **Output**: [FailOver](#failover)
+
+## Function failover (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2026-01-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2026-01-01
+* **Input**: [NamespaceFailoverProperties](#namespacefailoverproperties)
+* **Output**: any
 
 ## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2026-01-01)
 * **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
@@ -197,6 +208,11 @@
 * **ApiVersion**: 2026-01-01
 * **Output**: [AccessKeys](#accesskeys)
 
+## Function reconcile (Microsoft.ServiceBus/namespaces/networkSecurityPerimeterConfigurations@2026-01-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2026-01-01
+* **Output**: any
+
 ## Function regenerateKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2026-01-01)
 * **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
 * **ApiVersion**: 2026-01-01
@@ -214,6 +230,16 @@
 * **ApiVersion**: 2026-01-01
 * **Input**: [RegenerateAccessKeyParameters](#regenerateaccesskeyparameters)
 * **Output**: [AccessKeys](#accesskeys)
+
+## Function revert (Microsoft.ServiceBus/namespaces/migrationConfigurations@2026-01-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/migrationConfigurations
+* **ApiVersion**: 2026-01-01
+* **Output**: any
+
+## Function upgrade (Microsoft.ServiceBus/namespaces/migrationConfigurations@2026-01-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/migrationConfigurations
+* **ApiVersion**: 2026-01-01
+* **Output**: any
 
 ## AccessKeys
 ### Properties
@@ -281,6 +307,10 @@
 * **force**: bool: If Force is false then graceful failover is attempted after ensuring no data loss. If Force flag is set to true, Forced failover is attempted with possible data loss.
 * **primaryLocation**: string: Query parameter for the new primary location after failover.
 
+## FailoverProperties
+### Properties
+* **IsSafeFailover**: bool: Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary.
+
 ## GeoDataReplicationProperties
 ### Properties
 * **locations**: [NamespaceReplicaLocation](#namespacereplicalocation)[]: A list of regions where replicas of the namespace are maintained.
@@ -320,6 +350,10 @@
 * **postMigrationName**: string (Required): Name to access Standard Namespace after migration
 * **provisioningState**: string (ReadOnly): Provisioning state of Migration ConfigurationProvisioning state of Migration Configuration
 * **targetNamespace**: string (Required): Existing premium Namespace ARM Id name which has no entities, will be used for migration
+
+## NamespaceFailoverProperties
+### Properties
+* **properties**: [FailoverProperties](#failoverproperties): Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary.
 
 ## NamespaceReplicaLocation
 ### Properties

@@ -462,6 +462,11 @@
 * **Input**: [FeaturesetVersionBackfillRequest](#featuresetversionbackfillrequest)
 * **Output**: [FeaturesetVersionBackfillResponse](#featuresetversionbackfillresponse)
 
+## Function cancel (Microsoft.MachineLearningServices/workspaces/jobs@2023-10-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/jobs
+* **ApiVersion**: 2023-10-01
+* **Output**: any
+
 ## Function diagnose (Microsoft.MachineLearningServices/workspaces@2023-10-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2023-10-01
@@ -530,11 +535,62 @@
 * **Input**: [ManagedNetworkProvisionOptions](#managednetworkprovisionoptions)
 * **Output**: [ManagedNetworkProvisionStatus](#managednetworkprovisionstatus)
 
+## Function publish (Microsoft.MachineLearningServices/workspaces/codes/versions@2023-10-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/codes/versions
+* **ApiVersion**: 2023-10-01
+* **Input**: [DestinationAsset](#destinationasset)
+* **Output**: any
+
+## Function publish (Microsoft.MachineLearningServices/workspaces/components/versions@2023-10-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/components/versions
+* **ApiVersion**: 2023-10-01
+* **Input**: [DestinationAsset](#destinationasset)
+* **Output**: any
+
+## Function publish (Microsoft.MachineLearningServices/workspaces/data/versions@2023-10-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/data/versions
+* **ApiVersion**: 2023-10-01
+* **Input**: [DestinationAsset](#destinationasset)
+* **Output**: any
+
+## Function publish (Microsoft.MachineLearningServices/workspaces/environments/versions@2023-10-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/environments/versions
+* **ApiVersion**: 2023-10-01
+* **Input**: [DestinationAsset](#destinationasset)
+* **Output**: any
+
+## Function publish (Microsoft.MachineLearningServices/workspaces/models/versions@2023-10-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/models/versions
+* **ApiVersion**: 2023-10-01
+* **Input**: [DestinationAsset](#destinationasset)
+* **Output**: any
+
+## Function regenerateKeys (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2023-10-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2023-10-01
+* **Input**: [RegenerateEndpointKeysRequest](#regenerateendpointkeysrequest)
+* **Output**: any
+
 ## Function removeRegions (Microsoft.MachineLearningServices/registries@2023-10-01)
 * **Resource**: Microsoft.MachineLearningServices/registries
 * **ApiVersion**: 2023-10-01
 * **Input**: [Registry](#registry)
 * **Output**: [Registry](#registry)
+
+## Function restart (Microsoft.MachineLearningServices/workspaces/computes@2023-10-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-10-01
+* **Output**: any
+
+## Function resyncKeys (Microsoft.MachineLearningServices/workspaces@2023-10-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2023-10-01
+* **Output**: any
+
+## Function start (Microsoft.MachineLearningServices/workspaces/computes@2023-10-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-10-01
+* **Output**: any
 
 ## Function startPendingUpload (Microsoft.MachineLearningServices/registries/codes/versions@2023-10-01)
 * **Resource**: Microsoft.MachineLearningServices/registries/codes/versions
@@ -559,6 +615,11 @@
 * **ApiVersion**: 2023-10-01
 * **Input**: [PendingUploadRequestDto](#pendinguploadrequestdto)
 * **Output**: [PendingUploadResponseDto](#pendinguploadresponsedto)
+
+## Function stop (Microsoft.MachineLearningServices/workspaces/computes@2023-10-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-10-01
+* **Output**: any
 
 ## Function token (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2023-10-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
@@ -1481,6 +1542,12 @@ TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.c
 * **instanceCount**: int: Optional number of instances or nodes used by the compute target.
 * **instanceType**: string: Optional type of VM used as supported by the compute target.
 * **properties**: [ResourceConfigurationProperties](#resourceconfigurationproperties): Additional properties bag.
+
+## DestinationAsset
+### Properties
+* **destinationName**: string: Destination asset name
+* **destinationVersion**: string: Destination asset version
+* **registryName**: string: Destination registry name
 
 ## DiagnoseRequestProperties
 ### Properties
@@ -3072,6 +3139,11 @@ If not present, the schedule will run indefinitely
 * **timeZone**: string: Specifies time zone in which the schedule runs.
 TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11
 * **triggerType**: 'Cron' | 'Recurrence' | string (Required): [Required]
+
+## RegenerateEndpointKeysRequest
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string (Required): [Required] Specification for which type of key to generate. Primary or Secondary.
+* **keyValue**: string: The value the key is set to.
 
 ## Registry
 ### Properties

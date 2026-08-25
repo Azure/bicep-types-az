@@ -153,6 +153,12 @@
 * **Input**: [CheckinManifestParams](#checkinmanifestparams)
 * **Output**: [CheckinManifestInfo](#checkinmanifestinfo)
 
+## Function deleteResources (Microsoft.ProviderHub/providerRegistrations/resourceActions@2024-09-01)
+* **Resource**: Microsoft.ProviderHub/providerRegistrations/resourceActions
+* **ApiVersion**: 2024-09-01
+* **Input**: [ResourceManagementAction](#resourcemanagementaction)
+* **Output**: any
+
 ## Function generateManifest (Microsoft.ProviderHub/providerRegistrations@2024-09-01)
 * **Resource**: Microsoft.ProviderHub/providerRegistrations
 * **ApiVersion**: 2024-09-01
@@ -168,6 +174,21 @@
 * **Resource**: Microsoft.ProviderHub/providerRegistrations
 * **ApiVersion**: 2024-09-01
 * **Output**: [OperationsDefinition](#operationsdefinition)[]
+
+## Function stop (Microsoft.ProviderHub/providerRegistrations/customRollouts@2024-09-01)
+* **Resource**: Microsoft.ProviderHub/providerRegistrations/customRollouts
+* **ApiVersion**: 2024-09-01
+* **Output**: any
+
+## Function stop (Microsoft.ProviderHub/providerRegistrations/defaultRollouts@2024-09-01)
+* **Resource**: Microsoft.ProviderHub/providerRegistrations/defaultRollouts
+* **ApiVersion**: 2024-09-01
+* **Output**: any
+
+## Function stop (Microsoft.ProviderHub/providerRegistrations/newRegionFrontloadRelease@2024-09-01)
+* **Resource**: Microsoft.ProviderHub/providerRegistrations/newRegionFrontloadRelease
+* **ApiVersion**: 2024-09-01
+* **Output**: any
 
 ## AdditionalAuthorization
 ### Properties
@@ -805,6 +826,17 @@
 * **encryptedKey**: string {sensitive}: The encrypted key.
 * **maxChildResourceConsistencyJobLimit**: int: The max child resource consistency job limit.
 * **subscriptionId**: string: The subscription id.
+
+## ResourceManagementAction
+### Properties
+* **resources**: [ResourceManagementEntity](#resourcemanagemententity)[]: resource management action content.
+
+## ResourceManagementEntity
+### Properties
+* **homeTenantId**: string: The home tenant id.
+* **location**: string: The location.
+* **resourceId**: string (Required): The resource id.
+* **status**: string (ReadOnly): The operation status.
 
 ## ResourceProviderAuthorization
 ### Properties

@@ -40,6 +40,21 @@
 * **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
 * **Output**: [VirtualNetworkSubnetUsageResult](#virtualnetworksubnetusageresult)
 
+## Function restart (Microsoft.DBForPostgreSql/flexibleServers@2020-02-14-preview)
+* **Resource**: Microsoft.DBForPostgreSql/flexibleServers
+* **ApiVersion**: 2020-02-14-preview
+* **Output**: any
+
+## Function start (Microsoft.DBForPostgreSql/flexibleServers@2020-02-14-preview)
+* **Resource**: Microsoft.DBForPostgreSql/flexibleServers
+* **ApiVersion**: 2020-02-14-preview
+* **Output**: any
+
+## Function stop (Microsoft.DBForPostgreSql/flexibleServers@2020-02-14-preview)
+* **Resource**: Microsoft.DBForPostgreSql/flexibleServers
+* **ApiVersion**: 2020-02-14-preview
+* **Output**: any
+
 ## ConfigurationProperties
 ### Properties
 * **allowedValues**: string (ReadOnly): Allowed values of the configuration.

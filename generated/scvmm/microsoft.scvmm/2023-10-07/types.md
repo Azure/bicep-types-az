@@ -116,6 +116,40 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ScVmm/vmmServers/inventoryItems' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createCheckpoint (Microsoft.ScVmm/virtualMachineInstances@2023-10-07)
+* **Resource**: Microsoft.ScVmm/virtualMachineInstances
+* **ApiVersion**: 2023-10-07
+* **Input**: [VirtualMachineCreateCheckpoint](#virtualmachinecreatecheckpoint)
+* **Output**: any
+
+## Function deleteCheckpoint (Microsoft.ScVmm/virtualMachineInstances@2023-10-07)
+* **Resource**: Microsoft.ScVmm/virtualMachineInstances
+* **ApiVersion**: 2023-10-07
+* **Input**: [VirtualMachineDeleteCheckpoint](#virtualmachinedeletecheckpoint)
+* **Output**: any
+
+## Function restart (Microsoft.ScVmm/virtualMachineInstances@2023-10-07)
+* **Resource**: Microsoft.ScVmm/virtualMachineInstances
+* **ApiVersion**: 2023-10-07
+* **Output**: any
+
+## Function restoreCheckpoint (Microsoft.ScVmm/virtualMachineInstances@2023-10-07)
+* **Resource**: Microsoft.ScVmm/virtualMachineInstances
+* **ApiVersion**: 2023-10-07
+* **Input**: [VirtualMachineRestoreCheckpoint](#virtualmachinerestorecheckpoint)
+* **Output**: any
+
+## Function start (Microsoft.ScVmm/virtualMachineInstances@2023-10-07)
+* **Resource**: Microsoft.ScVmm/virtualMachineInstances
+* **ApiVersion**: 2023-10-07
+* **Output**: any
+
+## Function stop (Microsoft.ScVmm/virtualMachineInstances@2023-10-07)
+* **Resource**: Microsoft.ScVmm/virtualMachineInstances
+* **ApiVersion**: 2023-10-07
+* **Input**: [StopVirtualMachineOptions](#stopvirtualmachineoptions)
+* **Output**: any
+
 ## AvailabilitySetListItem
 ### Properties
 * **id**: string: Gets the ARM Id of the microsoft.scvmm/availabilitySets resource.
@@ -267,6 +301,10 @@
 * **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Gets the type of the os.
 * **osVersion**: string (ReadOnly): Gets os version.
 
+## StopVirtualMachineOptions
+### Properties
+* **skipShutdown**: 'false' | 'true' | string: Gets or sets a value indicating whether to request non-graceful VM shutdown. True value for this flag indicates non-graceful shutdown whereas false indicates otherwise. Defaults to false.
+
 ## StorageProfile
 ### Properties
 * **disks**: [VirtualDisk](#virtualdisk)[]: Gets or sets the list of virtual disks associated with the virtual machine.
@@ -336,6 +374,15 @@
 * **vhdType**: string: Gets or sets the disk vhd type.
 * **volumeType**: string (ReadOnly): Gets the disk volume type.
 
+## VirtualMachineCreateCheckpoint
+### Properties
+* **description**: string: Description of the checkpoint.
+* **name**: string: Name of the checkpoint.
+
+## VirtualMachineDeleteCheckpoint
+### Properties
+* **id**: string: ID of the checkpoint to be deleted.
+
 ## VirtualMachineInstanceProperties
 ### Properties
 * **availabilitySets**: [AvailabilitySetListItem](#availabilitysetlistitem)[]: Availability Sets in vm.
@@ -346,6 +393,10 @@
 * **powerState**: string (ReadOnly): Gets the power state of the virtual machine.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage properties.
+
+## VirtualMachineRestoreCheckpoint
+### Properties
+* **id**: string: ID of the checkpoint to be restored to.
 
 ## VirtualMachineTemplateProperties
 ### Properties

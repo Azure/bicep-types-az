@@ -70,6 +70,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.IntegrationSpaces/spaces/infrastructureResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function deleteBusinessProcessDevelopmentArtifact (Microsoft.IntegrationSpaces/spaces/applications@2023-11-14-preview)
+* **Resource**: Microsoft.IntegrationSpaces/spaces/applications
+* **ApiVersion**: 2023-11-14-preview
+* **Input**: [GetOrDeleteBusinessProcessDevelopmentArtifactRequest](#getordeletebusinessprocessdevelopmentartifactrequest)
+* **Output**: any
+
 ## Function getBusinessProcessDevelopmentArtifact (Microsoft.IntegrationSpaces/spaces/applications@2023-11-14-preview)
 * **Resource**: Microsoft.IntegrationSpaces/spaces/applications
 * **ApiVersion**: 2023-11-14-preview
@@ -86,6 +92,12 @@
 * **ApiVersion**: 2023-11-14-preview
 * **Input**: [SaveOrValidateBusinessProcessDevelopmentArtifactRequest](#saveorvalidatebusinessprocessdevelopmentartifactrequest)
 * **Output**: [SaveOrGetBusinessProcessDevelopmentArtifactResponse](#saveorgetbusinessprocessdevelopmentartifactresponse)
+
+## Function validateBusinessProcessDevelopmentArtifact (Microsoft.IntegrationSpaces/spaces/applications@2023-11-14-preview)
+* **Resource**: Microsoft.IntegrationSpaces/spaces/applications
+* **ApiVersion**: 2023-11-14-preview
+* **Input**: [SaveOrValidateBusinessProcessDevelopmentArtifactRequest](#saveorvalidatebusinessprocessdevelopmentartifactrequest)
+* **Output**: any
 
 ## ApplicationProperties
 ### Properties

@@ -179,6 +179,28 @@
 * **Input**: [VirtualMachineInstallPatchesParameters](#virtualmachineinstallpatchesparameters)
 * **Output**: [VirtualMachineInstallPatchesResult](#virtualmachineinstallpatchesresult)
 
+## Function restart (Microsoft.ConnectedVMwarevSphere/virtualMachines@2022-07-15-preview)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachines
+* **ApiVersion**: 2022-07-15-preview
+* **Output**: any
+
+## Function start (Microsoft.ConnectedVMwarevSphere/virtualMachines@2022-07-15-preview)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachines
+* **ApiVersion**: 2022-07-15-preview
+* **Output**: any
+
+## Function stop (Microsoft.ConnectedVMwarevSphere/virtualMachines@2022-07-15-preview)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachines
+* **ApiVersion**: 2022-07-15-preview
+* **Input**: [StopVirtualMachineOptions](#stopvirtualmachineoptions)
+* **Output**: any
+
+## Function upgradeExtensions (Microsoft.ConnectedVMwarevSphere/virtualMachines@2022-07-15-preview)
+* **Resource**: Microsoft.ConnectedVMwarevSphere/virtualMachines
+* **ApiVersion**: 2022-07-15-preview
+* **Input**: [MachineExtensionUpgrade](#machineextensionupgrade)
+* **Output**: any
+
 ## AvailablePatchCountByClassification
 ### Properties
 * **critical**: int (ReadOnly): Number of critical patches available for installation.
@@ -244,6 +266,15 @@
 ### Properties
 * **name**: string: The extended location name.
 * **type**: string: The extended location type.
+
+## ExtensionTarget
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ExtensionTargetProperties](#extensiontargetproperties)
+
+## ExtensionTargetProperties
+### Properties
+* **targetVersion**: string: Properties for the specified Extension to Upgrade.
 
 ## GuestAgentProfile
 ### Properties
@@ -424,6 +455,10 @@ Defaults to 1 if unspecified.
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## MachineExtensionUpgrade
+### Properties
+* **extensionTargets**: [ExtensionTarget](#extensiontarget): Describes the Extension Target Properties.
+
 ## NetworkInterface
 ### Properties
 * **deviceKey**: int: Gets or sets the device key value.
@@ -537,6 +572,10 @@ This property is used in relative allocation between resource consumers.
 ## SecurityProfile
 ### Properties
 * **uefiSettings**: [UefiSettings](#uefisettings): Specifies the security settings like secure boot used while creating the virtual machine.
+
+## StopVirtualMachineOptions
+### Properties
+* **skipShutdown**: bool: Gets or sets a value indicating whether to request non-graceful VM shutdown. True value for this flag indicates non-graceful shutdown whereas false indicates otherwise. Defaults to false.
 
 ## StorageProfile
 ### Properties

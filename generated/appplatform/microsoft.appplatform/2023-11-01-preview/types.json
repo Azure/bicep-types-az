@@ -9209,6 +9209,15 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "disableTestEndpoint",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "enableTestEndpoint",
     "resourceType": "Microsoft.AppPlatform/Spring",
     "apiVersion": "2023-11-01-preview",
@@ -9217,12 +9226,39 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "flushVirtualNetworkDnsSettings",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "GloballyEnabledApms",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/648"
+          "$ref": "#/652"
         },
         "flags": 0,
         "description": "Collection of the globally enabled APMs"
@@ -9241,7 +9277,31 @@
     "resourceType": "Microsoft.AppPlatform/Spring",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/647"
+      "$ref": "#/651"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableApmGlobally",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
+    },
+    "input": {
+      "$ref": "#/235"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableApmGlobally",
+    "resourceType": "Microsoft.AppPlatform/Spring",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
+    },
+    "input": {
+      "$ref": "#/235"
     }
   },
   {
@@ -9297,10 +9357,10 @@
     "resourceType": "Microsoft.AppPlatform/locations",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/651"
+      "$ref": "#/657"
     },
     "input": {
-      "$ref": "#/650"
+      "$ref": "#/656"
     }
   },
   {
@@ -9309,7 +9369,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/654"
+          "$ref": "#/660"
         },
         "flags": 0,
         "description": "Collection of the keys for the APM sensitive properties"
@@ -9328,7 +9388,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apms",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/653"
+      "$ref": "#/659"
     }
   },
   {
@@ -9337,7 +9397,7 @@
     "properties": {
       "gitPropertyValidationResult": {
         "type": {
-          "$ref": "#/657"
+          "$ref": "#/663"
         },
         "flags": 0,
         "description": "Validation result for configuration service settings"
@@ -9357,7 +9417,7 @@
       },
       "gitReposValidationResult": {
         "type": {
-          "$ref": "#/660"
+          "$ref": "#/666"
         },
         "flags": 0,
         "description": "The detail validation results"
@@ -9377,7 +9437,7 @@
       },
       "messages": {
         "type": {
-          "$ref": "#/659"
+          "$ref": "#/665"
         },
         "flags": 0,
         "description": "Detailed validation messages."
@@ -9393,7 +9453,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/658"
+      "$ref": "#/664"
     }
   },
   {
@@ -9402,7 +9462,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/configurationServices",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/656"
+      "$ref": "#/662"
     },
     "input": {
       "$ref": "#/130"
@@ -9455,10 +9515,10 @@
     "resourceType": "Microsoft.AppPlatform/Spring/configurationServices",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/656"
+      "$ref": "#/662"
     },
     "input": {
-      "$ref": "#/662"
+      "$ref": "#/668"
     }
   },
   {
@@ -9487,7 +9547,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/containerRegistries",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/664"
+      "$ref": "#/670"
     },
     "input": {
       "$ref": "#/200"
@@ -9512,7 +9572,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/buildServices/builds/results",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/666"
+      "$ref": "#/672"
     }
   },
   {
@@ -9541,7 +9601,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/buildServices",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/668"
+      "$ref": "#/674"
     }
   },
   {
@@ -9550,7 +9610,7 @@
     "properties": {
       "deployments": {
         "type": {
-          "$ref": "#/671"
+          "$ref": "#/677"
         },
         "flags": 0,
         "description": "A list of deployment resource ids."
@@ -9569,7 +9629,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/buildServices/builders",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/670"
+      "$ref": "#/676"
     }
   },
   {
@@ -9578,7 +9638,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/668"
+      "$ref": "#/674"
     }
   },
   {
@@ -9587,7 +9647,7 @@
     "properties": {
       "activeDeploymentNames": {
         "type": {
-          "$ref": "#/675"
+          "$ref": "#/681"
         },
         "flags": 0,
         "description": "Collection of Deployment name."
@@ -9661,10 +9721,10 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/676"
+      "$ref": "#/682"
     },
     "input": {
-      "$ref": "#/674"
+      "$ref": "#/680"
     }
   },
   {
@@ -9706,10 +9766,37 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/679"
+      "$ref": "#/685"
     },
     "input": {
-      "$ref": "#/678"
+      "$ref": "#/684"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
     }
   },
   {
@@ -9751,10 +9838,10 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/682"
+      "$ref": "#/691"
     },
     "input": {
-      "$ref": "#/681"
+      "$ref": "#/690"
     }
   },
   {
@@ -9763,7 +9850,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/682"
+      "$ref": "#/691"
     }
   },
   {
@@ -9772,7 +9859,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/682"
+      "$ref": "#/691"
     }
   },
   {
@@ -9794,7 +9881,7 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/686"
+      "$ref": "#/695"
     }
   },
   {
@@ -9825,6 +9912,42 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "generateHeapDump",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
+    },
+    "input": {
+      "$ref": "#/697"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateThreadDump",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
+    },
+    "input": {
+      "$ref": "#/697"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startJFR",
+    "resourceType": "Microsoft.AppPlatform/Spring/apps/deployments",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
+    },
+    "input": {
+      "$ref": "#/697"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "GatewayEnvSecrets",
     "properties": {},
@@ -9838,7 +9961,16 @@
     "resourceType": "Microsoft.AppPlatform/Spring/gateways",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/689"
+      "$ref": "#/701"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.AppPlatform/Spring/gateways",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
     }
   },
   {
@@ -9847,10 +9979,10 @@
     "resourceType": "Microsoft.AppPlatform/Spring/gateways",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/679"
+      "$ref": "#/685"
     },
     "input": {
-      "$ref": "#/678"
+      "$ref": "#/684"
     }
   },
   {
@@ -9859,10 +9991,10 @@
     "resourceType": "Microsoft.AppPlatform/Spring/apiPortals",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/679"
+      "$ref": "#/685"
     },
     "input": {
-      "$ref": "#/678"
+      "$ref": "#/684"
     }
   },
   {
@@ -9871,7 +10003,7 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/696"
+          "$ref": "#/709"
         },
         "flags": 0,
         "description": "State of the customized accelerator validation result"
@@ -9897,10 +10029,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/694"
+        "$ref": "#/707"
       },
       {
-        "$ref": "#/695"
+        "$ref": "#/708"
       },
       {
         "$ref": "#/2"
@@ -9913,10 +10045,28 @@
     "resourceType": "Microsoft.AppPlatform/Spring/applicationAccelerators/customizedAccelerators",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/693"
+      "$ref": "#/706"
     },
     "input": {
       "$ref": "#/576"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.AppPlatform/Spring/applicationAccelerators/predefinedAccelerators",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.AppPlatform/Spring/applicationAccelerators/predefinedAccelerators",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/166"
     }
   }
 ]

@@ -1586,12 +1586,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/154"
+    },
+    "input": {
+      "$ref": "#/152"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExportClusterParameters",
     "properties": {
       "sasUri": {
         "type": {
-          "$ref": "#/155"
+          "$ref": "#/157"
         },
         "flags": 1,
         "description": "SAS URI for the target directory to export to"
@@ -1603,12 +1618,24 @@
     "sensitive": true
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/154"
+    },
+    "input": {
+      "$ref": "#/156"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ForceUnlinkParameters",
     "properties": {
       "ids": {
         "type": {
-          "$ref": "#/157"
+          "$ref": "#/160"
         },
         "flags": 1,
         "description": "The resource IDs of the database resources to be unlinked."
@@ -1622,12 +1649,75 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "forceUnlink",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/154"
+    },
+    "input": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ForceLinkParameters",
+    "properties": {
+      "geoReplication": {
+        "type": {
+          "$ref": "#/163"
+        },
+        "flags": 1,
+        "description": "Properties to configure geo replication for this database."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ForceLinkParametersGeoReplication",
+    "properties": {
+      "groupNickname": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the group of linked database resources. This should match the existing replication group name."
+      },
+      "linkedDatabases": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "The resource IDs of the databases that are expected to be linked and included in the replication group. This parameter is used to validate that the linking is to the expected (unlinked) part of the replication group, if it is splintered."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/129"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forceLinkToReplicationGroup",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/154"
+    },
+    "input": {
+      "$ref": "#/162"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "FlushParameters",
     "properties": {
       "ids": {
         "type": {
-          "$ref": "#/159"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "The identifiers of all the other database resources in the georeplication group to be flushed."
@@ -1638,6 +1728,27 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "flush",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/154"
+    },
+    "input": {
+      "$ref": "#/166"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeDBRedisVersion",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/154"
     }
   }
 ]

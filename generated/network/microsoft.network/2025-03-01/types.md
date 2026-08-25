@@ -1557,6 +1557,11 @@
 * **properties**: [VpnSiteLinkProperties](#vpnsitelinkproperties) (ReadOnly): Properties of the VPN site link.
 * **type**: 'Microsoft.Network/vpnSites/vpnSiteLinks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function abortMigration (Microsoft.Network/virtualNetworkGateways@2025-03-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2025-03-01
+* **Output**: any
+
 ## Function advertisedRoutes (Microsoft.Network/virtualHubs/bgpConnections@2025-03-01)
 * **Resource**: Microsoft.Network/virtualHubs/bgpConnections
 * **ApiVersion**: 2025-03-01
@@ -1591,6 +1596,11 @@
 * **Input**: [NetworkManagerCommit](#networkmanagercommit)
 * **Output**: [NetworkManagerCommit](#networkmanagercommit)
 
+## Function commitMigration (Microsoft.Network/virtualNetworkGateways@2025-03-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2025-03-01
+* **Output**: any
+
 ## Function configureFlowLog (Microsoft.Network/networkWatchers@2025-03-01)
 * **Resource**: Microsoft.Network/networkWatchers
 * **ApiVersion**: 2025-03-01
@@ -1619,6 +1629,23 @@
 * **ApiVersion**: 2025-03-01
 * **Output**: [PublicIpDdosProtectionStatusResult](#publicipddosprotectionstatusresult)
 
+## Function deleteShareableLinks (Microsoft.Network/bastionHosts@2025-03-01)
+* **Resource**: Microsoft.Network/bastionHosts
+* **ApiVersion**: 2025-03-01
+* **Input**: [BastionShareableLinkListRequest](#bastionshareablelinklistrequest)
+* **Output**: any
+
+## Function deleteShareableLinksByToken (Microsoft.Network/bastionHosts@2025-03-01)
+* **Resource**: Microsoft.Network/bastionHosts
+* **ApiVersion**: 2025-03-01
+* **Input**: [BastionShareableLinkTokenListRequest](#bastionshareablelinktokenlistrequest)
+* **Output**: any
+
+## Function deploy (Microsoft.Network/firewallPolicies@2025-03-01)
+* **Resource**: Microsoft.Network/firewallPolicies
+* **ApiVersion**: 2025-03-01
+* **Output**: any
+
 ## Function disassociateCloudServiceReservedPublicIp (Microsoft.Network/publicIPAddresses@2025-03-01)
 * **Resource**: Microsoft.Network/publicIPAddresses
 * **ApiVersion**: 2025-03-01
@@ -1630,6 +1657,18 @@
 * **ApiVersion**: 2025-03-01
 * **Input**: [SessionIds](#sessionids)
 * **Output**: [BastionSessionDeleteResult](#bastionsessiondeleteresult)
+
+## Function disconnectP2sVpnConnections (Microsoft.Network/p2svpnGateways@2025-03-01)
+* **Resource**: Microsoft.Network/p2svpnGateways
+* **ApiVersion**: 2025-03-01
+* **Input**: [P2SVpnConnectionRequest](#p2svpnconnectionrequest)
+* **Output**: any
+
+## Function disconnectVirtualNetworkGatewayVpnConnections (Microsoft.Network/virtualNetworkGateways@2025-03-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2025-03-01
+* **Input**: [P2SVpnConnectionRequest](#p2svpnconnectionrequest)
+* **Output**: any
 
 ## Function effectiveNetworkSecurityGroups (Microsoft.Network/networkInterfaces@2025-03-01)
 * **Resource**: Microsoft.Network/networkInterfaces
@@ -1646,6 +1685,11 @@
 * **Resource**: Microsoft.Network/networkInterfaces
 * **ApiVersion**: 2025-03-01
 * **Output**: [EffectiveRouteListResult](#effectiveroutelistresult)
+
+## Function executeMigration (Microsoft.Network/virtualNetworkGateways@2025-03-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2025-03-01
+* **Output**: any
 
 ## Function generateLoa (Microsoft.Network/expressRoutePorts@2025-03-01)
 * **Resource**: Microsoft.Network/expressRoutePorts
@@ -1874,11 +1918,29 @@
 * **Input**: [GetOutboundRoutesParameters](#getoutboundroutesparameters)
 * **Output**: [EffectiveRouteMapRouteList](#effectiveroutemaproutelist)
 
+## Function packetCapture (Microsoft.Network/azureFirewalls@2025-03-01)
+* **Resource**: Microsoft.Network/azureFirewalls
+* **ApiVersion**: 2025-03-01
+* **Input**: [FirewallPacketCaptureParameters](#firewallpacketcaptureparameters)
+* **Output**: any
+
 ## Function packetCaptureOperation (Microsoft.Network/azureFirewalls@2025-03-01)
 * **Resource**: Microsoft.Network/azureFirewalls
 * **ApiVersion**: 2025-03-01
 * **Input**: [FirewallPacketCaptureParameters](#firewallpacketcaptureparameters)
 * **Output**: [AzureFirewallPacketCaptureResponse](#azurefirewallpacketcaptureresponse)
+
+## Function prepareMigration (Microsoft.Network/virtualNetworkGateways@2025-03-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2025-03-01
+* **Input**: [VirtualNetworkGatewayMigrationParameters](#virtualnetworkgatewaymigrationparameters)
+* **Output**: any
+
+## Function PrepareNetworkPolicies (Microsoft.Network/virtualNetworks/subnets@2025-03-01)
+* **Resource**: Microsoft.Network/virtualNetworks/subnets
+* **ApiVersion**: 2025-03-01
+* **Input**: [PrepareNetworkPoliciesRequest](#preparenetworkpoliciesrequest)
+* **Output**: any
 
 ## Function queryFlowLogStatus (Microsoft.Network/networkWatchers@2025-03-01)
 * **Resource**: Microsoft.Network/networkWatchers
@@ -1942,6 +2004,21 @@
 * **ApiVersion**: 2025-03-01
 * **Output**: [P2SVpnGateway](#p2svpngateway)
 
+## Function resetconnection (Microsoft.Network/connections@2025-03-01)
+* **Resource**: Microsoft.Network/connections
+* **ApiVersion**: 2025-03-01
+* **Output**: any
+
+## Function resetconnection (Microsoft.Network/vpnGateways/vpnConnections/vpnLinkConnections@2025-03-01)
+* **Resource**: Microsoft.Network/vpnGateways/vpnConnections/vpnLinkConnections
+* **ApiVersion**: 2025-03-01
+* **Output**: any
+
+## Function resetvpnclientsharedkey (Microsoft.Network/virtualNetworkGateways@2025-03-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2025-03-01
+* **Output**: any
+
 ## Function restart (Microsoft.Network/networkVirtualAppliances@2025-03-01)
 * **Resource**: Microsoft.Network/networkVirtualAppliances
 * **ApiVersion**: 2025-03-01
@@ -1954,11 +2031,22 @@
 * **Input**: [SecurityGroupViewParameters](#securitygroupviewparameters)
 * **Output**: [SecurityGroupViewResult](#securitygroupviewresult)
 
+## Function setLoadBalancerFrontendPublicIpAddresses (Microsoft.Network/locations@2025-03-01)
+* **Resource**: Microsoft.Network/locations
+* **ApiVersion**: 2025-03-01
+* **Input**: [LoadBalancerVipSwapRequest](#loadbalancervipswaprequest)
+* **Output**: any
+
 ## Function setvpnclientipsecparameters (Microsoft.Network/virtualNetworkGateways@2025-03-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
 * **ApiVersion**: 2025-03-01
 * **Input**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
 * **Output**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
+
+## Function start (Microsoft.Network/applicationGateways@2025-03-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2025-03-01
+* **Output**: any
 
 ## Function startPacketCapture (Microsoft.Network/virtualNetworkGateways@2025-03-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
@@ -1983,6 +2071,21 @@
 * **ApiVersion**: 2025-03-01
 * **Input**: [VpnConnectionPacketCaptureStartParameters](#vpnconnectionpacketcapturestartparameters)
 * **Output**: string
+
+## Function stop (Microsoft.Network/applicationGateways@2025-03-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2025-03-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/packetCaptures@2025-03-01)
+* **Resource**: Microsoft.Network/networkWatchers/packetCaptures
+* **ApiVersion**: 2025-03-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/connectionMonitors@2025-03-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2025-03-01
+* **Output**: any
 
 ## Function stopPacketCapture (Microsoft.Network/virtualNetworkGateways@2025-03-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
@@ -2030,6 +2133,18 @@
 * **ApiVersion**: 2025-03-01
 * **Input**: [TroubleshootingParameters](#troubleshootingparameters)
 * **Output**: [TroubleshootingResult](#troubleshootingresult)
+
+## Function UnprepareNetworkPolicies (Microsoft.Network/virtualNetworks/subnets@2025-03-01)
+* **Resource**: Microsoft.Network/virtualNetworks/subnets
+* **ApiVersion**: 2025-03-01
+* **Input**: [UnprepareNetworkPoliciesRequest](#unpreparenetworkpoliciesrequest)
+* **Output**: any
+
+## Function vpnConfiguration (Microsoft.Network/virtualWans@2025-03-01)
+* **Resource**: Microsoft.Network/virtualWans
+* **ApiVersion**: 2025-03-01
+* **Input**: [GetVpnSitesConfigurationRequest](#getvpnsitesconfigurationrequest)
+* **Output**: any
 
 ## Function vpndeviceconfigurationscript (Microsoft.Network/connections@2025-03-01)
 * **Resource**: Microsoft.Network/connections
@@ -3136,6 +3251,10 @@
 ### Properties
 * **nextLink**: string: The URL to get the next set of results.
 * **value**: [BastionShareableLink](#bastionshareablelink)[]: List of Bastion Shareable Links for the request.
+
+## BastionShareableLinkTokenListRequest
+### Properties
+* **tokens**: string[]: List of Bastion Shareable Link Token.
 
 ## BgpConnectionProperties
 ### Properties
@@ -4373,6 +4492,11 @@
 * **connectionType**: string: The type of the specified connection resource like ExpressRouteConnection, HubVirtualNetworkConnection, VpnConnection and P2SConnection.
 * **resourceUri**: string: The connection resource whose outbound routes are being requested.
 
+## GetVpnSitesConfigurationRequest
+### Properties
+* **outputBlobSasUrl**: string (Required): The sas-url to download the configurations for vpn-sites.
+* **vpnSites**: string[]: List of resource-ids of the vpn-sites for which config is to be downloaded.
+
 ## GroupByUserSession
 ### Properties
 * **groupByVariables**: [GroupByVariable](#groupbyvariable)[] (Required): List of group by clause variables.
@@ -4723,6 +4847,19 @@
 * **name**: 'Basic' | 'Gateway' | 'Standard' | string: Name of a load balancer SKU.
 * **tier**: 'Global' | 'Regional' | string: Tier of a load balancer SKU.
 
+## LoadBalancerVipSwapRequest
+### Properties
+* **frontendIPConfigurations**: [LoadBalancerVipSwapRequestFrontendIPConfiguration](#loadbalancervipswaprequestfrontendipconfiguration)[]: A list of frontend IP configuration resources that should swap VIPs.
+
+## LoadBalancerVipSwapRequestFrontendIPConfiguration
+### Properties
+* **id**: string: The ID of frontend IP configuration resource.
+* **properties**: [LoadBalancerVipSwapRequestFrontendIPConfigurationProperties](#loadbalancervipswaprequestfrontendipconfigurationproperties): The properties of VIP swap request's frontend IP configuration object.
+
+## LoadBalancerVipSwapRequestFrontendIPConfigurationProperties
+### Properties
+* **publicIPAddress**: [SubResource](#subresource): A reference to public IP address resource.
+
 ## LoadBalancingRule
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -4898,6 +5035,20 @@
 * **memberType**: 'Subnet' | 'VirtualNetwork' | string: The type of the group member.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the scope assignment resource.
 * **resourceGuid**: string (ReadOnly): Unique identifier for this resource.
+
+## NetworkIntentPolicy
+### Properties
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string: Resource ID.
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
+## NetworkIntentPolicyConfiguration
+### Properties
+* **networkIntentPolicyName**: string: The name of the Network Intent Policy for storing in target subscription.
+* **sourceNetworkIntentPolicy**: [NetworkIntentPolicy](#networkintentpolicy): Source network intent policy.
 
 ## NetworkInterface
 ### Properties
@@ -5328,6 +5479,10 @@
 * **outputBlobSasUrl**: string: The sas-url to download the P2S Vpn connection health detail.
 * **vpnUserNamesFilter**: string[]: The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.
 
+## P2SVpnConnectionRequest
+### Properties
+* **vpnConnectionIds**: string[]: List of p2s vpn connection Ids.
+
 ## P2SVpnGateway
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -5506,6 +5661,11 @@
 * **numberOfReservedIPAddresses**: string (ReadOnly): Total number of reserved IP addresses in the IpamPool.
 * **reservedAddressPrefixes**: string[] (ReadOnly): List of reserved IP address prefixes. These IP addresses could be reclaimed if not assigned in the given time.
 * **totalNumberOfIPAddresses**: string (ReadOnly): Total number of IP addresses managed in the IpamPool.
+
+## PrepareNetworkPoliciesRequest
+### Properties
+* **networkIntentPolicyConfigurations**: [NetworkIntentPolicyConfiguration](#networkintentpolicyconfiguration)[]: A list of NetworkIntentPolicyConfiguration.
+* **serviceName**: string: The name of the service for which subnet is being prepared for.
 
 ## PrivateDnsZoneConfig
 ### Properties
@@ -5862,6 +6022,11 @@
 * **link**: string: Link to the external resource.
 * **linkedResourceType**: string: Resource type of the linked resource.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource navigation link resource.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
@@ -6712,6 +6877,10 @@
 * **lastConnectionEstablishedUtcTime**: string (ReadOnly): The time at which connection was established in Utc format.
 * **tunnel**: string (ReadOnly): Tunnel name.
 
+## UnprepareNetworkPoliciesRequest
+### Properties
+* **serviceName**: string: The name of the service for which subnet is being unprepared for.
+
 ## VerificationIPFlowParameters
 ### Properties
 * **direction**: 'Inbound' | 'Outbound' | string (Required): The direction of the packet represented as a 5-tuple.
@@ -6934,6 +7103,11 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the virtual network gateway IP configuration resource.
 * **publicIPAddress**: [SubResource](#subresource): The reference to the public IP resource.
 * **subnet**: [SubResource](#subresource): The reference to the subnet resource.
+
+## VirtualNetworkGatewayMigrationParameters
+### Properties
+* **migrationType**: 'UpgradeDeploymentToStandardIP' | string (Required): MigrationType for the virtual network gateway.
+* **resourceUrl**: string: Resource url that needs to be passed in to migration.
 
 ## VirtualNetworkGatewayMigrationStatus
 ### Properties

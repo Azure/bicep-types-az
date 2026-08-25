@@ -220,6 +220,192 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ManagedNetworkFabric/routePolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function clearArpEntries (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [EnableDisableOnResources](#enabledisableonresources)
+* **Output**: any
+
+## Function clearArpEntries (Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [EnableDisableOnResources](#enabledisableonresources)
+* **Output**: any
+
+## Function clearArpTable (Microsoft.ManagedNetworkFabric/l2IsolationDomains@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l2IsolationDomains
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [EnableDisableOnResources](#enabledisableonresources)
+* **Output**: any
+
+## Function clearArpTable (Microsoft.ManagedNetworkFabric/l3IsolationDomains@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [EnableDisableOnResources](#enabledisableonresources)
+* **Output**: any
+
+## Function clearIpv6Neighbors (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [EnableDisableOnResources](#enabledisableonresources)
+* **Output**: any
+
+## Function clearIpv6Neighbors (Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [EnableDisableOnResources](#enabledisableonresources)
+* **Output**: any
+
+## Function clearNeighborTable (Microsoft.ManagedNetworkFabric/l2IsolationDomains@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l2IsolationDomains
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [EnableDisableOnResources](#enabledisableonresources)
+* **Output**: any
+
+## Function clearNeighborTable (Microsoft.ManagedNetworkFabric/l3IsolationDomains@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [EnableDisableOnResources](#enabledisableonresources)
+* **Output**: any
+
+## Function deprovision (Microsoft.ManagedNetworkFabric/networkFabrics@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: any
+
+## Function disableWorkloadManagementNetwork (Microsoft.ManagedNetworkFabric/networkFabricControllers@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabricControllers
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: any
+
+## Function enableWorkloadManagementNetwork (Microsoft.ManagedNetworkFabric/networkFabricControllers@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabricControllers
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: any
+
+## Function generateSupportPackage (Microsoft.ManagedNetworkFabric/networkDevices@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: [SupportPackageProperties](#supportpackageproperties)
+
+## Function getArpEntries (Microsoft.ManagedNetworkFabric/l2IsolationDomains@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l2IsolationDomains
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: [GetARPResponse](#getarpresponse)
+
+## Function getDynamicInterfaceMaps (Microsoft.ManagedNetworkFabric/networkDevices@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: [GetDynamicInterfaceMapsPropertiesItem](#getdynamicinterfacemapspropertiesitem)[]
+
+## Function getStaticInterfaceMaps (Microsoft.ManagedNetworkFabric/networkDevices@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: [GetStaticInterfaceMapsPropertiesItem](#getstaticinterfacemapspropertiesitem)[]
+
+## Function getStatus (Microsoft.ManagedNetworkFabric/networkDevices@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: [GetDeviceStatusProperties](#getdevicestatusproperties)
+
+## Function getStatus (Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: [InterfaceStatus](#interfacestatus)
+
+## Function provision (Microsoft.ManagedNetworkFabric/networkFabrics@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkFabrics
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: any
+
+## Function reboot (Microsoft.ManagedNetworkFabric/networkDevices@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: any
+
+## Function restoreConfig (Microsoft.ManagedNetworkFabric/networkDevices@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2023-02-01-preview
+* **Output**: any
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/l2IsolationDomains@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l2IsolationDomains
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: any
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: any
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: any
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: any
+
+## Function updateAdministrativeState (Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: any
+
+## Function updateBfdForBgpAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: any
+
+## Function updateBfdForBgpAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: any
+
+## Function updateBfdForStaticRouteAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: any
+
+## Function updateBgpAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: any
+
+## Function updateBgpAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: any
+
+## Function updateOptionBAdministrativeState (Microsoft.ManagedNetworkFabric/l3IsolationDomains@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/l3IsolationDomains
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdateAdministrativeState](#updateadministrativestate)
+* **Output**: any
+
+## Function updatePowerCycle (Microsoft.ManagedNetworkFabric/networkDevices@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdatePowerCycleProperties](#updatepowercycleproperties)
+* **Output**: any
+
+## Function updateVersion (Microsoft.ManagedNetworkFabric/networkDevices@2023-02-01-preview)
+* **Resource**: Microsoft.ManagedNetworkFabric/networkDevices
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [UpdateVersionProperties](#updateversionproperties)
+* **Output**: any
+
 ## AccessControlListConditionProperties
 ### Properties
 * **action**: 'allow' | 'deny' | string (Required): action. Example: allow | deny.
@@ -258,6 +444,14 @@
 ### Properties
 * **ipv4Routes**: [AggregateRoute](#aggregateroute)[]: List of IPv4 Route prefixes.
 * **ipv6Routes**: [AggregateRoute](#aggregateroute)[]: List of IPv6 Routes prefixes.
+
+## ARPProperties
+### Properties
+* **address**: string (Required): Ipv4 or Ipv6 address
+* **age**: string (Required): Duration in seconds.
+* **interface**: string (Required): Layer 2 interface name.
+* **macAddress**: string (Required): Hardware address.
+* **state**: string: ARP status
 
 ## BfdConfiguration
 ### Properties
@@ -299,6 +493,10 @@
 * **maxVirtualRouterFunctions**: int: Maximum number of virtual router functions.
 * **physicalInterfaceCount**: int: Maximum number of physical interfaces.
 
+## EnableDisableOnResources
+### Properties
+* **resourceIds**: string[]: Network Fabrics or Network Rack resource Id.
+
 ## ExpressRouteConnectionInformation
 ### Properties
 * **expressRouteAuthorizationKey**: string {sensitive} (Required): Authorization key for the circuit, must be of type Microsoft.Network/expressRouteCircuits/authorizations. The Auth Key is a mandatory attribute.
@@ -334,10 +532,49 @@
 * **interval**: int (ReadOnly): interval in seconds. Example: 300.
 * **multiplier**: int (ReadOnly): multiplier. Example: 3.
 
+## GetARPResponse
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ARPProperties](#arpproperties)
+
+## GetDeviceStatusProperties
+### Properties
+* **operationalStatus**: 'BootPrompt' | 'Booted' | 'Ztp' | string (Required): Primary or Secondary power end.
+* **powerCycleState**: 'Off' | 'On' | string (Required): On or Off power cycle state.
+* **serialNumber**: string (Required): The serial number of the device
+
+## GetDynamicInterfaceMapsPropertiesItem
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | string (ReadOnly): The interface administrative state.
+* **connectedTo**: string: Connected to ARM resource or external interface
+* **name**: string: The interface name.
+* **operationalStatus**: string: The interface operational status.
+* **phyStatus**: string: The physical status.
+* **transceiverStatus**: string: The interface transceiver type. Example: up or down
+
+## GetStaticInterfaceMapsPropertiesItem
+### Properties
+* **channelGroupId**: int: The port channel group id.
+* **connectedTo**: string: Connected to ARM resource or external interface
+* **connectorType**: string: The physical cable connector type. Example: Optical
+* **description**: string: The interface description.
+* **identifier**: string: The interface identifier.
+* **interfaceType**: string: The interface type. Example: Ethernet
+* **name**: string: The interface name.
+* **speed**: int: The interface speed. Example: 100
+
 ## InfrastructureServices
 ### Properties
 * **ipv4AddressSpaces**: string[]: The IPv4 Address space is optional, if the value is not defined at the time of NFC creation, then the default value 10.0.0.0/19 is considered. The IPV4 address subnet is an optional attribute.
 * **ipv6AddressSpaces**: string[]: The IPv6 is not supported right now.
+
+## InterfaceStatus
+### Properties
+* **administrativeState**: 'Disabled' | 'Enabled' | string (ReadOnly): The interface administrative state.
+* **connectedTo**: string: Connected to ARM resource or external interface
+* **operationalStatus**: string: The interface operational status.
+* **phyStatus**: string: The physical status.
+* **transceiverStatus**: string: The interface transceiver type. Example: up or down
 
 ## InternalNetworkProperties
 ### Properties
@@ -635,6 +872,10 @@
 * **vendorOsVersion**: string: Operating system version.
 * **version**: string: Operating system and firmware combined versions.
 
+## SupportPackageProperties
+### Properties
+* **supportPackageURL**: string (Required): The URL to fetch the generated support package from.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -709,6 +950,20 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UpdateAdministrativeState
+### Properties
+* **resourceIds**: string[]: Network Fabrics or Network Rack resource Id.
+* **state**: 'Disable' | 'Enable' | string: Administrative state.
+
+## UpdatePowerCycleProperties
+### Properties
+* **powerEnd**: 'Primary' | 'Secondary' | string (Required): Primary or Secondary power end.
+* **state**: 'Off' | 'On' | string (Required): On or Off toggle state.
+
+## UpdateVersionProperties
+### Properties
+* **skuVersion**: string (Required): The supported version defined in network device SKU.
 
 ## VpnConfigurationProperties
 ### Properties

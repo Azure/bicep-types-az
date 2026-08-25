@@ -377,6 +377,57 @@
 * **ApiVersion**: 2023-05-15-preview
 * **Output**: [KeyListResult](#keylistresult)
 
+## Function move (Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers@2023-05-15-preview)
+* **Resource**: Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers
+* **ApiVersion**: 2023-05-15-preview
+* **Input**: [HybridRunbookWorkerMoveParameters](#hybridrunbookworkermoveparameters)
+* **Output**: any
+
+## Function publish (Microsoft.Automation/automationAccounts/runbooks@2023-05-15-preview)
+* **Resource**: Microsoft.Automation/automationAccounts/runbooks
+* **ApiVersion**: 2023-05-15-preview
+* **Output**: any
+
+## Function resume (Microsoft.Automation/automationAccounts/jobs@2023-05-15-preview)
+* **Resource**: Microsoft.Automation/automationAccounts/jobs
+* **ApiVersion**: 2023-05-15-preview
+* **Output**: any
+
+## Function resume (Microsoft.Automation/automationAccounts/runbooks/draft@2023-05-15-preview)
+* **Resource**: Microsoft.Automation/automationAccounts/runbooks/draft
+* **ApiVersion**: 2023-05-15-preview
+* **Output**: any
+
+## Function start (Microsoft.Automation/automationAccounts/watchers@2023-05-15-preview)
+* **Resource**: Microsoft.Automation/automationAccounts/watchers
+* **ApiVersion**: 2023-05-15-preview
+* **Output**: any
+
+## Function stop (Microsoft.Automation/automationAccounts/jobs@2023-05-15-preview)
+* **Resource**: Microsoft.Automation/automationAccounts/jobs
+* **ApiVersion**: 2023-05-15-preview
+* **Output**: any
+
+## Function stop (Microsoft.Automation/automationAccounts/runbooks/draft@2023-05-15-preview)
+* **Resource**: Microsoft.Automation/automationAccounts/runbooks/draft
+* **ApiVersion**: 2023-05-15-preview
+* **Output**: any
+
+## Function stop (Microsoft.Automation/automationAccounts/watchers@2023-05-15-preview)
+* **Resource**: Microsoft.Automation/automationAccounts/watchers
+* **ApiVersion**: 2023-05-15-preview
+* **Output**: any
+
+## Function suspend (Microsoft.Automation/automationAccounts/jobs@2023-05-15-preview)
+* **Resource**: Microsoft.Automation/automationAccounts/jobs
+* **ApiVersion**: 2023-05-15-preview
+* **Output**: any
+
+## Function suspend (Microsoft.Automation/automationAccounts/runbooks/draft@2023-05-15-preview)
+* **Resource**: Microsoft.Automation/automationAccounts/runbooks/draft
+* **ApiVersion**: 2023-05-15-preview
+* **Output**: any
+
 ## AdvancedSchedule
 ### Properties
 * **monthDays**: int[]: Days of the month that the job should execute on. Must be between 1 and 31.
@@ -650,6 +701,10 @@
 ### Properties
 * **credential**: [RunAsCredentialAssociationProperty](#runascredentialassociationproperty): Sets the credential of a worker group.
 * **groupType**: 'System' | 'User' | string (ReadOnly): Type of the HybridWorkerGroup.
+
+## HybridRunbookWorkerMoveParameters
+### Properties
+* **hybridRunbookWorkerGroupName**: string: Gets or sets the target hybrid runbook worker group.
 
 ## Identity
 ### Properties

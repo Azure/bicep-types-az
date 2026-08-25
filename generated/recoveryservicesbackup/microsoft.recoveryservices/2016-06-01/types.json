@@ -3752,5 +3752,553 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revokeInstantItemRecovery",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/296"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ILRRequestResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/299"
+        },
+        "flags": 0,
+        "description": "Parameters to restore file or folders API."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID represents the complete path to the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource name associated with the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/302"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ILRRequest",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "IaasVMILRRegistrationRequest": {
+        "$ref": "#/300"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IaasVmilrRegistrationRequest",
+    "properties": {
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the IaaS VM recovery point used to restore the files or folders."
+      },
+      "virtualMachineId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The fully qualified Resource Manager ID of the VM used to restore the files or folders."
+      },
+      "initiatorName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The iSCSI initiator name."
+      },
+      "renewExistingRegistration": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Whether to renew the existing registration with the iSCSI server."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/301"
+        },
+        "flags": 1,
+        "description": "This property is used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IaasVMILRRegistrationRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "provisionInstantItemRecovery",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/296"
+    },
+    "input": {
+      "$ref": "#/298"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreRequestResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/305"
+        },
+        "flags": 0,
+        "description": "The base class for restore requests. Workload-specific restore requests are derived from this class."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID represents the complete path to the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource name associated with the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/314"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "RestoreRequest",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "IaasVMRestoreRequest": {
+        "$ref": "#/306"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IaasVMRestoreRequest",
+    "properties": {
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the backup copy to be recovered."
+      },
+      "recoveryType": {
+        "type": {
+          "$ref": "#/311"
+        },
+        "flags": 0,
+        "description": "The type of this recovery."
+      },
+      "sourceResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The fully qualified Resource Manager ID of the VM being recovered."
+      },
+      "targetVirtualMachineId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The complete Resource Manager ID of the VM that will be created.\r\n            For example: /subscriptions/{subId}/resourcegroups/{rg}/provider/Microsoft.Compute/virtualmachines/{vm}"
+      },
+      "targetResourceGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Resource Manager ID of the resource group you're creating for this VM and other artifacts.\r\n    For example: /subscriptions/{subId}/resourcegroups/{rg}"
+      },
+      "storageAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The fully qualified Resource Manager ID of the storage account where the VM will be restored."
+      },
+      "virtualNetworkId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This is the virtual network ID of the vnet that is attached to the virtual machine.\r\n            Your join action permissions are validated during the linked access."
+      },
+      "subnetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Subnet ID is the identifier for the VM to be restored. For Classic VMs the subnet ID would be {VnetID}/Subnet/{SubnetName}, and for the Resource Manager VMs, the subnet ID would be the Resource Manager resource ID used to represent the subnet."
+      },
+      "targetDomainNameId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The fully qualified Resource Manager ID of the domain name to be associated with the VM being restored. Use the Resource Manager ID to identify the domain, only for Classic-deployed virtual machines."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The region where the virtual machine is restored."
+      },
+      "affinityGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The affinity group associated with the VM to be restored. Affinity groups are used only for Classic-deployed virtual machines."
+      },
+      "createNewCloudService": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Asks the question if a new cloud service should be created while restoring the VM. If the answer is false, the VM is restored to the same cloud service."
+      },
+      "encryptionDetails": {
+        "type": {
+          "$ref": "#/312"
+        },
+        "flags": 0,
+        "description": "If the VM was encrypted at the time of backup, these details are needed."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/313"
+        },
+        "flags": 1,
+        "description": "This property is used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OriginalLocation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlternateLocation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RestoreDisks"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/307"
+      },
+      {
+        "$ref": "#/308"
+      },
+      {
+        "$ref": "#/309"
+      },
+      {
+        "$ref": "#/310"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionDetails",
+    "properties": {
+      "encryptionEnabled": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Identifies whether the backup copy represents an encrypted VM at the time of backup."
+      },
+      "kekUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL of the Key Encryption Key (KEK)."
+      },
+      "secretKeyUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL of the Bitlocker Encryption Key (BEK)."
+      },
+      "kekVaultId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of Key Vault where the Key Encryption Key (KEK) is stored."
+      },
+      "secretKeyVaultId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of Key Vault where the Bitlocker Encryption Key (BEK), or Secret, is stored."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IaasVMRestoreRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/296"
+    },
+    "input": {
+      "$ref": "#/304"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshContainers",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/296"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupRequestResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/318"
+        },
+        "flags": 0,
+        "description": "The base class for a backup request. Workload-specific backup requests are derived from this class."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID represents the complete path to the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource name associated with the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/321"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "BackupRequest",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "IaasVMBackupRequest": {
+        "$ref": "#/319"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IaasVMBackupRequest",
+    "properties": {
+      "recoveryPointExpiryTimeInUTC": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The backup copy will expire after the time specified. The time is in UTC format."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/320"
+        },
+        "flags": 1,
+        "description": "This property is used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IaasVMBackupRequest"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backup",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/296"
+    },
+    "input": {
+      "$ref": "#/317"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "backupJobsExport",
+    "resourceType": "Microsoft.RecoveryServices/vaults",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/296"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupJobs",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/296"
+    }
   }
 ]

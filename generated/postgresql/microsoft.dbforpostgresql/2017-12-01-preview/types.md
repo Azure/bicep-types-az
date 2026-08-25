@@ -74,6 +74,11 @@
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Resource properties.
 * **type**: 'Microsoft.DBforPostgreSQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.DBforPostgreSQL/servers@2017-12-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/servers
+* **ApiVersion**: 2017-12-01-preview
+* **Output**: any
+
 ## Function updateConfigurations (Microsoft.DBforPostgreSQL/servers@2017-12-01-preview)
 * **Resource**: Microsoft.DBforPostgreSQL/servers
 * **ApiVersion**: 2017-12-01-preview

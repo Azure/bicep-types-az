@@ -1616,5 +1616,89 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "debugInfo",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2021-09-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "flush",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2021-09-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2021-09-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2021-09-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2021-09-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dnsRefresh",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2021-09-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "flush",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2021-09-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2021-09-01",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2021-09-01",
+    "output": {
+      "$ref": "#/125"
+    }
   }
 ]

@@ -160,6 +160,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.EventHub/namespaces/schemagroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function breakPairing (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2024-01-01)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2024-01-01
+* **Output**: any
+
+## Function failover (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2024-01-01)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2024-01-01
+* **Output**: any
+
 ## Function listKeys (Microsoft.EventHub/namespaces/authorizationRules@2024-01-01)
 * **Resource**: Microsoft.EventHub/namespaces/authorizationRules
 * **ApiVersion**: 2024-01-01
@@ -174,6 +184,11 @@
 * **Resource**: Microsoft.EventHub/namespaces/eventhubs/authorizationRules
 * **ApiVersion**: 2024-01-01
 * **Output**: [AccessKeys](#accesskeys)
+
+## Function reconcile (Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations@2024-01-01)
+* **Resource**: Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2024-01-01
+* **Output**: any
 
 ## Function regenerateKeys (Microsoft.EventHub/namespaces/authorizationRules@2024-01-01)
 * **Resource**: Microsoft.EventHub/namespaces/authorizationRules

@@ -2271,5 +2271,32 @@
     "output": {
       "$ref": "#/207"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances",
+    "apiVersion": "2020-01-01-preview",
+    "output": {
+      "$ref": "#/26"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances",
+    "apiVersion": "2020-01-01-preview",
+    "output": {
+      "$ref": "#/26"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances",
+    "apiVersion": "2020-01-01-preview",
+    "output": {
+      "$ref": "#/26"
+    }
   }
 ]

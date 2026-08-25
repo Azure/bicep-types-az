@@ -281,6 +281,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices/tables' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function aborthnsonmigration (Microsoft.Storage/storageAccounts@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2026-04-01
+* **Output**: any
+
 ## Function clearLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2026-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2026-04-01
@@ -292,6 +297,11 @@
 * **ApiVersion**: 2026-04-01
 * **Input**: [ImmutabilityPolicy](#immutabilitypolicy)
 * **Output**: [ImmutabilityPolicy](#immutabilitypolicy)
+
+## Function failover (Microsoft.Storage/storageAccounts@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2026-04-01
+* **Output**: any
 
 ## Function lease (Microsoft.Storage/storageAccounts/blobServices/containers@2026-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
@@ -332,6 +342,16 @@
 * **ApiVersion**: 2026-04-01
 * **Output**: [ImmutabilityPolicy](#immutabilitypolicy)
 
+## Function migrate (Microsoft.Storage/storageAccounts/blobServices/containers@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
+* **ApiVersion**: 2026-04-01
+* **Output**: any
+
+## Function reconcile (Microsoft.Storage/storageAccounts/networkSecurityPerimeterConfigurations@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2026-04-01
+* **Output**: any
+
 ## Function regenerateKey (Microsoft.Storage/storageAccounts@2026-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2026-04-01
@@ -343,17 +363,39 @@
 * **ApiVersion**: 2026-04-01
 * **Output**: [LocalUserRegeneratePasswordResult](#localuserregeneratepasswordresult)
 
+## Function restore (Microsoft.Storage/storageAccounts/fileServices/shares@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/fileServices/shares
+* **ApiVersion**: 2026-04-01
+* **Input**: [DeletedShare](#deletedshare)
+* **Output**: any
+
 ## Function restoreBlobRanges (Microsoft.Storage/storageAccounts@2026-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2026-04-01
 * **Input**: [BlobRestoreParameters](#blobrestoreparameters)
 * **Output**: [BlobRestoreStatus](#blobrestorestatus)
 
+## Function revokeUserDelegationKeys (Microsoft.Storage/storageAccounts@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2026-04-01
+* **Output**: any
+
 ## Function setLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2026-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2026-04-01
 * **Input**: [LegalHold](#legalhold)
 * **Output**: [LegalHold](#legalhold)
+
+## Function startAccountMigration (Microsoft.Storage/storageAccounts@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2026-04-01
+* **Input**: [StorageAccountMigration](#storageaccountmigration)
+* **Output**: any
+
+## Function stopAssignment (Microsoft.Storage/storageAccounts/storageTaskAssignments@2026-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/storageTaskAssignments
+* **ApiVersion**: 2026-04-01
+* **Output**: any
 
 ## Function testExistingConnection (Microsoft.Storage/storageAccounts/connectors@2026-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts/connectors
@@ -579,6 +621,11 @@
 * **location**: string (ReadOnly): Location of the deleted account.
 * **restoreReference**: string (ReadOnly): Can be used to attempt recovering this deleted account via PutStorageAccount API.
 * **storageAccountResourceId**: string (ReadOnly): Full resource id of the original storage account.
+
+## DeletedShare
+### Properties
+* **deletedShareName**: string (Required): Required. Identify the name of the deleted share that will be restored.
+* **deletedShareVersion**: string (Required): Required. Identify the version of the deleted share that will be restored.
 
 ## DeleteRetentionPolicy
 ### Properties
@@ -1240,6 +1287,14 @@
 * **queue**: string (ReadOnly): Gets the queue endpoint.
 * **table**: string (ReadOnly): Gets the table endpoint.
 * **web**: string (ReadOnly): Gets the web endpoint.
+
+## StorageAccountMigration
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [StorageAccountMigrationProperties](#storageaccountmigrationproperties) (Required): The properties of a storage account’s ongoing or enqueued migration.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## StorageAccountMigrationProperties
 ### Properties

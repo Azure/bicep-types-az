@@ -2910,6 +2910,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.ContainerRegistry/registries/runs",
+    "apiVersion": "2019-06-01-preview",
+    "output": {
+      "$ref": "#/204"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "TaskRun",
     "properties": {
@@ -2970,7 +2982,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/taskRuns",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/204"
+      "$ref": "#/206"
     }
   },
   {
@@ -3021,7 +3033,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/207"
+          "$ref": "#/209"
         },
         "flags": 0,
         "description": "The tags of the resource."
@@ -3049,7 +3061,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/tasks",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/206"
+      "$ref": "#/208"
     }
   }
 ]

@@ -5340,5 +5340,14 @@
     "input": {
       "$ref": "#/406"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.ComputeBulkActions/locations/launchBulkInstancesOperations",
+    "apiVersion": "2026-02-01-preview",
+    "output": {
+      "$ref": "#/308"
+    }
   }
 ]

@@ -191,6 +191,16 @@
 * **ApiVersion**: 2020-01-13-preview
 * **Output**: [KeyListResult](#keylistresult)
 
+## Function start (Microsoft.Automation/automationAccounts/watchers@2020-01-13-preview)
+* **Resource**: Microsoft.Automation/automationAccounts/watchers
+* **ApiVersion**: 2020-01-13-preview
+* **Output**: any
+
+## Function stop (Microsoft.Automation/automationAccounts/watchers@2020-01-13-preview)
+* **Resource**: Microsoft.Automation/automationAccounts/watchers
+* **ApiVersion**: 2020-01-13-preview
+* **Output**: any
+
 ## AdvancedSchedule
 ### Properties
 * **monthDays**: int[]: Days of the month that the job should execute on. Must be between 1 and 31.

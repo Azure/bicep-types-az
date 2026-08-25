@@ -3641,5 +3641,23 @@
     "output": {
       "$ref": "#/235"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Automation/automationAccounts/watchers",
+    "apiVersion": "2020-01-13-preview",
+    "output": {
+      "$ref": "#/118"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Automation/automationAccounts/watchers",
+    "apiVersion": "2020-01-13-preview",
+    "output": {
+      "$ref": "#/118"
+    }
   }
 ]

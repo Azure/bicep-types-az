@@ -102,6 +102,12 @@
 * **ApiVersion**: 2024-03-01
 * **Output**: [ApiSpecExportResult](#apispecexportresult)
 
+## Function importSpecification (Microsoft.ApiCenter/services/workspaces/apis/versions/definitions@2024-03-01)
+* **Resource**: Microsoft.ApiCenter/services/workspaces/apis/versions/definitions
+* **ApiVersion**: 2024-03-01
+* **Input**: [ApiSpecImportRequest](#apispecimportrequest)
+* **Output**: any
+
 ## ApiDefinitionProperties
 ### Properties
 * **description**: string: API definition description.
@@ -130,6 +136,17 @@
 ### Properties
 * **format**: 'inline' | 'link' | string: The format of exported result
 * **value**: string: The result of the export operation.
+
+## ApiSpecImportRequest
+### Properties
+* **format**: 'inline' | 'link' | string: Format of the API specification source.
+* **specification**: [ApiSpecImportRequestSpecification](#apispecimportrequestspecification): API specification details.
+* **value**: string: Value of the API specification source.
+
+## ApiSpecImportRequestSpecification
+### Properties
+* **name**: string: Specification name.
+* **version**: string: Specification version.
 
 ## ApiVersionProperties
 ### Properties

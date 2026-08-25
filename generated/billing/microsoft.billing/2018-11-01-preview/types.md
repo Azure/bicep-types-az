@@ -182,6 +182,11 @@
 * **ApiVersion**: 2018-11-01-preview
 * **Output**: [DownloadUrl](#downloadurl)
 
+## Function elevate (Microsoft.Billing/billingAccounts/invoiceSections@2018-11-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/invoiceSections
+* **ApiVersion**: 2018-11-01-preview
+* **Output**: any
+
 ## Function initiateTransfer (Microsoft.Billing/billingAccounts/invoiceSections@2018-11-01-preview)
 * **Resource**: Microsoft.Billing/billingAccounts/invoiceSections
 * **ApiVersion**: 2018-11-01-preview

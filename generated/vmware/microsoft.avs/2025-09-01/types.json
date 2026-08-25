@@ -7925,6 +7925,15 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "checkAvailability",
+    "resourceType": "Microsoft.AVS/locations/serviceComponents",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/306"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "getVcfLicense",
     "resourceType": "Microsoft.AVS/privateClouds",
     "apiVersion": "2025-09-01",
@@ -7972,7 +7981,25 @@
     "resourceType": "Microsoft.AVS/privateClouds",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/647"
+      "$ref": "#/648"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateNsxtPassword",
+    "resourceType": "Microsoft.AVS/privateClouds",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/306"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateVcenterPassword",
+    "resourceType": "Microsoft.AVS/privateClouds",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/306"
     }
   },
   {
@@ -7981,7 +8008,7 @@
     "properties": {
       "zones": {
         "type": {
-          "$ref": "#/652"
+          "$ref": "#/655"
         },
         "flags": 0,
         "description": "Zone and associated hosts info"
@@ -7994,7 +8021,7 @@
     "properties": {
       "hosts": {
         "type": {
-          "$ref": "#/651"
+          "$ref": "#/654"
         },
         "flags": 2,
         "description": "List of hosts belonging to the availability zone in a cluster"
@@ -8017,7 +8044,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/650"
+      "$ref": "#/653"
     }
   },
   {
@@ -8026,7 +8053,54 @@
     "resourceType": "Microsoft.AVS/privateClouds/clusters",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/649"
+      "$ref": "#/652"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineRestrictMovement",
+    "properties": {
+      "restrictMovement": {
+        "type": {
+          "$ref": "#/660"
+        },
+        "flags": 0,
+        "description": "Whether VM DRS-driven movement is restricted (enabled) or not (disabled)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/658"
+      },
+      {
+        "$ref": "#/659"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restrictMovement",
+    "resourceType": "Microsoft.AVS/privateClouds/clusters/virtualMachines",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/306"
+    },
+    "input": {
+      "$ref": "#/657"
     }
   },
   {
@@ -8085,7 +8159,7 @@
     "resourceType": "Microsoft.AVS/privateClouds/maintenances",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/655"
+      "$ref": "#/663"
     }
   },
   {
@@ -8114,10 +8188,10 @@
     "resourceType": "Microsoft.AVS/privateClouds/maintenances",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/655"
+      "$ref": "#/663"
     },
     "input": {
-      "$ref": "#/657"
+      "$ref": "#/665"
     }
   },
   {
@@ -8146,10 +8220,10 @@
     "resourceType": "Microsoft.AVS/privateClouds/maintenances",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/655"
+      "$ref": "#/663"
     },
     "input": {
-      "$ref": "#/659"
+      "$ref": "#/667"
     }
   },
   {
@@ -8172,16 +8246,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/661"
+        "$ref": "#/669"
       },
       {
-        "$ref": "#/662"
+        "$ref": "#/670"
       },
       {
-        "$ref": "#/663"
+        "$ref": "#/671"
       },
       {
-        "$ref": "#/664"
+        "$ref": "#/672"
       },
       {
         "$ref": "#/2"
@@ -8191,7 +8265,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/665"
+      "$ref": "#/673"
     }
   },
   {
@@ -8241,10 +8315,10 @@
     "resourceType": "Microsoft.AVS/privateClouds/scriptExecutions",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/667"
+      "$ref": "#/675"
     },
     "input": {
-      "$ref": "#/666"
+      "$ref": "#/674"
     }
   }
 ]

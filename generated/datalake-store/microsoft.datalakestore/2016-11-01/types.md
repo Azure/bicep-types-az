@@ -49,6 +49,11 @@
 * **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
 * **Output**: [NameAvailabilityInformation](#nameavailabilityinformation)
 
+## Function enableKeyVault (Microsoft.DataLakeStore/accounts@2016-11-01)
+* **Resource**: Microsoft.DataLakeStore/accounts
+* **ApiVersion**: 2016-11-01
+* **Output**: any
+
 ## CheckNameAvailabilityParameters
 ### Properties
 * **name**: string (Required): The Data Lake Store name to check availability for.

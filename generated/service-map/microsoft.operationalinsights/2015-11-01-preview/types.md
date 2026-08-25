@@ -76,6 +76,12 @@
 * **Input**: [MapRequest](#maprequest)
 * **Output**: [MapResponse](#mapresponse)
 
+## Function machineGroups (Microsoft.OperationalInsights/workspaces/features@2015-11-01-preview)
+* **Resource**: Microsoft.OperationalInsights/workspaces/features
+* **ApiVersion**: 2015-11-01-preview
+* **Input**: [MachineGroup](#machinegroup)
+* **Output**: [MachineGroup](#machinegroup)
+
 ## Acceptor
 ### Properties
 * **id**: string (ReadOnly): Resource identifier.
@@ -208,6 +214,15 @@
 ### Properties
 * **linux**: int (Required): Number of live Linux machines.
 * **windows**: int (Required): Number of live Windows machines.
+
+## MachineGroup
+### Properties
+* **etag**: string: Resource ETAG.
+* **id**: string (ReadOnly): Resource identifier.
+* **kind**: 'clientGroup' | 'machine' | 'machineGroup' | 'port' | 'process' | string (Required): Additional resource type qualifier.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [MachineGroupProperties](#machinegroupproperties): Resource properties.
+* **type**: string (ReadOnly): Resource type.
 
 ## MachineGroupProperties
 ### Properties

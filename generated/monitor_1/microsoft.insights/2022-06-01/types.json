@@ -4011,5 +4011,17 @@
         "description": "The name of the receiver to resubscribe."
       }
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "subscribe",
+    "resourceType": "Microsoft.Insights/actionGroups",
+    "apiVersion": "2022-06-01",
+    "output": {
+      "$ref": "#/168"
+    },
+    "input": {
+      "$ref": "#/318"
+    }
   }
 ]

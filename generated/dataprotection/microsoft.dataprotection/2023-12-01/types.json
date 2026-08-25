@@ -6145,6 +6145,77 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "AzureBackupRehydrationRequest",
+    "properties": {
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Id of the recovery point to be recovered"
+      },
+      "rehydrationPriority": {
+        "type": {
+          "$ref": "#/458"
+        },
+        "flags": 0,
+        "description": "Priority to be used for rehydration. Values High or Standard"
+      },
+      "rehydrationRetentionDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Retention duration in ISO 8601 format i.e P10D ."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/455"
+      },
+      {
+        "$ref": "#/456"
+      },
+      {
+        "$ref": "#/457"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rehydrate",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/459"
+    },
+    "input": {
+      "$ref": "#/454"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "restore",
     "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
@@ -6157,12 +6228,48 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "resumeBackups",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/459"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resumeProtection",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/459"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopProtection",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/459"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspendBackups",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/459"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SyncBackupInstanceRequest",
     "properties": {
       "syncType": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/469"
         },
         "flags": 0,
         "description": "Field indicating sync type e.g. to sync only in case of failure or in all cases"
@@ -6181,15 +6288,27 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/456"
+        "$ref": "#/467"
       },
       {
-        "$ref": "#/457"
+        "$ref": "#/468"
       },
       {
         "$ref": "#/0"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/459"
+    },
+    "input": {
+      "$ref": "#/466"
+    }
   },
   {
     "$type": "ObjectType",
@@ -6213,7 +6332,7 @@
       "$ref": "#/434"
     },
     "input": {
-      "$ref": "#/459"
+      "$ref": "#/471"
     }
   },
   {
@@ -6222,7 +6341,7 @@
     "properties": {
       "sourceDataStoreType": {
         "type": {
-          "$ref": "#/465"
+          "$ref": "#/477"
         },
         "flags": 1,
         "description": "Gets or sets the type of the source data store."
@@ -6259,13 +6378,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/462"
+        "$ref": "#/474"
       },
       {
-        "$ref": "#/463"
+        "$ref": "#/475"
       },
       {
-        "$ref": "#/464"
+        "$ref": "#/476"
       },
       {
         "$ref": "#/0"
@@ -6278,7 +6397,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/467"
+          "$ref": "#/479"
         },
         "flags": 0,
         "description": "AzureBackupFindRestorableTimeRangesResponseResource properties"
@@ -6319,7 +6438,7 @@
     "properties": {
       "restorableTimeRanges": {
         "type": {
-          "$ref": "#/469"
+          "$ref": "#/481"
         },
         "flags": 0,
         "description": "Returns the Restore Ranges available on the Backup Instance."
@@ -6361,7 +6480,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/468"
+      "$ref": "#/480"
     }
   },
   {
@@ -6370,10 +6489,10 @@
     "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
     "apiVersion": "2023-12-01",
     "output": {
-      "$ref": "#/466"
+      "$ref": "#/478"
     },
     "input": {
-      "$ref": "#/461"
+      "$ref": "#/473"
     }
   },
   {
@@ -6398,7 +6517,25 @@
       "$ref": "#/434"
     },
     "input": {
-      "$ref": "#/471"
+      "$ref": "#/483"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportBackupJobs",
+    "resourceType": "Microsoft.DataProtection/backupVaults",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/459"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "undelete",
+    "resourceType": "Microsoft.DataProtection/backupVaults/deletedBackupInstances",
+    "apiVersion": "2023-12-01",
+    "output": {
+      "$ref": "#/459"
     }
   },
   {
@@ -6407,7 +6544,7 @@
     "properties": {
       "resourceGuardOperationRequests": {
         "type": {
-          "$ref": "#/474"
+          "$ref": "#/488"
         },
         "flags": 0
       },
@@ -6444,10 +6581,10 @@
     "resourceType": "Microsoft.DataProtection/backupVaults/backupResourceGuardProxies",
     "apiVersion": "2023-12-01",
     "output": {
-      "$ref": "#/475"
+      "$ref": "#/489"
     },
     "input": {
-      "$ref": "#/473"
+      "$ref": "#/487"
     }
   }
 ]

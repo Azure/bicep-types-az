@@ -1306,12 +1306,42 @@
     ]
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/88"
+    },
+    "input": {
+      "$ref": "#/95"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/88"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/88"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "QueryPerformanceInsightResetDataResult",
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/104"
+          "$ref": "#/107"
         },
         "flags": 0,
         "description": "Indicates result of the operation."
@@ -1337,10 +1367,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/102"
+        "$ref": "#/105"
       },
       {
-        "$ref": "#/103"
+        "$ref": "#/106"
       },
       {
         "$ref": "#/0"
@@ -1353,7 +1383,7 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2021-06-01-preview",
     "output": {
-      "$ref": "#/101"
+      "$ref": "#/104"
     }
   },
   {
@@ -1375,7 +1405,7 @@
     "properties": {
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/109"
+          "$ref": "#/112"
         },
         "flags": 2
       }
@@ -1404,7 +1434,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/108"
+      "$ref": "#/111"
     }
   },
   {
@@ -1413,10 +1443,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2021-06-01-preview",
     "output": {
-      "$ref": "#/107"
+      "$ref": "#/110"
     },
     "input": {
-      "$ref": "#/106"
+      "$ref": "#/109"
     }
   }
 ]

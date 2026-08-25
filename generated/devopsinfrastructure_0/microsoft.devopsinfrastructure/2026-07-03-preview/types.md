@@ -14,6 +14,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DevOpsInfrastructure/pools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function resources (Microsoft.DevOpsInfrastructure/pools@2026-07-03-preview)
+* **Resource**: Microsoft.DevOpsInfrastructure/pools
+* **ApiVersion**: 2026-07-03-preview
+* **Input**: [DeleteResourcesDetails](#deleteresourcesdetails)
+* **Output**: any
+
 ## AgentProfile
 * **Discriminator**: kind
 
@@ -44,6 +50,10 @@
 * **diskSizeGiB**: int: The initial disk size in gigabytes.
 * **driveLetter**: string: The drive letter for the empty data disk. If not specified, it will be the first available letter.
 * **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | string: The storage Account type to be used for the data disk. If omitted, the default is "standard_lrs".
+
+## DeleteResourcesDetails
+### Properties
+* **resourceIds**: string[] (Required): List of resource IDs to delete.
 
 ## DevOpsAzureSku
 ### Properties

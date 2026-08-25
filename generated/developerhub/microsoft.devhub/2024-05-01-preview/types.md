@@ -51,6 +51,11 @@
 * **Input**: [ScaleTemplateRequest](#scaletemplaterequest)
 * **Output**: [PrLinkResponse](#prlinkresponse)
 
+## Function sync (Microsoft.DevHub/iacProfiles@2024-05-01-preview)
+* **Resource**: Microsoft.DevHub/iacProfiles
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
 ## ACR
 ### Properties
 * **acrRegistryName**: string: ACR registry

@@ -1876,5 +1876,17 @@
         "description": "Specification version."
       }
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "importSpecification",
+    "resourceType": "Microsoft.ApiCenter/services/workspaces/apis/versions/definitions",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/80"
+    },
+    "input": {
+      "$ref": "#/148"
+    }
   }
 ]

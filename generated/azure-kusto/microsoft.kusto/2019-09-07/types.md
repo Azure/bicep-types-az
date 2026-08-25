@@ -107,6 +107,12 @@
 * **Input**: [DataConnectionValidation](#dataconnectionvalidation)
 * **Output**: [DataConnectionValidationListResult](#dataconnectionvalidationlistresult)
 
+## Function detachFollowerDatabases (Microsoft.Kusto/clusters@2019-09-07)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2019-09-07
+* **Input**: [FollowerDatabaseDefinition](#followerdatabasedefinition)
+* **Output**: any
+
 ## Function listFollowerDatabases (Microsoft.Kusto/clusters@2019-09-07)
 * **Resource**: Microsoft.Kusto/clusters
 * **ApiVersion**: 2019-09-07
@@ -122,6 +128,16 @@
 * **ApiVersion**: 2019-09-07
 * **Input**: [DatabasePrincipalListRequest](#databaseprincipallistrequest)
 * **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
+
+## Function start (Microsoft.Kusto/clusters@2019-09-07)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2019-09-07
+* **Output**: any
+
+## Function stop (Microsoft.Kusto/clusters@2019-09-07)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2019-09-07
+* **Output**: any
 
 ## AttachedDatabaseConfigurationProperties
 ### Properties

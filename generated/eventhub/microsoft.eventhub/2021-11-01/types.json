@@ -2498,6 +2498,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "breakPairing",
+    "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs",
+    "apiVersion": "2021-11-01",
+    "output": {
+      "$ref": "#/179"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs",
+    "apiVersion": "2021-11-01",
+    "output": {
+      "$ref": "#/179"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules",

@@ -38,6 +38,30 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Cache/redisEnterprise/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function export (Microsoft.Cache/redisEnterprise/databases@2023-10-01-preview)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ExportClusterParameters](#exportclusterparameters)
+* **Output**: any
+
+## Function flush (Microsoft.Cache/redisEnterprise/databases@2023-10-01-preview)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [FlushParameters](#flushparameters)
+* **Output**: any
+
+## Function forceUnlink (Microsoft.Cache/redisEnterprise/databases@2023-10-01-preview)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ForceUnlinkParameters](#forceunlinkparameters)
+* **Output**: any
+
+## Function import (Microsoft.Cache/redisEnterprise/databases@2023-10-01-preview)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [ImportClusterParameters](#importclusterparameters)
+* **Output**: any
+
 ## Function listKeys (Microsoft.Cache/redisEnterprise/databases@2023-10-01-preview)
 * **Resource**: Microsoft.Cache/redisEnterprise/databases
 * **ApiVersion**: 2023-10-01-preview
@@ -94,6 +118,22 @@
 ### Properties
 * **groupNickname**: string: Name for the group of linked database resources
 * **linkedDatabases**: [LinkedDatabase](#linkeddatabase)[]: List of database resources to link with this database
+
+## ExportClusterParameters
+### Properties
+* **sasUri**: string {sensitive} (Required): SAS URI for the target directory to export to
+
+## FlushParameters
+### Properties
+* **ids**: string[]: The identifiers of all the other database resources in the georeplication group to be flushed.
+
+## ForceUnlinkParameters
+### Properties
+* **ids**: string[] (Required): The resource IDs of the database resources to be unlinked.
+
+## ImportClusterParameters
+### Properties
+* **sasUris**: string[] (Required): SAS URIs for the target blobs to import from
 
 ## LinkedDatabase
 ### Properties

@@ -1998,19 +1998,34 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setDefaultKey",
+    "resourceType": "Microsoft.Datadog/monitors",
+    "apiVersion": "2025-11-03-preview",
+    "output": {
+      "$ref": "#/158"
+    },
+    "input": {
+      "$ref": "#/126"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "BillingInfoResponse",
     "properties": {
       "marketplaceSaasInfo": {
         "type": {
-          "$ref": "#/159"
+          "$ref": "#/161"
         },
         "flags": 0,
         "description": "Marketplace Subscription details"
       },
       "partnerBillingEntity": {
         "type": {
-          "$ref": "#/160"
+          "$ref": "#/162"
         },
         "flags": 0,
         "description": "Partner Billing Entity details: Organization Info"
@@ -2091,7 +2106,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-11-03-preview",
     "output": {
-      "$ref": "#/158"
+      "$ref": "#/160"
     }
   },
   {
@@ -2145,7 +2160,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/166"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2201,10 +2216,10 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-11-03-preview",
     "output": {
-      "$ref": "#/163"
+      "$ref": "#/165"
     },
     "input": {
-      "$ref": "#/162"
+      "$ref": "#/164"
     }
   }
 ]

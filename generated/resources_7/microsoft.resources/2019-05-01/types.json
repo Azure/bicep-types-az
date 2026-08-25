@@ -668,6 +668,15 @@
     "writableScopes": 14
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Resources/deployments",
+    "apiVersion": "2019-05-01",
+    "output": {
+      "$ref": "#/6"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "Deployment",
     "properties": {
@@ -680,7 +689,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/43"
         },
         "flags": 1,
         "description": "The deployment properties."
@@ -721,7 +730,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/46"
         },
         "flags": 1,
         "description": "The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources."
@@ -735,7 +744,7 @@
       },
       "onErrorDeployment": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/47"
         },
         "flags": 0,
         "description": "The deployment on error behavior."
@@ -754,10 +763,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/43"
+        "$ref": "#/44"
       },
       {
-        "$ref": "#/44"
+        "$ref": "#/45"
       }
     ]
   },
@@ -767,7 +776,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/49"
+          "$ref": "#/50"
         },
         "flags": 0,
         "description": "The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment."
@@ -793,10 +802,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/47"
+        "$ref": "#/48"
       },
       {
-        "$ref": "#/48"
+        "$ref": "#/49"
       }
     ]
   },
@@ -806,14 +815,14 @@
     "properties": {
       "error": {
         "type": {
-          "$ref": "#/51"
+          "$ref": "#/52"
         },
         "flags": 0,
         "description": "Validation error."
       },
       "properties": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 0,
         "description": "The template deployment properties."
@@ -847,7 +856,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/52"
+          "$ref": "#/53"
         },
         "flags": 2,
         "description": "Validation error."
@@ -857,7 +866,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/51"
+      "$ref": "#/52"
     }
   },
   {
@@ -901,14 +910,14 @@
       },
       "providers": {
         "type": {
-          "$ref": "#/54"
+          "$ref": "#/55"
         },
         "flags": 0,
         "description": "The list of resource providers needed for the deployment."
       },
       "dependencies": {
         "type": {
-          "$ref": "#/55"
+          "$ref": "#/56"
         },
         "flags": 0,
         "description": "The list of deployment dependencies."
@@ -943,7 +952,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/58"
+          "$ref": "#/59"
         },
         "flags": 0,
         "description": "The deployment mode. Possible values are Incremental and Complete."
@@ -957,7 +966,7 @@
       },
       "onErrorDeployment": {
         "type": {
-          "$ref": "#/59"
+          "$ref": "#/60"
         },
         "flags": 0,
         "description": "The deployment on error behavior."
@@ -995,10 +1004,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/56"
+        "$ref": "#/57"
       },
       {
-        "$ref": "#/57"
+        "$ref": "#/58"
       }
     ]
   },
@@ -1015,7 +1024,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/62"
+          "$ref": "#/63"
         },
         "flags": 0,
         "description": "The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment."
@@ -1041,10 +1050,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/60"
+        "$ref": "#/61"
       },
       {
-        "$ref": "#/61"
+        "$ref": "#/62"
       }
     ]
   },
@@ -1054,10 +1063,10 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/50"
+      "$ref": "#/51"
     },
     "input": {
-      "$ref": "#/41"
+      "$ref": "#/42"
     }
   },
   {
@@ -1079,7 +1088,7 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2019-05-01",
     "output": {
-      "$ref": "#/64"
+      "$ref": "#/65"
     }
   }
 ]

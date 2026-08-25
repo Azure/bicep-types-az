@@ -26,6 +26,29 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.CertificateRegistration/certificateOrders/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function reissue (Microsoft.CertificateRegistration/certificateOrders@2015-08-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2015-08-01
+* **Input**: [ReissueCertificateOrderRequest](#reissuecertificateorderrequest)
+* **Output**: any
+
+## Function renew (Microsoft.CertificateRegistration/certificateOrders@2015-08-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2015-08-01
+* **Input**: [RenewCertificateOrderRequest](#renewcertificateorderrequest)
+* **Output**: any
+
+## Function resendEmail (Microsoft.CertificateRegistration/certificateOrders@2015-08-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2015-08-01
+* **Output**: any
+
+## Function resendRequestEmails (Microsoft.CertificateRegistration/certificateOrders@2015-08-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2015-08-01
+* **Input**: [NameIdentifier](#nameidentifier)
+* **Output**: any
+
 ## Function retrieveCertificateActions (Microsoft.CertificateRegistration/certificateOrders@2015-08-01)
 * **Resource**: Microsoft.CertificateRegistration/certificateOrders
 * **ApiVersion**: 2015-08-01
@@ -41,6 +64,11 @@
 * **ApiVersion**: 2015-08-01
 * **Input**: [SiteSealRequest](#sitesealrequest)
 * **Output**: [SiteSeal](#siteseal)
+
+## Function verifyDomainOwnership (Microsoft.CertificateRegistration/certificateOrders@2015-08-01)
+* **Resource**: Microsoft.CertificateRegistration/certificateOrders
+* **ApiVersion**: 2015-08-01
+* **Output**: any
 
 ## AppServiceCertificate
 ### Properties
@@ -112,6 +140,39 @@
 ### Properties
 * **createdAt**: string: Time at which the certificate action was performed.
 * **type**: 'CertificateExpirationWarning' | 'CertificateExpired' | 'CertificateIssued' | 'CertificateOrderCanceled' | 'CertificateOrderCreated' | 'CertificateRevoked' | 'DomainValidationComplete' | 'FraudCleared' | 'FraudDetected' | 'FraudDocumentationRequired' | 'OrgNameChange' | 'OrgValidationComplete' | 'SanDrop' | 'Unknown': Action type.
+
+## NameIdentifier
+### Properties
+* **name**: string: Name of the object.
+
+## ReissueCertificateOrderRequest
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [ReissueCertificateOrderRequestProperties](#reissuecertificateorderrequestproperties): ReissueCertificateOrderRequest resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## ReissueCertificateOrderRequestProperties
+### Properties
+* **csr**: string: Csr to be used for re-key operation.
+* **delayExistingRevokeInHours**: int: Delay in hours to revoke existing certificate after the new certificate is issued.
+* **isPrivateKeyExternal**: bool: Should we change the ASC type (from managed private key to external private key and vice versa).
+* **keySize**: int: Certificate Key Size.
+
+## RenewCertificateOrderRequest
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [RenewCertificateOrderRequestProperties](#renewcertificateorderrequestproperties): RenewCertificateOrderRequest resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## RenewCertificateOrderRequestProperties
+### Properties
+* **csr**: string: Csr to be used for re-key operation.
+* **isPrivateKeyExternal**: bool: Should we change the ASC type (from managed private key to external private key and vice versa).
+* **keySize**: int: Certificate Key Size.
 
 ## ResourceTags
 ### Properties

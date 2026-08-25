@@ -79,6 +79,21 @@
 * **ApiVersion**: 2020-01-01-preview
 * **Output**: [DeviceRegistrationKey](#deviceregistrationkey)
 
+## Function restart (Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances@2020-01-01-preview)
+* **Resource**: Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances
+* **ApiVersion**: 2020-01-01-preview
+* **Output**: any
+
+## Function start (Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances@2020-01-01-preview)
+* **Resource**: Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances
+* **ApiVersion**: 2020-01-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances@2020-01-01-preview)
+* **Resource**: Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances
+* **ApiVersion**: 2020-01-01-preview
+* **Output**: any
+
 ## CustomProfile
 ### Properties
 * **metadataConfigurationPath**: string: Path for metadata configuration.

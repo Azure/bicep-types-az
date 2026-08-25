@@ -558,5 +558,68 @@
     },
     "readableScopes": 17,
     "writableScopes": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcceptOwnershipRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Accept subscription ownership request properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcceptOwnershipRequestProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The friendly name of the subscription."
+      },
+      "managementGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Management group Id for the subscription."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Tags for the subscription"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcceptOwnershipRequestPropertiesTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acceptOwnership",
+    "resourceType": "Microsoft.Subscription/subscriptions",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/44"
+    },
+    "input": {
+      "$ref": "#/41"
+    }
   }
 ]

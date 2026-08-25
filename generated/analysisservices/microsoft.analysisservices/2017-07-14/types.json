@@ -440,12 +440,33 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.AnalysisServices/servers",
+    "apiVersion": "2017-07-14",
+    "output": {
+      "$ref": "#/43"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.AnalysisServices/servers",
+    "apiVersion": "2017-07-14",
+    "output": {
+      "$ref": "#/43"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "GatewayListStatusLive",
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/47"
         },
         "flags": 0,
         "description": "Live message of list gateway. Status: 0 - Live"
@@ -459,6 +480,15 @@
   {
     "$type": "ResourceFunctionType",
     "name": "listGatewayStatus",
+    "resourceType": "Microsoft.AnalysisServices/servers",
+    "apiVersion": "2017-07-14",
+    "output": {
+      "$ref": "#/46"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dissociateGateway",
     "resourceType": "Microsoft.AnalysisServices/servers",
     "apiVersion": "2017-07-14",
     "output": {
@@ -491,7 +521,7 @@
     "properties": {
       "nameAvailable": {
         "type": {
-          "$ref": "#/48"
+          "$ref": "#/52"
         },
         "flags": 0,
         "description": "Indicator of available of the server name."
@@ -521,10 +551,10 @@
     "resourceType": "Microsoft.AnalysisServices/locations",
     "apiVersion": "2017-07-14",
     "output": {
-      "$ref": "#/47"
+      "$ref": "#/51"
     },
     "input": {
-      "$ref": "#/46"
+      "$ref": "#/50"
     }
   }
 ]

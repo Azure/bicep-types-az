@@ -66,6 +66,16 @@
 * **Input**: [ResourceAttachRequest](#resourceattachrequest)
 * **Output**: [ResourceOperationResponse](#resourceoperationresponse)
 
+## Function cancel (Microsoft.Compute/locations/bulkCreateCustom@2026-08-06-preview)
+* **Resource**: Microsoft.Compute/locations/bulkCreateCustom
+* **ApiVersion**: 2026-08-06-preview
+* **Output**: any
+
+## Function cancel (Microsoft.Compute/locations/launchBulkInstancesOperations@2026-08-06-preview)
+* **Resource**: Microsoft.Compute/locations/launchBulkInstancesOperations
+* **ApiVersion**: 2026-08-06-preview
+* **Output**: any
+
 ## Function cancel (Microsoft.Compute/scheduledActions/occurrences@2026-08-06-preview)
 * **Resource**: Microsoft.Compute/scheduledActions/occurrences
 * **ApiVersion**: 2026-08-06-preview
@@ -89,6 +99,16 @@
 * **ApiVersion**: 2026-08-06-preview
 * **Input**: [ResourceDetachRequest](#resourcedetachrequest)
 * **Output**: [ResourceOperationResponse](#resourceoperationresponse)
+
+## Function disable (Microsoft.Compute/scheduledActions@2026-08-06-preview)
+* **Resource**: Microsoft.Compute/scheduledActions
+* **ApiVersion**: 2026-08-06-preview
+* **Output**: any
+
+## Function enable (Microsoft.Compute/scheduledActions@2026-08-06-preview)
+* **Resource**: Microsoft.Compute/scheduledActions
+* **ApiVersion**: 2026-08-06-preview
+* **Output**: any
 
 ## Function patchResources (Microsoft.Compute/scheduledActions@2026-08-06-preview)
 * **Resource**: Microsoft.Compute/scheduledActions

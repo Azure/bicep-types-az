@@ -3483,12 +3483,24 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "downloadUpdates",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2019-08-01",
+    "output": {
+      "$ref": "#/268"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DataBoxEdgeDeviceExtendedInfo",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/269"
+          "$ref": "#/271"
         },
         "flags": 0,
         "description": "The extended info properties."
@@ -3549,6 +3561,24 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
     "apiVersion": "2019-08-01",
     "output": {
+      "$ref": "#/270"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "installUpdates",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2019-08-01",
+    "output": {
+      "$ref": "#/268"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "scanForUpdates",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+    "apiVersion": "2019-08-01",
+    "output": {
       "$ref": "#/268"
     }
   },
@@ -3558,7 +3588,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/272"
+          "$ref": "#/276"
         },
         "flags": 1,
         "description": "The Base 64 encoded certificate raw data."
@@ -3571,7 +3601,7 @@
     "properties": {
       "authenticationType": {
         "type": {
-          "$ref": "#/275"
+          "$ref": "#/279"
         },
         "flags": 0,
         "description": "The authentication type."
@@ -3597,10 +3627,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/273"
+        "$ref": "#/277"
       },
       {
-        "$ref": "#/274"
+        "$ref": "#/278"
       },
       {
         "$ref": "#/0"
@@ -3613,7 +3643,7 @@
     "properties": {
       "authType": {
         "type": {
-          "$ref": "#/279"
+          "$ref": "#/283"
         },
         "flags": 0,
         "description": "Specifies authentication type."
@@ -3681,10 +3711,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/277"
+        "$ref": "#/281"
       },
       {
-        "$ref": "#/278"
+        "$ref": "#/282"
       },
       {
         "$ref": "#/0"
@@ -3697,10 +3727,87 @@
     "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices",
     "apiVersion": "2019-08-01",
     "output": {
-      "$ref": "#/276"
+      "$ref": "#/280"
     },
     "input": {
-      "$ref": "#/271"
+      "$ref": "#/275"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecuritySettings",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/286"
+        },
+        "flags": 1,
+        "description": "Properties of the security settings."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The path ID that uniquely identifies the object."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The object name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The hierarchical type of the object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecuritySettingsProperties",
+    "properties": {
+      "deviceAdminPassword": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 1,
+        "description": "Device administrator password as an encrypted string (encrypted using RSA PKCS #1) is used to sign into the  local web UI of the device. The Actual password should have at least 8 characters that are a combination of  uppercase, lowercase, numeric, and special characters."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "update",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/securitySettings",
+    "apiVersion": "2019-08-01",
+    "output": {
+      "$ref": "#/268"
+    },
+    "input": {
+      "$ref": "#/285"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares",
+    "apiVersion": "2019-08-01",
+    "output": {
+      "$ref": "#/268"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refresh",
+    "resourceType": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers",
+    "apiVersion": "2019-08-01",
+    "output": {
+      "$ref": "#/268"
     }
   }
 ]

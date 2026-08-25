@@ -593,6 +593,12 @@
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Resource properties.
 * **type**: 'Microsoft.Synapse/workspaces/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addLanguageExtensions (Microsoft.Synapse/workspaces/kustoPools@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/kustoPools
+* **ApiVersion**: 2021-06-01-preview
+* **Input**: [LanguageExtensionsList](#languageextensionslist)
+* **Output**: any
+
 ## Function checkDefaultStorageAccountStatus (Microsoft.Synapse/workspaces@2021-06-01-preview)
 * **Resource**: Microsoft.Synapse/workspaces
 * **ApiVersion**: 2021-06-01-preview
@@ -629,6 +635,32 @@
 * **Input**: [DataConnectionValidation](#dataconnectionvalidation)
 * **Output**: [DataConnectionValidationListResult](#dataconnectionvalidationlistresult)
 
+## Function detachFollowerDatabases (Microsoft.Synapse/workspaces/kustoPools@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/kustoPools
+* **ApiVersion**: 2021-06-01-preview
+* **Input**: [FollowerDatabaseDefinition](#followerdatabasedefinition)
+* **Output**: any
+
+## Function disable (Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
+
+## Function disableInteractiveQuery (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
+
+## Function enable (Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
+
+## Function enableInteractiveQuery (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
+
 ## Function export (Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans@2021-06-01-preview)
 * **Resource**: Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans
 * **ApiVersion**: 2021-06-01-preview
@@ -649,6 +681,11 @@
 * **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
 * **ApiVersion**: 2021-06-01-preview
 * **Output**: [IntegrationRuntimeStatusResponse](#integrationruntimestatusresponse)
+
+## Function initiateScan (Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
 
 ## Function ipAddress (Microsoft.Synapse/workspaces/integrationRuntimes/nodes@2021-06-01-preview)
 * **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes/nodes
@@ -697,6 +734,12 @@
 * **Input**: [IntegrationRuntimeRegenerateKeyParameters](#integrationruntimeregeneratekeyparameters)
 * **Output**: [IntegrationRuntimeAuthKeys](#integrationruntimeauthkeys)
 
+## Function removeLanguageExtensions (Microsoft.Synapse/workspaces/kustoPools@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/kustoPools
+* **ApiVersion**: 2021-06-01-preview
+* **Input**: [LanguageExtensionsList](#languageextensionslist)
+* **Output**: any
+
 ## Function replaceAllIpFirewallRules (Microsoft.Synapse/workspaces@2021-06-01-preview)
 * **Resource**: Microsoft.Synapse/workspaces
 * **ApiVersion**: 2021-06-01-preview
@@ -714,10 +757,40 @@
 * **ApiVersion**: 2021-06-01-preview
 * **Output**: [SqlPool](#sqlpool)
 
+## Function revalidate (Microsoft.Synapse/workspaces/encryptionProtector@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/encryptionProtector
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
+
 ## Function start (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01-preview)
 * **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
 * **ApiVersion**: 2021-06-01-preview
 * **Output**: [IntegrationRuntimeStatusResponse](#integrationruntimestatusresponse)
+
+## Function start (Microsoft.Synapse/workspaces/kustoPools@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/kustoPools
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.Synapse/workspaces/kustoPools@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/kustoPools
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
+
+## Function syncCredentials (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
+
+## Function upgrade (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: any
 
 ## AadAdminProperties
 ### Properties

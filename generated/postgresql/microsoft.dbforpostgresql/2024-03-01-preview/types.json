@@ -4509,12 +4509,45 @@
     ]
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2024-03-01-preview",
+    "output": {
+      "$ref": "#/372"
+    },
+    "input": {
+      "$ref": "#/366"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2024-03-01-preview",
+    "output": {
+      "$ref": "#/372"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2024-03-01-preview",
+    "output": {
+      "$ref": "#/372"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "LtrPreBackupRequest",
     "properties": {
       "backupSettings": {
         "type": {
-          "$ref": "#/373"
+          "$ref": "#/377"
         },
         "flags": 1,
         "description": "Backup Settings"
@@ -4540,7 +4573,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/375"
+          "$ref": "#/379"
         },
         "flags": 1,
         "description": "Additional Properties for the pre backup response"
@@ -4566,10 +4599,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2024-03-01-preview",
     "output": {
-      "$ref": "#/374"
+      "$ref": "#/378"
     },
     "input": {
-      "$ref": "#/372"
+      "$ref": "#/376"
     }
   },
   {
@@ -4578,14 +4611,14 @@
     "properties": {
       "targetDetails": {
         "type": {
-          "$ref": "#/378"
+          "$ref": "#/382"
         },
         "flags": 1,
         "description": "Backup store detail for target server"
       },
       "backupSettings": {
         "type": {
-          "$ref": "#/373"
+          "$ref": "#/377"
         },
         "flags": 1,
         "description": "Backup Settings"
@@ -4598,7 +4631,7 @@
     "properties": {
       "sasUriList": {
         "type": {
-          "$ref": "#/379"
+          "$ref": "#/383"
         },
         "flags": 1,
         "description": "List of SAS uri of storage containers where backup data is to be streamed/copied."
@@ -4630,10 +4663,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2024-03-01-preview",
     "output": {
-      "$ref": "#/380"
+      "$ref": "#/384"
     },
     "input": {
-      "$ref": "#/377"
+      "$ref": "#/381"
     }
   },
   {
@@ -4663,7 +4696,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/385"
+          "$ref": "#/389"
         },
         "flags": 2,
         "description": "Migration name availability reason"
@@ -4689,10 +4722,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/383"
+        "$ref": "#/387"
       },
       {
-        "$ref": "#/384"
+        "$ref": "#/388"
       },
       {
         "$ref": "#/0"
@@ -4705,10 +4738,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2024-03-01-preview",
     "output": {
-      "$ref": "#/382"
+      "$ref": "#/386"
     },
     "input": {
-      "$ref": "#/382"
+      "$ref": "#/386"
     }
   }
 ]

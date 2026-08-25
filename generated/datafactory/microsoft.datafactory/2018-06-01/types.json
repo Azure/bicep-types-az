@@ -41005,6 +41005,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "deleteDataFlowDebugSession",
+    "resourceType": "Microsoft.DataFactory/factories",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/22"
+    },
+    "input": {
+      "$ref": "#/2123"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DataFlowDebugCommandRequest",
     "properties": {
@@ -41017,14 +41029,14 @@
       },
       "command": {
         "type": {
-          "$ref": "#/2128"
+          "$ref": "#/2129"
         },
         "flags": 0,
         "description": "The command type."
       },
       "commandPayload": {
         "type": {
-          "$ref": "#/2129"
+          "$ref": "#/2130"
         },
         "flags": 0,
         "description": "The command payload object."
@@ -41047,13 +41059,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2125"
-      },
-      {
         "$ref": "#/2126"
       },
       {
         "$ref": "#/2127"
+      },
+      {
+        "$ref": "#/2128"
       },
       {
         "$ref": "#/2"
@@ -41080,7 +41092,7 @@
       },
       "columns": {
         "type": {
-          "$ref": "#/2130"
+          "$ref": "#/2131"
         },
         "flags": 0,
         "description": "Array of column names."
@@ -41126,10 +41138,10 @@
     "resourceType": "Microsoft.DataFactory/factories",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2131"
+      "$ref": "#/2132"
     },
     "input": {
-      "$ref": "#/2124"
+      "$ref": "#/2125"
     }
   },
   {
@@ -41138,7 +41150,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/2135"
+          "$ref": "#/2136"
         },
         "flags": 1,
         "description": "The DataFlowDebugSessionInfo items on this page"
@@ -41227,7 +41239,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2134"
+      "$ref": "#/2135"
     }
   },
   {
@@ -41236,7 +41248,7 @@
     "resourceType": "Microsoft.DataFactory/factories",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2133"
+      "$ref": "#/2134"
     }
   },
   {
@@ -41266,14 +41278,14 @@
       },
       "filters": {
         "type": {
-          "$ref": "#/2158"
+          "$ref": "#/2159"
         },
         "flags": 0,
         "description": "List of filters."
       },
       "orderBy": {
         "type": {
-          "$ref": "#/2173"
+          "$ref": "#/2174"
         },
         "flags": 0,
         "description": "List of OrderBy option."
@@ -41286,21 +41298,21 @@
     "properties": {
       "operand": {
         "type": {
-          "$ref": "#/2151"
+          "$ref": "#/2152"
         },
         "flags": 1,
         "description": "Parameter name to be used for filter. The allowed operands to query pipeline runs are PipelineName, RunStart, RunEnd and Status; to query activity runs are ActivityName, ActivityRunStart, ActivityRunEnd, ActivityType and Status, and to query trigger runs are TriggerName, TriggerRunTimestamp and Status."
       },
       "operator": {
         "type": {
-          "$ref": "#/2156"
+          "$ref": "#/2157"
         },
         "flags": 1,
         "description": "Operator to be used for filter."
       },
       "values": {
         "type": {
-          "$ref": "#/2157"
+          "$ref": "#/2158"
         },
         "flags": 1,
         "description": "List of filter values."
@@ -41359,9 +41371,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2139"
-      },
-      {
         "$ref": "#/2140"
       },
       {
@@ -41395,6 +41404,9 @@
         "$ref": "#/2150"
       },
       {
+        "$ref": "#/2151"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -41419,9 +41431,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2152"
-      },
-      {
         "$ref": "#/2153"
       },
       {
@@ -41429,6 +41438,9 @@
       },
       {
         "$ref": "#/2155"
+      },
+      {
+        "$ref": "#/2156"
       },
       {
         "$ref": "#/2"
@@ -41444,7 +41456,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2138"
+      "$ref": "#/2139"
     }
   },
   {
@@ -41453,14 +41465,14 @@
     "properties": {
       "orderBy": {
         "type": {
-          "$ref": "#/2169"
+          "$ref": "#/2170"
         },
         "flags": 1,
         "description": "Parameter name to be used for order by. The allowed parameters to order by for pipeline runs are PipelineName, RunStart, RunEnd and Status; for activity runs are ActivityName, ActivityRunStart, ActivityRunEnd and Status; for trigger runs are TriggerName, TriggerRunTimestamp and Status."
       },
       "order": {
         "type": {
-          "$ref": "#/2172"
+          "$ref": "#/2173"
         },
         "flags": 1,
         "description": "Sorting order of the parameter."
@@ -41507,9 +41519,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2160"
-      },
-      {
         "$ref": "#/2161"
       },
       {
@@ -41534,6 +41543,9 @@
         "$ref": "#/2168"
       },
       {
+        "$ref": "#/2169"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -41550,10 +41562,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2170"
+        "$ref": "#/2171"
       },
       {
-        "$ref": "#/2171"
+        "$ref": "#/2172"
       },
       {
         "$ref": "#/2"
@@ -41563,7 +41575,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2159"
+      "$ref": "#/2160"
     }
   },
   {
@@ -41572,7 +41584,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/2179"
+          "$ref": "#/2180"
         },
         "flags": 1,
         "description": "List of pipeline runs."
@@ -41620,21 +41632,21 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/2176"
+          "$ref": "#/2177"
         },
         "flags": 2,
         "description": "The full or partial list of parameter name, value pair used in the pipeline run."
       },
       "runDimensions": {
         "type": {
-          "$ref": "#/2177"
+          "$ref": "#/2178"
         },
         "flags": 2,
         "description": "Run dimensions emitted by Pipeline run."
       },
       "invokedBy": {
         "type": {
-          "$ref": "#/2178"
+          "$ref": "#/2179"
         },
         "flags": 2,
         "description": "Entity that started the pipeline run."
@@ -41746,7 +41758,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2175"
+      "$ref": "#/2176"
     }
   },
   {
@@ -41755,10 +41767,10 @@
     "resourceType": "Microsoft.DataFactory/factories",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2174"
+      "$ref": "#/2175"
     },
     "input": {
-      "$ref": "#/2137"
+      "$ref": "#/2138"
     }
   },
   {
@@ -41767,7 +41779,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/2191"
+          "$ref": "#/2192"
         },
         "flags": 1,
         "description": "List of trigger runs."
@@ -41815,7 +41827,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/2186"
+          "$ref": "#/2187"
         },
         "flags": 2,
         "description": "Trigger run status."
@@ -41829,28 +41841,28 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/2187"
+          "$ref": "#/2188"
         },
         "flags": 2,
         "description": "List of property name and value related to trigger run. Name, value pair depends on type of trigger."
       },
       "triggeredPipelines": {
         "type": {
-          "$ref": "#/2188"
+          "$ref": "#/2189"
         },
         "flags": 2,
         "description": "List of pipeline name and run Id triggered by the trigger run."
       },
       "runDimension": {
         "type": {
-          "$ref": "#/2189"
+          "$ref": "#/2190"
         },
         "flags": 2,
         "description": "Run dimension for which trigger was fired."
       },
       "dependencyStatus": {
         "type": {
-          "$ref": "#/2190"
+          "$ref": "#/2191"
         },
         "flags": 2,
         "description": "Status of the upstream pipelines."
@@ -41876,13 +41888,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2183"
-      },
-      {
         "$ref": "#/2184"
       },
       {
         "$ref": "#/2185"
+      },
+      {
+        "$ref": "#/2186"
       },
       {
         "$ref": "#/2"
@@ -41924,7 +41936,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2182"
+      "$ref": "#/2183"
     }
   },
   {
@@ -41933,10 +41945,10 @@
     "resourceType": "Microsoft.DataFactory/factories",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2181"
+      "$ref": "#/2182"
     },
     "input": {
-      "$ref": "#/2137"
+      "$ref": "#/2138"
     }
   },
   {
@@ -41965,7 +41977,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/2196"
+          "$ref": "#/2197"
         },
         "flags": 1,
         "description": "List of triggers."
@@ -42030,7 +42042,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2195"
+      "$ref": "#/2196"
     }
   },
   {
@@ -42039,10 +42051,28 @@
     "resourceType": "Microsoft.DataFactory/factories",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2194"
+      "$ref": "#/2195"
     },
     "input": {
-      "$ref": "#/2193"
+      "$ref": "#/2194"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DataFactory/factories/adfcdcs",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DataFactory/factories/adfcdcs",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/22"
     }
   },
   {
@@ -42102,7 +42132,7 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2198"
+      "$ref": "#/2201"
     }
   },
   {
@@ -42118,7 +42148,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/2201"
+          "$ref": "#/2204"
         },
         "flags": 1,
         "description": "Integration runtime properties."
@@ -42139,7 +42169,7 @@
       },
       "state": {
         "type": {
-          "$ref": "#/2212"
+          "$ref": "#/2215"
         },
         "flags": 2,
         "description": "The state of integration runtime."
@@ -42147,10 +42177,10 @@
     },
     "elements": {
       "Managed": {
-        "$ref": "#/2213"
+        "$ref": "#/2216"
       },
       "SelfHosted": {
-        "$ref": "#/2229"
+        "$ref": "#/2232"
       }
     }
   },
@@ -42198,15 +42228,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2202"
-      },
-      {
-        "$ref": "#/2203"
-      },
-      {
-        "$ref": "#/2204"
-      },
-      {
         "$ref": "#/2205"
       },
       {
@@ -42228,6 +42249,15 @@
         "$ref": "#/2211"
       },
       {
+        "$ref": "#/2212"
+      },
+      {
+        "$ref": "#/2213"
+      },
+      {
+        "$ref": "#/2214"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -42238,14 +42268,14 @@
     "properties": {
       "typeProperties": {
         "type": {
-          "$ref": "#/2214"
+          "$ref": "#/2217"
         },
         "flags": 1,
         "description": "Managed integration runtime status type properties."
       },
       "type": {
         "type": {
-          "$ref": "#/2228"
+          "$ref": "#/2231"
         },
         "flags": 1,
         "description": "Type of integration runtime."
@@ -42265,21 +42295,21 @@
       },
       "nodes": {
         "type": {
-          "$ref": "#/2224"
+          "$ref": "#/2227"
         },
         "flags": 2,
         "description": "The list of nodes for managed integration runtime."
       },
       "otherErrors": {
         "type": {
-          "$ref": "#/2225"
+          "$ref": "#/2228"
         },
         "flags": 2,
         "description": "The errors that occurred on this integration runtime."
       },
       "lastOperation": {
         "type": {
-          "$ref": "#/2226"
+          "$ref": "#/2229"
         },
         "flags": 2,
         "description": "The last operation result that occurred on this integration runtime."
@@ -42299,14 +42329,14 @@
       },
       "status": {
         "type": {
-          "$ref": "#/2220"
+          "$ref": "#/2223"
         },
         "flags": 2,
         "description": "The managed integration runtime node status."
       },
       "errors": {
         "type": {
-          "$ref": "#/2223"
+          "$ref": "#/2226"
         },
         "flags": 0,
         "description": "The errors that occurred on this integration runtime node."
@@ -42336,16 +42366,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2216"
-      },
-      {
-        "$ref": "#/2217"
-      },
-      {
-        "$ref": "#/2218"
-      },
-      {
         "$ref": "#/2219"
+      },
+      {
+        "$ref": "#/2220"
+      },
+      {
+        "$ref": "#/2221"
+      },
+      {
+        "$ref": "#/2222"
       },
       {
         "$ref": "#/2"
@@ -42372,7 +42402,7 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/2222"
+          "$ref": "#/2225"
         },
         "flags": 2,
         "description": "Managed integration runtime error parameters."
@@ -42398,19 +42428,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2221"
+      "$ref": "#/2224"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2215"
+      "$ref": "#/2218"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2221"
+      "$ref": "#/2224"
     }
   },
   {
@@ -42447,7 +42477,7 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/2227"
+          "$ref": "#/2230"
         },
         "flags": 2,
         "description": "Managed integration runtime error parameters."
@@ -42480,14 +42510,14 @@
     "properties": {
       "typeProperties": {
         "type": {
-          "$ref": "#/2230"
+          "$ref": "#/2233"
         },
         "flags": 1,
         "description": "Self-hosted integration runtime status type properties."
       },
       "type": {
         "type": {
-          "$ref": "#/2257"
+          "$ref": "#/2260"
         },
         "flags": 1,
         "description": "Type of integration runtime."
@@ -42514,7 +42544,7 @@
       },
       "internalChannelEncryption": {
         "type": {
-          "$ref": "#/2234"
+          "$ref": "#/2237"
         },
         "flags": 2,
         "description": "It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist)."
@@ -42528,7 +42558,7 @@
       },
       "nodes": {
         "type": {
-          "$ref": "#/2249"
+          "$ref": "#/2252"
         },
         "flags": 0,
         "description": "The list of nodes for this integration runtime."
@@ -42556,21 +42586,21 @@
       },
       "capabilities": {
         "type": {
-          "$ref": "#/2250"
+          "$ref": "#/2253"
         },
         "flags": 2,
         "description": "Object with additional information about integration runtime capabilities."
       },
       "serviceUrls": {
         "type": {
-          "$ref": "#/2251"
+          "$ref": "#/2254"
         },
         "flags": 2,
         "description": "The URLs for the services used in integration runtime backend service."
       },
       "autoUpdate": {
         "type": {
-          "$ref": "#/2254"
+          "$ref": "#/2257"
         },
         "flags": 2,
         "description": "Whether Self-hosted integration runtime auto update has been turned on."
@@ -42584,7 +42614,7 @@
       },
       "links": {
         "type": {
-          "$ref": "#/2256"
+          "$ref": "#/2259"
         },
         "flags": 0,
         "description": "The list of linked integration runtimes that are created to share with this integration runtime."
@@ -42635,13 +42665,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2231"
+        "$ref": "#/2234"
       },
       {
-        "$ref": "#/2232"
+        "$ref": "#/2235"
       },
       {
-        "$ref": "#/2233"
+        "$ref": "#/2236"
       },
       {
         "$ref": "#/2"
@@ -42675,14 +42705,14 @@
       },
       "status": {
         "type": {
-          "$ref": "#/2243"
+          "$ref": "#/2246"
         },
         "flags": 2,
         "description": "Status of the integration runtime node."
       },
       "capabilities": {
         "type": {
-          "$ref": "#/2244"
+          "$ref": "#/2247"
         },
         "flags": 2,
         "description": "The integration runtime capabilities dictionary"
@@ -42738,7 +42768,7 @@
       },
       "lastUpdateResult": {
         "type": {
-          "$ref": "#/2248"
+          "$ref": "#/2251"
         },
         "flags": 2,
         "description": "The result of the last integration runtime node update."
@@ -42815,15 +42845,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2236"
-      },
-      {
-        "$ref": "#/2237"
-      },
-      {
-        "$ref": "#/2238"
-      },
-      {
         "$ref": "#/2239"
       },
       {
@@ -42834,6 +42855,15 @@
       },
       {
         "$ref": "#/2242"
+      },
+      {
+        "$ref": "#/2243"
+      },
+      {
+        "$ref": "#/2244"
+      },
+      {
+        "$ref": "#/2245"
       },
       {
         "$ref": "#/2"
@@ -42864,13 +42894,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2245"
+        "$ref": "#/2248"
       },
       {
-        "$ref": "#/2246"
+        "$ref": "#/2249"
       },
       {
-        "$ref": "#/2247"
+        "$ref": "#/2250"
       },
       {
         "$ref": "#/2"
@@ -42880,7 +42910,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2235"
+      "$ref": "#/2238"
     }
   },
   {
@@ -42909,10 +42939,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2252"
+        "$ref": "#/2255"
       },
       {
-        "$ref": "#/2253"
+        "$ref": "#/2256"
       },
       {
         "$ref": "#/2"
@@ -42963,7 +42993,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2255"
+      "$ref": "#/2258"
     }
   },
   {
@@ -42976,7 +43006,7 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2200"
+      "$ref": "#/2203"
     }
   },
   {
@@ -43019,10 +43049,10 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2200"
+      "$ref": "#/2203"
     },
     "input": {
-      "$ref": "#/2259"
+      "$ref": "#/2262"
     }
   },
   {
@@ -43051,7 +43081,7 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2261"
+      "$ref": "#/2264"
     }
   },
   {
@@ -43067,7 +43097,7 @@
       },
       "nodes": {
         "type": {
-          "$ref": "#/2265"
+          "$ref": "#/2268"
         },
         "flags": 0,
         "description": "Integration runtime node monitoring data."
@@ -43142,7 +43172,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2264"
+      "$ref": "#/2267"
     }
   },
   {
@@ -43151,7 +43181,7 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2263"
+      "$ref": "#/2266"
     }
   },
   {
@@ -43160,7 +43190,7 @@
     "properties": {
       "keyName": {
         "type": {
-          "$ref": "#/2270"
+          "$ref": "#/2273"
         },
         "flags": 0,
         "description": "The name of the authentication key to regenerate."
@@ -43179,10 +43209,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2268"
+        "$ref": "#/2271"
       },
       {
-        "$ref": "#/2269"
+        "$ref": "#/2272"
       },
       {
         "$ref": "#/2"
@@ -43195,10 +43225,10 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2261"
+      "$ref": "#/2264"
     },
     "input": {
-      "$ref": "#/2267"
+      "$ref": "#/2270"
     }
   },
   {
@@ -43216,11 +43246,50 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "removeLinks",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/22"
+    },
+    "input": {
+      "$ref": "#/2275"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "start",
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2200"
+      "$ref": "#/2203"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "syncCredentials",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/22"
     }
   },
   {
@@ -43277,7 +43346,7 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2274"
+      "$ref": "#/2281"
     }
   },
   {
@@ -43299,10 +43368,10 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2274"
+      "$ref": "#/2281"
     },
     "input": {
-      "$ref": "#/2276"
+      "$ref": "#/2283"
     }
   },
   {
@@ -43324,7 +43393,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/2296"
+          "$ref": "#/2303"
         },
         "flags": 1,
         "description": "The SsisObjectMetadata items on this page"
@@ -43367,16 +43436,16 @@
     },
     "elements": {
       "Environment": {
-        "$ref": "#/2281"
+        "$ref": "#/2288"
       },
       "Folder": {
-        "$ref": "#/2285"
+        "$ref": "#/2292"
       },
       "Package": {
-        "$ref": "#/2287"
+        "$ref": "#/2294"
       },
       "Project": {
-        "$ref": "#/2291"
+        "$ref": "#/2298"
       }
     }
   },
@@ -43393,14 +43462,14 @@
       },
       "variables": {
         "type": {
-          "$ref": "#/2283"
+          "$ref": "#/2290"
         },
         "flags": 0,
         "description": "Variable in environment"
       },
       "type": {
         "type": {
-          "$ref": "#/2284"
+          "$ref": "#/2291"
         },
         "flags": 1,
         "description": "Type of metadata."
@@ -43465,7 +43534,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2282"
+      "$ref": "#/2289"
     }
   },
   {
@@ -43478,7 +43547,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/2286"
+          "$ref": "#/2293"
         },
         "flags": 1,
         "description": "Type of metadata."
@@ -43516,14 +43585,14 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/2289"
+          "$ref": "#/2296"
         },
         "flags": 0,
         "description": "Parameters in package"
       },
       "type": {
         "type": {
-          "$ref": "#/2290"
+          "$ref": "#/2297"
         },
         "flags": 1,
         "description": "Type of metadata."
@@ -43623,7 +43692,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2288"
+      "$ref": "#/2295"
     }
   },
   {
@@ -43650,21 +43719,21 @@
       },
       "environmentRefs": {
         "type": {
-          "$ref": "#/2293"
+          "$ref": "#/2300"
         },
         "flags": 0,
         "description": "Environment reference in project"
       },
       "parameters": {
         "type": {
-          "$ref": "#/2294"
+          "$ref": "#/2301"
         },
         "flags": 0,
         "description": "Parameters in project"
       },
       "type": {
         "type": {
-          "$ref": "#/2295"
+          "$ref": "#/2302"
         },
         "flags": 1,
         "description": "Type of metadata."
@@ -43708,13 +43777,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2292"
+      "$ref": "#/2299"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2288"
+      "$ref": "#/2295"
     }
   },
   {
@@ -43724,7 +43793,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2280"
+      "$ref": "#/2287"
     }
   },
   {
@@ -43733,10 +43802,10 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2279"
+      "$ref": "#/2286"
     },
     "input": {
-      "$ref": "#/2278"
+      "$ref": "#/2285"
     }
   },
   {
@@ -43779,7 +43848,7 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2298"
+      "$ref": "#/2305"
     }
   },
   {
@@ -43801,7 +43870,16 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes/nodes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2300"
+      "$ref": "#/2307"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DataFactory/factories/pipelineruns",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/22"
     }
   },
   {
@@ -43810,7 +43888,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/2304"
+          "$ref": "#/2312"
         },
         "flags": 1,
         "description": "List of activity runs."
@@ -43927,7 +44005,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2303"
+      "$ref": "#/2311"
     }
   },
   {
@@ -43936,10 +44014,10 @@
     "resourceType": "Microsoft.DataFactory/factories/pipelineruns",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2302"
+      "$ref": "#/2310"
     },
     "input": {
-      "$ref": "#/2137"
+      "$ref": "#/2138"
     }
   },
   {
@@ -43969,10 +44047,28 @@
     "resourceType": "Microsoft.DataFactory/factories/pipelines",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2307"
+      "$ref": "#/2315"
     },
     "input": {
-      "$ref": "#/2306"
+      "$ref": "#/2314"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DataFactory/factories/triggers/triggerRuns",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rerun",
+    "resourceType": "Microsoft.DataFactory/factories/triggers/triggerRuns",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/22"
     }
   },
   {
@@ -43988,7 +44084,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/2315"
+          "$ref": "#/2325"
         },
         "flags": 2,
         "description": "Event Subscription Status."
@@ -44019,19 +44115,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2310"
+        "$ref": "#/2320"
       },
       {
-        "$ref": "#/2311"
+        "$ref": "#/2321"
       },
       {
-        "$ref": "#/2312"
+        "$ref": "#/2322"
       },
       {
-        "$ref": "#/2313"
+        "$ref": "#/2323"
       },
       {
-        "$ref": "#/2314"
+        "$ref": "#/2324"
       },
       {
         "$ref": "#/2"
@@ -44044,7 +44140,25 @@
     "resourceType": "Microsoft.DataFactory/factories/triggers",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2309"
+      "$ref": "#/2319"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DataFactory/factories/triggers",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DataFactory/factories/triggers",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/22"
     }
   },
   {
@@ -44053,7 +44167,7 @@
     "resourceType": "Microsoft.DataFactory/factories/triggers",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2309"
+      "$ref": "#/2319"
     }
   },
   {
@@ -44062,7 +44176,7 @@
     "resourceType": "Microsoft.DataFactory/factories/triggers",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/2309"
+      "$ref": "#/2319"
     }
   }
 ]

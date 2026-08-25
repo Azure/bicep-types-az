@@ -159,6 +159,16 @@
 * **ApiVersion**: 2020-07-17-preview
 * **Output**: [AdminCredentials](#admincredentials)
 
+## Function rotateNsxtPassword (Microsoft.AVS/privateClouds@2020-07-17-preview)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2020-07-17-preview
+* **Output**: any
+
+## Function rotateVcenterPassword (Microsoft.AVS/privateClouds@2020-07-17-preview)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2020-07-17-preview
+* **Output**: any
+
 ## AddonProperties
 ### Properties
 * **addonType**: 'SRM' | 'VR' | string: The type of private cloud addon

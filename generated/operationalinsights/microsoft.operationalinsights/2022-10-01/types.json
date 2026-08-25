@@ -1937,5 +1937,23 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/tables",
+    "apiVersion": "2022-10-01",
+    "output": {
+      "$ref": "#/75"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelSearch",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/tables",
+    "apiVersion": "2022-10-01",
+    "output": {
+      "$ref": "#/75"
+    }
   }
 ]

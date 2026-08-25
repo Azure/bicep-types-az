@@ -2949,5 +2949,14 @@
     "input": {
       "$ref": "#/236"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.CostManagement/exports",
+    "apiVersion": "2019-11-01",
+    "output": {
+      "$ref": "#/185"
+    }
   }
 ]

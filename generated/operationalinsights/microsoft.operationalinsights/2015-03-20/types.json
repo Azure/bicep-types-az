@@ -650,6 +650,94 @@
   },
   {
     "$type": "ObjectType",
+    "name": "WorkspacePurgeBody",
+    "properties": {
+      "table": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Table from which to purge data."
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "The set of columns and filters (queries) to run over them to purge the resulting data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeBodyFilters",
+    "properties": {
+      "column": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The column of the table over which the given query should run"
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A query operator to evaluate over the provided column and value(s). Supported operators are ==, =~, in, in~, >, >=, <, <=, between, and have the same behavior as they would in a KQL query."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "the value for the operator to function over. This can be a number (e.g., > 100), a string (timestamp >= '2017-09-01') or array of values."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "When filtering over custom dimensions, this key will be used as the name of the custom dimension."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/39"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeResponse",
+    "properties": {
+      "operationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Id to use when querying for status for a particular purge operation."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2015-03-20",
+    "output": {
+      "$ref": "#/42"
+    },
+    "input": {
+      "$ref": "#/38"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SharedKeys",
     "properties": {
       "primarySharedKey": {
@@ -674,7 +762,7 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2015-03-20",
     "output": {
-      "$ref": "#/38"
+      "$ref": "#/44"
     }
   },
   {
@@ -683,7 +771,7 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2015-03-20",
     "output": {
-      "$ref": "#/38"
+      "$ref": "#/44"
     }
   }
 ]

@@ -27,6 +27,51 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function debugInfo (Microsoft.StorageCache/caches@2021-09-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2021-09-01
+* **Output**: any
+
+## Function dnsRefresh (Microsoft.StorageCache/caches/storageTargets@2021-09-01)
+* **Resource**: Microsoft.StorageCache/caches/storageTargets
+* **ApiVersion**: 2021-09-01
+* **Output**: any
+
+## Function flush (Microsoft.StorageCache/caches@2021-09-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2021-09-01
+* **Output**: any
+
+## Function flush (Microsoft.StorageCache/caches/storageTargets@2021-09-01)
+* **Resource**: Microsoft.StorageCache/caches/storageTargets
+* **ApiVersion**: 2021-09-01
+* **Output**: any
+
+## Function resume (Microsoft.StorageCache/caches/storageTargets@2021-09-01)
+* **Resource**: Microsoft.StorageCache/caches/storageTargets
+* **ApiVersion**: 2021-09-01
+* **Output**: any
+
+## Function start (Microsoft.StorageCache/caches@2021-09-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2021-09-01
+* **Output**: any
+
+## Function stop (Microsoft.StorageCache/caches@2021-09-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2021-09-01
+* **Output**: any
+
+## Function suspend (Microsoft.StorageCache/caches/storageTargets@2021-09-01)
+* **Resource**: Microsoft.StorageCache/caches/storageTargets
+* **ApiVersion**: 2021-09-01
+* **Output**: any
+
+## Function upgrade (Microsoft.StorageCache/caches@2021-09-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2021-09-01
+* **Output**: any
+
 ## BlobNfsTarget
 ### Properties
 * **target**: string: Resource ID of the storage container.

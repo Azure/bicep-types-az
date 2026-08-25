@@ -459,12 +459,21 @@
     "writableScopes": 8
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Resources/deployments",
+    "apiVersion": "2015-11-01",
+    "output": {
+      "$ref": "#/5"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "Deployment",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/28"
+          "$ref": "#/29"
         },
         "flags": 0,
         "description": "Gets or sets the deployment properties."
@@ -505,7 +514,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/31"
+          "$ref": "#/32"
         },
         "flags": 0,
         "description": "Gets or sets the deployment mode."
@@ -524,10 +533,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/29"
+        "$ref": "#/30"
       },
       {
-        "$ref": "#/30"
+        "$ref": "#/31"
       }
     ]
   },
@@ -537,14 +546,14 @@
     "properties": {
       "error": {
         "type": {
-          "$ref": "#/33"
+          "$ref": "#/34"
         },
         "flags": 0,
         "description": "Gets or sets validation error."
       },
       "properties": {
         "type": {
-          "$ref": "#/36"
+          "$ref": "#/37"
         },
         "flags": 0,
         "description": "Gets or sets the template deployment properties."
@@ -557,7 +566,7 @@
     "properties": {
       "details": {
         "type": {
-          "$ref": "#/35"
+          "$ref": "#/36"
         },
         "flags": 0,
         "description": "Gets or sets validation error."
@@ -615,7 +624,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/34"
+      "$ref": "#/35"
     }
   },
   {
@@ -652,14 +661,14 @@
       },
       "providers": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/38"
         },
         "flags": 0,
         "description": "Gets the list of resource providers needed for the deployment."
       },
       "dependencies": {
         "type": {
-          "$ref": "#/38"
+          "$ref": "#/39"
         },
         "flags": 0,
         "description": "Gets the list of deployment dependencies."
@@ -694,7 +703,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/41"
+          "$ref": "#/42"
         },
         "flags": 0,
         "description": "Gets or sets the deployment mode."
@@ -732,10 +741,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/39"
+        "$ref": "#/40"
       },
       {
-        "$ref": "#/40"
+        "$ref": "#/41"
       }
     ]
   },
@@ -745,10 +754,10 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2015-11-01",
     "output": {
-      "$ref": "#/32"
+      "$ref": "#/33"
     },
     "input": {
-      "$ref": "#/27"
+      "$ref": "#/28"
     }
   }
 ]

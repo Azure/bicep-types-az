@@ -10705,6 +10705,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "confirmConsentCode",
+    "resourceType": "Microsoft.ApiManagement/service/authorizationProviders/authorizations",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/78"
+    },
+    "input": {
+      "$ref": "#/770"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AuthorizationLoginRequestContract",
     "properties": {
@@ -10736,10 +10748,69 @@
     "resourceType": "Microsoft.ApiManagement/service/authorizationProviders/authorizations",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/772"
+      "$ref": "#/773"
     },
     "input": {
-      "$ref": "#/771"
+      "$ref": "#/772"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackendReconnectContract",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/776"
+        },
+        "flags": 0,
+        "description": "Reconnect request properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackendReconnectProperties",
+    "properties": {
+      "after": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Duration in ISO8601 format after which reconnect will be initiated. Minimum duration of the Reconnect is PT2M."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconnect",
+    "resourceType": "Microsoft.ApiManagement/service/backends",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/78"
+    },
+    "input": {
+      "$ref": "#/775"
     }
   },
   {
@@ -10748,7 +10819,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/775"
+          "$ref": "#/779"
         },
         "flags": 0,
         "description": "Certificate properties details."
@@ -10803,7 +10874,7 @@
       },
       "keyVault": {
         "type": {
-          "$ref": "#/776"
+          "$ref": "#/780"
         },
         "flags": 0,
         "description": "KeyVault location details of the certificate."
@@ -10843,7 +10914,7 @@
     "resourceType": "Microsoft.ApiManagement/service/certificates",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/774"
+      "$ref": "#/778"
     }
   },
   {
@@ -10852,35 +10923,35 @@
     "properties": {
       "source": {
         "type": {
-          "$ref": "#/779"
+          "$ref": "#/783"
         },
         "flags": 1,
         "description": "Definitions about the connectivity check origin."
       },
       "destination": {
         "type": {
-          "$ref": "#/780"
+          "$ref": "#/784"
         },
         "flags": 1,
         "description": "The connectivity check operation destination."
       },
       "preferredIPVersion": {
         "type": {
-          "$ref": "#/782"
+          "$ref": "#/786"
         },
         "flags": 0,
         "description": "The IP version to be used. Only IPv4 is supported for now."
       },
       "protocol": {
         "type": {
-          "$ref": "#/786"
+          "$ref": "#/790"
         },
         "flags": 0,
         "description": "The request's protocol. Specific protocol configuration can be available based on this selection. The specified destination address must be coherent with this value."
       },
       "protocolConfiguration": {
         "type": {
-          "$ref": "#/787"
+          "$ref": "#/791"
         },
         "flags": 0,
         "description": "Protocol-specific configuration."
@@ -10935,7 +11006,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/781"
+        "$ref": "#/785"
       },
       {
         "$ref": "#/2"
@@ -10958,13 +11029,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/783"
+        "$ref": "#/787"
       },
       {
-        "$ref": "#/784"
+        "$ref": "#/788"
       },
       {
-        "$ref": "#/785"
+        "$ref": "#/789"
       },
       {
         "$ref": "#/2"
@@ -10977,7 +11048,7 @@
     "properties": {
       "HTTPConfiguration": {
         "type": {
-          "$ref": "#/788"
+          "$ref": "#/792"
         },
         "flags": 0,
         "description": "Configuration for HTTP or HTTPS requests."
@@ -10990,21 +11061,21 @@
     "properties": {
       "method": {
         "type": {
-          "$ref": "#/791"
+          "$ref": "#/795"
         },
         "flags": 0,
         "description": "The HTTP method to be used."
       },
       "validStatusCodes": {
         "type": {
-          "$ref": "#/792"
+          "$ref": "#/796"
         },
         "flags": 0,
         "description": "List of HTTP status codes considered valid for the request response."
       },
       "headers": {
         "type": {
-          "$ref": "#/794"
+          "$ref": "#/798"
         },
         "flags": 0,
         "description": "List of headers to be included in the request."
@@ -11023,10 +11094,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/789"
+        "$ref": "#/793"
       },
       {
-        "$ref": "#/790"
+        "$ref": "#/794"
       },
       {
         "$ref": "#/2"
@@ -11062,7 +11133,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/793"
+      "$ref": "#/797"
     }
   },
   {
@@ -11071,14 +11142,14 @@
     "properties": {
       "hops": {
         "type": {
-          "$ref": "#/819"
+          "$ref": "#/823"
         },
         "flags": 2,
         "description": "List of hops between the source and the destination."
       },
       "connectionStatus": {
         "type": {
-          "$ref": "#/824"
+          "$ref": "#/828"
         },
         "flags": 2,
         "description": "The connection status."
@@ -11154,14 +11225,14 @@
       },
       "nextHopIds": {
         "type": {
-          "$ref": "#/797"
+          "$ref": "#/801"
         },
         "flags": 2,
         "description": "List of next hop identifiers."
       },
       "issues": {
         "type": {
-          "$ref": "#/818"
+          "$ref": "#/822"
         },
         "flags": 2,
         "description": "List of issues."
@@ -11180,28 +11251,28 @@
     "properties": {
       "origin": {
         "type": {
-          "$ref": "#/802"
+          "$ref": "#/806"
         },
         "flags": 2,
         "description": "The origin of the issue."
       },
       "severity": {
         "type": {
-          "$ref": "#/805"
+          "$ref": "#/809"
         },
         "flags": 2,
         "description": "The severity of the issue."
       },
       "type": {
         "type": {
-          "$ref": "#/815"
+          "$ref": "#/819"
         },
         "flags": 2,
         "description": "The type of issue."
       },
       "context": {
         "type": {
-          "$ref": "#/817"
+          "$ref": "#/821"
         },
         "flags": 2,
         "description": "Provides additional context on the issue."
@@ -11224,13 +11295,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/799"
+        "$ref": "#/803"
       },
       {
-        "$ref": "#/800"
+        "$ref": "#/804"
       },
       {
-        "$ref": "#/801"
+        "$ref": "#/805"
       },
       {
         "$ref": "#/2"
@@ -11249,10 +11320,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/803"
+        "$ref": "#/807"
       },
       {
-        "$ref": "#/804"
+        "$ref": "#/808"
       },
       {
         "$ref": "#/2"
@@ -11299,18 +11370,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/806"
-      },
-      {
-        "$ref": "#/807"
-      },
-      {
-        "$ref": "#/808"
-      },
-      {
-        "$ref": "#/809"
-      },
-      {
         "$ref": "#/810"
       },
       {
@@ -11324,6 +11383,18 @@
       },
       {
         "$ref": "#/814"
+      },
+      {
+        "$ref": "#/815"
+      },
+      {
+        "$ref": "#/816"
+      },
+      {
+        "$ref": "#/817"
+      },
+      {
+        "$ref": "#/818"
       },
       {
         "$ref": "#/2"
@@ -11341,19 +11412,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/816"
+      "$ref": "#/820"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/798"
+      "$ref": "#/802"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/796"
+      "$ref": "#/800"
     }
   },
   {
@@ -11376,16 +11447,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/820"
+        "$ref": "#/824"
       },
       {
-        "$ref": "#/821"
+        "$ref": "#/825"
       },
       {
-        "$ref": "#/822"
+        "$ref": "#/826"
       },
       {
-        "$ref": "#/823"
+        "$ref": "#/827"
       },
       {
         "$ref": "#/2"
@@ -11398,10 +11469,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/795"
+      "$ref": "#/799"
     },
     "input": {
-      "$ref": "#/778"
+      "$ref": "#/782"
     }
   },
   {
@@ -11431,7 +11502,7 @@
       },
       "accessType": {
         "type": {
-          "$ref": "#/830"
+          "$ref": "#/834"
         },
         "flags": 0,
         "description": "The type of access to be used for the storage account."
@@ -11468,13 +11539,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/827"
+        "$ref": "#/831"
       },
       {
-        "$ref": "#/828"
+        "$ref": "#/832"
       },
       {
-        "$ref": "#/829"
+        "$ref": "#/833"
       },
       {
         "$ref": "#/2"
@@ -11529,7 +11600,7 @@
       },
       "zones": {
         "type": {
-          "$ref": "#/832"
+          "$ref": "#/836"
         },
         "flags": 0,
         "description": "A list of availability zones denoting where the resource needs to come from."
@@ -11557,7 +11628,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/837"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -11584,10 +11655,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/831"
+      "$ref": "#/835"
     },
     "input": {
-      "$ref": "#/826"
+      "$ref": "#/830"
     }
   },
   {
@@ -11596,10 +11667,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/831"
+      "$ref": "#/835"
     },
     "input": {
-      "$ref": "#/826"
+      "$ref": "#/830"
     }
   },
   {
@@ -11608,7 +11679,7 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/831"
+      "$ref": "#/835"
     }
   },
   {
@@ -11630,7 +11701,7 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/837"
+      "$ref": "#/841"
     }
   },
   {
@@ -11652,10 +11723,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/831"
+      "$ref": "#/835"
     },
     "input": {
-      "$ref": "#/839"
+      "$ref": "#/843"
     }
   },
   {
@@ -11684,7 +11755,51 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/841"
+      "$ref": "#/845"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GatewayKeyRegenerationRequestContract",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/850"
+        },
+        "flags": 1,
+        "description": "The Key being regenerated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/848"
+      },
+      {
+        "$ref": "#/849"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.ApiManagement/service/gateways",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/78"
+    },
+    "input": {
+      "$ref": "#/847"
     }
   },
   {
@@ -11693,7 +11808,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/846"
+          "$ref": "#/855"
         },
         "flags": 1,
         "description": "The Key to be used to generate gateway token."
@@ -11719,10 +11834,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/844"
+        "$ref": "#/853"
       },
       {
-        "$ref": "#/845"
+        "$ref": "#/854"
       }
     ]
   },
@@ -11745,10 +11860,10 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/847"
+      "$ref": "#/856"
     },
     "input": {
-      "$ref": "#/843"
+      "$ref": "#/852"
     }
   },
   {
@@ -11770,7 +11885,7 @@
     "resourceType": "Microsoft.ApiManagement/service/identityProviders",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/849"
+      "$ref": "#/858"
     }
   },
   {
@@ -11792,7 +11907,7 @@
     "resourceType": "Microsoft.ApiManagement/service/namedValues",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/851"
+      "$ref": "#/860"
     }
   },
   {
@@ -11801,7 +11916,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/854"
+          "$ref": "#/863"
         },
         "flags": 0,
         "description": "NamedValue entity contract properties."
@@ -11849,14 +11964,14 @@
       },
       "keyVault": {
         "type": {
-          "$ref": "#/776"
+          "$ref": "#/780"
         },
         "flags": 0,
         "description": "KeyVault location details of the namedValue."
       },
       "tags": {
         "type": {
-          "$ref": "#/855"
+          "$ref": "#/864"
         },
         "flags": 0,
         "description": "Optional tags that when provided can be used to filter the NamedValue list."
@@ -11883,7 +11998,7 @@
     "resourceType": "Microsoft.ApiManagement/service/namedValues",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/853"
+      "$ref": "#/862"
     }
   },
   {
@@ -11892,7 +12007,7 @@
     "resourceType": "Microsoft.ApiManagement/service/openidConnectProviders",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/849"
+      "$ref": "#/858"
     }
   },
   {
@@ -11901,7 +12016,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/860"
+          "$ref": "#/869"
         },
         "flags": 0,
         "description": "A collection of resources."
@@ -11952,7 +12067,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/859"
+      "$ref": "#/868"
     }
   },
   {
@@ -11961,7 +12076,7 @@
     "resourceType": "Microsoft.ApiManagement/service/policyFragments",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/858"
+      "$ref": "#/867"
     }
   },
   {
@@ -11983,7 +12098,25 @@
     "resourceType": "Microsoft.ApiManagement/service/portalsettings",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/862"
+      "$ref": "#/871"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/subscriptions",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/subscriptions",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/78"
     }
   },
   {
@@ -12012,7 +12145,25 @@
     "resourceType": "Microsoft.ApiManagement/service/subscriptions",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/864"
+      "$ref": "#/875"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/78"
     }
   },
   {
@@ -12062,7 +12213,7 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/866"
+      "$ref": "#/879"
     }
   },
   {
@@ -12071,7 +12222,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/869"
+          "$ref": "#/882"
         },
         "flags": 0,
         "description": "Deploy Configuration Parameter contract properties."
@@ -12104,7 +12255,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/871"
+          "$ref": "#/884"
         },
         "flags": 0,
         "description": "Properties of the Operation Contract."
@@ -12145,7 +12296,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/876"
+          "$ref": "#/889"
         },
         "flags": 0,
         "description": "Status of an async operation."
@@ -12173,14 +12324,14 @@
       },
       "error": {
         "type": {
-          "$ref": "#/877"
+          "$ref": "#/890"
         },
         "flags": 0,
         "description": "Error Body Contract"
       },
       "actionLog": {
         "type": {
-          "$ref": "#/881"
+          "$ref": "#/894"
         },
         "flags": 2,
         "description": "This property if only provided as part of the TenantConfiguration_Validate operation. It contains the log the entities which will be updated/created/deleted as part of the TenantConfiguration_Deploy operation."
@@ -12207,16 +12358,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/872"
+        "$ref": "#/885"
       },
       {
-        "$ref": "#/873"
+        "$ref": "#/886"
       },
       {
-        "$ref": "#/874"
+        "$ref": "#/887"
       },
       {
-        "$ref": "#/875"
+        "$ref": "#/888"
       }
     ]
   },
@@ -12240,7 +12391,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/879"
+          "$ref": "#/892"
         },
         "flags": 0,
         "description": "The list of invalid fields send in request, in case of validation error."
@@ -12277,7 +12428,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/878"
+      "$ref": "#/891"
     }
   },
   {
@@ -12310,7 +12461,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/880"
+      "$ref": "#/893"
     }
   },
   {
@@ -12319,10 +12470,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/870"
+      "$ref": "#/883"
     },
     "input": {
-      "$ref": "#/868"
+      "$ref": "#/881"
     }
   },
   {
@@ -12331,7 +12482,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/884"
+          "$ref": "#/897"
         },
         "flags": 0,
         "description": "Properties of the Save Configuration Parameters."
@@ -12364,10 +12515,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/870"
+      "$ref": "#/883"
     },
     "input": {
-      "$ref": "#/883"
+      "$ref": "#/896"
     }
   },
   {
@@ -12376,10 +12527,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/870"
+      "$ref": "#/883"
     },
     "input": {
-      "$ref": "#/868"
+      "$ref": "#/881"
     }
   },
   {
@@ -12401,7 +12552,7 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/887"
+      "$ref": "#/900"
     }
   },
   {
@@ -12410,7 +12561,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/890"
+          "$ref": "#/903"
         },
         "flags": 0,
         "description": "User Token Parameter contract properties."
@@ -12423,7 +12574,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/893"
+          "$ref": "#/906"
         },
         "flags": 1,
         "description": "The Key to be used to generate token for user."
@@ -12449,10 +12600,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/891"
+        "$ref": "#/904"
       },
       {
-        "$ref": "#/892"
+        "$ref": "#/905"
       }
     ]
   },
@@ -12475,10 +12626,19 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2022-08-01",
     "output": {
-      "$ref": "#/894"
+      "$ref": "#/907"
     },
     "input": {
-      "$ref": "#/889"
+      "$ref": "#/902"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "send",
+    "resourceType": "Microsoft.ApiManagement/service/users/confirmations",
+    "apiVersion": "2022-08-01",
+    "output": {
+      "$ref": "#/78"
     }
   }
 ]

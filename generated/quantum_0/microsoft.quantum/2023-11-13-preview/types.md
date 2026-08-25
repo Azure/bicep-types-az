@@ -25,10 +25,20 @@
 * **ApiVersion**: 2023-11-13-preview
 * **Output**: [ListKeysResult](#listkeysresult)
 
+## Function regenerateKey (Microsoft.Quantum/workspaces@2023-11-13-preview)
+* **Resource**: Microsoft.Quantum/workspaces
+* **ApiVersion**: 2023-11-13-preview
+* **Input**: [ApiKeys](#apikeys)
+* **Output**: any
+
 ## ApiKey
 ### Properties
 * **createdAt**: string: The creation time of the api key.
 * **key**: string (ReadOnly): The Api key.
+
+## ApiKeys
+### Properties
+* **keys**: ('Primary' | 'Secondary' | string)[]: A list of api key names.
 
 ## CheckNameAvailabilityRequest
 ### Properties

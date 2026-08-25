@@ -51,6 +51,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.ContainerRegistry/registries/runs@2025-03-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/runs
+* **ApiVersion**: 2025-03-01-preview
+* **Output**: any
+
 ## Function listBuildSourceUploadUrl (Microsoft.ContainerRegistry/registries@2025-03-01-preview)
 * **Resource**: Microsoft.ContainerRegistry/registries
 * **ApiVersion**: 2025-03-01-preview

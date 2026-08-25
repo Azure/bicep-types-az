@@ -293,6 +293,49 @@
 * **Input**: [VirtualMachineCaptureParameters](#virtualmachinecaptureparameters)
 * **Output**: [VirtualMachineCaptureResult](#virtualmachinecaptureresult)
 
+## Function convertToManagedDisks (Microsoft.Compute/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function convertToSinglePlacementGroup (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Input**: [VMScaleSetConvertToSinglePlacementGroupInput](#vmscalesetconverttosingleplacementgroupinput)
+* **Output**: any
+
+## Function deallocate (Microsoft.Compute/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function deallocate (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function deallocate (Microsoft.Compute/virtualMachineScaleSets/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function delete (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Input**: [VirtualMachineScaleSetVMInstanceRequiredIDs](#virtualmachinescalesetvminstancerequiredids)
+* **Output**: any
+
+## Function extensionRollingUpgrade (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function generalize (Microsoft.Compute/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
 ## Function generateKeyPair (Microsoft.Compute/sshPublicKeys@2021-11-01)
 * **Resource**: Microsoft.Compute/sshPublicKeys
 * **ApiVersion**: 2021-11-01
@@ -316,6 +359,120 @@
 * **Input**: [VirtualMachineInstallPatchesParameters](#virtualmachineinstallpatchesparameters)
 * **Output**: [VirtualMachineInstallPatchesResult](#virtualmachineinstallpatchesresult)
 
+## Function manualupgrade (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Input**: [VirtualMachineScaleSetVMInstanceRequiredIDs](#virtualmachinescalesetvminstancerequiredids)
+* **Output**: any
+
+## Function osRollingUpgrade (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function performMaintenance (Microsoft.Compute/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function performMaintenance (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function performMaintenance (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function powerOff (Microsoft.Compute/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function poweroff (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function poweroff (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function reapply (Microsoft.Compute/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function redeploy (Microsoft.Compute/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function redeploy (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function redeploy (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function reimage (Microsoft.Compute/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Input**: [VirtualMachineReimageParameters](#virtualmachinereimageparameters)
+* **Output**: any
+
+## Function reimage (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Input**: [VirtualMachineScaleSetReimageParameters](#virtualmachinescalesetreimageparameters)
+* **Output**: any
+
+## Function reimage (Microsoft.Compute/virtualMachineScaleSets/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Input**: [VirtualMachineScaleSetVMReimageParameters](#virtualmachinescalesetvmreimageparameters)
+* **Output**: any
+
+## Function reimageall (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function reimageall (Microsoft.Compute/virtualMachineScaleSets/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function restart (Microsoft.Compute/hostGroups/hosts@2021-11-01)
+* **Resource**: Microsoft.Compute/hostGroups/hosts
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function restart (Microsoft.Compute/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function restart (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function restart (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
 ## Function retrieveBootDiagnosticsData (Microsoft.Compute/virtualMachines@2021-11-01)
 * **Resource**: Microsoft.Compute/virtualMachines
 * **ApiVersion**: 2021-11-01
@@ -337,6 +494,38 @@
 * **ApiVersion**: 2021-11-01
 * **Input**: [RunCommandInput](#runcommandinput)
 * **Output**: [RunCommandResult](#runcommandresult)
+
+## Function setOrchestrationServiceState (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Input**: [OrchestrationServiceStateInput](#orchestrationservicestateinput)
+* **Output**: any
+
+## Function simulateEviction (Microsoft.Compute/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function simulateEviction (Microsoft.Compute/virtualMachineScaleSets/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function start (Microsoft.Compute/virtualMachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
+
+## Function start (Microsoft.Compute/virtualMachineScaleSets@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets
+* **ApiVersion**: 2021-11-01
+* **Input**: [VirtualMachineScaleSetVMInstanceIDs](#virtualmachinescalesetvminstanceids)
+* **Output**: any
+
+## Function start (Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2021-11-01)
+* **Resource**: Microsoft.Compute/virtualMachineScaleSets/virtualmachines
+* **ApiVersion**: 2021-11-01
+* **Output**: any
 
 ## AdditionalCapabilities
 ### Properties
@@ -712,6 +901,11 @@
 * **networkApiVersion**: '2020-11-01' | string: specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
 * **networkInterfaceConfigurations**: [VirtualMachineNetworkInterfaceConfiguration](#virtualmachinenetworkinterfaceconfiguration)[]: Specifies the networking configurations that will be used to create the virtual machine networking resources.
 * **networkInterfaces**: [NetworkInterfaceReference](#networkinterfacereference)[]: Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
+
+## OrchestrationServiceStateInput
+### Properties
+* **action**: 'Resume' | 'Suspend' | string (Required): The action to be performed.
+* **serviceName**: 'AutomaticRepairs' | string (Required): The name of the service.
 
 ## OSDisk
 ### Properties
@@ -1372,6 +1566,10 @@
 ### Properties
 * **domainNameLabel**: string (Required): The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.
 
+## VirtualMachineReimageParameters
+### Properties
+* **tempDisk**: bool: Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk.
+
 ## VirtualMachineRunCommandInstanceView
 ### Properties
 * **endTime**: string: Script end time.
@@ -1581,11 +1779,24 @@
 * **publicIPAddressVersion**: 'IPv4' | 'IPv6' | string: Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
 * **publicIPPrefix**: [SubResource](#subresource): The PublicIPPrefix from which to allocate publicIP addresses.
 
+## VirtualMachineScaleSetReimageParameters
+### Properties
+* **instanceIds**: string[]: The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set.
+* **tempDisk**: bool: Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk.
+
 ## VirtualMachineScaleSetStorageProfile
 ### Properties
 * **dataDisks**: [VirtualMachineScaleSetDataDisk](#virtualmachinescalesetdatadisk)[]: Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
 * **imageReference**: [ImageReference](#imagereference): Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
 * **osDisk**: [VirtualMachineScaleSetOSDisk](#virtualmachinescalesetosdisk): Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+
+## VirtualMachineScaleSetVMInstanceIDs
+### Properties
+* **instanceIds**: string[]: The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set.
+
+## VirtualMachineScaleSetVMInstanceRequiredIDs
+### Properties
+* **instanceIds**: string[] (Required): The virtual machine scale set instance ids.
 
 ## VirtualMachineScaleSetVMInstanceView
 ### Properties
@@ -1649,6 +1860,10 @@
 * **protectFromScaleIn**: bool: Indicates that the virtual machine scale set VM shouldn't be considered for deletion during a scale-in operation.
 * **protectFromScaleSetActions**: bool: Indicates that model updates or actions (including scale-in) initiated on the virtual machine scale set should not be applied to the virtual machine scale set VM.
 
+## VirtualMachineScaleSetVMReimageParameters
+### Properties
+* **tempDisk**: bool: Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk.
+
 ## VirtualMachineSoftwarePatchProperties
 ### Properties
 * **activityId**: string (ReadOnly): The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
@@ -1673,6 +1888,10 @@
 * **order**: int: Optional, Specifies the order in which the packages have to be installed
 * **packageReferenceId**: string (Required): Specifies the GalleryApplicationVersion resource id on the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/applications/{application}/versions/{version}
 * **tags**: string: Optional, Specifies a passthrough value for more generic context.
+
+## VMScaleSetConvertToSinglePlacementGroupInput
+### Properties
+* **activePlacementGroupId**: string: Id of the placement group in which you want future virtual machine instances to be placed. To query placement group Id, please use Virtual Machine Scale Set VMs - Get API. If not provided, the platform will choose one with maximum number of virtual machine instances.
 
 ## VMSizeProperties
 ### Properties

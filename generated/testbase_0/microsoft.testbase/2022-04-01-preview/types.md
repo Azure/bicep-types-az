@@ -182,6 +182,22 @@
 * **ApiVersion**: 2022-04-01-preview
 * **Output**: [DownloadURLResponse](#downloadurlresponse)
 
+## Function hardDelete (Microsoft.TestBase/testBaseAccounts/packages@2022-04-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/packages
+* **ApiVersion**: 2022-04-01-preview
+* **Output**: any
+
+## Function offboard (Microsoft.TestBase/testBaseAccounts@2022-04-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts
+* **ApiVersion**: 2022-04-01-preview
+* **Output**: any
+
+## Function runTest (Microsoft.TestBase/testBaseAccounts/packages@2022-04-01-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/packages
+* **ApiVersion**: 2022-04-01-preview
+* **Input**: [PackageRunTestParameters](#packageruntestparameters)
+* **Output**: any
+
 ## AnalysisResultSingletonResourceProperties
 * **Discriminator**: analysisResultType
 
@@ -436,6 +452,14 @@
 * **testTypes**: ('FunctionalTest' | 'OutOfBoxTest' | string)[] (ReadOnly): OOB, functional or both. Mapped to the data in 'tests' property.
 * **validationResults**: [PackageValidationResult](#packagevalidationresult)[] (ReadOnly): The validation results. There's validation on package when it's created or updated.
 * **version**: string (Required): Application version
+
+## PackageRunTestParameters
+### Properties
+* **flightingRing**: string: The flighting ring, only for release of feature updates.
+* **osName**: string (Required): The operating system name. e.g. Windows 10 1809.
+* **osUpdateType**: 'FeatureUpdate' | 'SecurityUpdate' | string: Specifies the OS update type to test against.
+* **releaseName**: string: The name of the tested release (OS update).
+* **testType**: 'FunctionalTest' | 'OutOfBoxTest' | string (Required): The type of the test.
 
 ## PackageValidationResult
 ### Properties

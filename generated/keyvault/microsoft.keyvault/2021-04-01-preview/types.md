@@ -102,6 +102,16 @@
 * **tags**: [SecretCreateOrUpdateParametersTags](#secretcreateorupdateparameterstags): The tags that will be assigned to the secret.
 * **type**: 'Microsoft.KeyVault/vaults/secrets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function purge (Microsoft.KeyVault/locations/deletedVaults@2021-04-01-preview)
+* **Resource**: Microsoft.KeyVault/locations/deletedVaults
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
+
+## Function purge (Microsoft.KeyVault/locations/deletedManagedHSMs@2021-04-01-preview)
+* **Resource**: Microsoft.KeyVault/locations/deletedManagedHSMs
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
+
 ## AccessPolicyEntry
 ### Properties
 * **applicationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Application ID of the client making request on behalf of a principal

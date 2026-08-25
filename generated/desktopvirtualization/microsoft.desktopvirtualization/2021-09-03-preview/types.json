@@ -3594,6 +3594,15 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "disconnect",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions",
+    "apiVersion": "2021-09-03-preview",
+    "output": {
+      "$ref": "#/104"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SendMessage",
     "properties": {
@@ -3611,6 +3620,18 @@
         "flags": 0,
         "description": "Body of message."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sendMessage",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions",
+    "apiVersion": "2021-09-03-preview",
+    "output": {
+      "$ref": "#/104"
+    },
+    "input": {
+      "$ref": "#/247"
     }
   }
 ]

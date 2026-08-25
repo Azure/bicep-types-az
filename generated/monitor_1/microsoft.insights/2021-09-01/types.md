@@ -62,6 +62,12 @@
 * **Input**: [NotificationRequestBody](#notificationrequestbody)
 * **Output**: [TestNotificationDetailsResponse](#testnotificationdetailsresponse)
 
+## Function subscribe (Microsoft.Insights/actionGroups@2021-09-01)
+* **Resource**: Microsoft.Insights/actionGroups
+* **ApiVersion**: 2021-09-01
+* **Input**: [EnableRequest](#enablerequest)
+* **Output**: any
+
 ## AccessModeSettings
 ### Properties
 * **exclusions**: [AccessModeSettingsExclusion](#accessmodesettingsexclusion)[]: List of exclusions that override the default access mode settings for specific private endpoint connections.
@@ -150,6 +156,10 @@
 * **name**: string (Required): The name of the email receiver. Names must be unique across all receivers within an action group.
 * **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail.
 * **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
+
+## EnableRequest
+### Properties
+* **receiverName**: string (Required): The name of the receiver to resubscribe.
 
 ## EventHubReceiver
 ### Properties

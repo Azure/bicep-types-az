@@ -2892,5 +2892,26 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.KeyVault/locations/deletedVaults",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/257"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.KeyVault/locations/deletedManagedHSMs",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/257"
+    }
   }
 ]

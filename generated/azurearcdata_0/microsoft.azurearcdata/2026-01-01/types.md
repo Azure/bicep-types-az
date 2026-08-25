@@ -155,6 +155,11 @@
 * **Input**: [ManagedInstanceLinkCreateUpdateConfiguration](#managedinstancelinkcreateupdateconfiguration)
 * **Output**: [SqlServerAvailabilityGroupResource](#sqlserveravailabilitygroupresource)
 
+## Function deleteMiLink (Microsoft.AzureArcData/sqlServerInstances/availabilityGroups@2026-01-01)
+* **Resource**: Microsoft.AzureArcData/sqlServerInstances/availabilityGroups
+* **ApiVersion**: 2026-01-01
+* **Output**: any
+
 ## Function failover (Microsoft.AzureArcData/sqlServerInstances/availabilityGroups@2026-01-01)
 * **Resource**: Microsoft.AzureArcData/sqlServerInstances/availabilityGroups
 * **ApiVersion**: 2026-01-01

@@ -2000,6 +2000,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.ContainerRegistry/registries/runs",
+    "apiVersion": "2018-09-01",
+    "output": {
+      "$ref": "#/139"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "Task",
     "properties": {
@@ -2040,7 +2052,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/140"
+          "$ref": "#/142"
         },
         "flags": 0,
         "description": "The tags of the resource."
@@ -2061,7 +2073,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/tasks",
     "apiVersion": "2018-09-01",
     "output": {
-      "$ref": "#/139"
+      "$ref": "#/141"
     }
   }
 ]

@@ -46,6 +46,23 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disableHttps (Microsoft.Network/frontDoors/frontendEndpoints@2021-06-01)
+* **Resource**: Microsoft.Network/frontDoors/frontendEndpoints
+* **ApiVersion**: 2021-06-01
+* **Output**: any
+
+## Function enableHttps (Microsoft.Network/frontDoors/frontendEndpoints@2021-06-01)
+* **Resource**: Microsoft.Network/frontDoors/frontendEndpoints
+* **ApiVersion**: 2021-06-01
+* **Input**: [CustomHttpsConfiguration](#customhttpsconfiguration)
+* **Output**: any
+
+## Function purge (Microsoft.Network/frontDoors@2021-06-01)
+* **Resource**: Microsoft.Network/frontDoors
+* **ApiVersion**: 2021-06-01
+* **Input**: [PurgeParameters](#purgeparameters)
+* **Output**: any
+
 ## Function validateCustomDomain (Microsoft.Network/frontDoors@2021-06-01)
 * **Resource**: Microsoft.Network/frontDoors
 * **ApiVersion**: 2021-06-01
@@ -262,6 +279,10 @@
 * **mode**: 'Detection' | 'Prevention' | string: Describes if it is in detection mode or prevention mode at policy level.
 * **redirectUrl**: string: If action type is redirect, this field represents redirect URL for the client.
 * **requestBodyCheck**: 'Disabled' | 'Enabled' | string: Describes if policy managed rules will inspect the request body content.
+
+## PurgeParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be purged. Can describe a file path or a wild card directory.
 
 ## ResourceTags
 ### Properties

@@ -861,5 +861,20 @@
         "description": "Gets or sets the object identifier of the admin."
       }
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addRootCollectionAdmin",
+    "resourceType": "Microsoft.Purview/accounts",
+    "apiVersion": "2021-07-01",
+    "output": {
+      "$ref": "#/66"
+    },
+    "input": {
+      "$ref": "#/65"
+    }
   }
 ]

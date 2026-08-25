@@ -5924,5 +5924,14 @@
     "input": {
       "$ref": "#/366"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "synchronize",
+    "resourceType": "Microsoft.DeviceRegistry/namespaces/credentials",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/42"
+    }
   }
 ]

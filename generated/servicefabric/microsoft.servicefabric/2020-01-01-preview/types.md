@@ -25,6 +25,24 @@
 * **tags**: [ManagedProxyResourceTags](#managedproxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters/nodeTypes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function deleteNode (Microsoft.ServiceFabric/managedClusters/nodeTypes@2020-01-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2020-01-01-preview
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
+## Function reimage (Microsoft.ServiceFabric/managedClusters/nodeTypes@2020-01-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2020-01-01-preview
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
+## Function restart (Microsoft.ServiceFabric/managedClusters/nodeTypes@2020-01-01-preview)
+* **Resource**: Microsoft.ServiceFabric/managedClusters/nodeTypes
+* **ApiVersion**: 2020-01-01-preview
+* **Input**: [NodeTypeActionParameters](#nodetypeactionparameters)
+* **Output**: any
+
 ## AzureActiveDirectory
 ### Properties
 * **clientApplication**: string: Azure active directory client application id.
@@ -74,6 +92,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## NodeTypeActionParameters
+### Properties
+* **force**: bool: Force the action to go through.
+* **nodes**: string[] (Required): List of node names from the node type.
 
 ## NodeTypeProperties
 ### Properties

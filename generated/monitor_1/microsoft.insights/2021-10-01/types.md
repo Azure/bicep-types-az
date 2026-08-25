@@ -33,6 +33,21 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Insights/scheduledQueryRules/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function reconcile (Microsoft.Insights/actionGroups/networkSecurityPerimeterConfigurations@2021-10-01)
+* **Resource**: Microsoft.Insights/actionGroups/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2021-10-01
+* **Output**: any
+
+## Function reconcile (Microsoft.Insights/dataCollectionEndpoints/networkSecurityPerimeterConfigurations@2021-10-01)
+* **Resource**: Microsoft.Insights/dataCollectionEndpoints/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2021-10-01
+* **Output**: any
+
+## Function reconcile (Microsoft.Insights/scheduledQueryRules/networkSecurityPerimeterConfigurations@2021-10-01)
+* **Resource**: Microsoft.Insights/scheduledQueryRules/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2021-10-01
+* **Output**: any
+
 ## AccessRule
 ### Properties
 * **name**: string: Name of the access rule

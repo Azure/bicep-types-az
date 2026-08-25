@@ -6723,6 +6723,102 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "initiateSessionHostUpdate",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHostManagements",
+    "apiVersion": "2024-04-08-preview",
+    "output": {
+      "$ref": "#/221"
+    },
+    "input": {
+      "$ref": "#/479"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HostPoolUpdateControlParameter",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/488"
+        },
+        "flags": 1,
+        "description": "Action types for controlling hostpool update."
+      },
+      "cancelMessage": {
+        "type": {
+          "$ref": "#/303"
+        },
+        "flags": 0,
+        "description": "The cancel message sent to the user on the session host. This is can only be specified if the action is 'Cancel'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Start"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pause"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Retry"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resume"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/483"
+      },
+      {
+        "$ref": "#/484"
+      },
+      {
+        "$ref": "#/485"
+      },
+      {
+        "$ref": "#/486"
+      },
+      {
+        "$ref": "#/487"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "controlSessionHostUpdate",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHostManagements",
+    "apiVersion": "2024-04-08-preview",
+    "output": {
+      "$ref": "#/221"
+    },
+    "input": {
+      "$ref": "#/482"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disconnect",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions",
+    "apiVersion": "2024-04-08-preview",
+    "output": {
+      "$ref": "#/221"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SendMessage",
     "properties": {
@@ -6740,6 +6836,27 @@
         "flags": 0,
         "description": "Body of message."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sendMessage",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions",
+    "apiVersion": "2024-04-08-preview",
+    "output": {
+      "$ref": "#/221"
+    },
+    "input": {
+      "$ref": "#/491"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retryProvisioning",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHosts",
+    "apiVersion": "2024-04-08-preview",
+    "output": {
+      "$ref": "#/221"
     }
   }
 ]

@@ -7117,6 +7117,65 @@
   },
   {
     "$type": "ObjectType",
+    "name": "BackendReconnectContract",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/516"
+        },
+        "flags": 0,
+        "description": "Reconnect request properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource type for API Management resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackendReconnectProperties",
+    "properties": {
+      "after": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Duration in ISO8601 format after which reconnect will be initiated. Minimum duration of the Reconnect is PT2M."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconnect",
+    "resourceType": "Microsoft.ApiManagement/service/backends",
+    "apiVersion": "2019-12-01-preview",
+    "output": {
+      "$ref": "#/118"
+    },
+    "input": {
+      "$ref": "#/515"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ApiManagementServiceBackupRestoreParameters",
     "properties": {
       "storageAccount": {
@@ -7211,7 +7270,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/517"
+          "$ref": "#/520"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -7232,10 +7291,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/516"
+      "$ref": "#/519"
     },
     "input": {
-      "$ref": "#/515"
+      "$ref": "#/518"
     }
   },
   {
@@ -7244,10 +7303,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/516"
+      "$ref": "#/519"
     },
     "input": {
-      "$ref": "#/515"
+      "$ref": "#/518"
     }
   },
   {
@@ -7269,7 +7328,7 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/520"
+      "$ref": "#/523"
     }
   },
   {
@@ -7291,10 +7350,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/516"
+      "$ref": "#/519"
     },
     "input": {
-      "$ref": "#/522"
+      "$ref": "#/525"
     }
   },
   {
@@ -7323,7 +7382,51 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/524"
+      "$ref": "#/527"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GatewayKeyRegenerationRequestContract",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/532"
+        },
+        "flags": 1,
+        "description": "The Key being regenerated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/530"
+      },
+      {
+        "$ref": "#/531"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.ApiManagement/service/gateways",
+    "apiVersion": "2019-12-01-preview",
+    "output": {
+      "$ref": "#/118"
+    },
+    "input": {
+      "$ref": "#/529"
     }
   },
   {
@@ -7332,7 +7435,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/529"
+          "$ref": "#/537"
         },
         "flags": 1,
         "description": "The Key to be used to generate gateway token."
@@ -7358,10 +7461,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/527"
+        "$ref": "#/535"
       },
       {
-        "$ref": "#/528"
+        "$ref": "#/536"
       }
     ]
   },
@@ -7384,10 +7487,10 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/530"
+      "$ref": "#/538"
     },
     "input": {
-      "$ref": "#/526"
+      "$ref": "#/534"
     }
   },
   {
@@ -7427,7 +7530,7 @@
     "resourceType": "Microsoft.ApiManagement/service/portalsettings",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/534"
+      "$ref": "#/542"
     }
   },
   {
@@ -7449,7 +7552,25 @@
     "resourceType": "Microsoft.ApiManagement/service/namedValues",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/536"
+      "$ref": "#/544"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/subscriptions",
+    "apiVersion": "2019-12-01-preview",
+    "output": {
+      "$ref": "#/118"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/subscriptions",
+    "apiVersion": "2019-12-01-preview",
+    "output": {
+      "$ref": "#/118"
     }
   },
   {
@@ -7478,7 +7599,25 @@
     "resourceType": "Microsoft.ApiManagement/service/subscriptions",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/538"
+      "$ref": "#/548"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2019-12-01-preview",
+    "output": {
+      "$ref": "#/118"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2019-12-01-preview",
+    "output": {
+      "$ref": "#/118"
     }
   },
   {
@@ -7521,7 +7660,7 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/540"
+      "$ref": "#/552"
     }
   },
   {
@@ -7530,7 +7669,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/543"
+          "$ref": "#/555"
         },
         "flags": 0,
         "description": "Deploy Configuration Parameter contract properties."
@@ -7570,7 +7709,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/549"
+          "$ref": "#/561"
         },
         "flags": 0,
         "description": "Status of an async operation."
@@ -7598,14 +7737,14 @@
       },
       "error": {
         "type": {
-          "$ref": "#/550"
+          "$ref": "#/562"
         },
         "flags": 0,
         "description": "Error Body Contract"
       },
       "actionLog": {
         "type": {
-          "$ref": "#/554"
+          "$ref": "#/566"
         },
         "flags": 2,
         "description": "This property if only provided as part of the TenantConfiguration_Validate operation. It contains the log the entities which will be updated/created/deleted as part of the TenantConfiguration_Deploy operation."
@@ -7632,16 +7771,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/545"
+        "$ref": "#/557"
       },
       {
-        "$ref": "#/546"
+        "$ref": "#/558"
       },
       {
-        "$ref": "#/547"
+        "$ref": "#/559"
       },
       {
-        "$ref": "#/548"
+        "$ref": "#/560"
       }
     ]
   },
@@ -7665,7 +7804,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/552"
+          "$ref": "#/564"
         },
         "flags": 0,
         "description": "The list of invalid fields send in request, in case of validation error."
@@ -7702,7 +7841,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/551"
+      "$ref": "#/563"
     }
   },
   {
@@ -7735,7 +7874,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/553"
+      "$ref": "#/565"
     }
   },
   {
@@ -7744,10 +7883,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/544"
+      "$ref": "#/556"
     },
     "input": {
-      "$ref": "#/542"
+      "$ref": "#/554"
     }
   },
   {
@@ -7756,7 +7895,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/557"
+          "$ref": "#/569"
         },
         "flags": 0,
         "description": "Properties of the Save Configuration Parameters."
@@ -7789,10 +7928,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/544"
+      "$ref": "#/556"
     },
     "input": {
-      "$ref": "#/556"
+      "$ref": "#/568"
     }
   },
   {
@@ -7801,10 +7940,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/544"
+      "$ref": "#/556"
     },
     "input": {
-      "$ref": "#/542"
+      "$ref": "#/554"
     }
   },
   {
@@ -7826,7 +7965,7 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/560"
+      "$ref": "#/572"
     }
   },
   {
@@ -7835,7 +7974,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/563"
+          "$ref": "#/575"
         },
         "flags": 0,
         "description": "User Token Parameter contract properties."
@@ -7848,7 +7987,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/566"
+          "$ref": "#/578"
         },
         "flags": 1,
         "description": "The Key to be used to generate token for user."
@@ -7874,10 +8013,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/564"
+        "$ref": "#/576"
       },
       {
-        "$ref": "#/565"
+        "$ref": "#/577"
       }
     ]
   },
@@ -7900,10 +8039,19 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2019-12-01-preview",
     "output": {
-      "$ref": "#/567"
+      "$ref": "#/579"
     },
     "input": {
-      "$ref": "#/562"
+      "$ref": "#/574"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "send",
+    "resourceType": "Microsoft.ApiManagement/service/users/confirmations",
+    "apiVersion": "2019-12-01-preview",
+    "output": {
+      "$ref": "#/118"
     }
   }
 ]

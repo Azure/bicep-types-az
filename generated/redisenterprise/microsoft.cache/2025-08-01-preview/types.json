@@ -2760,12 +2760,27 @@
     "sensitive": true
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/275"
+    },
+    "input": {
+      "$ref": "#/273"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "FlushParameters",
     "properties": {
       "ids": {
         "type": {
-          "$ref": "#/276"
+          "$ref": "#/278"
         },
         "flags": 0,
         "description": "The identifiers of all the other database resources in the georeplication group to be flushed."
@@ -2779,12 +2794,75 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "flush",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/275"
+    },
+    "input": {
+      "$ref": "#/277"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ForceLinkParameters",
+    "properties": {
+      "geoReplication": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 1,
+        "description": "Properties to configure geo replication for this database."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ForceLinkParametersGeoReplication",
+    "properties": {
+      "groupNickname": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the group of linked database resources. This should match the existing replication group name."
+      },
+      "linkedDatabases": {
+        "type": {
+          "$ref": "#/282"
+        },
+        "flags": 0,
+        "description": "The resource IDs of the databases that are expected to be linked and included in the replication group. This parameter is used to validate that the linking is to the expected (unlinked) part of the replication group, if it is splintered."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/218"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forceLinkToReplicationGroup",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/275"
+    },
+    "input": {
+      "$ref": "#/280"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ForceUnlinkParameters",
     "properties": {
       "ids": {
         "type": {
-          "$ref": "#/278"
+          "$ref": "#/285"
         },
         "flags": 1,
         "description": "The resource IDs of the database resources to be unlinked."
@@ -2798,12 +2876,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "forceUnlink",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/275"
+    },
+    "input": {
+      "$ref": "#/284"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ImportClusterParameters",
     "properties": {
       "sasUris": {
         "type": {
-          "$ref": "#/280"
+          "$ref": "#/288"
         },
         "flags": 1,
         "description": "SAS URIs for the target blobs to import from"
@@ -2814,6 +2904,18 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/274"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/275"
+    },
+    "input": {
+      "$ref": "#/287"
     }
   },
   {
@@ -2842,7 +2944,7 @@
     "resourceType": "Microsoft.Cache/redisEnterprise/databases",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/281"
+      "$ref": "#/290"
     }
   },
   {
@@ -2851,7 +2953,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/286"
+          "$ref": "#/295"
         },
         "flags": 1,
         "description": "Which access key to regenerate."
@@ -2870,10 +2972,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/284"
+        "$ref": "#/293"
       },
       {
-        "$ref": "#/285"
+        "$ref": "#/294"
       }
     ]
   },
@@ -2883,10 +2985,28 @@
     "resourceType": "Microsoft.Cache/redisEnterprise/databases",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/281"
+      "$ref": "#/290"
     },
     "input": {
-      "$ref": "#/283"
+      "$ref": "#/292"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeDBRedisVersion",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/275"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Cache/redisEnterprise/migrations",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/275"
     }
   },
   {
@@ -2929,14 +3049,14 @@
       },
       "errors": {
         "type": {
-          "$ref": "#/293"
+          "$ref": "#/304"
         },
         "flags": 0,
         "description": "List of validation errors that prevent migration."
       },
       "warnings": {
         "type": {
-          "$ref": "#/296"
+          "$ref": "#/307"
         },
         "flags": 0,
         "description": "List of validation warnings that may impact migration."
@@ -2949,7 +3069,7 @@
     "properties": {
       "disparities": {
         "type": {
-          "$ref": "#/292"
+          "$ref": "#/303"
         },
         "flags": 1,
         "description": "List of specific disparities that cause this error."
@@ -2979,13 +3099,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/291"
+      "$ref": "#/302"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/290"
+      "$ref": "#/301"
     }
   },
   {
@@ -2994,7 +3114,7 @@
     "properties": {
       "disparities": {
         "type": {
-          "$ref": "#/295"
+          "$ref": "#/306"
         },
         "flags": 1,
         "description": "List of specific disparities that cause this warning."
@@ -3004,13 +3124,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/291"
+      "$ref": "#/302"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/294"
+      "$ref": "#/305"
     }
   },
   {
@@ -3019,10 +3139,10 @@
     "resourceType": "Microsoft.Cache/redisEnterprise/migrations",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/289"
+      "$ref": "#/300"
     },
     "input": {
-      "$ref": "#/288"
+      "$ref": "#/299"
     }
   }
 ]

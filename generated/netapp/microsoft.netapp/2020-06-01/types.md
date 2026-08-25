@@ -93,6 +93,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function authorizeReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2020-06-01
+* **Input**: [AuthorizeRequest](#authorizerequest)
+* **Output**: any
+
+## Function breakReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2020-06-01
+* **Input**: [BreakReplicationRequest](#breakreplicationrequest)
+* **Output**: any
+
 ## Function checkFilePathAvailability (Microsoft.NetApp/locations@2020-06-01)
 * **Resource**: Microsoft.NetApp/locations
 * **ApiVersion**: 2020-06-01
@@ -110,6 +122,33 @@
 * **ApiVersion**: 2020-06-01
 * **Input**: [QuotaAvailabilityRequest](#quotaavailabilityrequest)
 * **Output**: [CheckAvailabilityResponse](#checkavailabilityresponse)
+
+## Function deleteReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2020-06-01
+* **Output**: any
+
+## Function poolChange (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2020-06-01
+* **Input**: [PoolChangeRequest](#poolchangerequest)
+* **Output**: any
+
+## Function reinitializeReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2020-06-01
+* **Output**: any
+
+## Function resyncReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2020-06-01
+* **Output**: any
+
+## Function revert (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-06-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2020-06-01
+* **Input**: [VolumeRevert](#volumerevert)
+* **Output**: any
 
 ## AccountProperties
 ### Properties
@@ -133,6 +172,10 @@
 * **statusDetails**: string (ReadOnly): Any details in regards to the Status of the Active Directory
 * **username**: string: A domain user account with permission to create machine accounts
 
+## AuthorizeRequest
+### Properties
+* **remoteVolumeResourceId**: string: Resource id of the remote volume
+
 ## BackupPolicyProperties
 ### Properties
 * **dailyBackupsToKeep**: int: Daily backups count to keep
@@ -153,6 +196,10 @@
 * **label**: string: Label for backup
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **size**: int (ReadOnly): Size of backup
+
+## BreakReplicationRequest
+### Properties
+* **forceBreakReplication**: bool: If replication is in status transferring and you want to force break the replication, set to true
 
 ## CheckAvailabilityResponse
 ### Properties
@@ -204,6 +251,10 @@
 * **ipAddress**: string (ReadOnly): The mount target's IPv4 address
 * **mountTargetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the MountTarget
 * **smbServerFqdn**: string: The SMB server's Fully Qualified Domain Name, FQDN
+
+## PoolChangeRequest
+### Properties
+* **newPoolResourceId**: string (Required): Resource id of the pool to move volume to
 
 ## PoolProperties
 ### Properties
@@ -320,6 +371,10 @@
 ## VolumePropertiesExportPolicy
 ### Properties
 * **rules**: [ExportPolicyRule](#exportpolicyrule)[]: Export policy rule
+
+## VolumeRevert
+### Properties
+* **snapshotId**: string: Resource id of the snapshot
 
 ## VolumeSnapshotProperties
 ### Properties

@@ -27,6 +27,31 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function debugInfo (Microsoft.StorageCache/caches@2020-10-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2020-10-01
+* **Output**: any
+
+## Function flush (Microsoft.StorageCache/caches@2020-10-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2020-10-01
+* **Output**: any
+
+## Function start (Microsoft.StorageCache/caches@2020-10-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2020-10-01
+* **Output**: any
+
+## Function stop (Microsoft.StorageCache/caches@2020-10-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2020-10-01
+* **Output**: any
+
+## Function upgrade (Microsoft.StorageCache/caches@2020-10-01)
+* **Resource**: Microsoft.StorageCache/caches
+* **ApiVersion**: 2020-10-01
+* **Output**: any
+
 ## CacheActiveDirectorySettings
 ### Properties
 * **cacheNetBiosName**: string {pattern: "^[-0-9a-zA-Z]{1,15}$"} (Required): The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].

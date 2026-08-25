@@ -4996,5 +4996,35 @@
         "description": "Gets or sets a value indicating whether to request non-graceful VM shutdown. True value for this flag indicates non-graceful shutdown whereas false indicates otherwise. Defaults to false."
       }
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ConnectedVMwarevSphere/virtualMachines",
+    "apiVersion": "2022-01-10-preview",
+    "output": {
+      "$ref": "#/212"
+    },
+    "input": {
+      "$ref": "#/309"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ConnectedVMwarevSphere/virtualMachines",
+    "apiVersion": "2022-01-10-preview",
+    "output": {
+      "$ref": "#/212"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ConnectedVMwarevSphere/virtualMachines",
+    "apiVersion": "2022-01-10-preview",
+    "output": {
+      "$ref": "#/212"
+    }
   }
 ]

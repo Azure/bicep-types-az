@@ -113,6 +113,16 @@
 * **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
 * **Output**: [WebPubSubKeys](#webpubsubkeys)
 
+## Function restart (Microsoft.SignalRService/webPubSub@2024-01-01-preview)
+* **Resource**: Microsoft.SignalRService/webPubSub
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: any
+
+## Function restart (Microsoft.SignalRService/webPubSub/replicas@2024-01-01-preview)
+* **Resource**: Microsoft.SignalRService/webPubSub/replicas
+* **ApiVersion**: 2024-01-01-preview
+* **Output**: any
+
 ## CustomCertificateProperties
 ### Properties
 * **keyVaultBaseUri**: string (Required): Base uri of the KeyVault that stores certificate.

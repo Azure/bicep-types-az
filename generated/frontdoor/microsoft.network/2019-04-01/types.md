@@ -22,6 +22,23 @@
 * **properties**: [FrontendEndpointProperties](#frontendendpointproperties) (ReadOnly): Properties of the Frontend endpoint
 * **type**: 'Microsoft.Network/frontDoors/frontendEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disableHttps (Microsoft.Network/frontDoors/frontendEndpoints@2019-04-01)
+* **Resource**: Microsoft.Network/frontDoors/frontendEndpoints
+* **ApiVersion**: 2019-04-01
+* **Output**: any
+
+## Function enableHttps (Microsoft.Network/frontDoors/frontendEndpoints@2019-04-01)
+* **Resource**: Microsoft.Network/frontDoors/frontendEndpoints
+* **ApiVersion**: 2019-04-01
+* **Input**: [CustomHttpsConfiguration](#customhttpsconfiguration)
+* **Output**: any
+
+## Function purge (Microsoft.Network/frontDoors@2019-04-01)
+* **Resource**: Microsoft.Network/frontDoors
+* **ApiVersion**: 2019-04-01
+* **Input**: [PurgeParameters](#purgeparameters)
+* **Output**: any
+
 ## Function validateCustomDomain (Microsoft.Network/frontDoors@2019-04-01)
 * **Resource**: Microsoft.Network/frontDoors
 * **ApiVersion**: 2019-04-01
@@ -145,6 +162,10 @@
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status.
 * **sampleSize**: int: The number of samples to consider for load balancing decisions
 * **successfulSamplesRequired**: int: The number of samples within the sample period that must succeed
+
+## PurgeParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be purged. Can describe a file path or a wild card directory.
 
 ## ResourceTags
 ### Properties

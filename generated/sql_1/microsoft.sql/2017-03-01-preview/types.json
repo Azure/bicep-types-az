@@ -4844,6 +4844,18 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Sql/servers/jobAgents/jobs/executions",
+    "apiVersion": "2017-03-01-preview",
+    "output": {
+      "$ref": "#/361"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "JobExecution",
     "properties": {
@@ -4883,7 +4895,7 @@
     "resourceType": "Microsoft.Sql/servers/jobAgents/jobs",
     "apiVersion": "2017-03-01-preview",
     "output": {
-      "$ref": "#/361"
+      "$ref": "#/363"
     }
   },
   {
@@ -4897,6 +4909,18 @@
         "flags": 0,
         "description": "The id of the server alias that will be acquired to point to this server instead."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acquire",
+    "resourceType": "Microsoft.Sql/servers/dnsAliases",
+    "apiVersion": "2017-03-01-preview",
+    "output": {
+      "$ref": "#/361"
+    },
+    "input": {
+      "$ref": "#/365"
     }
   },
   {
@@ -4959,10 +4983,10 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2017-03-01-preview",
     "output": {
-      "$ref": "#/365"
+      "$ref": "#/368"
     },
     "input": {
-      "$ref": "#/364"
+      "$ref": "#/367"
     }
   },
   {
@@ -4976,6 +5000,18 @@
         "flags": 1,
         "description": "The target ID for the resource"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "move",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2017-03-01-preview",
+    "output": {
+      "$ref": "#/361"
+    },
+    "input": {
+      "$ref": "#/370"
     }
   },
   {
@@ -5060,7 +5096,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/370"
+          "$ref": "#/374"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -5163,10 +5199,10 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2017-03-01-preview",
     "output": {
-      "$ref": "#/369"
+      "$ref": "#/373"
     },
     "input": {
-      "$ref": "#/368"
+      "$ref": "#/372"
     }
   },
   {
@@ -5203,7 +5239,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/373"
+          "$ref": "#/377"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -5245,7 +5281,7 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2017-03-01-preview",
     "output": {
-      "$ref": "#/372"
+      "$ref": "#/376"
     }
   },
   {
@@ -5254,7 +5290,34 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2017-03-01-preview",
     "output": {
-      "$ref": "#/372"
+      "$ref": "#/376"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels",
+    "apiVersion": "2017-03-01-preview",
+    "output": {
+      "$ref": "#/361"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels",
+    "apiVersion": "2017-03-01-preview",
+    "output": {
+      "$ref": "#/361"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Sql/servers/databases/operations",
+    "apiVersion": "2017-03-01-preview",
+    "output": {
+      "$ref": "#/361"
     }
   },
   {
@@ -5268,6 +5331,18 @@
         "flags": 1,
         "description": "The last backup name to apply"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "completeRestore",
+    "resourceType": "Microsoft.Sql/locations/managedDatabaseRestoreAzureAsyncOperation",
+    "apiVersion": "2017-03-01-preview",
+    "output": {
+      "$ref": "#/361"
+    },
+    "input": {
+      "$ref": "#/383"
     }
   }
 ]

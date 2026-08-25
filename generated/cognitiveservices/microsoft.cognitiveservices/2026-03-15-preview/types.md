@@ -444,6 +444,22 @@
 * **Input**: [CheckSkuAvailabilityParameter](#checkskuavailabilityparameter)
 * **Output**: [SkuAvailabilityListResult](#skuavailabilitylistresult)
 
+## Function deleteRaiBlocklistItems (Microsoft.CognitiveServices/accounts/raiBlocklists@2026-03-15-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/raiBlocklists
+* **ApiVersion**: 2026-03-15-preview
+* **Input**: string[]
+* **Output**: any
+
+## Function disable (Microsoft.CognitiveServices/accounts/projects/applications@2026-03-15-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/projects/applications
+* **ApiVersion**: 2026-03-15-preview
+* **Output**: any
+
+## Function enable (Microsoft.CognitiveServices/accounts/projects/applications@2026-03-15-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/projects/applications
+* **ApiVersion**: 2026-03-15-preview
+* **Output**: any
+
 ## Function evaluateDeploymentPolicies (Microsoft.CognitiveServices/accounts@2026-03-15-preview)
 * **Resource**: Microsoft.CognitiveServices/accounts
 * **ApiVersion**: 2026-03-15-preview
@@ -482,10 +498,50 @@
 * **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
 * **Output**: [ApiKeys](#apikeys)
 
+## Function restart (Microsoft.CognitiveServices/accounts/computes@2026-03-15-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/computes
+* **ApiVersion**: 2026-03-15-preview
+* **Output**: any
+
+## Function restart (Microsoft.CognitiveServices/accounts/projects/workbenches@2026-03-15-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/projects/workbenches
+* **ApiVersion**: 2026-03-15-preview
+* **Output**: any
+
 ## Function resume (Microsoft.CognitiveServices/accounts/deployments@2026-03-15-preview)
 * **Resource**: Microsoft.CognitiveServices/accounts/deployments
 * **ApiVersion**: 2026-03-15-preview
 * **Output**: [Deployment](#deployment)
+
+## Function start (Microsoft.CognitiveServices/accounts/computes@2026-03-15-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/computes
+* **ApiVersion**: 2026-03-15-preview
+* **Output**: any
+
+## Function start (Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments@2026-03-15-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments
+* **ApiVersion**: 2026-03-15-preview
+* **Output**: any
+
+## Function start (Microsoft.CognitiveServices/accounts/projects/workbenches@2026-03-15-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/projects/workbenches
+* **ApiVersion**: 2026-03-15-preview
+* **Output**: any
+
+## Function stop (Microsoft.CognitiveServices/accounts/computes@2026-03-15-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/computes
+* **ApiVersion**: 2026-03-15-preview
+* **Output**: any
+
+## Function stop (Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments@2026-03-15-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments
+* **ApiVersion**: 2026-03-15-preview
+* **Output**: any
+
+## Function stop (Microsoft.CognitiveServices/accounts/projects/workbenches@2026-03-15-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/projects/workbenches
+* **ApiVersion**: 2026-03-15-preview
+* **Output**: any
 
 ## AbusePenalty
 ### Properties

@@ -864,5 +864,17 @@
     "input": {
       "$ref": "#/58"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopAllAssignments",
+    "resourceType": "Microsoft.StorageActions/storageTasks",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/75"
+    }
   }
 ]

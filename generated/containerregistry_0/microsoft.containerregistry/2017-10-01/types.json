@@ -996,6 +996,21 @@
     ]
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "importImage",
+    "resourceType": "Microsoft.ContainerRegistry/registries",
+    "apiVersion": "2017-10-01",
+    "output": {
+      "$ref": "#/86"
+    },
+    "input": {
+      "$ref": "#/78"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "RegistryListCredentialsResult",
     "properties": {
@@ -1008,7 +1023,7 @@
       },
       "passwords": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/93"
         },
         "flags": 0,
         "description": "The list of passwords for a container registry."
@@ -1021,7 +1036,7 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/90"
+          "$ref": "#/92"
         },
         "flags": 0,
         "description": "The password name."
@@ -1047,17 +1062,17 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/88"
+        "$ref": "#/90"
       },
       {
-        "$ref": "#/89"
+        "$ref": "#/91"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/87"
+      "$ref": "#/89"
     }
   },
   {
@@ -1066,7 +1081,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries",
     "apiVersion": "2017-10-01",
     "output": {
-      "$ref": "#/86"
+      "$ref": "#/88"
     }
   },
   {
@@ -1075,7 +1090,7 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/96"
+          "$ref": "#/98"
         },
         "flags": 1,
         "description": "Specifies name of the password which should be regenerated -- password or password2."
@@ -1094,10 +1109,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/94"
+        "$ref": "#/96"
       },
       {
-        "$ref": "#/95"
+        "$ref": "#/97"
       }
     ]
   },
@@ -1107,10 +1122,10 @@
     "resourceType": "Microsoft.ContainerRegistry/registries",
     "apiVersion": "2017-10-01",
     "output": {
-      "$ref": "#/86"
+      "$ref": "#/88"
     },
     "input": {
-      "$ref": "#/93"
+      "$ref": "#/95"
     }
   },
   {
@@ -1119,14 +1134,14 @@
     "properties": {
       "quarantinePolicy": {
         "type": {
-          "$ref": "#/99"
+          "$ref": "#/101"
         },
         "flags": 0,
         "description": "An object that represents quarantine policy for a container registry."
       },
       "trustPolicy": {
         "type": {
-          "$ref": "#/103"
+          "$ref": "#/105"
         },
         "flags": 0,
         "description": "An object that represents content trust policy for a container registry."
@@ -1139,7 +1154,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/102"
+          "$ref": "#/104"
         },
         "flags": 0,
         "description": "The value that indicates whether the policy is enabled or not."
@@ -1158,10 +1173,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/100"
+        "$ref": "#/102"
       },
       {
-        "$ref": "#/101"
+        "$ref": "#/103"
       },
       {
         "$ref": "#/2"
@@ -1174,14 +1189,14 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/105"
+          "$ref": "#/107"
         },
         "flags": 0,
         "description": "The type of trust policy."
       },
       "status": {
         "type": {
-          "$ref": "#/108"
+          "$ref": "#/110"
         },
         "flags": 0,
         "description": "The value that indicates whether the policy is enabled or not."
@@ -1196,7 +1211,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/104"
+        "$ref": "#/106"
       },
       {
         "$ref": "#/2"
@@ -1215,10 +1230,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/106"
+        "$ref": "#/108"
       },
       {
-        "$ref": "#/107"
+        "$ref": "#/109"
       },
       {
         "$ref": "#/2"
@@ -1231,10 +1246,10 @@
     "resourceType": "Microsoft.ContainerRegistry/registries",
     "apiVersion": "2017-10-01",
     "output": {
-      "$ref": "#/98"
+      "$ref": "#/100"
     },
     "input": {
-      "$ref": "#/98"
+      "$ref": "#/100"
     }
   },
   {
@@ -1256,7 +1271,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/webhooks",
     "apiVersion": "2017-10-01",
     "output": {
-      "$ref": "#/110"
+      "$ref": "#/112"
     }
   },
   {
@@ -1272,7 +1287,7 @@
       },
       "customHeaders": {
         "type": {
-          "$ref": "#/113"
+          "$ref": "#/115"
         },
         "flags": 0,
         "description": "Custom headers that will be added to the webhook notifications."
@@ -1293,7 +1308,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/webhooks",
     "apiVersion": "2017-10-01",
     "output": {
-      "$ref": "#/112"
+      "$ref": "#/114"
     }
   },
   {
@@ -1302,7 +1317,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/127"
+          "$ref": "#/129"
         },
         "flags": 0,
         "description": "The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events."
@@ -1322,14 +1337,14 @@
     "properties": {
       "eventRequestMessage": {
         "type": {
-          "$ref": "#/117"
+          "$ref": "#/119"
         },
         "flags": 0,
         "description": "The event request message sent to the service URI."
       },
       "eventResponseMessage": {
         "type": {
-          "$ref": "#/125"
+          "$ref": "#/127"
         },
         "flags": 0,
         "description": "The event response message received from the service URI."
@@ -1349,14 +1364,14 @@
     "properties": {
       "content": {
         "type": {
-          "$ref": "#/118"
+          "$ref": "#/120"
         },
         "flags": 0,
         "description": "The content of the event request message."
       },
       "headers": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/126"
         },
         "flags": 0,
         "description": "The headers of the event request message."
@@ -1411,28 +1426,28 @@
       },
       "target": {
         "type": {
-          "$ref": "#/119"
+          "$ref": "#/121"
         },
         "flags": 0,
         "description": "The target of the event."
       },
       "request": {
         "type": {
-          "$ref": "#/121"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "The request that generated the event."
       },
       "actor": {
         "type": {
-          "$ref": "#/122"
+          "$ref": "#/124"
         },
         "flags": 0,
         "description": "The agent that initiated the event. For most situations, this could be from the authorization context of the request."
       },
       "source": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/125"
         },
         "flags": 0,
         "description": "The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it."
@@ -1452,7 +1467,7 @@
       },
       "size": {
         "type": {
-          "$ref": "#/120"
+          "$ref": "#/122"
         },
         "flags": 0,
         "description": "The number of bytes of the content. Same as Length field."
@@ -1466,7 +1481,7 @@
       },
       "length": {
         "type": {
-          "$ref": "#/120"
+          "$ref": "#/122"
         },
         "flags": 0,
         "description": "The number of bytes of the content. Same as Size field."
@@ -1606,7 +1621,7 @@
       },
       "headers": {
         "type": {
-          "$ref": "#/126"
+          "$ref": "#/128"
         },
         "flags": 0,
         "description": "The headers of the event response message."
@@ -1645,7 +1660,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/116"
+      "$ref": "#/118"
     }
   },
   {
@@ -1654,7 +1669,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/webhooks",
     "apiVersion": "2017-10-01",
     "output": {
-      "$ref": "#/115"
+      "$ref": "#/117"
     }
   }
 ]

@@ -5701,12 +5701,33 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/522"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "connect",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/522"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CatalogResourceValidationErrorDetails",
     "properties": {
       "errors": {
         "type": {
-          "$ref": "#/523"
+          "$ref": "#/526"
         },
         "flags": 2,
         "description": "Errors associated with resources synchronized from the catalog."
@@ -5725,7 +5746,7 @@
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/devboxdefinitions",
     "apiVersion": "2023-10-01-preview",
     "output": {
-      "$ref": "#/522"
+      "$ref": "#/525"
     }
   },
   {
@@ -5734,13 +5755,31 @@
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/tasks",
     "apiVersion": "2023-10-01-preview",
     "output": {
-      "$ref": "#/522"
+      "$ref": "#/525"
     }
   },
   {
     "$type": "ResourceFunctionType",
     "name": "getErrorDetails",
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/525"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runHealthChecks",
+    "resourceType": "Microsoft.DevCenter/projects/pools",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/522"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runHealthChecks",
+    "resourceType": "Microsoft.DevCenter/networkConnections",
     "apiVersion": "2023-10-01-preview",
     "output": {
       "$ref": "#/522"

@@ -62,6 +62,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function upgradeExtensions (Microsoft.HybridCompute/machines@2021-06-10-preview)
+* **Resource**: Microsoft.HybridCompute/machines
+* **ApiVersion**: 2021-06-10-preview
+* **Input**: [MachineExtensionUpgrade](#machineextensionupgrade)
+* **Output**: any
+
 ## DetectedProperties
 ### Properties
 ### Additional Properties
@@ -79,6 +85,15 @@
 * **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
 * **message**: string (ReadOnly): The error message.
 * **target**: string (ReadOnly): The error target.
+
+## ExtensionTarget
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ExtensionTargetProperties](#extensiontargetproperties)
+
+## ExtensionTargetProperties
+### Properties
+* **targetVersion**: string: Properties for the specified Extension to Upgrade.
 
 ## HybridComputePrivateLinkScopeProperties
 ### Properties
@@ -126,6 +141,10 @@
 * **settings**: any: Json formatted public settings for the extension.
 * **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string: Specifies the version of the script handler.
+
+## MachineExtensionUpgrade
+### Properties
+* **extensionTargets**: [ExtensionTarget](#extensiontarget): Describes the Extension Target Properties.
 
 ## MachineProperties
 ### Properties

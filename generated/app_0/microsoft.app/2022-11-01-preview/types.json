@@ -7423,19 +7423,55 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.App/jobs/executions",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deactivate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "EnvironmentAuthToken",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/469"
+          "$ref": "#/473"
         },
         "flags": 0,
         "description": "Environment auth token resource specific properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/470"
+          "$ref": "#/474"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -7511,7 +7547,7 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2022-11-01-preview",
     "output": {
-      "$ref": "#/468"
+      "$ref": "#/472"
     }
   },
   {

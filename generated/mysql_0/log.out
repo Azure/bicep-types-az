@@ -17,11 +17,11 @@ warning | Modeler/MissingType | The schema 'components·1fbjnm6·schemas·operat
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/preview/2025-12-01-preview/openapi.json#/components/schemas/components·1fbjnm6·schemas·operationstatusextendedresult·properties·properties·additionalproperties
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/checkNameAvailability': Unable to find type segments
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -34,11 +34,11 @@ warning | Modeler/MissingType | The schema 'components·1fbjnm6·schemas·operat
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/preview/2025-06-01-preview/openapi.json#/components/schemas/components·1fbjnm6·schemas·operationstatusextendedresult·properties·properties·additionalproperties
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/checkNameAvailability': Unable to find type segments
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -51,11 +51,11 @@ warning | Modeler/MissingType | The schema 'components·1fbjnm6·schemas·operat
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/stable/2024-12-30/openapi.json#/components/schemas/components·1fbjnm6·schemas·operationstatusextendedresult·properties·properties·additionalproperties
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/checkNameAvailability': Unable to find type segments
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -68,11 +68,11 @@ warning | Modeler/MissingType | The schema 'components·1fbjnm6·schemas·operat
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/preview/2024-12-01-preview/openapi.json#/components/schemas/components·1fbjnm6·schemas·operationstatusextendedresult·properties·properties·additionalproperties
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/checkNameAvailability': Unable to find type segments
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -81,16 +81,16 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:365" => "#/components/schemas/schemas:504"
+  - properties.id.$ref: "#/components/schemas/schemas:365" => "#/components/schemas/schemas:498"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData: <none> => {"$ref":"#/components/schemas/schemas:341","type":"object","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (7 differences):
@@ -100,18 +100,18 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (7 d
   - properties.target: {"$ref":"#/components/schemas/schemas:407","description":"The error target.","readOnly":true} => <none>
   - properties.details: {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:408","description":"The error details.","readOnly":true} => <none>
   - properties.additionalInfo: {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:409","description":"The error additional info.","readOnly":true} => <none>
-  - properties.error: <none> => {"$ref":"#/components/schemas/schemas:462","description":"The error object."}
+  - properties.error: <none> => {"$ref":"#/components/schemas/schemas:456","description":"The error object."}
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -120,11 +120,11 @@ warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/pr
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -145,34 +145,22 @@ warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/pr
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/checkNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -180,32 +168,11 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -213,11 +180,32 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
-warning | Skipping resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -225,10 +213,22 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
+warning | Resource action resetGtid under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/resetGtid' has no response schema. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/checkNameAvailability': Unable to find type segments
+warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -278,9 +278,9 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/preview/2020-07-01-preview/mysql.json:2524:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBForMySql/checkNameAvailability': Unable to find type segments
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBForMySql/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBForMySql/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBForMySql/flexibleServers/{serverName}/stop': failed to find a response schema
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBForMySql/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBForMySql/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBForMySql/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -288,10 +288,10 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/preview/2021-05-01-preview/mysql.json:2538:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -301,7 +301,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.DBforMySQL/getPrivateDnsZoneSuffix': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Skipping resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover': failed to find a response schema
-warning | Skipping resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart': failed to find a response schema
-warning | Skipping resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start': failed to find a response schema
-warning | Skipping resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop': failed to find a response schema
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/failover' has no response schema. Returning 'any'.
+warning | Resource action restart under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/restart' has no response schema. Returning 'any'.
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/stop' has no response schema. Returning 'any'.

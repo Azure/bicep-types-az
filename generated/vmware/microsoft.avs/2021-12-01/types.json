@@ -4693,6 +4693,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "rotateVcenterPassword",
+    "resourceType": "Microsoft.AVS/privateClouds",
+    "apiVersion": "2021-12-01",
+    "output": {
+      "$ref": "#/317"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateNsxtPassword",
+    "resourceType": "Microsoft.AVS/privateClouds",
+    "apiVersion": "2021-12-01",
+    "output": {
+      "$ref": "#/317"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AdminCredentials",
     "properties": {
@@ -4732,7 +4750,54 @@
     "resourceType": "Microsoft.AVS/privateClouds",
     "apiVersion": "2021-12-01",
     "output": {
-      "$ref": "#/382"
+      "$ref": "#/384"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualMachineRestrictMovement",
+    "properties": {
+      "restrictMovement": {
+        "type": {
+          "$ref": "#/389"
+        },
+        "flags": 0,
+        "description": "Whether VM DRS-driven movement is restricted (enabled) or not (disabled)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/387"
+      },
+      {
+        "$ref": "#/388"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restrictMovement",
+    "resourceType": "Microsoft.AVS/privateClouds/clusters/virtualMachines",
+    "apiVersion": "2021-12-01",
+    "output": {
+      "$ref": "#/317"
+    },
+    "input": {
+      "$ref": "#/386"
     }
   },
   {
@@ -4755,16 +4820,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/384"
+        "$ref": "#/391"
       },
       {
-        "$ref": "#/385"
+        "$ref": "#/392"
       },
       {
-        "$ref": "#/386"
+        "$ref": "#/393"
       },
       {
-        "$ref": "#/387"
+        "$ref": "#/394"
       },
       {
         "$ref": "#/0"
@@ -4774,7 +4839,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/388"
+      "$ref": "#/395"
     }
   },
   {
@@ -4817,10 +4882,10 @@
     "resourceType": "Microsoft.AVS/privateClouds/scriptExecutions",
     "apiVersion": "2021-12-01",
     "output": {
-      "$ref": "#/390"
+      "$ref": "#/397"
     },
     "input": {
-      "$ref": "#/389"
+      "$ref": "#/396"
     }
   }
 ]

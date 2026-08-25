@@ -798,5 +798,35 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.HanaOnAzure/hanaInstances",
+    "apiVersion": "2017-11-03-preview",
+    "output": {
+      "$ref": "#/80"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.HanaOnAzure/hanaInstances",
+    "apiVersion": "2017-11-03-preview",
+    "output": {
+      "$ref": "#/80"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "shutdown",
+    "resourceType": "Microsoft.HanaOnAzure/hanaInstances",
+    "apiVersion": "2017-11-03-preview",
+    "output": {
+      "$ref": "#/80"
+    }
   }
 ]

@@ -4278,5 +4278,32 @@
     "output": {
       "$ref": "#/267"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-01-01-preview",
+    "output": {
+      "$ref": "#/131"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deactivate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-01-01-preview",
+    "output": {
+      "$ref": "#/131"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-01-01-preview",
+    "output": {
+      "$ref": "#/131"
+    }
   }
 ]

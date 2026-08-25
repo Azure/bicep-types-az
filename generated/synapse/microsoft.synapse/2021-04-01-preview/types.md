@@ -522,6 +522,26 @@
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Resource properties.
 * **type**: 'Microsoft.Synapse/workspaces/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disable (Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2021-04-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
+
+## Function disableInteractiveQuery (Microsoft.Synapse/workspaces/integrationRuntimes@2021-04-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
+
+## Function enable (Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2021-04-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
+
+## Function enableInteractiveQuery (Microsoft.Synapse/workspaces/integrationRuntimes@2021-04-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
+
 ## Function export (Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans@2021-04-01-preview)
 * **Resource**: Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans
 * **ApiVersion**: 2021-04-01-preview
@@ -542,6 +562,11 @@
 * **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
 * **ApiVersion**: 2021-04-01-preview
 * **Output**: [IntegrationRuntimeStatusResponse](#integrationruntimestatusresponse)
+
+## Function initiateScan (Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans@2021-04-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
 
 ## Function ipAddress (Microsoft.Synapse/workspaces/integrationRuntimes/nodes@2021-04-01-preview)
 * **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes/nodes
@@ -597,10 +622,30 @@
 * **ApiVersion**: 2021-04-01-preview
 * **Output**: any
 
+## Function revalidate (Microsoft.Synapse/workspaces/encryptionProtector@2021-04-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/encryptionProtector
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
+
 ## Function start (Microsoft.Synapse/workspaces/integrationRuntimes@2021-04-01-preview)
 * **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
 * **ApiVersion**: 2021-04-01-preview
 * **Output**: [IntegrationRuntimeStatusResponse](#integrationruntimestatusresponse)
+
+## Function stop (Microsoft.Synapse/workspaces/integrationRuntimes@2021-04-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
+
+## Function syncCredentials (Microsoft.Synapse/workspaces/integrationRuntimes@2021-04-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
+
+## Function upgrade (Microsoft.Synapse/workspaces/integrationRuntimes@2021-04-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
 
 ## AadAdminProperties
 ### Properties

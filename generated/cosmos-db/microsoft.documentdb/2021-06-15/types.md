@@ -317,6 +317,12 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function failoverPriorityChange (Microsoft.DocumentDB/databaseAccounts@2021-06-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2021-06-15
+* **Input**: [FailoverPolicies](#failoverpolicies)
+* **Output**: any
+
 ## Function listConnectionInfo (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2021-06-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
 * **ApiVersion**: 2021-06-15
@@ -422,16 +428,44 @@
 * **ApiVersion**: 2021-06-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
+## Function offlineRegion (Microsoft.DocumentDB/databaseAccounts@2021-06-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2021-06-15
+* **Input**: [RegionForOnlineOffline](#regionforonlineoffline)
+* **Output**: any
+
+## Function onlineRegion (Microsoft.DocumentDB/databaseAccounts@2021-06-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2021-06-15
+* **Input**: [RegionForOnlineOffline](#regionforonlineoffline)
+* **Output**: any
+
 ## Function readonlykeys (Microsoft.DocumentDB/databaseAccounts@2021-06-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts
 * **ApiVersion**: 2021-06-15
 * **Output**: [DatabaseAccountListReadOnlyKeysResult](#databaseaccountlistreadonlykeysresult)
+
+## Function regenerateAuthToken (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2021-06-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
+* **ApiVersion**: 2021-06-15
+* **Output**: any
+
+## Function regenerateKey (Microsoft.DocumentDB/databaseAccounts@2021-06-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2021-06-15
+* **Input**: [DatabaseAccountRegenerateKeyParameters](#databaseaccountregeneratekeyparameters)
+* **Output**: any
 
 ## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2021-06-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
 * **ApiVersion**: 2021-06-15
 * **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
 * **Output**: [BackupInformation](#backupinformation)
+
+## Function start (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2021-06-15)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
+* **ApiVersion**: 2021-06-15
+* **Output**: any
 
 ## AnalyticalStorageConfiguration
 ### Properties
@@ -684,6 +718,10 @@
 * **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
 
+## DatabaseAccountRegenerateKeyParameters
+### Properties
+* **keyKind**: 'primary' | 'primaryReadonly' | 'secondary' | 'secondaryReadonly' | string (Required): The access key to regenerate.
+
 ## DatabaseRestoreResource
 ### Properties
 * **collectionNames**: string[]: The names of the collections available for restore.
@@ -692,6 +730,10 @@
 ## ExcludedPath
 ### Properties
 * **path**: string: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+
+## FailoverPolicies
+### Properties
+* **failoverPolicies**: [FailoverPolicy](#failoverpolicy)[] (Required): List of failover policies.
 
 ## FailoverPolicy
 ### Properties
@@ -863,6 +905,10 @@
 * **actionsRequired**: string (ReadOnly): Any action that is required beyond basic workflow (approve/ reject/ disconnect)
 * **description**: string: The private link service connection description.
 * **status**: string: The private link service connection status.
+
+## RegionForOnlineOffline
+### Properties
+* **region**: string (Required): Cosmos DB region, with spaces between words and each word capitalized.
 
 ## RestoreParameters
 ### Properties

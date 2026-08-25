@@ -315,6 +315,12 @@
 * **ApiVersion**: 2023-11-01
 * **Output**: [IncidentAlertList](#incidentalertlist)
 
+## Function appendTags (Microsoft.SecurityInsights/threatIntelligence/indicators@2023-11-01)
+* **Resource**: Microsoft.SecurityInsights/threatIntelligence/indicators
+* **ApiVersion**: 2023-11-01
+* **Input**: [ThreatIntelligenceAppendTags](#threatintelligenceappendtags)
+* **Output**: any
+
 ## Function bookmarks (Microsoft.SecurityInsights/incidents@2023-11-01)
 * **Resource**: Microsoft.SecurityInsights/incidents
 * **ApiVersion**: 2023-11-01
@@ -1511,6 +1517,10 @@
 * **threatDescription**: string (ReadOnly): Threat description (free text)
 * **threatName**: string (ReadOnly): Threat name (e.g. "Jedobot malware")
 * **threatType**: string (ReadOnly): Threat type (e.g. "Botnet")
+
+## ThreatIntelligenceAppendTags
+### Properties
+* **threatIntelligenceTags**: string[]: List of tags to be appended.
 
 ## ThreatIntelligenceExternalReference
 ### Properties

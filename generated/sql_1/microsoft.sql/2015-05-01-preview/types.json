@@ -3694,6 +3694,15 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "revalidate",
+    "resourceType": "Microsoft.Sql/servers/encryptionProtector",
+    "apiVersion": "2015-05-01-preview",
+    "output": {
+      "$ref": "#/265"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "FailoverGroup",
     "properties": {
@@ -3706,7 +3715,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/278"
+          "$ref": "#/279"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -3755,7 +3764,7 @@
     "resourceType": "Microsoft.Sql/servers/failoverGroups",
     "apiVersion": "2015-05-01-preview",
     "output": {
-      "$ref": "#/277"
+      "$ref": "#/278"
     }
   },
   {
@@ -3764,7 +3773,7 @@
     "resourceType": "Microsoft.Sql/servers/failoverGroups",
     "apiVersion": "2015-05-01-preview",
     "output": {
-      "$ref": "#/277"
+      "$ref": "#/278"
     }
   },
   {
@@ -3786,7 +3795,43 @@
     "resourceType": "Microsoft.Sql/servers/syncAgents",
     "apiVersion": "2015-05-01-preview",
     "output": {
-      "$ref": "#/281"
+      "$ref": "#/282"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshHubSchema",
+    "resourceType": "Microsoft.Sql/servers/databases/syncGroups",
+    "apiVersion": "2015-05-01-preview",
+    "output": {
+      "$ref": "#/265"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelSync",
+    "resourceType": "Microsoft.Sql/servers/databases/syncGroups",
+    "apiVersion": "2015-05-01-preview",
+    "output": {
+      "$ref": "#/265"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "triggerSync",
+    "resourceType": "Microsoft.Sql/servers/databases/syncGroups",
+    "apiVersion": "2015-05-01-preview",
+    "output": {
+      "$ref": "#/265"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSchema",
+    "resourceType": "Microsoft.Sql/servers/databases/syncGroups/syncMembers",
+    "apiVersion": "2015-05-01-preview",
+    "output": {
+      "$ref": "#/265"
     }
   }
 ]

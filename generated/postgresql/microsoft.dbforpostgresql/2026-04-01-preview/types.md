@@ -211,6 +211,17 @@
 * **Input**: [MaintenanceEventRescheduleRequest](#maintenanceeventreschedulerequest)
 * **Output**: [MaintenanceEventActionResponse](#maintenanceeventactionresponse)
 
+## Function restart (Microsoft.DBforPostgreSQL/flexibleServers@2026-04-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2026-04-01-preview
+* **Input**: [RestartParameter](#restartparameter)
+* **Output**: any
+
+## Function start (Microsoft.DBforPostgreSQL/flexibleServers@2026-04-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2026-04-01-preview
+* **Output**: any
+
 ## Function startLtrBackup (Microsoft.DBforPostgreSQL/flexibleServers@2026-04-01-preview)
 * **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
 * **ApiVersion**: 2026-04-01-preview
@@ -222,6 +233,11 @@
 * **ApiVersion**: 2026-04-01-preview
 * **Input**: [StartMajorVersionUpgradePrecheckRequest](#startmajorversionupgradeprecheckrequest)
 * **Output**: [StartMajorVersionUpgradePrecheckResponse](#startmajorversionupgradeprecheckresponse)
+
+## Function stop (Microsoft.DBforPostgreSQL/flexibleServers@2026-04-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2026-04-01-preview
+* **Output**: any
 
 ## AdminCredentials
 ### Properties
@@ -571,6 +587,11 @@
 * **promoteOption**: 'Forced' | 'Planned' | string (WriteOnly): Data synchronization option to use when processing the operation specified in the promoteMode property. This property is write only.
 * **replicationState**: 'Active' | 'Broken' | 'Catchup' | 'Provisioning' | 'Reconfiguring' | 'Updating' | string (ReadOnly): Indicates the replication state of a read replica. This property is returned only when the target server is a read replica. Possible  values are Active, Broken, Catchup, Provisioning, Reconfiguring, and Updating
 * **role**: 'AsyncReplica' | 'GeoAsyncReplica' | 'None' | 'Primary' | string: Role of the server in a replication set.
+
+## RestartParameter
+### Properties
+* **failoverMode**: 'ForcedFailover' | 'ForcedSwitchover' | 'PlannedFailover' | 'PlannedSwitchover' | string: Failover mode.
+* **restartWithFailover**: bool: Indicates if restart the PostgreSQL database engine should failover or switch over from primary to standby. This only works if server has high availability enabled.
 
 ## ServerProperties
 ### Properties

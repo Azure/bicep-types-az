@@ -22,6 +22,11 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.ContainerRegistry/registries/runs@2018-09-01)
+* **Resource**: Microsoft.ContainerRegistry/registries/runs
+* **ApiVersion**: 2018-09-01
+* **Output**: any
+
 ## Function listBuildSourceUploadUrl (Microsoft.ContainerRegistry/registries@2018-09-01)
 * **Resource**: Microsoft.ContainerRegistry/registries
 * **ApiVersion**: 2018-09-01

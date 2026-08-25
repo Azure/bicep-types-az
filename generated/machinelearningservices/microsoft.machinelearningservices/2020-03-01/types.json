@@ -2043,12 +2043,24 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resyncKeys",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces",
+    "apiVersion": "2020-03-01",
+    "output": {
+      "$ref": "#/132"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "QuotaUpdateParameters",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/138"
         },
         "flags": 0,
         "description": "The list for update quota."
@@ -2082,7 +2094,7 @@
       },
       "unit": {
         "type": {
-          "$ref": "#/135"
+          "$ref": "#/137"
         },
         "flags": 0,
         "description": "An enum describing the unit of quota measurement."
@@ -2097,7 +2109,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/134"
+        "$ref": "#/136"
       },
       {
         "$ref": "#/0"
@@ -2107,7 +2119,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/133"
+      "$ref": "#/135"
     }
   },
   {
@@ -2116,7 +2128,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/152"
         },
         "flags": 2,
         "description": "The list of workspace quota update result."
@@ -2157,14 +2169,14 @@
       },
       "unit": {
         "type": {
-          "$ref": "#/140"
+          "$ref": "#/142"
         },
         "flags": 2,
         "description": "An enum describing the unit of quota measurement."
       },
       "status": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/151"
         },
         "flags": 0,
         "description": "Status of update workspace quota."
@@ -2179,7 +2191,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/139"
+        "$ref": "#/141"
       },
       {
         "$ref": "#/0"
@@ -2222,12 +2234,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/141"
-      },
-      {
-        "$ref": "#/142"
-      },
-      {
         "$ref": "#/143"
       },
       {
@@ -2246,6 +2252,12 @@
         "$ref": "#/148"
       },
       {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -2253,7 +2265,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/138"
+      "$ref": "#/140"
     }
   },
   {
@@ -2262,10 +2274,10 @@
     "resourceType": "Microsoft.MachineLearningServices/locations",
     "apiVersion": "2020-03-01",
     "output": {
-      "$ref": "#/137"
+      "$ref": "#/139"
     },
     "input": {
-      "$ref": "#/132"
+      "$ref": "#/134"
     }
   },
   {
@@ -2274,14 +2286,14 @@
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/161"
+          "$ref": "#/163"
         },
         "flags": 2,
         "description": "The collection of returned AmlCompute nodes details."
       },
       "computeType": {
         "type": {
-          "$ref": "#/169"
+          "$ref": "#/171"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -2329,7 +2341,7 @@
       },
       "nodeState": {
         "type": {
-          "$ref": "#/160"
+          "$ref": "#/162"
         },
         "flags": 2,
         "description": "State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted."
@@ -2371,12 +2383,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/154"
-      },
-      {
-        "$ref": "#/155"
-      },
-      {
         "$ref": "#/156"
       },
       {
@@ -2389,6 +2395,12 @@
         "$ref": "#/159"
       },
       {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -2396,7 +2408,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/153"
+      "$ref": "#/155"
     }
   },
   {
@@ -2431,12 +2443,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/162"
-      },
-      {
-        "$ref": "#/163"
-      },
-      {
         "$ref": "#/164"
       },
       {
@@ -2452,6 +2458,12 @@
         "$ref": "#/168"
       },
       {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -2462,7 +2474,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2020-03-01",
     "output": {
-      "$ref": "#/152"
+      "$ref": "#/154"
     }
   },
   {
@@ -2472,13 +2484,13 @@
     "baseProperties": {},
     "elements": {
       "AKS": {
-        "$ref": "#/172"
-      },
-      "Databricks": {
         "$ref": "#/174"
       },
-      "VirtualMachine": {
+      "Databricks": {
         "$ref": "#/176"
+      },
+      "VirtualMachine": {
+        "$ref": "#/178"
       }
     }
   },
@@ -2509,7 +2521,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/173"
+          "$ref": "#/175"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -2533,7 +2545,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/175"
+          "$ref": "#/177"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -2557,7 +2569,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/177"
+          "$ref": "#/179"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -2574,7 +2586,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2020-03-01",
     "output": {
-      "$ref": "#/171"
+      "$ref": "#/173"
     }
   }
 ]

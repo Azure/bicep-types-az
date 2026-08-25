@@ -49,6 +49,11 @@
 * **ApiVersion**: 2022-08-01-preview
 * **Output**: [AlertOperationResult](#alertoperationresult)
 
+## Function remediate (Microsoft.Authorization/roleManagementAlerts/alertIncidents@2022-08-01-preview)
+* **Resource**: Microsoft.Authorization/roleManagementAlerts/alertIncidents
+* **ApiVersion**: 2022-08-01-preview
+* **Output**: any
+
 ## AlertConfiguration
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"

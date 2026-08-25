@@ -25558,6 +25558,33 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/45"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "PendingUploadRequestDto",
     "properties": {
@@ -25570,7 +25597,7 @@
       },
       "pendingUploadType": {
         "type": {
-          "$ref": "#/1952"
+          "$ref": "#/1955"
         },
         "flags": 0,
         "description": "TemporaryBlobReference is the only supported type"
@@ -25589,10 +25616,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1950"
+        "$ref": "#/1953"
       },
       {
-        "$ref": "#/1951"
+        "$ref": "#/1954"
       },
       {
         "$ref": "#/0"
@@ -25605,7 +25632,7 @@
     "properties": {
       "blobReferenceForConsumption": {
         "type": {
-          "$ref": "#/1954"
+          "$ref": "#/1957"
         },
         "flags": 0,
         "description": "Container level read, write, list SAS"
@@ -25619,7 +25646,7 @@
       },
       "pendingUploadType": {
         "type": {
-          "$ref": "#/1960"
+          "$ref": "#/1963"
         },
         "flags": 0,
         "description": "TemporaryBlobReference is the only supported type"
@@ -25639,7 +25666,7 @@
       },
       "credential": {
         "type": {
-          "$ref": "#/1955"
+          "$ref": "#/1958"
         },
         "flags": 0,
         "description": "Credential info to access storage account"
@@ -25660,7 +25687,7 @@
     "baseProperties": {},
     "elements": {
       "SAS": {
-        "$ref": "#/1956"
+        "$ref": "#/1959"
       }
     }
   },
@@ -25677,7 +25704,7 @@
       },
       "credentialType": {
         "type": {
-          "$ref": "#/1957"
+          "$ref": "#/1960"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -25700,10 +25727,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1958"
+        "$ref": "#/1961"
       },
       {
-        "$ref": "#/1959"
+        "$ref": "#/1962"
       },
       {
         "$ref": "#/0"
@@ -25716,10 +25743,10 @@
     "resourceType": "Microsoft.MachineLearningServices/registries/codes/versions",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/1953"
+      "$ref": "#/1956"
     },
     "input": {
-      "$ref": "#/1949"
+      "$ref": "#/1952"
     }
   },
   {
@@ -25728,10 +25755,10 @@
     "resourceType": "Microsoft.MachineLearningServices/registries/data/versions",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/1953"
+      "$ref": "#/1956"
     },
     "input": {
-      "$ref": "#/1949"
+      "$ref": "#/1952"
     }
   },
   {
@@ -25740,10 +25767,10 @@
     "resourceType": "Microsoft.MachineLearningServices/registries/models/versions",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/1953"
+      "$ref": "#/1956"
     },
     "input": {
-      "$ref": "#/1949"
+      "$ref": "#/1952"
     }
   },
   {
@@ -25784,14 +25811,50 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "publish",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/codes/versions",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/45"
+    },
+    "input": {
+      "$ref": "#/1968"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "startPendingUpload",
     "resourceType": "Microsoft.MachineLearningServices/workspaces/codes/versions",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/1953"
+      "$ref": "#/1956"
     },
     "input": {
-      "$ref": "#/1949"
+      "$ref": "#/1952"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "publish",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/components/versions",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/45"
+    },
+    "input": {
+      "$ref": "#/1968"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "publish",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/data/versions",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/45"
+    },
+    "input": {
+      "$ref": "#/1968"
     }
   },
   {
@@ -25801,16 +25864,16 @@
     "baseProperties": {},
     "elements": {
       "AccountKey": {
-        "$ref": "#/1968"
+        "$ref": "#/1974"
       },
       "Certificate": {
-        "$ref": "#/1970"
+        "$ref": "#/1976"
       },
       "Sas": {
-        "$ref": "#/1972"
+        "$ref": "#/1978"
       },
       "ServicePrincipal": {
-        "$ref": "#/1974"
+        "$ref": "#/1980"
       }
     }
   },
@@ -25827,7 +25890,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1969"
+          "$ref": "#/1975"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -25851,7 +25914,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1971"
+          "$ref": "#/1977"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -25875,7 +25938,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1973"
+          "$ref": "#/1979"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -25899,7 +25962,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1975"
+          "$ref": "#/1981"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -25916,7 +25979,19 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/datastores",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/1967"
+      "$ref": "#/1973"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "publish",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/environments/versions",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/45"
+    },
+    "input": {
+      "$ref": "#/1968"
     }
   },
   {
@@ -25925,7 +26000,7 @@
     "properties": {
       "dataAvailabilityStatus": {
         "type": {
-          "$ref": "#/1983"
+          "$ref": "#/1990"
         },
         "flags": 0,
         "description": "Specified the data availability status that you want to backfill"
@@ -25946,7 +26021,7 @@
       },
       "featureWindow": {
         "type": {
-          "$ref": "#/1984"
+          "$ref": "#/1991"
         },
         "flags": 0,
         "description": "Specifies the backfill feature window to be materialized"
@@ -25960,7 +26035,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1985"
+          "$ref": "#/1992"
         },
         "flags": 0,
         "description": "Specifies the properties"
@@ -25974,14 +26049,14 @@
       },
       "sparkConfiguration": {
         "type": {
-          "$ref": "#/1986"
+          "$ref": "#/1993"
         },
         "flags": 0,
         "description": "Specifies the spark compute settings"
       },
       "tags": {
         "type": {
-          "$ref": "#/1987"
+          "$ref": "#/1994"
         },
         "flags": 0,
         "description": "Specifies the tags"
@@ -26008,16 +26083,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1978"
+        "$ref": "#/1985"
       },
       {
-        "$ref": "#/1979"
+        "$ref": "#/1986"
       },
       {
-        "$ref": "#/1980"
+        "$ref": "#/1987"
       },
       {
-        "$ref": "#/1981"
+        "$ref": "#/1988"
       },
       {
         "$ref": "#/0"
@@ -26027,7 +26102,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1982"
+      "$ref": "#/1989"
     }
   },
   {
@@ -26080,7 +26155,7 @@
     "properties": {
       "jobIds": {
         "type": {
-          "$ref": "#/1989"
+          "$ref": "#/1996"
         },
         "flags": 0,
         "description": "List of jobs submitted as part of the backfill request."
@@ -26099,10 +26174,31 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/featuresets/versions",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/1988"
+      "$ref": "#/1995"
     },
     "input": {
-      "$ref": "#/1977"
+      "$ref": "#/1984"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/jobs",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "publish",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/models/versions",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/45"
+    },
+    "input": {
+      "$ref": "#/1968"
     }
   },
   {
@@ -26120,7 +26216,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/1995"
+          "$ref": "#/2004"
         },
         "flags": 1,
         "description": "[Required] Specification for which type of key to generate. Primary or Secondary."
@@ -26146,15 +26242,27 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1993"
+        "$ref": "#/2002"
       },
       {
-        "$ref": "#/1994"
+        "$ref": "#/2003"
       },
       {
         "$ref": "#/0"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces/onlineEndpoints",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/45"
+    },
+    "input": {
+      "$ref": "#/2001"
+    }
   },
   {
     "$type": "ObjectType",
@@ -26196,7 +26304,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/onlineEndpoints",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/1996"
+      "$ref": "#/2006"
     }
   },
   {
@@ -26205,7 +26313,7 @@
     "properties": {
       "containerType": {
         "type": {
-          "$ref": "#/2001"
+          "$ref": "#/2011"
         },
         "flags": 0,
         "description": "The type of container to retrieve logs from."
@@ -26231,10 +26339,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1999"
+        "$ref": "#/2009"
       },
       {
-        "$ref": "#/2000"
+        "$ref": "#/2010"
       },
       {
         "$ref": "#/0"
@@ -26260,10 +26368,10 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/2002"
+      "$ref": "#/2012"
     },
     "input": {
-      "$ref": "#/1998"
+      "$ref": "#/2008"
     }
   },
   {
@@ -26284,7 +26392,7 @@
       "$ref": "#/462"
     },
     "input": {
-      "$ref": "#/1992"
+      "$ref": "#/2001"
     }
   },
   {
@@ -26321,7 +26429,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/2007"
+          "$ref": "#/2017"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -26377,10 +26485,10 @@
     "resourceType": "Microsoft.MachineLearningServices/registries",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/2006"
+      "$ref": "#/2016"
     },
     "input": {
-      "$ref": "#/2006"
+      "$ref": "#/2016"
     }
   },
   {
@@ -26389,7 +26497,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/2010"
+          "$ref": "#/2020"
         },
         "flags": 0,
         "description": "Value of Parameters"
@@ -26402,63 +26510,63 @@
     "properties": {
       "udr": {
         "type": {
-          "$ref": "#/2011"
+          "$ref": "#/2021"
         },
         "flags": 0,
         "description": "Setting for diagnosing user defined routing"
       },
       "nsg": {
         "type": {
-          "$ref": "#/2012"
+          "$ref": "#/2022"
         },
         "flags": 0,
         "description": "Setting for diagnosing network security group"
       },
       "resourceLock": {
         "type": {
-          "$ref": "#/2013"
+          "$ref": "#/2023"
         },
         "flags": 0,
         "description": "Setting for diagnosing resource lock"
       },
       "dnsResolution": {
         "type": {
-          "$ref": "#/2014"
+          "$ref": "#/2024"
         },
         "flags": 0,
         "description": "Setting for diagnosing dns resolution"
       },
       "storageAccount": {
         "type": {
-          "$ref": "#/2015"
+          "$ref": "#/2025"
         },
         "flags": 0,
         "description": "Setting for diagnosing dependent storage account"
       },
       "keyVault": {
         "type": {
-          "$ref": "#/2016"
+          "$ref": "#/2026"
         },
         "flags": 0,
         "description": "Setting for diagnosing dependent key vault"
       },
       "containerRegistry": {
         "type": {
-          "$ref": "#/2017"
+          "$ref": "#/2027"
         },
         "flags": 0,
         "description": "Setting for diagnosing dependent container registry"
       },
       "applicationInsights": {
         "type": {
-          "$ref": "#/2018"
+          "$ref": "#/2028"
         },
         "flags": 0,
         "description": "Setting for diagnosing dependent application insights"
       },
       "others": {
         "type": {
-          "$ref": "#/2019"
+          "$ref": "#/2029"
         },
         "flags": 0,
         "description": "Setting for diagnosing unclassified category of problems"
@@ -26543,7 +26651,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/2021"
+          "$ref": "#/2031"
         },
         "flags": 0
       }
@@ -26555,55 +26663,55 @@
     "properties": {
       "userDefinedRouteResults": {
         "type": {
-          "$ref": "#/2027"
+          "$ref": "#/2037"
         },
         "flags": 0
       },
       "networkSecurityRuleResults": {
         "type": {
-          "$ref": "#/2028"
+          "$ref": "#/2038"
         },
         "flags": 0
       },
       "resourceLockResults": {
         "type": {
-          "$ref": "#/2029"
+          "$ref": "#/2039"
         },
         "flags": 0
       },
       "dnsResolutionResults": {
         "type": {
-          "$ref": "#/2030"
+          "$ref": "#/2040"
         },
         "flags": 0
       },
       "storageAccountResults": {
         "type": {
-          "$ref": "#/2031"
+          "$ref": "#/2041"
         },
         "flags": 0
       },
       "keyVaultResults": {
         "type": {
-          "$ref": "#/2032"
+          "$ref": "#/2042"
         },
         "flags": 0
       },
       "containerRegistryResults": {
         "type": {
-          "$ref": "#/2033"
+          "$ref": "#/2043"
         },
         "flags": 0
       },
       "applicationInsightsResults": {
         "type": {
-          "$ref": "#/2034"
+          "$ref": "#/2044"
         },
         "flags": 0
       },
       "otherResults": {
         "type": {
-          "$ref": "#/2035"
+          "$ref": "#/2045"
         },
         "flags": 0
       }
@@ -26622,7 +26730,7 @@
       },
       "level": {
         "type": {
-          "$ref": "#/2026"
+          "$ref": "#/2036"
         },
         "flags": 2,
         "description": "Level of workspace setup error"
@@ -26652,13 +26760,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2023"
+        "$ref": "#/2033"
       },
       {
-        "$ref": "#/2024"
+        "$ref": "#/2034"
       },
       {
-        "$ref": "#/2025"
+        "$ref": "#/2035"
       },
       {
         "$ref": "#/0"
@@ -26668,55 +26776,55 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2022"
+      "$ref": "#/2032"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2022"
+      "$ref": "#/2032"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2022"
+      "$ref": "#/2032"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2022"
+      "$ref": "#/2032"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2022"
+      "$ref": "#/2032"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2022"
+      "$ref": "#/2032"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2022"
+      "$ref": "#/2032"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2022"
+      "$ref": "#/2032"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2022"
+      "$ref": "#/2032"
     }
   },
   {
@@ -26725,10 +26833,10 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/2020"
+      "$ref": "#/2030"
     },
     "input": {
-      "$ref": "#/2009"
+      "$ref": "#/2019"
     }
   },
   {
@@ -26755,13 +26863,13 @@
       },
       "containerRegistryCredentials": {
         "type": {
-          "$ref": "#/2038"
+          "$ref": "#/2048"
         },
         "flags": 2
       },
       "notebookAccessKeys": {
         "type": {
-          "$ref": "#/2041"
+          "$ref": "#/2051"
         },
         "flags": 2
       }
@@ -26785,7 +26893,7 @@
       },
       "passwords": {
         "type": {
-          "$ref": "#/2040"
+          "$ref": "#/2050"
         },
         "flags": 0
       }
@@ -26812,7 +26920,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2039"
+      "$ref": "#/2049"
     }
   },
   {
@@ -26839,7 +26947,16 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/2037"
+      "$ref": "#/2047"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resyncKeys",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/45"
     }
   },
   {
@@ -26902,7 +27019,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/2043"
+      "$ref": "#/2054"
     }
   },
   {
@@ -26932,7 +27049,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/2046"
+      "$ref": "#/2057"
     }
   },
   {
@@ -26941,7 +27058,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/2041"
+      "$ref": "#/2051"
     }
   },
   {
@@ -26965,7 +27082,7 @@
       "$ref": "#/1710"
     },
     "input": {
-      "$ref": "#/2049"
+      "$ref": "#/2060"
     }
   },
   {
@@ -27014,7 +27131,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/connections",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/2051"
+      "$ref": "#/2062"
     }
   }
 ]

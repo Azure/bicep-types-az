@@ -727,5 +727,17 @@
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.CostManagement/exports",
+    "apiVersion": "2019-10-01",
+    "output": {
+      "$ref": "#/60"
+    }
   }
 ]

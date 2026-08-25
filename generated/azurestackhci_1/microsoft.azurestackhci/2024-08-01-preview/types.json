@@ -5399,6 +5399,51 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "pause",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "save",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/107"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "VirtualHardDiskUploadRequest",
     "properties": {
@@ -5437,10 +5482,10 @@
     "resourceType": "Microsoft.AzureStackHCI/virtualHardDisks",
     "apiVersion": "2024-08-01-preview",
     "output": {
-      "$ref": "#/428"
+      "$ref": "#/433"
     },
     "input": {
-      "$ref": "#/427"
+      "$ref": "#/432"
     }
   }
 ]

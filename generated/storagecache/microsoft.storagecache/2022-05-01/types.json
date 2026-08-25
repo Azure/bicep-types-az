@@ -1831,5 +1831,177 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "debugInfo",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "flush",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startPrimingJob",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    },
+    "input": {
+      "$ref": "#/98"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrimingJobIdParameter",
+    "properties": {
+      "primingJobId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The unique identifier of the priming job."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopPrimingJob",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    },
+    "input": {
+      "$ref": "#/147"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "pausePrimingJob",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    },
+    "input": {
+      "$ref": "#/147"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resumePrimingJob",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    },
+    "input": {
+      "$ref": "#/147"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "spaceAllocation",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    },
+    "input": {
+      "$ref": "#/152"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dnsRefresh",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "flush",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "invalidate",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2022-05-01",
+    "output": {
+      "$ref": "#/141"
+    }
   }
 ]

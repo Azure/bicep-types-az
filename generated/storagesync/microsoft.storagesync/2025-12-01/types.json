@@ -3219,6 +3219,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "triggerRollover",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/registeredServers",
+    "apiVersion": "2025-12-01",
+    "output": {
+      "$ref": "#/67"
+    },
+    "input": {
+      "$ref": "#/201"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "BackupRequest",
     "properties": {
@@ -3237,7 +3249,7 @@
     "properties": {
       "backupMetadata": {
         "type": {
-          "$ref": "#/204"
+          "$ref": "#/205"
         },
         "flags": 0,
         "description": "Post Backup Response Properties"
@@ -3263,10 +3275,10 @@
     "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/203"
+      "$ref": "#/204"
     },
     "input": {
-      "$ref": "#/202"
+      "$ref": "#/203"
     }
   },
   {
@@ -3324,7 +3336,7 @@
       },
       "restoreFileSpec": {
         "type": {
-          "$ref": "#/208"
+          "$ref": "#/209"
         },
         "flags": 0,
         "description": "Post Restore restore file spec array."
@@ -3354,7 +3366,31 @@
   {
     "$type": "ArrayType",
     "itemType": {
+      "$ref": "#/208"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "postrestore",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2025-12-01",
+    "output": {
+      "$ref": "#/67"
+    },
+    "input": {
       "$ref": "#/207"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "prebackup",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2025-12-01",
+    "output": {
+      "$ref": "#/67"
+    },
+    "input": {
+      "$ref": "#/203"
     }
   },
   {
@@ -3412,7 +3448,7 @@
       },
       "restoreFileSpec": {
         "type": {
-          "$ref": "#/210"
+          "$ref": "#/213"
         },
         "flags": 0,
         "description": "Pre Restore restore file spec array."
@@ -3429,7 +3465,28 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/207"
+      "$ref": "#/208"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "prerestore",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2025-12-01",
+    "output": {
+      "$ref": "#/67"
+    },
+    "input": {
+      "$ref": "#/212"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreheartbeat",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2025-12-01",
+    "output": {
+      "$ref": "#/67"
     }
   },
   {
@@ -3445,14 +3502,14 @@
       },
       "changeDetectionMode": {
         "type": {
-          "$ref": "#/214"
+          "$ref": "#/219"
         },
         "flags": 0,
         "description": "Change Detection Mode. Applies to a directory specified in directoryPath parameter."
       },
       "paths": {
         "type": {
-          "$ref": "#/215"
+          "$ref": "#/220"
         },
         "flags": 0,
         "description": "Array of relative paths on the Azure File share to be included in the change detection. Can be files and directories."
@@ -3471,10 +3528,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/212"
+        "$ref": "#/217"
       },
       {
-        "$ref": "#/213"
+        "$ref": "#/218"
       },
       {
         "$ref": "#/0"
@@ -3485,6 +3542,18 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "triggerChangeDetection",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2025-12-01",
+    "output": {
+      "$ref": "#/67"
+    },
+    "input": {
+      "$ref": "#/216"
     }
   },
   {
@@ -3505,6 +3574,27 @@
         "flags": 0,
         "description": "Recall path."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "recallAction",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints",
+    "apiVersion": "2025-12-01",
+    "output": {
+      "$ref": "#/67"
+    },
+    "input": {
+      "$ref": "#/222"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "abort",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/workflows",
+    "apiVersion": "2025-12-01",
+    "output": {
+      "$ref": "#/67"
     }
   }
 ]

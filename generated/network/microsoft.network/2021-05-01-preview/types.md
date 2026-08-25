@@ -182,6 +182,12 @@
 * **properties**: [DefaultUserRulePropertiesFormat](#defaultuserrulepropertiesformat): Indicates the properties of the security default user rule
 
 
+## Function commit (Microsoft.Network/networkManagers@2021-05-01-preview)
+* **Resource**: Microsoft.Network/networkManagers
+* **ApiVersion**: 2021-05-01-preview
+* **Input**: [NetworkManagerCommit](#networkmanagercommit)
+* **Output**: [NetworkManagerCommit](#networkmanagercommit)
+
 ## Function listActiveConnectivityConfigurations (Microsoft.Network/networkManagers@2021-05-01-preview)
 * **Resource**: Microsoft.Network/networkManagers
 * **ApiVersion**: 2021-05-01-preview
@@ -440,6 +446,13 @@
 * **displayName**: string: A friendly name for the network group.
 * **memberType**: string (Required): Group member type.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the scope assignment resource.
+
+## NetworkManagerCommit
+### Properties
+* **commitId**: string (ReadOnly): Commit Id.
+* **commitType**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string: Commit Type.
+* **configurationIds**: string[]: List of configuration ids.
+* **targetLocations**: string[] (Required): List of target locations.
 
 ## NetworkManagerConnectionProperties
 ### Properties

@@ -13,12 +13,17 @@ warning | Skipping resource POST action path '/{scope}/providers/Microsoft.Help/
 warning | Skipping resource POST action path '/providers/Microsoft.Help/discoverSolutions': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Help/discoverSolutions': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action warmup under path '/{scope}/providers/Microsoft.Help/solutions/{solutionResourceName}/warmup' has no response schema. Returning 'any'.
+warning | Resource action continue under path '/{scope}/providers/Microsoft.Help/troubleshooters/{troubleshooterName}/continue' has no response schema. Returning 'any'.
+warning | Resource action end under path '/{scope}/providers/Microsoft.Help/troubleshooters/{troubleshooterName}/end' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/{scope}/providers/Microsoft.Help/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action continue under path '/{scope}/providers/Microsoft.Help/troubleshooters/{troubleshooterName}/continue' has no response schema. Returning 'any'.
+warning | Resource action end under path '/{scope}/providers/Microsoft.Help/troubleshooters/{troubleshooterName}/end' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.

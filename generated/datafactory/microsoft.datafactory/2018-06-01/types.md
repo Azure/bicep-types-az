@@ -165,6 +165,16 @@
 * **Input**: [DataFlowDebugPackage](#dataflowdebugpackage)
 * **Output**: [AddDataFlowToDebugSessionResponse](#adddataflowtodebugsessionresponse)
 
+## Function cancel (Microsoft.DataFactory/factories/pipelineruns@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories/pipelineruns
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function cancel (Microsoft.DataFactory/factories/triggers/triggerRuns@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories/triggers/triggerRuns
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
 ## Function configureFactoryRepo (Microsoft.DataFactory/locations@2018-06-01)
 * **Resource**: Microsoft.DataFactory/locations
 * **ApiVersion**: 2018-06-01
@@ -182,6 +192,12 @@
 * **ApiVersion**: 2018-06-01
 * **Input**: [DictionaryOfany](#dictionaryofany)
 * **Output**: [CreateRunResponse](#createrunresponse)
+
+## Function deleteDataFlowDebugSession (Microsoft.DataFactory/factories@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories
+* **ApiVersion**: 2018-06-01
+* **Input**: [DeleteDataFlowDebugSessionRequest](#deletedataflowdebugsessionrequest)
+* **Output**: any
 
 ## Function disableInteractiveQuery (Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01)
 * **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
@@ -312,20 +328,66 @@
 * **Input**: [IntegrationRuntimeRegenerateKeyParameters](#integrationruntimeregeneratekeyparameters)
 * **Output**: [IntegrationRuntimeAuthKeys](#integrationruntimeauthkeys)
 
+## Function removeLinks (Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2018-06-01
+* **Input**: [LinkedIntegrationRuntimeRequest](#linkedintegrationruntimerequest)
+* **Output**: any
+
+## Function rerun (Microsoft.DataFactory/factories/triggers/triggerRuns@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories/triggers/triggerRuns
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function start (Microsoft.DataFactory/factories/adfcdcs@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories/adfcdcs
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
 ## Function start (Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01)
 * **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
 * **ApiVersion**: 2018-06-01
 * **Output**: [IntegrationRuntimeStatusResponse](#integrationruntimestatusresponse)
+
+## Function start (Microsoft.DataFactory/factories/triggers@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories/triggers
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function stop (Microsoft.DataFactory/factories/adfcdcs@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories/adfcdcs
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function stop (Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
+## Function stop (Microsoft.DataFactory/factories/triggers@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories/triggers
+* **ApiVersion**: 2018-06-01
+* **Output**: any
 
 ## Function subscribeToEvents (Microsoft.DataFactory/factories/triggers@2018-06-01)
 * **Resource**: Microsoft.DataFactory/factories/triggers
 * **ApiVersion**: 2018-06-01
 * **Output**: [TriggerSubscriptionOperationStatus](#triggersubscriptionoperationstatus)
 
+## Function syncCredentials (Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2018-06-01
+* **Output**: any
+
 ## Function unsubscribeFromEvents (Microsoft.DataFactory/factories/triggers@2018-06-01)
 * **Resource**: Microsoft.DataFactory/factories/triggers
 * **ApiVersion**: 2018-06-01
 * **Output**: [TriggerSubscriptionOperationStatus](#triggersubscriptionoperationstatus)
+
+## Function upgrade (Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2018-06-01
+* **Output**: any
 
 ## AccessPolicyResponse
 ### Properties
@@ -3675,6 +3737,10 @@
 * **recursive**: any: If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
 * **storeSettings**: [StoreReadSettings](#storereadsettings): Delete activity store settings.
 
+## DeleteDataFlowDebugSessionRequest
+### Properties
+* **sessionId**: string: The ID of data flow debug session.
+
 ## DelimitedTextDatasetTypeProperties
 ### Properties
 * **columnDelimiter**: any: The column delimiter. Type: string (or Expression with resultType string).
@@ -4823,6 +4889,10 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **dataFactoryName**: string (ReadOnly): The name of the data factory for which the linked integration runtime belong to.
 * **name**: string (ReadOnly): The name of the linked integration runtime.
 * **subscriptionId**: string (ReadOnly): The subscription ID for which the linked integration runtime belong to.
+
+## LinkedIntegrationRuntimeRequest
+### Properties
+* **factoryName**: string (Required): The data factory name for linked integration runtime.
 
 ## LinkedIntegrationRuntimeType
 * **Discriminator**: authorizationType

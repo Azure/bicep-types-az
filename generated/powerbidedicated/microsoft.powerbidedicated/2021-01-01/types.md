@@ -34,6 +34,16 @@
 * **Input**: [CheckCapacityNameAvailabilityParameters](#checkcapacitynameavailabilityparameters)
 * **Output**: [CheckCapacityNameAvailabilityResult](#checkcapacitynameavailabilityresult)
 
+## Function resume (Microsoft.PowerBIDedicated/capacities@2021-01-01)
+* **Resource**: Microsoft.PowerBIDedicated/capacities
+* **ApiVersion**: 2021-01-01
+* **Output**: any
+
+## Function suspend (Microsoft.PowerBIDedicated/capacities@2021-01-01)
+* **Resource**: Microsoft.PowerBIDedicated/capacities
+* **ApiVersion**: 2021-01-01
+* **Output**: any
+
 ## AutoScaleVCoreProperties
 ### Properties
 * **capacityLimit**: int: The maximum capacity of an auto scale v-core resource.

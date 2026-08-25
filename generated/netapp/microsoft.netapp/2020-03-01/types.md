@@ -47,6 +47,17 @@
 * **properties**: [SnapshotProperties](#snapshotproperties): Snapshot Properties
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function authorizeReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-03-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2020-03-01
+* **Input**: [AuthorizeRequest](#authorizerequest)
+* **Output**: any
+
+## Function breakReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-03-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2020-03-01
+* **Output**: any
+
 ## Function checkFilePathAvailability (Microsoft.NetApp/locations@2020-03-01)
 * **Resource**: Microsoft.NetApp/locations
 * **ApiVersion**: 2020-03-01
@@ -58,6 +69,22 @@
 * **ApiVersion**: 2020-03-01
 * **Input**: [ResourceNameAvailabilityRequest](#resourcenameavailabilityrequest)
 * **Output**: [ResourceNameAvailability](#resourcenameavailability)
+
+## Function deleteReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-03-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2020-03-01
+* **Output**: any
+
+## Function resyncReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-03-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2020-03-01
+* **Output**: any
+
+## Function revert (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2020-03-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2020-03-01
+* **Input**: [VolumeRevert](#volumerevert)
+* **Output**: any
 
 ## AccountProperties
 ### Properties
@@ -76,6 +103,10 @@
 * **smbServerName**: string: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
 * **status**: string: Status of the Active Directory
 * **username**: string: Username of Active Directory domain administrator
+
+## AuthorizeRequest
+### Properties
+* **remoteVolumeResourceId**: string: Resource id of the remote volume
 
 ## ExportPolicyRule
 ### Properties
@@ -173,6 +204,10 @@
 ## VolumePropertiesExportPolicy
 ### Properties
 * **rules**: [ExportPolicyRule](#exportpolicyrule)[]: Export policy rule
+
+## VolumeRevert
+### Properties
+* **snapshotId**: string: Resource id of the snapshot
 
 ## VolumeSnapshotProperties
 ### Properties

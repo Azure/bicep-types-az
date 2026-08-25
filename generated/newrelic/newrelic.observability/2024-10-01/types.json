@@ -1973,12 +1973,24 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshIngestionKey",
+    "resourceType": "NewRelic.Observability/monitors",
+    "apiVersion": "2024-10-01",
+    "output": {
+      "$ref": "#/169"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "MonitoredResourceListResponse",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/177"
+          "$ref": "#/179"
         },
         "flags": 1,
         "description": "The MonitoredResource items on this page"
@@ -2005,7 +2017,7 @@
       },
       "sendingMetrics": {
         "type": {
-          "$ref": "#/173"
+          "$ref": "#/175"
         },
         "flags": 0,
         "description": "Flag indicating if resource is sending metrics to NewRelic."
@@ -2019,7 +2031,7 @@
       },
       "sendingLogs": {
         "type": {
-          "$ref": "#/176"
+          "$ref": "#/178"
         },
         "flags": 0,
         "description": "Flag indicating if resource is sending logs to NewRelic."
@@ -2045,10 +2057,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/171"
+        "$ref": "#/173"
       },
       {
-        "$ref": "#/172"
+        "$ref": "#/174"
       },
       {
         "$ref": "#/0"
@@ -2067,10 +2079,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/174"
+        "$ref": "#/176"
       },
       {
-        "$ref": "#/175"
+        "$ref": "#/177"
       },
       {
         "$ref": "#/0"
@@ -2080,7 +2092,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/170"
+      "$ref": "#/172"
     }
   },
   {
@@ -2089,7 +2101,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2024-10-01",
     "output": {
-      "$ref": "#/169"
+      "$ref": "#/171"
     }
   },
   {
@@ -2098,7 +2110,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/181"
+          "$ref": "#/183"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -2128,7 +2140,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/180"
+      "$ref": "#/182"
     }
   },
   {
@@ -2137,7 +2149,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2024-10-01",
     "output": {
-      "$ref": "#/179"
+      "$ref": "#/181"
     }
   },
   {
@@ -2159,7 +2171,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2024-10-01",
     "output": {
-      "$ref": "#/183"
+      "$ref": "#/185"
     }
   },
   {
@@ -2226,7 +2238,7 @@
       "$ref": "#/160"
     },
     "input": {
-      "$ref": "#/185"
+      "$ref": "#/187"
     }
   },
   {
@@ -2235,14 +2247,14 @@
     "properties": {
       "marketplaceSaasInfo": {
         "type": {
-          "$ref": "#/188"
+          "$ref": "#/190"
         },
         "flags": 0,
         "description": "Marketplace Subscription details"
       },
       "partnerBillingEntity": {
         "type": {
-          "$ref": "#/189"
+          "$ref": "#/191"
         },
         "flags": 0,
         "description": "Partner Billing Entity details: Organization Info"
@@ -2330,7 +2342,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2024-10-01",
     "output": {
-      "$ref": "#/187"
+      "$ref": "#/189"
     }
   },
   {
@@ -2339,7 +2351,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/194"
+          "$ref": "#/196"
         },
         "flags": 0,
         "description": "Results of a list operation."
@@ -2359,7 +2371,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/193"
+          "$ref": "#/195"
         },
         "flags": 0,
         "description": "Connected Partner Resource Properties"
@@ -2403,7 +2415,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/192"
+      "$ref": "#/194"
     }
   },
   {
@@ -2412,7 +2424,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2024-10-01",
     "output": {
-      "$ref": "#/191"
+      "$ref": "#/193"
     },
     "input": {
       "$ref": "#/43"

@@ -1527,6 +1527,15 @@
     "writableScopes": 8
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/8"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "HighAvailabilityValidationEstimation",
     "properties": {
@@ -1559,10 +1568,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/126"
+      "$ref": "#/127"
     },
     "input": {
-      "$ref": "#/126"
+      "$ref": "#/127"
     }
   },
   {
@@ -1571,7 +1580,7 @@
     "properties": {
       "restartWithFailover": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/132"
         },
         "flags": 0,
         "description": "Whether or not failover to standby server when restarting a server with high availability enabled."
@@ -1597,15 +1606,45 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/129"
+        "$ref": "#/130"
       },
       {
-        "$ref": "#/130"
+        "$ref": "#/131"
       },
       {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/8"
+    },
+    "input": {
+      "$ref": "#/129"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/8"
+    }
   },
   {
     "$type": "ObjectType",
@@ -1621,12 +1660,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "resetGtid",
+    "resourceType": "Microsoft.DBforMySQL/flexibleServers",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/8"
+    },
+    "input": {
+      "$ref": "#/136"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ServerDetachVNetParameter",
     "properties": {
       "publicNetworkAccess": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/141"
         },
         "flags": 0,
         "description": "Whether or not public network access is allowed for this server. Value is 'Disabled' when server has VNet integration."
@@ -1645,10 +1696,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/134"
+        "$ref": "#/139"
       },
       {
-        "$ref": "#/135"
+        "$ref": "#/140"
       },
       {
         "$ref": "#/2"
@@ -1682,7 +1733,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/138"
+          "$ref": "#/143"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1738,10 +1789,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/137"
+      "$ref": "#/142"
     },
     "input": {
-      "$ref": "#/133"
+      "$ref": "#/138"
     }
   },
   {
@@ -1750,7 +1801,7 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-06-01-preview",
     "output": {
-      "$ref": "#/137"
+      "$ref": "#/142"
     }
   }
 ]

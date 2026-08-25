@@ -2317,12 +2317,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "withdrawPlan",
+    "resourceType": "Microsoft.Marketplace/privateStores/requestApprovals",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/36"
+    },
+    "input": {
+      "$ref": "#/154"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AcknowledgeOfferNotificationProperties",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/157"
+          "$ref": "#/158"
         },
         "flags": 0,
         "description": "Notification update request payload details"
@@ -2356,14 +2368,14 @@
       },
       "addPlans": {
         "type": {
-          "$ref": "#/158"
+          "$ref": "#/159"
         },
         "flags": 0,
         "description": "Gets or sets added plans"
       },
       "removePlans": {
         "type": {
-          "$ref": "#/159"
+          "$ref": "#/160"
         },
         "flags": 0,
         "description": "Gets or sets remove plans"
@@ -2383,12 +2395,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "acknowledgeNotification",
+    "resourceType": "Microsoft.Marketplace/privateStores/offers",
+    "apiVersion": "2022-03-01",
+    "output": {
+      "$ref": "#/36"
+    },
+    "input": {
+      "$ref": "#/157"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "TransferOffersProperties",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/161"
+          "$ref": "#/163"
         },
         "flags": 0,
         "description": "transfer offers properties details"
@@ -2401,7 +2425,7 @@
     "properties": {
       "targetCollections": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/164"
         },
         "flags": 0,
         "description": "Target collections ids"
@@ -2415,7 +2439,7 @@
       },
       "offerIdsList": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/165"
         },
         "flags": 0,
         "description": "Offers ids list to transfer from source collection to target collection(s)"
@@ -2440,14 +2464,14 @@
     "properties": {
       "succeeded": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "Succeeded collections"
       },
       "failed": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/168"
         },
         "flags": 0,
         "description": "Failed collections"
@@ -2472,10 +2496,10 @@
     "resourceType": "Microsoft.Marketplace/privateStores/collections",
     "apiVersion": "2022-03-01",
     "output": {
-      "$ref": "#/164"
+      "$ref": "#/166"
     },
     "input": {
-      "$ref": "#/160"
+      "$ref": "#/162"
     }
   },
   {
@@ -2525,7 +2549,7 @@
     "resourceType": "Microsoft.Marketplace/privateStores/collections",
     "apiVersion": "2022-03-01",
     "output": {
-      "$ref": "#/168"
+      "$ref": "#/170"
     }
   },
   {
@@ -2534,7 +2558,7 @@
     "resourceType": "Microsoft.Marketplace/privateStores/collections",
     "apiVersion": "2022-03-01",
     "output": {
-      "$ref": "#/168"
+      "$ref": "#/170"
     }
   },
   {
@@ -2543,7 +2567,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/172"
+          "$ref": "#/174"
         },
         "flags": 0,
         "description": "Object describes multiple context and plans."
@@ -2570,7 +2594,7 @@
       },
       "plansContext": {
         "type": {
-          "$ref": "#/175"
+          "$ref": "#/177"
         },
         "flags": 0
       }
@@ -2589,7 +2613,7 @@
       },
       "planIds": {
         "type": {
-          "$ref": "#/174"
+          "$ref": "#/176"
         },
         "flags": 0,
         "description": "List of plan IDs."
@@ -2605,7 +2629,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/173"
+      "$ref": "#/175"
     }
   },
   {
@@ -2655,10 +2679,10 @@
     "resourceType": "Microsoft.Marketplace/privateStores/collections/offers",
     "apiVersion": "2022-03-01",
     "output": {
-      "$ref": "#/176"
+      "$ref": "#/178"
     },
     "input": {
-      "$ref": "#/171"
+      "$ref": "#/173"
     }
   }
 ]

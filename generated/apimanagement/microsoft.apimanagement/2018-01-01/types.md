@@ -458,6 +458,32 @@
 * **ApiVersion**: 2018-01-01
 * **Output**: [ApiManagementServiceGetSsoTokenResult](#apimanagementservicegetssotokenresult)
 
+## Function reconnect (Microsoft.ApiManagement/service/backends@2018-01-01)
+* **Resource**: Microsoft.ApiManagement/service/backends
+* **ApiVersion**: 2018-01-01
+* **Input**: [BackendReconnectContract](#backendreconnectcontract)
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/subscriptions@2018-01-01)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2018-01-01
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/tenant@2018-01-01)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2018-01-01
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/subscriptions@2018-01-01)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2018-01-01
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/tenant@2018-01-01)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2018-01-01
+* **Output**: any
+
 ## Function restore (Microsoft.ApiManagement/service@2018-01-01)
 * **Resource**: Microsoft.ApiManagement/service
 * **ApiVersion**: 2018-01-01
@@ -710,6 +736,17 @@
 * **password**: string: Password to connect to the WebProxy Server
 * **url**: string {minLength: 1, maxLength: 2000} (Required): WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
 * **username**: string: Username to connect to the WebProxy server
+
+## BackendReconnectContract
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [BackendReconnectProperties](#backendreconnectproperties): Reconnect request properties.
+* **type**: string (ReadOnly): Resource type for API Management resource.
+
+## BackendReconnectProperties
+### Properties
+* **after**: string: Duration in ISO8601 format after which reconnect will be initiated. Minimum duration of the Reconnect is PT2M.
 
 ## BackendServiceFabricClusterProperties
 ### Properties

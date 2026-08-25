@@ -641,5 +641,30 @@
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecuteGovernanceRuleParams",
+    "properties": {
+      "override": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Describe if governance rule should be override"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "execute",
+    "resourceType": "Microsoft.Security/governanceRules",
+    "apiVersion": "2022-01-01-preview",
+    "output": {
+      "$ref": "#/34"
+    },
+    "input": {
+      "$ref": "#/43"
+    }
   }
 ]

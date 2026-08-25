@@ -1235,6 +1235,18 @@
     "writableScopes": 31
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Authorization/roleAssignmentScheduleRequests",
+    "apiVersion": "2022-04-01-preview",
+    "output": {
+      "$ref": "#/107"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "RoleAssignmentScheduleRequest",
     "properties": {
@@ -1274,9 +1286,18 @@
     "resourceType": "Microsoft.Authorization/roleAssignmentScheduleRequests",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/107"
+      "$ref": "#/109"
     },
     "input": {
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Authorization/roleEligibilityScheduleRequests",
+    "apiVersion": "2022-04-01-preview",
+    "output": {
       "$ref": "#/107"
     }
   },
@@ -1320,10 +1341,10 @@
     "resourceType": "Microsoft.Authorization/roleEligibilityScheduleRequests",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/109"
+      "$ref": "#/112"
     },
     "input": {
-      "$ref": "#/109"
+      "$ref": "#/112"
     }
   }
 ]

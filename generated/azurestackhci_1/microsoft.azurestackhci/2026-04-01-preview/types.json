@@ -8467,6 +8467,15 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "pause",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/108"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "PowerOffVirtualMachineOptions",
     "properties": {
@@ -8513,7 +8522,7 @@
       },
       "percentComplete": {
         "type": {
-          "$ref": "#/655"
+          "$ref": "#/656"
         },
         "flags": 0,
         "description": "Percent of the operation that is complete."
@@ -8534,7 +8543,7 @@
       },
       "operations": {
         "type": {
-          "$ref": "#/656"
+          "$ref": "#/657"
         },
         "flags": 0,
         "description": "The operations list."
@@ -8556,7 +8565,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/654"
+      "$ref": "#/655"
     }
   },
   {
@@ -8565,10 +8574,46 @@
     "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/654"
+      "$ref": "#/655"
     },
     "input": {
-      "$ref": "#/653"
+      "$ref": "#/654"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/108"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "save",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/108"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/108"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+    "apiVersion": "2026-04-01-preview",
+    "output": {
+      "$ref": "#/108"
     }
   },
   {
@@ -8610,10 +8655,10 @@
     "resourceType": "Microsoft.AzureStackHCI/virtualHardDisks",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/659"
+      "$ref": "#/664"
     },
     "input": {
-      "$ref": "#/658"
+      "$ref": "#/663"
     }
   }
 ]

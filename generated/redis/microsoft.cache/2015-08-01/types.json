@@ -397,5 +397,20 @@
         "$ref": "#/29"
       }
     ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forceReboot",
+    "resourceType": "Microsoft.Cache/Redis",
+    "apiVersion": "2015-08-01",
+    "output": {
+      "$ref": "#/31"
+    },
+    "input": {
+      "$ref": "#/26"
+    }
   }
 ]

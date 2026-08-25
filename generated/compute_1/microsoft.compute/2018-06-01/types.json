@@ -8108,6 +8108,15 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "endGetAccess",
+    "resourceType": "Microsoft.Compute/disks",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "beginGetAccess",
     "resourceType": "Microsoft.Compute/snapshots",
     "apiVersion": "2018-06-01",
@@ -8116,6 +8125,15 @@
     },
     "input": {
       "$ref": "#/618"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "endGetAccess",
+    "resourceType": "Microsoft.Compute/snapshots",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
     }
   },
   {
@@ -8172,7 +8190,7 @@
       },
       "resources": {
         "type": {
-          "$ref": "#/627"
+          "$ref": "#/629"
         },
         "flags": 2,
         "description": "a list of resource items of the captured virtual machine"
@@ -8198,10 +8216,73 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/626"
+      "$ref": "#/628"
     },
     "input": {
-      "$ref": "#/625"
+      "$ref": "#/627"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "convertToManagedDisks",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generalize",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "powerOff",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
     }
   },
   {
@@ -8218,6 +8299,27 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/638"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "performMaintenance",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "RunCommandInput",
     "properties": {
@@ -8230,14 +8332,14 @@
       },
       "script": {
         "type": {
-          "$ref": "#/631"
+          "$ref": "#/642"
         },
         "flags": 0,
         "description": "Optional. The script to be executed.  When this value is given, the given script will override the default script of the command."
       },
       "parameters": {
         "type": {
-          "$ref": "#/633"
+          "$ref": "#/644"
         },
         "flags": 0,
         "description": "The run command parameters."
@@ -8273,7 +8375,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/632"
+      "$ref": "#/643"
     }
   },
   {
@@ -8282,7 +8384,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/635"
+          "$ref": "#/646"
         },
         "flags": 0,
         "description": "Run command operation response."
@@ -8301,10 +8403,10 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/634"
+      "$ref": "#/645"
     },
     "input": {
-      "$ref": "#/630"
+      "$ref": "#/641"
     }
   },
   {
@@ -8313,7 +8415,7 @@
     "properties": {
       "instanceIds": {
         "type": {
-          "$ref": "#/638"
+          "$ref": "#/649"
         },
         "flags": 0,
         "description": "The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set."
@@ -8327,12 +8429,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/648"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "VirtualMachineScaleSetVMInstanceRequiredIDs",
     "properties": {
       "instanceIds": {
         "type": {
-          "$ref": "#/640"
+          "$ref": "#/652"
         },
         "flags": 1,
         "description": "The virtual machine scale set instance ids."
@@ -8346,12 +8460,96 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "delete",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/651"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "poweroff",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/648"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/648"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/648"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/648"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "performMaintenance",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/648"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "manualupgrade",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/651"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "VirtualMachineScaleSetReimageParameters",
     "properties": {
       "instanceIds": {
         "type": {
-          "$ref": "#/642"
+          "$ref": "#/661"
         },
         "flags": 0,
         "description": "The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set."
@@ -8372,6 +8570,48 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/660"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimageall",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/648"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "osRollingUpgrade",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "extensionRollingUpgrade",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "VirtualMachineScaleSetVMReimageParameters",
     "properties": {
@@ -8386,14 +8626,89 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "reimage",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/666"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reimageall",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deallocate",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "poweroff",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "performMaintenance",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
+    "apiVersion": "2018-06-01",
+    "output": {
+      "$ref": "#/159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "runCommand",
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/634"
+      "$ref": "#/645"
     },
     "input": {
-      "$ref": "#/630"
+      "$ref": "#/641"
     }
   },
   {
@@ -8402,7 +8717,7 @@
     "properties": {
       "intervalLength": {
         "type": {
-          "$ref": "#/650"
+          "$ref": "#/681"
         },
         "flags": 1,
         "description": "Interval value in minutes used to create LogAnalytics call rate logs."
@@ -8471,16 +8786,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/646"
+        "$ref": "#/677"
       },
       {
-        "$ref": "#/647"
+        "$ref": "#/678"
       },
       {
-        "$ref": "#/648"
+        "$ref": "#/679"
       },
       {
-        "$ref": "#/649"
+        "$ref": "#/680"
       }
     ]
   },
@@ -8490,7 +8805,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/652"
+          "$ref": "#/683"
         },
         "flags": 2,
         "description": "LogAnalyticsOutput"
@@ -8516,10 +8831,10 @@
     "resourceType": "Microsoft.Compute/locations/logAnalytics",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/651"
+      "$ref": "#/682"
     },
     "input": {
-      "$ref": "#/645"
+      "$ref": "#/676"
     }
   },
   {
@@ -8576,10 +8891,10 @@
     "resourceType": "Microsoft.Compute/locations/logAnalytics",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/651"
+      "$ref": "#/682"
     },
     "input": {
-      "$ref": "#/654"
+      "$ref": "#/685"
     }
   }
 ]

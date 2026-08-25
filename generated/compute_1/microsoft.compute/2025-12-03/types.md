@@ -118,6 +118,26 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/galleries/scripts/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function accept (Microsoft.Compute/locations/tenantLevelSharedGallerySubscriptions/sharedGalleries@2025-12-03)
+* **Resource**: Microsoft.Compute/locations/tenantLevelSharedGallerySubscriptions/sharedGalleries
+* **ApiVersion**: 2025-12-03
+* **Output**: any
+
+## Function accept (Microsoft.Compute/locations/sharedGallerySubscriptions/sharedGalleries@2025-12-03)
+* **Resource**: Microsoft.Compute/locations/sharedGallerySubscriptions/sharedGalleries
+* **ApiVersion**: 2025-12-03
+* **Output**: any
+
+## Function reject (Microsoft.Compute/locations/tenantLevelSharedGallerySubscriptions/sharedGalleries@2025-12-03)
+* **Resource**: Microsoft.Compute/locations/tenantLevelSharedGallerySubscriptions/sharedGalleries
+* **ApiVersion**: 2025-12-03
+* **Output**: any
+
+## Function reject (Microsoft.Compute/locations/sharedGallerySubscriptions/sharedGalleries@2025-12-03)
+* **Resource**: Microsoft.Compute/locations/sharedGallerySubscriptions/sharedGalleries
+* **ApiVersion**: 2025-12-03
+* **Output**: any
+
 ## Function share (Microsoft.Compute/galleries@2025-12-03)
 * **Resource**: Microsoft.Compute/galleries
 * **ApiVersion**: 2025-12-03

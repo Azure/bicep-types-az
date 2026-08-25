@@ -17755,6 +17755,30 @@
     "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DataMigration/databaseMigrations",
+    "apiVersion": "2023-07-15-preview",
+    "output": {
+      "$ref": "#/612"
+    },
+    "input": {
+      "$ref": "#/1262"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cutover",
+    "resourceType": "Microsoft.DataMigration/databaseMigrations",
+    "apiVersion": "2023-07-15-preview",
+    "output": {
+      "$ref": "#/612"
+    },
+    "input": {
+      "$ref": "#/1262"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AuthenticationKeys",
     "properties": {
@@ -17780,7 +17804,7 @@
     "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1264"
+      "$ref": "#/1266"
     }
   },
   {
@@ -17816,10 +17840,10 @@
     "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1266"
+      "$ref": "#/1268"
     },
     "input": {
-      "$ref": "#/1266"
+      "$ref": "#/1268"
     }
   },
   {
@@ -17848,10 +17872,10 @@
     "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1268"
+      "$ref": "#/1270"
     },
     "input": {
-      "$ref": "#/1268"
+      "$ref": "#/1270"
     }
   },
   {
@@ -17867,7 +17891,7 @@
       },
       "nodes": {
         "type": {
-          "$ref": "#/1273"
+          "$ref": "#/1275"
         },
         "flags": 2,
         "description": "Integration Runtime node monitoring data."
@@ -17880,7 +17904,7 @@
     "properties": {
       "additionalProperties": {
         "type": {
-          "$ref": "#/1272"
+          "$ref": "#/1274"
         },
         "flags": 2,
         "description": "Unmatched properties from the message are deserialized in this collection."
@@ -17954,7 +17978,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1271"
+      "$ref": "#/1273"
     }
   },
   {
@@ -17963,7 +17987,7 @@
     "resourceType": "Microsoft.DataMigration/sqlMigrationServices",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1270"
+      "$ref": "#/1272"
     }
   },
   {
@@ -18000,7 +18024,7 @@
       },
       "supportedTaskTypes": {
         "type": {
-          "$ref": "#/1276"
+          "$ref": "#/1278"
         },
         "flags": 0,
         "description": "The list of supported task types"
@@ -18019,7 +18043,25 @@
     "resourceType": "Microsoft.DataMigration/services",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1275"
+      "$ref": "#/1277"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2023-07-15-preview",
+    "output": {
+      "$ref": "#/612"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2023-07-15-preview",
+    "output": {
+      "$ref": "#/612"
     }
   },
   {
@@ -18055,7 +18097,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/1282"
+          "$ref": "#/1286"
         },
         "flags": 0,
         "description": "The reason why the name is not available, if nameAvailable is false"
@@ -18081,10 +18123,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1280"
+        "$ref": "#/1284"
       },
       {
-        "$ref": "#/1281"
+        "$ref": "#/1285"
       },
       {
         "$ref": "#/2"
@@ -18097,10 +18139,10 @@
     "resourceType": "Microsoft.DataMigration/services",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1279"
+      "$ref": "#/1283"
     },
     "input": {
-      "$ref": "#/1278"
+      "$ref": "#/1282"
     }
   },
   {
@@ -18109,10 +18151,10 @@
     "resourceType": "Microsoft.DataMigration/locations",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1279"
+      "$ref": "#/1283"
     },
     "input": {
-      "$ref": "#/1278"
+      "$ref": "#/1282"
     }
   },
   {
@@ -18169,7 +18211,7 @@
     "resourceType": "Microsoft.DataMigration/services/projects/tasks",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1285"
+      "$ref": "#/1289"
     }
   },
   {
@@ -18190,7 +18232,7 @@
     "resourceType": "Microsoft.DataMigration/services/serviceTasks",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1285"
+      "$ref": "#/1289"
     }
   },
   {
@@ -18206,7 +18248,7 @@
       },
       "headers": {
         "type": {
-          "$ref": "#/1290"
+          "$ref": "#/1294"
         },
         "flags": 0,
         "description": "Dictionary of <string>"
@@ -18227,7 +18269,7 @@
     "resourceType": "Microsoft.DataMigration/services/projects/files",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1289"
+      "$ref": "#/1293"
     }
   },
   {
@@ -18236,7 +18278,7 @@
     "resourceType": "Microsoft.DataMigration/services/projects/files",
     "apiVersion": "2023-07-15-preview",
     "output": {
-      "$ref": "#/1289"
+      "$ref": "#/1293"
     }
   }
 ]

@@ -457,6 +457,21 @@
 * **Input**: [SecurityGroupViewParameters](#securitygroupviewparameters)
 * **Output**: [SecurityGroupViewResult](#securitygroupviewresult)
 
+## Function start (Microsoft.Network/applicationGateways@2017-08-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2017-08-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/applicationGateways@2017-08-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2017-08-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/packetCaptures@2017-08-01)
+* **Resource**: Microsoft.Network/networkWatchers/packetCaptures
+* **ApiVersion**: 2017-08-01
+* **Output**: any
+
 ## Function topology (Microsoft.Network/networkWatchers@2017-08-01)
 * **Resource**: Microsoft.Network/networkWatchers
 * **ApiVersion**: 2017-08-01

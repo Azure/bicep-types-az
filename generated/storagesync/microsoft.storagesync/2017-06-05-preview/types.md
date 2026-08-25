@@ -62,11 +62,44 @@
 * **properties**: [WorkflowProperties](#workflowproperties) (ReadOnly): Workflow properties.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function abort (Microsoft.StorageSync/storageSyncServices/workflows@2017-06-05-preview)
+* **Resource**: Microsoft.StorageSync/storageSyncServices/workflows
+* **ApiVersion**: 2017-06-05-preview
+* **Output**: any
+
 ## Function postbackup (Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2017-06-05-preview)
 * **Resource**: Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints
 * **ApiVersion**: 2017-06-05-preview
 * **Input**: [BackupRequest](#backuprequest)
 * **Output**: [PostBackupResponse](#postbackupresponse)
+
+## Function postrestore (Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2017-06-05-preview)
+* **Resource**: Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints
+* **ApiVersion**: 2017-06-05-preview
+* **Input**: [PostRestoreRequest](#postrestorerequest)
+* **Output**: any
+
+## Function prebackup (Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2017-06-05-preview)
+* **Resource**: Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints
+* **ApiVersion**: 2017-06-05-preview
+* **Input**: [BackupRequest](#backuprequest)
+* **Output**: any
+
+## Function prerestore (Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2017-06-05-preview)
+* **Resource**: Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints
+* **ApiVersion**: 2017-06-05-preview
+* **Input**: [PreRestoreRequest](#prerestorerequest)
+* **Output**: any
+
+## Function recallAction (Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2017-06-05-preview)
+* **Resource**: Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints
+* **ApiVersion**: 2017-06-05-preview
+* **Output**: any
+
+## Function restoreheartbeat (Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2017-06-05-preview)
+* **Resource**: Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints
+* **ApiVersion**: 2017-06-05-preview
+* **Output**: any
 
 ## BackupRequest
 ### Properties
@@ -93,6 +126,29 @@
 ### Properties
 * **cloudEndpointName**: string (ReadOnly): cloud endpoint Name.
 
+## PostRestoreRequest
+### Properties
+* **azureFileShareUri**: string: Post Restore Azure file share uri.
+* **failedFileList**: string: Post Restore Azure failed file list.
+* **partition**: string: Post Restore partition.
+* **replicaGroup**: string: Post Restore replica group.
+* **requestId**: string: Post Restore request id.
+* **restoreFileSpec**: [RestoreFileSpec](#restorefilespec)[]: Post Restore restore file spec array.
+* **sourceAzureFileShareUri**: string: Post Restore Azure source azure file share uri.
+* **status**: string: Post Restore Azure status.
+
+## PreRestoreRequest
+### Properties
+* **azureFileShareUri**: string: Pre Restore Azure file share uri.
+* **backupMetadataPropertyBag**: string: Pre Restore backup metadata property bag.
+* **partition**: string: Pre Restore partition.
+* **pauseWaitForSyncDrainTimePeriodInSeconds**: int: Pre Restore pause wait for sync drain time period in seconds.
+* **replicaGroup**: string: Pre Restore replica group.
+* **requestId**: string: Pre Restore request id.
+* **restoreFileSpec**: [RestoreFileSpec](#restorefilespec)[]: Pre Restore restore file spec array.
+* **sourceAzureFileShareUri**: string: Pre Restore Azure source azure file share uri.
+* **status**: string: Pre Restore Azure status.
+
 ## RegisteredServerProperties
 ### Properties
 * **agentVersion**: string: Registered Server Agent Version
@@ -107,6 +163,11 @@
 * **serverOSVersion**: string: Registered Server OS Version
 * **serverRole**: string: Registered Server serverRole
 * **storageSyncServiceUid**: string: Registered Server storageSyncServiceUid
+
+## RestoreFileSpec
+### Properties
+* **isdir**: bool (ReadOnly): Restore file spec isdir
+* **path**: string: Restore file spec path
 
 ## ServerEndpointProperties
 ### Properties

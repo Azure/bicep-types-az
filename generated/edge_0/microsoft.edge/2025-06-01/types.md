@@ -271,6 +271,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Edge/targets/solutions/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function bulkDeploySolution (Microsoft.Edge/solutionTemplates/versions@2025-06-01)
+* **Resource**: Microsoft.Edge/solutionTemplates/versions
+* **ApiVersion**: 2025-06-01
+* **Input**: [BulkDeploySolutionParameter](#bulkdeploysolutionparameter)
+* **Output**: any
+
+## Function bulkPublishSolution (Microsoft.Edge/solutionTemplates/versions@2025-06-01)
+* **Resource**: Microsoft.Edge/solutionTemplates/versions
+* **ApiVersion**: 2025-06-01
+* **Input**: [BulkPublishSolutionParameter](#bulkpublishsolutionparameter)
+* **Output**: any
+
 ## Function createVersion (Microsoft.Edge/configTemplates@2025-06-01)
 * **Resource**: Microsoft.Edge/configTemplates
 * **ApiVersion**: 2025-06-01
@@ -289,11 +301,23 @@
 * **Input**: [SolutionTemplateVersionWithUpdateType](#solutiontemplateversionwithupdatetype)
 * **Output**: [SolutionTemplateVersion](#solutiontemplateversion)
 
+## Function installSolution (Microsoft.Edge/targets@2025-06-01)
+* **Resource**: Microsoft.Edge/targets
+* **ApiVersion**: 2025-06-01
+* **Input**: [InstallSolutionParameter](#installsolutionparameter)
+* **Output**: any
+
 ## Function publishSolutionVersion (Microsoft.Edge/targets@2025-06-01)
 * **Resource**: Microsoft.Edge/targets
 * **ApiVersion**: 2025-06-01
 * **Input**: [SolutionVersionParameter](#solutionversionparameter)
 * **Output**: [SolutionVersion](#solutionversion)
+
+## Function removeRevision (Microsoft.Edge/targets@2025-06-01)
+* **Resource**: Microsoft.Edge/targets
+* **ApiVersion**: 2025-06-01
+* **Input**: [RemoveRevisionParameter](#removerevisionparameter)
+* **Output**: any
 
 ## Function removeVersion (Microsoft.Edge/configTemplates@2025-06-01)
 * **Resource**: Microsoft.Edge/configTemplates
@@ -307,6 +331,12 @@
 * **Input**: [VersionParameter](#versionparameter)
 * **Output**: [RemoveVersionResponse](#removeversionresponse)
 
+## Function removeVersion (Microsoft.Edge/solutionTemplates@2025-06-01)
+* **Resource**: Microsoft.Edge/solutionTemplates
+* **ApiVersion**: 2025-06-01
+* **Input**: [VersionParameter](#versionparameter)
+* **Output**: any
+
 ## Function resolveConfiguration (Microsoft.Edge/targets@2025-06-01)
 * **Resource**: Microsoft.Edge/targets
 * **ApiVersion**: 2025-06-01
@@ -318,6 +348,12 @@
 * **ApiVersion**: 2025-06-01
 * **Input**: [SolutionTemplateParameter](#solutiontemplateparameter)
 * **Output**: [SolutionVersion](#solutionversion)
+
+## Function uninstallSolution (Microsoft.Edge/targets@2025-06-01)
+* **Resource**: Microsoft.Edge/targets
+* **ApiVersion**: 2025-06-01
+* **Input**: [UninstallSolutionParameter](#uninstallsolutionparameter)
+* **Output**: any
 
 ## Function updateExternalValidationStatus (Microsoft.Edge/targets@2025-06-01)
 * **Resource**: Microsoft.Edge/targets
@@ -335,6 +371,25 @@
 ### Properties
 * **name**: string (Required): The name of the extended location.
 * **type**: 'CustomLocation' | 'EdgeZone' | string (Required): The type of the extended location.
+
+## BulkDeploySolutionParameter
+### Properties
+* **targets**: [BulkDeployTargetDetails](#bulkdeploytargetdetails)[] (Required): Targets to which solution needs to be deployed
+
+## BulkDeployTargetDetails
+### Properties
+* **solutionVersionId**: string (Required): ArmId of Target Solution Version
+
+## BulkPublishSolutionParameter
+### Properties
+* **solutionDependencies**: [SolutionDependencyParameter](#solutiondependencyparameter)[]: Solution dependencies
+* **solutionInstanceName**: string {pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"}: Name of the solution instance
+* **targets**: [BulkPublishTargetDetails](#bulkpublishtargetdetails)[] (Required): Targets to which solution needs to be published
+
+## BulkPublishTargetDetails
+### Properties
+* **solutionInstanceName**: string {pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"}: Name of the solution instance
+* **targetId**: string (Required): ArmId of Target
 
 ## Capability
 ### Properties
@@ -520,6 +575,11 @@
 ### Properties
 * **interval**: string (Required): Policy interval
 * **state**: 'active' | 'inactive' | string (Required): The state of the ReconciliationPolicy
+
+## RemoveRevisionParameter
+### Properties
+* **solutionTemplateId**: string (Required): Solution Template ARM Id
+* **solutionVersion**: string (Required): Solution Version Name
 
 ## RemoveVersionResponse
 ### Properties
@@ -799,6 +859,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UninstallSolutionParameter
+### Properties
+* **solutionInstanceName**: string: Solution Instance Name
+* **solutionTemplateId**: string (Required): Solution Template ARM Id
 
 ## UpdateExternalValidationStatusParameter
 ### Properties

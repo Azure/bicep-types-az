@@ -332,11 +332,49 @@
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function acquire (Microsoft.Sql/servers/dnsAliases@2017-03-01-preview)
+* **Resource**: Microsoft.Sql/servers/dnsAliases
+* **ApiVersion**: 2017-03-01-preview
+* **Input**: [ServerDnsAliasAcquisition](#serverdnsaliasacquisition)
+* **Output**: any
+
+## Function cancel (Microsoft.Sql/servers/jobAgents/jobs/executions@2017-03-01-preview)
+* **Resource**: Microsoft.Sql/servers/jobAgents/jobs/executions
+* **ApiVersion**: 2017-03-01-preview
+* **Output**: any
+
+## Function cancel (Microsoft.Sql/servers/databases/operations@2017-03-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/operations
+* **ApiVersion**: 2017-03-01-preview
+* **Output**: any
+
+## Function completeRestore (Microsoft.Sql/locations/managedDatabaseRestoreAzureAsyncOperation@2017-03-01-preview)
+* **Resource**: Microsoft.Sql/locations/managedDatabaseRestoreAzureAsyncOperation
+* **ApiVersion**: 2017-03-01-preview
+* **Input**: [CompleteDatabaseRestoreDefinition](#completedatabaserestoredefinition)
+* **Output**: any
+
+## Function disable (Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels@2017-03-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels
+* **ApiVersion**: 2017-03-01-preview
+* **Output**: any
+
+## Function enable (Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels@2017-03-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels
+* **ApiVersion**: 2017-03-01-preview
+* **Output**: any
+
 ## Function export (Microsoft.Sql/servers/databases@2017-03-01-preview)
 * **Resource**: Microsoft.Sql/servers/databases
 * **ApiVersion**: 2017-03-01-preview
 * **Input**: [ImportExportDatabaseDefinition](#importexportdatabasedefinition)
 * **Output**: [ImportExportOperationResult](#importexportoperationresult)
+
+## Function move (Microsoft.Sql/servers/databases@2017-03-01-preview)
+* **Resource**: Microsoft.Sql/servers/databases
+* **ApiVersion**: 2017-03-01-preview
+* **Input**: [ResourceMoveDefinition](#resourcemovedefinition)
+* **Output**: any
 
 ## Function pause (Microsoft.Sql/servers/databases@2017-03-01-preview)
 * **Resource**: Microsoft.Sql/servers/databases
@@ -376,6 +414,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [AutomaticTuningServerOptions](#automatictuningserveroptions)
+
+## CompleteDatabaseRestoreDefinition
+### Properties
+* **lastBackupName**: string (Required): The last backup name to apply
 
 ## CreateDatabaseRestorePointDefinition
 ### Properties
@@ -891,6 +933,10 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **sid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): SID (object ID) of the managed instance administrator.
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Tenant ID of the managed instance administrator.
 
+## ResourceMoveDefinition
+### Properties
+* **id**: string (Required): The target ID for the resource
+
 ## RestorableDroppedManagedDatabaseProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
@@ -1019,6 +1065,10 @@ Prerequisites for using managed identity authentication:
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
 * **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
+
+## ServerDnsAliasAcquisition
+### Properties
+* **oldServerDnsAliasId**: string: The id of the server alias that will be acquired to point to this server instead.
 
 ## ServerDnsAliasProperties
 ### Properties

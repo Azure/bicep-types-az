@@ -110,12 +110,33 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforMySQL/servers",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforMySQL/servers",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/8"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ServerUpgradeParameters",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/9"
+          "$ref": "#/12"
         },
         "flags": 0,
         "description": "The properties that can be updated for a server."
@@ -133,6 +154,18 @@
         "flags": 0,
         "description": "Represents an server storage profile."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.DBforMySQL/servers",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/8"
+    },
+    "input": {
+      "$ref": "#/11"
     }
   }
 ]

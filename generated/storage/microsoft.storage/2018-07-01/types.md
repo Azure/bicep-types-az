@@ -59,6 +59,11 @@
 * **Input**: [ImmutabilityPolicy](#immutabilitypolicy)
 * **Output**: [ImmutabilityPolicy](#immutabilitypolicy)
 
+## Function failover (Microsoft.Storage/storageAccounts@2018-07-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-07-01
+* **Output**: any
+
 ## Function lease (Microsoft.Storage/storageAccounts/blobServices/containers@2018-07-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2018-07-01

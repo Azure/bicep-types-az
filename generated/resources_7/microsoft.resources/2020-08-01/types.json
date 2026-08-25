@@ -1140,6 +1140,15 @@
     "writableScopes": 31
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Resources/deployments",
+    "apiVersion": "2020-08-01",
+    "output": {
+      "$ref": "#/6"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "Deployment",
     "properties": {
@@ -1152,14 +1161,14 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/85"
+          "$ref": "#/86"
         },
         "flags": 1,
         "description": "The deployment properties."
       },
       "tags": {
         "type": {
-          "$ref": "#/93"
+          "$ref": "#/94"
         },
         "flags": 0,
         "description": "Deployment tags"
@@ -1200,7 +1209,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/88"
+          "$ref": "#/89"
         },
         "flags": 1,
         "description": "The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources."
@@ -1214,7 +1223,7 @@
       },
       "onErrorDeployment": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/90"
         },
         "flags": 0,
         "description": "The deployment on error behavior."
@@ -1233,10 +1242,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/86"
+        "$ref": "#/87"
       },
       {
-        "$ref": "#/87"
+        "$ref": "#/88"
       }
     ]
   },
@@ -1246,7 +1255,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/93"
         },
         "flags": 0,
         "description": "The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment."
@@ -1272,10 +1281,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/90"
+        "$ref": "#/91"
       },
       {
-        "$ref": "#/91"
+        "$ref": "#/92"
       }
     ]
   },
@@ -1300,7 +1309,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/96"
         },
         "flags": 0,
         "description": "The template deployment properties."
@@ -1313,7 +1322,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/108"
+          "$ref": "#/109"
         },
         "flags": 2,
         "description": "Denotes the state of provisioning."
@@ -1348,14 +1357,14 @@
       },
       "providers": {
         "type": {
-          "$ref": "#/109"
+          "$ref": "#/110"
         },
         "flags": 2,
         "description": "The list of resource providers needed for the deployment."
       },
       "dependencies": {
         "type": {
-          "$ref": "#/110"
+          "$ref": "#/111"
         },
         "flags": 2,
         "description": "The list of deployment dependencies."
@@ -1383,7 +1392,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/113"
+          "$ref": "#/114"
         },
         "flags": 2,
         "description": "The deployment mode. Possible values are Incremental and Complete."
@@ -1397,7 +1406,7 @@
       },
       "onErrorDeployment": {
         "type": {
-          "$ref": "#/114"
+          "$ref": "#/115"
         },
         "flags": 2,
         "description": "The deployment on error behavior."
@@ -1411,14 +1420,14 @@
       },
       "outputResources": {
         "type": {
-          "$ref": "#/118"
+          "$ref": "#/119"
         },
         "flags": 2,
         "description": "Array of provisioned resources."
       },
       "validatedResources": {
         "type": {
-          "$ref": "#/119"
+          "$ref": "#/120"
         },
         "flags": 2,
         "description": "Array of validated resources."
@@ -1484,9 +1493,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/96"
-      },
-      {
         "$ref": "#/97"
       },
       {
@@ -1520,6 +1526,9 @@
         "$ref": "#/107"
       },
       {
+        "$ref": "#/108"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -1548,10 +1557,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/111"
+        "$ref": "#/112"
       },
       {
-        "$ref": "#/112"
+        "$ref": "#/113"
       }
     ]
   },
@@ -1568,7 +1577,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/117"
+          "$ref": "#/118"
         },
         "flags": 0,
         "description": "The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment."
@@ -1594,10 +1603,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/115"
+        "$ref": "#/116"
       },
       {
-        "$ref": "#/116"
+        "$ref": "#/117"
       }
     ]
   },
@@ -1619,10 +1628,10 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2020-08-01",
     "output": {
-      "$ref": "#/94"
+      "$ref": "#/95"
     },
     "input": {
-      "$ref": "#/84"
+      "$ref": "#/85"
     }
   },
   {
@@ -1644,7 +1653,7 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2020-08-01",
     "output": {
-      "$ref": "#/121"
+      "$ref": "#/122"
     }
   },
   {
@@ -1660,7 +1669,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/125"
         },
         "flags": 1,
         "description": "The deployment properties."
@@ -1673,7 +1682,7 @@
     "properties": {
       "whatIfSettings": {
         "type": {
-          "$ref": "#/125"
+          "$ref": "#/126"
         },
         "flags": 0,
         "description": "Optional What-If operation settings."
@@ -1708,7 +1717,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/132"
         },
         "flags": 1,
         "description": "The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources."
@@ -1722,7 +1731,7 @@
       },
       "onErrorDeployment": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/90"
         },
         "flags": 0,
         "description": "The deployment on error behavior."
@@ -1735,7 +1744,7 @@
     "properties": {
       "resultFormat": {
         "type": {
-          "$ref": "#/128"
+          "$ref": "#/129"
         },
         "flags": 0,
         "description": "The format of the What-If results"
@@ -1754,10 +1763,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/126"
+        "$ref": "#/127"
       },
       {
-        "$ref": "#/127"
+        "$ref": "#/128"
       }
     ]
   },
@@ -1773,10 +1782,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/129"
+        "$ref": "#/130"
       },
       {
-        "$ref": "#/130"
+        "$ref": "#/131"
       }
     ]
   },
@@ -1793,7 +1802,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/133"
+          "$ref": "#/134"
         },
         "flags": 0,
         "description": "What-If operation properties."
@@ -1813,7 +1822,7 @@
     "properties": {
       "changes": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/151"
         },
         "flags": 0,
         "description": "List of resource changes predicted by What-If operation."
@@ -1833,7 +1842,7 @@
       },
       "changeType": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/142"
         },
         "flags": 1,
         "description": "Type of change that will be made to the resource when the deployment is executed."
@@ -1854,7 +1863,7 @@
       },
       "delta": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/150"
         },
         "flags": 0,
         "description": "The predicted changes to resource properties."
@@ -1889,9 +1898,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/135"
-      },
-      {
         "$ref": "#/136"
       },
       {
@@ -1905,6 +1911,9 @@
       },
       {
         "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
       }
     ]
   },
@@ -1921,7 +1930,7 @@
       },
       "propertyChangeType": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/148"
         },
         "flags": 1,
         "description": "The type of property change."
@@ -1942,7 +1951,7 @@
       },
       "children": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/149"
         },
         "flags": 0,
         "description": "Nested property changes."
@@ -1969,9 +1978,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/143"
-      },
-      {
         "$ref": "#/144"
       },
       {
@@ -1979,25 +1985,28 @@
       },
       {
         "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/142"
+      "$ref": "#/143"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/142"
+      "$ref": "#/143"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/134"
+      "$ref": "#/135"
     }
   },
   {
@@ -2006,10 +2015,10 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2020-08-01",
     "output": {
-      "$ref": "#/132"
+      "$ref": "#/133"
     },
     "input": {
-      "$ref": "#/123"
+      "$ref": "#/124"
     }
   }
 ]

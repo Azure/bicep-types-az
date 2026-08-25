@@ -1754,5 +1754,17 @@
     "output": {
       "$ref": "#/137"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshManagedPrivateEndpoints",
+    "resourceType": "Microsoft.Dashboard/grafana",
+    "apiVersion": "2023-09-01",
+    "output": {
+      "$ref": "#/141"
+    }
   }
 ]

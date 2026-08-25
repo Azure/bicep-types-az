@@ -70,10 +70,20 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Chaos/targets/capabilities' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.Chaos/experiments@2025-01-01)
+* **Resource**: Microsoft.Chaos/experiments
+* **ApiVersion**: 2025-01-01
+* **Output**: any
+
 ## Function getExecutionDetails (Microsoft.Chaos/experiments/executions@2025-01-01)
 * **Resource**: Microsoft.Chaos/experiments/executions
 * **ApiVersion**: 2025-01-01
 * **Output**: [ExperimentExecutionDetails](#experimentexecutiondetails)
+
+## Function start (Microsoft.Chaos/experiments@2025-01-01)
+* **Resource**: Microsoft.Chaos/experiments
+* **ApiVersion**: 2025-01-01
+* **Output**: any
 
 ## ActionStatus
 ### Properties

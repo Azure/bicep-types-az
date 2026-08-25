@@ -28,6 +28,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function pause (Microsoft.Synapse/workspaces/sqlPools@2020-04-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/sqlPools
+* **ApiVersion**: 2020-04-01-preview
+* **Output**: any
+
+## Function resume (Microsoft.Synapse/workspaces/sqlPools@2020-04-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/sqlPools
+* **ApiVersion**: 2020-04-01-preview
+* **Output**: any
+
 ## SkuV3
 ### Properties
 * **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.

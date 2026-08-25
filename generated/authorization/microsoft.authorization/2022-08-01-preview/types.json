@@ -1085,5 +1085,17 @@
     "output": {
       "$ref": "#/58"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "remediate",
+    "resourceType": "Microsoft.Authorization/roleManagementAlerts/alertIncidents",
+    "apiVersion": "2022-08-01-preview",
+    "output": {
+      "$ref": "#/60"
+    }
   }
 ]

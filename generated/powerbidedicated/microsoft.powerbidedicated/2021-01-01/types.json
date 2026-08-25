@@ -799,5 +799,26 @@
     "input": {
       "$ref": "#/68"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.PowerBIDedicated/capacities",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/72"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.PowerBIDedicated/capacities",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/72"
+    }
   }
 ]

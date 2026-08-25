@@ -71,6 +71,23 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles/Experiments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disableHttps (Microsoft.Network/frontDoors/frontendEndpoints@2025-10-01)
+* **Resource**: Microsoft.Network/frontDoors/frontendEndpoints
+* **ApiVersion**: 2025-10-01
+* **Output**: any
+
+## Function enableHttps (Microsoft.Network/frontDoors/frontendEndpoints@2025-10-01)
+* **Resource**: Microsoft.Network/frontDoors/frontendEndpoints
+* **ApiVersion**: 2025-10-01
+* **Input**: [CustomHttpsConfiguration](#customhttpsconfiguration)
+* **Output**: any
+
+## Function purge (Microsoft.Network/frontDoors@2025-10-01)
+* **Resource**: Microsoft.Network/frontDoors
+* **ApiVersion**: 2025-10-01
+* **Input**: [PurgeParameters](#purgeparameters)
+* **Output**: any
+
 ## Function validateCustomDomain (Microsoft.Network/frontDoors@2025-10-01)
 * **Resource**: Microsoft.Network/frontDoors
 * **ApiVersion**: 2025-10-01
@@ -321,6 +338,10 @@
 ### Properties
 * **enabledState**: 'Disabled' | 'Enabled' | string: The state of the Experiment
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status.
+
+## PurgeParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be purged. Can describe a file path or a wild card directory.
 
 ## ResourceTags
 ### Properties

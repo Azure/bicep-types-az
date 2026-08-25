@@ -3008,12 +3008,24 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "breakPairing",
+    "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
+    "apiVersion": "2021-11-01",
+    "output": {
+      "$ref": "#/192"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "FailoverProperties",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/193"
+          "$ref": "#/195"
         },
         "flags": 0,
         "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
@@ -3035,11 +3047,41 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
+    "apiVersion": "2021-11-01",
+    "output": {
+      "$ref": "#/192"
+    },
+    "input": {
+      "$ref": "#/194"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules",
     "apiVersion": "2021-11-01",
     "output": {
       "$ref": "#/185"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
+    "apiVersion": "2021-11-01",
+    "output": {
+      "$ref": "#/192"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revert",
+    "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
+    "apiVersion": "2021-11-01",
+    "output": {
+      "$ref": "#/192"
     }
   },
   {

@@ -738,6 +738,18 @@
     "writableScopes": 4
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acceptChangeTenant",
+    "resourceType": "Microsoft.Subscription/subscriptions",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/52"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "TargetDirectoryResultProperties",
     "properties": {
@@ -799,7 +811,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/58"
         },
         "flags": 2,
         "description": "Status of the subscription transfer operation."
@@ -829,13 +841,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/53"
-      },
-      {
-        "$ref": "#/54"
-      },
-      {
         "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
       },
       {
         "$ref": "#/0"
@@ -848,7 +860,67 @@
     "resourceType": "Microsoft.Subscription/subscriptions",
     "apiVersion": "2025-11-01-preview",
     "output": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcceptOwnershipRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "Accept subscription ownership request properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcceptOwnershipRequestProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The friendly name of the subscription."
+      },
+      "managementGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Management group Id for the subscription."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Tags for the subscription"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcceptOwnershipRequestPropertiesTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acceptOwnership",
+    "resourceType": "Microsoft.Subscription/subscriptions",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
       "$ref": "#/52"
+    },
+    "input": {
+      "$ref": "#/60"
     }
   }
 ]

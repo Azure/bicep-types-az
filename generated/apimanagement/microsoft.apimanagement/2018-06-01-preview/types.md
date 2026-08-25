@@ -460,6 +460,32 @@
 * **ApiVersion**: 2018-06-01-preview
 * **Output**: [ApiManagementServiceGetSsoTokenResult](#apimanagementservicegetssotokenresult)
 
+## Function reconnect (Microsoft.ApiManagement/service/backends@2018-06-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/backends
+* **ApiVersion**: 2018-06-01-preview
+* **Input**: [BackendReconnectContract](#backendreconnectcontract)
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/subscriptions@2018-06-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: any
+
+## Function regeneratePrimaryKey (Microsoft.ApiManagement/service/tenant@2018-06-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/subscriptions@2018-06-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: any
+
+## Function regenerateSecondaryKey (Microsoft.ApiManagement/service/tenant@2018-06-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: any
+
 ## Function restore (Microsoft.ApiManagement/service@2018-06-01-preview)
 * **Resource**: Microsoft.ApiManagement/service
 * **ApiVersion**: 2018-06-01-preview
@@ -471,6 +497,11 @@
 * **ApiVersion**: 2018-06-01-preview
 * **Input**: [SaveConfigurationParameter](#saveconfigurationparameter)
 * **Output**: [OperationResultContract](#operationresultcontract)
+
+## Function send (Microsoft.ApiManagement/service/users/confirmations@2018-06-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/users/confirmations
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: any
 
 ## Function token (Microsoft.ApiManagement/service/users@2018-06-01-preview)
 * **Resource**: Microsoft.ApiManagement/service/users
@@ -713,6 +744,17 @@
 * **password**: string: Password to connect to the WebProxy Server
 * **url**: string {minLength: 1, maxLength: 2000} (Required): WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
 * **username**: string: Username to connect to the WebProxy server
+
+## BackendReconnectContract
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [BackendReconnectProperties](#backendreconnectproperties): Reconnect request properties.
+* **type**: string (ReadOnly): Resource type for API Management resource.
+
+## BackendReconnectProperties
+### Properties
+* **after**: string: Duration in ISO8601 format after which reconnect will be initiated. Minimum duration of the Reconnect is PT2M.
 
 ## BackendServiceFabricClusterProperties
 ### Properties

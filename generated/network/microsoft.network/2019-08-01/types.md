@@ -1000,6 +1000,12 @@
 * **Input**: [NextHopParameters](#nexthopparameters)
 * **Output**: [NextHopResult](#nexthopresult)
 
+## Function PrepareNetworkPolicies (Microsoft.Network/virtualNetworks/subnets@2019-08-01)
+* **Resource**: Microsoft.Network/virtualNetworks/subnets
+* **ApiVersion**: 2019-08-01
+* **Input**: [PrepareNetworkPoliciesRequest](#preparenetworkpoliciesrequest)
+* **Output**: any
+
 ## Function query (Microsoft.Network/networkWatchers/connectionMonitors@2019-08-01)
 * **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
 * **ApiVersion**: 2019-08-01
@@ -1032,6 +1038,11 @@
 * **ApiVersion**: 2019-08-01
 * **Output**: [VpnGateway](#vpngateway)
 
+## Function resetvpnclientsharedkey (Microsoft.Network/virtualNetworkGateways@2019-08-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2019-08-01
+* **Output**: any
+
 ## Function securityGroupView (Microsoft.Network/networkWatchers@2019-08-01)
 * **Resource**: Microsoft.Network/networkWatchers
 * **ApiVersion**: 2019-08-01
@@ -1044,6 +1055,16 @@
 * **Input**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
 * **Output**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
 
+## Function start (Microsoft.Network/applicationGateways@2019-08-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2019-08-01
+* **Output**: any
+
+## Function start (Microsoft.Network/networkWatchers/connectionMonitors@2019-08-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2019-08-01
+* **Output**: any
+
 ## Function startPacketCapture (Microsoft.Network/virtualNetworkGateways@2019-08-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
 * **ApiVersion**: 2019-08-01
@@ -1055,6 +1076,21 @@
 * **ApiVersion**: 2019-08-01
 * **Input**: [VpnPacketCaptureStartParameters](#vpnpacketcapturestartparameters)
 * **Output**: string
+
+## Function stop (Microsoft.Network/applicationGateways@2019-08-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2019-08-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/packetCaptures@2019-08-01)
+* **Resource**: Microsoft.Network/networkWatchers/packetCaptures
+* **ApiVersion**: 2019-08-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/connectionMonitors@2019-08-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2019-08-01
+* **Output**: any
 
 ## Function stopPacketCapture (Microsoft.Network/virtualNetworkGateways@2019-08-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
@@ -1084,6 +1120,18 @@
 * **ApiVersion**: 2019-08-01
 * **Input**: [TroubleshootingParameters](#troubleshootingparameters)
 * **Output**: [TroubleshootingResult](#troubleshootingresult)
+
+## Function UnprepareNetworkPolicies (Microsoft.Network/virtualNetworks/subnets@2019-08-01)
+* **Resource**: Microsoft.Network/virtualNetworks/subnets
+* **ApiVersion**: 2019-08-01
+* **Input**: [UnprepareNetworkPoliciesRequest](#unpreparenetworkpoliciesrequest)
+* **Output**: any
+
+## Function vpnConfiguration (Microsoft.Network/virtualWans@2019-08-01)
+* **Resource**: Microsoft.Network/virtualWans
+* **ApiVersion**: 2019-08-01
+* **Input**: [GetVpnSitesConfigurationRequest](#getvpnsitesconfigurationrequest)
+* **Output**: any
 
 ## Function vpndeviceconfigurationscript (Microsoft.Network/connections@2019-08-01)
 * **Resource**: Microsoft.Network/connections
@@ -2392,6 +2440,11 @@
 ### Properties
 * **value**: [GatewayRoute](#gatewayroute)[]: List of gateway routes.
 
+## GetVpnSitesConfigurationRequest
+### Properties
+* **outputBlobSasUrl**: string (Required): The sas-url to download the configurations for vpn-sites.
+* **vpnSites**: string[]: List of resource-ids of the vpn-sites for which config is to be downloaded.
+
 ## HttpConfiguration
 ### Properties
 * **headers**: [HttpHeader](#httpheader)[]: List of HTTP headers.
@@ -2664,6 +2717,20 @@
 * **networkSecurityGroupResult**: [NetworkSecurityGroupResult](#networksecuritygroupresult): Network security group result.
 * **profile**: [NetworkConfigurationDiagnosticProfile](#networkconfigurationdiagnosticprofile): Network configuration diagnostic profile.
 
+## NetworkIntentPolicy
+### Properties
+* **etag**: string: A unique read-only string that changes whenever the resource is updated.
+* **id**: string: Resource ID.
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
+## NetworkIntentPolicyConfiguration
+### Properties
+* **networkIntentPolicyName**: string: The name of the Network Intent Policy for storing in target subscription.
+* **sourceNetworkIntentPolicy**: [NetworkIntentPolicy](#networkintentpolicy): Source network intent policy.
+
 ## NetworkInterface
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -2929,6 +2996,11 @@
 * **requestBodyCheck**: bool: Whether to allow WAF to check request Body.
 * **state**: 'Disabled' | 'Enabled' | string: Describes if the policy is in enabled state or disabled state.
 
+## PrepareNetworkPoliciesRequest
+### Properties
+* **networkIntentPolicyConfigurations**: [NetworkIntentPolicyConfiguration](#networkintentpolicyconfiguration)[]: A list of NetworkIntentPolicyConfiguration.
+* **serviceName**: string: The name of the service for which subnet is being prepared for.
+
 ## PrivateEndpoint
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -3125,6 +3197,11 @@
 * **link**: string: Link to the external resource.
 * **linkedResourceType**: string: Resource type of the linked resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource navigation link resource.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
@@ -3662,6 +3739,10 @@
 * **ingressBytesTransferred**: int (ReadOnly): The Ingress Bytes Transferred in this connection.
 * **lastConnectionEstablishedUtcTime**: string (ReadOnly): The time at which connection was established in Utc format.
 * **tunnel**: string (ReadOnly): Tunnel name.
+
+## UnprepareNetworkPoliciesRequest
+### Properties
+* **serviceName**: string: The name of the service for which subnet is being unprepared for.
 
 ## VerificationIPFlowParameters
 ### Properties

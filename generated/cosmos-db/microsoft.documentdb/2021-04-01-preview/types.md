@@ -391,6 +391,12 @@
 * **properties**: [LocationProperties](#locationproperties) (ReadOnly): Cosmos DB location metadata
 * **type**: 'Microsoft.DocumentDB/locations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function failoverPriorityChange (Microsoft.DocumentDB/databaseAccounts@2021-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2021-04-01-preview
+* **Input**: [FailoverPolicies](#failoverpolicies)
+* **Output**: any
+
 ## Function fetchNodeStatus (Microsoft.DocumentDB/cassandraClusters@2021-04-01-preview)
 * **Resource**: Microsoft.DocumentDB/cassandraClusters
 * **ApiVersion**: 2021-04-01-preview
@@ -501,16 +507,50 @@
 * **ApiVersion**: 2021-04-01-preview
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
+## Function offlineRegion (Microsoft.DocumentDB/databaseAccounts@2021-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2021-04-01-preview
+* **Input**: [RegionForOnlineOffline](#regionforonlineoffline)
+* **Output**: any
+
+## Function onlineRegion (Microsoft.DocumentDB/databaseAccounts@2021-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2021-04-01-preview
+* **Input**: [RegionForOnlineOffline](#regionforonlineoffline)
+* **Output**: any
+
 ## Function readonlykeys (Microsoft.DocumentDB/databaseAccounts@2021-04-01-preview)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts
 * **ApiVersion**: 2021-04-01-preview
 * **Output**: [DatabaseAccountListReadOnlyKeysResult](#databaseaccountlistreadonlykeysresult)
+
+## Function regenerateAuthToken (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2021-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
+
+## Function regenerateKey (Microsoft.DocumentDB/databaseAccounts@2021-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2021-04-01-preview
+* **Input**: [DatabaseAccountRegenerateKeyParameters](#databaseaccountregeneratekeyparameters)
+* **Output**: any
+
+## Function repair (Microsoft.DocumentDB/cassandraClusters@2021-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/cassandraClusters
+* **ApiVersion**: 2021-04-01-preview
+* **Input**: [RepairPostBody](#repairpostbody)
+* **Output**: any
 
 ## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2021-04-01-preview)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
 * **ApiVersion**: 2021-04-01-preview
 * **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
 * **Output**: [BackupInformation](#backupinformation)
+
+## Function start (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2021-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
 
 ## ApiProperties
 ### Properties
@@ -803,6 +843,10 @@
 * **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
 
+## DatabaseAccountRegenerateKeyParameters
+### Properties
+* **keyKind**: 'primary' | 'primaryReadonly' | 'secondary' | 'secondaryReadonly' | string (Required): The access key to regenerate.
+
 ## DatabaseRestoreResource
 ### Properties
 * **collectionNames**: string[]: The names of the collections available for restore.
@@ -820,6 +864,10 @@
 ## ExcludedPath
 ### Properties
 * **path**: string: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+
+## FailoverPolicies
+### Properties
+* **failoverPolicies**: [FailoverPolicy](#failoverpolicy)[] (Required): List of failover policies.
 
 ## FailoverPolicy
 ### Properties
@@ -999,6 +1047,15 @@
 * **actionsRequired**: string (ReadOnly): Any action that is required beyond basic workflow (approve/ reject/ disconnect)
 * **description**: string: The private link service connection description.
 * **status**: string: The private link service connection status.
+
+## RegionForOnlineOffline
+### Properties
+* **region**: string (Required): Cosmos DB region, with spaces between words and each word capitalized.
+
+## RepairPostBody
+### Properties
+* **keyspace**: string (Required): The name of the keyspace that repair should be run on.
+* **tables**: string[]: List of tables in the keyspace to repair. If omitted, repair all tables in the keyspace.
 
 ## RestoreParameters
 ### Properties

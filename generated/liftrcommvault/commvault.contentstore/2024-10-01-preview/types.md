@@ -69,6 +69,12 @@
 * **Input**: [RestoreProtectionItemRequest](#restoreprotectionitemrequest)
 * **Output**: [RestoreProtectionItemResponse](#restoreprotectionitemresponse)
 
+## Function stopBackup (Commvault.ContentStore/cloudAccounts/protectionGroups@2024-10-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
+* **ApiVersion**: 2024-10-01-preview
+* **Input**: [StopBackupProtectionGroupRequest](#stopbackupprotectiongrouprequest)
+* **Output**: any
+
 ## CloudAccountProperties
 ### Properties
 * **marketplace**: [LiftrBaseMarketplaceDetails](#liftrbasemarketplacedetails) (Required): Marketplace details of the resource.
@@ -187,6 +193,11 @@
 * **timeZone**: string: Time Zone
 * **weeklyDays**: ('FRIDAY' | 'MONDAY' | 'SATURDAY' | 'SUNDAY' | 'THURSDAY' | 'TUESDAY' | 'WEDNESDAY' | string)[]: Weekly Days List
 * **weekOfMonth**: 'FIRST' | 'FOURTH' | 'LAST' | 'SECOND' | 'THIRD' | string: Week of the month
+
+## StopBackupProtectionGroupRequest
+### Properties
+* **comment**: string: Any further comments
+* **reason**: string (Required): The reason for stopping the backup
 
 ## StoragePlan
 ### Properties

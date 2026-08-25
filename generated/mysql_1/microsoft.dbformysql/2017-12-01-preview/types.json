@@ -1547,12 +1547,24 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforMySQL/servers",
+    "apiVersion": "2017-12-01-preview",
+    "output": {
+      "$ref": "#/122"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ConfigurationListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/126"
         },
         "flags": 0,
         "description": "The list of server configurations."
@@ -1596,7 +1608,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/123"
+      "$ref": "#/125"
     }
   },
   {
@@ -1605,10 +1617,10 @@
     "resourceType": "Microsoft.DBforMySQL/servers",
     "apiVersion": "2017-12-01-preview",
     "output": {
-      "$ref": "#/122"
+      "$ref": "#/124"
     },
     "input": {
-      "$ref": "#/122"
+      "$ref": "#/124"
     }
   }
 ]

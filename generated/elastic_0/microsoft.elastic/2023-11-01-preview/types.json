@@ -1543,6 +1543,21 @@
     ]
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "vmCollectionUpdate",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/109"
+    },
+    "input": {
+      "$ref": "#/105"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "UpgradableVersionsList",
     "properties": {
@@ -1555,7 +1570,7 @@
       },
       "upgradableVersions": {
         "type": {
-          "$ref": "#/110"
+          "$ref": "#/112"
         },
         "flags": 0,
         "description": "Stack Versions that this version can upgrade to"
@@ -1574,7 +1589,32 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2023-11-01-preview",
     "output": {
+      "$ref": "#/111"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElasticMonitorUpgrade",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Version to which the elastic monitor should be upgraded to"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
       "$ref": "#/109"
+    },
+    "input": {
+      "$ref": "#/114"
     }
   },
   {
@@ -1583,7 +1623,7 @@
     "properties": {
       "rulesets": {
         "type": {
-          "$ref": "#/119"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "List of elastic traffic filters in the account"
@@ -1624,7 +1664,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/116"
+          "$ref": "#/120"
         },
         "flags": 0,
         "description": "Type of the elastic filter"
@@ -1638,7 +1678,7 @@
       },
       "rules": {
         "type": {
-          "$ref": "#/118"
+          "$ref": "#/122"
         },
         "flags": 0,
         "description": "Rules in the elastic filter"
@@ -1657,10 +1697,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/114"
+        "$ref": "#/118"
       },
       {
-        "$ref": "#/115"
+        "$ref": "#/119"
       },
       {
         "$ref": "#/0"
@@ -1711,13 +1751,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/117"
+      "$ref": "#/121"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/113"
+      "$ref": "#/117"
     }
   },
   {
@@ -1726,7 +1766,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/112"
+      "$ref": "#/116"
     }
   },
   {
@@ -1735,7 +1775,61 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/112"
+      "$ref": "#/116"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createAndAssociateIPFilter",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createAndAssociatePLFilter",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "associateTrafficFilter",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "detachAndDeleteTrafficFilter",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "detachTrafficFilter",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteTrafficFilter",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/109"
     }
   }
 ]

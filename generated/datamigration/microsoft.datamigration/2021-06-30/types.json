@@ -15906,6 +15906,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2021-06-30",
+    "output": {
+      "$ref": "#/1155"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DataMigration/services",
+    "apiVersion": "2021-06-30",
+    "output": {
+      "$ref": "#/1155"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "NameAvailabilityRequest",
     "properties": {
@@ -15938,7 +15959,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/1159"
+          "$ref": "#/1162"
         },
         "flags": 0,
         "description": "The reason why the name is not available, if nameAvailable is false"
@@ -15964,10 +15985,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1157"
+        "$ref": "#/1160"
       },
       {
-        "$ref": "#/1158"
+        "$ref": "#/1161"
       },
       {
         "$ref": "#/0"
@@ -15980,10 +16001,10 @@
     "resourceType": "Microsoft.DataMigration/services",
     "apiVersion": "2021-06-30",
     "output": {
-      "$ref": "#/1156"
+      "$ref": "#/1159"
     },
     "input": {
-      "$ref": "#/1155"
+      "$ref": "#/1158"
     }
   },
   {
@@ -15992,10 +16013,10 @@
     "resourceType": "Microsoft.DataMigration/locations",
     "apiVersion": "2021-06-30",
     "output": {
-      "$ref": "#/1156"
+      "$ref": "#/1159"
     },
     "input": {
-      "$ref": "#/1155"
+      "$ref": "#/1158"
     }
   },
   {
@@ -16052,7 +16073,7 @@
     "resourceType": "Microsoft.DataMigration/services/projects/tasks",
     "apiVersion": "2021-06-30",
     "output": {
-      "$ref": "#/1162"
+      "$ref": "#/1165"
     }
   },
   {
@@ -16073,7 +16094,7 @@
     "resourceType": "Microsoft.DataMigration/services/serviceTasks",
     "apiVersion": "2021-06-30",
     "output": {
-      "$ref": "#/1162"
+      "$ref": "#/1165"
     }
   },
   {
@@ -16089,7 +16110,7 @@
       },
       "headers": {
         "type": {
-          "$ref": "#/1167"
+          "$ref": "#/1170"
         },
         "flags": 0,
         "description": "Dictionary of <string>"
@@ -16110,7 +16131,7 @@
     "resourceType": "Microsoft.DataMigration/services/projects/files",
     "apiVersion": "2021-06-30",
     "output": {
-      "$ref": "#/1166"
+      "$ref": "#/1169"
     }
   },
   {
@@ -16119,7 +16140,7 @@
     "resourceType": "Microsoft.DataMigration/services/projects/files",
     "apiVersion": "2021-06-30",
     "output": {
-      "$ref": "#/1166"
+      "$ref": "#/1169"
     }
   }
 ]

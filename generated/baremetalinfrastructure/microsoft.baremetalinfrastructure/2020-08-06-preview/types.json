@@ -744,5 +744,35 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.BareMetalInfrastructure/bareMetalInstances",
+    "apiVersion": "2020-08-06-preview",
+    "output": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.BareMetalInfrastructure/bareMetalInstances",
+    "apiVersion": "2020-08-06-preview",
+    "output": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "shutdown",
+    "resourceType": "Microsoft.BareMetalInfrastructure/bareMetalInstances",
+    "apiVersion": "2020-08-06-preview",
+    "output": {
+      "$ref": "#/78"
+    }
   }
 ]

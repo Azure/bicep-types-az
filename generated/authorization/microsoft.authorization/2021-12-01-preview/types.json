@@ -2787,5 +2787,130 @@
     "output": {
       "$ref": "#/43"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/223"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "applyDecisions",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/223"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecordAllDecisionsProperties",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The id of principal which needs to be approved/denied."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The id of resource which needs to be approved/denied."
+      },
+      "decision": {
+        "type": {
+          "$ref": "#/229"
+        },
+        "flags": 0,
+        "description": "The decision to make. Approvers can take action of Approve/Deny"
+      },
+      "justification": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Justification provided by approvers for their action"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approve"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/227"
+      },
+      {
+        "$ref": "#/228"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "recordAllDecisions",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/223"
+    },
+    "input": {
+      "$ref": "#/226"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetDecisions",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/223"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sendReminders",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/223"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/223"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acceptRecommendations",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/223"
+    }
   }
 ]

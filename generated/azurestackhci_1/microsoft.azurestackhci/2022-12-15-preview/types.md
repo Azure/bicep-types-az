@@ -134,6 +134,21 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureStackHCI/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.AzureStackHCI/virtualMachines@2022-12-15-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachines
+* **ApiVersion**: 2022-12-15-preview
+* **Output**: any
+
+## Function start (Microsoft.AzureStackHCI/virtualMachines@2022-12-15-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachines
+* **ApiVersion**: 2022-12-15-preview
+* **Output**: any
+
+## Function stop (Microsoft.AzureStackHCI/virtualMachines@2022-12-15-preview)
+* **Resource**: Microsoft.AzureStackHCI/virtualMachines
+* **ApiVersion**: 2022-12-15-preview
+* **Output**: any
+
 ## Components3Iu67JSchemasVirtualnetworkpropertiesPropertiesSubnetsItemsPropertiesRoutetableProperties
 ### Properties
 * **routes**: [VirtualNetworkPropertiesSubnetsPropertiesItemsItem](#virtualnetworkpropertiessubnetspropertiesitemsitem)[]: Routes - Collection of routes contained within a route table.

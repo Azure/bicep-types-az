@@ -7132,6 +7132,219 @@
   },
   {
     "$type": "ObjectType",
+    "name": "HostPoolProvisioningControlParameter",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/518"
+        },
+        "flags": 1,
+        "description": "Action types for controlling hostpool update."
+      },
+      "cancelMessage": {
+        "type": {
+          "$ref": "#/261"
+        },
+        "flags": 0,
+        "description": "The cancel message sent to the user on the session host."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancel"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/517"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "controlSessionHostProvisioning",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHostManagements",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/516"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HostPoolUpdateControlParameter",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/526"
+        },
+        "flags": 1,
+        "description": "Action types for controlling hostpool update."
+      },
+      "cancelMessage": {
+        "type": {
+          "$ref": "#/261"
+        },
+        "flags": 0,
+        "description": "The cancel message sent to the user on the session host. This is can only be specified if the action is 'Cancel'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Start"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pause"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancel"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Retry"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resume"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/521"
+      },
+      {
+        "$ref": "#/522"
+      },
+      {
+        "$ref": "#/523"
+      },
+      {
+        "$ref": "#/524"
+      },
+      {
+        "$ref": "#/525"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "controlSessionHostUpdate",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHostManagements",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/520"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpdateSessionHostsRequestBody",
+    "properties": {
+      "scheduledDateTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp that the update validation is scheduled for. If none is provided, the update will be executed immediately"
+      },
+      "scheduledDateTimeZone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timeZone as defined in https://docs.microsoft.com/dotnet/api/system.timezoneinfo.findsystemtimezonebyid."
+      },
+      "update": {
+        "type": {
+          "$ref": "#/529"
+        },
+        "flags": 0,
+        "description": "settings for management information for the hostpool update operation. If none is provided the update will use the settings saved in the sessionHostManagement object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HostPoolUpdateConfigurationPatchProperties",
+    "properties": {
+      "deleteOriginalVm": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Whether not to save original disk. False by default."
+      },
+      "maxVmsRemoved": {
+        "type": {
+          "$ref": "#/309"
+        },
+        "flags": 0,
+        "description": "The maximum number of virtual machines to be removed during hostpool update."
+      },
+      "logOffDelayMinutes": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Grace period before logging off users in minutes."
+      },
+      "logOffMessage": {
+        "type": {
+          "$ref": "#/261"
+        },
+        "flags": 0,
+        "description": "Log off message sent to user for logoff. Default value is an empty string."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateSessionHostUpdate",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHostManagements",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/528"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "retryProvisioning",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHosts",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/16"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disconnect",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/16"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SendMessage",
     "properties": {
       "messageTitle": {
@@ -7148,6 +7361,18 @@
         "flags": 0,
         "description": "Body of message."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sendMessage",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/533"
     }
   }
 ]

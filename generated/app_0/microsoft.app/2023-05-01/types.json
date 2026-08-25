@@ -7580,19 +7580,46 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2023-05-01",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deactivate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2023-05-01",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2023-05-01",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "JobExecutionTemplate",
     "properties": {
       "containers": {
         "type": {
-          "$ref": "#/477"
+          "$ref": "#/480"
         },
         "flags": 0,
         "description": "List of container definitions for the Container Apps Job."
       },
       "initContainers": {
         "type": {
-          "$ref": "#/478"
+          "$ref": "#/481"
         },
         "flags": 0,
         "description": "List of specialized containers that run before job containers."
@@ -7619,21 +7646,21 @@
       },
       "command": {
         "type": {
-          "$ref": "#/474"
+          "$ref": "#/477"
         },
         "flags": 0,
         "description": "Container start command."
       },
       "args": {
         "type": {
-          "$ref": "#/475"
+          "$ref": "#/478"
         },
         "flags": 0,
         "description": "Container start command arguments."
       },
       "env": {
         "type": {
-          "$ref": "#/476"
+          "$ref": "#/479"
         },
         "flags": 0,
         "description": "Container environment variables."
@@ -7668,13 +7695,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/473"
+      "$ref": "#/476"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/473"
+      "$ref": "#/476"
     }
   },
   {
@@ -7703,10 +7730,10 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/479"
+      "$ref": "#/482"
     },
     "input": {
-      "$ref": "#/472"
+      "$ref": "#/475"
     }
   },
   {
@@ -7715,7 +7742,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/492"
+          "$ref": "#/495"
         },
         "flags": 1,
         "description": "Collection of resources."
@@ -7756,7 +7783,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/483"
+          "$ref": "#/486"
         },
         "flags": 0,
         "description": "Container Apps Job execution specific properties."
@@ -7769,7 +7796,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/491"
+          "$ref": "#/494"
         },
         "flags": 2,
         "description": "Current running State of the job"
@@ -7790,7 +7817,7 @@
       },
       "template": {
         "type": {
-          "$ref": "#/472"
+          "$ref": "#/475"
         },
         "flags": 0,
         "description": "Job's execution container."
@@ -7829,15 +7856,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/484"
-      },
-      {
-        "$ref": "#/485"
-      },
-      {
-        "$ref": "#/486"
-      },
-      {
         "$ref": "#/487"
       },
       {
@@ -7850,6 +7868,15 @@
         "$ref": "#/490"
       },
       {
+        "$ref": "#/491"
+      },
+      {
+        "$ref": "#/492"
+      },
+      {
+        "$ref": "#/493"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -7857,7 +7884,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/482"
+      "$ref": "#/485"
     }
   },
   {
@@ -7866,7 +7893,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/481"
+      "$ref": "#/484"
     }
   },
   {
@@ -7875,7 +7902,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/495"
+          "$ref": "#/498"
         },
         "flags": 1,
         "description": "Collection of resources."
@@ -7894,7 +7921,16 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/494"
+      "$ref": "#/497"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.App/jobs/executions",
+    "apiVersion": "2023-05-01",
+    "output": {
+      "$ref": "#/97"
     }
   },
   {
@@ -7903,14 +7939,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/498"
+          "$ref": "#/502"
         },
         "flags": 0,
         "description": "Environment auth token resource specific properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/499"
+          "$ref": "#/503"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -7986,7 +8022,7 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/497"
+      "$ref": "#/501"
     }
   },
   {

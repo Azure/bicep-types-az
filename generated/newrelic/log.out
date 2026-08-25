@@ -51,6 +51,7 @@ warning | Skipping Accounts_List due to required query parameter "userEmail"
 warning | Skipping Accounts_List due to required query parameter "location"
 warning | Skipping Organizations_List due to required query parameter "userEmail"
 warning | Skipping Organizations_List due to required query parameter "location"
+warning | Resource action refreshIngestionKey under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/NewRelic.Observability/monitors/{monitorName}/refreshIngestionKey' has no response schema. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping Accounts_List due to required query parameter "userEmail"
@@ -58,6 +59,7 @@ warning | Skipping Accounts_List due to required query parameter "location"
 warning | Skipping Organizations_List due to required query parameter "userEmail"
 warning | Skipping Organizations_List due to required query parameter "location"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/NewRelic.Observability/activateSaaS': Unable to find type segments
+warning | Resource action refreshIngestionKey under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/NewRelic.Observability/monitors/{monitorName}/refreshIngestionKey' has no response schema. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping Accounts_List due to required query parameter "userEmail"
@@ -65,3 +67,4 @@ warning | Skipping Accounts_List due to required query parameter "location"
 warning | Skipping Organizations_List due to required query parameter "userEmail"
 warning | Skipping Organizations_List due to required query parameter "location"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/NewRelic.Observability/activateSaaS': Unable to find type segments
+warning | Resource action refreshIngestionKey under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/NewRelic.Observability/monitors/{monitorName}/refreshIngestionKey' has no response schema. Returning 'any'.

@@ -27,10 +27,28 @@
 * **Input**: [ShipmentPickUpRequest](#shipmentpickuprequest)
 * **Output**: [ShipmentPickUpResponse](#shipmentpickupresponse)
 
+## Function cancel (Microsoft.DataBox/jobs@2025-07-01)
+* **Resource**: Microsoft.DataBox/jobs
+* **ApiVersion**: 2025-07-01
+* **Input**: [CancellationReason](#cancellationreason)
+* **Output**: any
+
 ## Function listCredentials (Microsoft.DataBox/jobs@2025-07-01)
 * **Resource**: Microsoft.DataBox/jobs
 * **ApiVersion**: 2025-07-01
 * **Output**: [UnencryptedCredentialsList](#unencryptedcredentialslist)
+
+## Function markDevicesShipped (Microsoft.DataBox/jobs@2025-07-01)
+* **Resource**: Microsoft.DataBox/jobs
+* **ApiVersion**: 2025-07-01
+* **Input**: [MarkDevicesShippedRequest](#markdevicesshippedrequest)
+* **Output**: any
+
+## Function mitigate (Microsoft.DataBox/jobs@2025-07-01)
+* **Resource**: Microsoft.DataBox/jobs
+* **ApiVersion**: 2025-07-01
+* **Input**: [MitigateJobRequest](#mitigatejobrequest)
+* **Output**: any
 
 ## Function regionConfiguration (Microsoft.DataBox/locations@2025-07-01)
 * **Resource**: Microsoft.DataBox/locations
@@ -106,6 +124,10 @@
 * **blobPathList**: string[]: List of full path of the blobs to be transferred.
 * **blobPrefixList**: string[]: Prefix list of the Azure blobs to be transferred.
 * **containerList**: string[]: List of blob containers to be transferred.
+
+## CancellationReason
+### Properties
+* **reason**: string (Required): Reason for cancellation.
 
 ## CloudError
 ### Properties
@@ -554,6 +576,20 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **customerResolution**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume': Resolution code provided by customer
 * **isPerformedByCustomer**: bool: Action performed by customer,
 possibility is that mitigation might happen by customer or service or by ops
+
+## MarkDevicesShippedRequest
+### Properties
+* **deliverToDcPackageDetails**: [PackageCarrierInfo](#packagecarrierinfo) (Required): Delivery package details
+
+## MitigateJobRequest
+### Properties
+* **customerResolutionCode**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume': Resolution code for the job
+* **serialNumberCustomerResolutionMap**: [MitigateJobRequestSerialNumberCustomerResolutionMap](#mitigatejobrequestserialnumbercustomerresolutionmap): Serial number and the customer resolution code corresponding to each serial number
+
+## MitigateJobRequestSerialNumberCustomerResolutionMap
+### Properties
+### Additional Properties
+* **Additional Properties Type**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume'
 
 ## NotificationPreference
 ### Properties

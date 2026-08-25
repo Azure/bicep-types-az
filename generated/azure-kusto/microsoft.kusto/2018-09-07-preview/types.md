@@ -73,6 +73,16 @@
 * **Input**: [DatabasePrincipalListRequest](#databaseprincipallistrequest)
 * **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
 
+## Function start (Microsoft.Kusto/clusters@2018-09-07-preview)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2018-09-07-preview
+* **Output**: any
+
+## Function stop (Microsoft.Kusto/clusters@2018-09-07-preview)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2018-09-07-preview
+* **Output**: any
+
 ## AzureSku
 ### Properties
 * **capacity**: int: SKU capacity.

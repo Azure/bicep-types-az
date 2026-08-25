@@ -20,6 +20,12 @@
 * **Input**: [NotificationRequestBody](#notificationrequestbody)
 * **Output**: [TestNotificationDetailsResponse](#testnotificationdetailsresponse)
 
+## Function subscribe (Microsoft.Insights/actionGroups@2024-10-01-preview)
+* **Resource**: Microsoft.Insights/actionGroups
+* **ApiVersion**: 2024-10-01-preview
+* **Input**: [EnableRequest](#enablerequest)
+* **Output**: any
+
 ## ActionDetail
 ### Properties
 * **Detail**: string: The detail of the friendly error message
@@ -71,6 +77,10 @@
 * **managedIdentity**: string: The principal id of the managed identity. The value can be "None", "SystemAssigned"
 * **name**: string (Required): The name of the azure function receiver. Names must be unique across all receivers within an action group.
 * **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
+
+## EnableRequest
+### Properties
+* **receiverName**: string (Required): The name of the receiver to resubscribe.
 
 ## EventHubReceiver
 ### Properties

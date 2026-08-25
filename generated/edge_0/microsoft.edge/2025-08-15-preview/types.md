@@ -392,6 +392,24 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Edge/workflows/versions/executions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function bulkDeploySolution (Microsoft.Edge/solutionTemplates/versions@2025-08-15-preview)
+* **Resource**: Microsoft.Edge/solutionTemplates/versions
+* **ApiVersion**: 2025-08-15-preview
+* **Input**: [BulkDeploySolutionParameter](#bulkdeploysolutionparameter)
+* **Output**: any
+
+## Function bulkPublishSolution (Microsoft.Edge/solutionTemplates/versions@2025-08-15-preview)
+* **Resource**: Microsoft.Edge/solutionTemplates/versions
+* **ApiVersion**: 2025-08-15-preview
+* **Input**: [BulkPublishSolutionParameter](#bulkpublishsolutionparameter)
+* **Output**: any
+
+## Function bulkReviewSolution (Microsoft.Edge/solutionTemplates/versions@2025-08-15-preview)
+* **Resource**: Microsoft.Edge/solutionTemplates/versions
+* **ApiVersion**: 2025-08-15-preview
+* **Input**: [BulkReviewSolutionParameter](#bulkreviewsolutionparameter)
+* **Output**: any
+
 ## Function createVersion (Microsoft.Edge/configTemplates@2025-08-15-preview)
 * **Resource**: Microsoft.Edge/configTemplates
 * **ApiVersion**: 2025-08-15-preview
@@ -410,11 +428,29 @@
 * **Input**: [SolutionTemplateVersionWithUpdateType](#solutiontemplateversionwithupdatetype)
 * **Output**: [SolutionTemplateVersion](#solutiontemplateversion)
 
+## Function installSolution (Microsoft.Edge/targets@2025-08-15-preview)
+* **Resource**: Microsoft.Edge/targets
+* **ApiVersion**: 2025-08-15-preview
+* **Input**: [InstallSolutionParameter](#installsolutionparameter)
+* **Output**: any
+
+## Function linkToHierarchies (Microsoft.Edge/configTemplates@2025-08-15-preview)
+* **Resource**: Microsoft.Edge/configTemplates
+* **ApiVersion**: 2025-08-15-preview
+* **Input**: [HierarchySelector](#hierarchyselector)
+* **Output**: any
+
 ## Function publishSolutionVersion (Microsoft.Edge/targets@2025-08-15-preview)
 * **Resource**: Microsoft.Edge/targets
 * **ApiVersion**: 2025-08-15-preview
 * **Input**: [SolutionVersionParameter](#solutionversionparameter)
 * **Output**: [SolutionVersion](#solutionversion)
+
+## Function removeRevision (Microsoft.Edge/targets@2025-08-15-preview)
+* **Resource**: Microsoft.Edge/targets
+* **ApiVersion**: 2025-08-15-preview
+* **Input**: [RemoveRevisionParameter](#removerevisionparameter)
+* **Output**: any
 
 ## Function removeVersion (Microsoft.Edge/configTemplates@2025-08-15-preview)
 * **Resource**: Microsoft.Edge/configTemplates
@@ -428,6 +464,12 @@
 * **Input**: [VersionParameter](#versionparameter)
 * **Output**: [RemoveVersionResponse](#removeversionresponse)
 
+## Function removeVersion (Microsoft.Edge/solutionTemplates@2025-08-15-preview)
+* **Resource**: Microsoft.Edge/solutionTemplates
+* **ApiVersion**: 2025-08-15-preview
+* **Input**: [VersionParameter](#versionparameter)
+* **Output**: any
+
 ## Function resolveConfiguration (Microsoft.Edge/targets@2025-08-15-preview)
 * **Resource**: Microsoft.Edge/targets
 * **ApiVersion**: 2025-08-15-preview
@@ -439,6 +481,18 @@
 * **ApiVersion**: 2025-08-15-preview
 * **Input**: [SolutionTemplateParameter](#solutiontemplateparameter)
 * **Output**: [SolutionVersion](#solutionversion)
+
+## Function uninstallSolution (Microsoft.Edge/targets@2025-08-15-preview)
+* **Resource**: Microsoft.Edge/targets
+* **ApiVersion**: 2025-08-15-preview
+* **Input**: [UninstallSolutionParameter](#uninstallsolutionparameter)
+* **Output**: any
+
+## Function unLinkFromHierarchies (Microsoft.Edge/configTemplates@2025-08-15-preview)
+* **Resource**: Microsoft.Edge/configTemplates
+* **ApiVersion**: 2025-08-15-preview
+* **Input**: [HierarchySelector](#hierarchyselector)
+* **Output**: any
 
 ## Function unstageSolutionVersion (Microsoft.Edge/targets@2025-08-15-preview)
 * **Resource**: Microsoft.Edge/targets
@@ -466,6 +520,43 @@
 ### Properties
 * **name**: string (Required): The name of the extended location.
 * **type**: 'CustomLocation' | 'EdgeZone' | string (Required): The type of the extended location.
+
+## BulkDeploySolutionParameter
+### Properties
+* **targets**: [BulkDeployTargetDetails](#bulkdeploytargetdetails)[] (Required): Targets to which solution needs to be deployed
+
+## BulkDeployTargetDetails
+### Properties
+* **solutionVersionId**: string (Required): ArmId of Target Solution Version
+
+## BulkPublishSolutionParameter
+### Properties
+* **solutionConfiguration**: string: Configuration of solution
+* **solutionDependencies**: [SolutionDependencyParameter](#solutiondependencyparameter)[]: Solution dependencies
+* **solutionInstanceName**: string {pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"}: Name of the solution instance
+* **targets**: [BulkPublishTargetDetails](#bulkpublishtargetdetails)[] (Required): Targets to which solution needs to be published
+
+## BulkPublishTargetDetails
+### Properties
+* **solutionConfiguration**: string: Configuration of solution
+* **solutionDependencies**: [SolutionDependencyParameter](#solutiondependencyparameter)[]: Solution dependencies
+* **solutionInstanceName**: string {pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"}: Name of the solution instance
+* **solutionVersionId**: string: ArmId of Target Solution Version
+* **targetId**: string (Required): ArmId of Target
+
+## BulkReviewSolutionParameter
+### Properties
+* **solutionConfiguration**: string: Configuration of solution
+* **solutionDependencies**: [SolutionDependencyParameter](#solutiondependencyparameter)[]: Solution dependencies
+* **solutionInstanceName**: string {pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"}: Name of the solution instance
+* **targets**: [BulkReviewTargetDetails](#bulkreviewtargetdetails)[] (Required): Targets to which solution needs to be published
+
+## BulkReviewTargetDetails
+### Properties
+* **solutionConfiguration**: string: Configuration of solution
+* **solutionDependencies**: [SolutionDependencyParameter](#solutiondependencyparameter)[]: Solution dependencies
+* **solutionInstanceName**: string {pattern: "^(?!v-)(?!.*-v-)[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])?)*$"}: Name of the solution instance
+* **targetId**: string (Required): ArmId of Target
 
 ## Capability
 ### Properties
@@ -626,6 +717,12 @@
 * **hierarchyIds**: string[]: Hierarchy Ids
 * **level**: string: Hierarchy Level
 
+## HierarchySelector
+### Properties
+* **contextId**: string (Required): Context Id
+* **hierarchyIds**: string[]: Hierarchy Ids
+* **level**: string: Hierarchy Level
+
 ## InstallSolutionParameter
 ### Properties
 * **solutionVersionId**: string (Required): Solution Version ARM Id
@@ -728,6 +825,11 @@
 ### Properties
 * **interval**: string (Required): Policy interval
 * **state**: 'active' | 'inactive' | string (Required): The state of the ReconciliationPolicy
+
+## RemoveRevisionParameter
+### Properties
+* **solutionTemplateId**: string (Required): Solution Template ARM Id
+* **solutionVersion**: string (Required): Solution Version Name
 
 ## RemoveVersionResponse
 ### Properties

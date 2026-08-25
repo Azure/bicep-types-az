@@ -184,6 +184,11 @@
 * **Input**: [ImmutabilityPolicy](#immutabilitypolicy)
 * **Output**: [ImmutabilityPolicy](#immutabilitypolicy)
 
+## Function failover (Microsoft.Storage/storageAccounts@2021-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2021-04-01
+* **Output**: any
+
 ## Function lease (Microsoft.Storage/storageAccounts/blobServices/containers@2021-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2021-04-01
@@ -218,17 +223,33 @@
 * **ApiVersion**: 2021-04-01
 * **Output**: [ImmutabilityPolicy](#immutabilitypolicy)
 
+## Function migrate (Microsoft.Storage/storageAccounts/blobServices/containers@2021-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
+* **ApiVersion**: 2021-04-01
+* **Output**: any
+
 ## Function regenerateKey (Microsoft.Storage/storageAccounts@2021-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2021-04-01
 * **Input**: [StorageAccountRegenerateKeyParameters](#storageaccountregeneratekeyparameters)
 * **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
 
+## Function restore (Microsoft.Storage/storageAccounts/fileServices/shares@2021-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts/fileServices/shares
+* **ApiVersion**: 2021-04-01
+* **Input**: [DeletedShare](#deletedshare)
+* **Output**: any
+
 ## Function restoreBlobRanges (Microsoft.Storage/storageAccounts@2021-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2021-04-01
 * **Input**: [BlobRestoreParameters](#blobrestoreparameters)
 * **Output**: [BlobRestoreStatus](#blobrestorestatus)
+
+## Function revokeUserDelegationKeys (Microsoft.Storage/storageAccounts@2021-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2021-04-01
+* **Output**: any
 
 ## Function setLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2021-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
@@ -393,6 +414,11 @@
 * **location**: string (ReadOnly): Location of the deleted account.
 * **restoreReference**: string (ReadOnly): Can be used to attempt recovering this deleted account via PutStorageAccount API.
 * **storageAccountResourceId**: string (ReadOnly): Full resource id of the original storage account.
+
+## DeletedShare
+### Properties
+* **deletedShareName**: string (Required): Required. Identify the name of the deleted share that will be restored.
+* **deletedShareVersion**: string (Required): Required. Identify the version of the deleted share that will be restored.
 
 ## DeleteRetentionPolicy
 ### Properties

@@ -105,6 +105,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureStackHCI/clusters/updateSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function apply (Microsoft.AzureStackHCI/clusters/updates@2023-03-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/updates
+* **ApiVersion**: 2023-03-01
+* **Output**: any
+
 ## Function consentAndInstallDefaultExtensions (Microsoft.AzureStackHCI/clusters/arcSettings@2023-03-01)
 * **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
 * **ApiVersion**: 2023-03-01
@@ -130,6 +135,23 @@
 * **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
 * **ApiVersion**: 2023-03-01
 * **Output**: [PasswordCredential](#passwordcredential)
+
+## Function initializeDisableProcess (Microsoft.AzureStackHCI/clusters/arcSettings@2023-03-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2023-03-01
+* **Output**: any
+
+## Function upgrade (Microsoft.AzureStackHCI/clusters/arcSettings/extensions@2023-03-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings/extensions
+* **ApiVersion**: 2023-03-01
+* **Input**: [ExtensionUpgradeParameters](#extensionupgradeparameters)
+* **Output**: any
+
+## Function uploadCertificate (Microsoft.AzureStackHCI/clusters@2023-03-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2023-03-01
+* **Input**: [UploadCertificateRequest](#uploadcertificaterequest)
+* **Output**: any
 
 ## ArcIdentityResponse
 ### Properties
@@ -280,6 +302,10 @@
 * **perNodeExtensionDetails**: [PerNodeExtensionState](#pernodeextensionstate)[] (ReadOnly): State of Arc Extension in each of the nodes.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'DisableInProgress' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Extension proxy resource.
 
+## ExtensionUpgradeParameters
+### Properties
+* **targetVersion**: string: Extension Upgrade Target Version.
+
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
@@ -345,6 +371,10 @@
 ## PublisherProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): Provisioning State
+
+## RawCertificateData
+### Properties
+* **certificates**: string[]
 
 ## SkuMappings
 ### Properties
@@ -461,6 +491,10 @@
 * **packageVersions**: [PackageVersionInfo](#packageversioninfo)[]: Current version of each updatable component.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'DisableInProgress' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the UpdateSummaries proxy resource.
 * **state**: 'AppliedSuccessfully' | 'NeedsAttention' | 'PreparationFailed' | 'PreparationInProgress' | 'Unknown' | 'UpdateAvailable' | 'UpdateFailed' | 'UpdateInProgress' | string: Overall update state of the stamp.
+
+## UploadCertificateRequest
+### Properties
+* **properties**: [RawCertificateData](#rawcertificatedata)
 
 ## UserAssignedIdentities
 ### Properties

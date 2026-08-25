@@ -163,6 +163,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureStackHCI/locations/validatedSolutionRecipes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function apply (Microsoft.AzureStackHCI/clusters/updates@2026-02-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/updates
+* **ApiVersion**: 2026-02-01
+* **Output**: any
+
 ## Function configureRemoteSupport (Microsoft.AzureStackHCI/clusters@2026-02-01)
 * **Resource**: Microsoft.AzureStackHCI/clusters
 * **ApiVersion**: 2026-02-01
@@ -195,6 +200,11 @@
 * **ApiVersion**: 2026-02-01
 * **Output**: [PasswordCredential](#passwordcredential)
 
+## Function initializeDisableProcess (Microsoft.AzureStackHCI/clusters/arcSettings@2026-02-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
+* **ApiVersion**: 2026-02-01
+* **Output**: any
+
 ## Function reconcile (Microsoft.AzureStackHCI/clusters/arcSettings@2026-02-01)
 * **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
 * **ApiVersion**: 2026-02-01
@@ -212,6 +222,18 @@
 * **ApiVersion**: 2026-02-01
 * **Input**: [SecretsLocationsChangeRequest](#secretslocationschangerequest)
 * **Output**: [Cluster](#cluster)
+
+## Function upgrade (Microsoft.AzureStackHCI/clusters/arcSettings/extensions@2026-02-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings/extensions
+* **ApiVersion**: 2026-02-01
+* **Input**: [ExtensionUpgradeParameters](#extensionupgradeparameters)
+* **Output**: any
+
+## Function uploadCertificate (Microsoft.AzureStackHCI/clusters@2026-02-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2026-02-01
+* **Input**: [UploadCertificateRequest](#uploadcertificaterequest)
+* **Output**: any
 
 ## Function validate (Microsoft.AzureStackHCI/edgeDevices@2026-02-01)
 * **Resource**: Microsoft.AzureStackHCI/edgeDevices
@@ -539,6 +561,10 @@
 * **managedBy**: 'Azure' | 'User' | string (ReadOnly): Indicates if the extension is managed by Azure or the user. This determines who controls the deployment and lifecycle of the extension.
 * **perNodeExtensionDetails**: [PerNodeExtensionState](#pernodeextensionstate)[] (ReadOnly): State of Arc Extension in each of the nodes.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'DisableInProgress' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Extension proxy resource. Indicates the current lifecycle status of the resource, such as whether it's being created, updated, deleted, or has encountered an error.
+
+## ExtensionUpgradeParameters
+### Properties
+* **targetVersion**: string: Extension Upgrade Target Version.
 
 ## HciEdgeDeviceAdapterPropertyOverrides
 ### Properties
@@ -879,6 +905,10 @@
 * **priorityValue8021Action_Cluster**: string: This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
 * **priorityValue8021Action_SMB**: string: This parameter should only be modified based on your OEM guidance. Do not modify this parameter without OEM validation.
 
+## RawCertificateData
+### Properties
+* **certificates**: string[]
+
 ## ReconcileArcSettingsRequest
 ### Properties
 * **properties**: [ReconcileArcSettingsRequestProperties](#reconcilearcsettingsrequestproperties): List of Arc Nodes in the cluster
@@ -1144,6 +1174,10 @@
 * **packageVersions**: [PackageVersionInfo](#packageversioninfo)[]: Current version of each updatable component.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Connected' | 'Creating' | 'Deleted' | 'Deleting' | 'DisableInProgress' | 'Disconnected' | 'Error' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'PartiallyConnected' | 'PartiallySucceeded' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the UpdateSummaries proxy resource. Indicates the current lifecycle status of the update summary operation, such as whether it has been accepted, is in progress, or has completed.
 * **state**: 'AppliedSuccessfully' | 'NeedsAttention' | 'PreparationFailed' | 'PreparationInProgress' | 'Unknown' | 'UpdateAvailable' | 'UpdateFailed' | 'UpdateInProgress' | string: Overall update state of the stamp. Indicates the current status of update deployment across the stamp, including preparation, application, and any issues encountered.
+
+## UploadCertificateRequest
+### Properties
+* **properties**: [RawCertificateData](#rawcertificatedata)
 
 ## UserAssignedIdentity
 ### Properties

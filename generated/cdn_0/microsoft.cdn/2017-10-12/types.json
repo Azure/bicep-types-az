@@ -1679,12 +1679,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2017-10-12",
+    "output": {
+      "$ref": "#/147"
+    },
+    "input": {
+      "$ref": "#/145"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "LoadParameters",
     "properties": {
       "contentPaths": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/150"
         },
         "flags": 1,
         "description": "The path to the content to be loaded. Path should be a relative file URL of the origin."
@@ -1695,6 +1710,18 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "load",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2017-10-12",
+    "output": {
+      "$ref": "#/147"
+    },
+    "input": {
+      "$ref": "#/149"
     }
   },
   {
@@ -1743,10 +1770,10 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2017-10-12",
     "output": {
-      "$ref": "#/150"
+      "$ref": "#/153"
     },
     "input": {
-      "$ref": "#/149"
+      "$ref": "#/152"
     }
   },
   {
@@ -1759,13 +1786,254 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "CustomDomain",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 0,
+        "description": "The JSON object that contains the properties of the custom domain to create."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomainProperties",
+    "properties": {
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The host name of the custom domain. Must be a domain name."
+      },
+      "resourceState": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 2,
+        "description": "Resource status of the custom domain."
+      },
+      "customHttpsProvisioningState": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 2,
+        "description": "Provisioning status of Custom Https of the custom domain."
+      },
+      "customHttpsProvisioningSubstate": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 2,
+        "description": "Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step."
+      },
+      "validationData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Provisioning status of the custom domain."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmittingDomainControlValidationRequest"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingDomainControlValidationREquestApproval"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DomainControlValidationRequestApproved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DomainControlValidationRequestRejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DomainControlValidationRequestTimedOut"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IssuingCertificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeployingCertificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateDeployed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeletingCertificate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateDeleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableCustomHttps",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints/customDomains",
+    "apiVersion": "2017-10-12",
+    "output": {
+      "$ref": "#/156"
+    }
+  },
+  {
     "$type": "DiscriminatedObjectType",
     "name": "CustomDomainHttpsParameters",
     "discriminator": "certificateSource",
     "baseProperties": {
       "protocolType": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/183"
         },
         "flags": 1,
         "description": "Defines the TLS extension protocol that is used for secure delivery."
@@ -1773,10 +2041,10 @@
     },
     "elements": {
       "AzureKeyVault": {
-        "$ref": "#/157"
+        "$ref": "#/184"
       },
       "Cdn": {
-        "$ref": "#/166"
+        "$ref": "#/193"
       }
     }
   },
@@ -1792,10 +2060,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/154"
+        "$ref": "#/181"
       },
       {
-        "$ref": "#/155"
+        "$ref": "#/182"
       },
       {
         "$ref": "#/0"
@@ -1808,14 +2076,14 @@
     "properties": {
       "certificateSourceParameters": {
         "type": {
-          "$ref": "#/158"
+          "$ref": "#/185"
         },
         "flags": 1,
         "description": "Defines the certificate source parameters using user's keyvault certificate for enabling SSL."
       },
       "certificateSource": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/192"
         },
         "flags": 1,
         "description": "Defines the source of the SSL certificate."
@@ -1828,7 +2096,7 @@
     "properties": {
       "@odata.type": {
         "type": {
-          "$ref": "#/160"
+          "$ref": "#/187"
         },
         "flags": 1
       },
@@ -1869,14 +2137,14 @@
       },
       "updateRule": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/189"
         },
         "flags": 1,
         "description": "Describes the action that shall be taken when the certificate is updated in Key Vault."
       },
       "deleteRule": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/191"
         },
         "flags": 1,
         "description": "Describes the action that shall be taken when the certificate is removed from Key Vault."
@@ -1891,7 +2159,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/159"
+        "$ref": "#/186"
       },
       {
         "$ref": "#/0"
@@ -1906,7 +2174,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/161"
+        "$ref": "#/188"
       },
       {
         "$ref": "#/0"
@@ -1921,7 +2189,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/163"
+        "$ref": "#/190"
       },
       {
         "$ref": "#/0"
@@ -1938,14 +2206,14 @@
     "properties": {
       "certificateSourceParameters": {
         "type": {
-          "$ref": "#/167"
+          "$ref": "#/194"
         },
         "flags": 1,
         "description": "Defines the certificate source parameters using CDN managed certificate for enabling SSL."
       },
       "certificateSource": {
         "type": {
-          "$ref": "#/173"
+          "$ref": "#/200"
         },
         "flags": 1,
         "description": "Defines the source of the SSL certificate."
@@ -1958,13 +2226,13 @@
     "properties": {
       "@odata.type": {
         "type": {
-          "$ref": "#/169"
+          "$ref": "#/196"
         },
         "flags": 1
       },
       "certificateType": {
         "type": {
-          "$ref": "#/172"
+          "$ref": "#/199"
         },
         "flags": 1,
         "description": "Type of certificate used"
@@ -1979,7 +2247,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/168"
+        "$ref": "#/195"
       },
       {
         "$ref": "#/0"
@@ -1998,10 +2266,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/170"
+        "$ref": "#/197"
       },
       {
-        "$ref": "#/171"
+        "$ref": "#/198"
       },
       {
         "$ref": "#/0"
@@ -2011,5 +2279,17 @@
   {
     "$type": "StringLiteralType",
     "value": "Cdn"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableCustomHttps",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints/customDomains",
+    "apiVersion": "2017-10-12",
+    "output": {
+      "$ref": "#/156"
+    },
+    "input": {
+      "$ref": "#/180"
+    }
   }
 ]

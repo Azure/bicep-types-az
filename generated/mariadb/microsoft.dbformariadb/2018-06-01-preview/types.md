@@ -64,6 +64,11 @@
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Resource properties.
 * **type**: 'Microsoft.DBforMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.DBforMariaDB/servers@2018-06-01-preview)
+* **Resource**: Microsoft.DBforMariaDB/servers
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: any
+
 ## Function updateConfigurations (Microsoft.DBforMariaDB/servers@2018-06-01-preview)
 * **Resource**: Microsoft.DBforMariaDB/servers
 * **ApiVersion**: 2018-06-01-preview

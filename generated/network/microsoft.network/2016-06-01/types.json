@@ -6655,12 +6655,33 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Network/applicationGateways",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/380"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Network/applicationGateways",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/380"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "EffectiveRouteListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/398"
+          "$ref": "#/401"
         },
         "flags": 0,
         "description": "Gets list of effective routes"
@@ -6687,35 +6708,35 @@
       },
       "source": {
         "type": {
-          "$ref": "#/386"
+          "$ref": "#/389"
         },
         "flags": 0,
         "description": "Gets who created the route"
       },
       "state": {
         "type": {
-          "$ref": "#/389"
+          "$ref": "#/392"
         },
         "flags": 0,
         "description": "Gets value of effective route"
       },
       "addressPrefix": {
         "type": {
-          "$ref": "#/390"
+          "$ref": "#/393"
         },
         "flags": 0,
         "description": "Gets address prefixes of the effective routes in CIDR notation."
       },
       "nextHopIpAddress": {
         "type": {
-          "$ref": "#/391"
+          "$ref": "#/394"
         },
         "flags": 0,
         "description": "Gets the IP address of the next hop of the effective route"
       },
       "nextHopType": {
         "type": {
-          "$ref": "#/397"
+          "$ref": "#/400"
         },
         "flags": 0,
         "description": "Gets or sets the type of Azure hop the packet should be sent to."
@@ -6742,16 +6763,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/382"
-      },
-      {
-        "$ref": "#/383"
-      },
-      {
-        "$ref": "#/384"
-      },
-      {
         "$ref": "#/385"
+      },
+      {
+        "$ref": "#/386"
+      },
+      {
+        "$ref": "#/387"
+      },
+      {
+        "$ref": "#/388"
       },
       {
         "$ref": "#/0"
@@ -6770,10 +6791,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/387"
+        "$ref": "#/390"
       },
       {
-        "$ref": "#/388"
+        "$ref": "#/391"
       },
       {
         "$ref": "#/0"
@@ -6816,19 +6837,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/392"
-      },
-      {
-        "$ref": "#/393"
-      },
-      {
-        "$ref": "#/394"
-      },
-      {
         "$ref": "#/395"
       },
       {
         "$ref": "#/396"
+      },
+      {
+        "$ref": "#/397"
+      },
+      {
+        "$ref": "#/398"
+      },
+      {
+        "$ref": "#/399"
       },
       {
         "$ref": "#/0"
@@ -6838,7 +6859,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/381"
+      "$ref": "#/384"
     }
   },
   {
@@ -6847,7 +6868,7 @@
     "resourceType": "Microsoft.Network/networkInterfaces",
     "apiVersion": "2016-06-01",
     "output": {
-      "$ref": "#/380"
+      "$ref": "#/383"
     }
   },
   {
@@ -6856,7 +6877,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/420"
         },
         "flags": 0,
         "description": "Gets list of effective network security groups"
@@ -6883,14 +6904,14 @@
       },
       "association": {
         "type": {
-          "$ref": "#/402"
+          "$ref": "#/405"
         },
         "flags": 0,
         "description": "Effective NetworkSecurityGroup association"
       },
       "effectiveSecurityRules": {
         "type": {
-          "$ref": "#/416"
+          "$ref": "#/419"
         },
         "flags": 0,
         "description": "Gets collection of effective security rules"
@@ -6930,7 +6951,7 @@
       },
       "protocol": {
         "type": {
-          "$ref": "#/407"
+          "$ref": "#/410"
         },
         "flags": 0,
         "description": "Gets Network protocol this rule applies to"
@@ -6965,21 +6986,21 @@
       },
       "expandedSourceAddressPrefix": {
         "type": {
-          "$ref": "#/408"
+          "$ref": "#/411"
         },
         "flags": 0,
         "description": "Gets expanded source address prefix"
       },
       "expandedDestinationAddressPrefix": {
         "type": {
-          "$ref": "#/409"
+          "$ref": "#/412"
         },
         "flags": 0,
         "description": "Gets expanded destination address prefix"
       },
       "access": {
         "type": {
-          "$ref": "#/412"
+          "$ref": "#/415"
         },
         "flags": 0,
         "description": "Gets network traffic is allowed or denied"
@@ -6993,7 +7014,7 @@
       },
       "direction": {
         "type": {
-          "$ref": "#/415"
+          "$ref": "#/418"
         },
         "flags": 0,
         "description": "Gets the direction of the rule"
@@ -7016,13 +7037,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/404"
+        "$ref": "#/407"
       },
       {
-        "$ref": "#/405"
+        "$ref": "#/408"
       },
       {
-        "$ref": "#/406"
+        "$ref": "#/409"
       },
       {
         "$ref": "#/0"
@@ -7053,10 +7074,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/410"
+        "$ref": "#/413"
       },
       {
-        "$ref": "#/411"
+        "$ref": "#/414"
       },
       {
         "$ref": "#/0"
@@ -7075,10 +7096,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/413"
+        "$ref": "#/416"
       },
       {
-        "$ref": "#/414"
+        "$ref": "#/417"
       },
       {
         "$ref": "#/0"
@@ -7088,13 +7109,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/403"
+      "$ref": "#/406"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/401"
+      "$ref": "#/404"
     }
   },
   {
@@ -7103,7 +7124,7 @@
     "resourceType": "Microsoft.Network/networkInterfaces",
     "apiVersion": "2016-06-01",
     "output": {
-      "$ref": "#/400"
+      "$ref": "#/403"
     }
   },
   {
@@ -7116,6 +7137,53 @@
     },
     "input": {
       "$ref": "#/317"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VpnClientParameters",
+    "properties": {
+      "ProcessorArchitecture": {
+        "type": {
+          "$ref": "#/426"
+        },
+        "flags": 0,
+        "description": "VPN client Processor Architecture -Amd64/X86"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Amd64"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "X86"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/424"
+      },
+      {
+        "$ref": "#/425"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generatevpnclientpackage",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2016-06-01",
+    "output": {
+      "$ref": "#/0"
+    },
+    "input": {
+      "$ref": "#/423"
     }
   }
 ]

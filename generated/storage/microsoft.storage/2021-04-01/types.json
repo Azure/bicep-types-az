@@ -5997,6 +5997,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2021-04-01",
+    "output": {
+      "$ref": "#/444"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "restoreBlobRanges",
     "resourceType": "Microsoft.Storage/storageAccounts",
@@ -6006,6 +6018,15 @@
     },
     "input": {
       "$ref": "#/142"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revokeUserDelegationKeys",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2021-04-01",
+    "output": {
+      "$ref": "#/444"
     }
   },
   {
@@ -6021,7 +6042,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/447"
+          "$ref": "#/450"
         },
         "flags": 1,
         "description": "Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP."
@@ -6036,7 +6057,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/446"
+      "$ref": "#/449"
     }
   },
   {
@@ -6045,10 +6066,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2021-04-01",
     "output": {
-      "$ref": "#/445"
+      "$ref": "#/448"
     },
     "input": {
-      "$ref": "#/445"
+      "$ref": "#/448"
     }
   },
   {
@@ -6057,10 +6078,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2021-04-01",
     "output": {
-      "$ref": "#/445"
+      "$ref": "#/448"
     },
     "input": {
-      "$ref": "#/445"
+      "$ref": "#/448"
     }
   },
   {
@@ -6069,7 +6090,7 @@
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/456"
+          "$ref": "#/459"
         },
         "flags": 1,
         "description": "Specifies the lease action. Can be one of the available actions."
@@ -6128,19 +6149,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/451"
-      },
-      {
-        "$ref": "#/452"
-      },
-      {
-        "$ref": "#/453"
-      },
-      {
         "$ref": "#/454"
       },
       {
         "$ref": "#/455"
+      },
+      {
+        "$ref": "#/456"
+      },
+      {
+        "$ref": "#/457"
+      },
+      {
+        "$ref": "#/458"
       },
       {
         "$ref": "#/2"
@@ -6173,10 +6194,19 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2021-04-01",
     "output": {
-      "$ref": "#/457"
+      "$ref": "#/460"
     },
     "input": {
-      "$ref": "#/450"
+      "$ref": "#/453"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
+    "apiVersion": "2021-04-01",
+    "output": {
+      "$ref": "#/444"
     }
   },
   {
@@ -6226,7 +6256,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
     "apiVersion": "2021-04-01",
     "output": {
-      "$ref": "#/459"
+      "$ref": "#/463"
     }
   },
   {
@@ -6235,10 +6265,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
     "apiVersion": "2021-04-01",
     "output": {
-      "$ref": "#/459"
+      "$ref": "#/463"
     },
     "input": {
-      "$ref": "#/459"
+      "$ref": "#/463"
     }
   },
   {
@@ -6262,12 +6292,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "restore",
+    "resourceType": "Microsoft.Storage/storageAccounts/fileServices/shares",
+    "apiVersion": "2021-04-01",
+    "output": {
+      "$ref": "#/444"
+    },
+    "input": {
+      "$ref": "#/466"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "LeaseShareRequest",
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/469"
+          "$ref": "#/474"
         },
         "flags": 1,
         "description": "Specifies the lease action. Can be one of the available actions."
@@ -6326,19 +6368,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/464"
+        "$ref": "#/469"
       },
       {
-        "$ref": "#/465"
+        "$ref": "#/470"
       },
       {
-        "$ref": "#/466"
+        "$ref": "#/471"
       },
       {
-        "$ref": "#/467"
+        "$ref": "#/472"
       },
       {
-        "$ref": "#/468"
+        "$ref": "#/473"
       },
       {
         "$ref": "#/2"
@@ -6371,10 +6413,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/fileServices/shares",
     "apiVersion": "2021-04-01",
     "output": {
-      "$ref": "#/470"
+      "$ref": "#/475"
     },
     "input": {
-      "$ref": "#/463"
+      "$ref": "#/468"
     }
   }
 ]

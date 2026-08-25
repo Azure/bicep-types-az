@@ -34,6 +34,18 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.Cache/redisEnterprise/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function export (Microsoft.Cache/redisEnterprise/databases@2021-03-01)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2021-03-01
+* **Input**: [ExportClusterParameters](#exportclusterparameters)
+* **Output**: any
+
+## Function import (Microsoft.Cache/redisEnterprise/databases@2021-03-01)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2021-03-01
+* **Input**: [ImportClusterParameters](#importclusterparameters)
+* **Output**: any
+
 ## Function listKeys (Microsoft.Cache/redisEnterprise/databases@2021-03-01)
 * **Resource**: Microsoft.Cache/redisEnterprise/databases
 * **ApiVersion**: 2021-03-01
@@ -69,6 +81,14 @@
 * **port**: int: TCP port of the database endpoint. Specified at create time. Defaults to an available port.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Current provisioning status of the database
 * **resourceState**: 'CreateFailed' | 'Creating' | 'DeleteFailed' | 'Deleting' | 'DisableFailed' | 'Disabled' | 'Disabling' | 'EnableFailed' | 'Enabling' | 'Running' | 'UpdateFailed' | 'Updating' | string (ReadOnly): Current resource status of the database
+
+## ExportClusterParameters
+### Properties
+* **sasUri**: string {sensitive} (Required): SAS URI for the target directory to export to
+
+## ImportClusterParameters
+### Properties
+* **sasUri**: string {sensitive} (Required): SAS URI for the target blob to import from
 
 ## Module
 ### Properties

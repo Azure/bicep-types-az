@@ -1295,5 +1295,17 @@
     "output": {
       "$ref": "#/77"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableRemoteManagement",
+    "resourceType": "Microsoft.AzureStack/registrations",
+    "apiVersion": "2022-06-01",
+    "output": {
+      "$ref": "#/79"
+    }
   }
 ]

@@ -93,6 +93,12 @@
 * **ApiVersion**: 2024-03-01
 * **Output**: [DatadogSetPasswordLink](#datadogsetpasswordlink)
 
+## Function setDefaultKey (Microsoft.Datadog/monitors@2024-03-01)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2024-03-01
+* **Input**: [DatadogApiKey](#datadogapikey)
+* **Output**: any
+
 ## AgentRules
 ### Properties
 * **enableAgentMonitoring**: bool: Flag specifying if agent monitoring should be enabled for the Monitor resource.

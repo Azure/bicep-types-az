@@ -135,6 +135,17 @@
 * **Input**: [MachineInstallPatchesParameters](#machineinstallpatchesparameters)
 * **Output**: [MachineInstallPatchesResult](#machineinstallpatchesresult)
 
+## Function reconcile (Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations@2023-10-03-preview)
+* **Resource**: Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2023-10-03-preview
+* **Output**: any
+
+## Function upgradeExtensions (Microsoft.HybridCompute/machines@2023-10-03-preview)
+* **Resource**: Microsoft.HybridCompute/machines
+* **ApiVersion**: 2023-10-03-preview
+* **Input**: [MachineExtensionUpgrade](#machineextensionupgrade)
+* **Output**: any
+
 ## AccessRule
 ### Properties
 * **name**: string (ReadOnly): Name of the access rule.
@@ -217,6 +228,15 @@
 * **level**: 'Error' | 'Info' | 'Warning': The level code.
 * **message**: string: The detailed status message, including for alerts and error messages.
 * **time**: string: The time of the status.
+
+## ExtensionTarget
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ExtensionTargetProperties](#extensiontargetproperties)
+
+## ExtensionTargetProperties
+### Properties
+* **targetVersion**: string: Properties for the specified Extension to Upgrade.
 
 ## ExtensionValueProperties
 ### Properties
@@ -394,6 +414,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## MachineExtensionUpgrade
+### Properties
+* **extensionTargets**: [ExtensionTarget](#extensiontarget): Describes the Extension Target Properties.
 
 ## MachineInstallPatchesParameters
 ### Properties

@@ -59,6 +59,26 @@
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
 
 
+## Function publish (Microsoft.Automation/automationAccounts/runbooks@2018-06-30)
+* **Resource**: Microsoft.Automation/automationAccounts/runbooks
+* **ApiVersion**: 2018-06-30
+* **Output**: any
+
+## Function resume (Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30)
+* **Resource**: Microsoft.Automation/automationAccounts/runbooks/draft
+* **ApiVersion**: 2018-06-30
+* **Output**: any
+
+## Function stop (Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30)
+* **Resource**: Microsoft.Automation/automationAccounts/runbooks/draft
+* **ApiVersion**: 2018-06-30
+* **Output**: any
+
+## Function suspend (Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30)
+* **Resource**: Microsoft.Automation/automationAccounts/runbooks/draft
+* **ApiVersion**: 2018-06-30
+* **Output**: any
+
 ## ContentHash
 ### Properties
 * **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.

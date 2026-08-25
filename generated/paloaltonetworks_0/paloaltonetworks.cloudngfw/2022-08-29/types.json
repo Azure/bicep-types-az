@@ -3343,12 +3343,24 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commit",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks",
+    "apiVersion": "2022-08-29",
+    "output": {
+      "$ref": "#/263"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "Changelog",
     "properties": {
       "changes": {
         "type": {
-          "$ref": "#/264"
+          "$ref": "#/266"
         },
         "flags": 1,
         "description": "list of changes"
@@ -3381,7 +3393,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/263"
+      "$ref": "#/265"
     }
   },
   {
@@ -3390,7 +3402,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/267"
+          "$ref": "#/269"
         },
         "flags": 1,
         "description": "List of AppIds"
@@ -3416,7 +3428,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/266"
+      "$ref": "#/268"
     }
   },
   {
@@ -3425,7 +3437,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/271"
+          "$ref": "#/273"
         },
         "flags": 1,
         "description": "List of countries"
@@ -3462,7 +3474,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/270"
+      "$ref": "#/272"
     }
   },
   {
@@ -3471,7 +3483,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/269"
+      "$ref": "#/271"
     }
   },
   {
@@ -3480,7 +3492,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/274"
+          "$ref": "#/276"
         },
         "flags": 1,
         "description": "firewalls list"
@@ -3506,7 +3518,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/273"
+      "$ref": "#/275"
     }
   },
   {
@@ -3515,7 +3527,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/278"
+          "$ref": "#/280"
         },
         "flags": 1,
         "description": "predefined url categories"
@@ -3550,7 +3562,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/277"
+      "$ref": "#/279"
     }
   },
   {
@@ -3559,7 +3571,16 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/276"
+      "$ref": "#/278"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revert",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks",
+    "apiVersion": "2022-08-29",
+    "output": {
+      "$ref": "#/263"
     }
   },
   {
@@ -3610,7 +3631,7 @@
       },
       "appSeen": {
         "type": {
-          "$ref": "#/281"
+          "$ref": "#/284"
         },
         "flags": 0,
         "description": "apps seen"
@@ -3651,7 +3672,7 @@
       },
       "appSeenList": {
         "type": {
-          "$ref": "#/283"
+          "$ref": "#/286"
         },
         "flags": 1,
         "description": "array of appSeen"
@@ -3716,7 +3737,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/282"
+      "$ref": "#/285"
     }
   },
   {
@@ -3725,7 +3746,16 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/280"
+      "$ref": "#/283"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshCounters",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules",
+    "apiVersion": "2022-08-29",
+    "output": {
+      "$ref": "#/263"
     }
   },
   {
@@ -3775,7 +3805,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/285"
+      "$ref": "#/289"
     }
   },
   {
@@ -3784,7 +3814,16 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/280"
+      "$ref": "#/283"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshCounters",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules",
+    "apiVersion": "2022-08-29",
+    "output": {
+      "$ref": "#/263"
     }
   },
   {
@@ -3793,7 +3832,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/285"
+      "$ref": "#/289"
     }
   },
   {
@@ -3815,7 +3854,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/firewalls",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/289"
+      "$ref": "#/294"
     }
   },
   {
@@ -3824,49 +3863,49 @@
     "properties": {
       "logType": {
         "type": {
-          "$ref": "#/298"
+          "$ref": "#/303"
         },
         "flags": 0,
         "description": "One of possible log type"
       },
       "logOption": {
         "type": {
-          "$ref": "#/301"
+          "$ref": "#/306"
         },
         "flags": 0,
         "description": "Log option SAME/INDIVIDUAL"
       },
       "applicationInsights": {
         "type": {
-          "$ref": "#/302"
+          "$ref": "#/307"
         },
         "flags": 0,
         "description": "Application Insight details"
       },
       "commonDestination": {
         "type": {
-          "$ref": "#/303"
+          "$ref": "#/308"
         },
         "flags": 0,
         "description": "Common destination configurations"
       },
       "trafficLogDestination": {
         "type": {
-          "$ref": "#/303"
+          "$ref": "#/308"
         },
         "flags": 0,
         "description": "Traffic destination configurations"
       },
       "threatLogDestination": {
         "type": {
-          "$ref": "#/303"
+          "$ref": "#/308"
         },
         "flags": 0,
         "description": "Threat destination configurations"
       },
       "decryptLogDestination": {
         "type": {
-          "$ref": "#/303"
+          "$ref": "#/308"
         },
         "flags": 0,
         "description": "Decrypt destination configurations"
@@ -3901,22 +3940,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/292"
-      },
-      {
-        "$ref": "#/293"
-      },
-      {
-        "$ref": "#/294"
-      },
-      {
-        "$ref": "#/295"
-      },
-      {
-        "$ref": "#/296"
-      },
-      {
         "$ref": "#/297"
+      },
+      {
+        "$ref": "#/298"
+      },
+      {
+        "$ref": "#/299"
+      },
+      {
+        "$ref": "#/300"
+      },
+      {
+        "$ref": "#/301"
+      },
+      {
+        "$ref": "#/302"
       },
       {
         "$ref": "#/0"
@@ -3935,10 +3974,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/299"
+        "$ref": "#/304"
       },
       {
-        "$ref": "#/300"
+        "$ref": "#/305"
       },
       {
         "$ref": "#/0"
@@ -3971,21 +4010,21 @@
     "properties": {
       "storageConfigurations": {
         "type": {
-          "$ref": "#/304"
+          "$ref": "#/309"
         },
         "flags": 0,
         "description": "Storage account configurations"
       },
       "eventHubConfigurations": {
         "type": {
-          "$ref": "#/305"
+          "$ref": "#/310"
         },
         "flags": 0,
         "description": "Event Hub configurations"
       },
       "monitorConfigurations": {
         "type": {
-          "$ref": "#/306"
+          "$ref": "#/311"
         },
         "flags": 0,
         "description": "Monitor Log configurations"
@@ -4107,7 +4146,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/firewalls",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/291"
+      "$ref": "#/296"
     }
   },
   {
@@ -4130,7 +4169,7 @@
       },
       "accountRegistered": {
         "type": {
-          "$ref": "#/311"
+          "$ref": "#/316"
         },
         "flags": 0,
         "description": "account registered in Customer Support Portal"
@@ -4144,21 +4183,21 @@
       },
       "userDomainSupported": {
         "type": {
-          "$ref": "#/314"
+          "$ref": "#/319"
         },
         "flags": 0,
         "description": "user domain is supported in Customer Support Portal"
       },
       "userRegistered": {
         "type": {
-          "$ref": "#/317"
+          "$ref": "#/322"
         },
         "flags": 0,
         "description": "user registered in Customer Support Portal"
       },
       "freeTrial": {
         "type": {
-          "$ref": "#/320"
+          "$ref": "#/325"
         },
         "flags": 0,
         "description": "Product usage is in free trial period"
@@ -4212,54 +4251,32 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/309"
+        "$ref": "#/314"
       },
-      {
-        "$ref": "#/310"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "TRUE"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "FALSE"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/312"
-      },
-      {
-        "$ref": "#/313"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "TRUE"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "FALSE"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
       {
         "$ref": "#/315"
       },
       {
-        "$ref": "#/316"
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TRUE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FALSE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/317"
+      },
+      {
+        "$ref": "#/318"
       },
       {
         "$ref": "#/0"
@@ -4278,10 +4295,32 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/318"
+        "$ref": "#/320"
       },
       {
-        "$ref": "#/319"
+        "$ref": "#/321"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TRUE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FALSE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/323"
+      },
+      {
+        "$ref": "#/324"
       },
       {
         "$ref": "#/0"
@@ -4294,12 +4333,24 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/firewalls",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/308"
+      "$ref": "#/313"
     }
   },
   {
     "$type": "ResourceFunctionType",
-    "name": "getChangeLog",
+    "name": "saveLogProfile",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/firewalls",
+    "apiVersion": "2022-08-29",
+    "output": {
+      "$ref": "#/263"
+    },
+    "input": {
+      "$ref": "#/296"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "commit",
     "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
     "apiVersion": "2022-08-29",
     "output": {
@@ -4308,11 +4359,20 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "getChangeLog",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
+    "apiVersion": "2022-08-29",
+    "output": {
+      "$ref": "#/265"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "getSupportInfo",
     "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/308"
+      "$ref": "#/313"
     }
   },
   {
@@ -4321,7 +4381,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/266"
+      "$ref": "#/268"
     }
   },
   {
@@ -4330,7 +4390,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/269"
+      "$ref": "#/271"
     }
   },
   {
@@ -4339,7 +4399,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/273"
+      "$ref": "#/275"
     }
   },
   {
@@ -4348,7 +4408,16 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/276"
+      "$ref": "#/278"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revert",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
+    "apiVersion": "2022-08-29",
+    "output": {
+      "$ref": "#/263"
     }
   },
   {
@@ -4357,7 +4426,16 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks/localRules",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/280"
+      "$ref": "#/283"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshCounters",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks/localRules",
+    "apiVersion": "2022-08-29",
+    "output": {
+      "$ref": "#/263"
     }
   },
   {
@@ -4366,7 +4444,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks/localRules",
     "apiVersion": "2022-08-29",
     "output": {
-      "$ref": "#/285"
+      "$ref": "#/289"
     }
   }
 ]

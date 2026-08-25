@@ -13578,6 +13578,48 @@
   },
   {
     "$type": "ObjectType",
+    "name": "UploadCertificateRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1054"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawCertificateData",
+    "properties": {
+      "certificates": {
+        "type": {
+          "$ref": "#/1055"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadCertificate",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2025-12-01-preview",
+    "output": {
+      "$ref": "#/435"
+    },
+    "input": {
+      "$ref": "#/1053"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ArcSetting",
     "properties": {
       "properties": {
@@ -13623,7 +13665,7 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2025-12-01-preview",
     "output": {
-      "$ref": "#/1053"
+      "$ref": "#/1057"
     }
   },
   {
@@ -13632,7 +13674,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1056"
+          "$ref": "#/1060"
         },
         "flags": 2,
         "description": "ArcIdentity properties."
@@ -13675,7 +13717,7 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2025-12-01-preview",
     "output": {
-      "$ref": "#/1055"
+      "$ref": "#/1059"
     }
   },
   {
@@ -13714,7 +13756,16 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2025-12-01-preview",
     "output": {
-      "$ref": "#/1058"
+      "$ref": "#/1062"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initializeDisableProcess",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
+    "apiVersion": "2025-12-01-preview",
+    "output": {
+      "$ref": "#/435"
     }
   },
   {
@@ -13723,7 +13774,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1061"
+          "$ref": "#/1066"
         },
         "flags": 0,
         "description": "List of Arc Nodes in the cluster"
@@ -13736,7 +13787,7 @@
     "properties": {
       "clusterNodes": {
         "type": {
-          "$ref": "#/1062"
+          "$ref": "#/1067"
         },
         "flags": 0
       }
@@ -13754,10 +13805,44 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2025-12-01-preview",
     "output": {
-      "$ref": "#/1053"
+      "$ref": "#/1057"
     },
     "input": {
-      "$ref": "#/1060"
+      "$ref": "#/1065"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtensionUpgradeParameters",
+    "properties": {
+      "targetVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Extension Upgrade Target Version."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings/extensions",
+    "apiVersion": "2025-12-01-preview",
+    "output": {
+      "$ref": "#/435"
+    },
+    "input": {
+      "$ref": "#/1069"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "apply",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/updates",
+    "apiVersion": "2025-12-01-preview",
+    "output": {
+      "$ref": "#/435"
     }
   },
   {
@@ -13766,7 +13851,7 @@
     "properties": {
       "ownershipVoucherDetails": {
         "type": {
-          "$ref": "#/1065"
+          "$ref": "#/1073"
         },
         "flags": 1,
         "description": "Ownership Voucher Details."
@@ -13786,7 +13871,7 @@
     "properties": {
       "ownershipVoucherValidationDetails": {
         "type": {
-          "$ref": "#/1071"
+          "$ref": "#/1079"
         },
         "flags": 1,
         "description": "Ownership Voucher Validation Details."
@@ -13799,7 +13884,7 @@
     "properties": {
       "validationStatus": {
         "type": {
-          "$ref": "#/1070"
+          "$ref": "#/1078"
         },
         "flags": 0,
         "description": "The ownership voucher validation status."
@@ -13867,10 +13952,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1068"
+        "$ref": "#/1076"
       },
       {
-        "$ref": "#/1069"
+        "$ref": "#/1077"
       },
       {
         "$ref": "#/2"
@@ -13880,7 +13965,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1067"
+      "$ref": "#/1075"
     }
   },
   {
@@ -13889,10 +13974,10 @@
     "resourceType": "Microsoft.AzureStackHCI/locations",
     "apiVersion": "2025-12-01-preview",
     "output": {
-      "$ref": "#/1066"
+      "$ref": "#/1074"
     },
     "input": {
-      "$ref": "#/1064"
+      "$ref": "#/1072"
     }
   }
 ]

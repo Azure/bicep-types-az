@@ -64,6 +64,12 @@
 * **Input**: [ExportDevicesRequest](#exportdevicesrequest)
 * **Output**: [JobResponse](#jobresponse)
 
+## Function failover (Microsoft.Devices/IotHubs@2020-08-01)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2020-08-01
+* **Input**: [FailoverInput](#failoverinput)
+* **Output**: any
+
 ## Function generateVerificationCode (Microsoft.Devices/IotHubs/certificates@2020-08-01)
 * **Resource**: Microsoft.Devices/IotHubs/certificates
 * **ApiVersion**: 2020-08-01
@@ -164,6 +170,10 @@
 * **exportBlobContainerUri**: string (Required): The export blob container URI.
 * **exportBlobName**: string: The name of the blob that will be created in the provided output blob container. This blob will contain the exported device registry information for the IoT Hub.
 * **includeConfigurations**: bool: The value indicating whether configurations should be exported.
+
+## FailoverInput
+### Properties
+* **failoverRegion**: string (Required): Region the hub will be failed over to
 
 ## FallbackRouteProperties
 ### Properties

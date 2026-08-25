@@ -24,6 +24,11 @@
 * **properties**: [SolutionProperties](#solutionproperties): Gets or sets the properties of the solution.
 * **type**: 'Microsoft.Migrate/migrateProjects/solutions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cleanupData (Microsoft.Migrate/migrateProjects/solutions@2018-09-01-preview)
+* **Resource**: Microsoft.Migrate/migrateProjects/solutions
+* **ApiVersion**: 2018-09-01-preview
+* **Output**: any
+
 ## Function getConfig (Microsoft.Migrate/migrateProjects/solutions@2018-09-01-preview)
 * **Resource**: Microsoft.Migrate/migrateProjects/solutions
 * **ApiVersion**: 2018-09-01-preview

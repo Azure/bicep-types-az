@@ -118,11 +118,27 @@
 * **Input**: [LtrPreBackupRequest](#ltrprebackuprequest)
 * **Output**: [LtrPreBackupResponse](#ltrprebackupresponse)
 
+## Function restart (Microsoft.DBforPostgreSQL/flexibleServers@2023-03-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [RestartParameter](#restartparameter)
+* **Output**: any
+
+## Function start (Microsoft.DBforPostgreSQL/flexibleServers@2023-03-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2023-03-01-preview
+* **Output**: any
+
 ## Function startLtrBackup (Microsoft.DBforPostgreSQL/flexibleServers@2023-03-01-preview)
 * **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
 * **ApiVersion**: 2023-03-01-preview
 * **Input**: [LtrBackupRequest](#ltrbackuprequest)
 * **Output**: [LtrBackupResponse](#ltrbackupresponse)
+
+## Function stop (Microsoft.DBforPostgreSQL/flexibleServers@2023-03-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2023-03-01-preview
+* **Output**: any
 
 ## AdminCredentials
 ### Properties
@@ -314,6 +330,11 @@
 * **delegatedSubnetResourceId**: string: Delegated subnet arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone.
 * **privateDnsZoneArmResourceId**: string: Private dns zone arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): public network access is enabled or not
+
+## RestartParameter
+### Properties
+* **failoverMode**: 'ForcedFailover' | 'ForcedSwitchover' | 'PlannedFailover' | 'PlannedSwitchover' | string: Failover mode.
+* **restartWithFailover**: bool: Indicates whether to restart the server with failover.
 
 ## ServerBackupProperties
 ### Properties

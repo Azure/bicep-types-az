@@ -133,10 +133,36 @@
 * **properties**: [UserProperties](#userproperties) (Required): The storage account credential properties.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function downloadUpdates (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2019-07-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2019-07-01
+* **Output**: any
+
 ## Function getExtendedInformation (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2019-07-01)
 * **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
 * **ApiVersion**: 2019-07-01
 * **Output**: [DataBoxEdgeDeviceExtendedInfo](#databoxedgedeviceextendedinfo)
+
+## Function installUpdates (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2019-07-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2019-07-01
+* **Output**: any
+
+## Function refresh (Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares@2019-07-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares
+* **ApiVersion**: 2019-07-01
+* **Output**: any
+
+## Function scanForUpdates (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2019-07-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2019-07-01
+* **Output**: any
+
+## Function update (Microsoft.DataBoxEdge/dataBoxEdgeDevices/securitySettings@2019-07-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices/securitySettings
+* **ApiVersion**: 2019-07-01
+* **Input**: [SecuritySettings](#securitysettings)
+* **Output**: any
 
 ## Function uploadCertificate (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2019-07-01)
 * **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
@@ -359,6 +385,17 @@
 ## RoleSinkInfo
 ### Properties
 * **roleId**: string (Required): Compute role ID.
+
+## SecuritySettings
+### Properties
+* **id**: string (ReadOnly): The path ID that uniquely identifies the object.
+* **name**: string (ReadOnly): The object name.
+* **properties**: [SecuritySettingsProperties](#securitysettingsproperties) (Required): Properties of the security settings.
+* **type**: string (ReadOnly): The hierarchical type of the object.
+
+## SecuritySettingsProperties
+### Properties
+* **deviceAdminPassword**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret) (Required): Device administrator password as an encrypted string (encrypted using RSA PKCS #1) is used to sign into the  local web UI of the device. The Actual password should have at least 8 characters that are a combination of  uppercase, lowercase, numeric, and special characters.
 
 ## ShareAccessRight
 ### Properties

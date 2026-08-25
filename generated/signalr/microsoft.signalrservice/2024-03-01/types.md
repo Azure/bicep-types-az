@@ -102,6 +102,16 @@
 * **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
 * **Output**: [SignalRKeys](#signalrkeys)
 
+## Function restart (Microsoft.SignalRService/signalR@2024-03-01)
+* **Resource**: Microsoft.SignalRService/signalR
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
+## Function restart (Microsoft.SignalRService/signalR/replicas@2024-03-01)
+* **Resource**: Microsoft.SignalRService/signalR/replicas
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
 ## CustomCertificateProperties
 ### Properties
 * **keyVaultBaseUri**: string (Required): Base uri of the KeyVault that stores certificate.

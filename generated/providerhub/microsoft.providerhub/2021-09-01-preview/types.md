@@ -115,6 +115,12 @@
 * **Input**: [CheckinManifestParams](#checkinmanifestparams)
 * **Output**: [CheckinManifestInfo](#checkinmanifestinfo)
 
+## Function deleteResources (Microsoft.ProviderHub/providerRegistrations/resourceActions@2021-09-01-preview)
+* **Resource**: Microsoft.ProviderHub/providerRegistrations/resourceActions
+* **ApiVersion**: 2021-09-01-preview
+* **Input**: [ResourceManagementAction](#resourcemanagementaction)
+* **Output**: [ResourceManagementAction](#resourcemanagementaction)
+
 ## Function generateManifest (Microsoft.ProviderHub/providerRegistrations@2021-09-01-preview)
 * **Resource**: Microsoft.ProviderHub/providerRegistrations
 * **ApiVersion**: 2021-09-01-preview
@@ -124,6 +130,11 @@
 * **Resource**: Microsoft.ProviderHub/providerRegistrations
 * **ApiVersion**: 2021-09-01-preview
 * **Output**: [OperationsDefinition](#operationsdefinition)[]
+
+## Function stop (Microsoft.ProviderHub/providerRegistrations/defaultRollouts@2021-09-01-preview)
+* **Resource**: Microsoft.ProviderHub/providerRegistrations/defaultRollouts
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: any
 
 ## AuthorizationActionMapping
 ### Properties
@@ -525,6 +536,17 @@
 ## ResourceConcurrencyControlOption
 ### Properties
 * **policy**: 'NotSpecified' | 'SynchronizeBeginExtension' | string
+
+## ResourceManagementAction
+### Properties
+* **resources**: [ResourceManagementEntity](#resourcemanagemententity)[]: resource management action content.
+
+## ResourceManagementEntity
+### Properties
+* **homeTenantId**: string: The home tenant id.
+* **location**: string: The location.
+* **resourceId**: string (Required): The resource id.
+* **status**: string (ReadOnly): The operation status.
 
 ## ResourceProviderAuthorization
 ### Properties

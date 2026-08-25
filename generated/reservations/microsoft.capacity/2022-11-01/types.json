@@ -3724,12 +3724,24 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "archive",
+    "resourceType": "Microsoft.Capacity/reservationOrders/reservations",
+    "apiVersion": "2022-11-01",
+    "output": {
+      "$ref": "#/331"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AvailableScopeRequest",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/332"
+          "$ref": "#/334"
         },
         "flags": 0,
         "description": "Available scope request properties"
@@ -3742,7 +3754,7 @@
     "properties": {
       "scopes": {
         "type": {
-          "$ref": "#/333"
+          "$ref": "#/335"
         },
         "flags": 0
       }
@@ -3760,7 +3772,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/335"
+          "$ref": "#/337"
         },
         "flags": 0,
         "description": "The scopes checked by the available scope api."
@@ -3773,7 +3785,7 @@
     "properties": {
       "scopes": {
         "type": {
-          "$ref": "#/337"
+          "$ref": "#/339"
         },
         "flags": 0
       }
@@ -3800,7 +3812,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/336"
+      "$ref": "#/338"
     }
   },
   {
@@ -3809,9 +3821,18 @@
     "resourceType": "Microsoft.Capacity/reservationOrders/reservations",
     "apiVersion": "2022-11-01",
     "output": {
-      "$ref": "#/334"
+      "$ref": "#/336"
     },
     "input": {
+      "$ref": "#/333"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unarchive",
+    "resourceType": "Microsoft.Capacity/reservationOrders/reservations",
+    "apiVersion": "2022-11-01",
+    "output": {
       "$ref": "#/331"
     }
   }

@@ -5196,12 +5196,42 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ConnectedVMwarevSphere/virtualMachines",
+    "apiVersion": "2022-07-15-preview",
+    "output": {
+      "$ref": "#/78"
+    },
+    "input": {
+      "$ref": "#/323"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ConnectedVMwarevSphere/virtualMachines",
+    "apiVersion": "2022-07-15-preview",
+    "output": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ConnectedVMwarevSphere/virtualMachines",
+    "apiVersion": "2022-07-15-preview",
+    "output": {
+      "$ref": "#/78"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "MachineExtensionUpgrade",
     "properties": {
       "extensionTargets": {
         "type": {
-          "$ref": "#/326"
+          "$ref": "#/329"
         },
         "flags": 0,
         "description": "Describes the Extension Target Properties."
@@ -5226,7 +5256,19 @@
     "name": "ExtensionTarget",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/325"
+      "$ref": "#/328"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeExtensions",
+    "resourceType": "Microsoft.ConnectedVMwarevSphere/virtualMachines",
+    "apiVersion": "2022-07-15-preview",
+    "output": {
+      "$ref": "#/78"
+    },
+    "input": {
+      "$ref": "#/327"
     }
   }
 ]

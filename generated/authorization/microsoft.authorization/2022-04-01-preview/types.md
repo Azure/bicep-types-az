@@ -20,6 +20,16 @@
 * **properties**: [RoleEligibilityScheduleRequestProperties](#roleeligibilityschedulerequestproperties): Role eligibility schedule request properties.
 * **type**: 'Microsoft.Authorization/roleEligibilityScheduleRequests' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.Authorization/roleAssignmentScheduleRequests@2022-04-01-preview)
+* **Resource**: Microsoft.Authorization/roleAssignmentScheduleRequests
+* **ApiVersion**: 2022-04-01-preview
+* **Output**: any
+
+## Function cancel (Microsoft.Authorization/roleEligibilityScheduleRequests@2022-04-01-preview)
+* **Resource**: Microsoft.Authorization/roleEligibilityScheduleRequests
+* **ApiVersion**: 2022-04-01-preview
+* **Output**: any
+
 ## Function validate (Microsoft.Authorization/roleAssignmentScheduleRequests@2022-04-01-preview)
 * **Resource**: Microsoft.Authorization/roleAssignmentScheduleRequests
 * **ApiVersion**: 2022-04-01-preview

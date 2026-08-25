@@ -4669,5 +4669,35 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
+    "apiVersion": "2023-04-01",
+    "output": {
+      "$ref": "#/446"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runHealthChecks",
+    "resourceType": "Microsoft.DevCenter/projects/pools",
+    "apiVersion": "2023-04-01",
+    "output": {
+      "$ref": "#/446"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runHealthChecks",
+    "resourceType": "Microsoft.DevCenter/networkConnections",
+    "apiVersion": "2023-04-01",
+    "output": {
+      "$ref": "#/446"
+    }
   }
 ]

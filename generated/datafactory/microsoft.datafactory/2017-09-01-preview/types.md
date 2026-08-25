@@ -74,6 +74,12 @@
 * **Input**: [FactoryRepoUpdate](#factoryrepoupdate)
 * **Output**: [Factory](#factory)
 
+## Function createRun (Microsoft.DataFactory/factories/pipelines@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/pipelines
+* **ApiVersion**: 2017-09-01-preview
+* **Input**: [ParameterValueSpecification](#parametervaluespecification)
+* **Output**: [CreateRunResponse](#createrunresponse)
+
 ## Function getConnectionInfo (Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview)
 * **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
 * **ApiVersion**: 2017-09-01-preview
@@ -111,10 +117,41 @@
 * **Input**: [IntegrationRuntimeRegenerateKeyParameters](#integrationruntimeregeneratekeyparameters)
 * **Output**: [IntegrationRuntimeAuthKeys](#integrationruntimeauthkeys)
 
+## Function removeNode (Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2017-09-01-preview
+* **Input**: [IntegrationRuntimeRemoveNodeRequest](#integrationruntimeremovenoderequest)
+* **Output**: any
+
 ## Function start (Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview)
 * **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
 * **ApiVersion**: 2017-09-01-preview
 * **Output**: [IntegrationRuntimeStatusResponse](#integrationruntimestatusresponse)
+
+## Function start (Microsoft.DataFactory/factories/triggers@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/triggers
+* **ApiVersion**: 2017-09-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2017-09-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.DataFactory/factories/triggers@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/triggers
+* **ApiVersion**: 2017-09-01-preview
+* **Output**: any
+
+## Function syncCredentials (Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2017-09-01-preview
+* **Output**: any
+
+## Function upgrade (Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2017-09-01-preview
+* **Output**: any
 
 ## Activity
 * **Discriminator**: type
@@ -551,6 +588,10 @@
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+
+## CreateRunResponse
+### Properties
+* **runId**: string (Required): Identifier of a run.
 
 ## CustomActivityReferenceObject
 ### Properties
@@ -1383,6 +1424,12 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **keyName**: 'authKey1' | 'authKey2' | string: The name of the authentication key to regenerate.
 
+## IntegrationRuntimeRemoveNodeRequest
+### Properties
+* **nodeName**: string: The name of the node to be removed.
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
 * **catalogAdminPassword**: [SecureString](#securestring): The password of the administrator user account of the catalog database.
@@ -1983,6 +2030,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **defaultValue**: any: Default value of parameter.
 * **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'SecureString' | 'String' | string (Required): Parameter type.
+
+## ParameterValueSpecification
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ParameterValueSpecification
 ### Properties

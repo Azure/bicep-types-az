@@ -66,6 +66,29 @@
 * **Input**: [FunctionRetrieveDefaultDefinitionParameters](#functionretrievedefaultdefinitionparameters)
 * **Output**: [Function](#function)
 
+## Function sampleInput (Microsoft.StreamAnalytics/locations@2021-10-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/locations
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [SampleInput](#sampleinput)
+* **Output**: [SampleInputResult](#sampleinputresult)
+
+## Function scale (Microsoft.StreamAnalytics/streamingjobs@2021-10-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/streamingjobs
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [ScaleStreamingJobParameters](#scalestreamingjobparameters)
+* **Output**: any
+
+## Function start (Microsoft.StreamAnalytics/streamingjobs@2021-10-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/streamingjobs
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [StartStreamingJobParameters](#startstreamingjobparameters)
+* **Output**: any
+
+## Function stop (Microsoft.StreamAnalytics/streamingjobs@2021-10-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/streamingjobs
+* **ApiVersion**: 2021-10-01-preview
+* **Output**: any
+
 ## Function test (Microsoft.StreamAnalytics/streamingjobs/functions@2021-10-01-preview)
 * **Resource**: Microsoft.StreamAnalytics/streamingjobs/functions
 * **ApiVersion**: 2021-10-01-preview
@@ -83,6 +106,18 @@
 * **ApiVersion**: 2021-10-01-preview
 * **Input**: [Output](#output)
 * **Output**: [ResourceTestStatus](#resourceteststatus)
+
+## Function testInput (Microsoft.StreamAnalytics/locations@2021-10-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/locations
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [TestInput](#testinput)
+* **Output**: [TestDatasourceResult](#testdatasourceresult)
+
+## Function testOutput (Microsoft.StreamAnalytics/locations@2021-10-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/locations
+* **ApiVersion**: 2021-10-01-preview
+* **Input**: [TestOutput](#testoutput)
+* **Output**: [TestDatasourceResult](#testdatasourceresult)
 
 ## Function testQuery (Microsoft.StreamAnalytics/locations@2021-10-01-preview)
 * **Resource**: Microsoft.StreamAnalytics/locations
@@ -767,6 +802,25 @@
 * **error**: [ErrorResponse](#errorresponse) (ReadOnly): Describes the error that occurred.
 * **status**: string (ReadOnly): The status of the test operation.
 
+## SampleInput
+### Properties
+* **compatibilityLevel**: string: Defaults to the default ASA job compatibility level. Today it is 1.2
+* **dataLocale**: string: Defaults to en-US.
+* **eventsUri**: string: The SAS URI of the storage blob for service to write the sampled events to. If this parameter is not provided, service will write events to he system account and share a temporary SAS URI to it.
+* **input**: [Input](#input): The stream analytics input to sample.
+
+## SampleInputResult
+### Properties
+* **diagnostics**: string[] (ReadOnly): Diagnostics messages. E.g. message indicating some partitions from the input have no data.
+* **error**: [ErrorError](#errorerror): Error definition properties.
+* **eventsDownloadUrl**: string (ReadOnly): A SAS URL to download the sampled input data.
+* **lastArrivalTime**: string (ReadOnly): The timestamp for the last event in the data. It is in DateTime format.
+* **status**: 'ErrorConnectingToInput' | 'NoEventsFoundInRange' | 'ReadAllEventsInRange' | string (ReadOnly): The status of the sample input request.
+
+## ScaleStreamingJobParameters
+### Properties
+* **streamingUnits**: int: Specifies the number of streaming units that the streaming job will scale to.
+
 ## Serialization
 * **Discriminator**: type
 
@@ -832,6 +886,11 @@
 ### Properties
 * **capacity**: int: The capacity of the SKU.
 * **name**: 'Standard' | string: The name of the SKU. Required on PUT (CreateOrReplace) requests.
+
+## StartStreamingJobParameters
+### Properties
+* **outputStartMode**: 'CustomTime' | 'JobStartTime' | 'LastOutputEventTime' | string: Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.
+* **outputStartTime**: string: Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime.
 
 ## StorageAccount
 ### Properties
@@ -917,6 +976,19 @@
 * **properties**: [RawInputDatasourceProperties](#rawinputdatasourceproperties): The properties that are associated with a raw input. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Raw' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
+
+## TestDatasourceResult
+### Properties
+* **error**: [ErrorError](#errorerror): Error definition properties.
+* **status**: 'TestFailed' | 'TestSucceeded' | string (ReadOnly): The status of the sample output request.
+
+## TestInput
+### Properties
+* **input**: [Input](#input) (Required): The stream analytics input to test.
+
+## TestOutput
+### Properties
+* **output**: [Output](#output) (Required): The stream analytics output to test.
 
 ## TestQuery
 ### Properties

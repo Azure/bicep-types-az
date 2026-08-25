@@ -78,6 +78,12 @@
 * **Input**: [ListParameter](#listparameter)
 * **Output**: [PagedRelatedResource](#pagedrelatedresource)
 
+## Function setBackgroundVisualization (Microsoft.Monitor/accounts/issues@2025-10-03)
+* **Resource**: Microsoft.Monitor/accounts/issues
+* **ApiVersion**: 2025-10-03
+* **Input**: [BackgroundVisualization](#backgroundvisualization)
+* **Output**: any
+
 ## AzureMonitorWorkspace
 ### Properties
 * **accountId**: string (ReadOnly): The immutable Id of the Azure Monitor Workspace. This property is read-only.

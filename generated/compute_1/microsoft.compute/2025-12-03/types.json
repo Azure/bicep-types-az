@@ -4810,19 +4810,58 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "accept",
+    "resourceType": "Microsoft.Compute/locations/tenantLevelSharedGallerySubscriptions/sharedGalleries",
+    "apiVersion": "2025-12-03",
+    "output": {
+      "$ref": "#/378"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reject",
+    "resourceType": "Microsoft.Compute/locations/tenantLevelSharedGallerySubscriptions/sharedGalleries",
+    "apiVersion": "2025-12-03",
+    "output": {
+      "$ref": "#/378"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "accept",
+    "resourceType": "Microsoft.Compute/locations/sharedGallerySubscriptions/sharedGalleries",
+    "apiVersion": "2025-12-03",
+    "output": {
+      "$ref": "#/378"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reject",
+    "resourceType": "Microsoft.Compute/locations/sharedGallerySubscriptions/sharedGalleries",
+    "apiVersion": "2025-12-03",
+    "output": {
+      "$ref": "#/378"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SharingUpdate",
     "properties": {
       "operationType": {
         "type": {
-          "$ref": "#/383"
+          "$ref": "#/388"
         },
         "flags": 1,
         "description": "This property allows you to specify the operation type of gallery sharing update. Possible values are: **Add,** **Remove,** **Reset.**"
       },
       "groups": {
         "type": {
-          "$ref": "#/384"
+          "$ref": "#/389"
         },
         "flags": 0,
         "description": "A list of sharing profile groups."
@@ -4849,16 +4888,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/379"
+        "$ref": "#/384"
       },
       {
-        "$ref": "#/380"
+        "$ref": "#/385"
       },
       {
-        "$ref": "#/381"
+        "$ref": "#/386"
       },
       {
-        "$ref": "#/382"
+        "$ref": "#/387"
       },
       {
         "$ref": "#/2"
@@ -4877,10 +4916,10 @@
     "resourceType": "Microsoft.Compute/galleries",
     "apiVersion": "2025-12-03",
     "output": {
-      "$ref": "#/378"
+      "$ref": "#/383"
     },
     "input": {
-      "$ref": "#/378"
+      "$ref": "#/383"
     }
   }
 ]

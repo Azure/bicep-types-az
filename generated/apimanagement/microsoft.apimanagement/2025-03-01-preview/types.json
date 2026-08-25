@@ -16832,6 +16832,15 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSecret",
+    "resourceType": "Microsoft.ApiManagement/gateways/hostnameBindings",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/317"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AuthorizationProviderContract",
     "properties": {
@@ -16878,7 +16887,7 @@
     "resourceType": "Microsoft.ApiManagement/service/authorizationProviders",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1168"
+      "$ref": "#/1169"
     }
   },
   {
@@ -16892,6 +16901,18 @@
         "flags": 0,
         "description": "The consent code from the authorization server after authorizing and consenting."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "confirmConsentCode",
+    "resourceType": "Microsoft.ApiManagement/service/authorizationProviders/authorizations",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/317"
+    },
+    "input": {
+      "$ref": "#/1171"
     }
   },
   {
@@ -16926,10 +16947,10 @@
     "resourceType": "Microsoft.ApiManagement/service/authorizationProviders/authorizations",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1172"
+      "$ref": "#/1174"
     },
     "input": {
-      "$ref": "#/1171"
+      "$ref": "#/1173"
     }
   },
   {
@@ -16965,7 +16986,73 @@
     "resourceType": "Microsoft.ApiManagement/service/authorizationServers",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1174"
+      "$ref": "#/1176"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackendReconnectContract",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1179"
+        },
+        "flags": 0,
+        "description": "Reconnect request properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackendReconnectProperties",
+    "properties": {
+      "after": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Duration in ISO8601 format after which reconnect will be initiated. Minimum duration of the Reconnect is PT2M."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconnect",
+    "resourceType": "Microsoft.ApiManagement/service/backends",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/317"
+    },
+    "input": {
+      "$ref": "#/1178"
     }
   },
   {
@@ -16974,7 +17061,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1177"
+          "$ref": "#/1182"
         },
         "flags": 0,
         "description": "Certificate properties details."
@@ -17036,7 +17123,7 @@
       },
       "keyVault": {
         "type": {
-          "$ref": "#/1178"
+          "$ref": "#/1183"
         },
         "flags": 0,
         "description": "KeyVault location details of the certificate."
@@ -17076,7 +17163,7 @@
     "resourceType": "Microsoft.ApiManagement/service/certificates",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1176"
+      "$ref": "#/1181"
     }
   },
   {
@@ -17085,7 +17172,7 @@
     "properties": {
       "entra": {
         "type": {
-          "$ref": "#/1181"
+          "$ref": "#/1186"
         },
         "flags": 0,
         "description": "Microsoft EntraID client application secrets"
@@ -17118,7 +17205,7 @@
     "resourceType": "Microsoft.ApiManagement/service/clientApplications",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1180"
+      "$ref": "#/1185"
     }
   },
   {
@@ -17127,7 +17214,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/1186"
+          "$ref": "#/1191"
         },
         "flags": 1,
         "description": "The Key to be used to generate gateway token."
@@ -17153,10 +17240,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1184"
+        "$ref": "#/1189"
       },
       {
-        "$ref": "#/1185"
+        "$ref": "#/1190"
       }
     ]
   },
@@ -17179,10 +17266,19 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1187"
+      "$ref": "#/1192"
     },
     "input": {
-      "$ref": "#/1183"
+      "$ref": "#/1188"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "invalidateDebugCredentials",
+    "resourceType": "Microsoft.ApiManagement/service/gateways",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/317"
     }
   },
   {
@@ -17198,7 +17294,7 @@
       },
       "purposes": {
         "type": {
-          "$ref": "#/1192"
+          "$ref": "#/1198"
         },
         "flags": 1,
         "description": "Purposes of debug credential."
@@ -17220,7 +17316,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1190"
+        "$ref": "#/1196"
       },
       {
         "$ref": "#/2"
@@ -17230,7 +17326,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1191"
+      "$ref": "#/1197"
     }
   },
   {
@@ -17252,10 +17348,10 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1193"
+      "$ref": "#/1199"
     },
     "input": {
-      "$ref": "#/1189"
+      "$ref": "#/1195"
     }
   },
   {
@@ -17284,7 +17380,7 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1195"
+      "$ref": "#/1201"
     }
   },
   {
@@ -17314,10 +17410,54 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1198"
+      "$ref": "#/1204"
     },
     "input": {
-      "$ref": "#/1197"
+      "$ref": "#/1203"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GatewayKeyRegenerationRequestContract",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/1209"
+        },
+        "flags": 1,
+        "description": "The Key being regenerated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1207"
+      },
+      {
+        "$ref": "#/1208"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.ApiManagement/service/gateways",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/317"
+    },
+    "input": {
+      "$ref": "#/1206"
     }
   },
   {
@@ -17339,7 +17479,7 @@
     "resourceType": "Microsoft.ApiManagement/service/identityProviders",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1200"
+      "$ref": "#/1211"
     }
   },
   {
@@ -17361,7 +17501,7 @@
     "resourceType": "Microsoft.ApiManagement/service/namedValues",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1202"
+      "$ref": "#/1213"
     }
   },
   {
@@ -17370,7 +17510,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1205"
+          "$ref": "#/1216"
         },
         "flags": 0,
         "description": "NamedValue entity contract properties."
@@ -17425,7 +17565,7 @@
       },
       "keyVault": {
         "type": {
-          "$ref": "#/1178"
+          "$ref": "#/1183"
         },
         "flags": 0,
         "description": "KeyVault location details of the namedValue."
@@ -17439,7 +17579,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1206"
+          "$ref": "#/1217"
         },
         "flags": 0,
         "description": "Optional tags that when provided can be used to filter the NamedValue list."
@@ -17466,7 +17606,7 @@
     "resourceType": "Microsoft.ApiManagement/service/namedValues",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1204"
+      "$ref": "#/1215"
     }
   },
   {
@@ -17475,7 +17615,7 @@
     "resourceType": "Microsoft.ApiManagement/service/openidConnectProviders",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1200"
+      "$ref": "#/1211"
     }
   },
   {
@@ -17484,7 +17624,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/1211"
+          "$ref": "#/1222"
         },
         "flags": 0,
         "description": "A collection of resources."
@@ -17542,7 +17682,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1210"
+      "$ref": "#/1221"
     }
   },
   {
@@ -17551,7 +17691,7 @@
     "resourceType": "Microsoft.ApiManagement/service/policyFragments",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1209"
+      "$ref": "#/1220"
     }
   },
   {
@@ -17573,7 +17713,7 @@
     "resourceType": "Microsoft.ApiManagement/service/portalsettings",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1213"
+      "$ref": "#/1224"
     }
   },
   {
@@ -17602,7 +17742,25 @@
     "resourceType": "Microsoft.ApiManagement/service/subscriptions",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1215"
+      "$ref": "#/1226"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/subscriptions",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/317"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/subscriptions",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/317"
     }
   },
   {
@@ -17652,7 +17810,25 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1217"
+      "$ref": "#/1230"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/317"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/317"
     }
   },
   {
@@ -17661,7 +17837,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1220"
+          "$ref": "#/1235"
         },
         "flags": 0,
         "description": "Deploy Configuration Parameter contract properties."
@@ -17697,7 +17873,7 @@
       "$ref": "#/1155"
     },
     "input": {
-      "$ref": "#/1219"
+      "$ref": "#/1234"
     }
   },
   {
@@ -17706,7 +17882,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1223"
+          "$ref": "#/1238"
         },
         "flags": 0,
         "description": "Properties of the Save Configuration Parameters."
@@ -17742,7 +17918,7 @@
       "$ref": "#/1155"
     },
     "input": {
-      "$ref": "#/1222"
+      "$ref": "#/1237"
     }
   },
   {
@@ -17754,7 +17930,7 @@
       "$ref": "#/1155"
     },
     "input": {
-      "$ref": "#/1219"
+      "$ref": "#/1234"
     }
   },
   {
@@ -17776,7 +17952,7 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1226"
+      "$ref": "#/1241"
     }
   },
   {
@@ -17785,7 +17961,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1229"
+          "$ref": "#/1244"
         },
         "flags": 0,
         "description": "User Token Parameter contract properties."
@@ -17798,7 +17974,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/1232"
+          "$ref": "#/1247"
         },
         "flags": 1,
         "description": "The Key to be used to generate token for user."
@@ -17824,10 +18000,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1230"
+        "$ref": "#/1245"
       },
       {
-        "$ref": "#/1231"
+        "$ref": "#/1246"
       }
     ]
   },
@@ -17850,10 +18026,19 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1233"
+      "$ref": "#/1248"
     },
     "input": {
-      "$ref": "#/1228"
+      "$ref": "#/1243"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "send",
+    "resourceType": "Microsoft.ApiManagement/service/users/confirmations",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/317"
     }
   },
   {
@@ -17862,7 +18047,7 @@
     "resourceType": "Microsoft.ApiManagement/service/workspaces/certificates",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1176"
+      "$ref": "#/1181"
     }
   },
   {
@@ -17871,7 +18056,7 @@
     "resourceType": "Microsoft.ApiManagement/service/workspaces/namedValues",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1202"
+      "$ref": "#/1213"
     }
   },
   {
@@ -17880,7 +18065,7 @@
     "resourceType": "Microsoft.ApiManagement/service/workspaces/namedValues",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1204"
+      "$ref": "#/1215"
     }
   },
   {
@@ -17889,7 +18074,7 @@
     "resourceType": "Microsoft.ApiManagement/service/workspaces/policyFragments",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1209"
+      "$ref": "#/1220"
     }
   },
   {
@@ -17898,7 +18083,25 @@
     "resourceType": "Microsoft.ApiManagement/service/workspaces/subscriptions",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/1215"
+      "$ref": "#/1226"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/workspaces/subscriptions",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/317"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/workspaces/subscriptions",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/317"
     }
   }
 ]

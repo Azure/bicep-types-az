@@ -126,6 +126,11 @@
 * **ApiVersion**: 2025-06-01
 * **Output**: [BatchAccountKeys](#batchaccountkeys)
 
+## Function reconcile (Microsoft.Batch/batchAccounts/networkSecurityPerimeterConfigurations@2025-06-01)
+* **Resource**: Microsoft.Batch/batchAccounts/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2025-06-01
+* **Output**: any
+
 ## Function regenerateKeys (Microsoft.Batch/batchAccounts@2025-06-01)
 * **Resource**: Microsoft.Batch/batchAccounts
 * **ApiVersion**: 2025-06-01
@@ -136,6 +141,11 @@
 * **Resource**: Microsoft.Batch/batchAccounts/pools
 * **ApiVersion**: 2025-06-01
 * **Output**: [Pool](#pool)
+
+## Function syncAutoStorageKeys (Microsoft.Batch/batchAccounts@2025-06-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2025-06-01
+* **Output**: any
 
 ## AccessRule
 ### Properties

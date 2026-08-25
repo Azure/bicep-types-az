@@ -7042,6 +7042,37 @@
   },
   {
     "$type": "ObjectType",
+    "name": "FailoverPolicies",
+    "properties": {
+      "failoverPolicies": {
+        "type": {
+          "$ref": "#/472"
+        },
+        "flags": 1,
+        "description": "List of failover policies."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/85"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failoverPriorityChange",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2021-07-01-preview",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/471"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DatabaseAccountListKeysResult",
     "properties": {
       "primaryMasterKey": {
@@ -7080,7 +7111,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/471"
+      "$ref": "#/474"
     }
   },
   {
@@ -7089,7 +7120,7 @@
     "properties": {
       "connectionStrings": {
         "type": {
-          "$ref": "#/475"
+          "$ref": "#/478"
         },
         "flags": 0,
         "description": "An array that contains the connection strings for the Cosmos DB account."
@@ -7119,7 +7150,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/474"
+      "$ref": "#/477"
     }
   },
   {
@@ -7128,7 +7159,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/473"
+      "$ref": "#/476"
     }
   },
   {
@@ -7142,6 +7173,30 @@
         "flags": 1,
         "description": "Cosmos DB region, with spaces between words and each word capitalized."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "offlineRegion",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2021-07-01-preview",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/480"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "onlineRegion",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2021-07-01-preview",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/480"
     }
   },
   {
@@ -7170,7 +7225,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/478"
+      "$ref": "#/483"
     }
   },
   {
@@ -7179,7 +7234,7 @@
     "properties": {
       "keyKind": {
         "type": {
-          "$ref": "#/485"
+          "$ref": "#/490"
         },
         "flags": 1,
         "description": "The access key to regenerate."
@@ -7206,16 +7261,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/481"
+        "$ref": "#/486"
       },
       {
-        "$ref": "#/482"
+        "$ref": "#/487"
       },
       {
-        "$ref": "#/483"
+        "$ref": "#/488"
       },
       {
-        "$ref": "#/484"
+        "$ref": "#/489"
       },
       {
         "$ref": "#/2"
@@ -7223,12 +7278,24 @@
     ]
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2021-07-01-preview",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/485"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ThroughputSettingsGetResults",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/487"
+          "$ref": "#/493"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB resource throughput"
@@ -7263,7 +7330,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/489"
+          "$ref": "#/495"
         },
         "flags": 0,
         "description": "Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\"."
@@ -7283,7 +7350,7 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/488"
+          "$ref": "#/494"
         },
         "flags": 0
       }
@@ -7358,7 +7425,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7367,7 +7434,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7376,7 +7443,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7385,7 +7452,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7407,7 +7474,7 @@
     "properties": {
       "continuousBackupInformation": {
         "type": {
-          "$ref": "#/496"
+          "$ref": "#/502"
         },
         "flags": 2,
         "description": "Information about the status of continuous backups."
@@ -7433,10 +7500,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/495"
+      "$ref": "#/501"
     },
     "input": {
-      "$ref": "#/494"
+      "$ref": "#/500"
     }
   },
   {
@@ -7445,7 +7512,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7454,7 +7521,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7463,7 +7530,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7472,7 +7539,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7481,7 +7548,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7490,7 +7557,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7499,7 +7566,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7508,7 +7575,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7517,7 +7584,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7526,7 +7593,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7535,7 +7602,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7544,7 +7611,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7553,7 +7620,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7562,7 +7629,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7571,7 +7638,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7580,7 +7647,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/486"
+      "$ref": "#/492"
     }
   },
   {
@@ -7609,7 +7676,25 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/514"
+      "$ref": "#/520"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateAuthToken",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
+    "apiVersion": "2021-07-01-preview",
+    "output": {
+      "$ref": "#/434"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
+    "apiVersion": "2021-07-01-preview",
+    "output": {
+      "$ref": "#/434"
     }
   },
   {
@@ -7625,7 +7710,7 @@
       },
       "tables": {
         "type": {
-          "$ref": "#/517"
+          "$ref": "#/525"
         },
         "flags": 0,
         "description": "List of tables in the keyspace to repair. If omitted, repair all tables in the keyspace."
@@ -7639,12 +7724,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "repair",
+    "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+    "apiVersion": "2021-07-01-preview",
+    "output": {
+      "$ref": "#/434"
+    },
+    "input": {
+      "$ref": "#/524"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ClusterNodeStatus",
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/530"
+          "$ref": "#/539"
         },
         "flags": 0,
         "description": "Information about nodes in the cluster (corresponds to what is returned from nodetool info)."
@@ -7664,14 +7761,14 @@
       },
       "status": {
         "type": {
-          "$ref": "#/522"
+          "$ref": "#/531"
         },
         "flags": 0,
         "description": "Indicates whether the node is functioning or not."
       },
       "state": {
         "type": {
-          "$ref": "#/528"
+          "$ref": "#/537"
         },
         "flags": 0,
         "description": "The state of the node in relation to the cluster."
@@ -7692,7 +7789,7 @@
       },
       "tokens": {
         "type": {
-          "$ref": "#/529"
+          "$ref": "#/538"
         },
         "flags": 0,
         "description": "List of tokens."
@@ -7732,10 +7829,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/520"
+        "$ref": "#/529"
       },
       {
-        "$ref": "#/521"
+        "$ref": "#/530"
       },
       {
         "$ref": "#/2"
@@ -7766,19 +7863,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/523"
+        "$ref": "#/532"
       },
       {
-        "$ref": "#/524"
+        "$ref": "#/533"
       },
       {
-        "$ref": "#/525"
+        "$ref": "#/534"
       },
       {
-        "$ref": "#/526"
+        "$ref": "#/535"
       },
       {
-        "$ref": "#/527"
+        "$ref": "#/536"
       },
       {
         "$ref": "#/2"
@@ -7794,7 +7891,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/519"
+      "$ref": "#/528"
     }
   },
   {
@@ -7803,7 +7900,7 @@
     "resourceType": "Microsoft.DocumentDB/cassandraClusters",
     "apiVersion": "2021-07-01-preview",
     "output": {
-      "$ref": "#/518"
+      "$ref": "#/527"
     }
   }
 ]

@@ -5669,12 +5669,27 @@
     ]
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "executeRequest",
+    "resourceType": "Microsoft.HybridNetwork/networkFunctions",
+    "apiVersion": "2024-04-15",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/457"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "NetworkFunctionDefinitionVersionUpdateState",
     "properties": {
       "versionState": {
         "type": {
-          "$ref": "#/473"
+          "$ref": "#/475"
         },
         "flags": 0,
         "description": "The network function definition version state. Only the 'Active' and 'Deprecated' states are allowed for updates. Other states are used for internal state transitioning."
@@ -5709,12 +5724,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/467"
-      },
-      {
-        "$ref": "#/468"
-      },
-      {
         "$ref": "#/469"
       },
       {
@@ -5727,6 +5736,12 @@
         "$ref": "#/472"
       },
       {
+        "$ref": "#/473"
+      },
+      {
+        "$ref": "#/474"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -5737,10 +5752,10 @@
     "resourceType": "Microsoft.HybridNetwork/publishers/networkFunctionDefinitionGroups/networkFunctionDefinitionVersions",
     "apiVersion": "2024-04-15",
     "output": {
-      "$ref": "#/466"
+      "$ref": "#/468"
     },
     "input": {
-      "$ref": "#/466"
+      "$ref": "#/468"
     }
   },
   {
@@ -5749,7 +5764,7 @@
     "properties": {
       "versionState": {
         "type": {
-          "$ref": "#/482"
+          "$ref": "#/484"
         },
         "flags": 0,
         "description": "The network service design version state."
@@ -5784,12 +5799,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/476"
-      },
-      {
-        "$ref": "#/477"
-      },
-      {
         "$ref": "#/478"
       },
       {
@@ -5802,6 +5811,12 @@
         "$ref": "#/481"
       },
       {
+        "$ref": "#/482"
+      },
+      {
+        "$ref": "#/483"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -5812,10 +5827,53 @@
     "resourceType": "Microsoft.HybridNetwork/publishers/networkServiceDesignGroups/networkServiceDesignVersions",
     "apiVersion": "2024-04-15",
     "output": {
-      "$ref": "#/475"
+      "$ref": "#/477"
     },
     "input": {
-      "$ref": "#/475"
+      "$ref": "#/477"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArtifactStoreNetworkFabricControllerEndPoints",
+    "properties": {
+      "networkFabricControllerIds": {
+        "type": {
+          "$ref": "#/487"
+        },
+        "flags": 0,
+        "description": "list of network fabric controllers."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/150"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addNetworkFabricControllerEndPoints",
+    "resourceType": "Microsoft.HybridNetwork/publishers/artifactStores",
+    "apiVersion": "2024-04-15",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/486"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteNetworkFabricControllerEndPoints",
+    "resourceType": "Microsoft.HybridNetwork/publishers/artifactStores",
+    "apiVersion": "2024-04-15",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/486"
     }
   },
   {
@@ -5824,7 +5882,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/487"
+          "$ref": "#/491"
         },
         "flags": 0,
         "description": "A list of network fabric controllers."
@@ -5839,15 +5897,30 @@
     }
   },
   {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/486"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listNetworkFabricControllerPrivateEndPoints",
+    "resourceType": "Microsoft.HybridNetwork/publishers/artifactStores",
+    "apiVersion": "2024-04-15",
+    "output": {
+      "$ref": "#/490"
+    }
+  },
+  {
     "$type": "ObjectType",
-    "name": "ArtifactStoreNetworkFabricControllerEndPoints",
+    "name": "ArtifactStorePrivateEndPointsFormat",
     "properties": {
-      "networkFabricControllerIds": {
+      "manualPrivateEndPointConnections": {
         "type": {
-          "$ref": "#/486"
+          "$ref": "#/494"
         },
         "flags": 0,
-        "description": "list of network fabric controllers."
+        "description": "list of private endpoints."
       }
     }
   },
@@ -5858,18 +5931,27 @@
     }
   },
   {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/485"
+    "$type": "ResourceFunctionType",
+    "name": "approvePrivateEndPoints",
+    "resourceType": "Microsoft.HybridNetwork/publishers/artifactStores",
+    "apiVersion": "2024-04-15",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/493"
     }
   },
   {
     "$type": "ResourceFunctionType",
-    "name": "listNetworkFabricControllerPrivateEndPoints",
+    "name": "removePrivateEndPoints",
     "resourceType": "Microsoft.HybridNetwork/publishers/artifactStores",
     "apiVersion": "2024-04-15",
     "output": {
-      "$ref": "#/484"
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/493"
     }
   },
   {
@@ -5878,7 +5960,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/492"
+          "$ref": "#/498"
         },
         "flags": 0,
         "description": "A list of private endpoints."
@@ -5893,28 +5975,9 @@
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "ArtifactStorePrivateEndPointsFormat",
-    "properties": {
-      "manualPrivateEndPointConnections": {
-        "type": {
-          "$ref": "#/491"
-        },
-        "flags": 0,
-        "description": "list of private endpoints."
-      }
-    }
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/150"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/490"
+      "$ref": "#/493"
     }
   },
   {
@@ -5923,7 +5986,7 @@
     "resourceType": "Microsoft.HybridNetwork/publishers/artifactStores",
     "apiVersion": "2024-04-15",
     "output": {
-      "$ref": "#/489"
+      "$ref": "#/497"
     }
   },
   {
@@ -5933,10 +5996,10 @@
     "baseProperties": {},
     "elements": {
       "AzureContainerRegistryScopedToken": {
-        "$ref": "#/495"
+        "$ref": "#/501"
       },
       "AzureStorageAccountToken": {
-        "$ref": "#/498"
+        "$ref": "#/504"
       }
     }
   },
@@ -5967,7 +6030,7 @@
       },
       "repositories": {
         "type": {
-          "$ref": "#/496"
+          "$ref": "#/502"
         },
         "flags": 0,
         "description": "The repositories that could be accessed using the current credential."
@@ -5981,7 +6044,7 @@
       },
       "credentialType": {
         "type": {
-          "$ref": "#/497"
+          "$ref": "#/503"
         },
         "flags": 1,
         "description": "The credential type."
@@ -6011,7 +6074,7 @@
       },
       "containerCredentials": {
         "type": {
-          "$ref": "#/500"
+          "$ref": "#/506"
         },
         "flags": 0,
         "description": "The containers that could be accessed using the current credential."
@@ -6025,7 +6088,7 @@
       },
       "credentialType": {
         "type": {
-          "$ref": "#/501"
+          "$ref": "#/507"
         },
         "flags": 1,
         "description": "The credential type."
@@ -6055,7 +6118,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/499"
+      "$ref": "#/505"
     }
   },
   {
@@ -6068,7 +6131,7 @@
     "resourceType": "Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests",
     "apiVersion": "2024-04-15",
     "output": {
-      "$ref": "#/494"
+      "$ref": "#/500"
     }
   },
   {
@@ -6077,7 +6140,7 @@
     "properties": {
       "artifactManifestState": {
         "type": {
-          "$ref": "#/510"
+          "$ref": "#/516"
         },
         "flags": 0,
         "description": "The artifact manifest state."
@@ -6112,22 +6175,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/504"
+        "$ref": "#/510"
       },
       {
-        "$ref": "#/505"
+        "$ref": "#/511"
       },
       {
-        "$ref": "#/506"
+        "$ref": "#/512"
       },
       {
-        "$ref": "#/507"
+        "$ref": "#/513"
       },
       {
-        "$ref": "#/508"
+        "$ref": "#/514"
       },
       {
-        "$ref": "#/509"
+        "$ref": "#/515"
       },
       {
         "$ref": "#/2"
@@ -6140,10 +6203,10 @@
     "resourceType": "Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests",
     "apiVersion": "2024-04-15",
     "output": {
-      "$ref": "#/503"
+      "$ref": "#/509"
     },
     "input": {
-      "$ref": "#/503"
+      "$ref": "#/509"
     }
   }
 ]

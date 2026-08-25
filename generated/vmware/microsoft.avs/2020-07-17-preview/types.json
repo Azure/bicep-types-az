@@ -2692,6 +2692,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateVcenterPassword",
+    "resourceType": "Microsoft.AVS/privateClouds",
+    "apiVersion": "2020-07-17-preview",
+    "output": {
+      "$ref": "#/215"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateNsxtPassword",
+    "resourceType": "Microsoft.AVS/privateClouds",
+    "apiVersion": "2020-07-17-preview",
+    "output": {
+      "$ref": "#/215"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AdminCredentials",
     "properties": {
@@ -2731,7 +2752,7 @@
     "resourceType": "Microsoft.AVS/privateClouds",
     "apiVersion": "2020-07-17-preview",
     "output": {
-      "$ref": "#/215"
+      "$ref": "#/218"
     }
   }
 ]

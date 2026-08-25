@@ -20,6 +20,16 @@
 * **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
 * **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
 
+## Function resume (Microsoft.Fabric/capacities@2023-11-01)
+* **Resource**: Microsoft.Fabric/capacities
+* **ApiVersion**: 2023-11-01
+* **Output**: any
+
+## Function suspend (Microsoft.Fabric/capacities@2023-11-01)
+* **Resource**: Microsoft.Fabric/capacities
+* **ApiVersion**: 2023-11-01
+* **Output**: any
+
 ## CapacityAdministration
 ### Properties
 * **members**: string[] (Required): An array of administrator user identities.

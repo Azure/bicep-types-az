@@ -4512,20 +4512,91 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "AzureBackupRehydrationRequest",
+    "properties": {
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Id of the recovery point to be recovered"
+      },
+      "rehydrationPriority": {
+        "type": {
+          "$ref": "#/340"
+        },
+        "flags": 0,
+        "description": "Priority to be used for rehydration. Values High or Standard"
+      },
+      "rehydrationRetentionDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Retention duration in ISO 8601 format i.e P10D ."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/337"
+      },
+      {
+        "$ref": "#/338"
+      },
+      {
+        "$ref": "#/339"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rehydrate",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/341"
+    },
+    "input": {
+      "$ref": "#/336"
+    }
+  },
+  {
     "$type": "DiscriminatedObjectType",
     "name": "AzureBackupRestoreRequest",
     "discriminator": "objectType",
     "baseProperties": {
       "restoreTargetInfo": {
         "type": {
-          "$ref": "#/337"
+          "$ref": "#/344"
         },
         "flags": 1,
         "description": "Gets or sets the restore target information."
       },
       "sourceDataStoreType": {
         "type": {
-          "$ref": "#/379"
+          "$ref": "#/386"
         },
         "flags": 1,
         "description": "Gets or sets the type of the source data store."
@@ -4540,10 +4611,10 @@
     },
     "elements": {
       "AzureBackupRestoreWithRehydrationRequest": {
-        "$ref": "#/380"
+        "$ref": "#/387"
       },
       "AzureBackupRecoveryTimeBasedRestoreRequest": {
-        "$ref": "#/386"
+        "$ref": "#/393"
       }
     }
   },
@@ -4554,7 +4625,7 @@
     "baseProperties": {
       "recoveryOption": {
         "type": {
-          "$ref": "#/339"
+          "$ref": "#/346"
         },
         "flags": 1,
         "description": "Recovery Option"
@@ -4569,13 +4640,13 @@
     },
     "elements": {
       "ItemLevelRestoreTargetInfo": {
-        "$ref": "#/340"
+        "$ref": "#/347"
       },
       "RestoreFilesTargetInfo": {
-        "$ref": "#/367"
+        "$ref": "#/374"
       },
       "RestoreTargetInfo": {
-        "$ref": "#/374"
+        "$ref": "#/381"
       }
     }
   },
@@ -4587,7 +4658,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/338"
+        "$ref": "#/345"
       },
       {
         "$ref": "#/0"
@@ -4600,7 +4671,7 @@
     "properties": {
       "restoreCriteria": {
         "type": {
-          "$ref": "#/365"
+          "$ref": "#/372"
         },
         "flags": 1,
         "description": "Restore Criteria"
@@ -4628,7 +4699,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/366"
+          "$ref": "#/373"
         },
         "flags": 1,
         "description": "Type of Datasource object, used to initialize the right inherited type"
@@ -4642,19 +4713,19 @@
     "baseProperties": {},
     "elements": {
       "ItemPathBasedRestoreCriteria": {
-        "$ref": "#/342"
+        "$ref": "#/349"
       },
       "KubernetesClusterRestoreCriteria": {
-        "$ref": "#/345"
+        "$ref": "#/352"
       },
       "KubernetesPVRestoreCriteria": {
-        "$ref": "#/359"
+        "$ref": "#/366"
       },
       "KubernetesStorageClassRestoreCriteria": {
-        "$ref": "#/361"
+        "$ref": "#/368"
       },
       "RangeBasedItemLevelRestoreCriteria": {
-        "$ref": "#/363"
+        "$ref": "#/370"
       }
     }
   },
@@ -4678,14 +4749,14 @@
       },
       "subItemPathPrefix": {
         "type": {
-          "$ref": "#/343"
+          "$ref": "#/350"
         },
         "flags": 0,
         "description": "The list of prefix strings to be used as filter criteria during restore. These are relative to the item path specified."
       },
       "objectType": {
         "type": {
-          "$ref": "#/344"
+          "$ref": "#/351"
         },
         "flags": 1,
         "description": "Type of the specific object - used for deserializing"
@@ -4715,63 +4786,63 @@
       },
       "includedNamespaces": {
         "type": {
-          "$ref": "#/346"
+          "$ref": "#/353"
         },
         "flags": 0,
         "description": "Gets or sets the include namespaces property. This property sets the namespaces to be included during restore."
       },
       "excludedNamespaces": {
         "type": {
-          "$ref": "#/347"
+          "$ref": "#/354"
         },
         "flags": 0,
         "description": "Gets or sets the exclude namespaces property. This property sets the namespaces to be excluded during restore."
       },
       "includedResourceTypes": {
         "type": {
-          "$ref": "#/348"
+          "$ref": "#/355"
         },
         "flags": 0,
         "description": "Gets or sets the include resource types property. This property sets the resource types to be included during restore."
       },
       "excludedResourceTypes": {
         "type": {
-          "$ref": "#/349"
+          "$ref": "#/356"
         },
         "flags": 0,
         "description": "Gets or sets the exclude resource types property. This property sets the resource types to be excluded during restore."
       },
       "labelSelectors": {
         "type": {
-          "$ref": "#/350"
+          "$ref": "#/357"
         },
         "flags": 0,
         "description": "Gets or sets the LabelSelectors property. This property sets the resource with such label selectors to be included during restore."
       },
       "persistentVolumeRestoreMode": {
         "type": {
-          "$ref": "#/353"
+          "$ref": "#/360"
         },
         "flags": 0,
         "description": "Gets or sets the PV Restore Mode property. This property sets whether volumes needs to be restored."
       },
       "conflictPolicy": {
         "type": {
-          "$ref": "#/356"
+          "$ref": "#/363"
         },
         "flags": 0,
         "description": "Gets or sets the Conflict Policy property. This property sets policy during conflict of resources during restore."
       },
       "namespaceMappings": {
         "type": {
-          "$ref": "#/357"
+          "$ref": "#/364"
         },
         "flags": 0,
         "description": "Gets or sets the Namespace Mappings property. This property sets if namespace needs to be change during restore."
       },
       "objectType": {
         "type": {
-          "$ref": "#/358"
+          "$ref": "#/365"
         },
         "flags": 1,
         "description": "Type of the specific object - used for deserializing"
@@ -4820,10 +4891,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/351"
+        "$ref": "#/358"
       },
       {
-        "$ref": "#/352"
+        "$ref": "#/359"
       },
       {
         "$ref": "#/0"
@@ -4842,10 +4913,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/354"
+        "$ref": "#/361"
       },
       {
-        "$ref": "#/355"
+        "$ref": "#/362"
       },
       {
         "$ref": "#/0"
@@ -4884,7 +4955,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/360"
+          "$ref": "#/367"
         },
         "flags": 1,
         "description": "Type of the specific object - used for deserializing"
@@ -4915,7 +4986,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/362"
+          "$ref": "#/369"
         },
         "flags": 1,
         "description": "Type of the specific object - used for deserializing"
@@ -4946,7 +5017,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/364"
+          "$ref": "#/371"
         },
         "flags": 1,
         "description": "Type of the specific object - used for deserializing"
@@ -4960,7 +5031,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/341"
+      "$ref": "#/348"
     }
   },
   {
@@ -4973,14 +5044,14 @@
     "properties": {
       "targetDetails": {
         "type": {
-          "$ref": "#/368"
+          "$ref": "#/375"
         },
         "flags": 1,
         "description": "Destination of RestoreAsFiles operation, when destination is not a datasource"
       },
       "objectType": {
         "type": {
-          "$ref": "#/373"
+          "$ref": "#/380"
         },
         "flags": 1,
         "description": "Type of Datasource object, used to initialize the right inherited type"
@@ -5000,7 +5071,7 @@
       },
       "restoreTargetLocationType": {
         "type": {
-          "$ref": "#/372"
+          "$ref": "#/379"
         },
         "flags": 1,
         "description": "Denotes the target location where the data will be restored,\r\nstring value for the enum {Microsoft.Internal.AzureBackup.DataProtection.Common.Interface.RestoreTargetLocationType}"
@@ -5030,13 +5101,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/369"
+        "$ref": "#/376"
       },
       {
-        "$ref": "#/370"
+        "$ref": "#/377"
       },
       {
-        "$ref": "#/371"
+        "$ref": "#/378"
       },
       {
         "$ref": "#/0"
@@ -5074,7 +5145,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/375"
+          "$ref": "#/382"
         },
         "flags": 1,
         "description": "Type of Datasource object, used to initialize the right inherited type"
@@ -5101,13 +5172,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/376"
+        "$ref": "#/383"
       },
       {
-        "$ref": "#/377"
+        "$ref": "#/384"
       },
       {
-        "$ref": "#/378"
+        "$ref": "#/385"
       },
       {
         "$ref": "#/0"
@@ -5120,7 +5191,7 @@
     "properties": {
       "rehydrationPriority": {
         "type": {
-          "$ref": "#/384"
+          "$ref": "#/391"
         },
         "flags": 1,
         "description": "Priority to be used for rehydration. Values High or Standard"
@@ -5140,7 +5211,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/385"
+          "$ref": "#/392"
         },
         "flags": 1
       }
@@ -5162,13 +5233,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/381"
+        "$ref": "#/388"
       },
       {
-        "$ref": "#/382"
+        "$ref": "#/389"
       },
       {
-        "$ref": "#/383"
+        "$ref": "#/390"
       },
       {
         "$ref": "#/0"
@@ -5192,7 +5263,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/387"
+          "$ref": "#/394"
         },
         "flags": 1
       }
@@ -5211,7 +5282,43 @@
       "$ref": "#/334"
     },
     "input": {
-      "$ref": "#/336"
+      "$ref": "#/343"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resumeBackups",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/341"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resumeProtection",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/341"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopProtection",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/341"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspendBackups",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/341"
     }
   },
   {
@@ -5220,7 +5327,7 @@
     "properties": {
       "syncType": {
         "type": {
-          "$ref": "#/392"
+          "$ref": "#/403"
         },
         "flags": 0,
         "description": "Field indicating sync type e.g. to sync only in case of failure or in all cases"
@@ -5239,10 +5346,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/390"
+        "$ref": "#/401"
       },
       {
-        "$ref": "#/391"
+        "$ref": "#/402"
       },
       {
         "$ref": "#/0"
@@ -5250,12 +5357,24 @@
     ]
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/341"
+    },
+    "input": {
+      "$ref": "#/400"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ValidateRestoreRequestObject",
     "properties": {
       "restoreRequestObject": {
         "type": {
-          "$ref": "#/336"
+          "$ref": "#/343"
         },
         "flags": 1,
         "description": "Gets or sets the restore request object."
@@ -5271,7 +5390,7 @@
       "$ref": "#/334"
     },
     "input": {
-      "$ref": "#/393"
+      "$ref": "#/405"
     }
   },
   {
@@ -5280,7 +5399,7 @@
     "properties": {
       "sourceDataStoreType": {
         "type": {
-          "$ref": "#/399"
+          "$ref": "#/411"
         },
         "flags": 1,
         "description": "Gets or sets the type of the source data store."
@@ -5317,13 +5436,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/396"
+        "$ref": "#/408"
       },
       {
-        "$ref": "#/397"
+        "$ref": "#/409"
       },
       {
-        "$ref": "#/398"
+        "$ref": "#/410"
       },
       {
         "$ref": "#/0"
@@ -5336,7 +5455,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/401"
+          "$ref": "#/413"
         },
         "flags": 0,
         "description": "AzureBackupFindRestorableTimeRangesResponseResource properties"
@@ -5377,7 +5496,7 @@
     "properties": {
       "restorableTimeRanges": {
         "type": {
-          "$ref": "#/403"
+          "$ref": "#/415"
         },
         "flags": 0,
         "description": "Returns the Restore Ranges available on the Backup Instance."
@@ -5419,7 +5538,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/402"
+      "$ref": "#/414"
     }
   },
   {
@@ -5428,10 +5547,10 @@
     "resourceType": "Microsoft.DataProtection/backupVaults/backupInstances",
     "apiVersion": "2022-11-01-preview",
     "output": {
-      "$ref": "#/400"
+      "$ref": "#/412"
     },
     "input": {
-      "$ref": "#/395"
+      "$ref": "#/407"
     }
   },
   {
@@ -5456,7 +5575,25 @@
       "$ref": "#/334"
     },
     "input": {
-      "$ref": "#/405"
+      "$ref": "#/417"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportBackupJobs",
+    "resourceType": "Microsoft.DataProtection/backupVaults",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/341"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "undelete",
+    "resourceType": "Microsoft.DataProtection/backupVaults/deletedBackupInstances",
+    "apiVersion": "2022-11-01-preview",
+    "output": {
+      "$ref": "#/341"
     }
   },
   {
@@ -5465,7 +5602,7 @@
     "properties": {
       "resourceGuardOperationRequests": {
         "type": {
-          "$ref": "#/408"
+          "$ref": "#/422"
         },
         "flags": 0
       },
@@ -5502,10 +5639,10 @@
     "resourceType": "Microsoft.DataProtection/backupVaults/backupResourceGuardProxies",
     "apiVersion": "2022-11-01-preview",
     "output": {
-      "$ref": "#/409"
+      "$ref": "#/423"
     },
     "input": {
-      "$ref": "#/407"
+      "$ref": "#/421"
     }
   }
 ]

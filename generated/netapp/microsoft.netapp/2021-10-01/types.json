@@ -3216,6 +3216,21 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revert",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/192"
+    },
+    "input": {
+      "$ref": "#/191"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "BreakReplicationRequest",
     "properties": {
@@ -3226,6 +3241,36 @@
         "flags": 0,
         "description": "If replication is in status transferring and you want to force break the replication, set to true"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "breakReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/192"
+    },
+    "input": {
+      "$ref": "#/194"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resyncReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/192"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/192"
     }
   },
   {
@@ -3242,6 +3287,27 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "authorizeReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/192"
+    },
+    "input": {
+      "$ref": "#/198"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reinitializeReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/192"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "PoolChangeRequest",
     "properties": {
@@ -3255,12 +3321,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "poolChange",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/192"
+    },
+    "input": {
+      "$ref": "#/201"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SnapshotRestoreFiles",
     "properties": {
       "filePaths": {
         "type": {
-          "$ref": "#/197"
+          "$ref": "#/205"
         },
         "flags": 1,
         "description": "List of files to be restored"
@@ -3282,10 +3360,22 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/196"
+      "$ref": "#/204"
     },
     "minLength": 1,
     "maxLength": 10
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreFiles",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/192"
+    },
+    "input": {
+      "$ref": "#/203"
+    }
   },
   {
     "$type": "ObjectType",
@@ -3314,7 +3404,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/199"
+          "$ref": "#/208"
         },
         "flags": 0,
         "description": "It represents the minimal properties of the subvolume."
@@ -3403,7 +3493,7 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes",
     "apiVersion": "2021-10-01",
     "output": {
-      "$ref": "#/198"
+      "$ref": "#/207"
     }
   }
 ]

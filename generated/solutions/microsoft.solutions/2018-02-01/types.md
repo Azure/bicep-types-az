@@ -31,6 +31,11 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function refreshPermissions (Microsoft.Solutions/applications@2018-02-01)
+* **Resource**: Microsoft.Solutions/applications
+* **ApiVersion**: 2018-02-01
+* **Output**: any
+
 ## ApplicationArtifact
 ### Properties
 * **name**: 'Authorizations' | 'CustomRoleDefinition' | 'NotSpecified' | 'ViewDefinition' | string (Required): The managed application artifact name.

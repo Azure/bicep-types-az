@@ -553,6 +553,17 @@
 * **Input**: [FeaturesetVersionBackfillRequest](#featuresetversionbackfillrequest)
 * **Output**: [FeaturesetVersionBackfillResponse](#featuresetversionbackfillresponse)
 
+## Function cancel (Microsoft.MachineLearningServices/workspaces/jobs@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/jobs
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: any
+
+## Function customServices (Microsoft.MachineLearningServices/workspaces/computes@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [CustomService](#customservice)[]
+* **Output**: any
+
 ## Function diagnose (Microsoft.MachineLearningServices/workspaces@2023-08-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2023-08-01-preview
@@ -674,6 +685,12 @@
 * **Input**: [ManagedNetworkProvisionOptions](#managednetworkprovisionoptions)
 * **Output**: [ManagedNetworkProvisionStatus](#managednetworkprovisionstatus)
 
+## Function regenerateKeys (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [RegenerateEndpointKeysRequest](#regenerateendpointkeysrequest)
+* **Output**: any
+
 ## Function regenerateKeys (Microsoft.MachineLearningServices/workspaces/serverlessEndpoints@2023-08-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/serverlessEndpoints
 * **ApiVersion**: 2023-08-01-preview
@@ -686,10 +703,31 @@
 * **Input**: [Registry](#registry)
 * **Output**: [Registry](#registry)
 
+## Function resize (Microsoft.MachineLearningServices/workspaces/computes@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [ResizeSchema](#resizeschema)
+* **Output**: any
+
+## Function restart (Microsoft.MachineLearningServices/workspaces/computes@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: any
+
 ## Function resume (Microsoft.MachineLearningServices/workspaces/labelingJobs@2023-08-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/labelingJobs
 * **ApiVersion**: 2023-08-01-preview
 * **Output**: [LabelingJobProperties](#labelingjobproperties)
+
+## Function resyncKeys (Microsoft.MachineLearningServices/workspaces@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: any
+
+## Function start (Microsoft.MachineLearningServices/workspaces/computes@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: any
 
 ## Function startPendingUpload (Microsoft.MachineLearningServices/registries/codes/versions@2023-08-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/registries/codes/versions
@@ -715,10 +753,27 @@
 * **Input**: [PendingUploadRequestDto](#pendinguploadrequestdto)
 * **Output**: [PendingUploadResponseDto](#pendinguploadresponsedto)
 
+## Function stop (Microsoft.MachineLearningServices/workspaces/computes@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: any
+
+## Function testconnection (Microsoft.MachineLearningServices/workspaces/connections@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/connections
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [WorkspaceConnectionPropertiesV2BasicResource](#workspaceconnectionpropertiesv2basicresource)
+* **Output**: any
+
 ## Function token (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2023-08-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
 * **ApiVersion**: 2023-08-01-preview
 * **Output**: [EndpointAuthToken](#endpointauthtoken)
+
+## Function updateIdleShutdownSetting (Microsoft.MachineLearningServices/workspaces/computes@2023-08-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2023-08-01-preview
+* **Input**: [IdleShutdownSetting](#idleshutdownsetting)
+* **Output**: any
 
 ## Function updateQuotas (Microsoft.MachineLearningServices/locations@2023-08-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/locations
@@ -2391,6 +2446,10 @@ If null, a default value will be set depending on the selected metric.
 ## IdentityForCmk
 ### Properties
 * **userAssignedIdentity**: string: UserAssignedIdentity to be used to fetch the encryption key from keyVault
+
+## IdleShutdownSetting
+### Properties
+* **idleTimeBeforeShutdown**: string: Time is defined in ISO8601 format. Minimum is 15 min, maximum is 3 days.
 
 ## Image
 ### Properties
@@ -4140,6 +4199,10 @@ Defaults to 5000ms.
 ## RequestLogging
 ### Properties
 * **captureHeaders**: string[]: For payload logging, we only collect payload by default. If customers also want to collect the specified headers, they can set them in captureHeaders so that backend will collect those headers along with payload.
+
+## ResizeSchema
+### Properties
+* **targetVMSize**: string: The name of the virtual machine size.
 
 ## ResourceBaseProperties
 ### Properties

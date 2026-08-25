@@ -4463,5 +4463,51 @@
     },
     "readableScopes": 31,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StopVirtualMachineOptions",
+    "properties": {
+      "skipShutdown": {
+        "type": {
+          "$ref": "#/240"
+        },
+        "flags": 0,
+        "description": "Gets or sets a value indicating whether to request non-graceful VM shutdown. True value for this flag indicates non-graceful shutdown whereas false indicates otherwise. Defaults to false."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ConnectedVMwarevSphere/virtualMachineInstances",
+    "apiVersion": "2023-10-01",
+    "output": {
+      "$ref": "#/311"
+    },
+    "input": {
+      "$ref": "#/310"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ConnectedVMwarevSphere/virtualMachineInstances",
+    "apiVersion": "2023-10-01",
+    "output": {
+      "$ref": "#/311"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ConnectedVMwarevSphere/virtualMachineInstances",
+    "apiVersion": "2023-10-01",
+    "output": {
+      "$ref": "#/311"
+    }
   }
 ]

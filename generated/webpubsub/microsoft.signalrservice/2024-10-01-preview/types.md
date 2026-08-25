@@ -113,6 +113,16 @@
 * **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
 * **Output**: [WebPubSubKeys](#webpubsubkeys)
 
+## Function restart (Microsoft.SignalRService/webPubSub@2024-10-01-preview)
+* **Resource**: Microsoft.SignalRService/webPubSub
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: any
+
+## Function restart (Microsoft.SignalRService/webPubSub/replicas@2024-10-01-preview)
+* **Resource**: Microsoft.SignalRService/webPubSub/replicas
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: any
+
 ## ApplicationFirewallSettings
 ### Properties
 * **clientConnectionCountRules**: [ClientConnectionCountRule](#clientconnectioncountrule)[] {maxLength: 10}: Rules to control the client connection count

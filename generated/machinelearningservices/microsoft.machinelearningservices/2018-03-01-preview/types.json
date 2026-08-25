@@ -1037,16 +1037,28 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resyncKeys",
+    "resourceType": "Microsoft.MachineLearningServices/workspaces",
+    "apiVersion": "2018-03-01-preview",
+    "output": {
+      "$ref": "#/66"
+    }
+  },
+  {
     "$type": "DiscriminatedObjectType",
     "name": "ComputeSecrets",
     "discriminator": "computeType",
     "baseProperties": {},
     "elements": {
       "AKS": {
-        "$ref": "#/67"
+        "$ref": "#/69"
       },
       "VirtualMachine": {
-        "$ref": "#/69"
+        "$ref": "#/71"
       }
     }
   },
@@ -1077,7 +1089,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/68"
+          "$ref": "#/70"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -1101,7 +1113,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/70"
+          "$ref": "#/72"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -1118,7 +1130,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2018-03-01-preview",
     "output": {
-      "$ref": "#/66"
+      "$ref": "#/68"
     }
   }
 ]

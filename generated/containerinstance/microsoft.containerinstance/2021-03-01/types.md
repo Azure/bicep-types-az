@@ -24,6 +24,21 @@
 * **Input**: [ContainerExecRequest](#containerexecrequest)
 * **Output**: [ContainerExecResponse](#containerexecresponse)
 
+## Function restart (Microsoft.ContainerInstance/containerGroups@2021-03-01)
+* **Resource**: Microsoft.ContainerInstance/containerGroups
+* **ApiVersion**: 2021-03-01
+* **Output**: any
+
+## Function start (Microsoft.ContainerInstance/containerGroups@2021-03-01)
+* **Resource**: Microsoft.ContainerInstance/containerGroups
+* **ApiVersion**: 2021-03-01
+* **Output**: any
+
+## Function stop (Microsoft.ContainerInstance/containerGroups@2021-03-01)
+* **Resource**: Microsoft.ContainerInstance/containerGroups
+* **ApiVersion**: 2021-03-01
+* **Output**: any
+
 ## AzureFileVolume
 ### Properties
 * **readOnly**: bool: The flag indicating whether the Azure File shared mounted as a volume is read-only.

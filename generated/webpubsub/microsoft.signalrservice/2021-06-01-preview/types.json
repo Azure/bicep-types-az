@@ -1663,5 +1663,64 @@
     "output": {
       "$ref": "#/135"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegenerateKeyParameters",
+    "properties": {
+      "keyType": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 0,
+        "description": "The keyType to regenerate. Must be either 'primary' or 'secondary'(case-insensitive)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKey",
+    "resourceType": "Microsoft.SignalRService/webPubSub",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/135"
+    },
+    "input": {
+      "$ref": "#/138"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.SignalRService/webPubSub",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/143"
+    }
   }
 ]

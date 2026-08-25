@@ -288,6 +288,12 @@
 * **Input**: [CheckSkuAvailabilityParameter](#checkskuavailabilityparameter)
 * **Output**: [SkuAvailabilityListResult](#skuavailabilitylistresult)
 
+## Function deleteRaiBlocklistItems (Microsoft.CognitiveServices/accounts/raiBlocklists@2025-07-01-preview)
+* **Resource**: Microsoft.CognitiveServices/accounts/raiBlocklists
+* **ApiVersion**: 2025-07-01-preview
+* **Input**: any
+* **Output**: any
+
 ## Function listKeys (Microsoft.CognitiveServices/accounts@2025-07-01-preview)
 * **Resource**: Microsoft.CognitiveServices/accounts
 * **ApiVersion**: 2025-07-01-preview

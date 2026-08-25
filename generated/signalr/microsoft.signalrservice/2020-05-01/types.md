@@ -35,6 +35,17 @@
 * **ApiVersion**: 2020-05-01
 * **Output**: [SignalRKeys](#signalrkeys)
 
+## Function regenerateKey (Microsoft.SignalRService/signalR@2020-05-01)
+* **Resource**: Microsoft.SignalRService/signalR
+* **ApiVersion**: 2020-05-01
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [SignalRKeys](#signalrkeys)
+
+## Function restart (Microsoft.SignalRService/signalR@2020-05-01)
+* **Resource**: Microsoft.SignalRService/signalR
+* **ApiVersion**: 2020-05-01
+* **Output**: any
+
 ## NameAvailability
 ### Properties
 * **message**: string: The message of the operation.
@@ -79,6 +90,10 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## RegenerateKeyParameters
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string: The keyType to regenerate. Must be either 'primary' or 'secondary'(case-insensitive).
 
 ## ResourceSku
 ### Properties

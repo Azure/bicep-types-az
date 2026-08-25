@@ -213,6 +213,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): User in DataBoxEdge Resource
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function downloadUpdates (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-09-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2020-09-01
+* **Output**: any
+
 ## Function generateCertificate (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-09-01)
 * **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
 * **ApiVersion**: 2020-09-01
@@ -223,10 +228,36 @@
 * **ApiVersion**: 2020-09-01
 * **Output**: [DataBoxEdgeDeviceExtendedInfo](#databoxedgedeviceextendedinfo)
 
+## Function installUpdates (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-09-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2020-09-01
+* **Output**: any
+
 ## Function listDCAccessCode (Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2020-09-01)
 * **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders
 * **ApiVersion**: 2020-09-01
 * **Output**: [DCAccessCode](#dcaccesscode)
+
+## Function refresh (Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares@2020-09-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares
+* **ApiVersion**: 2020-09-01
+* **Output**: any
+
+## Function refresh (Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers@2020-09-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers
+* **ApiVersion**: 2020-09-01
+* **Output**: any
+
+## Function scanForUpdates (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-09-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
+* **ApiVersion**: 2020-09-01
+* **Output**: any
+
+## Function update (Microsoft.DataBoxEdge/dataBoxEdgeDevices/securitySettings@2020-09-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices/securitySettings
+* **ApiVersion**: 2020-09-01
+* **Input**: [SecuritySettings](#securitysettings)
+* **Output**: any
 
 ## Function updateExtendedInformation (Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-09-01)
 * **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices
@@ -674,6 +705,17 @@ by the already existing properties
 ## RoleSinkInfo
 ### Properties
 * **roleId**: string (Required): Compute role ID.
+
+## SecuritySettings
+### Properties
+* **id**: string (ReadOnly): The path ID that uniquely identifies the object.
+* **name**: string (ReadOnly): The object name.
+* **properties**: [SecuritySettingsProperties](#securitysettingsproperties) (Required): Properties of the security settings.
+* **type**: string (ReadOnly): The hierarchical type of the object.
+
+## SecuritySettingsProperties
+### Properties
+* **deviceAdminPassword**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret) (Required): Device administrator password as an encrypted string (encrypted using RSA PKCS #1) is used to sign into the  local web UI of the device. The Actual password should have at least 8 characters that are a combination of  uppercase, lowercase, numeric, and special characters.
 
 ## ShareAccessRight
 ### Properties

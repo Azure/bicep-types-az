@@ -7667,12 +7667,33 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Network/applicationGateways",
+    "apiVersion": "2016-09-01",
+    "output": {
+      "$ref": "#/461"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Network/applicationGateways",
+    "apiVersion": "2016-09-01",
+    "output": {
+      "$ref": "#/461"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ApplicationGatewayBackendHealth",
     "properties": {
       "backendAddressPools": {
         "type": {
-          "$ref": "#/472"
+          "$ref": "#/475"
         },
         "flags": 0
       }
@@ -7691,7 +7712,7 @@
       },
       "backendHttpSettingsCollection": {
         "type": {
-          "$ref": "#/471"
+          "$ref": "#/474"
         },
         "flags": 0,
         "description": "List of ApplicationGatewayBackendHealthHttpSettings resources."
@@ -7711,7 +7732,7 @@
       },
       "servers": {
         "type": {
-          "$ref": "#/470"
+          "$ref": "#/473"
         },
         "flags": 0,
         "description": "List of ApplicationGatewayBackendHealthServer resources."
@@ -7738,7 +7759,7 @@
       },
       "health": {
         "type": {
-          "$ref": "#/469"
+          "$ref": "#/472"
         },
         "flags": 0,
         "description": "Health of backend server. Possible values are: 'Unknown', 'Up', 'Down', and 'Partial'."
@@ -7765,16 +7786,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/465"
-      },
-      {
-        "$ref": "#/466"
-      },
-      {
-        "$ref": "#/467"
-      },
-      {
         "$ref": "#/468"
+      },
+      {
+        "$ref": "#/469"
+      },
+      {
+        "$ref": "#/470"
+      },
+      {
+        "$ref": "#/471"
       },
       {
         "$ref": "#/0"
@@ -7784,19 +7805,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/464"
+      "$ref": "#/467"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/463"
+      "$ref": "#/466"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/462"
+      "$ref": "#/465"
     }
   },
   {
@@ -7805,7 +7826,7 @@
     "resourceType": "Microsoft.Network/applicationGateways",
     "apiVersion": "2016-09-01",
     "output": {
-      "$ref": "#/461"
+      "$ref": "#/464"
     }
   },
   {
@@ -7848,7 +7869,7 @@
       },
       "resources": {
         "type": {
-          "$ref": "#/482"
+          "$ref": "#/485"
         },
         "flags": 0
       }
@@ -7881,7 +7902,7 @@
       },
       "associations": {
         "type": {
-          "$ref": "#/481"
+          "$ref": "#/484"
         },
         "flags": 0,
         "description": "Holds the associations the resource has with other resources in the resource group."
@@ -7908,7 +7929,7 @@
       },
       "associationType": {
         "type": {
-          "$ref": "#/480"
+          "$ref": "#/483"
         },
         "flags": 0,
         "description": "The association type of the child resource to the parent resource."
@@ -7927,10 +7948,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/478"
+        "$ref": "#/481"
       },
       {
-        "$ref": "#/479"
+        "$ref": "#/482"
       },
       {
         "$ref": "#/0"
@@ -7940,13 +7961,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/477"
+      "$ref": "#/480"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/476"
+      "$ref": "#/479"
     }
   },
   {
@@ -7955,10 +7976,10 @@
     "resourceType": "Microsoft.Network/networkWatchers",
     "apiVersion": "2016-09-01",
     "output": {
-      "$ref": "#/475"
+      "$ref": "#/478"
     },
     "input": {
-      "$ref": "#/474"
+      "$ref": "#/477"
     }
   },
   {
@@ -7974,14 +7995,14 @@
       },
       "direction": {
         "type": {
-          "$ref": "#/487"
+          "$ref": "#/490"
         },
         "flags": 1,
         "description": "The direction of the packet represented as a 5-tuple."
       },
       "protocol": {
         "type": {
-          "$ref": "#/490"
+          "$ref": "#/493"
         },
         "flags": 1,
         "description": "Protocol to be verified on."
@@ -8035,10 +8056,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/485"
+        "$ref": "#/488"
       },
       {
-        "$ref": "#/486"
+        "$ref": "#/489"
       },
       {
         "$ref": "#/0"
@@ -8057,10 +8078,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/488"
+        "$ref": "#/491"
       },
       {
-        "$ref": "#/489"
+        "$ref": "#/492"
       },
       {
         "$ref": "#/0"
@@ -8073,7 +8094,7 @@
     "properties": {
       "access": {
         "type": {
-          "$ref": "#/494"
+          "$ref": "#/497"
         },
         "flags": 0,
         "description": "Indicates whether the traffic is allowed or denied."
@@ -8099,10 +8120,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/492"
+        "$ref": "#/495"
       },
       {
-        "$ref": "#/493"
+        "$ref": "#/496"
       },
       {
         "$ref": "#/0"
@@ -8115,10 +8136,10 @@
     "resourceType": "Microsoft.Network/networkWatchers",
     "apiVersion": "2016-09-01",
     "output": {
-      "$ref": "#/491"
+      "$ref": "#/494"
     },
     "input": {
-      "$ref": "#/484"
+      "$ref": "#/487"
     }
   },
   {
@@ -8161,7 +8182,7 @@
     "properties": {
       "nextHopType": {
         "type": {
-          "$ref": "#/504"
+          "$ref": "#/507"
         },
         "flags": 0,
         "description": "Next hop type."
@@ -8210,15 +8231,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/498"
-      },
-      {
-        "$ref": "#/499"
-      },
-      {
-        "$ref": "#/500"
-      },
-      {
         "$ref": "#/501"
       },
       {
@@ -8226,6 +8238,15 @@
       },
       {
         "$ref": "#/503"
+      },
+      {
+        "$ref": "#/504"
+      },
+      {
+        "$ref": "#/505"
+      },
+      {
+        "$ref": "#/506"
       },
       {
         "$ref": "#/0"
@@ -8238,10 +8259,10 @@
     "resourceType": "Microsoft.Network/networkWatchers",
     "apiVersion": "2016-09-01",
     "output": {
-      "$ref": "#/497"
+      "$ref": "#/500"
     },
     "input": {
-      "$ref": "#/496"
+      "$ref": "#/499"
     }
   },
   {
@@ -8263,7 +8284,7 @@
     "properties": {
       "networkInterfaces": {
         "type": {
-          "$ref": "#/516"
+          "$ref": "#/519"
         },
         "flags": 0,
         "description": "List of network interfaces on the specified VM."
@@ -8283,7 +8304,7 @@
       },
       "securityRuleAssociations": {
         "type": {
-          "$ref": "#/509"
+          "$ref": "#/512"
         },
         "flags": 0,
         "description": "All security rules associated with the network interface."
@@ -8296,28 +8317,28 @@
     "properties": {
       "networkInterfaceAssociation": {
         "type": {
-          "$ref": "#/510"
+          "$ref": "#/513"
         },
         "flags": 0,
         "description": "Network interface and its custom security rules."
       },
       "subnetAssociation": {
         "type": {
-          "$ref": "#/512"
+          "$ref": "#/515"
         },
         "flags": 0,
         "description": "Network interface and its custom security rules."
       },
       "defaultSecurityRules": {
         "type": {
-          "$ref": "#/514"
+          "$ref": "#/517"
         },
         "flags": 0,
         "description": "Collection of default security rules of the network security group."
       },
       "effectiveSecurityRules": {
         "type": {
-          "$ref": "#/515"
+          "$ref": "#/518"
         },
         "flags": 0,
         "description": "Collection of effective security rules."
@@ -8337,7 +8358,7 @@
       },
       "securityRules": {
         "type": {
-          "$ref": "#/511"
+          "$ref": "#/514"
         },
         "flags": 0,
         "description": "Collection of custom security rules."
@@ -8363,7 +8384,7 @@
       },
       "securityRules": {
         "type": {
-          "$ref": "#/513"
+          "$ref": "#/516"
         },
         "flags": 0,
         "description": "Collection of custom security rules."
@@ -8391,7 +8412,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/508"
+      "$ref": "#/511"
     }
   },
   {
@@ -8400,10 +8421,10 @@
     "resourceType": "Microsoft.Network/networkWatchers",
     "apiVersion": "2016-09-01",
     "output": {
-      "$ref": "#/507"
+      "$ref": "#/510"
     },
     "input": {
-      "$ref": "#/506"
+      "$ref": "#/509"
     }
   },
   {
@@ -8419,7 +8440,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/519"
+          "$ref": "#/522"
         },
         "flags": 1,
         "description": "Storage location provided for troubleshoot."
@@ -8473,7 +8494,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/524"
+          "$ref": "#/527"
         },
         "flags": 0,
         "description": "Information from troubleshooting."
@@ -8514,7 +8535,7 @@
       },
       "recommendedActions": {
         "type": {
-          "$ref": "#/523"
+          "$ref": "#/526"
         },
         "flags": 0,
         "description": "List of recommended actions."
@@ -8558,13 +8579,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/522"
+      "$ref": "#/525"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/521"
+      "$ref": "#/524"
     }
   },
   {
@@ -8573,10 +8594,10 @@
     "resourceType": "Microsoft.Network/networkWatchers",
     "apiVersion": "2016-09-01",
     "output": {
-      "$ref": "#/520"
+      "$ref": "#/523"
     },
     "input": {
-      "$ref": "#/518"
+      "$ref": "#/521"
     }
   },
   {
@@ -8598,10 +8619,10 @@
     "resourceType": "Microsoft.Network/networkWatchers",
     "apiVersion": "2016-09-01",
     "output": {
-      "$ref": "#/520"
+      "$ref": "#/523"
     },
     "input": {
-      "$ref": "#/526"
+      "$ref": "#/529"
     }
   },
   {
@@ -8617,7 +8638,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/529"
+          "$ref": "#/532"
         },
         "flags": 1,
         "description": "Parameters that define the configuration of flow log."
@@ -8644,7 +8665,7 @@
       },
       "retentionPolicy": {
         "type": {
-          "$ref": "#/530"
+          "$ref": "#/533"
         },
         "flags": 0,
         "description": "Parameters that define the retention policy for flow log."
@@ -8677,10 +8698,10 @@
     "resourceType": "Microsoft.Network/networkWatchers",
     "apiVersion": "2016-09-01",
     "output": {
-      "$ref": "#/528"
+      "$ref": "#/531"
     },
     "input": {
-      "$ref": "#/528"
+      "$ref": "#/531"
     }
   },
   {
@@ -8702,10 +8723,19 @@
     "resourceType": "Microsoft.Network/networkWatchers",
     "apiVersion": "2016-09-01",
     "output": {
-      "$ref": "#/528"
+      "$ref": "#/531"
     },
     "input": {
-      "$ref": "#/532"
+      "$ref": "#/535"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Network/networkWatchers/packetCaptures",
+    "apiVersion": "2016-09-01",
+    "output": {
+      "$ref": "#/461"
     }
   },
   {
@@ -8735,7 +8765,7 @@
       },
       "packetCaptureStatus": {
         "type": {
-          "$ref": "#/540"
+          "$ref": "#/544"
         },
         "flags": 0,
         "description": "The status of the packet capture session."
@@ -8749,7 +8779,7 @@
       },
       "packetCaptureError": {
         "type": {
-          "$ref": "#/547"
+          "$ref": "#/551"
         },
         "flags": 0,
         "description": "List of errors of packet capture session."
@@ -8780,19 +8810,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/535"
-      },
-      {
-        "$ref": "#/536"
-      },
-      {
-        "$ref": "#/537"
-      },
-      {
-        "$ref": "#/538"
-      },
-      {
         "$ref": "#/539"
+      },
+      {
+        "$ref": "#/540"
+      },
+      {
+        "$ref": "#/541"
+      },
+      {
+        "$ref": "#/542"
+      },
+      {
+        "$ref": "#/543"
       },
       {
         "$ref": "#/0"
@@ -8823,19 +8853,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/541"
-      },
-      {
-        "$ref": "#/542"
-      },
-      {
-        "$ref": "#/543"
-      },
-      {
-        "$ref": "#/544"
-      },
-      {
         "$ref": "#/545"
+      },
+      {
+        "$ref": "#/546"
+      },
+      {
+        "$ref": "#/547"
+      },
+      {
+        "$ref": "#/548"
+      },
+      {
+        "$ref": "#/549"
       },
       {
         "$ref": "#/0"
@@ -8845,7 +8875,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/546"
+      "$ref": "#/550"
     }
   },
   {
@@ -8854,7 +8884,7 @@
     "resourceType": "Microsoft.Network/networkWatchers/packetCaptures",
     "apiVersion": "2016-09-01",
     "output": {
-      "$ref": "#/534"
+      "$ref": "#/538"
     }
   },
   {
@@ -8868,11 +8898,58 @@
   },
   {
     "$type": "ObjectType",
+    "name": "VpnClientParameters",
+    "properties": {
+      "ProcessorArchitecture": {
+        "type": {
+          "$ref": "#/557"
+        },
+        "flags": 1,
+        "description": "VPN client Processor Architecture. Possible values are: 'AMD64' and 'X86'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Amd64"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "X86"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/555"
+      },
+      {
+        "$ref": "#/556"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generatevpnclientpackage",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2016-09-01",
+    "output": {
+      "$ref": "#/0"
+    },
+    "input": {
+      "$ref": "#/554"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "BgpPeerStatusListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/558"
+          "$ref": "#/567"
         },
         "flags": 0,
         "description": "List of BGP peers"
@@ -8906,7 +8983,7 @@
       },
       "state": {
         "type": {
-          "$ref": "#/557"
+          "$ref": "#/566"
         },
         "flags": 2,
         "description": "The BGP peer state"
@@ -8965,19 +9042,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/552"
+        "$ref": "#/561"
       },
       {
-        "$ref": "#/553"
+        "$ref": "#/562"
       },
       {
-        "$ref": "#/554"
+        "$ref": "#/563"
       },
       {
-        "$ref": "#/555"
+        "$ref": "#/564"
       },
       {
-        "$ref": "#/556"
+        "$ref": "#/565"
       },
       {
         "$ref": "#/0"
@@ -8987,7 +9064,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/551"
+      "$ref": "#/560"
     }
   },
   {
@@ -8996,7 +9073,7 @@
     "resourceType": "Microsoft.Network/virtualNetworkGateways",
     "apiVersion": "2016-09-01",
     "output": {
-      "$ref": "#/550"
+      "$ref": "#/559"
     }
   },
   {
@@ -9005,7 +9082,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/562"
+          "$ref": "#/571"
         },
         "flags": 0,
         "description": "List of gateway routes"
@@ -9070,7 +9147,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/561"
+      "$ref": "#/570"
     }
   },
   {
@@ -9079,7 +9156,7 @@
     "resourceType": "Microsoft.Network/virtualNetworkGateways",
     "apiVersion": "2016-09-01",
     "output": {
-      "$ref": "#/560"
+      "$ref": "#/569"
     }
   }
 ]

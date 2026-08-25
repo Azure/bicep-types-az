@@ -69,6 +69,11 @@
 * **Input**: [ImmutabilityPolicy](#immutabilitypolicy)
 * **Output**: [ImmutabilityPolicy](#immutabilitypolicy)
 
+## Function failover (Microsoft.Storage/storageAccounts@2018-11-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-11-01
+* **Output**: any
+
 ## Function lease (Microsoft.Storage/storageAccounts/blobServices/containers@2018-11-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2018-11-01
@@ -102,6 +107,11 @@
 * **ApiVersion**: 2018-11-01
 * **Input**: [StorageAccountRegenerateKeyParameters](#storageaccountregeneratekeyparameters)
 * **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
+
+## Function revokeUserDelegationKeys (Microsoft.Storage/storageAccounts@2018-11-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-11-01
+* **Output**: any
 
 ## Function setLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2018-11-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers

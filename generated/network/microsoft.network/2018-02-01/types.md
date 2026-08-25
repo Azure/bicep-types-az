@@ -558,6 +558,31 @@
 * **Input**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
 * **Output**: [VpnClientIPsecParameters](#vpnclientipsecparameters)
 
+## Function start (Microsoft.Network/applicationGateways@2018-02-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2018-02-01
+* **Output**: any
+
+## Function start (Microsoft.Network/networkWatchers/connectionMonitors@2018-02-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2018-02-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/applicationGateways@2018-02-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2018-02-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/packetCaptures@2018-02-01)
+* **Resource**: Microsoft.Network/networkWatchers/packetCaptures
+* **ApiVersion**: 2018-02-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/connectionMonitors@2018-02-01)
+* **Resource**: Microsoft.Network/networkWatchers/connectionMonitors
+* **ApiVersion**: 2018-02-01
+* **Output**: any
+
 ## Function supportedvpndevices (Microsoft.Network/virtualNetworkGateways@2018-02-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
 * **ApiVersion**: 2018-02-01

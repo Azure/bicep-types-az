@@ -3048,5 +3048,207 @@
         "description": "Lustre file system path to archive relative to the file system root.  Specify '/' to archive all modified data."
       }
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "archive",
+    "resourceType": "Microsoft.StorageCache/amlFilesystems",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    },
+    "input": {
+      "$ref": "#/230"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelArchive",
+    "resourceType": "Microsoft.StorageCache/amlFilesystems",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "debugInfo",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "flush",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startPrimingJob",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    },
+    "input": {
+      "$ref": "#/187"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrimingJobIdParameter",
+    "properties": {
+      "primingJobId": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 1,
+        "description": "The unique identifier of the priming job."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopPrimingJob",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    },
+    "input": {
+      "$ref": "#/239"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "pausePrimingJob",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    },
+    "input": {
+      "$ref": "#/239"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resumePrimingJob",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    },
+    "input": {
+      "$ref": "#/239"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/195"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "spaceAllocation",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    },
+    "input": {
+      "$ref": "#/244"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dnsRefresh",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreDefaults",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "flush",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "invalidate",
+    "resourceType": "Microsoft.StorageCache/caches/storageTargets",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/231"
+    }
   }
 ]

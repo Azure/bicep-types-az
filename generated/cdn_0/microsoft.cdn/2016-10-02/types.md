@@ -59,6 +59,16 @@
 * **ApiVersion**: 2016-10-02
 * **Output**: [ResourceUsageListResult](#resourceusagelistresult)
 
+## Function disableCustomHttps (Microsoft.Cdn/profiles/endpoints/customDomains@2016-10-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints/customDomains
+* **ApiVersion**: 2016-10-02
+* **Output**: [CustomDomain](#customdomain)
+
+## Function enableCustomHttps (Microsoft.Cdn/profiles/endpoints/customDomains@2016-10-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints/customDomains
+* **ApiVersion**: 2016-10-02
+* **Output**: [CustomDomain](#customdomain)
+
 ## Function generateSsoUri (Microsoft.Cdn/profiles@2016-10-02)
 * **Resource**: Microsoft.Cdn/profiles
 * **ApiVersion**: 2016-10-02
@@ -69,11 +79,50 @@
 * **ApiVersion**: 2016-10-02
 * **Output**: [SupportedOptimizationTypesResult](#supportedoptimizationtypesresult)
 
+## Function load (Microsoft.Cdn/profiles/endpoints@2016-10-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2016-10-02
+* **Input**: [LoadParameters](#loadparameters)
+* **Output**: any
+
+## Function purge (Microsoft.Cdn/profiles/endpoints@2016-10-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2016-10-02
+* **Input**: [PurgeParameters](#purgeparameters)
+* **Output**: any
+
+## Function start (Microsoft.Cdn/profiles/endpoints@2016-10-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2016-10-02
+* **Output**: [Endpoint](#endpoint)
+
+## Function stop (Microsoft.Cdn/profiles/endpoints@2016-10-02)
+* **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2016-10-02
+* **Output**: [Endpoint](#endpoint)
+
 ## Function validateCustomDomain (Microsoft.Cdn/profiles/endpoints@2016-10-02)
 * **Resource**: Microsoft.Cdn/profiles/endpoints
 * **ApiVersion**: 2016-10-02
 * **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
 * **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
+## CustomDomain
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **location**: string (Required): Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [CustomDomainProperties](#customdomainproperties): The JSON object that contains the properties of the custom domain to create.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
+## CustomDomainProperties
+### Properties
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (ReadOnly): Provisioning state of Custom Https of the custom domain.
+* **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
+* **provisioningState**: string (ReadOnly): Provisioning status of the custom domain.
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the custom domain.
+* **validationData**: string: Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
 
 ## CustomDomainPropertiesParametersOrCustomDomainProperties
 ### Properties
@@ -93,6 +142,15 @@
 * **hostName**: string (Required): The address of the origin. It can be a domain names, IPv4 address, or IPv6 address.
 * **httpPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTP port. Must be between 1 and 65535
 * **httpsPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTPS port. Must be between 1 and 65535
+
+## Endpoint
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+* **location**: string (Required): Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [EndpointProperties](#endpointproperties): The JSON object that contains the properties required to create an endpoint.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
 
 ## EndpointProperties
 ### Properties
@@ -116,6 +174,10 @@
 * **countryCodes**: string[] (Required): Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
 * **relativePath**: string (Required): Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
 
+## LoadParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be loaded. Path should be a relative file URL of the origin.
+
 ## OriginProperties
 ### Properties
 * **hostName**: string (Required): The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.
@@ -128,6 +190,20 @@
 ### Properties
 * **provisioningState**: string (ReadOnly): Provisioning status of the profile.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | string (ReadOnly): Resource status of the profile.
+
+## PurgeParameters
+### Properties
+* **contentPaths**: string[] (Required): The path to the content to be purged. Can describe a file path or a wild card directory.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

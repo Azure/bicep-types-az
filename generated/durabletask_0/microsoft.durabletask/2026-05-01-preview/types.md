@@ -69,6 +69,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DurableTask/schedulers/transparentDataEncryptions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.DurableTask/schedulers@2026-05-01-preview)
+* **Resource**: Microsoft.DurableTask/schedulers
+* **ApiVersion**: 2026-05-01-preview
+* **Output**: any
+
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.

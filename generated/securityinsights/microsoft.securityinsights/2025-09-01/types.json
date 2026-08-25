@@ -13100,11 +13100,50 @@
   },
   {
     "$type": "ObjectType",
+    "name": "EntityManualTriggerRequestBody",
+    "properties": {
+      "incidentArmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Incident ARM id."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/334"
+        },
+        "flags": 0,
+        "description": "The tenant id of the playbook resource."
+      },
+      "logicAppsResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource id of the playbook resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runPlaybook",
+    "resourceType": "Microsoft.SecurityInsights/entities",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/1013"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "IncidentAlertList",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/1097"
+          "$ref": "#/1099"
         },
         "flags": 1,
         "description": "Array of incident alerts."
@@ -13117,14 +13156,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1015"
+          "$ref": "#/1017"
         },
         "flags": 0,
         "description": "SecurityAlert entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1096"
+          "$ref": "#/1098"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -13186,14 +13225,14 @@
       },
       "confidenceLevel": {
         "type": {
-          "$ref": "#/1019"
+          "$ref": "#/1021"
         },
         "flags": 2,
         "description": "The confidence level of this alert."
       },
       "confidenceReasons": {
         "type": {
-          "$ref": "#/1021"
+          "$ref": "#/1023"
         },
         "flags": 2,
         "description": "The confidence reasons"
@@ -13207,7 +13246,7 @@
       },
       "confidenceScoreStatus": {
         "type": {
-          "$ref": "#/1026"
+          "$ref": "#/1028"
         },
         "flags": 2,
         "description": "The confidence score calculation status, i.e. indicating if score calculation is pending for this alert, not applicable or final."
@@ -13228,7 +13267,7 @@
       },
       "intent": {
         "type": {
-          "$ref": "#/1041"
+          "$ref": "#/1043"
         },
         "flags": 2,
         "description": "Holds the alert intent stage(s) mapping for this alert."
@@ -13270,14 +13309,14 @@
       },
       "remediationSteps": {
         "type": {
-          "$ref": "#/1042"
+          "$ref": "#/1044"
         },
         "flags": 2,
         "description": "Manual action items to take to remediate the alert."
       },
       "severity": {
         "type": {
-          "$ref": "#/1047"
+          "$ref": "#/1049"
         },
         "flags": 0,
         "description": "The severity of the alert"
@@ -13291,7 +13330,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/1053"
+          "$ref": "#/1055"
         },
         "flags": 2,
         "description": "The lifecycle status of the alert."
@@ -13305,7 +13344,7 @@
       },
       "tactics": {
         "type": {
-          "$ref": "#/1072"
+          "$ref": "#/1074"
         },
         "flags": 2,
         "description": "The tactics of the alert"
@@ -13333,14 +13372,14 @@
       },
       "resourceIdentifiers": {
         "type": {
-          "$ref": "#/1073"
+          "$ref": "#/1075"
         },
         "flags": 2,
         "description": "The list of resource identifiers of the alert."
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1074"
+          "$ref": "#/1076"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -13370,13 +13409,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1016"
-      },
-      {
-        "$ref": "#/1017"
-      },
-      {
         "$ref": "#/1018"
+      },
+      {
+        "$ref": "#/1019"
+      },
+      {
+        "$ref": "#/1020"
       },
       {
         "$ref": "#/0"
@@ -13406,7 +13445,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1020"
+      "$ref": "#/1022"
     }
   },
   {
@@ -13429,16 +13468,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1022"
-      },
-      {
-        "$ref": "#/1023"
-      },
-      {
         "$ref": "#/1024"
       },
       {
         "$ref": "#/1025"
+      },
+      {
+        "$ref": "#/1026"
+      },
+      {
+        "$ref": "#/1027"
       },
       {
         "$ref": "#/0"
@@ -13505,12 +13544,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1027"
-      },
-      {
-        "$ref": "#/1028"
-      },
-      {
         "$ref": "#/1029"
       },
       {
@@ -13547,6 +13580,12 @@
         "$ref": "#/1040"
       },
       {
+        "$ref": "#/1041"
+      },
+      {
+        "$ref": "#/1042"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -13577,16 +13616,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1043"
-      },
-      {
-        "$ref": "#/1044"
-      },
-      {
         "$ref": "#/1045"
       },
       {
         "$ref": "#/1046"
+      },
+      {
+        "$ref": "#/1047"
+      },
+      {
+        "$ref": "#/1048"
       },
       {
         "$ref": "#/0"
@@ -13617,12 +13656,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1048"
-      },
-      {
-        "$ref": "#/1049"
-      },
-      {
         "$ref": "#/1050"
       },
       {
@@ -13630,6 +13663,12 @@
       },
       {
         "$ref": "#/1052"
+      },
+      {
+        "$ref": "#/1053"
+      },
+      {
+        "$ref": "#/1054"
       },
       {
         "$ref": "#/0"
@@ -13708,12 +13747,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1054"
-      },
-      {
-        "$ref": "#/1055"
-      },
-      {
         "$ref": "#/1056"
       },
       {
@@ -13759,6 +13792,12 @@
         "$ref": "#/1070"
       },
       {
+        "$ref": "#/1071"
+      },
+      {
+        "$ref": "#/1072"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -13766,7 +13805,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1071"
+      "$ref": "#/1073"
     }
   },
   {
@@ -13871,12 +13910,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1075"
-      },
-      {
-        "$ref": "#/1076"
-      },
-      {
         "$ref": "#/1077"
       },
       {
@@ -13934,6 +13967,12 @@
         "$ref": "#/1095"
       },
       {
+        "$ref": "#/1096"
+      },
+      {
+        "$ref": "#/1097"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -13941,7 +13980,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1014"
+      "$ref": "#/1016"
     }
   },
   {
@@ -13950,7 +13989,7 @@
     "resourceType": "Microsoft.SecurityInsights/incidents",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/1013"
+      "$ref": "#/1015"
     }
   },
   {
@@ -13959,7 +13998,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/1126"
+          "$ref": "#/1128"
         },
         "flags": 1,
         "description": "Array of incident bookmarks."
@@ -13972,14 +14011,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1101"
+          "$ref": "#/1103"
         },
         "flags": 0,
         "description": "HuntingBookmark entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1125"
+          "$ref": "#/1127"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -14048,7 +14087,7 @@
       },
       "labels": {
         "type": {
-          "$ref": "#/1102"
+          "$ref": "#/1104"
         },
         "flags": 0,
         "description": "List of labels relevant to this bookmark"
@@ -14097,7 +14136,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1103"
+          "$ref": "#/1105"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -14213,12 +14252,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1104"
-      },
-      {
-        "$ref": "#/1105"
-      },
-      {
         "$ref": "#/1106"
       },
       {
@@ -14276,6 +14309,12 @@
         "$ref": "#/1124"
       },
       {
+        "$ref": "#/1125"
+      },
+      {
+        "$ref": "#/1126"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -14283,7 +14322,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1100"
+      "$ref": "#/1102"
     }
   },
   {
@@ -14292,7 +14331,7 @@
     "resourceType": "Microsoft.SecurityInsights/incidents",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/1099"
+      "$ref": "#/1101"
     }
   },
   {
@@ -14301,14 +14340,14 @@
     "properties": {
       "entities": {
         "type": {
-          "$ref": "#/1282"
+          "$ref": "#/1284"
         },
         "flags": 0,
         "description": "Array of the incident related entities."
       },
       "metaData": {
         "type": {
-          "$ref": "#/1306"
+          "$ref": "#/1308"
         },
         "flags": 0,
         "description": "The metadata from the incident related entities results."
@@ -14351,67 +14390,67 @@
     },
     "elements": {
       "Account": {
-        "$ref": "#/1130"
+        "$ref": "#/1132"
       },
       "AzureResource": {
-        "$ref": "#/1134"
+        "$ref": "#/1136"
       },
       "Bookmark": {
-        "$ref": "#/1138"
-      },
-      "CloudApplication": {
         "$ref": "#/1140"
       },
+      "CloudApplication": {
+        "$ref": "#/1142"
+      },
       "DnsResolution": {
-        "$ref": "#/1144"
+        "$ref": "#/1146"
       },
       "File": {
-        "$ref": "#/1149"
+        "$ref": "#/1151"
       },
       "FileHash": {
-        "$ref": "#/1154"
+        "$ref": "#/1156"
       },
       "Host": {
-        "$ref": "#/1164"
+        "$ref": "#/1166"
       },
       "IoTDevice": {
-        "$ref": "#/1174"
+        "$ref": "#/1176"
       },
       "Ip": {
-        "$ref": "#/1181"
+        "$ref": "#/1183"
       },
       "MailCluster": {
-        "$ref": "#/1187"
+        "$ref": "#/1189"
       },
       "MailMessage": {
-        "$ref": "#/1193"
+        "$ref": "#/1195"
       },
       "Mailbox": {
-        "$ref": "#/1222"
+        "$ref": "#/1224"
       },
       "Malware": {
-        "$ref": "#/1226"
+        "$ref": "#/1228"
       },
       "Process": {
-        "$ref": "#/1232"
+        "$ref": "#/1234"
       },
       "RegistryKey": {
-        "$ref": "#/1240"
+        "$ref": "#/1242"
       },
       "RegistryValue": {
-        "$ref": "#/1255"
+        "$ref": "#/1257"
       },
       "SecurityAlert": {
-        "$ref": "#/1268"
-      },
-      "SecurityGroup": {
         "$ref": "#/1270"
       },
+      "SecurityGroup": {
+        "$ref": "#/1272"
+      },
       "SubmissionMail": {
-        "$ref": "#/1274"
+        "$ref": "#/1276"
       },
       "Url": {
-        "$ref": "#/1278"
+        "$ref": "#/1280"
       }
     }
   },
@@ -14421,14 +14460,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1131"
+          "$ref": "#/1133"
         },
         "flags": 0,
         "description": "Account entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1133"
+          "$ref": "#/1135"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -14525,7 +14564,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1132"
+          "$ref": "#/1134"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -14557,14 +14596,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1135"
+          "$ref": "#/1137"
         },
         "flags": 0,
         "description": "AzureResource entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1137"
+          "$ref": "#/1139"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -14591,7 +14630,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1136"
+          "$ref": "#/1138"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -14623,14 +14662,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1101"
+          "$ref": "#/1103"
         },
         "flags": 0,
         "description": "HuntingBookmark entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1139"
+          "$ref": "#/1141"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -14647,14 +14686,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1141"
+          "$ref": "#/1143"
         },
         "flags": 0,
         "description": "CloudApplication entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1143"
+          "$ref": "#/1145"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -14688,7 +14727,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1142"
+          "$ref": "#/1144"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -14720,14 +14759,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1145"
+          "$ref": "#/1147"
         },
         "flags": 0,
         "description": "Dns entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1148"
+          "$ref": "#/1150"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -14761,14 +14800,14 @@
       },
       "ipAddressEntityIds": {
         "type": {
-          "$ref": "#/1146"
+          "$ref": "#/1148"
         },
         "flags": 2,
         "description": "Ip entity identifiers for the resolved ip address."
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1147"
+          "$ref": "#/1149"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -14806,14 +14845,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1150"
+          "$ref": "#/1152"
         },
         "flags": 0,
         "description": "File entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1153"
+          "$ref": "#/1155"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -14833,7 +14872,7 @@
       },
       "fileHashEntityIds": {
         "type": {
-          "$ref": "#/1151"
+          "$ref": "#/1153"
         },
         "flags": 2,
         "description": "The file hash entity identifiers associated with this file"
@@ -14854,7 +14893,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1152"
+          "$ref": "#/1154"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -14892,14 +14931,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1155"
+          "$ref": "#/1157"
         },
         "flags": 0,
         "description": "FileHash entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1163"
+          "$ref": "#/1165"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -14912,7 +14951,7 @@
     "properties": {
       "algorithm": {
         "type": {
-          "$ref": "#/1161"
+          "$ref": "#/1163"
         },
         "flags": 2,
         "description": "The hash algorithm type."
@@ -14926,7 +14965,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1162"
+          "$ref": "#/1164"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -14964,12 +15003,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1156"
-      },
-      {
-        "$ref": "#/1157"
-      },
-      {
         "$ref": "#/1158"
       },
       {
@@ -14977,6 +15010,12 @@
       },
       {
         "$ref": "#/1160"
+      },
+      {
+        "$ref": "#/1161"
+      },
+      {
+        "$ref": "#/1162"
       },
       {
         "$ref": "#/0"
@@ -15001,14 +15040,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1165"
+          "$ref": "#/1167"
         },
         "flags": 0,
         "description": "Host entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1173"
+          "$ref": "#/1175"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -15070,7 +15109,7 @@
       },
       "osFamily": {
         "type": {
-          "$ref": "#/1171"
+          "$ref": "#/1173"
         },
         "flags": 0,
         "description": "The operating system type."
@@ -15084,7 +15123,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1172"
+          "$ref": "#/1174"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -15122,12 +15161,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1166"
-      },
-      {
-        "$ref": "#/1167"
-      },
-      {
         "$ref": "#/1168"
       },
       {
@@ -15135,6 +15168,12 @@
       },
       {
         "$ref": "#/1170"
+      },
+      {
+        "$ref": "#/1171"
+      },
+      {
+        "$ref": "#/1172"
       }
     ]
   },
@@ -15156,14 +15195,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1175"
+          "$ref": "#/1177"
         },
         "flags": 0,
         "description": "IoTDevice entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1180"
+          "$ref": "#/1182"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -15281,21 +15320,21 @@
       },
       "threatIntelligence": {
         "type": {
-          "$ref": "#/1177"
+          "$ref": "#/1179"
         },
         "flags": 2,
         "description": "A list of TI contexts attached to the IoTDevice entity."
       },
       "protocols": {
         "type": {
-          "$ref": "#/1178"
+          "$ref": "#/1180"
         },
         "flags": 2,
         "description": "A list of protocols of the IoTDevice entity."
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1179"
+          "$ref": "#/1181"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -15360,7 +15399,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1176"
+      "$ref": "#/1178"
     }
   },
   {
@@ -15387,14 +15426,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1182"
+          "$ref": "#/1184"
         },
         "flags": 0,
         "description": "Ip entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1186"
+          "$ref": "#/1188"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -15414,21 +15453,21 @@
       },
       "location": {
         "type": {
-          "$ref": "#/1183"
+          "$ref": "#/1185"
         },
         "flags": 2,
         "description": "The geo-location context attached to the ip entity"
       },
       "threatIntelligence": {
         "type": {
-          "$ref": "#/1184"
+          "$ref": "#/1186"
         },
         "flags": 2,
         "description": "A list of TI contexts attached to the ip entity."
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1185"
+          "$ref": "#/1187"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -15500,7 +15539,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1176"
+      "$ref": "#/1178"
     }
   },
   {
@@ -15521,14 +15560,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1188"
+          "$ref": "#/1190"
         },
         "flags": 0,
         "description": "Mail cluster entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1192"
+          "$ref": "#/1194"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -15541,7 +15580,7 @@
     "properties": {
       "networkMessageIds": {
         "type": {
-          "$ref": "#/1189"
+          "$ref": "#/1191"
         },
         "flags": 2,
         "description": "The mail message IDs that are part of the mail cluster"
@@ -15569,7 +15608,7 @@
       },
       "threats": {
         "type": {
-          "$ref": "#/1190"
+          "$ref": "#/1192"
         },
         "flags": 2,
         "description": "The threats of mail messages that are part of the mail cluster"
@@ -15646,7 +15685,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1191"
+          "$ref": "#/1193"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -15690,14 +15729,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1194"
+          "$ref": "#/1196"
         },
         "flags": 0,
         "description": "Mail message entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1221"
+          "$ref": "#/1223"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -15710,7 +15749,7 @@
     "properties": {
       "fileEntityIds": {
         "type": {
-          "$ref": "#/1195"
+          "$ref": "#/1197"
         },
         "flags": 2,
         "description": "The File entity ids of this mail message's attachments"
@@ -15724,14 +15763,14 @@
       },
       "urls": {
         "type": {
-          "$ref": "#/1196"
+          "$ref": "#/1198"
         },
         "flags": 2,
         "description": "The Urls contained in this mail message"
       },
       "threats": {
         "type": {
-          "$ref": "#/1197"
+          "$ref": "#/1199"
         },
         "flags": 2,
         "description": "The threats of this mail message"
@@ -15822,7 +15861,7 @@
       },
       "threatDetectionMethods": {
         "type": {
-          "$ref": "#/1198"
+          "$ref": "#/1200"
         },
         "flags": 2,
         "description": "The threat detection methods"
@@ -15864,28 +15903,28 @@
       },
       "antispamDirection": {
         "type": {
-          "$ref": "#/1203"
+          "$ref": "#/1205"
         },
         "flags": 0,
         "description": "The directionality of this mail message"
       },
       "deliveryAction": {
         "type": {
-          "$ref": "#/1209"
+          "$ref": "#/1211"
         },
         "flags": 0,
         "description": "The delivery action of this mail message like Delivered, Blocked, Replaced etc"
       },
       "deliveryLocation": {
         "type": {
-          "$ref": "#/1219"
+          "$ref": "#/1221"
         },
         "flags": 0,
         "description": "The delivery location of this mail message like Inbox, JunkFolder etc"
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1220"
+          "$ref": "#/1222"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -15943,16 +15982,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1199"
-      },
-      {
-        "$ref": "#/1200"
-      },
-      {
         "$ref": "#/1201"
       },
       {
         "$ref": "#/1202"
+      },
+      {
+        "$ref": "#/1203"
+      },
+      {
+        "$ref": "#/1204"
       },
       {
         "$ref": "#/0"
@@ -15983,12 +16022,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1204"
-      },
-      {
-        "$ref": "#/1205"
-      },
-      {
         "$ref": "#/1206"
       },
       {
@@ -15996,6 +16029,12 @@
       },
       {
         "$ref": "#/1208"
+      },
+      {
+        "$ref": "#/1209"
+      },
+      {
+        "$ref": "#/1210"
       }
     ]
   },
@@ -16039,12 +16078,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1210"
-      },
-      {
-        "$ref": "#/1211"
-      },
-      {
         "$ref": "#/1212"
       },
       {
@@ -16064,6 +16097,12 @@
       },
       {
         "$ref": "#/1218"
+      },
+      {
+        "$ref": "#/1219"
+      },
+      {
+        "$ref": "#/1220"
       }
     ]
   },
@@ -16085,14 +16124,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1223"
+          "$ref": "#/1225"
         },
         "flags": 0,
         "description": "Mailbox entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1225"
+          "$ref": "#/1227"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -16133,7 +16172,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1224"
+          "$ref": "#/1226"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -16165,14 +16204,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1227"
+          "$ref": "#/1229"
         },
         "flags": 0,
         "description": "File entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1231"
+          "$ref": "#/1233"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -16192,7 +16231,7 @@
       },
       "fileEntityIds": {
         "type": {
-          "$ref": "#/1228"
+          "$ref": "#/1230"
         },
         "flags": 2,
         "description": "List of linked file entity identifiers on which the malware was found"
@@ -16206,14 +16245,14 @@
       },
       "processEntityIds": {
         "type": {
-          "$ref": "#/1229"
+          "$ref": "#/1231"
         },
         "flags": 2,
         "description": "List of linked process entity identifiers on which the malware was found."
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1230"
+          "$ref": "#/1232"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -16257,14 +16296,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1233"
+          "$ref": "#/1235"
         },
         "flags": 0,
         "description": "Process entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1239"
+          "$ref": "#/1241"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -16298,7 +16337,7 @@
       },
       "elevationToken": {
         "type": {
-          "$ref": "#/1237"
+          "$ref": "#/1239"
         },
         "flags": 0,
         "description": "The elevation token associated with the process."
@@ -16340,7 +16379,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1238"
+          "$ref": "#/1240"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -16370,13 +16409,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1234"
-      },
-      {
-        "$ref": "#/1235"
-      },
-      {
         "$ref": "#/1236"
+      },
+      {
+        "$ref": "#/1237"
+      },
+      {
+        "$ref": "#/1238"
       }
     ]
   },
@@ -16398,14 +16437,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1241"
+          "$ref": "#/1243"
         },
         "flags": 0,
         "description": "RegistryKey entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1254"
+          "$ref": "#/1256"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -16418,7 +16457,7 @@
     "properties": {
       "hive": {
         "type": {
-          "$ref": "#/1252"
+          "$ref": "#/1254"
         },
         "flags": 2,
         "description": "the hive that holds the registry key."
@@ -16432,7 +16471,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1253"
+          "$ref": "#/1255"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -16490,12 +16529,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1242"
-      },
-      {
-        "$ref": "#/1243"
-      },
-      {
         "$ref": "#/1244"
       },
       {
@@ -16520,6 +16553,12 @@
         "$ref": "#/1251"
       },
       {
+        "$ref": "#/1252"
+      },
+      {
+        "$ref": "#/1253"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -16542,14 +16581,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1256"
+          "$ref": "#/1258"
         },
         "flags": 0,
         "description": "RegistryKey entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1267"
+          "$ref": "#/1269"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -16583,14 +16622,14 @@
       },
       "valueType": {
         "type": {
-          "$ref": "#/1265"
+          "$ref": "#/1267"
         },
         "flags": 2,
         "description": "Specifies the data types to use when storing values in the registry, or identifies the data type of a value in the registry."
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1266"
+          "$ref": "#/1268"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -16640,12 +16679,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1257"
-      },
-      {
-        "$ref": "#/1258"
-      },
-      {
         "$ref": "#/1259"
       },
       {
@@ -16662,6 +16695,12 @@
       },
       {
         "$ref": "#/1264"
+      },
+      {
+        "$ref": "#/1265"
+      },
+      {
+        "$ref": "#/1266"
       },
       {
         "$ref": "#/0"
@@ -16686,14 +16725,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1015"
+          "$ref": "#/1017"
         },
         "flags": 0,
         "description": "SecurityAlert entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1269"
+          "$ref": "#/1271"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -16710,14 +16749,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1271"
+          "$ref": "#/1273"
         },
         "flags": 0,
         "description": "SecurityGroup entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1273"
+          "$ref": "#/1275"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -16751,7 +16790,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1272"
+          "$ref": "#/1274"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -16783,14 +16822,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1275"
+          "$ref": "#/1277"
         },
         "flags": 0,
         "description": "Submission mail entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1277"
+          "$ref": "#/1279"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -16873,7 +16912,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1276"
+          "$ref": "#/1278"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -16905,14 +16944,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1279"
+          "$ref": "#/1281"
         },
         "flags": 0,
         "description": "Url entity properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/1281"
+          "$ref": "#/1283"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -16932,7 +16971,7 @@
       },
       "additionalData": {
         "type": {
-          "$ref": "#/1280"
+          "$ref": "#/1282"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -16961,7 +17000,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1129"
+      "$ref": "#/1131"
     }
   },
   {
@@ -16970,7 +17009,7 @@
     "properties": {
       "entityKind": {
         "type": {
-          "$ref": "#/1305"
+          "$ref": "#/1307"
         },
         "flags": 1,
         "description": "The kind of the aggregated entity."
@@ -17072,12 +17111,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1284"
-      },
-      {
-        "$ref": "#/1285"
-      },
-      {
         "$ref": "#/1286"
       },
       {
@@ -17135,6 +17168,12 @@
         "$ref": "#/1304"
       },
       {
+        "$ref": "#/1305"
+      },
+      {
+        "$ref": "#/1306"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -17142,7 +17181,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1283"
+      "$ref": "#/1285"
     }
   },
   {
@@ -17151,7 +17190,39 @@
     "resourceType": "Microsoft.SecurityInsights/incidents",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/1128"
+      "$ref": "#/1130"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManualTriggerRequestBody",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/334"
+        },
+        "flags": 0,
+        "description": "Universally Unique Identifier"
+      },
+      "logicAppsResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Related Analytic rule resource id"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runPlaybook",
+    "resourceType": "Microsoft.SecurityInsights/incidents",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/1310"
     }
   },
   {
@@ -17160,7 +17231,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1309"
+          "$ref": "#/1313"
         },
         "flags": 1,
         "description": "RepositoryAccess properties"
@@ -17186,7 +17257,7 @@
     "properties": {
       "warning": {
         "type": {
-          "$ref": "#/1311"
+          "$ref": "#/1315"
         },
         "flags": 2,
         "description": "Warning data."
@@ -17199,7 +17270,7 @@
     "properties": {
       "code": {
         "type": {
-          "$ref": "#/1317"
+          "$ref": "#/1321"
         },
         "flags": 2,
         "description": "An identifier for the warning. Codes are invariant and are intended to be consumed programmatically."
@@ -17213,7 +17284,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/1318"
+          "$ref": "#/1322"
         },
         "flags": 2
       }
@@ -17243,19 +17314,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1312"
-      },
-      {
-        "$ref": "#/1313"
-      },
-      {
-        "$ref": "#/1314"
-      },
-      {
-        "$ref": "#/1315"
-      },
-      {
         "$ref": "#/1316"
+      },
+      {
+        "$ref": "#/1317"
+      },
+      {
+        "$ref": "#/1318"
+      },
+      {
+        "$ref": "#/1319"
+      },
+      {
+        "$ref": "#/1320"
       },
       {
         "$ref": "#/0"
@@ -17265,7 +17336,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1311"
+      "$ref": "#/1315"
     }
   },
   {
@@ -17274,10 +17345,10 @@
     "resourceType": "Microsoft.SecurityInsights/sourcecontrols",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/1310"
+      "$ref": "#/1314"
     },
     "input": {
-      "$ref": "#/1308"
+      "$ref": "#/1312"
     }
   },
   {
@@ -17293,7 +17364,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1322"
+          "$ref": "#/1326"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -17343,7 +17414,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1321"
+        "$ref": "#/1325"
       },
       {
         "$ref": "#/0"
@@ -17393,7 +17464,7 @@
     },
     "elements": {
       "indicator": {
-        "$ref": "#/1324"
+        "$ref": "#/1328"
       }
     }
   },
@@ -17410,7 +17481,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1325"
+          "$ref": "#/1329"
         },
         "flags": 1,
         "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value."
@@ -17427,10 +17498,10 @@
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/1323"
+      "$ref": "#/1327"
     },
     "input": {
-      "$ref": "#/1320"
+      "$ref": "#/1324"
     }
   },
   {
@@ -17481,42 +17552,42 @@
       },
       "sortBy": {
         "type": {
-          "$ref": "#/1333"
+          "$ref": "#/1337"
         },
         "flags": 0,
         "description": "Columns to sort by and sorting order"
       },
       "sources": {
         "type": {
-          "$ref": "#/1334"
+          "$ref": "#/1338"
         },
         "flags": 0,
         "description": "Sources of threat intelligence indicators"
       },
       "patternTypes": {
         "type": {
-          "$ref": "#/1335"
+          "$ref": "#/1339"
         },
         "flags": 0,
         "description": "Pattern types"
       },
       "threatTypes": {
         "type": {
-          "$ref": "#/1336"
+          "$ref": "#/1340"
         },
         "flags": 0,
         "description": "Threat types of threat intelligence indicators"
       },
       "ids": {
         "type": {
-          "$ref": "#/1337"
+          "$ref": "#/1341"
         },
         "flags": 0,
         "description": "Ids of threat intelligence indicators"
       },
       "keywords": {
         "type": {
-          "$ref": "#/1338"
+          "$ref": "#/1342"
         },
         "flags": 0,
         "description": "Keywords for searching threat intelligence indicators"
@@ -17543,7 +17614,7 @@
       },
       "sortOrder": {
         "type": {
-          "$ref": "#/1332"
+          "$ref": "#/1336"
         },
         "flags": 0,
         "description": "Sorting order (ascending/descending/unsorted)."
@@ -17566,13 +17637,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1329"
+        "$ref": "#/1333"
       },
       {
-        "$ref": "#/1330"
+        "$ref": "#/1334"
       },
       {
-        "$ref": "#/1331"
+        "$ref": "#/1335"
       },
       {
         "$ref": "#/0"
@@ -17582,7 +17653,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1328"
+      "$ref": "#/1332"
     }
   },
   {
@@ -17621,7 +17692,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/1340"
+          "$ref": "#/1344"
         },
         "flags": 1,
         "description": "The ThreatIntelligenceInformation items on this page"
@@ -17638,7 +17709,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1323"
+      "$ref": "#/1327"
     }
   },
   {
@@ -17647,10 +17718,10 @@
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/1339"
+      "$ref": "#/1343"
     },
     "input": {
-      "$ref": "#/1327"
+      "$ref": "#/1331"
     }
   },
   {
@@ -17659,7 +17730,7 @@
     "properties": {
       "threatIntelligenceTags": {
         "type": {
-          "$ref": "#/1343"
+          "$ref": "#/1347"
         },
         "flags": 0,
         "description": "List of tags to be appended."
@@ -17674,14 +17745,26 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "appendTags",
+    "resourceType": "Microsoft.SecurityInsights/threatIntelligence/indicators",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/466"
+    },
+    "input": {
+      "$ref": "#/1346"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "replaceTags",
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence/indicators",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/1323"
+      "$ref": "#/1327"
     },
     "input": {
-      "$ref": "#/1320"
+      "$ref": "#/1324"
     }
   }
 ]

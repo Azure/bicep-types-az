@@ -1894,5 +1894,38 @@
         "$ref": "#/0"
       }
     ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2022-12-01",
+    "output": {
+      "$ref": "#/149"
+    },
+    "input": {
+      "$ref": "#/143"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2022-12-01",
+    "output": {
+      "$ref": "#/149"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+    "apiVersion": "2022-12-01",
+    "output": {
+      "$ref": "#/149"
+    }
   }
 ]

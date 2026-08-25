@@ -11,6 +11,11 @@
 * **properties**: [ExportProperties](#exportproperties): The properties of the export.
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function run (Microsoft.CostManagement/exports@2021-01-01)
+* **Resource**: Microsoft.CostManagement/exports
+* **ApiVersion**: 2021-01-01
+* **Output**: any
+
 ## CommonExportProperties
 ### Properties
 * **definition**: [ExportDefinition](#exportdefinition) (Required): Has the definition for the export.

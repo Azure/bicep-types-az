@@ -1207,24 +1207,108 @@
     }
   },
   {
-    "$type": "ResourceFunctionType",
-    "name": "listKeys",
-    "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules",
-    "apiVersion": "2017-04-01",
-    "output": {
-      "$ref": "#/52"
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DebugSendResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Properties of the NotificationHub."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The sku of the created namespace"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DebugSendResult",
+    "properties": {
+      "success": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "successful send"
+      },
+      "failure": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "send failure"
+      },
+      "results": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "actual failure description"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
     }
   },
   {
     "$type": "ResourceFunctionType",
-    "name": "regenerateKeys",
-    "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules",
+    "name": "debugsend",
+    "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/62"
     },
     "input": {
-      "$ref": "#/54"
+      "$ref": "#/61"
     }
   },
   {
@@ -1233,7 +1317,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/67"
         },
         "flags": 0,
         "description": "NotificationHub PNS Credentials."
@@ -1268,7 +1352,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/65"
+          "$ref": "#/68"
         },
         "flags": 0,
         "description": "Resource tags"
@@ -1344,7 +1428,28 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/63"
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listKeys",
+    "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/52"
+    },
+    "input": {
+      "$ref": "#/54"
     }
   }
 ]

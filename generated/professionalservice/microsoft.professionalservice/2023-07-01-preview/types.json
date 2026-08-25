@@ -586,5 +586,20 @@
   },
   {
     "$type": "IntegerType"
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unsubscribe",
+    "resourceType": "Microsoft.ProfessionalService/resources",
+    "apiVersion": "2023-07-01-preview",
+    "output": {
+      "$ref": "#/38"
+    },
+    "input": {
+      "$ref": "#/36"
+    }
   }
 ]

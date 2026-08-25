@@ -4302,19 +4302,37 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "Disable",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/intelligencePacks",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Enable",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/intelligencePacks",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/63"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SearchGetSchemaResponse",
     "properties": {
       "metadata": {
         "type": {
-          "$ref": "#/344"
+          "$ref": "#/346"
         },
         "flags": 0,
         "description": "The metadata from search results."
       },
       "value": {
         "type": {
-          "$ref": "#/355"
+          "$ref": "#/357"
         },
         "flags": 0,
         "description": "The array of result values."
@@ -4362,7 +4380,7 @@
       },
       "coreSummaries": {
         "type": {
-          "$ref": "#/346"
+          "$ref": "#/348"
         },
         "flags": 0,
         "description": "The core summaries."
@@ -4397,7 +4415,7 @@
       },
       "sort": {
         "type": {
-          "$ref": "#/351"
+          "$ref": "#/353"
         },
         "flags": 0,
         "description": "How the results are sorted."
@@ -4439,7 +4457,7 @@
       },
       "schema": {
         "type": {
-          "$ref": "#/352"
+          "$ref": "#/354"
         },
         "flags": 0,
         "description": "The schema."
@@ -4469,7 +4487,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/345"
+      "$ref": "#/347"
     }
   },
   {
@@ -4485,7 +4503,7 @@
       },
       "order": {
         "type": {
-          "$ref": "#/350"
+          "$ref": "#/352"
         },
         "flags": 0,
         "description": "The sort order of the search."
@@ -4504,10 +4522,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/348"
+        "$ref": "#/350"
       },
       {
-        "$ref": "#/349"
+        "$ref": "#/351"
       },
       {
         "$ref": "#/2"
@@ -4517,7 +4535,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/347"
+      "$ref": "#/349"
     }
   },
   {
@@ -4588,7 +4606,7 @@
       },
       "ownerType": {
         "type": {
-          "$ref": "#/354"
+          "$ref": "#/356"
         },
         "flags": 0,
         "description": "The array of workflows containing the field."
@@ -4604,7 +4622,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/353"
+      "$ref": "#/355"
     }
   },
   {
@@ -4613,7 +4631,7 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2025-02-01",
     "output": {
-      "$ref": "#/343"
+      "$ref": "#/345"
     }
   },
   {
@@ -4642,7 +4660,7 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2025-02-01",
     "output": {
-      "$ref": "#/357"
+      "$ref": "#/359"
     }
   },
   {
@@ -4651,7 +4669,137 @@
     "resourceType": "Microsoft.OperationalInsights/workspaces",
     "apiVersion": "2025-02-01",
     "output": {
-      "$ref": "#/357"
+      "$ref": "#/359"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeBody",
+    "properties": {
+      "table": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Table from which to purge data."
+      },
+      "filters": {
+        "type": {
+          "$ref": "#/364"
+        },
+        "flags": 1,
+        "description": "The set of columns and filters (queries) to run over them to purge the resulting data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeBodyFilters",
+    "properties": {
+      "column": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The column of the table over which the given query should run"
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A query operator to evaluate over the provided column and value(s). Supported operators are ==, =~, in, in~, >, >=, <, <=, between, and have the same behavior as they would in a KQL query."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "the value for the operator to function over. This can be a number (e.g., > 100), a string (timestamp >= '2017-09-01') or array of values."
+      },
+      "key": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "When filtering over custom dimensions, this key will be used as the name of the custom dimension."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/363"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkspacePurgeResponse",
+    "properties": {
+      "operationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Id to use when querying for status for a particular purge operation."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/365"
+    },
+    "input": {
+      "$ref": "#/362"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failback",
+    "resourceType": "Microsoft.OperationalInsights/workspaces",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/tables",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelSearch",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/tables",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.OperationalInsights/locations/workspaces",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/63"
     }
   }
 ]

@@ -12,6 +12,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function forceReboot (Microsoft.Cache/Redis@2015-08-01)
+* **Resource**: Microsoft.Cache/Redis
+* **ApiVersion**: 2015-08-01
+* **Input**: [RedisRebootParameters](#redisrebootparameters)
+* **Output**: any
+
 ## Function listKeys (Microsoft.Cache/Redis@2015-08-01)
 * **Resource**: Microsoft.Cache/Redis
 * **ApiVersion**: 2015-08-01
@@ -53,6 +59,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## RedisRebootParameters
+### Properties
+* **rebootType**: 'AllNodes' | 'PrimaryNode' | 'SecondaryNode' (Required): Which Redis node(s) to reboot. Depending on this value data loss is possible.
+* **shardId**: int: If clustering is enabled, the ID of the shared be rebooted.
 
 ## RedisRegenerateKeyParameters
 ### Properties

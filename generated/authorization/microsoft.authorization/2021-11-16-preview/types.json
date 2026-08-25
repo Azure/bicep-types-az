@@ -2460,5 +2460,62 @@
     "output": {
       "$ref": "#/43"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions",
+    "apiVersion": "2021-11-16-preview",
+    "output": {
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
+    "apiVersion": "2021-11-16-preview",
+    "output": {
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetDecisions",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
+    "apiVersion": "2021-11-16-preview",
+    "output": {
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "applyDecisions",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
+    "apiVersion": "2021-11-16-preview",
+    "output": {
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sendReminders",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
+    "apiVersion": "2021-11-16-preview",
+    "output": {
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acceptRecommendations",
+    "resourceType": "Microsoft.Authorization/accessReviewScheduleDefinitions/instances",
+    "apiVersion": "2021-11-16-preview",
+    "output": {
+      "$ref": "#/202"
+    }
   }
 ]

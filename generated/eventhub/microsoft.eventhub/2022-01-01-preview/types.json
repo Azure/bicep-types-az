@@ -2753,12 +2753,42 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconcile",
+    "resourceType": "Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations",
+    "apiVersion": "2022-01-01-preview",
+    "output": {
+      "$ref": "#/200"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules",
     "apiVersion": "2022-01-01-preview",
     "output": {
       "$ref": "#/193"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "breakPairing",
+    "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs",
+    "apiVersion": "2022-01-01-preview",
+    "output": {
+      "$ref": "#/200"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs",
+    "apiVersion": "2022-01-01-preview",
+    "output": {
+      "$ref": "#/200"
     }
   },
   {

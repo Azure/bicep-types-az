@@ -25,6 +25,12 @@ The geo region of a resource never changes after it is created.
 * **ApiVersion**: 2018-03-01-preview
 * **Output**: [SignalRKeys](#signalrkeys)
 
+## Function regenerateKey (Microsoft.SignalRService/SignalR@2018-03-01-preview)
+* **Resource**: Microsoft.SignalRService/SignalR
+* **ApiVersion**: 2018-03-01-preview
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [SignalRKeys](#signalrkeys)
+
 ## NameAvailability
 ### Properties
 * **message**: string: The message of the operation.
@@ -35,6 +41,10 @@ The geo region of a resource never changes after it is created.
 ### Properties
 * **name**: string (Required): The SignalR service name to validate. e.g."my-signalR-name-here"
 * **type**: string (Required): The resource type. Should be always "Microsoft.SignalRService/SignalR".
+
+## RegenerateKeyParameters
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string: The keyType to regenerate. Must be either 'primary' or 'secondary'(case-insensitive).
 
 ## ResourceSku
 ### Properties

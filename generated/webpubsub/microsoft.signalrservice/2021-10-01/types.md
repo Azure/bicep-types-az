@@ -59,6 +59,17 @@
 * **ApiVersion**: 2021-10-01
 * **Output**: [WebPubSubKeys](#webpubsubkeys)
 
+## Function regenerateKey (Microsoft.SignalRService/webPubSub@2021-10-01)
+* **Resource**: Microsoft.SignalRService/webPubSub
+* **ApiVersion**: 2021-10-01
+* **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
+* **Output**: [WebPubSubKeys](#webpubsubkeys)
+
+## Function restart (Microsoft.SignalRService/webPubSub@2021-10-01)
+* **Resource**: Microsoft.SignalRService/webPubSub
+* **ApiVersion**: 2021-10-01
+* **Output**: any
+
 ## EventHandler
 ### Properties
 * **auth**: [UpstreamAuthSettings](#upstreamauthsettings): Upstream auth settings. If not set, no auth is used for upstream messages.
@@ -154,6 +165,10 @@ It also appears in the aud (audience) claim of the issued token.
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## RegenerateKeyParameters
+### Properties
+* **keyType**: 'Primary' | 'Salt' | 'Secondary' | string: The type of access key.
 
 ## ResourceLogCategory
 ### Properties

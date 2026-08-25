@@ -3563,6 +3563,36 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ScVmm/virtualMachines",
+    "apiVersion": "2023-04-01-preview",
+    "output": {
+      "$ref": "#/88"
+    },
+    "input": {
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ScVmm/virtualMachines",
+    "apiVersion": "2023-04-01-preview",
+    "output": {
+      "$ref": "#/88"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ScVmm/virtualMachines",
+    "apiVersion": "2023-04-01-preview",
+    "output": {
+      "$ref": "#/88"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "VirtualMachineCreateCheckpoint",
     "properties": {
@@ -3583,6 +3613,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "createCheckpoint",
+    "resourceType": "Microsoft.ScVmm/virtualMachines",
+    "apiVersion": "2023-04-01-preview",
+    "output": {
+      "$ref": "#/88"
+    },
+    "input": {
+      "$ref": "#/206"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "VirtualMachineDeleteCheckpoint",
     "properties": {
@@ -3596,6 +3638,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "deleteCheckpoint",
+    "resourceType": "Microsoft.ScVmm/virtualMachines",
+    "apiVersion": "2023-04-01-preview",
+    "output": {
+      "$ref": "#/88"
+    },
+    "input": {
+      "$ref": "#/208"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "VirtualMachineRestoreCheckpoint",
     "properties": {
@@ -3606,6 +3660,84 @@
         "flags": 0,
         "description": "ID of the checkpoint to be restored to."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreCheckpoint",
+    "resourceType": "Microsoft.ScVmm/virtualMachines",
+    "apiVersion": "2023-04-01-preview",
+    "output": {
+      "$ref": "#/88"
+    },
+    "input": {
+      "$ref": "#/210"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ScVmm/virtualMachineInstances",
+    "apiVersion": "2023-04-01-preview",
+    "output": {
+      "$ref": "#/88"
+    },
+    "input": {
+      "$ref": "#/202"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ScVmm/virtualMachineInstances",
+    "apiVersion": "2023-04-01-preview",
+    "output": {
+      "$ref": "#/88"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.ScVmm/virtualMachineInstances",
+    "apiVersion": "2023-04-01-preview",
+    "output": {
+      "$ref": "#/88"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createCheckpoint",
+    "resourceType": "Microsoft.ScVmm/virtualMachineInstances",
+    "apiVersion": "2023-04-01-preview",
+    "output": {
+      "$ref": "#/88"
+    },
+    "input": {
+      "$ref": "#/206"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteCheckpoint",
+    "resourceType": "Microsoft.ScVmm/virtualMachineInstances",
+    "apiVersion": "2023-04-01-preview",
+    "output": {
+      "$ref": "#/88"
+    },
+    "input": {
+      "$ref": "#/208"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreCheckpoint",
+    "resourceType": "Microsoft.ScVmm/virtualMachineInstances",
+    "apiVersion": "2023-04-01-preview",
+    "output": {
+      "$ref": "#/88"
+    },
+    "input": {
+      "$ref": "#/210"
     }
   }
 ]

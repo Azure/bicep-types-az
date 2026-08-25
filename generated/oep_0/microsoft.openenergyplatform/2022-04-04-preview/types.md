@@ -13,10 +13,26 @@
 * **tags**: [EnergyServiceTags](#energyservicetags): Resource tags.
 * **type**: 'Microsoft.OpenEnergyPlatform/energyServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addPartition (Microsoft.OpenEnergyPlatform/energyServices@2022-04-04-preview)
+* **Resource**: Microsoft.OpenEnergyPlatform/energyServices
+* **ApiVersion**: 2022-04-04-preview
+* **Input**: [DataPartitionAddOrRemoveRequest](#datapartitionaddorremoverequest)
+* **Output**: [DataPartitionAddOrRemoveRequest](#datapartitionaddorremoverequest)
+
 ## Function listPartitions (Microsoft.OpenEnergyPlatform/energyServices@2022-04-04-preview)
 * **Resource**: Microsoft.OpenEnergyPlatform/energyServices
 * **ApiVersion**: 2022-04-04-preview
 * **Output**: [DataPartitionsListResult](#datapartitionslistresult)
+
+## Function removePartition (Microsoft.OpenEnergyPlatform/energyServices@2022-04-04-preview)
+* **Resource**: Microsoft.OpenEnergyPlatform/energyServices
+* **ApiVersion**: 2022-04-04-preview
+* **Input**: [DataPartitionAddOrRemoveRequest](#datapartitionaddorremoverequest)
+* **Output**: [DataPartitionAddOrRemoveRequest](#datapartitionaddorremoverequest)
+
+## DataPartitionAddOrRemoveRequest
+### Properties
+* **name**: [DataPartitionNames](#datapartitionnames): The list of Energy services resource's Data Partition Names.
 
 ## DataPartitionNames
 ### Properties

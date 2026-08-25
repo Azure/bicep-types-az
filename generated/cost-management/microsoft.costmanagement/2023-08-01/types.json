@@ -4135,33 +4135,42 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.CostManagement/exports",
+    "apiVersion": "2023-08-01",
+    "output": {
+      "$ref": "#/328"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ForecastDefinition",
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/353"
+          "$ref": "#/354"
         },
         "flags": 1,
         "description": "The type of the forecast."
       },
       "timeframe": {
         "type": {
-          "$ref": "#/355"
+          "$ref": "#/356"
         },
         "flags": 1,
         "description": "The time frame for pulling data for the forecast. If custom, then a specific time period must be provided."
       },
       "timePeriod": {
         "type": {
-          "$ref": "#/356"
+          "$ref": "#/357"
         },
         "flags": 0,
         "description": "Has time period for pulling data for the forecast."
       },
       "dataset": {
         "type": {
-          "$ref": "#/357"
+          "$ref": "#/358"
         },
         "flags": 1,
         "description": "Has definition for data in this forecast."
@@ -4198,13 +4207,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/350"
-      },
-      {
         "$ref": "#/351"
       },
       {
         "$ref": "#/352"
+      },
+      {
+        "$ref": "#/353"
       },
       {
         "$ref": "#/2"
@@ -4219,7 +4228,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/354"
+        "$ref": "#/355"
       },
       {
         "$ref": "#/2"
@@ -4252,28 +4261,28 @@
     "properties": {
       "granularity": {
         "type": {
-          "$ref": "#/359"
+          "$ref": "#/360"
         },
         "flags": 0,
         "description": "The granularity of rows in the forecast."
       },
       "configuration": {
         "type": {
-          "$ref": "#/360"
+          "$ref": "#/361"
         },
         "flags": 0,
         "description": "Has configuration information for the data in the export. The configuration will be ignored if aggregation and grouping are provided."
       },
       "aggregation": {
         "type": {
-          "$ref": "#/370"
+          "$ref": "#/371"
         },
         "flags": 1,
         "description": "Dictionary of aggregation expression to use in the forecast. The key of each item in the dictionary is the alias for the aggregated column. forecast can have up to 2 aggregation clauses."
       },
       "filter": {
         "type": {
-          "$ref": "#/371"
+          "$ref": "#/372"
         },
         "flags": 0,
         "description": "Has filter expression to use in the forecast."
@@ -4288,7 +4297,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/358"
+        "$ref": "#/359"
       },
       {
         "$ref": "#/2"
@@ -4301,7 +4310,7 @@
     "properties": {
       "columns": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/362"
         },
         "flags": 0,
         "description": "Array of column names to be included in the forecast. Any valid forecast column name is allowed. If not provided, then forecast includes all columns."
@@ -4320,14 +4329,14 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/367"
+          "$ref": "#/368"
         },
         "flags": 1,
         "description": "The name of the column to aggregate."
       },
       "function": {
         "type": {
-          "$ref": "#/369"
+          "$ref": "#/370"
         },
         "flags": 1,
         "description": "The name of the aggregation function to use."
@@ -4354,9 +4363,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/363"
-      },
-      {
         "$ref": "#/364"
       },
       {
@@ -4364,6 +4370,9 @@
       },
       {
         "$ref": "#/366"
+      },
+      {
+        "$ref": "#/367"
       },
       {
         "$ref": "#/2"
@@ -4378,7 +4387,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/368"
+        "$ref": "#/369"
       },
       {
         "$ref": "#/2"
@@ -4390,7 +4399,7 @@
     "name": "ForecastDatasetAggregation",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/362"
+      "$ref": "#/363"
     }
   },
   {
@@ -4399,28 +4408,28 @@
     "properties": {
       "and": {
         "type": {
-          "$ref": "#/372"
+          "$ref": "#/373"
         },
         "flags": 0,
         "description": "The logical \"AND\" expression. Must have at least 2 items."
       },
       "or": {
         "type": {
-          "$ref": "#/373"
+          "$ref": "#/374"
         },
         "flags": 0,
         "description": "The logical \"OR\" expression. Must have at least 2 items."
       },
       "dimensions": {
         "type": {
-          "$ref": "#/374"
+          "$ref": "#/375"
         },
         "flags": 0,
         "description": "Has comparison expression for a dimension"
       },
       "tags": {
         "type": {
-          "$ref": "#/374"
+          "$ref": "#/375"
         },
         "flags": 0,
         "description": "Has comparison expression for a tag"
@@ -4430,14 +4439,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/371"
+      "$ref": "#/372"
     },
     "minLength": 2
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/371"
+      "$ref": "#/372"
     },
     "minLength": 2
   },
@@ -4454,14 +4463,14 @@
       },
       "operator": {
         "type": {
-          "$ref": "#/376"
+          "$ref": "#/377"
         },
         "flags": 1,
         "description": "The operator to use for comparison."
       },
       "values": {
         "type": {
-          "$ref": "#/377"
+          "$ref": "#/378"
         },
         "flags": 1,
         "description": "Array of values to use for comparison"
@@ -4476,7 +4485,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/375"
+        "$ref": "#/376"
       },
       {
         "$ref": "#/2"
@@ -4496,7 +4505,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/379"
+          "$ref": "#/380"
         },
         "flags": 0,
         "description": "Forecast properties"
@@ -4545,7 +4554,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/384"
+          "$ref": "#/385"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -4565,14 +4574,14 @@
       },
       "columns": {
         "type": {
-          "$ref": "#/381"
+          "$ref": "#/382"
         },
         "flags": 0,
         "description": "Array of columns"
       },
       "rows": {
         "type": {
-          "$ref": "#/383"
+          "$ref": "#/384"
         },
         "flags": 0,
         "description": "Array of rows"
@@ -4602,7 +4611,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/380"
+      "$ref": "#/381"
     }
   },
   {
@@ -4614,7 +4623,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/382"
+      "$ref": "#/383"
     }
   },
   {
@@ -4631,10 +4640,10 @@
     "resourceType": "Microsoft.CostManagement/externalSubscriptions",
     "apiVersion": "2023-08-01",
     "output": {
-      "$ref": "#/378"
+      "$ref": "#/379"
     },
     "input": {
-      "$ref": "#/349"
+      "$ref": "#/350"
     }
   },
   {
@@ -4643,28 +4652,28 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/390"
+          "$ref": "#/391"
         },
         "flags": 1,
         "description": "The type of the query."
       },
       "timeframe": {
         "type": {
-          "$ref": "#/397"
+          "$ref": "#/398"
         },
         "flags": 1,
         "description": "The time frame for pulling data for the query. If custom, then a specific time period must be provided."
       },
       "timePeriod": {
         "type": {
-          "$ref": "#/398"
+          "$ref": "#/399"
         },
         "flags": 0,
         "description": "Has time period for pulling data for the query."
       },
       "dataset": {
         "type": {
-          "$ref": "#/399"
+          "$ref": "#/400"
         },
         "flags": 1,
         "description": "Has definition for data in this query."
@@ -4687,13 +4696,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/387"
-      },
-      {
         "$ref": "#/388"
       },
       {
         "$ref": "#/389"
+      },
+      {
+        "$ref": "#/390"
       },
       {
         "$ref": "#/2"
@@ -4728,9 +4737,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/391"
-      },
-      {
         "$ref": "#/392"
       },
       {
@@ -4744,6 +4750,9 @@
       },
       {
         "$ref": "#/396"
+      },
+      {
+        "$ref": "#/397"
       },
       {
         "$ref": "#/2"
@@ -4776,35 +4785,35 @@
     "properties": {
       "granularity": {
         "type": {
-          "$ref": "#/401"
+          "$ref": "#/402"
         },
         "flags": 0,
         "description": "The granularity of rows in the query."
       },
       "configuration": {
         "type": {
-          "$ref": "#/402"
+          "$ref": "#/403"
         },
         "flags": 0,
         "description": "Has configuration information for the data in the export. The configuration will be ignored if aggregation and grouping are provided."
       },
       "aggregation": {
         "type": {
-          "$ref": "#/407"
+          "$ref": "#/408"
         },
         "flags": 0,
         "description": "Dictionary of aggregation expression to use in the query. The key of each item in the dictionary is the alias for the aggregated column. Query can have up to 2 aggregation clauses."
       },
       "grouping": {
         "type": {
-          "$ref": "#/412"
+          "$ref": "#/413"
         },
         "flags": 0,
         "description": "Array of group by expression to use in the query. Query can have up to 2 group by clauses."
       },
       "filter": {
         "type": {
-          "$ref": "#/413"
+          "$ref": "#/414"
         },
         "flags": 0,
         "description": "The filter expression to use in the query. Please reference our Query API REST documentation for how to properly format the filter."
@@ -4819,7 +4828,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/400"
+        "$ref": "#/401"
       },
       {
         "$ref": "#/2"
@@ -4832,7 +4841,7 @@
     "properties": {
       "columns": {
         "type": {
-          "$ref": "#/403"
+          "$ref": "#/404"
         },
         "flags": 0,
         "description": "Array of column names to be included in the query. Any valid query column name is allowed. If not provided, then query includes all columns."
@@ -4858,7 +4867,7 @@
       },
       "function": {
         "type": {
-          "$ref": "#/406"
+          "$ref": "#/407"
         },
         "flags": 1,
         "description": "The name of the aggregation function to use."
@@ -4873,7 +4882,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/405"
+        "$ref": "#/406"
       },
       {
         "$ref": "#/2"
@@ -4885,7 +4894,7 @@
     "name": "QueryDatasetAggregation",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/404"
+      "$ref": "#/405"
     }
   },
   {
@@ -4894,7 +4903,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/411"
+          "$ref": "#/412"
         },
         "flags": 1,
         "description": "Has type of the column to group."
@@ -4920,10 +4929,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/409"
+        "$ref": "#/410"
       },
       {
-        "$ref": "#/410"
+        "$ref": "#/411"
       },
       {
         "$ref": "#/2"
@@ -4933,7 +4942,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/408"
+      "$ref": "#/409"
     },
     "maxLength": 2
   },
@@ -4943,28 +4952,28 @@
     "properties": {
       "and": {
         "type": {
-          "$ref": "#/414"
+          "$ref": "#/415"
         },
         "flags": 0,
         "description": "The logical \"AND\" expression. Must have at least 2 items."
       },
       "or": {
         "type": {
-          "$ref": "#/415"
+          "$ref": "#/416"
         },
         "flags": 0,
         "description": "The logical \"OR\" expression. Must have at least 2 items."
       },
       "dimensions": {
         "type": {
-          "$ref": "#/416"
+          "$ref": "#/417"
         },
         "flags": 0,
         "description": "Has comparison expression for a dimension"
       },
       "tags": {
         "type": {
-          "$ref": "#/416"
+          "$ref": "#/417"
         },
         "flags": 0,
         "description": "Has comparison expression for a tag"
@@ -4974,14 +4983,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/413"
+      "$ref": "#/414"
     },
     "minLength": 2
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/413"
+      "$ref": "#/414"
     },
     "minLength": 2
   },
@@ -4998,14 +5007,14 @@
       },
       "operator": {
         "type": {
-          "$ref": "#/418"
+          "$ref": "#/419"
         },
         "flags": 1,
         "description": "The operator to use for comparison."
       },
       "values": {
         "type": {
-          "$ref": "#/419"
+          "$ref": "#/420"
         },
         "flags": 1,
         "description": "Array of values to use for comparison"
@@ -5020,7 +5029,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/417"
+        "$ref": "#/418"
       },
       {
         "$ref": "#/2"
@@ -5040,7 +5049,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/421"
+          "$ref": "#/422"
         },
         "flags": 0,
         "description": "Query properties"
@@ -5089,7 +5098,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/426"
+          "$ref": "#/427"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -5109,14 +5118,14 @@
       },
       "columns": {
         "type": {
-          "$ref": "#/423"
+          "$ref": "#/424"
         },
         "flags": 0,
         "description": "Array of columns"
       },
       "rows": {
         "type": {
-          "$ref": "#/425"
+          "$ref": "#/426"
         },
         "flags": 0,
         "description": "Array of rows"
@@ -5146,7 +5155,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/422"
+      "$ref": "#/423"
     }
   },
   {
@@ -5158,7 +5167,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/424"
+      "$ref": "#/425"
     }
   },
   {
@@ -5175,10 +5184,10 @@
     "resourceType": "Microsoft.CostManagement/externalSubscriptions",
     "apiVersion": "2023-08-01",
     "output": {
-      "$ref": "#/420"
+      "$ref": "#/421"
     },
     "input": {
-      "$ref": "#/386"
+      "$ref": "#/387"
     }
   },
   {
@@ -5187,10 +5196,10 @@
     "resourceType": "Microsoft.CostManagement/externalBillingAccounts",
     "apiVersion": "2023-08-01",
     "output": {
-      "$ref": "#/378"
+      "$ref": "#/379"
     },
     "input": {
-      "$ref": "#/349"
+      "$ref": "#/350"
     }
   },
   {
@@ -5199,10 +5208,10 @@
     "resourceType": "Microsoft.CostManagement/externalBillingAccounts",
     "apiVersion": "2023-08-01",
     "output": {
-      "$ref": "#/420"
+      "$ref": "#/421"
     },
     "input": {
-      "$ref": "#/386"
+      "$ref": "#/387"
     }
   },
   {
@@ -5238,7 +5247,16 @@
     "resourceType": "Microsoft.CostManagement/pricesheets",
     "apiVersion": "2023-08-01",
     "output": {
-      "$ref": "#/430"
+      "$ref": "#/431"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "execute",
+    "resourceType": "Microsoft.CostManagement/scheduledActions",
+    "apiVersion": "2023-08-01",
+    "output": {
+      "$ref": "#/328"
     }
   }
 ]

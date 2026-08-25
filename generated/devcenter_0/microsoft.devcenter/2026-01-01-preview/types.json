@@ -8385,19 +8385,31 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runHealthChecks",
+    "resourceType": "Microsoft.DevCenter/networkConnections",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/754"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "InheritedSettingsForProject",
     "properties": {
       "projectCatalogSettings": {
         "type": {
-          "$ref": "#/755"
+          "$ref": "#/757"
         },
         "flags": 2,
         "description": "Dev Center settings to be used when associating a project with a catalog."
       },
       "networkSettings": {
         "type": {
-          "$ref": "#/770"
+          "$ref": "#/772"
         },
         "flags": 2,
         "description": "Network settings that will be enforced on this project."
@@ -8466,35 +8478,35 @@
     "properties": {
       "statusModifiable": {
         "type": {
-          "$ref": "#/758"
+          "$ref": "#/760"
         },
         "flags": 0,
         "description": "Indicates whether the feature's status, Enabled or Disabled, is configurable at the Project scope."
       },
       "valuesModifiable": {
         "type": {
-          "$ref": "#/761"
+          "$ref": "#/763"
         },
         "flags": 0,
         "description": "Indicates whether the feature values are configurable at the Project scope."
       },
       "defaultStatus": {
         "type": {
-          "$ref": "#/765"
+          "$ref": "#/767"
         },
         "flags": 0,
         "description": "Indicates the default status of the feature."
       },
       "defaultValues": {
         "type": {
-          "$ref": "#/766"
+          "$ref": "#/768"
         },
         "flags": 0,
         "description": "The default values of the feature."
       },
       "catalogItemSyncEnableStatus": {
         "type": {
-          "$ref": "#/769"
+          "$ref": "#/771"
         },
         "flags": 0,
         "description": "Whether project catalogs associated with projects in this dev center can be configured to sync catalog items."
@@ -8513,10 +8525,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/756"
+        "$ref": "#/758"
       },
       {
-        "$ref": "#/757"
+        "$ref": "#/759"
       },
       {
         "$ref": "#/2"
@@ -8535,10 +8547,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/759"
+        "$ref": "#/761"
       },
       {
-        "$ref": "#/760"
+        "$ref": "#/762"
       },
       {
         "$ref": "#/2"
@@ -8561,13 +8573,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/762"
-      },
-      {
-        "$ref": "#/763"
-      },
-      {
         "$ref": "#/764"
+      },
+      {
+        "$ref": "#/765"
+      },
+      {
+        "$ref": "#/766"
       },
       {
         "$ref": "#/2"
@@ -8592,10 +8604,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/767"
+        "$ref": "#/769"
       },
       {
-        "$ref": "#/768"
+        "$ref": "#/770"
       },
       {
         "$ref": "#/2"
@@ -8608,7 +8620,7 @@
     "properties": {
       "microsoftHostedNetworkEnableStatus": {
         "type": {
-          "$ref": "#/773"
+          "$ref": "#/775"
         },
         "flags": 2,
         "description": "Indicates whether pools in this Dev Center can use Microsoft Hosted Networks. Defaults to Enabled if not set."
@@ -8627,10 +8639,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/771"
+        "$ref": "#/773"
       },
       {
-        "$ref": "#/772"
+        "$ref": "#/774"
       },
       {
         "$ref": "#/2"
@@ -8643,7 +8655,7 @@
     "resourceType": "Microsoft.DevCenter/projects",
     "apiVersion": "2026-01-01-preview",
     "output": {
-      "$ref": "#/754"
+      "$ref": "#/756"
     }
   },
   {
@@ -8652,7 +8664,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/785"
+          "$ref": "#/787"
         },
         "flags": 3,
         "description": "The DevCenterSku items on this page"
@@ -8679,14 +8691,14 @@
       },
       "locations": {
         "type": {
-          "$ref": "#/777"
+          "$ref": "#/779"
         },
         "flags": 2,
         "description": "SKU supported locations."
       },
       "capabilities": {
         "type": {
-          "$ref": "#/779"
+          "$ref": "#/781"
         },
         "flags": 2,
         "description": "Collection of name/value pairs to describe the SKU capabilities."
@@ -8700,7 +8712,7 @@
       },
       "tier": {
         "type": {
-          "$ref": "#/784"
+          "$ref": "#/786"
         },
         "flags": 0,
         "description": "This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT."
@@ -8757,7 +8769,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/778"
+      "$ref": "#/780"
     }
   },
   {
@@ -8780,23 +8792,23 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/780"
-      },
-      {
-        "$ref": "#/781"
-      },
-      {
         "$ref": "#/782"
       },
       {
         "$ref": "#/783"
+      },
+      {
+        "$ref": "#/784"
+      },
+      {
+        "$ref": "#/785"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/776"
+      "$ref": "#/778"
     }
   },
   {
@@ -8805,7 +8817,16 @@
     "resourceType": "Microsoft.DevCenter/projects",
     "apiVersion": "2026-01-01-preview",
     "output": {
-      "$ref": "#/775"
+      "$ref": "#/777"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "connect",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/754"
     }
   },
   {
@@ -8814,21 +8835,21 @@
     "properties": {
       "operationError": {
         "type": {
-          "$ref": "#/788"
+          "$ref": "#/791"
         },
         "flags": 2,
         "description": "Error information for the overall synchronization operation."
       },
       "conflicts": {
         "type": {
-          "$ref": "#/790"
+          "$ref": "#/793"
         },
         "flags": 2,
         "description": "Catalog items that have conflicting names."
       },
       "errors": {
         "type": {
-          "$ref": "#/793"
+          "$ref": "#/796"
         },
         "flags": 2,
         "description": "Errors that occured during synchronization."
@@ -8878,7 +8899,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/789"
+      "$ref": "#/792"
     }
   },
   {
@@ -8894,7 +8915,7 @@
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/792"
+          "$ref": "#/795"
         },
         "flags": 2,
         "description": "Errors associated with the file."
@@ -8904,7 +8925,44 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/788"
+      "$ref": "#/791"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/794"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getSyncErrorDetails",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/790"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/754"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CatalogResourceValidationErrorDetails",
+    "properties": {
+      "errors": {
+        "type": {
+          "$ref": "#/800"
+        },
+        "flags": 2,
+        "description": "Errors associated with resources synchronized from the catalog."
+      }
     }
   },
   {
@@ -8915,39 +8973,20 @@
   },
   {
     "$type": "ResourceFunctionType",
-    "name": "getSyncErrorDetails",
-    "resourceType": "Microsoft.DevCenter/devcenters/catalogs",
-    "apiVersion": "2026-01-01-preview",
-    "output": {
-      "$ref": "#/787"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "CatalogResourceValidationErrorDetails",
-    "properties": {
-      "errors": {
-        "type": {
-          "$ref": "#/796"
-        },
-        "flags": 2,
-        "description": "Errors associated with resources synchronized from the catalog."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/788"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
     "name": "getErrorDetails",
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions",
     "apiVersion": "2026-01-01-preview",
     "output": {
-      "$ref": "#/795"
+      "$ref": "#/799"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "buildImage",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/754"
     }
   },
   {
@@ -8956,7 +8995,16 @@
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions",
     "apiVersion": "2026-01-01-preview",
     "output": {
-      "$ref": "#/795"
+      "$ref": "#/799"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/754"
     }
   },
   {
@@ -8972,7 +9020,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/806"
+          "$ref": "#/812"
         },
         "flags": 2,
         "description": "The status of the build."
@@ -9000,7 +9048,7 @@
       },
       "taskGroups": {
         "type": {
-          "$ref": "#/826"
+          "$ref": "#/832"
         },
         "flags": 2,
         "description": "The list of task groups executed during the image definition build."
@@ -9063,22 +9111,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/800"
+        "$ref": "#/806"
       },
       {
-        "$ref": "#/801"
+        "$ref": "#/807"
       },
       {
-        "$ref": "#/802"
+        "$ref": "#/808"
       },
       {
-        "$ref": "#/803"
+        "$ref": "#/809"
       },
       {
-        "$ref": "#/804"
+        "$ref": "#/810"
       },
       {
-        "$ref": "#/805"
+        "$ref": "#/811"
       },
       {
         "$ref": "#/2"
@@ -9098,7 +9146,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/814"
+          "$ref": "#/820"
         },
         "flags": 2,
         "description": "The status of the task group."
@@ -9119,7 +9167,7 @@
       },
       "tasks": {
         "type": {
-          "$ref": "#/825"
+          "$ref": "#/831"
         },
         "flags": 2,
         "description": "The list of tasks executed during the task group."
@@ -9154,22 +9202,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/808"
+        "$ref": "#/814"
       },
       {
-        "$ref": "#/809"
+        "$ref": "#/815"
       },
       {
-        "$ref": "#/810"
+        "$ref": "#/816"
       },
       {
-        "$ref": "#/811"
+        "$ref": "#/817"
       },
       {
-        "$ref": "#/812"
+        "$ref": "#/818"
       },
       {
-        "$ref": "#/813"
+        "$ref": "#/819"
       },
       {
         "$ref": "#/2"
@@ -9189,7 +9237,7 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/817"
+          "$ref": "#/823"
         },
         "flags": 0,
         "description": "Parameters for the task."
@@ -9224,7 +9272,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/824"
+          "$ref": "#/830"
         },
         "flags": 2,
         "description": "The status of the task."
@@ -9261,7 +9309,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/816"
+      "$ref": "#/822"
     }
   },
   {
@@ -9292,22 +9340,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/818"
+        "$ref": "#/824"
       },
       {
-        "$ref": "#/819"
+        "$ref": "#/825"
       },
       {
-        "$ref": "#/820"
+        "$ref": "#/826"
       },
       {
-        "$ref": "#/821"
+        "$ref": "#/827"
       },
       {
-        "$ref": "#/822"
+        "$ref": "#/828"
       },
       {
-        "$ref": "#/823"
+        "$ref": "#/829"
       },
       {
         "$ref": "#/2"
@@ -9317,13 +9365,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/815"
+      "$ref": "#/821"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/807"
+      "$ref": "#/813"
     }
   },
   {
@@ -9332,7 +9380,7 @@
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds",
     "apiVersion": "2026-01-01-preview",
     "output": {
-      "$ref": "#/799"
+      "$ref": "#/805"
     }
   },
   {
@@ -9341,7 +9389,16 @@
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/tasks",
     "apiVersion": "2026-01-01-preview",
     "output": {
-      "$ref": "#/795"
+      "$ref": "#/799"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "connect",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/754"
     }
   },
   {
@@ -9350,7 +9407,16 @@
     "resourceType": "Microsoft.DevCenter/projects/catalogs",
     "apiVersion": "2026-01-01-preview",
     "output": {
-      "$ref": "#/787"
+      "$ref": "#/790"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/754"
     }
   },
   {
@@ -9359,7 +9425,16 @@
     "resourceType": "Microsoft.DevCenter/projects/catalogs/environmentDefinitions",
     "apiVersion": "2026-01-01-preview",
     "output": {
-      "$ref": "#/795"
+      "$ref": "#/799"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "buildImage",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/754"
     }
   },
   {
@@ -9368,7 +9443,16 @@
     "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions",
     "apiVersion": "2026-01-01-preview",
     "output": {
-      "$ref": "#/795"
+      "$ref": "#/799"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/754"
     }
   },
   {
@@ -9377,7 +9461,16 @@
     "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds",
     "apiVersion": "2026-01-01-preview",
     "output": {
-      "$ref": "#/799"
+      "$ref": "#/805"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runHealthChecks",
+    "resourceType": "Microsoft.DevCenter/projects/pools",
+    "apiVersion": "2026-01-01-preview",
+    "output": {
+      "$ref": "#/754"
     }
   }
 ]

@@ -10221,6 +10221,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.CognitiveServices/accounts/projects/applications",
+    "apiVersion": "2026-05-01",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.CognitiveServices/accounts/projects/applications",
+    "apiVersion": "2026-05-01",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AgentReferenceResourceArmPaginatedResult",
     "properties": {
@@ -10233,7 +10251,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/810"
+          "$ref": "#/812"
         },
         "flags": 0,
         "description": "An array of objects of type Agent Reference."
@@ -10284,7 +10302,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/809"
+      "$ref": "#/811"
     }
   },
   {
@@ -10293,7 +10311,25 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/projects/applications",
     "apiVersion": "2026-05-01",
     "output": {
-      "$ref": "#/808"
+      "$ref": "#/810"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments",
+    "apiVersion": "2026-05-01",
+    "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments",
+    "apiVersion": "2026-05-01",
+    "output": {
+      "$ref": "#/68"
     }
   },
   {
@@ -10318,7 +10354,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/812"
+      "$ref": "#/816"
     }
   },
   {
@@ -10341,7 +10377,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/815"
+          "$ref": "#/819"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -10390,10 +10426,28 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/raiBlocklists",
     "apiVersion": "2026-05-01",
     "output": {
-      "$ref": "#/814"
+      "$ref": "#/818"
     },
     "input": {
-      "$ref": "#/813"
+      "$ref": "#/817"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteRaiBlocklistItems",
+    "resourceType": "Microsoft.CognitiveServices/accounts/raiBlocklists",
+    "apiVersion": "2026-05-01",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/821"
     }
   }
 ]

@@ -1910,6 +1910,15 @@
     "writableScopes": 31
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Resources/deployments",
+    "apiVersion": "2025-04-01",
+    "output": {
+      "$ref": "#/6"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DeploymentExportResult",
     "properties": {
@@ -1928,7 +1937,7 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2025-04-01",
     "output": {
-      "$ref": "#/145"
+      "$ref": "#/146"
     }
   },
   {
@@ -1944,14 +1953,14 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/149"
         },
         "flags": 1,
         "description": "The deployment properties."
       },
       "tags": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/166"
         },
         "flags": 0,
         "description": "Deployment tags"
@@ -1985,21 +1994,21 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/150"
         },
         "flags": 0,
         "description": "Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string."
       },
       "externalInputs": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/151"
         },
         "flags": 4,
         "description": "External input values, used by external tooling for parameter evaluation."
       },
       "externalInputDefinitions": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/152"
         },
         "flags": 4,
         "description": "External input definitions, used by external tooling to define expected external input values."
@@ -2013,14 +2022,14 @@
       },
       "extensionConfigs": {
         "type": {
-          "$ref": "#/153"
+          "$ref": "#/154"
         },
         "flags": 0,
         "description": "The configurations to use for deployment extensions. The keys of this object are deployment extension aliases as defined in the deployment template."
       },
       "mode": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/157"
         },
         "flags": 1,
         "description": "The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources."
@@ -2034,7 +2043,7 @@
       },
       "onErrorDeployment": {
         "type": {
-          "$ref": "#/157"
+          "$ref": "#/158"
         },
         "flags": 0,
         "description": "The deployment on error behavior."
@@ -2048,7 +2057,7 @@
       },
       "validationLevel": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/165"
         },
         "flags": 0,
         "description": "The validation level of the deployment"
@@ -2092,7 +2101,7 @@
     "name": "DeploymentPropertiesExtensionConfigs",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/152"
+      "$ref": "#/153"
     }
   },
   {
@@ -2107,10 +2116,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/154"
+        "$ref": "#/155"
       },
       {
-        "$ref": "#/155"
+        "$ref": "#/156"
       }
     ]
   },
@@ -2120,7 +2129,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/160"
+          "$ref": "#/161"
         },
         "flags": 0,
         "description": "The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment."
@@ -2146,10 +2155,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/158"
+        "$ref": "#/159"
       },
       {
-        "$ref": "#/159"
+        "$ref": "#/160"
       }
     ]
   },
@@ -2169,13 +2178,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/161"
-      },
-      {
         "$ref": "#/162"
       },
       {
         "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
       },
       {
         "$ref": "#/2"
@@ -2224,7 +2233,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/167"
+          "$ref": "#/168"
         },
         "flags": 0,
         "description": "The template deployment properties."
@@ -2237,7 +2246,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/180"
+          "$ref": "#/181"
         },
         "flags": 2,
         "description": "Denotes the state of provisioning."
@@ -2272,14 +2281,14 @@
       },
       "providers": {
         "type": {
-          "$ref": "#/181"
+          "$ref": "#/182"
         },
         "flags": 2,
         "description": "The list of resource providers needed for the deployment."
       },
       "dependencies": {
         "type": {
-          "$ref": "#/182"
+          "$ref": "#/183"
         },
         "flags": 2,
         "description": "The list of deployment dependencies."
@@ -2307,14 +2316,14 @@
       },
       "extensions": {
         "type": {
-          "$ref": "#/183"
+          "$ref": "#/184"
         },
         "flags": 2,
         "description": "The extensions used in this deployment."
       },
       "mode": {
         "type": {
-          "$ref": "#/186"
+          "$ref": "#/187"
         },
         "flags": 2,
         "description": "The deployment mode. Possible values are Incremental and Complete."
@@ -2328,7 +2337,7 @@
       },
       "onErrorDeployment": {
         "type": {
-          "$ref": "#/187"
+          "$ref": "#/188"
         },
         "flags": 2,
         "description": "The deployment on error behavior."
@@ -2342,14 +2351,14 @@
       },
       "outputResources": {
         "type": {
-          "$ref": "#/191"
+          "$ref": "#/192"
         },
         "flags": 2,
         "description": "Array of provisioned resources."
       },
       "validatedResources": {
         "type": {
-          "$ref": "#/192"
+          "$ref": "#/193"
         },
         "flags": 2,
         "description": "Array of validated resources."
@@ -2363,14 +2372,14 @@
       },
       "diagnostics": {
         "type": {
-          "$ref": "#/193"
+          "$ref": "#/194"
         },
         "flags": 2,
         "description": "Contains diagnostic information collected during validation process."
       },
       "validationLevel": {
         "type": {
-          "$ref": "#/197"
+          "$ref": "#/198"
         },
         "flags": 0,
         "description": "The validation level of the deployment"
@@ -2429,9 +2438,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/168"
-      },
-      {
         "$ref": "#/169"
       },
       {
@@ -2463,6 +2469,9 @@
       },
       {
         "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
       },
       {
         "$ref": "#/2"
@@ -2499,10 +2508,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/184"
+        "$ref": "#/185"
       },
       {
-        "$ref": "#/185"
+        "$ref": "#/186"
       }
     ]
   },
@@ -2519,7 +2528,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/190"
+          "$ref": "#/191"
         },
         "flags": 0,
         "description": "The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment."
@@ -2545,10 +2554,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/188"
+        "$ref": "#/189"
       },
       {
-        "$ref": "#/189"
+        "$ref": "#/190"
       }
     ]
   },
@@ -2586,13 +2595,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/194"
-      },
-      {
         "$ref": "#/195"
       },
       {
         "$ref": "#/196"
+      },
+      {
+        "$ref": "#/197"
       },
       {
         "$ref": "#/2"
@@ -2605,10 +2614,10 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2025-04-01",
     "output": {
-      "$ref": "#/166"
+      "$ref": "#/167"
     },
     "input": {
-      "$ref": "#/147"
+      "$ref": "#/148"
     }
   },
   {
@@ -2624,7 +2633,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/201"
         },
         "flags": 1,
         "description": "The deployment properties."
@@ -2637,7 +2646,7 @@
     "properties": {
       "whatIfSettings": {
         "type": {
-          "$ref": "#/201"
+          "$ref": "#/202"
         },
         "flags": 0,
         "description": "Optional What-If operation settings."
@@ -2658,21 +2667,21 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/205"
+          "$ref": "#/206"
         },
         "flags": 0,
         "description": "Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string."
       },
       "externalInputs": {
         "type": {
-          "$ref": "#/206"
+          "$ref": "#/207"
         },
         "flags": 4,
         "description": "External input values, used by external tooling for parameter evaluation."
       },
       "externalInputDefinitions": {
         "type": {
-          "$ref": "#/207"
+          "$ref": "#/208"
         },
         "flags": 4,
         "description": "External input definitions, used by external tooling to define expected external input values."
@@ -2686,14 +2695,14 @@
       },
       "extensionConfigs": {
         "type": {
-          "$ref": "#/209"
+          "$ref": "#/210"
         },
         "flags": 0,
         "description": "The configurations to use for deployment extensions. The keys of this object are deployment extension aliases as defined in the deployment template."
       },
       "mode": {
         "type": {
-          "$ref": "#/212"
+          "$ref": "#/213"
         },
         "flags": 1,
         "description": "The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources."
@@ -2707,7 +2716,7 @@
       },
       "onErrorDeployment": {
         "type": {
-          "$ref": "#/157"
+          "$ref": "#/158"
         },
         "flags": 0,
         "description": "The deployment on error behavior."
@@ -2721,7 +2730,7 @@
       },
       "validationLevel": {
         "type": {
-          "$ref": "#/216"
+          "$ref": "#/217"
         },
         "flags": 0,
         "description": "The validation level of the deployment"
@@ -2734,7 +2743,7 @@
     "properties": {
       "resultFormat": {
         "type": {
-          "$ref": "#/204"
+          "$ref": "#/205"
         },
         "flags": 0,
         "description": "The format of the What-If results"
@@ -2753,10 +2762,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/202"
+        "$ref": "#/203"
       },
       {
-        "$ref": "#/203"
+        "$ref": "#/204"
       }
     ]
   },
@@ -2797,7 +2806,7 @@
     "name": "DeploymentPropertiesExtensionConfigs",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/208"
+      "$ref": "#/209"
     }
   },
   {
@@ -2812,10 +2821,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/210"
+        "$ref": "#/211"
       },
       {
-        "$ref": "#/211"
+        "$ref": "#/212"
       }
     ]
   },
@@ -2835,13 +2844,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/213"
-      },
-      {
         "$ref": "#/214"
       },
       {
         "$ref": "#/215"
+      },
+      {
+        "$ref": "#/216"
       },
       {
         "$ref": "#/2"
@@ -2861,7 +2870,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/219"
         },
         "flags": 0,
         "description": "What-If operation properties."
@@ -2881,21 +2890,21 @@
     "properties": {
       "changes": {
         "type": {
-          "$ref": "#/237"
+          "$ref": "#/238"
         },
         "flags": 0,
         "description": "List of resource changes predicted by What-If operation."
       },
       "potentialChanges": {
         "type": {
-          "$ref": "#/238"
+          "$ref": "#/239"
         },
         "flags": 0,
         "description": "List of resource changes predicted by What-If operation."
       },
       "diagnostics": {
         "type": {
-          "$ref": "#/239"
+          "$ref": "#/240"
         },
         "flags": 2,
         "description": "List of resource diagnostics detected by What-If operation."
@@ -2943,7 +2952,7 @@
       },
       "changeType": {
         "type": {
-          "$ref": "#/227"
+          "$ref": "#/228"
         },
         "flags": 1,
         "description": "Type of change that will be made to the resource when the deployment is executed."
@@ -2971,7 +2980,7 @@
       },
       "delta": {
         "type": {
-          "$ref": "#/236"
+          "$ref": "#/237"
         },
         "flags": 0,
         "description": "The predicted changes to resource properties."
@@ -3010,9 +3019,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/220"
-      },
-      {
         "$ref": "#/221"
       },
       {
@@ -3029,6 +3035,9 @@
       },
       {
         "$ref": "#/226"
+      },
+      {
+        "$ref": "#/227"
       }
     ]
   },
@@ -3045,7 +3054,7 @@
       },
       "propertyChangeType": {
         "type": {
-          "$ref": "#/234"
+          "$ref": "#/235"
         },
         "flags": 1,
         "description": "The type of property change."
@@ -3066,7 +3075,7 @@
       },
       "children": {
         "type": {
-          "$ref": "#/235"
+          "$ref": "#/236"
         },
         "flags": 0,
         "description": "Nested property changes."
@@ -3097,9 +3106,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/229"
-      },
-      {
         "$ref": "#/230"
       },
       {
@@ -3110,31 +3116,34 @@
       },
       {
         "$ref": "#/233"
+      },
+      {
+        "$ref": "#/234"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/228"
+      "$ref": "#/229"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/228"
+      "$ref": "#/229"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/219"
+      "$ref": "#/220"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/219"
+      "$ref": "#/220"
     }
   },
   {
@@ -3149,10 +3158,10 @@
     "resourceType": "Microsoft.Resources/deployments",
     "apiVersion": "2025-04-01",
     "output": {
-      "$ref": "#/217"
+      "$ref": "#/218"
     },
     "input": {
-      "$ref": "#/199"
+      "$ref": "#/200"
     }
   }
 ]

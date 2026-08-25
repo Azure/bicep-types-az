@@ -13472,19 +13472,304 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "abort",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/155"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CredentialResults",
+    "properties": {
+      "kubeconfigs": {
+        "type": {
+          "$ref": "#/1009"
+        },
+        "flags": 2,
+        "description": "Base64-encoded Kubernetes configuration file."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CredentialResult",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the credential."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 2,
+        "description": "Base64-encoded Kubernetes configuration file."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1008"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listClusterAdminCredential",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/1007"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listClusterMonitoringUserCredential",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/1007"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listClusterUserCredential",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/1007"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RebalanceLoadBalancersRequestBody",
+    "properties": {
+      "loadBalancerNames": {
+        "type": {
+          "$ref": "#/1014"
+        },
+        "flags": 0,
+        "description": "The load balancer names list."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rebalanceLoadBalancers",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/155"
+    },
+    "input": {
+      "$ref": "#/1013"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetAADProfile",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/155"
+    },
+    "input": {
+      "$ref": "#/327"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetServicePrincipalProfile",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/155"
+    },
+    "input": {
+      "$ref": "#/198"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateClusterCertificates",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/155"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rotateServiceAccountSigningKeys",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/155"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandRequest",
+    "properties": {
+      "command": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The command to run."
+      },
+      "context": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A base64 encoded zip file containing the files required by the command."
+      },
+      "clusterToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "AuthToken issued for AKS AAD Server App."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunCommandResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The command id."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1022"
+        },
+        "flags": 0,
+        "description": "Properties of command result."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CommandResultProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "provisioning State"
+      },
+      "exitCode": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "The exit code of the command"
+      },
+      "startedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time when the command started."
+      },
+      "finishedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time when the command finished."
+      },
+      "logs": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The command output."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "An explanation of why provisioningState is set to failed (if so)."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "runCommand",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/1021"
+    },
+    "input": {
+      "$ref": "#/1020"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/155"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/155"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resolvePrivateLinkServiceId",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/352"
+    },
+    "input": {
+      "$ref": "#/352"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ManagedClusterAccessProfile",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1007"
+          "$ref": "#/1028"
         },
         "flags": 0,
         "description": "AccessProfile of a managed cluster."
       },
       "tags": {
         "type": {
-          "$ref": "#/1008"
+          "$ref": "#/1029"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -13553,192 +13838,56 @@
     "resourceType": "Microsoft.ContainerService/managedClusters/accessProfiles",
     "apiVersion": "2026-05-02-preview",
     "output": {
-      "$ref": "#/1006"
+      "$ref": "#/1027"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "abort",
+    "resourceType": "Microsoft.ContainerService/managedClusters/agentPools",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/155"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "completeUpgrade",
+    "resourceType": "Microsoft.ContainerService/managedClusters/agentPools",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/155"
     }
   },
   {
     "$type": "ObjectType",
-    "name": "CredentialResults",
+    "name": "AgentPoolDeleteMachinesParameter",
     "properties": {
-      "kubeconfigs": {
+      "machineNames": {
         "type": {
-          "$ref": "#/1012"
+          "$ref": "#/1034"
         },
-        "flags": 2,
-        "description": "Base64-encoded Kubernetes configuration file."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "CredentialResult",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The name of the credential."
-      },
-      "value": {
-        "type": {
-          "$ref": "#/155"
-        },
-        "flags": 2,
-        "description": "Base64-encoded Kubernetes configuration file."
+        "flags": 1,
+        "description": "The agent pool machine names."
       }
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1011"
+      "$ref": "#/2"
     }
   },
   {
     "$type": "ResourceFunctionType",
-    "name": "listClusterAdminCredential",
-    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "name": "deleteMachines",
+    "resourceType": "Microsoft.ContainerService/managedClusters/agentPools",
     "apiVersion": "2026-05-02-preview",
     "output": {
-      "$ref": "#/1010"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listClusterMonitoringUserCredential",
-    "resourceType": "Microsoft.ContainerService/managedClusters",
-    "apiVersion": "2026-05-02-preview",
-    "output": {
-      "$ref": "#/1010"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listClusterUserCredential",
-    "resourceType": "Microsoft.ContainerService/managedClusters",
-    "apiVersion": "2026-05-02-preview",
-    "output": {
-      "$ref": "#/1010"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RunCommandRequest",
-    "properties": {
-      "command": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "The command to run."
-      },
-      "context": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "A base64 encoded zip file containing the files required by the command."
-      },
-      "clusterToken": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "AuthToken issued for AKS AAD Server App."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RunCommandResult",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The command id."
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/1018"
-        },
-        "flags": 0,
-        "description": "Properties of command result."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "CommandResultProperties",
-    "properties": {
-      "provisioningState": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "provisioning State"
-      },
-      "exitCode": {
-        "type": {
-          "$ref": "#/11"
-        },
-        "flags": 2,
-        "description": "The exit code of the command"
-      },
-      "startedAt": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The time when the command started."
-      },
-      "finishedAt": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The time when the command finished."
-      },
-      "logs": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The command output."
-      },
-      "reason": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "An explanation of why provisioningState is set to failed (if so)."
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "runCommand",
-    "resourceType": "Microsoft.ContainerService/managedClusters",
-    "apiVersion": "2026-05-02-preview",
-    "output": {
-      "$ref": "#/1017"
+      "$ref": "#/155"
     },
     "input": {
-      "$ref": "#/1016"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "resolvePrivateLinkServiceId",
-    "resourceType": "Microsoft.ContainerService/managedClusters",
-    "apiVersion": "2026-05-02-preview",
-    "output": {
-      "$ref": "#/352"
-    },
-    "input": {
-      "$ref": "#/352"
+      "$ref": "#/1033"
     }
   },
   {
@@ -13747,28 +13896,28 @@
     "properties": {
       "azure": {
         "type": {
-          "$ref": "#/1022"
+          "$ref": "#/1037"
         },
         "flags": 2,
         "description": "Azure environment and cluster identity information."
       },
       "components": {
         "type": {
-          "$ref": "#/1025"
+          "$ref": "#/1040"
         },
         "flags": 2,
         "description": "Component versions for the node runtime."
       },
       "networking": {
         "type": {
-          "$ref": "#/1026"
+          "$ref": "#/1041"
         },
         "flags": 2,
         "description": "Network configuration for the node."
       },
       "node": {
         "type": {
-          "$ref": "#/1027"
+          "$ref": "#/1042"
         },
         "flags": 2,
         "description": "Node-level configuration for kubelet, labels, and taints."
@@ -13788,7 +13937,7 @@
       },
       "targetCluster": {
         "type": {
-          "$ref": "#/1023"
+          "$ref": "#/1038"
         },
         "flags": 2,
         "description": "Target cluster identity."
@@ -13802,7 +13951,7 @@
       },
       "bootstrapToken": {
         "type": {
-          "$ref": "#/1024"
+          "$ref": "#/1039"
         },
         "flags": 2,
         "description": "Bootstrap token for node enrollment. Do not cache or log."
@@ -13895,21 +14044,21 @@
       },
       "labels": {
         "type": {
-          "$ref": "#/1028"
+          "$ref": "#/1043"
         },
         "flags": 2,
         "description": "Node labels to apply during registration."
       },
       "taints": {
         "type": {
-          "$ref": "#/1029"
+          "$ref": "#/1044"
         },
         "flags": 2,
         "description": "Node taints in the format 'key=value:effect'."
       },
       "kubelet": {
         "type": {
-          "$ref": "#/1030"
+          "$ref": "#/1045"
         },
         "flags": 2,
         "description": "Kubelet configuration."
@@ -13956,10 +14105,60 @@
     "resourceType": "Microsoft.ContainerService/managedClusters/agentPools",
     "apiVersion": "2026-05-02-preview",
     "output": {
-      "$ref": "#/1021"
+      "$ref": "#/1036"
     },
     "input": {
       "$ref": "#/155"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentPool",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/617"
+        },
+        "flags": 0,
+        "description": "Properties of an agent pool."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/499"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeNodeImageVersion",
+    "resourceType": "Microsoft.ContainerService/managedClusters/agentPools",
+    "apiVersion": "2026-05-02-preview",
+    "output": {
+      "$ref": "#/1047"
     }
   },
   {
@@ -13968,7 +14167,7 @@
     "resourceType": "Microsoft.ContainerService/managedClusters/managedNamespaces",
     "apiVersion": "2026-05-02-preview",
     "output": {
-      "$ref": "#/1010"
+      "$ref": "#/1007"
     }
   }
 ]

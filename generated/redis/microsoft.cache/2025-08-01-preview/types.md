@@ -82,6 +82,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Cache/redis/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function export (Microsoft.Cache/redis@2025-08-01-preview)
+* **Resource**: Microsoft.Cache/redis
+* **ApiVersion**: 2025-08-01-preview
+* **Input**: [ExportRDBParameters](#exportrdbparameters)
+* **Output**: any
+
 ## Function flush (Microsoft.Cache/redis@2025-08-01-preview)
 * **Resource**: Microsoft.Cache/redis
 * **ApiVersion**: 2025-08-01-preview
@@ -92,6 +98,12 @@
 * **ApiVersion**: 2025-08-01-preview
 * **Input**: [RedisRebootParameters](#redisrebootparameters)
 * **Output**: [RedisForceRebootResponse](#redisforcerebootresponse)
+
+## Function import (Microsoft.Cache/redis@2025-08-01-preview)
+* **Resource**: Microsoft.Cache/redis
+* **ApiVersion**: 2025-08-01-preview
+* **Input**: [ImportRDBParameters](#importrdbparameters)
+* **Output**: any
 
 ## Function listKeys (Microsoft.Cache/redis@2025-08-01-preview)
 * **Resource**: Microsoft.Cache/redis
@@ -116,6 +128,21 @@
 * **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
 * **message**: string (ReadOnly): The error message.
 * **target**: string (ReadOnly): The error target.
+
+## ExportRDBParameters
+### Properties
+* **container**: string (Required): Container name to export to.
+* **format**: string: File format.
+* **preferred-data-archive-auth-method**: string: Preferred auth method to communicate to storage account used for data archive, specify SAS or ManagedIdentity, default value is SAS
+* **prefix**: string (Required): Prefix to use for exported files.
+* **storage-subscription-id**: string: Subscription id of the storage container for data to be exported using ManagedIdentity.
+
+## ImportRDBParameters
+### Properties
+* **files**: string[] (Required): files to import.
+* **format**: string: File format.
+* **preferred-data-archive-auth-method**: string: Preferred auth method to communicate to storage account used for data archive, specify SAS or ManagedIdentity, default value is SAS
+* **storage-subscription-id**: string: Subscription id of the storage container containing files to import using Managed Identity.
 
 ## ManagedServiceIdentity
 ### Properties

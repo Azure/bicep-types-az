@@ -51,6 +51,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.HDInsight/clusters/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function autoscale (Microsoft.HDInsight/clusters/roles@2025-01-15-preview)
+* **Resource**: Microsoft.HDInsight/clusters/roles
+* **ApiVersion**: 2025-01-15-preview
+* **Input**: [AutoscaleConfigurationUpdateParameter](#autoscaleconfigurationupdateparameter)
+* **Output**: any
+
 ## Function checkNameAvailability (Microsoft.HDInsight/locations@2025-01-15-preview)
 * **Resource**: Microsoft.HDInsight/locations
 * **ApiVersion**: 2025-01-15-preview
@@ -62,6 +68,12 @@
 * **ApiVersion**: 2025-01-15-preview
 * **Output**: [ClusterConfigurations](#clusterconfigurations)
 
+## Function executeScriptActions (Microsoft.HDInsight/clusters@2025-01-15-preview)
+* **Resource**: Microsoft.HDInsight/clusters
+* **ApiVersion**: 2025-01-15-preview
+* **Input**: [ExecuteScriptActionParameters](#executescriptactionparameters)
+* **Output**: any
+
 ## Function getGatewaySettings (Microsoft.HDInsight/clusters@2025-01-15-preview)
 * **Resource**: Microsoft.HDInsight/clusters
 * **ApiVersion**: 2025-01-15-preview
@@ -71,6 +83,41 @@
 * **Resource**: Microsoft.HDInsight/clusters
 * **ApiVersion**: 2025-01-15-preview
 * **Output**: [HostInfo](#hostinfo)[]
+
+## Function promote (Microsoft.HDInsight/clusters/scriptExecutionHistory@2025-01-15-preview)
+* **Resource**: Microsoft.HDInsight/clusters/scriptExecutionHistory
+* **ApiVersion**: 2025-01-15-preview
+* **Output**: any
+
+## Function resize (Microsoft.HDInsight/clusters/roles@2025-01-15-preview)
+* **Resource**: Microsoft.HDInsight/clusters/roles
+* **ApiVersion**: 2025-01-15-preview
+* **Input**: [ClusterResizeParameters](#clusterresizeparameters)
+* **Output**: any
+
+## Function restartHosts (Microsoft.HDInsight/clusters@2025-01-15-preview)
+* **Resource**: Microsoft.HDInsight/clusters
+* **ApiVersion**: 2025-01-15-preview
+* **Input**: string[]
+* **Output**: any
+
+## Function rotatediskencryptionkey (Microsoft.HDInsight/clusters@2025-01-15-preview)
+* **Resource**: Microsoft.HDInsight/clusters
+* **ApiVersion**: 2025-01-15-preview
+* **Input**: [ClusterDiskEncryptionParameters](#clusterdiskencryptionparameters)
+* **Output**: any
+
+## Function updateClusterIdentityCertificate (Microsoft.HDInsight/clusters@2025-01-15-preview)
+* **Resource**: Microsoft.HDInsight/clusters
+* **ApiVersion**: 2025-01-15-preview
+* **Input**: [UpdateClusterIdentityCertificateParameters](#updateclusteridentitycertificateparameters)
+* **Output**: any
+
+## Function updateGatewaySettings (Microsoft.HDInsight/clusters@2025-01-15-preview)
+* **Resource**: Microsoft.HDInsight/clusters
+* **ApiVersion**: 2025-01-15-preview
+* **Input**: [UpdateGatewaySettingsParameters](#updategatewaysettingsparameters)
+* **Output**: any
 
 ## Function validateCreateRequest (Microsoft.HDInsight/locations@2025-01-15-preview)
 * **Resource**: Microsoft.HDInsight/locations
@@ -134,6 +181,10 @@
 ### Properties
 * **maxInstanceCount**: int: The maximum instance count of the cluster
 * **minInstanceCount**: int: The minimum instance count of the cluster
+
+## AutoscaleConfigurationUpdateParameter
+### Properties
+* **autoscale**: [Autoscale](#autoscale): The autoscale configuration.
 
 ## AutoscaleRecurrence
 ### Properties
@@ -250,6 +301,12 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ClusterDiskEncryptionParameters
+### Properties
+* **keyName**: string: Key name that is used for enabling disk encryption.
+* **keyVersion**: string: Specific key version that is used for enabling disk encryption.
+* **vaultUri**: string: Base key vault URI where the customers key is located eg. https://myvault.vault.azure.net
+
 ## ClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of cluster identity. This property will only be provided for a system assigned identity.
@@ -261,6 +318,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## ClusterResizeParameters
+### Properties
+* **targetInstanceCount**: int: The target instance count for the operation.
 
 ## ComputeIsolationProperties
 ### Properties
@@ -318,6 +379,11 @@
 ### Properties
 * **excludedServicesConfigId**: string: The config id of excluded services.
 * **excludedServicesList**: string: The list of excluded services.
+
+## ExecuteScriptActionParameters
+### Properties
+* **persistOnSuccess**: bool (Required): Gets or sets if the scripts needs to be persisted.
+* **scriptActions**: [RuntimeScriptAction](#runtimescriptaction)[]: The list of run time script actions.
 
 ## GatewaySettings
 ### Properties
@@ -521,6 +587,19 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## UpdateClusterIdentityCertificateParameters
+### Properties
+* **applicationId**: string: The application id.
+* **certificate**: string: The certificate in base64 encoded format.
+* **certificatePassword**: string: The password of the certificate.
+
+## UpdateGatewaySettingsParameters
+### Properties
+* **restAuthCredential.isEnabled**: bool: Indicates whether or not the gateway settings based authorization is enabled.
+* **restAuthCredential.password**: string: The gateway settings user password.
+* **restAuthCredential.username**: string: The gateway settings user name.
+* **restAuthEntraUsers**: [EntraUserInfo](#entrauserinfo)[]: List of Entra users for gateway access.
 
 ## UserAssignedIdentity
 ### Properties

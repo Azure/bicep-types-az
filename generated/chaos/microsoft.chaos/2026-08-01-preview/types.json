@@ -4455,6 +4455,24 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Chaos/experiments",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Chaos/experiments",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExperimentExecutionDetails",
     "properties": {
@@ -4481,7 +4499,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/354"
+          "$ref": "#/356"
         },
         "flags": 2,
         "description": "The properties of the experiment execution details."
@@ -4515,7 +4533,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/362"
+          "$ref": "#/364"
         },
         "flags": 2,
         "description": "Resource provisioning state. Not currently in use for executions."
@@ -4536,7 +4554,7 @@
       },
       "runInformation": {
         "type": {
-          "$ref": "#/363"
+          "$ref": "#/365"
         },
         "flags": 2,
         "description": "The information of the experiment run."
@@ -4575,12 +4593,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/355"
-      },
-      {
-        "$ref": "#/356"
-      },
-      {
         "$ref": "#/357"
       },
       {
@@ -4596,6 +4608,12 @@
         "$ref": "#/361"
       },
       {
+        "$ref": "#/362"
+      },
+      {
+        "$ref": "#/363"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -4606,7 +4624,7 @@
     "properties": {
       "steps": {
         "type": {
-          "$ref": "#/372"
+          "$ref": "#/374"
         },
         "flags": 2,
         "description": "The steps of the experiment run."
@@ -4640,7 +4658,7 @@
       },
       "branches": {
         "type": {
-          "$ref": "#/371"
+          "$ref": "#/373"
         },
         "flags": 2,
         "description": "The array of branches."
@@ -4674,7 +4692,7 @@
       },
       "actions": {
         "type": {
-          "$ref": "#/370"
+          "$ref": "#/372"
         },
         "flags": 2,
         "description": "The array of actions."
@@ -4722,7 +4740,7 @@
       },
       "targets": {
         "type": {
-          "$ref": "#/369"
+          "$ref": "#/371"
         },
         "flags": 2,
         "description": "The array of targets."
@@ -4763,7 +4781,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/368"
+          "$ref": "#/370"
         },
         "flags": 2,
         "description": "The error of the action."
@@ -4793,6 +4811,18 @@
   {
     "$type": "ArrayType",
     "itemType": {
+      "$ref": "#/369"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/368"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
       "$ref": "#/367"
     }
   },
@@ -4803,24 +4833,82 @@
     }
   },
   {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/365"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/364"
-    }
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "getExecutionDetails",
     "resourceType": "Microsoft.Chaos/experiments/executions",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/353"
+      "$ref": "#/355"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "discover",
+    "resourceType": "Microsoft.Chaos/workspaces",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "evaluate",
+    "resourceType": "Microsoft.Chaos/workspaces",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "execute",
+    "resourceType": "Microsoft.Chaos/workspaces/scenarios/configurations",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FixResourcePermissionsRequest",
+    "properties": {
+      "whatIf": {
+        "type": {
+          "$ref": "#/183"
+        },
+        "flags": 0,
+        "description": "Optional value that indicates whether to run a \"dry run\" of fixing resource permissions."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "fixResourcePermissions",
+    "resourceType": "Microsoft.Chaos/workspaces/scenarios/configurations",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/125"
+    },
+    "input": {
+      "$ref": "#/379"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.Chaos/workspaces/scenarios/configurations",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Chaos/workspaces/scenarios/runs",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/125"
     }
   }
 ]

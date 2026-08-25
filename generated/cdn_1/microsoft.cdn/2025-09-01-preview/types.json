@@ -771,6 +771,21 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteAttachment",
+    "resourceType": "Microsoft.Cdn/edgeActions",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/64"
+    },
+    "input": {
+      "$ref": "#/12"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "VersionCode",
     "properties": {
@@ -799,12 +814,21 @@
       "$ref": "#/43"
     },
     "input": {
-      "$ref": "#/64"
+      "$ref": "#/66"
     }
   },
   {
     "$type": "ResourceFunctionType",
     "name": "getVersionCode",
+    "resourceType": "Microsoft.Cdn/edgeActions/versions",
+    "apiVersion": "2025-09-01-preview",
+    "output": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "swapDefault",
     "resourceType": "Microsoft.Cdn/edgeActions/versions",
     "apiVersion": "2025-09-01-preview",
     "output": {

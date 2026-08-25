@@ -55,6 +55,11 @@
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [ListQueryKeysResult](#listquerykeysresult)
 
+## Function reconcile (Microsoft.Search/searchServices/networkSecurityPerimeterConfigurations@2025-02-01-preview)
+* **Resource**: Microsoft.Search/searchServices/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: any
+
 ## Function upgrade (Microsoft.Search/searchServices@2025-02-01-preview)
 * **Resource**: Microsoft.Search/searchServices
 * **ApiVersion**: 2025-02-01-preview

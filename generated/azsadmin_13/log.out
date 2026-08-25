@@ -96,4 +96,6 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/updateEncryption': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/restoreData': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/checkIdentityHealth': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/moveSubscriptions': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/validateMoveSubscriptions': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/checkNameAvailability': Unable to find type segments

@@ -103,6 +103,16 @@
 * **ApiVersion**: 2018-07-15-preview
 * **Output**: [FileStorageInfo](#filestorageinfo)
 
+## Function start (Microsoft.DataMigration/services@2018-07-15-preview)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2018-07-15-preview
+* **Output**: any
+
+## Function stop (Microsoft.DataMigration/services@2018-07-15-preview)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2018-07-15-preview
+* **Output**: any
+
 ## AzureActiveDirectoryApp
 ### Properties
 * **appKey**: string (Required): Key used to authenticate to the Azure Active Directory Application

@@ -55,6 +55,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Marketplace/privateStores/requestApprovals' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function acknowledgeNotification (Microsoft.Marketplace/privateStores/offers@2025-01-01)
+* **Resource**: Microsoft.Marketplace/privateStores/offers
+* **ApiVersion**: 2025-01-01
+* **Input**: [AcknowledgeOfferNotificationProperties](#acknowledgeoffernotificationproperties)
+* **Output**: any
+
 ## Function anyExistingOffersInTheCollections (Microsoft.Marketplace/privateStores@2025-01-01)
 * **Resource**: Microsoft.Marketplace/privateStores
 * **ApiVersion**: 2025-01-01
@@ -159,6 +165,12 @@
 * **Input**: [QueryUserRulesProperties](#queryuserrulesproperties)
 * **Output**: [RuleListResponse](#rulelistresponse)
 
+## Function setRules (Microsoft.Marketplace/privateStores/collections@2025-01-01)
+* **Resource**: Microsoft.Marketplace/privateStores/collections
+* **ApiVersion**: 2025-01-01
+* **Input**: [SetRulesRequest](#setrulesrequest)
+* **Output**: any
+
 ## Function transferOffers (Microsoft.Marketplace/privateStores/collections@2025-01-01)
 * **Resource**: Microsoft.Marketplace/privateStores/collections
 * **ApiVersion**: 2025-01-01
@@ -170,6 +182,24 @@
 * **ApiVersion**: 2025-01-01
 * **Input**: [MultiContextAndPlansPayload](#multicontextandplanspayload)
 * **Output**: [Offer](#offer)
+
+## Function withdrawPlan (Microsoft.Marketplace/privateStores/requestApprovals@2025-01-01)
+* **Resource**: Microsoft.Marketplace/privateStores/requestApprovals
+* **ApiVersion**: 2025-01-01
+* **Input**: [WithdrawProperties](#withdrawproperties)
+* **Output**: any
+
+## AcknowledgeOfferNotificationDetails
+### Properties
+* **acknowledge**: bool: Gets or sets a value indicating whether acknowledge action flag is enabled
+* **addPlans**: string[]: Gets or sets added plans
+* **dismiss**: bool: Gets or sets a value indicating whether dismiss action flag is enabled
+* **removeOffer**: bool: Gets or sets a value indicating whether remove offer action flag is enabled
+* **removePlans**: string[]: Gets or sets remove plans
+
+## AcknowledgeOfferNotificationProperties
+### Properties
+* **properties**: [AcknowledgeOfferNotificationDetails](#acknowledgeoffernotificationdetails): Notification update request payload details
 
 ## AdminRequestApprovalProperties
 ### Properties
@@ -488,6 +518,11 @@
 * **nextLink**: string: URL to get the next set of rules list results if there are any.
 * **value**: [Rule](#rule)[] (ReadOnly)
 
+## SetRulesRequest
+### Properties
+* **nextLink**: string: URL to get the next set of rules list results if there are any.
+* **value**: [Rule](#rule)[]
+
 ## StopSellNotifications
 ### Properties
 * **displayName**: string: Gets offer display name
@@ -564,4 +599,13 @@
 * **subscriptionId**: string: Gets the subscription id that the user is requesting to add the plan to
 * **subscriptionName**: string: Gets the subscription name that the user is requesting to add the plan to
 * **user**: string (ReadOnly): Gets user id
+
+## WithdrawDetails
+### Properties
+* **planId**: string: Gets or sets Plan Id
+* **publisherId**: string: The offer's publisher id
+
+## WithdrawProperties
+### Properties
+* **properties**: [WithdrawDetails](#withdrawdetails): Withdraw properties details
 

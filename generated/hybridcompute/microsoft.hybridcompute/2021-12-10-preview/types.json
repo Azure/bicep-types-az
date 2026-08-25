@@ -1438,5 +1438,17 @@
     "additionalProperties": {
       "$ref": "#/81"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeExtensions",
+    "resourceType": "Microsoft.HybridCompute/machines",
+    "apiVersion": "2021-12-10-preview",
+    "output": {
+      "$ref": "#/21"
+    },
+    "input": {
+      "$ref": "#/80"
+    }
   }
 ]

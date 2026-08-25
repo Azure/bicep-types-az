@@ -302,6 +302,24 @@
 * **Input**: [AcceptTransferRequest](#accepttransferrequest)
 * **Output**: [RecipientTransferDetails](#recipienttransferdetails)
 
+## Function createBillingRoleAssignment (Microsoft.Billing/billingAccounts@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [BillingRoleAssignmentPayload](#billingroleassignmentpayload)
+* **Output**: [BillingRoleAssignmentListResult](#billingroleassignmentlistresult)
+
+## Function createBillingRoleAssignment (Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [BillingRoleAssignmentPayload](#billingroleassignmentpayload)
+* **Output**: [BillingRoleAssignmentListResult](#billingroleassignmentlistresult)
+
+## Function createBillingRoleAssignment (Microsoft.Billing/billingAccounts/billingProfiles@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [BillingRoleAssignmentPayload](#billingroleassignmentpayload)
+* **Output**: [BillingRoleAssignmentListResult](#billingroleassignmentlistresult)
+
 ## Function declineTransfer (Microsoft.Billing/transfers@2019-10-01-preview)
 * **Resource**: Microsoft.Billing/transfers
 * **ApiVersion**: 2019-10-01-preview
@@ -334,6 +352,11 @@
 * **ApiVersion**: 2019-10-01-preview
 * **Input**: string[]
 * **Output**: [DownloadUrl](#downloadurl)
+
+## Function elevate (Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections
+* **ApiVersion**: 2019-10-01-preview
+* **Output**: any
 
 ## Function initiateTransfer (Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2019-10-01-preview)
 * **Resource**: Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections
@@ -492,6 +515,23 @@
 * **productName**: string (ReadOnly): The product name of the Azure plan.
 * **skuDescription**: string (ReadOnly): The sku description of the Azure plan for the subscription.
 * **skuId**: string (ReadOnly): The sku ID of the Azure plan for the subscription.
+
+## BillingRoleAssignment
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [BillingRoleAssignmentProperties](#billingroleassignmentproperties): The properties of the role assignment.
+* **type**: string (ReadOnly): Resource type.
+
+## BillingRoleAssignmentListResult
+### Properties
+* **nextLink**: string (ReadOnly): The link (url) to the next page of results.
+* **value**: [BillingRoleAssignment](#billingroleassignment)[] (ReadOnly): The list of role assignments.
+
+## BillingRoleAssignmentPayload
+### Properties
+* **billingRoleDefinitionId**: string: The role definition id
+* **principalId**: string: The user's principal id that the role gets assigned to
 
 ## BillingRoleAssignmentProperties
 ### Properties

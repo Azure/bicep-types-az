@@ -1279,5 +1279,26 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.VirtualMachineImages/imageTemplates",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.VirtualMachineImages/imageTemplates",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/101"
+    }
   }
 ]

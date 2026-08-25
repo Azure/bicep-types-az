@@ -1512,5 +1512,17 @@
     "input": {
       "$ref": "#/107"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DevHub/iacProfiles",
+    "apiVersion": "2024-05-01-preview",
+    "output": {
+      "$ref": "#/111"
+    }
   }
 ]

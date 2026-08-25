@@ -2786,5 +2786,26 @@
     "input": {
       "$ref": "#/227"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.SignalRService/signalR",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/233"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.SignalRService/signalR/replicas",
+    "apiVersion": "2024-08-01-preview",
+    "output": {
+      "$ref": "#/233"
+    }
   }
 ]

@@ -2299,12 +2299,24 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "syncAutoStorageKeys",
+    "resourceType": "Microsoft.Batch/batchAccounts",
+    "apiVersion": "2017-09-01",
+    "output": {
+      "$ref": "#/164"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "BatchAccountRegenerateKeyParameters",
     "properties": {
       "keyName": {
         "type": {
-          "$ref": "#/167"
+          "$ref": "#/169"
         },
         "flags": 1,
         "description": "The type of account key to regenerate."
@@ -2323,10 +2335,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/165"
+        "$ref": "#/167"
       },
       {
-        "$ref": "#/166"
+        "$ref": "#/168"
       }
     ]
   },
@@ -2363,10 +2375,10 @@
     "resourceType": "Microsoft.Batch/batchAccounts",
     "apiVersion": "2017-09-01",
     "output": {
-      "$ref": "#/168"
+      "$ref": "#/170"
     },
     "input": {
-      "$ref": "#/164"
+      "$ref": "#/166"
     }
   },
   {
@@ -2375,7 +2387,32 @@
     "resourceType": "Microsoft.Batch/batchAccounts",
     "apiVersion": "2017-09-01",
     "output": {
-      "$ref": "#/168"
+      "$ref": "#/170"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActivateApplicationPackageParameters",
+    "properties": {
+      "format": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The format of the application package binary file."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.Batch/batchAccounts/applications/versions",
+    "apiVersion": "2017-09-01",
+    "output": {
+      "$ref": "#/164"
+    },
+    "input": {
+      "$ref": "#/173"
     }
   },
   {
@@ -2391,7 +2428,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/172"
+          "$ref": "#/176"
         },
         "flags": 1,
         "description": "The resource type. Must be set to Microsoft.Batch/batchAccounts"
@@ -2415,7 +2452,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/176"
+          "$ref": "#/180"
         },
         "flags": 2,
         "description": "Gets the reason that a Batch account name could not be used. The Reason element is only returned if NameAvailable is false."
@@ -2441,10 +2478,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/174"
+        "$ref": "#/178"
       },
       {
-        "$ref": "#/175"
+        "$ref": "#/179"
       }
     ]
   },
@@ -2454,10 +2491,10 @@
     "resourceType": "Microsoft.Batch/locations",
     "apiVersion": "2017-09-01",
     "output": {
-      "$ref": "#/173"
+      "$ref": "#/177"
     },
     "input": {
-      "$ref": "#/171"
+      "$ref": "#/175"
     }
   },
   {
@@ -2466,7 +2503,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/179"
+          "$ref": "#/183"
         },
         "flags": 0,
         "description": "The properties associated with the certificate."
@@ -2507,7 +2544,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/183"
+          "$ref": "#/187"
         },
         "flags": 2,
         "description": "Values are:\n\n Succeeded - The certificate is available for use in pools.\n Deleting - The user has requested that the certificate be deleted, but the delete operation has not yet completed. You may not reference the certificate when creating or updating pools.\n Failed - The user requested that the certificate be deleted, but there are pools that still have references to the certificate, or it is still installed on one or more compute nodes. (The latter can occur if the certificate has been removed from the pool, but the node has not yet restarted. Nodes refresh their certificates only when they restart.) You may use the cancel certificate delete operation to cancel the delete, or the delete certificate operation to retry the delete."
@@ -2521,7 +2558,7 @@
       },
       "previousProvisioningState": {
         "type": {
-          "$ref": "#/187"
+          "$ref": "#/191"
         },
         "flags": 2,
         "description": "The previous provisioned state of the resource"
@@ -2563,38 +2600,12 @@
       },
       "format": {
         "type": {
-          "$ref": "#/190"
+          "$ref": "#/194"
         },
         "flags": 0,
         "description": "The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx."
       }
     }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Succeeded"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Deleting"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/180"
-      },
-      {
-        "$ref": "#/181"
-      },
-      {
-        "$ref": "#/182"
-      }
-    ]
   },
   {
     "$type": "StringLiteralType",
@@ -2624,6 +2635,32 @@
   },
   {
     "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/189"
+      },
+      {
+        "$ref": "#/190"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
     "value": "Pfx"
   },
   {
@@ -2634,10 +2671,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/188"
+        "$ref": "#/192"
       },
       {
-        "$ref": "#/189"
+        "$ref": "#/193"
       }
     ]
   },
@@ -2647,7 +2684,7 @@
     "resourceType": "Microsoft.Batch/batchAccounts/certificates",
     "apiVersion": "2017-09-01",
     "output": {
-      "$ref": "#/178"
+      "$ref": "#/182"
     }
   },
   {
@@ -2697,7 +2734,7 @@
     "resourceType": "Microsoft.Batch/batchAccounts/pools",
     "apiVersion": "2017-09-01",
     "output": {
-      "$ref": "#/192"
+      "$ref": "#/196"
     }
   },
   {
@@ -2706,7 +2743,7 @@
     "resourceType": "Microsoft.Batch/batchAccounts/pools",
     "apiVersion": "2017-09-01",
     "output": {
-      "$ref": "#/192"
+      "$ref": "#/196"
     }
   }
 ]

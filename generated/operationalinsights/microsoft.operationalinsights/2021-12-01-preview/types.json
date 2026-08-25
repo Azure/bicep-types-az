@@ -1332,5 +1332,14 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.OperationalInsights/workspaces/tables",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/42"
+    }
   }
 ]

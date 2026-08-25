@@ -647,5 +647,23 @@
     },
     "readableScopes": 12,
     "writableScopes": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dismiss",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2019-01-01",
+    "output": {
+      "$ref": "#/38"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reactivate",
+    "resourceType": "Microsoft.Security/locations/alerts",
+    "apiVersion": "2019-01-01",
+    "output": {
+      "$ref": "#/38"
+    }
   }
 ]

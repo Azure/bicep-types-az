@@ -1688,5 +1688,23 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Chaos/experiments",
+    "apiVersion": "2023-10-27-preview",
+    "output": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Chaos/experiments",
+    "apiVersion": "2023-10-27-preview",
+    "output": {
+      "$ref": "#/56"
+    }
   }
 ]

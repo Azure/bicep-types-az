@@ -50,6 +50,12 @@
 * **ApiVersion**: 2021-06-22
 * **Output**: [KeyListResult](#keylistresult)
 
+## Function move (Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers@2021-06-22)
+* **Resource**: Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers
+* **ApiVersion**: 2021-06-22
+* **Input**: [HybridRunbookWorkerMoveParameters](#hybridrunbookworkermoveparameters)
+* **Output**: any
+
 ## AutomationAccountCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
@@ -104,6 +110,10 @@
 * **lastSeenDateTime**: string: Last Heartbeat from the Worker
 * **name**: string: Gets or sets the worker machine name.
 * **registrationTime**: string: Gets or sets the registration time of the worker machine.
+
+## HybridRunbookWorkerMoveParameters
+### Properties
+* **hybridRunbookWorkerGroupName**: string: Gets or sets the target hybrid runbook worker group.
 
 ## Identity
 ### Properties

@@ -255,6 +255,12 @@
 * **ApiVersion**: 2016-09-01
 * **Output**: [EffectiveRouteListResult](#effectiveroutelistresult)
 
+## Function generatevpnclientpackage (Microsoft.Network/virtualNetworkGateways@2016-09-01)
+* **Resource**: Microsoft.Network/virtualNetworkGateways
+* **ApiVersion**: 2016-09-01
+* **Input**: [VpnClientParameters](#vpnclientparameters)
+* **Output**: string
+
 ## Function getBgpPeerStatus (Microsoft.Network/virtualNetworkGateways@2016-09-01)
 * **Resource**: Microsoft.Network/virtualNetworkGateways
 * **ApiVersion**: 2016-09-01
@@ -304,6 +310,21 @@
 * **ApiVersion**: 2016-09-01
 * **Input**: [SecurityGroupViewParameters](#securitygroupviewparameters)
 * **Output**: [SecurityGroupViewResult](#securitygroupviewresult)
+
+## Function start (Microsoft.Network/applicationGateways@2016-09-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2016-09-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/applicationGateways@2016-09-01)
+* **Resource**: Microsoft.Network/applicationGateways
+* **ApiVersion**: 2016-09-01
+* **Output**: any
+
+## Function stop (Microsoft.Network/networkWatchers/packetCaptures@2016-09-01)
+* **Resource**: Microsoft.Network/networkWatchers/packetCaptures
+* **ApiVersion**: 2016-09-01
+* **Output**: any
 
 ## Function topology (Microsoft.Network/networkWatchers@2016-09-01)
 * **Resource**: Microsoft.Network/networkWatchers
@@ -1424,6 +1445,10 @@
 * **vpnClientAddressPool**: [AddressSpace](#addressspace): The reference of the address space resource which represents Address space for P2S VpnClient.
 * **vpnClientRevokedCertificates**: [VpnClientRevokedCertificate](#vpnclientrevokedcertificate)[]: VpnClientRevokedCertificate for Virtual network gateway.
 * **vpnClientRootCertificates**: [VpnClientRootCertificate](#vpnclientrootcertificate)[]: VpnClientRootCertificate for virtual network gateway.
+
+## VpnClientParameters
+### Properties
+* **ProcessorArchitecture**: 'Amd64' | 'X86' | string (Required): VPN client Processor Architecture. Possible values are: 'AMD64' and 'X86'.
 
 ## VpnClientRevokedCertificate
 ### Properties

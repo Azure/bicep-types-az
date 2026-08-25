@@ -2035,6 +2035,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Cache/redis",
+    "apiVersion": "2024-04-01-preview",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/159"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExportRDBParameters",
     "properties": {
@@ -2076,6 +2088,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Cache/redis",
+    "apiVersion": "2024-04-01-preview",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/162"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "OperationStatusResult",
     "properties": {
@@ -2102,7 +2126,7 @@
       },
       "percentComplete": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/165"
         },
         "flags": 0,
         "description": "Percent of the operation that is complete."
@@ -2123,14 +2147,14 @@
       },
       "operations": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/166"
         },
         "flags": 0,
         "description": "The operations list."
       },
       "error": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "If present, details of the operation error."
@@ -2145,7 +2169,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/162"
+      "$ref": "#/164"
     }
   },
   {
@@ -2175,14 +2199,14 @@
       },
       "details": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/168"
         },
         "flags": 2,
         "description": "The error details."
       },
       "additionalInfo": {
         "type": {
-          "$ref": "#/168"
+          "$ref": "#/170"
         },
         "flags": 2,
         "description": "The error additional info."
@@ -2192,7 +2216,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/165"
+      "$ref": "#/167"
     }
   },
   {
@@ -2218,7 +2242,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/167"
+      "$ref": "#/169"
     }
   },
   {
@@ -2227,7 +2251,7 @@
     "resourceType": "Microsoft.Cache/redis",
     "apiVersion": "2024-04-01-preview",
     "output": {
-      "$ref": "#/162"
+      "$ref": "#/164"
     }
   }
 ]

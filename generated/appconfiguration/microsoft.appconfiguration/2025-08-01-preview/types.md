@@ -104,6 +104,11 @@
 * **ApiVersion**: 2025-08-01-preview
 * **Output**: [ApiKeyListResult](#apikeylistresult)
 
+## Function purge (Microsoft.AppConfiguration/locations/deletedConfigurationStores@2025-08-01-preview)
+* **Resource**: Microsoft.AppConfiguration/locations/deletedConfigurationStores
+* **ApiVersion**: 2025-08-01-preview
+* **Output**: any
+
 ## Function reconcile (Microsoft.AppConfiguration/configurationStores/networkSecurityPerimeterConfigurations@2025-08-01-preview)
 * **Resource**: Microsoft.AppConfiguration/configurationStores/networkSecurityPerimeterConfigurations
 * **ApiVersion**: 2025-08-01-preview

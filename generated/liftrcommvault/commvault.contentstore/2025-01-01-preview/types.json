@@ -2368,11 +2368,46 @@
   },
   {
     "$type": "ObjectType",
+    "name": "StopBackupProtectionGroupRequest",
+    "properties": {
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The reason for stopping the backup"
+      },
+      "comment": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Any further comments"
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stopBackup",
+    "resourceType": "Commvault.ContentStore/cloudAccounts/protectionGroups",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/211"
+    },
+    "input": {
+      "$ref": "#/210"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "RestorePoints",
     "properties": {
       "restoreTimes": {
         "type": {
-          "$ref": "#/211"
+          "$ref": "#/214"
         },
         "flags": 3,
         "description": "The Commvault Protected Item Restore points"
@@ -2391,7 +2426,7 @@
     "resourceType": "Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/210"
+      "$ref": "#/213"
     }
   },
   {

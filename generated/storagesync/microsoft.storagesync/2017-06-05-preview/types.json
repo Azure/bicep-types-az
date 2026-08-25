@@ -965,12 +965,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "prebackup",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2017-06-05-preview",
+    "output": {
+      "$ref": "#/6"
+    },
+    "input": {
+      "$ref": "#/60"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "PostBackupResponse",
     "properties": {
       "backupMetadata": {
         "type": {
-          "$ref": "#/62"
+          "$ref": "#/63"
         },
         "flags": 0,
         "description": "Post Backup Response Properties"
@@ -996,7 +1008,7 @@
     "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
     "apiVersion": "2017-06-05-preview",
     "output": {
-      "$ref": "#/61"
+      "$ref": "#/62"
     },
     "input": {
       "$ref": "#/60"
@@ -1057,7 +1069,7 @@
       },
       "restoreFileSpec": {
         "type": {
-          "$ref": "#/66"
+          "$ref": "#/67"
         },
         "flags": 0,
         "description": "Pre Restore restore file spec array."
@@ -1094,7 +1106,28 @@
   {
     "$type": "ArrayType",
     "itemType": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "prerestore",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2017-06-05-preview",
+    "output": {
+      "$ref": "#/6"
+    },
+    "input": {
       "$ref": "#/65"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreheartbeat",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2017-06-05-preview",
+    "output": {
+      "$ref": "#/6"
     }
   },
   {
@@ -1152,7 +1185,7 @@
       },
       "restoreFileSpec": {
         "type": {
-          "$ref": "#/68"
+          "$ref": "#/71"
         },
         "flags": 0,
         "description": "Post Restore restore file spec array."
@@ -1162,7 +1195,37 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/65"
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "postrestore",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "apiVersion": "2017-06-05-preview",
+    "output": {
+      "$ref": "#/6"
+    },
+    "input": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "recallAction",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints",
+    "apiVersion": "2017-06-05-preview",
+    "output": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "abort",
+    "resourceType": "Microsoft.StorageSync/storageSyncServices/workflows",
+    "apiVersion": "2017-06-05-preview",
+    "output": {
+      "$ref": "#/6"
     }
   }
 ]

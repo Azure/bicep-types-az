@@ -97,6 +97,12 @@
 * **properties**: [ClusterPrincipalProperties](#clusterprincipalproperties): The cluster principal.
 * **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addLanguageExtensions (Microsoft.Kusto/clusters@2020-06-14)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2020-06-14
+* **Input**: [LanguageExtensionsList](#languageextensionslist)
+* **Output**: any
+
 ## Function addPrincipals (Microsoft.Kusto/clusters/databases@2020-06-14)
 * **Resource**: Microsoft.Kusto/clusters/databases
 * **ApiVersion**: 2020-06-14
@@ -139,6 +145,12 @@
 * **Input**: [DataConnectionValidation](#dataconnectionvalidation)
 * **Output**: [DataConnectionValidationListResult](#dataconnectionvalidationlistresult)
 
+## Function detachFollowerDatabases (Microsoft.Kusto/clusters@2020-06-14)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2020-06-14
+* **Input**: [FollowerDatabaseDefinition](#followerdatabasedefinition)
+* **Output**: any
+
 ## Function diagnoseVirtualNetwork (Microsoft.Kusto/clusters@2020-06-14)
 * **Resource**: Microsoft.Kusto/clusters
 * **ApiVersion**: 2020-06-14
@@ -159,11 +171,27 @@
 * **ApiVersion**: 2020-06-14
 * **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
 
+## Function removeLanguageExtensions (Microsoft.Kusto/clusters@2020-06-14)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2020-06-14
+* **Input**: [LanguageExtensionsList](#languageextensionslist)
+* **Output**: any
+
 ## Function removePrincipals (Microsoft.Kusto/clusters/databases@2020-06-14)
 * **Resource**: Microsoft.Kusto/clusters/databases
 * **ApiVersion**: 2020-06-14
 * **Input**: [DatabasePrincipalListRequest](#databaseprincipallistrequest)
 * **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
+
+## Function start (Microsoft.Kusto/clusters@2020-06-14)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2020-06-14
+* **Output**: any
+
+## Function stop (Microsoft.Kusto/clusters@2020-06-14)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2020-06-14
+* **Output**: any
 
 ## AttachedDatabaseConfigurationProperties
 ### Properties

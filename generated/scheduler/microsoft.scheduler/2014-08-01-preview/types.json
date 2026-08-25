@@ -1404,5 +1404,35 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.Scheduler/jobCollections",
+    "apiVersion": "2014-08-01-preview",
+    "output": {
+      "$ref": "#/112"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.Scheduler/jobCollections",
+    "apiVersion": "2014-08-01-preview",
+    "output": {
+      "$ref": "#/112"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.Scheduler/jobCollections/jobs",
+    "apiVersion": "2014-08-01-preview",
+    "output": {
+      "$ref": "#/112"
+    }
   }
 ]

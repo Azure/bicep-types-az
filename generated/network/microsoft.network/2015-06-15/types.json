@@ -6118,6 +6118,27 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Network/applicationGateways",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/347"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Network/applicationGateways",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/347"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "reset",
     "resourceType": "Microsoft.Network/virtualNetworkGateways",
@@ -6127,6 +6148,53 @@
     },
     "input": {
       "$ref": "#/325"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VpnClientParameters",
+    "properties": {
+      "ProcessorArchitecture": {
+        "type": {
+          "$ref": "#/354"
+        },
+        "flags": 0,
+        "description": "VPN client Processor Architecture. Possible values are: 'AMD64' and 'X86'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Amd64"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "X86"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/352"
+      },
+      {
+        "$ref": "#/353"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generatevpnclientpackage",
+    "resourceType": "Microsoft.Network/virtualNetworkGateways",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/0"
+    },
+    "input": {
+      "$ref": "#/351"
     }
   }
 ]

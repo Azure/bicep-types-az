@@ -55,6 +55,12 @@
 * **Input**: [ExportDevicesRequest](#exportdevicesrequest)
 * **Output**: [JobResponse](#jobresponse)
 
+## Function failover (Microsoft.Devices/IotHubs@2019-03-22-preview)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2019-03-22-preview
+* **Input**: [FailoverInput](#failoverinput)
+* **Output**: any
+
 ## Function generateVerificationCode (Microsoft.Devices/IotHubs/certificates@2019-03-22-preview)
 * **Resource**: Microsoft.Devices/IotHubs/certificates
 * **ApiVersion**: 2019-03-22-preview
@@ -152,6 +158,10 @@
 ### Properties
 * **excludeKeys**: bool (Required): The value indicating whether keys should be excluded during export.
 * **exportBlobContainerUri**: string (Required): The export blob container URI.
+
+## FailoverInput
+### Properties
+* **failoverRegion**: string (Required): Region the hub will be failed over to
 
 ## FallbackRouteProperties
 ### Properties

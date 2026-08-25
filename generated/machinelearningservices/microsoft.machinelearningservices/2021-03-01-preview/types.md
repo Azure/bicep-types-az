@@ -236,6 +236,11 @@
 * **tags**: [PrivateEndpointConnectionTags](#privateendpointconnectiontags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.MachineLearningServices/workspaces/jobs@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/jobs
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: any
+
 ## Function exportLabels (Microsoft.MachineLearningServices/workspaces/labelingJobs@2021-03-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/labelingJobs
 * **ApiVersion**: 2021-03-01-preview
@@ -293,10 +298,46 @@
 * **ApiVersion**: 2021-03-01-preview
 * **Output**: [ListStorageAccountKeysResult](#liststorageaccountkeysresult)
 
+## Function pause (Microsoft.MachineLearningServices/workspaces/labelingJobs@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/labelingJobs
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: any
+
 ## Function prepareNotebook (Microsoft.MachineLearningServices/workspaces@2021-03-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2021-03-01-preview
 * **Output**: [NotebookResourceInfo](#notebookresourceinfo)
+
+## Function regenerateKeys (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2021-03-01-preview
+* **Input**: [RegenerateEndpointKeysRequest](#regenerateendpointkeysrequest)
+* **Output**: any
+
+## Function restart (Microsoft.MachineLearningServices/workspaces/computes@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: any
+
+## Function resume (Microsoft.MachineLearningServices/workspaces/labelingJobs@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/labelingJobs
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: any
+
+## Function resyncKeys (Microsoft.MachineLearningServices/workspaces@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: any
+
+## Function start (Microsoft.MachineLearningServices/workspaces/computes@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.MachineLearningServices/workspaces/computes@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: any
 
 ## Function token (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2021-03-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
@@ -308,6 +349,12 @@
 * **ApiVersion**: 2021-03-01-preview
 * **Input**: [QuotaUpdateParameters](#quotaupdateparameters)
 * **Output**: [UpdateWorkspaceQuotasResult](#updateworkspacequotasresult)
+
+## Function updateSchedules (Microsoft.MachineLearningServices/workspaces/computes@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2021-03-01-preview
+* **Input**: [ComputeSchedules](#computeschedules)
+* **Output**: any
 
 ## AccountKeyDatastoreSecrets
 ### Properties
@@ -1635,6 +1682,11 @@ optional
 * **hours**: int[]: The hours.
 * **minutes**: int[]: The minutes.
 * **weekDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: The days of the week.
+
+## RegenerateEndpointKeysRequest
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string (Required): [Required] Specification for which type of key to generate. Primary or Secondary.
+* **keyValue**: string: The value the key is set to.
 
 ## RegistryListCredentialsResult
 ### Properties

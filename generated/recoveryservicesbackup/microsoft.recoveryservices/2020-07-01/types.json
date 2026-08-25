@@ -82,6 +82,21 @@
     "$type": "BooleanType"
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "prepareDataMove",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupstorageconfig",
+    "apiVersion": "2020-07-01",
+    "output": {
+      "$ref": "#/8"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "TriggerDataMoveRequest",
     "properties": {
@@ -101,7 +116,7 @@
       },
       "dataMoveLevel": {
         "type": {
-          "$ref": "#/12"
+          "$ref": "#/14"
         },
         "flags": 1,
         "description": "DataMove Level"
@@ -115,7 +130,7 @@
       },
       "sourceContainerArmIds": {
         "type": {
-          "$ref": "#/13"
+          "$ref": "#/15"
         },
         "flags": 0,
         "description": "Source Container ArmIds"
@@ -145,13 +160,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/9"
-      },
-      {
-        "$ref": "#/10"
-      },
-      {
         "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
       },
       {
         "$ref": "#/1"
@@ -162,6 +177,18 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "triggerDataMove",
+    "resourceType": "Microsoft.RecoveryServices/vaults/backupstorageconfig",
+    "apiVersion": "2020-07-01",
+    "output": {
+      "$ref": "#/8"
+    },
+    "input": {
+      "$ref": "#/10"
     }
   }
 ]

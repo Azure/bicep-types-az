@@ -111,6 +111,12 @@
 * **Input**: [ResubscribeProperties](#resubscribeproperties)
 * **Output**: [DatadogMonitorResource](#datadogmonitorresource)
 
+## Function setDefaultKey (Microsoft.Datadog/monitors@2025-11-03-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2025-11-03-preview
+* **Input**: [DatadogApiKey](#datadogapikey)
+* **Output**: any
+
 ## AgentRules
 ### Properties
 * **enableAgentMonitoring**: bool: Flag specifying if agent monitoring should be enabled for the Monitor resource.

@@ -7842,6 +7842,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "offboard",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/614"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "GetFileUploadURLParameters",
     "properties": {
@@ -7854,7 +7866,7 @@
       },
       "resourceType": {
         "type": {
-          "$ref": "#/617"
+          "$ref": "#/619"
         },
         "flags": 0,
         "description": "Resource type for file uploading."
@@ -7873,10 +7885,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/615"
+        "$ref": "#/617"
       },
       {
-        "$ref": "#/616"
+        "$ref": "#/618"
       },
       {
         "$ref": "#/2"
@@ -7909,10 +7921,10 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/618"
+      "$ref": "#/620"
     },
     "input": {
-      "$ref": "#/614"
+      "$ref": "#/616"
     }
   },
   {
@@ -7962,7 +7974,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/624"
+          "$ref": "#/626"
         },
         "flags": 0,
         "description": "The reason for unavailability of a name. Required if nameAvailable == false."
@@ -7988,10 +8000,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/622"
+        "$ref": "#/624"
       },
       {
-        "$ref": "#/623"
+        "$ref": "#/625"
       },
       {
         "$ref": "#/2"
@@ -8004,10 +8016,10 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/621"
+      "$ref": "#/623"
     },
     "input": {
-      "$ref": "#/620"
+      "$ref": "#/622"
     }
   },
   {
@@ -8073,13 +8085,13 @@
       },
       "packageUsageEntries": {
         "type": {
-          "$ref": "#/636"
+          "$ref": "#/638"
         },
         "flags": 0
       },
       "nextRequest": {
         "type": {
-          "$ref": "#/627"
+          "$ref": "#/629"
         },
         "flags": 0
       }
@@ -8127,7 +8139,7 @@
       },
       "usageEntriesGroupedByUpdateType": {
         "type": {
-          "$ref": "#/635"
+          "$ref": "#/637"
         },
         "flags": 0
       }
@@ -8163,7 +8175,7 @@
       },
       "usageGroups": {
         "type": {
-          "$ref": "#/634"
+          "$ref": "#/636"
         },
         "flags": 0
       }
@@ -8235,7 +8247,7 @@
       },
       "executionUsageDetails": {
         "type": {
-          "$ref": "#/633"
+          "$ref": "#/635"
         },
         "flags": 0
       }
@@ -8334,6 +8346,18 @@
   {
     "$type": "ArrayType",
     "itemType": {
+      "$ref": "#/634"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/633"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
       "$ref": "#/632"
     }
   },
@@ -8344,27 +8368,15 @@
     }
   },
   {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/630"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/629"
-    }
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "getUsage",
     "resourceType": "Microsoft.TestBase/testBaseAccounts",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/628"
+      "$ref": "#/630"
     },
     "input": {
-      "$ref": "#/627"
+      "$ref": "#/629"
     }
   },
   {
@@ -8394,7 +8406,7 @@
       },
       "sasToken": {
         "type": {
-          "$ref": "#/639"
+          "$ref": "#/641"
         },
         "flags": 2,
         "description": "A SAS token for the storage account to access workspace."
@@ -8418,7 +8430,127 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts/draftPackages",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/638"
+      "$ref": "#/640"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CopyFromPackageOperationParameters",
+    "properties": {
+      "packageId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The id of the package to copy from."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "copyFromPackage",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/draftPackages",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/614"
+    },
+    "input": {
+      "$ref": "#/643"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtractFileOperationParameters",
+    "properties": {
+      "fileType": {
+        "type": {
+          "$ref": "#/648"
+        },
+        "flags": 0,
+        "description": "The type of file to extract."
+      },
+      "sourceFile": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Relative path of the file to be extracted, the path must under working path of this draft package."
+      },
+      "intuneAppId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Intune application id."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TestBasePackage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IntuneWinPackage"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/646"
+      },
+      {
+        "$ref": "#/647"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "extractFile",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/draftPackages",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/614"
+    },
+    "input": {
+      "$ref": "#/645"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateOperationParameters",
+    "properties": {
+      "forceGenerate": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "Force to generate package files even if no metadata changed."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateFoldersAndScripts",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/draftPackages",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/614"
+    },
+    "input": {
+      "$ref": "#/650"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "hardDelete",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/packages",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/614"
     }
   },
   {
@@ -8427,7 +8559,7 @@
     "properties": {
       "downloadUrl": {
         "type": {
-          "$ref": "#/639"
+          "$ref": "#/641"
         },
         "flags": 2,
         "description": "The download URL."
@@ -8447,7 +8579,7 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts/packages",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/641"
+      "$ref": "#/653"
     }
   },
   {
@@ -8456,14 +8588,14 @@
     "properties": {
       "testType": {
         "type": {
-          "$ref": "#/647"
+          "$ref": "#/659"
         },
         "flags": 0,
         "description": "The type of the test."
       },
       "osUpdateType": {
         "type": {
-          "$ref": "#/651"
+          "$ref": "#/663"
         },
         "flags": 0,
         "description": "Specifies the OS update type to test against."
@@ -8514,13 +8646,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/644"
+        "$ref": "#/656"
       },
       {
-        "$ref": "#/645"
+        "$ref": "#/657"
       },
       {
-        "$ref": "#/646"
+        "$ref": "#/658"
       },
       {
         "$ref": "#/2"
@@ -8543,13 +8675,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/648"
+        "$ref": "#/660"
       },
       {
-        "$ref": "#/649"
+        "$ref": "#/661"
       },
       {
-        "$ref": "#/650"
+        "$ref": "#/662"
       },
       {
         "$ref": "#/2"
@@ -8558,11 +8690,23 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "runTest",
+    "resourceType": "Microsoft.TestBase/testBaseAccounts/packages",
+    "apiVersion": "2023-11-01-preview",
+    "output": {
+      "$ref": "#/614"
+    },
+    "input": {
+      "$ref": "#/655"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "getDownloadUrl",
     "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/641"
+      "$ref": "#/653"
     }
   },
   {
@@ -8571,7 +8715,7 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/641"
+      "$ref": "#/653"
     }
   },
   {
@@ -8593,10 +8737,10 @@
     "resourceType": "Microsoft.TestBase/testBaseAccounts/packages/testResults",
     "apiVersion": "2023-11-01-preview",
     "output": {
-      "$ref": "#/641"
+      "$ref": "#/653"
     },
     "input": {
-      "$ref": "#/654"
+      "$ref": "#/667"
     }
   }
 ]

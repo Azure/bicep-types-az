@@ -127,6 +127,16 @@
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties supplied to create or update VirtualNetworkRules
 * **type**: 'Microsoft.EventHub/namespaces/virtualnetworkrules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function breakPairing (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2018-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: any
+
+## Function failover (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2018-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: any
+
 ## Function listKeys (Microsoft.EventHub/namespaces/authorizationRules@2018-01-01-preview)
 * **Resource**: Microsoft.EventHub/namespaces/authorizationRules
 * **ApiVersion**: 2018-01-01-preview

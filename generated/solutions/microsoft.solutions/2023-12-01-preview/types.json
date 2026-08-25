@@ -2018,6 +2018,15 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "refreshPermissions",
+    "resourceType": "Microsoft.Solutions/applications",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/6"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "UpdateAccessDefinition",
     "properties": {
@@ -2030,21 +2039,21 @@
       },
       "Metadata": {
         "type": {
-          "$ref": "#/157"
+          "$ref": "#/158"
         },
         "flags": 1,
         "description": "The JIT request metadata."
       },
       "Status": {
         "type": {
-          "$ref": "#/161"
+          "$ref": "#/162"
         },
         "flags": 1,
         "description": "The JIT status."
       },
       "SubStatus": {
         "type": {
-          "$ref": "#/168"
+          "$ref": "#/169"
         },
         "flags": 1,
         "description": "The JIT status."
@@ -2101,13 +2110,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/158"
-      },
-      {
         "$ref": "#/159"
       },
       {
         "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
       },
       {
         "$ref": "#/2"
@@ -2142,9 +2151,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/162"
-      },
-      {
         "$ref": "#/163"
       },
       {
@@ -2160,8 +2166,23 @@
         "$ref": "#/167"
       },
       {
+        "$ref": "#/168"
+      },
+      {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateAccess",
+    "resourceType": "Microsoft.Solutions/applications",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/157"
+    },
+    "input": {
+      "$ref": "#/157"
+    }
   }
 ]

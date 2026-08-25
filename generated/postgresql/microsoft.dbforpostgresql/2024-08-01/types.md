@@ -162,11 +162,27 @@
 * **Input**: [LtrPreBackupRequest](#ltrprebackuprequest)
 * **Output**: [LtrPreBackupResponse](#ltrprebackupresponse)
 
+## Function restart (Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2024-08-01
+* **Input**: [RestartParameter](#restartparameter)
+* **Output**: any
+
+## Function start (Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2024-08-01
+* **Output**: any
+
 ## Function startLtrBackup (Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01)
 * **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
 * **ApiVersion**: 2024-08-01
 * **Input**: [LtrBackupRequest](#ltrbackuprequest)
 * **Output**: [LtrBackupResponse](#ltrbackupresponse)
+
+## Function stop (Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2024-08-01
+* **Output**: any
 
 ## AdminCredentials
 ### Properties
@@ -435,6 +451,11 @@
 * **promoteOption**: 'forced' | 'planned' | string (WriteOnly): Data synchronization option to use when processing the operation specified in the promoteMode property This property is write only. Planned means that the operation will wait for data in the read replica to be fully synchronized with its source server before it initiates the operation. Forced means that the operation will not wait for data in the read replica to be synchronized with its source server before it initiates the operation.
 * **replicationState**: 'Active' | 'Broken' | 'Catchup' | 'Provisioning' | 'Reconfiguring' | 'Updating' | string (ReadOnly): Indicates the replication state of a read replica. This property is returned only when the target flexible server is a read replica. Possible  values are Active, Broken, Catchup, Provisioning, Reconfiguring, and Updating
 * **role**: 'AsyncReplica' | 'GeoAsyncReplica' | 'None' | 'Primary' | string: Role of the server in a replication set.
+
+## RestartParameter
+### Properties
+* **failoverMode**: 'ForcedFailover' | 'ForcedSwitchover' | 'PlannedFailover' | 'PlannedSwitchover' | string: Failover mode.
+* **restartWithFailover**: bool: Indicates if restart the PostgreSQL database engine should failover or switch over from primary to standby. This only works if flexible server has high availability enabled.
 
 ## ServerBackupProperties
 ### Properties

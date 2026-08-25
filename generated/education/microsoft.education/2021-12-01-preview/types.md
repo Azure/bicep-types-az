@@ -55,6 +55,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Education/studentLabs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function approve (Microsoft.Education/labs/joinRequests@2021-12-01-preview)
+* **Resource**: Microsoft.Education/labs/joinRequests
+* **ApiVersion**: 2021-12-01-preview
+* **Output**: any
+
+## Function deny (Microsoft.Education/labs/joinRequests@2021-12-01-preview)
+* **Resource**: Microsoft.Education/labs/joinRequests
+* **ApiVersion**: 2021-12-01-preview
+* **Output**: any
+
 ## Function generateInviteCode (Microsoft.Education/labs@2021-12-01-preview)
 * **Resource**: Microsoft.Education/labs
 * **ApiVersion**: 2021-12-01-preview

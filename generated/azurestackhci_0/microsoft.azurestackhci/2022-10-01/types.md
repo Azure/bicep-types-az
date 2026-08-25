@@ -105,6 +105,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureStackHCI/clusters/updateSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function apply (Microsoft.AzureStackHCI/clusters/updates@2022-10-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters/updates
+* **ApiVersion**: 2022-10-01
+* **Output**: any
+
 ## Function createArcIdentity (Microsoft.AzureStackHCI/clusters/arcSettings@2022-10-01)
 * **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
 * **ApiVersion**: 2022-10-01
@@ -125,6 +130,12 @@
 * **Resource**: Microsoft.AzureStackHCI/clusters/arcSettings
 * **ApiVersion**: 2022-10-01
 * **Output**: [PasswordCredential](#passwordcredential)
+
+## Function uploadCertificate (Microsoft.AzureStackHCI/clusters@2022-10-01)
+* **Resource**: Microsoft.AzureStackHCI/clusters
+* **ApiVersion**: 2022-10-01
+* **Input**: [UploadCertificateRequest](#uploadcertificaterequest)
+* **Output**: any
 
 ## ArcIdentityResponse
 ### Properties
@@ -282,6 +293,10 @@
 ### Properties
 * **provisioningState**: string (ReadOnly): Provisioning State
 
+## RawCertificateData
+### Properties
+* **certificates**: string[]
+
 ## SkuMappings
 ### Properties
 * **catalogPlanId**: string: Identifier of the CatalogPlan for the sku
@@ -385,6 +400,10 @@
 * **packageVersions**: [PackageVersionInfo](#packageversioninfo)[]: Current version of each updatable component.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state of the UpdateSummaries proxy resource.
 * **state**: 'AppliedSuccessfully' | 'NeedsAttention' | 'PreparationFailed' | 'PreparationInProgress' | 'Unknown' | 'UpdateAvailable' | 'UpdateFailed' | 'UpdateInProgress' | string: Overall update state of the stamp.
+
+## UploadCertificateRequest
+### Properties
+* **properties**: [RawCertificateData](#rawcertificatedata)
 
 ## UserAssignedIdentities
 ### Properties

@@ -1477,5 +1477,17 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSite",
+    "resourceType": "Microsoft.OffAzureSpringBoot/springbootsites",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/110"
+    }
   }
 ]

@@ -12,6 +12,21 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.HanaOnAzure/hanaInstances' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function restart (Microsoft.HanaOnAzure/hanaInstances@2017-11-03-preview)
+* **Resource**: Microsoft.HanaOnAzure/hanaInstances
+* **ApiVersion**: 2017-11-03-preview
+* **Output**: any
+
+## Function shutdown (Microsoft.HanaOnAzure/hanaInstances@2017-11-03-preview)
+* **Resource**: Microsoft.HanaOnAzure/hanaInstances
+* **ApiVersion**: 2017-11-03-preview
+* **Output**: any
+
+## Function start (Microsoft.HanaOnAzure/hanaInstances@2017-11-03-preview)
+* **Resource**: Microsoft.HanaOnAzure/hanaInstances
+* **ApiVersion**: 2017-11-03-preview
+* **Output**: any
+
 ## Disk
 ### Properties
 * **diskSizeGB**: int: Specifies the size of an empty data disk in gigabytes.

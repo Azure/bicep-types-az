@@ -15,6 +15,11 @@
 * **type**: 'Microsoft.ComputeBulkActions/locations/launchBulkInstancesOperations' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: Zones in which the LaunchBulkInstancesOperation is available
 
+## Function cancel (Microsoft.ComputeBulkActions/locations/launchBulkInstancesOperations@2026-02-01-preview)
+* **Resource**: Microsoft.ComputeBulkActions/locations/launchBulkInstancesOperations
+* **ApiVersion**: 2026-02-01-preview
+* **Output**: any
+
 ## Function virtualMachinesCancelOperations (Microsoft.ComputeBulkActions/locations@2026-02-01-preview)
 * **Resource**: Microsoft.ComputeBulkActions/locations
 * **ApiVersion**: 2026-02-01-preview

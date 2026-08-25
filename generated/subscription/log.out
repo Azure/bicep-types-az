@@ -22,6 +22,8 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscription/cancel': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscription/enable': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscription/rename': Unable to find type segments
+warning | Resource action acceptChangeTenant under path '/providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptChangeTenant' has no response schema. Returning 'any'.
+warning | Resource action acceptOwnership under path '/providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptOwnership' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -34,6 +36,8 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscription/cancel': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscription/rename': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscription/enable': Unable to find type segments
+warning | Resource action acceptOwnership under path '/providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptOwnership' has no response schema. Returning 'any'.
+warning | Resource action acceptChangeTenant under path '/providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptChangeTenant' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -46,6 +50,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscription/cancel': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscription/rename': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Subscription/enable': Unable to find type segments
+warning | Resource action acceptOwnership under path '/providers/Microsoft.Subscription/subscriptions/{subscriptionId}/acceptOwnership' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.

@@ -62,6 +62,12 @@
 * **Input**: [NotificationRequestBody](#notificationrequestbody)
 * **Output**: [TestNotificationDetailsResponse](#testnotificationdetailsresponse)
 
+## Function subscribe (Microsoft.Insights/actionGroups@2022-06-01)
+* **Resource**: Microsoft.Insights/actionGroups
+* **ApiVersion**: 2022-06-01
+* **Input**: [EnableRequest](#enablerequest)
+* **Output**: any
+
 ## ActionDetail
 ### Properties
 * **Detail**: string: The detail of the friendly error message
@@ -311,6 +317,10 @@ This name should be unique across all destinations (regardless of type) within t
 * **name**: string (Required): The name of the email receiver. Names must be unique across all receivers within an action group.
 * **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail.
 * **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
+
+## EnableRequest
+### Properties
+* **receiverName**: string (Required): The name of the receiver to resubscribe.
 
 ## EventHubDestination
 ### Properties

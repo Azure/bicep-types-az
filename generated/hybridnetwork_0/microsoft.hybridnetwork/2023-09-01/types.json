@@ -5640,12 +5640,27 @@
     ]
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "executeRequest",
+    "resourceType": "Microsoft.HybridNetwork/networkFunctions",
+    "apiVersion": "2023-09-01",
+    "output": {
+      "$ref": "#/463"
+    },
+    "input": {
+      "$ref": "#/454"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "NetworkFunctionDefinitionVersionUpdateState",
     "properties": {
       "versionState": {
         "type": {
-          "$ref": "#/470"
+          "$ref": "#/472"
         },
         "flags": 0,
         "description": "The network function definition version state. Only the 'Active' and 'Deprecated' states are allowed for updates. Other states are used for internal state transitioning."
@@ -5680,12 +5695,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/464"
-      },
-      {
-        "$ref": "#/465"
-      },
-      {
         "$ref": "#/466"
       },
       {
@@ -5698,6 +5707,12 @@
         "$ref": "#/469"
       },
       {
+        "$ref": "#/470"
+      },
+      {
+        "$ref": "#/471"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -5708,10 +5723,10 @@
     "resourceType": "Microsoft.HybridNetwork/publishers/networkFunctionDefinitionGroups/networkFunctionDefinitionVersions",
     "apiVersion": "2023-09-01",
     "output": {
-      "$ref": "#/463"
+      "$ref": "#/465"
     },
     "input": {
-      "$ref": "#/463"
+      "$ref": "#/465"
     }
   },
   {
@@ -5720,7 +5735,7 @@
     "properties": {
       "versionState": {
         "type": {
-          "$ref": "#/479"
+          "$ref": "#/481"
         },
         "flags": 0,
         "description": "The network service design version state."
@@ -5755,12 +5770,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/473"
-      },
-      {
-        "$ref": "#/474"
-      },
-      {
         "$ref": "#/475"
       },
       {
@@ -5773,6 +5782,12 @@
         "$ref": "#/478"
       },
       {
+        "$ref": "#/479"
+      },
+      {
+        "$ref": "#/480"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -5783,10 +5798,10 @@
     "resourceType": "Microsoft.HybridNetwork/publishers/networkServiceDesignGroups/networkServiceDesignVersions",
     "apiVersion": "2023-09-01",
     "output": {
-      "$ref": "#/472"
+      "$ref": "#/474"
     },
     "input": {
-      "$ref": "#/472"
+      "$ref": "#/474"
     }
   },
   {
@@ -5796,10 +5811,10 @@
     "baseProperties": {},
     "elements": {
       "AzureContainerRegistryScopedToken": {
-        "$ref": "#/482"
+        "$ref": "#/484"
       },
       "AzureStorageAccountToken": {
-        "$ref": "#/485"
+        "$ref": "#/487"
       }
     }
   },
@@ -5830,7 +5845,7 @@
       },
       "repositories": {
         "type": {
-          "$ref": "#/483"
+          "$ref": "#/485"
         },
         "flags": 0,
         "description": "The repositories that could be accessed using the current credential."
@@ -5844,7 +5859,7 @@
       },
       "credentialType": {
         "type": {
-          "$ref": "#/484"
+          "$ref": "#/486"
         },
         "flags": 1,
         "description": "The credential type."
@@ -5874,7 +5889,7 @@
       },
       "containerCredentials": {
         "type": {
-          "$ref": "#/487"
+          "$ref": "#/489"
         },
         "flags": 0,
         "description": "The containers that could be accessed using the current credential."
@@ -5888,7 +5903,7 @@
       },
       "credentialType": {
         "type": {
-          "$ref": "#/488"
+          "$ref": "#/490"
         },
         "flags": 1,
         "description": "The credential type."
@@ -5918,7 +5933,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/486"
+      "$ref": "#/488"
     }
   },
   {
@@ -5931,7 +5946,7 @@
     "resourceType": "Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests",
     "apiVersion": "2023-09-01",
     "output": {
-      "$ref": "#/481"
+      "$ref": "#/483"
     }
   },
   {
@@ -5940,7 +5955,7 @@
     "properties": {
       "artifactManifestState": {
         "type": {
-          "$ref": "#/497"
+          "$ref": "#/499"
         },
         "flags": 0,
         "description": "The artifact manifest state."
@@ -5975,12 +5990,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/491"
-      },
-      {
-        "$ref": "#/492"
-      },
-      {
         "$ref": "#/493"
       },
       {
@@ -5993,6 +6002,12 @@
         "$ref": "#/496"
       },
       {
+        "$ref": "#/497"
+      },
+      {
+        "$ref": "#/498"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -6003,10 +6018,10 @@
     "resourceType": "Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests",
     "apiVersion": "2023-09-01",
     "output": {
-      "$ref": "#/490"
+      "$ref": "#/492"
     },
     "input": {
-      "$ref": "#/490"
+      "$ref": "#/492"
     }
   }
 ]

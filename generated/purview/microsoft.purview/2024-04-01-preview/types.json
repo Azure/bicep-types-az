@@ -1669,6 +1669,21 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addRootCollectionAdmin",
+    "resourceType": "Microsoft.Purview/accounts",
+    "apiVersion": "2024-04-01-preview",
+    "output": {
+      "$ref": "#/133"
+    },
+    "input": {
+      "$ref": "#/132"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AccessKeys",
     "properties": {
@@ -1694,7 +1709,7 @@
     "resourceType": "Microsoft.Purview/accounts",
     "apiVersion": "2024-04-01-preview",
     "output": {
-      "$ref": "#/133"
+      "$ref": "#/135"
     }
   },
   {
@@ -1703,7 +1718,7 @@
     "properties": {
       "features": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/138"
         },
         "flags": 0,
         "description": "Set of features"
@@ -1722,7 +1737,7 @@
     "properties": {
       "features": {
         "type": {
-          "$ref": "#/138"
+          "$ref": "#/140"
         },
         "flags": 2,
         "description": "Features with enabled status"
@@ -1743,10 +1758,10 @@
     "resourceType": "Microsoft.Purview/accounts",
     "apiVersion": "2024-04-01-preview",
     "output": {
-      "$ref": "#/137"
+      "$ref": "#/139"
     },
     "input": {
-      "$ref": "#/135"
+      "$ref": "#/137"
     }
   },
   {
@@ -1795,10 +1810,10 @@
     "resourceType": "Microsoft.Purview/accounts",
     "apiVersion": "2024-04-01-preview",
     "output": {
-      "$ref": "#/141"
+      "$ref": "#/143"
     },
     "input": {
-      "$ref": "#/140"
+      "$ref": "#/142"
     }
   },
   {
@@ -1807,10 +1822,10 @@
     "resourceType": "Microsoft.Purview/locations",
     "apiVersion": "2024-04-01-preview",
     "output": {
-      "$ref": "#/137"
+      "$ref": "#/139"
     },
     "input": {
-      "$ref": "#/135"
+      "$ref": "#/137"
     }
   }
 ]

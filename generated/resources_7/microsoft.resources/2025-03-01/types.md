@@ -12,6 +12,11 @@
 * **tags**: [DeploymentTags](#deploymenttags): Deployment tags
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.Resources/deployments@2025-03-01)
+* **Resource**: Microsoft.Resources/deployments
+* **ApiVersion**: 2025-03-01
+* **Output**: any
+
 ## Function exportTemplate (Microsoft.Resources/deployments@2025-03-01)
 * **Resource**: Microsoft.Resources/deployments
 * **ApiVersion**: 2025-03-01

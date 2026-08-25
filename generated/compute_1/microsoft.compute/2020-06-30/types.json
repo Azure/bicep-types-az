@@ -1679,6 +1679,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "endGetAccess",
+    "resourceType": "Microsoft.Compute/disks",
+    "apiVersion": "2020-06-30",
+    "output": {
+      "$ref": "#/125"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "beginGetAccess",
     "resourceType": "Microsoft.Compute/snapshots",
@@ -1688,6 +1700,15 @@
     },
     "input": {
       "$ref": "#/118"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "endGetAccess",
+    "resourceType": "Microsoft.Compute/snapshots",
+    "apiVersion": "2020-06-30",
+    "output": {
+      "$ref": "#/125"
     }
   }
 ]

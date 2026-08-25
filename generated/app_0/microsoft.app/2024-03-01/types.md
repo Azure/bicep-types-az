@@ -273,6 +273,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/managedEnvironments/storages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activate (Microsoft.App/containerApps/revisions@2024-03-01)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
 ## Function checkNameAvailability (Microsoft.App/connectedEnvironments@2024-03-01)
 * **Resource**: Microsoft.App/connectedEnvironments
 * **ApiVersion**: 2024-03-01
@@ -284,6 +289,11 @@
 * **ApiVersion**: 2024-03-01
 * **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
 * **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## Function deactivate (Microsoft.App/containerApps/revisions@2024-03-01)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2024-03-01
+* **Output**: any
 
 ## Function getAuthtoken (Microsoft.App/containerApps@2024-03-01)
 * **Resource**: Microsoft.App/containerApps
@@ -320,6 +330,11 @@
 * **ApiVersion**: 2024-03-01
 * **Output**: [DaprSecretsCollection](#daprsecretscollection)
 
+## Function restart (Microsoft.App/containerApps/revisions@2024-03-01)
+* **Resource**: Microsoft.App/containerApps/revisions
+* **ApiVersion**: 2024-03-01
+* **Output**: any
+
 ## Function start (Microsoft.App/containerApps@2024-03-01)
 * **Resource**: Microsoft.App/containerApps
 * **ApiVersion**: 2024-03-01
@@ -340,6 +355,11 @@
 * **Resource**: Microsoft.App/jobs
 * **ApiVersion**: 2024-03-01
 * **Output**: [ContainerAppJobExecutions](#containerappjobexecutions)
+
+## Function stop (Microsoft.App/jobs/executions@2024-03-01)
+* **Resource**: Microsoft.App/jobs/executions
+* **ApiVersion**: 2024-03-01
+* **Output**: any
 
 ## AllowedAudiencesValidation
 ### Properties

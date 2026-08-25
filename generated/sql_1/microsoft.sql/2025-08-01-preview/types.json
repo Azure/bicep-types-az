@@ -23281,12 +23281,42 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revalidate",
+    "resourceType": "Microsoft.Sql/servers/databases/encryptionProtector",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revert",
+    "resourceType": "Microsoft.Sql/servers/databases/encryptionProtector",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Sql/servers/databases/operations",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExportDatabaseDefinition",
     "properties": {
       "storageKeyType": {
         "type": {
-          "$ref": "#/1683"
+          "$ref": "#/1687"
         },
         "flags": 5,
         "description": "Storage key type: StorageAccessKey, SharedAccessKey, or ManagedIdentity."
@@ -23351,13 +23381,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1680"
+        "$ref": "#/1684"
       },
       {
-        "$ref": "#/1681"
+        "$ref": "#/1685"
       },
       {
-        "$ref": "#/1682"
+        "$ref": "#/1686"
       },
       {
         "$ref": "#/0"
@@ -23370,7 +23400,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1685"
+          "$ref": "#/1689"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -23474,7 +23504,7 @@
       },
       "privateEndpointConnections": {
         "type": {
-          "$ref": "#/1687"
+          "$ref": "#/1691"
         },
         "flags": 2,
         "description": "Gets the status of private endpoints associated with this request."
@@ -23511,7 +23541,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1686"
+      "$ref": "#/1690"
     }
   },
   {
@@ -23520,9 +23550,18 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1684"
+      "$ref": "#/1688"
     },
     "input": {
+      "$ref": "#/1683"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
       "$ref": "#/1679"
     }
   },
@@ -23532,7 +23571,7 @@
     "properties": {
       "storageKeyType": {
         "type": {
-          "$ref": "#/1693"
+          "$ref": "#/1698"
         },
         "flags": 5,
         "description": "Storage key type: StorageAccessKey, SharedAccessKey, or ManagedIdentity."
@@ -23597,13 +23636,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1690"
+        "$ref": "#/1695"
       },
       {
-        "$ref": "#/1691"
+        "$ref": "#/1696"
       },
       {
-        "$ref": "#/1692"
+        "$ref": "#/1697"
       },
       {
         "$ref": "#/0"
@@ -23616,10 +23655,10 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1684"
+      "$ref": "#/1688"
     },
     "input": {
-      "$ref": "#/1689"
+      "$ref": "#/1694"
     }
   },
   {
@@ -23633,6 +23672,18 @@
         "flags": 1,
         "description": "The target ID for the resource"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "move",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    },
+    "input": {
+      "$ref": "#/1700"
     }
   },
   {
@@ -23676,7 +23727,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1697"
+          "$ref": "#/1703"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -23732,7 +23783,7 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1696"
+      "$ref": "#/1702"
     }
   },
   {
@@ -23741,7 +23792,16 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1696"
+      "$ref": "#/1702"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeDataWarehouse",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
     }
   },
   {
@@ -23811,10 +23871,19 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1701"
+      "$ref": "#/1708"
     },
     "input": {
-      "$ref": "#/1700"
+      "$ref": "#/1707"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateScan",
+    "resourceType": "Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
     }
   },
   {
@@ -23823,7 +23892,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1704"
+          "$ref": "#/1712"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -23877,7 +23946,16 @@
     "resourceType": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1703"
+      "$ref": "#/1711"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateScan",
+    "resourceType": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
     }
   },
   {
@@ -23927,7 +24005,7 @@
     "resourceType": "Microsoft.Sql/locations/deletedServers",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1706"
+      "$ref": "#/1715"
     }
   },
   {
@@ -23936,7 +24014,7 @@
     "properties": {
       "failoverType": {
         "type": {
-          "$ref": "#/1711"
+          "$ref": "#/1720"
         },
         "flags": 5,
         "description": "The failover type, can be ForcedAllowDataLoss or Planned."
@@ -23955,10 +24033,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1709"
+        "$ref": "#/1718"
       },
       {
-        "$ref": "#/1710"
+        "$ref": "#/1719"
       },
       {
         "$ref": "#/0"
@@ -24012,10 +24090,10 @@
     "resourceType": "Microsoft.Sql/managedInstances/distributedAvailabilityGroups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1712"
+      "$ref": "#/1721"
     },
     "input": {
-      "$ref": "#/1708"
+      "$ref": "#/1717"
     }
   },
   {
@@ -24024,14 +24102,14 @@
     "properties": {
       "instanceRole": {
         "type": {
-          "$ref": "#/1717"
+          "$ref": "#/1726"
         },
         "flags": 5,
         "description": "New role of managed instance in a distributed availability group, can be Primary or Secondary."
       },
       "roleChangeType": {
         "type": {
-          "$ref": "#/1720"
+          "$ref": "#/1729"
         },
         "flags": 5,
         "description": "The type of the role change, can be Planned or Forced."
@@ -24050,10 +24128,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1715"
+        "$ref": "#/1724"
       },
       {
-        "$ref": "#/1716"
+        "$ref": "#/1725"
       },
       {
         "$ref": "#/0"
@@ -24072,10 +24150,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1718"
+        "$ref": "#/1727"
       },
       {
-        "$ref": "#/1719"
+        "$ref": "#/1728"
       },
       {
         "$ref": "#/0"
@@ -24088,10 +24166,37 @@
     "resourceType": "Microsoft.Sql/managedInstances/distributedAvailabilityGroups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1712"
+      "$ref": "#/1721"
     },
     "input": {
-      "$ref": "#/1714"
+      "$ref": "#/1723"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Sql/servers/elasticPools/operations",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/servers/elasticPools",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revalidate",
+    "resourceType": "Microsoft.Sql/servers/encryptionProtector",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
     }
   },
   {
@@ -24107,7 +24212,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1723"
+          "$ref": "#/1735"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -24163,7 +24268,7 @@
     "resourceType": "Microsoft.Sql/servers/failoverGroups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1722"
+      "$ref": "#/1734"
     }
   },
   {
@@ -24172,7 +24277,7 @@
     "resourceType": "Microsoft.Sql/servers/failoverGroups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1722"
+      "$ref": "#/1734"
     }
   },
   {
@@ -24181,7 +24286,7 @@
     "resourceType": "Microsoft.Sql/servers/failoverGroups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1722"
+      "$ref": "#/1734"
     }
   },
   {
@@ -24231,7 +24336,7 @@
     "resourceType": "Microsoft.Sql/locations/instanceFailoverGroups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1727"
+      "$ref": "#/1739"
     }
   },
   {
@@ -24240,7 +24345,16 @@
     "resourceType": "Microsoft.Sql/locations/instanceFailoverGroups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1727"
+      "$ref": "#/1739"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Sql/servers/jobAgents/jobs/executions",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
     }
   },
   {
@@ -24290,7 +24404,7 @@
     "resourceType": "Microsoft.Sql/servers/jobAgents/jobs",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1730"
+      "$ref": "#/1743"
     }
   },
   {
@@ -24340,7 +24454,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/ledgerDigestUploads",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1732"
+      "$ref": "#/1745"
     }
   },
   {
@@ -24410,10 +24524,10 @@
     "resourceType": "Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1735"
+      "$ref": "#/1748"
     },
     "input": {
-      "$ref": "#/1734"
+      "$ref": "#/1747"
     }
   },
   {
@@ -24422,7 +24536,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1738"
+          "$ref": "#/1751"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -24470,7 +24584,7 @@
       },
       "targetBackupStorageRedundancy": {
         "type": {
-          "$ref": "#/1743"
+          "$ref": "#/1756"
         },
         "flags": 4,
         "description": "The storage redundancy type of the copied backup"
@@ -24497,16 +24611,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1739"
+        "$ref": "#/1752"
       },
       {
-        "$ref": "#/1740"
+        "$ref": "#/1753"
       },
       {
-        "$ref": "#/1741"
+        "$ref": "#/1754"
       },
       {
-        "$ref": "#/1742"
+        "$ref": "#/1755"
       },
       {
         "$ref": "#/0"
@@ -24519,7 +24633,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1745"
+          "$ref": "#/1758"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -24588,7 +24702,7 @@
       },
       "targetBackupStorageRedundancy": {
         "type": {
-          "$ref": "#/1750"
+          "$ref": "#/1763"
         },
         "flags": 2,
         "description": "The storage redundancy type of the copied backup"
@@ -24629,16 +24743,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1746"
+        "$ref": "#/1759"
       },
       {
-        "$ref": "#/1747"
+        "$ref": "#/1760"
       },
       {
-        "$ref": "#/1748"
+        "$ref": "#/1761"
       },
       {
-        "$ref": "#/1749"
+        "$ref": "#/1762"
       },
       {
         "$ref": "#/0"
@@ -24651,10 +24765,10 @@
     "resourceType": "Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1744"
+      "$ref": "#/1757"
     },
     "input": {
-      "$ref": "#/1737"
+      "$ref": "#/1750"
     }
   },
   {
@@ -24663,7 +24777,7 @@
     "resourceType": "Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1735"
+      "$ref": "#/1748"
     }
   },
   {
@@ -24672,7 +24786,7 @@
     "resourceType": "Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1735"
+      "$ref": "#/1748"
     }
   },
   {
@@ -24681,7 +24795,7 @@
     "resourceType": "Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1735"
+      "$ref": "#/1748"
     }
   },
   {
@@ -24690,7 +24804,7 @@
     "resourceType": "Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1735"
+      "$ref": "#/1748"
     }
   },
   {
@@ -24699,7 +24813,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1757"
+          "$ref": "#/1770"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -24712,7 +24826,7 @@
     "properties": {
       "requestedBackupStorageRedundancy": {
         "type": {
-          "$ref": "#/1762"
+          "$ref": "#/1775"
         },
         "flags": 4,
         "description": "The storage redundancy type of the copied backup"
@@ -24739,16 +24853,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1758"
+        "$ref": "#/1771"
       },
       {
-        "$ref": "#/1759"
+        "$ref": "#/1772"
       },
       {
-        "$ref": "#/1760"
+        "$ref": "#/1773"
       },
       {
-        "$ref": "#/1761"
+        "$ref": "#/1774"
       },
       {
         "$ref": "#/0"
@@ -24761,10 +24875,10 @@
     "resourceType": "Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1744"
+      "$ref": "#/1757"
     },
     "input": {
-      "$ref": "#/1756"
+      "$ref": "#/1769"
     }
   },
   {
@@ -24781,6 +24895,30 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "cancelMove",
+    "resourceType": "Microsoft.Sql/managedInstances/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    },
+    "input": {
+      "$ref": "#/1777"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "completeMove",
+    "resourceType": "Microsoft.Sql/managedInstances/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    },
+    "input": {
+      "$ref": "#/1777"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CompleteDatabaseRestoreDefinition",
     "properties": {
@@ -24791,6 +24929,18 @@
         "flags": 1,
         "description": "The last backup name to apply"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "completeRestore",
+    "resourceType": "Microsoft.Sql/managedInstances/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    },
+    "input": {
+      "$ref": "#/1780"
     }
   },
   {
@@ -24806,7 +24956,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1767"
+          "$ref": "#/1783"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -24862,7 +25012,7 @@
     "resourceType": "Microsoft.Sql/managedInstances/databases",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1766"
+      "$ref": "#/1782"
     }
   },
   {
@@ -24878,7 +25028,7 @@
       },
       "operationMode": {
         "type": {
-          "$ref": "#/1772"
+          "$ref": "#/1788"
         },
         "flags": 0,
         "description": "The move operation mode."
@@ -24897,10 +25047,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1770"
+        "$ref": "#/1786"
       },
       {
-        "$ref": "#/1771"
+        "$ref": "#/1787"
       },
       {
         "$ref": "#/0"
@@ -24909,11 +25059,86 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "startMove",
+    "resourceType": "Microsoft.Sql/managedInstances/databases",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    },
+    "input": {
+      "$ref": "#/1785"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "export",
     "resourceType": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1703"
+      "$ref": "#/1711"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateScan",
+    "resourceType": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revalidate",
+    "resourceType": "Microsoft.Sql/managedInstances/encryptionProtector",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Sql/managedInstances/operations",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/managedInstances",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reevaluateInaccessibleDatabaseState",
+    "resourceType": "Microsoft.Sql/managedInstances",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
     }
   },
   {
@@ -24922,7 +25147,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1775"
+          "$ref": "#/1799"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -25011,7 +25236,7 @@
     "resourceType": "Microsoft.Sql/managedInstances",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1774"
+      "$ref": "#/1798"
     }
   },
   {
@@ -25041,7 +25266,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1778"
+          "$ref": "#/1802"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -25097,7 +25322,7 @@
     "resourceType": "Microsoft.Sql/managedInstances",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1777"
+      "$ref": "#/1801"
     }
   },
   {
@@ -25106,7 +25331,7 @@
     "resourceType": "Microsoft.Sql/managedInstances",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1777"
+      "$ref": "#/1801"
     }
   },
   {
@@ -25123,12 +25348,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "validateAzureKeyVaultEncryptionKey",
+    "resourceType": "Microsoft.Sql/managedInstances",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    },
+    "input": {
+      "$ref": "#/1805"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "TdeCertificate",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1783"
+          "$ref": "#/1808"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -25184,6 +25421,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "tdeCertificates",
+    "resourceType": "Microsoft.Sql/managedInstances",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    },
+    "input": {
+      "$ref": "#/1807"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ManagedLedgerDigestUploads",
     "properties": {
@@ -25230,7 +25479,7 @@
     "resourceType": "Microsoft.Sql/managedInstances/databases/ledgerDigestUploads",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1784"
+      "$ref": "#/1810"
     }
   },
   {
@@ -25293,10 +25542,10 @@
     "resourceType": "Microsoft.Sql/managedInstances/dnsAliases",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1787"
+      "$ref": "#/1813"
     },
     "input": {
-      "$ref": "#/1786"
+      "$ref": "#/1812"
     }
   },
   {
@@ -25346,7 +25595,7 @@
     "resourceType": "Microsoft.Sql/servers/networkSecurityPerimeterConfigurations",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1789"
+      "$ref": "#/1815"
     }
   },
   {
@@ -25396,7 +25645,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/replicationLinks",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1791"
+      "$ref": "#/1817"
     }
   },
   {
@@ -25405,7 +25654,25 @@
     "resourceType": "Microsoft.Sql/servers/databases/replicationLinks",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1791"
+      "$ref": "#/1817"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
     }
   },
   {
@@ -25468,10 +25735,10 @@
     "resourceType": "Microsoft.Sql/servers/dnsAliases",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1795"
+      "$ref": "#/1823"
     },
     "input": {
-      "$ref": "#/1794"
+      "$ref": "#/1822"
     }
   },
   {
@@ -25508,7 +25775,7 @@
       },
       "storageKeyType": {
         "type": {
-          "$ref": "#/1801"
+          "$ref": "#/1829"
         },
         "flags": 5,
         "description": "Storage key type: StorageAccessKey, SharedAccessKey, or ManagedIdentity."
@@ -25573,13 +25840,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1798"
+        "$ref": "#/1826"
       },
       {
-        "$ref": "#/1799"
+        "$ref": "#/1827"
       },
       {
-        "$ref": "#/1800"
+        "$ref": "#/1828"
       },
       {
         "$ref": "#/0"
@@ -25592,10 +25859,10 @@
     "resourceType": "Microsoft.Sql/servers",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1684"
+      "$ref": "#/1688"
     },
     "input": {
-      "$ref": "#/1797"
+      "$ref": "#/1825"
     }
   },
   {
@@ -25604,7 +25871,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1804"
+          "$ref": "#/1832"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -25693,7 +25960,19 @@
     "resourceType": "Microsoft.Sql/servers",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1803"
+      "$ref": "#/1831"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "tdeCertificates",
+    "resourceType": "Microsoft.Sql/servers",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    },
+    "input": {
+      "$ref": "#/1807"
     }
   },
   {
@@ -25715,7 +25994,43 @@
     "resourceType": "Microsoft.Sql/servers/syncAgents",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1806"
+      "$ref": "#/1835"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancelSync",
+    "resourceType": "Microsoft.Sql/servers/databases/syncGroups",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshHubSchema",
+    "resourceType": "Microsoft.Sql/servers/databases/syncGroups",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "triggerSync",
+    "resourceType": "Microsoft.Sql/servers/databases/syncGroups",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshSchema",
+    "resourceType": "Microsoft.Sql/servers/databases/syncGroups/syncMembers",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/1679"
     }
   },
   {
@@ -25765,7 +26080,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/transparentDataEncryption",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1808"
+      "$ref": "#/1841"
     }
   },
   {
@@ -25774,7 +26089,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/transparentDataEncryption",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1808"
+      "$ref": "#/1841"
     }
   },
   {
@@ -25783,7 +26098,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1812"
+          "$ref": "#/1845"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -25824,7 +26139,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/1816"
+          "$ref": "#/1849"
         },
         "flags": 2,
         "description": "The status of the DNS refresh operation."
@@ -25847,13 +26162,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1813"
+        "$ref": "#/1846"
       },
       {
-        "$ref": "#/1814"
+        "$ref": "#/1847"
       },
       {
-        "$ref": "#/1815"
+        "$ref": "#/1848"
       },
       {
         "$ref": "#/0"
@@ -25866,7 +26181,7 @@
     "resourceType": "Microsoft.Sql/virtualClusters",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/1811"
+      "$ref": "#/1844"
     }
   }
 ]

@@ -6248,6 +6248,68 @@
   },
   {
     "$type": "ObjectType",
+    "name": "BackendReconnectContract",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/445"
+        },
+        "flags": 0,
+        "description": "Reconnect request properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type for API Management resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackendReconnectProperties",
+    "properties": {
+      "after": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Duration in ISO8601 format after which reconnect will be initiated."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reconnect",
+    "resourceType": "Microsoft.ApiManagement/service/backends",
+    "apiVersion": "2017-03-01",
+    "output": {
+      "$ref": "#/446"
+    },
+    "input": {
+      "$ref": "#/444"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ApiManagementServiceBackupRestoreParameters",
     "properties": {
       "storageAccount": {
@@ -6342,7 +6404,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/446"
+          "$ref": "#/450"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -6363,10 +6425,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2017-03-01",
     "output": {
-      "$ref": "#/445"
+      "$ref": "#/449"
     },
     "input": {
-      "$ref": "#/444"
+      "$ref": "#/448"
     }
   },
   {
@@ -6375,10 +6437,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2017-03-01",
     "output": {
-      "$ref": "#/445"
+      "$ref": "#/449"
     },
     "input": {
-      "$ref": "#/444"
+      "$ref": "#/448"
     }
   },
   {
@@ -6400,7 +6462,7 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2017-03-01",
     "output": {
-      "$ref": "#/449"
+      "$ref": "#/453"
     }
   },
   {
@@ -6422,10 +6484,10 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2017-03-01",
     "output": {
-      "$ref": "#/445"
+      "$ref": "#/449"
     },
     "input": {
-      "$ref": "#/451"
+      "$ref": "#/455"
     }
   },
   {
@@ -6434,7 +6496,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/462"
         },
         "flags": 1,
         "description": "Hostname type."
@@ -6475,16 +6537,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/454"
+        "$ref": "#/458"
       },
       {
-        "$ref": "#/455"
+        "$ref": "#/459"
       },
       {
-        "$ref": "#/456"
+        "$ref": "#/460"
       },
       {
-        "$ref": "#/457"
+        "$ref": "#/461"
       }
     ]
   },
@@ -6497,7 +6559,7 @@
       "$ref": "#/191"
     },
     "input": {
-      "$ref": "#/453"
+      "$ref": "#/457"
     }
   },
   {
@@ -6506,14 +6568,14 @@
     "properties": {
       "update": {
         "type": {
-          "$ref": "#/467"
+          "$ref": "#/471"
         },
         "flags": 0,
         "description": "Hostnames to create or update."
       },
       "delete": {
         "type": {
-          "$ref": "#/473"
+          "$ref": "#/477"
         },
         "flags": 0,
         "description": "Hostnames types to delete."
@@ -6526,7 +6588,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/466"
+          "$ref": "#/470"
         },
         "flags": 1,
         "description": "Hostname type."
@@ -6567,23 +6629,23 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/462"
+        "$ref": "#/466"
       },
       {
-        "$ref": "#/463"
+        "$ref": "#/467"
       },
       {
-        "$ref": "#/464"
+        "$ref": "#/468"
       },
       {
-        "$ref": "#/465"
+        "$ref": "#/469"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/461"
+      "$ref": "#/465"
     }
   },
   {
@@ -6606,23 +6668,23 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/468"
+        "$ref": "#/472"
       },
       {
-        "$ref": "#/469"
+        "$ref": "#/473"
       },
       {
-        "$ref": "#/470"
+        "$ref": "#/474"
       },
       {
-        "$ref": "#/471"
+        "$ref": "#/475"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/472"
+      "$ref": "#/476"
     }
   },
   {
@@ -6631,10 +6693,46 @@
     "resourceType": "Microsoft.ApiManagement/service",
     "apiVersion": "2017-03-01",
     "output": {
-      "$ref": "#/445"
+      "$ref": "#/449"
     },
     "input": {
-      "$ref": "#/460"
+      "$ref": "#/464"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/subscriptions",
+    "apiVersion": "2017-03-01",
+    "output": {
+      "$ref": "#/446"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/subscriptions",
+    "apiVersion": "2017-03-01",
+    "output": {
+      "$ref": "#/446"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2017-03-01",
+    "output": {
+      "$ref": "#/446"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2017-03-01",
+    "output": {
+      "$ref": "#/446"
     }
   },
   {
@@ -6670,7 +6768,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/481"
+          "$ref": "#/489"
         },
         "flags": 0,
         "description": "Status of an async operation."
@@ -6698,14 +6796,14 @@
       },
       "error": {
         "type": {
-          "$ref": "#/482"
+          "$ref": "#/490"
         },
         "flags": 0,
         "description": "Error Body Contract"
       },
       "actionLog": {
         "type": {
-          "$ref": "#/486"
+          "$ref": "#/494"
         },
         "flags": 2,
         "description": "This property if only provided as part of the TenantConfiguration_Validate operation. It contains the log the entities which will be updated/created/deleted as part of the TenantConfiguration_Deploy operation."
@@ -6732,16 +6830,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/477"
+        "$ref": "#/485"
       },
       {
-        "$ref": "#/478"
+        "$ref": "#/486"
       },
       {
-        "$ref": "#/479"
+        "$ref": "#/487"
       },
       {
-        "$ref": "#/480"
+        "$ref": "#/488"
       }
     ]
   },
@@ -6765,7 +6863,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/484"
+          "$ref": "#/492"
         },
         "flags": 0,
         "description": "The list of invalid fields send in request, in case of validation error."
@@ -6802,7 +6900,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/483"
+      "$ref": "#/491"
     }
   },
   {
@@ -6835,7 +6933,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/485"
+      "$ref": "#/493"
     }
   },
   {
@@ -6844,10 +6942,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2017-03-01",
     "output": {
-      "$ref": "#/476"
+      "$ref": "#/484"
     },
     "input": {
-      "$ref": "#/475"
+      "$ref": "#/483"
     }
   },
   {
@@ -6876,10 +6974,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2017-03-01",
     "output": {
-      "$ref": "#/476"
+      "$ref": "#/484"
     },
     "input": {
-      "$ref": "#/488"
+      "$ref": "#/496"
     }
   },
   {
@@ -6888,10 +6986,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2017-03-01",
     "output": {
-      "$ref": "#/476"
+      "$ref": "#/484"
     },
     "input": {
-      "$ref": "#/475"
+      "$ref": "#/483"
     }
   },
   {
@@ -6913,7 +7011,7 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2017-03-01",
     "output": {
-      "$ref": "#/491"
+      "$ref": "#/499"
     }
   },
   {
@@ -6922,7 +7020,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/496"
+          "$ref": "#/504"
         },
         "flags": 1,
         "description": "The Key to be used to generate token for user."
@@ -6948,10 +7046,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/494"
+        "$ref": "#/502"
       },
       {
-        "$ref": "#/495"
+        "$ref": "#/503"
       }
     ]
   },
@@ -6974,10 +7072,10 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2017-03-01",
     "output": {
-      "$ref": "#/497"
+      "$ref": "#/505"
     },
     "input": {
-      "$ref": "#/493"
+      "$ref": "#/501"
     }
   }
 ]

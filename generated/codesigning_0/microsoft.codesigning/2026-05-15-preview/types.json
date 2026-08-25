@@ -775,5 +775,80 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RevokeCertificateList",
+    "properties": {
+      "revokeCertificates": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 1,
+        "description": "List of certificates to be revoked in a certificate profile."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RevokeCertificate",
+    "properties": {
+      "serialNumber": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Serial number of the certificate."
+      },
+      "thumbprint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Thumbprint of the certificate."
+      },
+      "effectiveAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The timestamp when the revocation is effective."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Reason for the revocation."
+      },
+      "remarks": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Remarks for the revocation."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revokeCertificates",
+    "resourceType": "Microsoft.CodeSigning/codeSigningAccounts/certificateProfiles",
+    "apiVersion": "2026-05-15-preview",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/65"
+    }
   }
 ]

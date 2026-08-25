@@ -92,10 +92,46 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/accessReviewScheduleSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function acceptRecommendations (Microsoft.Authorization/accessReviewScheduleDefinitions/instances@2021-12-01-preview)
+* **Resource**: Microsoft.Authorization/accessReviewScheduleDefinitions/instances
+* **ApiVersion**: 2021-12-01-preview
+* **Output**: any
+
+## Function applyDecisions (Microsoft.Authorization/accessReviewScheduleDefinitions/instances@2021-12-01-preview)
+* **Resource**: Microsoft.Authorization/accessReviewScheduleDefinitions/instances
+* **ApiVersion**: 2021-12-01-preview
+* **Output**: any
+
 ## Function generateDownloadUri (Microsoft.Authorization/accessReviewHistoryDefinitions/instances@2021-12-01-preview)
 * **Resource**: Microsoft.Authorization/accessReviewHistoryDefinitions/instances
 * **ApiVersion**: 2021-12-01-preview
 * **Output**: [AccessReviewHistoryInstance](#accessreviewhistoryinstance)
+
+## Function recordAllDecisions (Microsoft.Authorization/accessReviewScheduleDefinitions/instances@2021-12-01-preview)
+* **Resource**: Microsoft.Authorization/accessReviewScheduleDefinitions/instances
+* **ApiVersion**: 2021-12-01-preview
+* **Input**: [RecordAllDecisionsProperties](#recordalldecisionsproperties)
+* **Output**: any
+
+## Function resetDecisions (Microsoft.Authorization/accessReviewScheduleDefinitions/instances@2021-12-01-preview)
+* **Resource**: Microsoft.Authorization/accessReviewScheduleDefinitions/instances
+* **ApiVersion**: 2021-12-01-preview
+* **Output**: any
+
+## Function sendReminders (Microsoft.Authorization/accessReviewScheduleDefinitions/instances@2021-12-01-preview)
+* **Resource**: Microsoft.Authorization/accessReviewScheduleDefinitions/instances
+* **ApiVersion**: 2021-12-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.Authorization/accessReviewScheduleDefinitions@2021-12-01-preview)
+* **Resource**: Microsoft.Authorization/accessReviewScheduleDefinitions
+* **ApiVersion**: 2021-12-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.Authorization/accessReviewScheduleDefinitions/instances@2021-12-01-preview)
+* **Resource**: Microsoft.Authorization/accessReviewScheduleDefinitions/instances
+* **ApiVersion**: 2021-12-01-preview
+* **Output**: any
 
 ## AccessReviewActorIdentity
 ### Properties
@@ -280,6 +316,13 @@
 * **principalType**: 'guestUser' | 'redeemedGuestUser' | 'servicePrincipal' | 'user' | 'user,group' | string (ReadOnly): The identity type user/servicePrincipal to review
 * **resourceId**: string (ReadOnly): ResourceId in which this review is getting created
 * **roleDefinitionId**: string (ReadOnly): This is used to indicate the role being reviewed
+
+## RecordAllDecisionsProperties
+### Properties
+* **decision**: 'Approve' | 'Deny' | string: The decision to make. Approvers can take action of Approve/Deny
+* **justification**: string: Justification provided by approvers for their action
+* **principalId**: string (ReadOnly): The id of principal which needs to be approved/denied.
+* **resourceId**: string (ReadOnly): The id of resource which needs to be approved/denied.
 
 ## SystemData
 ### Properties

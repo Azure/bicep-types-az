@@ -60,6 +60,33 @@
 * **Input**: [ServerDetachVNetParameter](#serverdetachvnetparameter)
 * **Output**: [Server](#server)
 
+## Function failover (Microsoft.DBforMySQL/flexibleServers@2024-10-01-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: any
+
+## Function resetGtid (Microsoft.DBforMySQL/flexibleServers@2024-10-01-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2024-10-01-preview
+* **Input**: [ServerGtidSetParameter](#servergtidsetparameter)
+* **Output**: any
+
+## Function restart (Microsoft.DBforMySQL/flexibleServers@2024-10-01-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2024-10-01-preview
+* **Input**: [ServerRestartParameter](#serverrestartparameter)
+* **Output**: any
+
+## Function start (Microsoft.DBforMySQL/flexibleServers@2024-10-01-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.DBforMySQL/flexibleServers@2024-10-01-preview)
+* **Resource**: Microsoft.DBforMySQL/flexibleServers
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: any
+
 ## Function validateEstimateHighAvailability (Microsoft.DBforMySQL/flexibleServers@2024-10-01-preview)
 * **Resource**: Microsoft.DBforMySQL/flexibleServers
 * **ApiVersion**: 2024-10-01-preview
@@ -217,6 +244,10 @@
 * **supportedSkus**: [SkuCapabilityV2](#skucapabilityv2)[] (ReadOnly): A list of supported Skus
 * **supportedStorageEditions**: [StorageEditionCapability](#storageeditioncapability)[] (ReadOnly): A list of supported storage editions
 
+## ServerGtidSetParameter
+### Properties
+* **gtidSet**: string: The Gtid set of server.
+
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
@@ -241,6 +272,11 @@
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): The state of a server.
 * **storage**: [Storage](#storage): Storage related properties of a server.
 * **version**: '5.7' | '8.0.21' | string: Major version of MySQL. 8.0.21 stands for MySQL 8.0, 5.7.44 stands for MySQL 5.7
+
+## ServerRestartParameter
+### Properties
+* **maxFailoverSeconds**: int: The maximum allowed failover time in seconds.
+* **restartWithFailover**: 'Disabled' | 'Enabled' | string: Whether or not failover to standby server when restarting a server with high availability enabled.
 
 ## ServerVersionCapabilityV2
 ### Properties

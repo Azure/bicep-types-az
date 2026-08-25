@@ -54,6 +54,11 @@
 * **ApiVersion**: 2024-03-01-preview
 * **Output**: [ListQueryKeysResult](#listquerykeysresult)
 
+## Function reconcile (Microsoft.Search/searchServices/networkSecurityPerimeterConfigurations@2024-03-01-preview)
+* **Resource**: Microsoft.Search/searchServices/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2024-03-01-preview
+* **Output**: any
+
 ## AdminKeyResult
 ### Properties
 * **primaryKey**: string (ReadOnly): The primary admin API key of the search service.

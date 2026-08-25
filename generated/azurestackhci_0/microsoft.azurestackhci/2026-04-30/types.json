@@ -10753,6 +10753,48 @@
   },
   {
     "$type": "ObjectType",
+    "name": "UploadCertificateRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/862"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawCertificateData",
+    "properties": {
+      "certificates": {
+        "type": {
+          "$ref": "#/863"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadCertificate",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2026-04-30",
+    "output": {
+      "$ref": "#/425"
+    },
+    "input": {
+      "$ref": "#/861"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ArcSetting",
     "properties": {
       "properties": {
@@ -10798,7 +10840,7 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2026-04-30",
     "output": {
-      "$ref": "#/861"
+      "$ref": "#/865"
     }
   },
   {
@@ -10807,7 +10849,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/864"
+          "$ref": "#/868"
         },
         "flags": 2,
         "description": "ArcIdentity properties."
@@ -10850,7 +10892,7 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2026-04-30",
     "output": {
-      "$ref": "#/863"
+      "$ref": "#/867"
     }
   },
   {
@@ -10889,7 +10931,16 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2026-04-30",
     "output": {
-      "$ref": "#/866"
+      "$ref": "#/870"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initializeDisableProcess",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
+    "apiVersion": "2026-04-30",
+    "output": {
+      "$ref": "#/425"
     }
   },
   {
@@ -10898,7 +10949,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/869"
+          "$ref": "#/874"
         },
         "flags": 0,
         "description": "List of Arc Nodes in the cluster"
@@ -10911,7 +10962,7 @@
     "properties": {
       "clusterNodes": {
         "type": {
-          "$ref": "#/870"
+          "$ref": "#/875"
         },
         "flags": 0
       }
@@ -10929,10 +10980,87 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
     "apiVersion": "2026-04-30",
     "output": {
-      "$ref": "#/861"
+      "$ref": "#/865"
     },
     "input": {
-      "$ref": "#/868"
+      "$ref": "#/873"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtensionUpgradeParameters",
+    "properties": {
+      "targetVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Extension Upgrade Target Version."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings/extensions",
+    "apiVersion": "2026-04-30",
+    "output": {
+      "$ref": "#/425"
+    },
+    "input": {
+      "$ref": "#/877"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkHealth",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/updateSummaries",
+    "apiVersion": "2026-04-30",
+    "output": {
+      "$ref": "#/425"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckUpdatesRequest",
+    "properties": {
+      "updateName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of update"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkUpdates",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/updateSummaries",
+    "apiVersion": "2026-04-30",
+    "output": {
+      "$ref": "#/425"
+    },
+    "input": {
+      "$ref": "#/880"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "apply",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/updates",
+    "apiVersion": "2026-04-30",
+    "output": {
+      "$ref": "#/425"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "prepare",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/updates",
+    "apiVersion": "2026-04-30",
+    "output": {
+      "$ref": "#/425"
     }
   }
 ]

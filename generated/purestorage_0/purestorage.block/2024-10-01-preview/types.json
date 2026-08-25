@@ -1747,6 +1747,113 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableAvsConnection",
+    "resourceType": "PureStorage.Block/storagePools",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StoragePoolEnableAvsConnectionPost",
+    "properties": {
+      "sddcResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Azure resource ID of the AVS SDDC to connect to"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableAvsConnection",
+    "resourceType": "PureStorage.Block/storagePools",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/109"
+    },
+    "input": {
+      "$ref": "#/111"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StoragePoolFinalizeAvsConnectionPost",
+    "properties": {
+      "serviceInitializationDataEnc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Encoded AVS connection information"
+      },
+      "serviceInitializationData": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 0,
+        "description": "Explicit AVS connection information"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceInitializationData",
+    "properties": {
+      "serviceAccountUsername": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Service account username"
+      },
+      "serviceAccountPassword": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Service account password"
+      },
+      "vSphereIp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "AVS instance's vSphere IP address"
+      },
+      "vSphereCertificate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "AVS instance's vSphere certificate"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "finalizeAvsConnection",
+    "resourceType": "PureStorage.Block/storagePools",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/109"
+    },
+    "input": {
+      "$ref": "#/113"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AvsConnection",
     "properties": {
@@ -1766,7 +1873,7 @@
       },
       "serviceInitializationHandle": {
         "type": {
-          "$ref": "#/110"
+          "$ref": "#/118"
         },
         "flags": 0,
         "description": "Explicit service account credentials"
@@ -1799,7 +1906,7 @@
     "resourceType": "PureStorage.Block/storagePools",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/109"
+      "$ref": "#/117"
     }
   },
   {
@@ -1835,7 +1942,7 @@
     "resourceType": "PureStorage.Block/storagePools",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/112"
+      "$ref": "#/120"
     }
   },
   {
@@ -1844,14 +1951,14 @@
     "properties": {
       "health": {
         "type": {
-          "$ref": "#/115"
+          "$ref": "#/123"
         },
         "flags": 1,
         "description": "Health metrics"
       },
       "alerts": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/131"
         },
         "flags": 1,
         "description": "List of health alerts"
@@ -1871,14 +1978,14 @@
       },
       "bandwidthUsage": {
         "type": {
-          "$ref": "#/116"
+          "$ref": "#/124"
         },
         "flags": 1,
         "description": "Bandwidth usage metrics"
       },
       "iopsUsage": {
         "type": {
-          "$ref": "#/117"
+          "$ref": "#/125"
         },
         "flags": 1,
         "description": "IOPS usage metrics"
@@ -1966,7 +2073,7 @@
     "properties": {
       "level": {
         "type": {
-          "$ref": "#/122"
+          "$ref": "#/130"
         },
         "flags": 1,
         "description": "Severity level"
@@ -1996,13 +2103,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/119"
+        "$ref": "#/127"
       },
       {
-        "$ref": "#/120"
+        "$ref": "#/128"
       },
       {
-        "$ref": "#/121"
+        "$ref": "#/129"
       },
       {
         "$ref": "#/2"
@@ -2012,7 +2119,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/118"
+      "$ref": "#/126"
     }
   },
   {
@@ -2021,7 +2128,16 @@
     "resourceType": "PureStorage.Block/storagePools",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/114"
+      "$ref": "#/122"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "repairAvsConnection",
+    "resourceType": "PureStorage.Block/storagePools",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/109"
     }
   }
 ]

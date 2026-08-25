@@ -20,6 +20,11 @@
 * **Input**: [StorageTaskPreviewAction](#storagetaskpreviewaction)
 * **Output**: [StorageTaskPreviewAction](#storagetaskpreviewaction)
 
+## Function stopAllAssignments (Microsoft.StorageActions/storageTasks@2026-03-01)
+* **Resource**: Microsoft.StorageActions/storageTasks
+* **ApiVersion**: 2026-03-01
+* **Output**: any
+
 ## ElseCondition
 ### Properties
 * **operations**: [StorageTaskOperation](#storagetaskoperation)[] (Required): List of operations to execute in the else block

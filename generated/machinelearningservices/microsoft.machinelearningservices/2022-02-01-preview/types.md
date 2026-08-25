@@ -252,6 +252,11 @@
 * **tags**: [PrivateEndpointConnectionTags](#privateendpointconnectiontags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.MachineLearningServices/workspaces/jobs@2022-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/jobs
+* **ApiVersion**: 2022-02-01-preview
+* **Output**: any
+
 ## Function diagnose (Microsoft.MachineLearningServices/workspaces@2022-02-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2022-02-01-preview
@@ -313,6 +318,32 @@
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2022-02-01-preview
 * **Output**: [NotebookResourceInfo](#notebookresourceinfo)
+
+## Function regenerateKeys (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2022-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2022-02-01-preview
+* **Input**: [RegenerateEndpointKeysRequest](#regenerateendpointkeysrequest)
+* **Output**: any
+
+## Function restart (Microsoft.MachineLearningServices/workspaces/computes@2022-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2022-02-01-preview
+* **Output**: any
+
+## Function resyncKeys (Microsoft.MachineLearningServices/workspaces@2022-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2022-02-01-preview
+* **Output**: any
+
+## Function start (Microsoft.MachineLearningServices/workspaces/computes@2022-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2022-02-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.MachineLearningServices/workspaces/computes@2022-02-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2022-02-01-preview
+* **Output**: any
 
 ## Function token (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2022-02-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
@@ -2204,6 +2235,11 @@ Defaults to 5000ms.
 * **hours**: int[] (Required): [Required] List of hours for recurrence schedule pattern
 * **minutes**: int[] (Required): [Required] List of minutes for recurrence schedule pattern
 * **weekdays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: List of weekdays for recurrence schedule pattern
+
+## RegenerateEndpointKeysRequest
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string (Required): [Required] Specification for which type of key to generate. Primary or Secondary.
+* **keyValue**: string: The value the key is set to.
 
 ## RegistryListCredentialsResult
 ### Properties

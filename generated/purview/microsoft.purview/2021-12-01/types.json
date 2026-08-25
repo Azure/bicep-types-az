@@ -1491,12 +1491,27 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addRootCollectionAdmin",
+    "resourceType": "Microsoft.Purview/accounts",
+    "apiVersion": "2021-12-01",
+    "output": {
+      "$ref": "#/120"
+    },
+    "input": {
+      "$ref": "#/119"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "BatchFeatureRequest",
     "properties": {
       "features": {
         "type": {
-          "$ref": "#/121"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "Set of features"
@@ -1515,7 +1530,7 @@
     "properties": {
       "features": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/126"
         },
         "flags": 0,
         "description": "Features with enabled status"
@@ -1530,7 +1545,7 @@
     "name": "BatchFeatureStatusFeatures",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/123"
+      "$ref": "#/125"
     }
   },
   {
@@ -1539,10 +1554,10 @@
     "resourceType": "Microsoft.Purview/accounts",
     "apiVersion": "2021-12-01",
     "output": {
-      "$ref": "#/122"
+      "$ref": "#/124"
     },
     "input": {
-      "$ref": "#/120"
+      "$ref": "#/122"
     }
   },
   {
@@ -1551,10 +1566,10 @@
     "resourceType": "Microsoft.Purview/locations",
     "apiVersion": "2021-12-01",
     "output": {
-      "$ref": "#/122"
+      "$ref": "#/124"
     },
     "input": {
-      "$ref": "#/120"
+      "$ref": "#/122"
     }
   }
 ]

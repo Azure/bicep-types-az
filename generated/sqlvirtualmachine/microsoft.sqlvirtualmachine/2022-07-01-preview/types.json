@@ -2171,5 +2171,26 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startAssessment",
+    "resourceType": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
+    "apiVersion": "2022-07-01-preview",
+    "output": {
+      "$ref": "#/157"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
+    "apiVersion": "2022-07-01-preview",
+    "output": {
+      "$ref": "#/157"
+    }
   }
 ]

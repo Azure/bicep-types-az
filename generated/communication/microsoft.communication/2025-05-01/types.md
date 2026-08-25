@@ -51,6 +51,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Communication/emailServices/domains/senderUsernames' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancelVerification (Microsoft.Communication/emailServices/domains@2025-05-01)
+* **Resource**: Microsoft.Communication/emailServices/domains
+* **ApiVersion**: 2025-05-01
+* **Input**: [VerificationParameter](#verificationparameter)
+* **Output**: any
+
+## Function initiateVerification (Microsoft.Communication/emailServices/domains@2025-05-01)
+* **Resource**: Microsoft.Communication/emailServices/domains
+* **ApiVersion**: 2025-05-01
+* **Input**: [VerificationParameter](#verificationparameter)
+* **Output**: any
+
 ## Function linkNotificationHub (Microsoft.Communication/communicationServices@2025-05-01)
 * **Resource**: Microsoft.Communication/communicationServices
 * **ApiVersion**: 2025-05-01
@@ -186,6 +198,10 @@
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
+## VerificationParameter
+### Properties
+* **verificationType**: 'DKIM' | 'DKIM2' | 'DMARC' | 'Domain' | 'SPF' | string (Required): Type of verification.
 
 ## VerificationStatusRecord
 ### Properties

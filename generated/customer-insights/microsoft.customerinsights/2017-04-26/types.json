@@ -4937,6 +4937,15 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "reprocess",
+    "resourceType": "Microsoft.CustomerInsights/hubs/kpi",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/157"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "PredictionTrainingResults",
     "properties": {
@@ -4956,14 +4965,14 @@
       },
       "predictionDistribution": {
         "type": {
-          "$ref": "#/367"
+          "$ref": "#/368"
         },
         "flags": 2,
         "description": "Prediction distribution."
       },
       "canonicalProfiles": {
         "type": {
-          "$ref": "#/378"
+          "$ref": "#/379"
         },
         "flags": 2,
         "description": "Canonical profiles."
@@ -4997,7 +5006,7 @@
       },
       "distributions": {
         "type": {
-          "$ref": "#/369"
+          "$ref": "#/370"
         },
         "flags": 0,
         "description": "Distributions of the prediction."
@@ -5048,7 +5057,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/368"
+      "$ref": "#/369"
     }
   },
   {
@@ -5064,7 +5073,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/377"
+          "$ref": "#/378"
         },
         "flags": 0,
         "description": "Properties of the canonical profile."
@@ -5098,7 +5107,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/376"
+          "$ref": "#/377"
         },
         "flags": 0,
         "description": "Type of canonical property value."
@@ -5132,9 +5141,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/372"
-      },
-      {
         "$ref": "#/373"
       },
       {
@@ -5144,9 +5150,18 @@
         "$ref": "#/375"
       },
       {
+        "$ref": "#/376"
+      },
+      {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/372"
+    }
   },
   {
     "$type": "ArrayType",
@@ -5155,18 +5170,12 @@
     }
   },
   {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/370"
-    }
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "getTrainingResults",
     "resourceType": "Microsoft.CustomerInsights/hubs/predictions",
     "apiVersion": "2017-04-26",
     "output": {
-      "$ref": "#/366"
+      "$ref": "#/367"
     }
   },
   {
@@ -5196,7 +5205,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/399"
+          "$ref": "#/400"
         },
         "flags": 1,
         "description": "Prediction model life cycle.  When prediction is in PendingModelConfirmation status, it is allowed to update the status to PendingFeaturing or Active through API."
@@ -5328,9 +5337,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/381"
-      },
-      {
         "$ref": "#/382"
       },
       {
@@ -5382,6 +5388,9 @@
         "$ref": "#/398"
       },
       {
+        "$ref": "#/399"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -5392,7 +5401,19 @@
     "resourceType": "Microsoft.CustomerInsights/hubs/predictions",
     "apiVersion": "2017-04-26",
     "output": {
-      "$ref": "#/380"
+      "$ref": "#/381"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "modelStatus",
+    "resourceType": "Microsoft.CustomerInsights/hubs/predictions",
+    "apiVersion": "2017-04-26",
+    "output": {
+      "$ref": "#/157"
+    },
+    "input": {
+      "$ref": "#/381"
     }
   }
 ]

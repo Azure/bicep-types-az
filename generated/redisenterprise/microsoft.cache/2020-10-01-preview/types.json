@@ -1085,6 +1085,21 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "import",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/106"
+    },
+    "input": {
+      "$ref": "#/105"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExportClusterParameters",
     "properties": {
@@ -1095,6 +1110,18 @@
         "flags": 1,
         "description": "SAS Uri for the target directory to export to"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "export",
+    "resourceType": "Microsoft.Cache/redisEnterprise/databases",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/106"
+    },
+    "input": {
+      "$ref": "#/108"
     }
   }
 ]

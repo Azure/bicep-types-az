@@ -137,6 +137,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/volumeGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function authorizeReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2021-10-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2021-10-01
+* **Input**: [AuthorizeRequest](#authorizerequest)
+* **Output**: any
+
+## Function breakReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2021-10-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2021-10-01
+* **Input**: [BreakReplicationRequest](#breakreplicationrequest)
+* **Output**: any
+
 ## Function checkFilePathAvailability (Microsoft.NetApp/locations@2021-10-01)
 * **Resource**: Microsoft.NetApp/locations
 * **ApiVersion**: 2021-10-01
@@ -155,10 +167,43 @@
 * **Input**: [QuotaAvailabilityRequest](#quotaavailabilityrequest)
 * **Output**: [CheckAvailabilityResponse](#checkavailabilityresponse)
 
+## Function deleteReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2021-10-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2021-10-01
+* **Output**: any
+
 ## Function getMetadata (Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2021-10-01)
 * **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes
 * **ApiVersion**: 2021-10-01
 * **Output**: [SubvolumeModel](#subvolumemodel)
+
+## Function poolChange (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2021-10-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2021-10-01
+* **Input**: [PoolChangeRequest](#poolchangerequest)
+* **Output**: any
+
+## Function reinitializeReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2021-10-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2021-10-01
+* **Output**: any
+
+## Function restoreFiles (Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2021-10-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots
+* **ApiVersion**: 2021-10-01
+* **Input**: [SnapshotRestoreFiles](#snapshotrestorefiles)
+* **Output**: any
+
+## Function resyncReplication (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2021-10-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2021-10-01
+* **Output**: any
+
+## Function revert (Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2021-10-01)
+* **Resource**: Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+* **ApiVersion**: 2021-10-01
+* **Input**: [VolumeRevert](#volumerevert)
+* **Output**: any
 
 ## AccountEncryption
 ### Properties
@@ -195,6 +240,10 @@
 * **statusDetails**: string (ReadOnly): Any details in regards to the Status of the Active Directory
 * **username**: string: A domain user account with permission to create machine accounts
 
+## AuthorizeRequest
+### Properties
+* **remoteVolumeResourceId**: string: Resource id of the remote volume
+
 ## BackupPolicyProperties
 ### Properties
 * **backupPolicyId**: string (ReadOnly): Backup Policy Resource ID
@@ -217,6 +266,10 @@
 * **size**: int (ReadOnly): Size of backup
 * **useExistingSnapshot**: bool: Manual backup an already existing snapshot. This will always be false for scheduled backups and true/false for manual backups
 * **volumeName**: string (ReadOnly): Volume name
+
+## BreakReplicationRequest
+### Properties
+* **forceBreakReplication**: bool: If replication is in status transferring and you want to force break the replication, set to true
 
 ## CheckAvailabilityResponse
 ### Properties
@@ -286,6 +339,10 @@
 * **key**: string (Required): Key for an application specific parameter for the placement of volumes in the volume group
 * **value**: string (Required): Value for an application specific parameter for the placement of volumes in the volume group
 
+## PoolChangeRequest
+### Properties
+* **newPoolResourceId**: string (Required): Resource id of the pool to move volume to
+
 ## PoolProperties
 ### Properties
 * **coolAccess**: bool: If enabled (true) the pool can contain cool Access enabled volumes.
@@ -347,6 +404,11 @@
 * **created**: string (ReadOnly): The creation date of the snapshot
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **snapshotId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Snapshot
+
+## SnapshotRestoreFiles
+### Properties
+* **destinationPath**: string: Destination folder where the files will be restored
+* **filePaths**: (string {minLength: 1, maxLength: 1024})[] {minLength: 1, maxLength: 10} (Required): List of files to be restored
 
 ## SubscriptionQuotaItemProperties
 ### Properties
@@ -499,6 +561,10 @@
 ## VolumePropertiesExportPolicy
 ### Properties
 * **rules**: [ExportPolicyRule](#exportpolicyrule)[]: Export policy rule
+
+## VolumeRevert
+### Properties
+* **snapshotId**: string: Resource id of the snapshot
 
 ## VolumeSnapshotProperties
 ### Properties

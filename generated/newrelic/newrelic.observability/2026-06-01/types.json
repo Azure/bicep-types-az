@@ -2170,6 +2170,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshIngestionKey",
+    "resourceType": "NewRelic.Observability/monitors",
+    "apiVersion": "2026-06-01",
+    "output": {
+      "$ref": "#/187"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ResubscribeProperties",
     "properties": {
@@ -2233,7 +2245,7 @@
       "$ref": "#/158"
     },
     "input": {
-      "$ref": "#/187"
+      "$ref": "#/189"
     }
   },
   {
@@ -2279,7 +2291,7 @@
       "$ref": "#/158"
     },
     "input": {
-      "$ref": "#/189"
+      "$ref": "#/191"
     }
   },
   {
@@ -2301,7 +2313,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/191"
+      "$ref": "#/193"
     }
   },
   {
@@ -2310,14 +2322,14 @@
     "properties": {
       "marketplaceSaasInfo": {
         "type": {
-          "$ref": "#/194"
+          "$ref": "#/196"
         },
         "flags": 0,
         "description": "Marketplace Subscription details"
       },
       "partnerBillingEntity": {
         "type": {
-          "$ref": "#/195"
+          "$ref": "#/197"
         },
         "flags": 0,
         "description": "Partner Billing Entity details: Organization Info"
@@ -2405,7 +2417,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/193"
+      "$ref": "#/195"
     }
   },
   {
@@ -2414,7 +2426,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/202"
         },
         "flags": 1,
         "description": "The ConnectedPartnerResourcesListFormat items on this page"
@@ -2434,7 +2446,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/199"
+          "$ref": "#/201"
         },
         "flags": 0,
         "description": "Connected Partner Resource Properties"
@@ -2478,7 +2490,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/198"
+      "$ref": "#/200"
     }
   },
   {
@@ -2487,7 +2499,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/197"
+      "$ref": "#/199"
     },
     "input": {
       "$ref": "#/44"

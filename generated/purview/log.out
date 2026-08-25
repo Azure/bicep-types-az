@@ -25,7 +25,7 @@ warning | Skipping DefaultAccounts_Remove due to required query parameter "scope
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeType"
 warning | Skipping resource POST action path '/providers/Microsoft.Purview/setDefaultAccount': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Purview/checkNameAvailability': Unable to find type segments
-warning | Skipping resource action addRootCollectionAdmin under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}/addRootCollectionAdmin': failed to find a response schema
+warning | Resource action addRootCollectionAdmin under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}/addRootCollectionAdmin' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -57,7 +57,7 @@ warning | Skipping DefaultAccounts_Remove due to required query parameter "scope
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeType"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Purview/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.Purview/setDefaultAccount': Unable to find type segments
-warning | Skipping resource action addRootCollectionAdmin under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}/addRootCollectionAdmin': failed to find a response schema
+warning | Resource action addRootCollectionAdmin under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}/addRootCollectionAdmin' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -104,7 +104,7 @@ warning | Skipping DefaultAccounts_Remove due to required query parameter "scope
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeType"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Purview/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.Purview/setDefaultAccount': Unable to find type segments
-warning | Skipping resource action addRootCollectionAdmin under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}/addRootCollectionAdmin': failed to find a response schema
+warning | Resource action addRootCollectionAdmin under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}/addRootCollectionAdmin' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -136,4 +136,4 @@ warning | Skipping DefaultAccounts_Remove due to required query parameter "scope
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeType"
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Purview/checkNameAvailability': Unable to find type segments
 warning | Skipping resource POST action path '/providers/Microsoft.Purview/setDefaultAccount': Unable to find type segments
-warning | Skipping resource action addRootCollectionAdmin under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}/addRootCollectionAdmin': failed to find a response schema
+warning | Resource action addRootCollectionAdmin under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}/addRootCollectionAdmin' has no response schema. Returning 'any'.

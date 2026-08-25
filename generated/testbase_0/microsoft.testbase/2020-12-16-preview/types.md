@@ -165,6 +165,16 @@
 * **ApiVersion**: 2020-12-16-preview
 * **Output**: [DownloadURLResponse](#downloadurlresponse)
 
+## Function hardDelete (Microsoft.TestBase/testBaseAccounts/packages@2020-12-16-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts/packages
+* **ApiVersion**: 2020-12-16-preview
+* **Output**: any
+
+## Function offboard (Microsoft.TestBase/testBaseAccounts@2020-12-16-preview)
+* **Resource**: Microsoft.TestBase/testBaseAccounts
+* **ApiVersion**: 2020-12-16-preview
+* **Output**: any
+
 ## AnalysisResultSingletonResourceProperties
 * **Discriminator**: analysisResultType
 

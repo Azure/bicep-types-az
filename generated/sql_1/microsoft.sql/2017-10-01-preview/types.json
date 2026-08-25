@@ -2131,12 +2131,42 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Sql/servers/databases/operations",
+    "apiVersion": "2017-10-01-preview",
+    "output": {
+      "$ref": "#/163"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Sql/servers/elasticPools/operations",
+    "apiVersion": "2017-10-01-preview",
+    "output": {
+      "$ref": "#/163"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateScan",
+    "resourceType": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans",
+    "apiVersion": "2017-10-01-preview",
+    "output": {
+      "$ref": "#/163"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DatabaseVulnerabilityAssessmentScansExport",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/168"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -2183,6 +2213,15 @@
     "resourceType": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans",
     "apiVersion": "2017-10-01-preview",
     "output": {
+      "$ref": "#/167"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initiateScan",
+    "resourceType": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans",
+    "apiVersion": "2017-10-01-preview",
+    "output": {
       "$ref": "#/163"
     }
   },
@@ -2192,7 +2231,7 @@
     "resourceType": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans",
     "apiVersion": "2017-10-01-preview",
     "output": {
-      "$ref": "#/163"
+      "$ref": "#/167"
     }
   },
   {
@@ -2235,7 +2274,7 @@
     "resourceType": "Microsoft.Sql/locations/instanceFailoverGroups",
     "apiVersion": "2017-10-01-preview",
     "output": {
-      "$ref": "#/167"
+      "$ref": "#/172"
     }
   },
   {
@@ -2244,7 +2283,7 @@
     "resourceType": "Microsoft.Sql/locations/instanceFailoverGroups",
     "apiVersion": "2017-10-01-preview",
     "output": {
-      "$ref": "#/167"
+      "$ref": "#/172"
     }
   },
   {
@@ -2253,7 +2292,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/171"
+          "$ref": "#/176"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -2302,6 +2341,39 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "tdeCertificates",
+    "resourceType": "Microsoft.Sql/servers",
+    "apiVersion": "2017-10-01-preview",
+    "output": {
+      "$ref": "#/163"
+    },
+    "input": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "tdeCertificates",
+    "resourceType": "Microsoft.Sql/managedInstances",
+    "apiVersion": "2017-10-01-preview",
+    "output": {
+      "$ref": "#/163"
+    },
+    "input": {
+      "$ref": "#/175"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revalidate",
+    "resourceType": "Microsoft.Sql/managedInstances/encryptionProtector",
+    "apiVersion": "2017-10-01-preview",
+    "output": {
+      "$ref": "#/163"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "Database",
     "properties": {
@@ -2342,7 +2414,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/173"
+          "$ref": "#/181"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2384,7 +2456,7 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2017-10-01-preview",
     "output": {
-      "$ref": "#/172"
+      "$ref": "#/180"
     }
   },
   {
@@ -2393,7 +2465,16 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2017-10-01-preview",
     "output": {
-      "$ref": "#/172"
+      "$ref": "#/180"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradeDataWarehouse",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2017-10-01-preview",
+    "output": {
+      "$ref": "#/163"
     }
   },
   {
@@ -2407,6 +2488,18 @@
         "flags": 1,
         "description": "The target ID for the resource"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "move",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2017-10-01-preview",
+    "output": {
+      "$ref": "#/163"
+    },
+    "input": {
+      "$ref": "#/185"
     }
   }
 ]

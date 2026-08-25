@@ -2648,5 +2648,106 @@
     "input": {
       "$ref": "#/231"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManageAgentInstallationRequest",
+    "properties": {
+      "manageAgentInstallationList": {
+        "type": {
+          "$ref": "#/245"
+        },
+        "flags": 1,
+        "description": "The list of resources."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/248"
+        },
+        "flags": 1,
+        "description": "Install/Uninstall action."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManageAgentList",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The ARM id of the resource to install/uninstall agent."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/244"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Install"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Uninstall"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/246"
+      },
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "manageAgentInstallation",
+    "resourceType": "Dynatrace.Observability/monitors",
+    "apiVersion": "2024-04-24",
+    "output": {
+      "$ref": "#/249"
+    },
+    "input": {
+      "$ref": "#/243"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpgradePlanRequest",
+    "properties": {
+      "planData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "The new Billing plan information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgradePlan",
+    "resourceType": "Dynatrace.Observability/monitors",
+    "apiVersion": "2024-04-24",
+    "output": {
+      "$ref": "#/249"
+    },
+    "input": {
+      "$ref": "#/251"
+    }
   }
 ]

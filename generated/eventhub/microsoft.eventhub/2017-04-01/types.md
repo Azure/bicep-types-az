@@ -83,6 +83,16 @@
 * **properties**: [NetworkRuleSetProperties](#networkrulesetproperties): NetworkRuleSet properties
 * **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function breakPairing (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2017-04-01)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2017-04-01
+* **Output**: any
+
+## Function failover (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2017-04-01)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2017-04-01
+* **Output**: any
+
 ## Function listKeys (Microsoft.EventHub/namespaces/authorizationRules@2017-04-01)
 * **Resource**: Microsoft.EventHub/namespaces/authorizationRules
 * **ApiVersion**: 2017-04-01

@@ -685,6 +685,27 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Kusto/clusters",
+    "apiVersion": "2018-09-07-preview",
+    "output": {
+      "$ref": "#/59"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Kusto/clusters",
+    "apiVersion": "2018-09-07-preview",
+    "output": {
+      "$ref": "#/59"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DatabaseCheckNameRequest",
     "properties": {
@@ -697,7 +718,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/62"
+          "$ref": "#/65"
         },
         "flags": 1,
         "description": "The type of resource, Microsoft.Kusto/clusters/databases."
@@ -716,10 +737,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/60"
+        "$ref": "#/63"
       },
       {
-        "$ref": "#/61"
+        "$ref": "#/64"
       }
     ]
   },
@@ -729,7 +750,7 @@
     "properties": {
       "nameAvailable": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/67"
         },
         "flags": 0,
         "description": "Specifies a Boolean value that indicates if the name is available."
@@ -759,10 +780,10 @@
     "resourceType": "Microsoft.Kusto/clusters",
     "apiVersion": "2018-09-07-preview",
     "output": {
-      "$ref": "#/63"
+      "$ref": "#/66"
     },
     "input": {
-      "$ref": "#/59"
+      "$ref": "#/62"
     }
   },
   {
@@ -778,7 +799,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/72"
         },
         "flags": 1,
         "description": "The type of resource, Microsoft.Kusto/clusters."
@@ -797,10 +818,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/67"
+        "$ref": "#/70"
       },
       {
-        "$ref": "#/68"
+        "$ref": "#/71"
       }
     ]
   },
@@ -810,10 +831,10 @@
     "resourceType": "Microsoft.Kusto/locations",
     "apiVersion": "2018-09-07-preview",
     "output": {
-      "$ref": "#/63"
+      "$ref": "#/66"
     },
     "input": {
-      "$ref": "#/66"
+      "$ref": "#/69"
     }
   },
   {
@@ -822,7 +843,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/84"
+          "$ref": "#/87"
         },
         "flags": 0,
         "description": "The list of Kusto database principals."
@@ -835,7 +856,7 @@
     "properties": {
       "role": {
         "type": {
-          "$ref": "#/79"
+          "$ref": "#/82"
         },
         "flags": 1,
         "description": "Database principal role."
@@ -849,7 +870,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/83"
+          "$ref": "#/86"
         },
         "flags": 1,
         "description": "Database principal type."
@@ -905,15 +926,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/73"
-      },
-      {
-        "$ref": "#/74"
-      },
-      {
-        "$ref": "#/75"
-      },
-      {
         "$ref": "#/76"
       },
       {
@@ -921,6 +933,15 @@
       },
       {
         "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
       },
       {
         "$ref": "#/0"
@@ -943,13 +964,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/80"
+        "$ref": "#/83"
       },
       {
-        "$ref": "#/81"
+        "$ref": "#/84"
       },
       {
-        "$ref": "#/82"
+        "$ref": "#/85"
       },
       {
         "$ref": "#/0"
@@ -959,7 +980,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/72"
+      "$ref": "#/75"
     }
   },
   {
@@ -968,7 +989,7 @@
     "resourceType": "Microsoft.Kusto/clusters/databases",
     "apiVersion": "2018-09-07-preview",
     "output": {
-      "$ref": "#/71"
+      "$ref": "#/74"
     }
   },
   {
@@ -977,7 +998,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/87"
+          "$ref": "#/90"
         },
         "flags": 0,
         "description": "The list of Kusto database principals."
@@ -987,7 +1008,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/72"
+      "$ref": "#/75"
     }
   },
   {
@@ -996,10 +1017,10 @@
     "resourceType": "Microsoft.Kusto/clusters/databases",
     "apiVersion": "2018-09-07-preview",
     "output": {
-      "$ref": "#/71"
+      "$ref": "#/74"
     },
     "input": {
-      "$ref": "#/86"
+      "$ref": "#/89"
     }
   },
   {
@@ -1008,10 +1029,10 @@
     "resourceType": "Microsoft.Kusto/clusters/databases",
     "apiVersion": "2018-09-07-preview",
     "output": {
-      "$ref": "#/71"
+      "$ref": "#/74"
     },
     "input": {
-      "$ref": "#/86"
+      "$ref": "#/89"
     }
   },
   {
@@ -1040,7 +1061,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/93"
+          "$ref": "#/96"
         },
         "flags": 0,
         "description": "The list of Kusto event hub connection validation errors."
@@ -1063,7 +1084,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/92"
+      "$ref": "#/95"
     }
   },
   {
@@ -1072,10 +1093,10 @@
     "resourceType": "Microsoft.Kusto/clusters/databases",
     "apiVersion": "2018-09-07-preview",
     "output": {
-      "$ref": "#/91"
+      "$ref": "#/94"
     },
     "input": {
-      "$ref": "#/90"
+      "$ref": "#/93"
     }
   }
 ]

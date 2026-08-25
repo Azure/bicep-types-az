@@ -4618,12 +4618,63 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "initializeDisableProcess",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings",
+    "apiVersion": "2023-03-01",
+    "output": {
+      "$ref": "#/64"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UploadCertificateRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/416"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RawCertificateData",
+    "properties": {
+      "certificates": {
+        "type": {
+          "$ref": "#/417"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uploadCertificate",
+    "resourceType": "Microsoft.AzureStackHCI/clusters",
+    "apiVersion": "2023-03-01",
+    "output": {
+      "$ref": "#/64"
+    },
+    "input": {
+      "$ref": "#/415"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ClusterIdentityResponse",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/415"
+          "$ref": "#/420"
         },
         "flags": 2,
         "description": "Cluster identity properties."
@@ -4666,7 +4717,7 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters",
     "apiVersion": "2023-03-01",
     "output": {
-      "$ref": "#/414"
+      "$ref": "#/419"
     }
   },
   {
@@ -4675,7 +4726,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/418"
+          "$ref": "#/423"
         },
         "flags": 0
       }
@@ -4687,7 +4738,7 @@
     "properties": {
       "softwareAssuranceIntent": {
         "type": {
-          "$ref": "#/421"
+          "$ref": "#/426"
         },
         "flags": 0,
         "description": "Customer Intent for Software Assurance Benefit."
@@ -4706,10 +4757,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/419"
+        "$ref": "#/424"
       },
       {
-        "$ref": "#/420"
+        "$ref": "#/425"
       },
       {
         "$ref": "#/0"
@@ -4736,7 +4787,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/423"
+          "$ref": "#/428"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -4792,10 +4843,44 @@
     "resourceType": "Microsoft.AzureStackHCI/clusters",
     "apiVersion": "2023-03-01",
     "output": {
-      "$ref": "#/422"
+      "$ref": "#/427"
     },
     "input": {
-      "$ref": "#/417"
+      "$ref": "#/422"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtensionUpgradeParameters",
+    "properties": {
+      "targetVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Extension Upgrade Target Version."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/arcSettings/extensions",
+    "apiVersion": "2023-03-01",
+    "output": {
+      "$ref": "#/64"
+    },
+    "input": {
+      "$ref": "#/430"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "apply",
+    "resourceType": "Microsoft.AzureStackHCI/clusters/updates",
+    "apiVersion": "2023-03-01",
+    "output": {
+      "$ref": "#/64"
     }
   }
 ]

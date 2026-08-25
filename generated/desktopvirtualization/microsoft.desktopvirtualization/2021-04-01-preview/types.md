@@ -144,6 +144,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function disconnect (Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2021-04-01-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: any
+
 ## Function expandMsixImage (Microsoft.DesktopVirtualization/hostPools@2021-04-01-preview)
 * **Resource**: Microsoft.DesktopVirtualization/hostPools
 * **ApiVersion**: 2021-04-01-preview
@@ -154,6 +159,12 @@
 * **Resource**: Microsoft.DesktopVirtualization/hostPools
 * **ApiVersion**: 2021-04-01-preview
 * **Output**: [RegistrationInfo](#registrationinfo)
+
+## Function sendMessage (Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2021-04-01-preview)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions
+* **ApiVersion**: 2021-04-01-preview
+* **Input**: [SendMessage](#sendmessage)
+* **Output**: any
 
 ## ApplicationGroupProperties
 ### Properties
@@ -383,6 +394,11 @@
 * **rampUpLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for ramp up period.
 * **rampUpMinimumHostsPct**: int {minValue: 0, maxValue: 100}: Minimum host percentage for ramp up period.
 * **rampUpStartTime**: string: Starting time for ramp up period.
+
+## SendMessage
+### Properties
+* **messageBody**: string: Body of message.
+* **messageTitle**: string: Title of message.
 
 ## SessionHostHealthCheckFailureDetails
 ### Properties

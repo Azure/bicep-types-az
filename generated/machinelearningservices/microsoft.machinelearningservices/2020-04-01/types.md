@@ -62,6 +62,11 @@
 * **ApiVersion**: 2020-04-01
 * **Output**: [NotebookResourceInfo](#notebookresourceinfo)
 
+## Function resyncKeys (Microsoft.MachineLearningServices/workspaces@2020-04-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2020-04-01
+* **Output**: any
+
 ## Function updateQuotas (Microsoft.MachineLearningServices/locations@2020-04-01)
 * **Resource**: Microsoft.MachineLearningServices/locations
 * **ApiVersion**: 2020-04-01

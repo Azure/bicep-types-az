@@ -392,6 +392,27 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.PowerBIDedicated/capacities",
+    "apiVersion": "2017-10-01",
+    "output": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.PowerBIDedicated/capacities",
+    "apiVersion": "2017-10-01",
+    "output": {
+      "$ref": "#/40"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CheckCapacityNameAvailabilityParameters",
     "properties": {
@@ -417,7 +438,7 @@
     "properties": {
       "nameAvailable": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/45"
         },
         "flags": 0,
         "description": "Indicator of availability of the capacity name."
@@ -447,10 +468,10 @@
     "resourceType": "Microsoft.PowerBIDedicated/locations",
     "apiVersion": "2017-10-01",
     "output": {
-      "$ref": "#/41"
+      "$ref": "#/44"
     },
     "input": {
-      "$ref": "#/40"
+      "$ref": "#/43"
     }
   }
 ]

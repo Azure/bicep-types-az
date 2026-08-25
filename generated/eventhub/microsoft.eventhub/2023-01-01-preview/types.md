@@ -149,6 +149,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.EventHub/namespaces/schemagroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function breakPairing (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2023-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2023-01-01-preview
+* **Output**: any
+
+## Function failover (Microsoft.EventHub/namespaces@2023-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces
+* **ApiVersion**: 2023-01-01-preview
+* **Input**: [FailOver](#failover)
+* **Output**: any
+
+## Function failover (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2023-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
+* **ApiVersion**: 2023-01-01-preview
+* **Output**: any
+
 ## Function listKeys (Microsoft.EventHub/namespaces/authorizationRules@2023-01-01-preview)
 * **Resource**: Microsoft.EventHub/namespaces/authorizationRules
 * **ApiVersion**: 2023-01-01-preview
@@ -163,6 +179,11 @@
 * **Resource**: Microsoft.EventHub/namespaces/eventhubs/authorizationRules
 * **ApiVersion**: 2023-01-01-preview
 * **Output**: [AccessKeys](#accesskeys)
+
+## Function reconcile (Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations@2023-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2023-01-01-preview
+* **Output**: any
 
 ## Function regenerateKeys (Microsoft.EventHub/namespaces/authorizationRules@2023-01-01-preview)
 * **Resource**: Microsoft.EventHub/namespaces/authorizationRules
@@ -308,6 +329,15 @@
 * **retentionDescription**: [RetentionDescription](#retentiondescription): Event Hub retention settings
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of the Event Hub.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
+
+## FailOver
+### Properties
+* **properties**: [FailOverProperties](#failoverproperties)
+
+## FailOverProperties
+### Properties
+* **force**: bool: If Force is false then graceful failover is attempted after ensuring no data loss. If Force flag is set to true, Forced failover is attempted with possible data loss.
+* **primaryLocation**: string: Query parameter for the new primary location after failover.
 
 ## GeoDataReplicationProperties
 ### Properties

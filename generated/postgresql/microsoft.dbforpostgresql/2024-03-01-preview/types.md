@@ -162,11 +162,27 @@
 * **Input**: [LtrPreBackupRequest](#ltrprebackuprequest)
 * **Output**: [LtrPreBackupResponse](#ltrprebackupresponse)
 
+## Function restart (Microsoft.DBforPostgreSQL/flexibleServers@2024-03-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2024-03-01-preview
+* **Input**: [RestartParameter](#restartparameter)
+* **Output**: any
+
+## Function start (Microsoft.DBforPostgreSQL/flexibleServers@2024-03-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2024-03-01-preview
+* **Output**: any
+
 ## Function startLtrBackup (Microsoft.DBforPostgreSQL/flexibleServers@2024-03-01-preview)
 * **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
 * **ApiVersion**: 2024-03-01-preview
 * **Input**: [LtrBackupRequest](#ltrbackuprequest)
 * **Output**: [LtrBackupResponse](#ltrbackupresponse)
+
+## Function stop (Microsoft.DBforPostgreSQL/flexibleServers@2024-03-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
+* **ApiVersion**: 2024-03-01-preview
+* **Output**: any
 
 ## AdminCredentials
 ### Properties
@@ -435,6 +451,11 @@
 * **promoteOption**: 'forced' | 'planned' | string (WriteOnly): Sets the promote options for a replica server. This is a write only property.
 * **replicationState**: 'Active' | 'Broken' | 'Catchup' | 'Provisioning' | 'Reconfiguring' | 'Updating' | string (ReadOnly): Gets the replication state of a replica server. This property is returned only for replicas api call. Supported values are Active, Catchup, Provisioning, Updating, Broken, Reconfiguring
 * **role**: 'AsyncReplica' | 'GeoAsyncReplica' | 'None' | 'Primary' | string: Used to indicate role of the server in replication set.
+
+## RestartParameter
+### Properties
+* **failoverMode**: 'ForcedFailover' | 'ForcedSwitchover' | 'PlannedFailover' | 'PlannedSwitchover' | string: Failover mode.
+* **restartWithFailover**: bool: Indicates whether to restart the server with failover.
 
 ## ServerBackupProperties
 ### Properties

@@ -4314,5 +4314,32 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachines",
+    "apiVersion": "2022-12-15-preview",
+    "output": {
+      "$ref": "#/239"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachines",
+    "apiVersion": "2022-12-15-preview",
+    "output": {
+      "$ref": "#/239"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.AzureStackHCI/virtualMachines",
+    "apiVersion": "2022-12-15-preview",
+    "output": {
+      "$ref": "#/239"
+    }
   }
 ]

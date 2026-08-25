@@ -3907,12 +3907,21 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "syncAutoStorageKeys",
+    "resourceType": "Microsoft.Batch/batchAccounts",
+    "apiVersion": "2022-10-01",
+    "output": {
+      "$ref": "#/149"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "BatchAccountRegenerateKeyParameters",
     "properties": {
       "keyName": {
         "type": {
-          "$ref": "#/286"
+          "$ref": "#/287"
         },
         "flags": 1,
         "description": "The type of account key to regenerate."
@@ -3931,10 +3940,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/284"
+        "$ref": "#/285"
       },
       {
-        "$ref": "#/285"
+        "$ref": "#/286"
       }
     ]
   },
@@ -3971,10 +3980,10 @@
     "resourceType": "Microsoft.Batch/batchAccounts",
     "apiVersion": "2022-10-01",
     "output": {
-      "$ref": "#/287"
+      "$ref": "#/288"
     },
     "input": {
-      "$ref": "#/283"
+      "$ref": "#/284"
     }
   },
   {
@@ -3983,7 +3992,7 @@
     "resourceType": "Microsoft.Batch/batchAccounts",
     "apiVersion": "2022-10-01",
     "output": {
-      "$ref": "#/287"
+      "$ref": "#/288"
     }
   },
   {
@@ -4046,10 +4055,10 @@
     "resourceType": "Microsoft.Batch/batchAccounts/applications/versions",
     "apiVersion": "2022-10-01",
     "output": {
-      "$ref": "#/291"
+      "$ref": "#/292"
     },
     "input": {
-      "$ref": "#/290"
+      "$ref": "#/291"
     }
   },
   {
@@ -4065,7 +4074,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/294"
+          "$ref": "#/295"
         },
         "flags": 1,
         "description": "The resource type."
@@ -4089,7 +4098,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/298"
+          "$ref": "#/299"
         },
         "flags": 2,
         "description": "Gets the reason that a Batch account name could not be used. The Reason element is only returned if NameAvailable is false."
@@ -4115,10 +4124,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/296"
+        "$ref": "#/297"
       },
       {
-        "$ref": "#/297"
+        "$ref": "#/298"
       }
     ]
   },
@@ -4128,10 +4137,10 @@
     "resourceType": "Microsoft.Batch/locations",
     "apiVersion": "2022-10-01",
     "output": {
-      "$ref": "#/295"
+      "$ref": "#/296"
     },
     "input": {
-      "$ref": "#/293"
+      "$ref": "#/294"
     }
   },
   {
@@ -4140,7 +4149,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/301"
+          "$ref": "#/302"
         },
         "flags": 0,
         "description": "The properties associated with the certificate."
@@ -4181,7 +4190,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/305"
+          "$ref": "#/306"
         },
         "flags": 2
       },
@@ -4194,7 +4203,7 @@
       },
       "previousProvisioningState": {
         "type": {
-          "$ref": "#/309"
+          "$ref": "#/310"
         },
         "flags": 2,
         "description": "The previous provisioned state of the resource"
@@ -4236,7 +4245,7 @@
       },
       "format": {
         "type": {
-          "$ref": "#/312"
+          "$ref": "#/313"
         },
         "flags": 0,
         "description": "The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx."
@@ -4259,13 +4268,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/302"
-      },
-      {
         "$ref": "#/303"
       },
       {
         "$ref": "#/304"
+      },
+      {
+        "$ref": "#/305"
       }
     ]
   },
@@ -4285,13 +4294,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/306"
-      },
-      {
         "$ref": "#/307"
       },
       {
         "$ref": "#/308"
+      },
+      {
+        "$ref": "#/309"
       }
     ]
   },
@@ -4307,10 +4316,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/310"
+        "$ref": "#/311"
       },
       {
-        "$ref": "#/311"
+        "$ref": "#/312"
       }
     ]
   },
@@ -4320,7 +4329,7 @@
     "resourceType": "Microsoft.Batch/batchAccounts/certificates",
     "apiVersion": "2022-10-01",
     "output": {
-      "$ref": "#/300"
+      "$ref": "#/301"
     }
   },
   {
@@ -4377,7 +4386,7 @@
     "resourceType": "Microsoft.Batch/batchAccounts/pools",
     "apiVersion": "2022-10-01",
     "output": {
-      "$ref": "#/314"
+      "$ref": "#/315"
     }
   },
   {
@@ -4386,7 +4395,7 @@
     "resourceType": "Microsoft.Batch/batchAccounts/pools",
     "apiVersion": "2022-10-01",
     "output": {
-      "$ref": "#/314"
+      "$ref": "#/315"
     }
   }
 ]

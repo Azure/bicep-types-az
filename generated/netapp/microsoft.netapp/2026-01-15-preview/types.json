@@ -10842,11 +10842,86 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ChangeKeyVault",
+    "properties": {
+      "keyVaultUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The URI of the key vault/managed HSM that should be used for encryption."
+      },
+      "keyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the key that should be used for encryption."
+      },
+      "keyVaultResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Azure resource ID of the key vault/managed HSM that should be used for encryption."
+      },
+      "keyVaultPrivateEndpoints": {
+        "type": {
+          "$ref": "#/890"
+        },
+        "flags": 1,
+        "description": "Pairs of virtual network ID and private endpoint ID. Every virtual network that has volumes encrypted with customer-managed keys needs its own key vault private endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyVaultPrivateEndpoint",
+    "properties": {
+      "virtualNetworkId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identifier for the virtual network id"
+      },
+      "privateEndpointId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Identifier of the private endpoint to reach the Azure Key Vault"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/889"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "changeKeyVault",
+    "resourceType": "Microsoft.NetApp/netAppAccounts",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/888"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "GetKeyVaultStatusResponse",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/889"
+          "$ref": "#/894"
         },
         "flags": 0,
         "description": "Represents the properties of the getKeyVaultStatus."
@@ -10880,7 +10955,7 @@
       },
       "keyVaultPrivateEndpoints": {
         "type": {
-          "$ref": "#/891"
+          "$ref": "#/895"
         },
         "flags": 0,
         "description": "Pairs of virtual network ID and private endpoint ID. Every virtual network that has volumes encrypted with customer-managed keys needs its own key vault private endpoint."
@@ -10888,29 +10963,9 @@
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "KeyVaultPrivateEndpoint",
-    "properties": {
-      "virtualNetworkId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Identifier for the virtual network id"
-      },
-      "privateEndpointId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Identifier of the private endpoint to reach the Azure Key Vault"
-      }
-    }
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/890"
+      "$ref": "#/889"
     }
   },
   {
@@ -10919,7 +10974,73 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/888"
+      "$ref": "#/893"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "renewCredentials",
+    "resourceType": "Microsoft.NetApp/netAppAccounts",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionTransitionRequest",
+    "properties": {
+      "virtualNetworkId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Identifier for the virtual network"
+      },
+      "privateEndpointId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Identifier of the private endpoint to reach the Azure Key Vault"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "transitiontocmk",
+    "resourceType": "Microsoft.NetApp/netAppAccounts",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/898"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupsMigrationRequest",
+    "properties": {
+      "backupVaultId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The ResourceId of the Backup Vault"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateBackups",
+    "resourceType": "Microsoft.NetApp/netAppAccounts",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/900"
     }
   },
   {
@@ -10955,14 +11076,14 @@
       },
       "zones": {
         "type": {
-          "$ref": "#/895"
+          "$ref": "#/904"
         },
         "flags": 0,
         "description": "The availability zones."
       },
       "tags": {
         "type": {
-          "$ref": "#/896"
+          "$ref": "#/905"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -11024,10 +11145,10 @@
     "resourceType": "Microsoft.NetApp/elasticAccounts/elasticCapacityPools",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/894"
+      "$ref": "#/903"
     },
     "input": {
-      "$ref": "#/893"
+      "$ref": "#/902"
     }
   },
   {
@@ -11049,14 +11170,14 @@
     "properties": {
       "isAvailable": {
         "type": {
-          "$ref": "#/902"
+          "$ref": "#/911"
         },
         "flags": 0,
         "description": "True indicates name is valid and available. False indicates the name is invalid, unavailable, or both."
       },
       "reason": {
         "type": {
-          "$ref": "#/905"
+          "$ref": "#/914"
         },
         "flags": 0,
         "description": "Invalid indicates the name provided does not match Azure NetApp Files naming requirements. AlreadyExists indicates that the name is already in use and is therefore unavailable."
@@ -11082,10 +11203,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/900"
+        "$ref": "#/909"
       },
       {
-        "$ref": "#/901"
+        "$ref": "#/910"
       },
       {
         "$ref": "#/2"
@@ -11104,10 +11225,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/903"
+        "$ref": "#/912"
       },
       {
-        "$ref": "#/904"
+        "$ref": "#/913"
       },
       {
         "$ref": "#/2"
@@ -11120,10 +11241,10 @@
     "resourceType": "Microsoft.NetApp/elasticAccounts/elasticCapacityPools",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/899"
+      "$ref": "#/908"
     },
     "input": {
-      "$ref": "#/898"
+      "$ref": "#/907"
     }
   },
   {
@@ -11159,14 +11280,14 @@
       },
       "zones": {
         "type": {
-          "$ref": "#/909"
+          "$ref": "#/918"
         },
         "flags": 0,
         "description": "The availability zones."
       },
       "tags": {
         "type": {
-          "$ref": "#/910"
+          "$ref": "#/919"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -11228,10 +11349,66 @@
     "resourceType": "Microsoft.NetApp/elasticAccounts/elasticCapacityPools/elasticVolumes",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/908"
+      "$ref": "#/917"
     },
     "input": {
-      "$ref": "#/907"
+      "$ref": "#/916"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupRestoreFiles",
+    "properties": {
+      "fileList": {
+        "type": {
+          "$ref": "#/923"
+        },
+        "flags": 1,
+        "description": "List of files to be restored"
+      },
+      "restoreFilePath": {
+        "type": {
+          "$ref": "#/924"
+        },
+        "flags": 0,
+        "description": "Destination folder where the files will be restored. The path name should start with a forward slash. If it is omitted from request then restore is done at the root folder of the destination volume by default"
+      },
+      "destinationVolumeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource Id of the destination volume on which the files need to be restored"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 1024
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/922"
+    },
+    "minLength": 1,
+    "maxLength": 8
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^\\/.*$"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreFiles",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/backupVaults/backups",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/921"
     }
   },
   {
@@ -11274,7 +11451,7 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/caches",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/912"
+      "$ref": "#/926"
     }
   },
   {
@@ -11310,14 +11487,14 @@
       },
       "zones": {
         "type": {
-          "$ref": "#/916"
+          "$ref": "#/930"
         },
         "flags": 0,
         "description": "The availability zones."
       },
       "tags": {
         "type": {
-          "$ref": "#/917"
+          "$ref": "#/931"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -11379,10 +11556,10 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/caches",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/915"
+      "$ref": "#/929"
     },
     "input": {
-      "$ref": "#/914"
+      "$ref": "#/928"
     }
   },
   {
@@ -11391,7 +11568,7 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/caches",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/915"
+      "$ref": "#/929"
     }
   },
   {
@@ -11400,7 +11577,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/921"
+          "$ref": "#/935"
         },
         "flags": 0,
         "description": "Represents the properties of the SVM peer command response."
@@ -11426,7 +11603,7 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/920"
+      "$ref": "#/934"
     }
   },
   {
@@ -11440,6 +11617,18 @@
         "flags": 0,
         "description": "Resource id of the remote volume"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "authorizeReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/937"
     }
   },
   {
@@ -11463,6 +11652,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "breakFileLocks",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/939"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "BreakReplicationRequest",
     "properties": {
@@ -11473,6 +11674,45 @@
         "flags": 0,
         "description": "If replication is in status transferring and you want to force break the replication, set to true"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "breakReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/941"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deleteReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "finalizeExternalReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "finalizeRelocation",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
     }
   },
   {
@@ -11494,7 +11734,7 @@
     "properties": {
       "groupIdsForLdapUser": {
         "type": {
-          "$ref": "#/928"
+          "$ref": "#/948"
         },
         "flags": 0,
         "description": "Group Id list"
@@ -11513,10 +11753,10 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/927"
+      "$ref": "#/947"
     },
     "input": {
-      "$ref": "#/926"
+      "$ref": "#/946"
     }
   },
   {
@@ -11525,7 +11765,7 @@
     "properties": {
       "quotaType": {
         "type": {
-          "$ref": "#/935"
+          "$ref": "#/955"
         },
         "flags": 0,
         "description": "Type of quota. If provided, quotaTarget must also be specified. The quotaType and quotaTarget properties are optional, but when filtering by quota type, quotaType and quotaTarget must be supplied together. Service/API will return an error if only one is provided."
@@ -11539,7 +11779,7 @@
       },
       "usageThresholdPercentage": {
         "type": {
-          "$ref": "#/936"
+          "$ref": "#/956"
         },
         "flags": 0,
         "description": "The usageThresholdPercentage filter takes the usage threshold percentage and returns records where the usage is greater than or equal to the input value. This is an optional property."
@@ -11566,16 +11806,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/931"
+        "$ref": "#/951"
       },
       {
-        "$ref": "#/932"
+        "$ref": "#/952"
       },
       {
-        "$ref": "#/933"
+        "$ref": "#/953"
       },
       {
-        "$ref": "#/934"
+        "$ref": "#/954"
       },
       {
         "$ref": "#/2"
@@ -11593,7 +11833,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/938"
+          "$ref": "#/958"
         },
         "flags": 0,
         "description": "Represents the properties of the ListQuotaReport."
@@ -11606,7 +11846,7 @@
     "properties": {
       "quotaReportRecords": {
         "type": {
-          "$ref": "#/945"
+          "$ref": "#/965"
         },
         "flags": 0,
         "description": "List of quota reports"
@@ -11619,7 +11859,7 @@
     "properties": {
       "quotaType": {
         "type": {
-          "$ref": "#/944"
+          "$ref": "#/964"
         },
         "flags": 0,
         "description": "Type of quota"
@@ -11681,16 +11921,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/940"
+        "$ref": "#/960"
       },
       {
-        "$ref": "#/941"
+        "$ref": "#/961"
       },
       {
-        "$ref": "#/942"
+        "$ref": "#/962"
       },
       {
-        "$ref": "#/943"
+        "$ref": "#/963"
       },
       {
         "$ref": "#/2"
@@ -11700,7 +11940,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/939"
+      "$ref": "#/959"
     }
   },
   {
@@ -11709,10 +11949,10 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/937"
+      "$ref": "#/957"
     },
     "input": {
-      "$ref": "#/930"
+      "$ref": "#/950"
     }
   },
   {
@@ -11721,7 +11961,7 @@
     "properties": {
       "exclude": {
         "type": {
-          "$ref": "#/950"
+          "$ref": "#/970"
         },
         "flags": 0,
         "description": "Exclude Replications filter. 'None' returns all replications, 'Deleted' excludes deleted replications. Default is 'None'"
@@ -11740,10 +11980,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/948"
+        "$ref": "#/968"
       },
       {
-        "$ref": "#/949"
+        "$ref": "#/969"
       },
       {
         "$ref": "#/2"
@@ -11756,7 +11996,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/964"
+          "$ref": "#/984"
         },
         "flags": 1,
         "description": "The Replication items on this page"
@@ -11783,14 +12023,14 @@
       },
       "endpointType": {
         "type": {
-          "$ref": "#/955"
+          "$ref": "#/975"
         },
         "flags": 0,
         "description": "Indicates whether the local volume is the source or destination for the Volume Replication"
       },
       "replicationSchedule": {
         "type": {
-          "$ref": "#/959"
+          "$ref": "#/979"
         },
         "flags": 0,
         "description": "Schedule"
@@ -11811,7 +12051,7 @@
       },
       "mirrorState": {
         "type": {
-          "$ref": "#/963"
+          "$ref": "#/983"
         },
         "flags": 2,
         "description": "The status of the replication"
@@ -11844,10 +12084,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/953"
+        "$ref": "#/973"
       },
       {
-        "$ref": "#/954"
+        "$ref": "#/974"
       },
       {
         "$ref": "#/2"
@@ -11870,13 +12110,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/956"
+        "$ref": "#/976"
       },
       {
-        "$ref": "#/957"
+        "$ref": "#/977"
       },
       {
-        "$ref": "#/958"
+        "$ref": "#/978"
       },
       {
         "$ref": "#/2"
@@ -11899,13 +12139,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/960"
+        "$ref": "#/980"
       },
       {
-        "$ref": "#/961"
+        "$ref": "#/981"
       },
       {
-        "$ref": "#/962"
+        "$ref": "#/982"
       },
       {
         "$ref": "#/2"
@@ -11915,7 +12155,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/952"
+      "$ref": "#/972"
     }
   },
   {
@@ -11924,10 +12164,10 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/951"
+      "$ref": "#/971"
     },
     "input": {
-      "$ref": "#/947"
+      "$ref": "#/967"
     }
   },
   {
@@ -11936,7 +12176,7 @@
     "properties": {
       "peerIpAddresses": {
         "type": {
-          "$ref": "#/967"
+          "$ref": "#/987"
         },
         "flags": 1,
         "description": "A list of IC-LIF IPs that can be used to connect to the On-prem cluster"
@@ -11956,7 +12196,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/969"
+          "$ref": "#/989"
         },
         "flags": 0,
         "description": "Represents the properties of the cluster peer command response."
@@ -11989,10 +12229,31 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/968"
+      "$ref": "#/988"
     },
     "input": {
-      "$ref": "#/966"
+      "$ref": "#/986"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "performReplicationTransfer",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "poolChange",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/928"
     }
   },
   {
@@ -12015,14 +12276,14 @@
       },
       "zones": {
         "type": {
-          "$ref": "#/972"
+          "$ref": "#/994"
         },
         "flags": 0,
         "description": "The availability zones."
       },
       "tags": {
         "type": {
-          "$ref": "#/973"
+          "$ref": "#/995"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -12084,7 +12345,41 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/971"
+      "$ref": "#/993"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReestablishReplicationRequest",
+    "properties": {
+      "sourceVolumeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource id of the source volume for the replication"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reestablishReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/997"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "reinitializeReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
     }
   },
   {
@@ -12098,6 +12393,36 @@
         "flags": 0,
         "description": "New creation token for the volume that controls the mount point name"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "relocate",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/1000"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resetCifsPassword",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resyncReplication",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
     }
   },
   {
@@ -12115,11 +12440,44 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "revert",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/1004"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "revertRelocation",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "splitCloneFromParent",
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/971"
+      "$ref": "#/993"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateBackups",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/900"
     }
   },
   {
@@ -12128,7 +12486,7 @@
     "properties": {
       "keyPairExpiryDays": {
         "type": {
-          "$ref": "#/979"
+          "$ref": "#/1010"
         },
         "flags": 0,
         "description": "The number of days from now until the newly generated Access and Secret key pair will expire."
@@ -12140,19 +12498,31 @@
     "minValue": 1
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "generateAkvCredentials",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/buckets",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/1009"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "BucketGenerateCredentials",
     "properties": {
       "accessKey": {
         "type": {
-          "$ref": "#/981"
+          "$ref": "#/1013"
         },
         "flags": 2,
         "description": "The Access Key that is required along with the Secret Key to access the bucket."
       },
       "secretKey": {
         "type": {
-          "$ref": "#/981"
+          "$ref": "#/1013"
         },
         "flags": 2,
         "description": "The Secret Key that is required along with the Access Key to access the bucket."
@@ -12176,10 +12546,80 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/buckets",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/980"
+      "$ref": "#/1012"
     },
     "input": {
-      "$ref": "#/978"
+      "$ref": "#/1009"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "refreshCertificate",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/buckets",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RansomwareSuspectsClearRequest",
+    "properties": {
+      "resolution": {
+        "type": {
+          "$ref": "#/1019"
+        },
+        "flags": 1,
+        "description": "ARP report suspect resolution"
+      },
+      "extensions": {
+        "type": {
+          "$ref": "#/1020"
+        },
+        "flags": 1,
+        "description": "List of file extensions resolved (PotentialThreat or FalsePositive)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PotentialThreat"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FalsePositive"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1017"
+      },
+      {
+        "$ref": "#/1018"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/922"
+    },
+    "minLength": 1
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "clearSuspects",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/ransomwareReports",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/1016"
     }
   },
   {
@@ -12188,7 +12628,7 @@
     "properties": {
       "filePaths": {
         "type": {
-          "$ref": "#/985"
+          "$ref": "#/1023"
         },
         "flags": 1,
         "description": "List of files to be restored"
@@ -12203,17 +12643,24 @@
     }
   },
   {
-    "$type": "StringType",
-    "minLength": 1,
-    "maxLength": 1024
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/984"
+      "$ref": "#/922"
     },
     "minLength": 1,
     "maxLength": 10
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restoreFiles",
+    "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots",
+    "apiVersion": "2026-01-15-preview",
+    "output": {
+      "$ref": "#/891"
+    },
+    "input": {
+      "$ref": "#/1022"
+    }
   },
   {
     "$type": "ObjectType",
@@ -12242,7 +12689,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/987"
+          "$ref": "#/1026"
         },
         "flags": 0,
         "description": "It represents the minimal properties of the subvolume."
@@ -12331,7 +12778,7 @@
     "resourceType": "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes",
     "apiVersion": "2026-01-15-preview",
     "output": {
-      "$ref": "#/986"
+      "$ref": "#/1025"
     }
   }
 ]

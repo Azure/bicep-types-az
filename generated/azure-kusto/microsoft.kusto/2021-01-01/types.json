@@ -3154,12 +3154,33 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Kusto/clusters",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/291"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Kusto/clusters",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/291"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "FollowerDatabaseListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/293"
+          "$ref": "#/296"
         },
         "flags": 0,
         "description": "The list of follower database result."
@@ -3196,7 +3217,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/292"
+      "$ref": "#/295"
     }
   },
   {
@@ -3205,7 +3226,19 @@
     "resourceType": "Microsoft.Kusto/clusters",
     "apiVersion": "2021-01-01",
     "output": {
+      "$ref": "#/294"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "detachFollowerDatabases",
+    "resourceType": "Microsoft.Kusto/clusters",
+    "apiVersion": "2021-01-01",
+    "output": {
       "$ref": "#/291"
+    },
+    "input": {
+      "$ref": "#/295"
     }
   },
   {
@@ -3214,7 +3247,7 @@
     "properties": {
       "findings": {
         "type": {
-          "$ref": "#/296"
+          "$ref": "#/300"
         },
         "flags": 0,
         "description": "The list of network connectivity diagnostic finding"
@@ -3233,7 +3266,7 @@
     "resourceType": "Microsoft.Kusto/clusters",
     "apiVersion": "2021-01-01",
     "output": {
-      "$ref": "#/295"
+      "$ref": "#/299"
     }
   },
   {
@@ -3242,6 +3275,30 @@
     "resourceType": "Microsoft.Kusto/clusters",
     "apiVersion": "2021-01-01",
     "output": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addLanguageExtensions",
+    "resourceType": "Microsoft.Kusto/clusters",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/291"
+    },
+    "input": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "removeLanguageExtensions",
+    "resourceType": "Microsoft.Kusto/clusters",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/291"
+    },
+    "input": {
       "$ref": "#/68"
     }
   },
@@ -3258,7 +3315,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/300"
+          "$ref": "#/306"
         },
         "flags": 1,
         "description": "The type of resource, Microsoft.Kusto/clusters/principalAssignments."
@@ -3296,7 +3353,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/304"
+          "$ref": "#/310"
         },
         "flags": 0,
         "description": "Message providing the reason why the given name is invalid."
@@ -3315,10 +3372,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/302"
+        "$ref": "#/308"
       },
       {
-        "$ref": "#/303"
+        "$ref": "#/309"
       },
       {
         "$ref": "#/0"
@@ -3331,10 +3388,10 @@
     "resourceType": "Microsoft.Kusto/clusters",
     "apiVersion": "2021-01-01",
     "output": {
-      "$ref": "#/301"
+      "$ref": "#/307"
     },
     "input": {
-      "$ref": "#/299"
+      "$ref": "#/305"
     }
   },
   {
@@ -3350,7 +3407,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/309"
+          "$ref": "#/315"
         },
         "flags": 1,
         "description": "The type of resource, for instance Microsoft.Kusto/clusters/databases."
@@ -3369,10 +3426,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/307"
+        "$ref": "#/313"
       },
       {
-        "$ref": "#/308"
+        "$ref": "#/314"
       }
     ]
   },
@@ -3382,10 +3439,10 @@
     "resourceType": "Microsoft.Kusto/clusters",
     "apiVersion": "2021-01-01",
     "output": {
-      "$ref": "#/301"
+      "$ref": "#/307"
     },
     "input": {
-      "$ref": "#/306"
+      "$ref": "#/312"
     }
   },
   {
@@ -3401,7 +3458,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/312"
+          "$ref": "#/318"
         },
         "flags": 1,
         "description": "The type of resource, Microsoft.Kusto/clusters."
@@ -3418,10 +3475,10 @@
     "resourceType": "Microsoft.Kusto/locations",
     "apiVersion": "2021-01-01",
     "output": {
-      "$ref": "#/301"
+      "$ref": "#/307"
     },
     "input": {
-      "$ref": "#/311"
+      "$ref": "#/317"
     }
   },
   {
@@ -3430,7 +3487,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/327"
+          "$ref": "#/333"
         },
         "flags": 0,
         "description": "The list of Kusto database principals."
@@ -3443,7 +3500,7 @@
     "properties": {
       "role": {
         "type": {
-          "$ref": "#/322"
+          "$ref": "#/328"
         },
         "flags": 1,
         "description": "Database principal role."
@@ -3457,7 +3514,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/326"
+          "$ref": "#/332"
         },
         "flags": 1,
         "description": "Database principal type."
@@ -3520,22 +3577,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/316"
+        "$ref": "#/322"
       },
       {
-        "$ref": "#/317"
+        "$ref": "#/323"
       },
       {
-        "$ref": "#/318"
+        "$ref": "#/324"
       },
       {
-        "$ref": "#/319"
+        "$ref": "#/325"
       },
       {
-        "$ref": "#/320"
+        "$ref": "#/326"
       },
       {
-        "$ref": "#/321"
+        "$ref": "#/327"
       },
       {
         "$ref": "#/0"
@@ -3558,13 +3615,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/323"
+        "$ref": "#/329"
       },
       {
-        "$ref": "#/324"
+        "$ref": "#/330"
       },
       {
-        "$ref": "#/325"
+        "$ref": "#/331"
       },
       {
         "$ref": "#/0"
@@ -3574,7 +3631,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/315"
+      "$ref": "#/321"
     }
   },
   {
@@ -3583,7 +3640,7 @@
     "resourceType": "Microsoft.Kusto/clusters/databases",
     "apiVersion": "2021-01-01",
     "output": {
-      "$ref": "#/314"
+      "$ref": "#/320"
     }
   },
   {
@@ -3592,7 +3649,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/330"
+          "$ref": "#/336"
         },
         "flags": 0,
         "description": "The list of Kusto database principals."
@@ -3602,7 +3659,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/315"
+      "$ref": "#/321"
     }
   },
   {
@@ -3611,10 +3668,10 @@
     "resourceType": "Microsoft.Kusto/clusters/databases",
     "apiVersion": "2021-01-01",
     "output": {
-      "$ref": "#/314"
+      "$ref": "#/320"
     },
     "input": {
-      "$ref": "#/329"
+      "$ref": "#/335"
     }
   },
   {
@@ -3623,10 +3680,10 @@
     "resourceType": "Microsoft.Kusto/clusters/databases",
     "apiVersion": "2021-01-01",
     "output": {
-      "$ref": "#/314"
+      "$ref": "#/320"
     },
     "input": {
-      "$ref": "#/329"
+      "$ref": "#/335"
     }
   },
   {
@@ -3642,7 +3699,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/334"
+          "$ref": "#/340"
         },
         "flags": 1,
         "description": "The type of resource, Microsoft.Kusto/clusters/databases/principalAssignments."
@@ -3659,10 +3716,10 @@
     "resourceType": "Microsoft.Kusto/clusters/databases",
     "apiVersion": "2021-01-01",
     "output": {
-      "$ref": "#/301"
+      "$ref": "#/307"
     },
     "input": {
-      "$ref": "#/333"
+      "$ref": "#/339"
     }
   },
   {
@@ -3678,7 +3735,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/337"
+          "$ref": "#/343"
         },
         "flags": 1,
         "description": "The type of resource, Microsoft.Kusto/clusters/databases/scripts."
@@ -3695,10 +3752,10 @@
     "resourceType": "Microsoft.Kusto/clusters/databases",
     "apiVersion": "2021-01-01",
     "output": {
-      "$ref": "#/301"
+      "$ref": "#/307"
     },
     "input": {
-      "$ref": "#/336"
+      "$ref": "#/342"
     }
   },
   {
@@ -3714,7 +3771,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/340"
+          "$ref": "#/346"
         },
         "flags": 0,
         "description": "The data connection properties to validate."
@@ -3757,13 +3814,13 @@
     },
     "elements": {
       "EventGrid": {
-        "$ref": "#/341"
+        "$ref": "#/347"
       },
       "EventHub": {
-        "$ref": "#/343"
+        "$ref": "#/349"
       },
       "IotHub": {
-        "$ref": "#/345"
+        "$ref": "#/351"
       }
     }
   },
@@ -3780,7 +3837,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/342"
+          "$ref": "#/348"
         },
         "flags": 1,
         "description": "Kind of the endpoint for the data connection"
@@ -3804,7 +3861,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/344"
+          "$ref": "#/350"
         },
         "flags": 1,
         "description": "Kind of the endpoint for the data connection"
@@ -3828,7 +3885,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/346"
+          "$ref": "#/352"
         },
         "flags": 1,
         "description": "Kind of the endpoint for the data connection"
@@ -3845,7 +3902,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/349"
+          "$ref": "#/355"
         },
         "flags": 0,
         "description": "The list of Kusto data connection validation errors."
@@ -3868,7 +3925,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/348"
+      "$ref": "#/354"
     }
   },
   {
@@ -3877,10 +3934,10 @@
     "resourceType": "Microsoft.Kusto/clusters/databases",
     "apiVersion": "2021-01-01",
     "output": {
-      "$ref": "#/347"
+      "$ref": "#/353"
     },
     "input": {
-      "$ref": "#/339"
+      "$ref": "#/345"
     }
   },
   {
@@ -3896,7 +3953,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/352"
+          "$ref": "#/358"
         },
         "flags": 1,
         "description": "The type of resource, Microsoft.Kusto/clusters/databases/dataConnections."
@@ -3913,10 +3970,10 @@
     "resourceType": "Microsoft.Kusto/clusters/databases",
     "apiVersion": "2021-01-01",
     "output": {
-      "$ref": "#/301"
+      "$ref": "#/307"
     },
     "input": {
-      "$ref": "#/351"
+      "$ref": "#/357"
     }
   }
 ]

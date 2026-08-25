@@ -495,12 +495,24 @@
     "writableScopes": 8
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "syncAutoStorageKeys",
+    "resourceType": "Microsoft.Batch/batchAccounts",
+    "apiVersion": "2015-12-01",
+    "output": {
+      "$ref": "#/36"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "BatchAccountRegenerateKeyParameters",
     "properties": {
       "keyName": {
         "type": {
-          "$ref": "#/39"
+          "$ref": "#/41"
         },
         "flags": 1,
         "description": "The type of account key to regenerate."
@@ -519,10 +531,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/37"
+        "$ref": "#/39"
       },
       {
-        "$ref": "#/38"
+        "$ref": "#/40"
       }
     ]
   },
@@ -552,10 +564,10 @@
     "resourceType": "Microsoft.Batch/batchAccounts",
     "apiVersion": "2015-12-01",
     "output": {
-      "$ref": "#/40"
+      "$ref": "#/42"
     },
     "input": {
-      "$ref": "#/36"
+      "$ref": "#/38"
     }
   },
   {
@@ -564,7 +576,32 @@
     "resourceType": "Microsoft.Batch/batchAccounts",
     "apiVersion": "2015-12-01",
     "output": {
-      "$ref": "#/40"
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActivateApplicationPackageParameters",
+    "properties": {
+      "format": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The format of the application package binary file."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.Batch/batchAccounts/applications/versions",
+    "apiVersion": "2015-12-01",
+    "output": {
+      "$ref": "#/36"
+    },
+    "input": {
+      "$ref": "#/45"
     }
   }
 ]

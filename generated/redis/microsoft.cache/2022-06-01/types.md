@@ -55,11 +55,23 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.Cache/redis/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function export (Microsoft.Cache/redis@2022-06-01)
+* **Resource**: Microsoft.Cache/redis
+* **ApiVersion**: 2022-06-01
+* **Input**: [ExportRDBParameters](#exportrdbparameters)
+* **Output**: any
+
 ## Function forceReboot (Microsoft.Cache/redis@2022-06-01)
 * **Resource**: Microsoft.Cache/redis
 * **ApiVersion**: 2022-06-01
 * **Input**: [RedisRebootParameters](#redisrebootparameters)
 * **Output**: [RedisForceRebootResponse](#redisforcerebootresponse)
+
+## Function import (Microsoft.Cache/redis@2022-06-01)
+* **Resource**: Microsoft.Cache/redis
+* **ApiVersion**: 2022-06-01
+* **Input**: [ImportRDBParameters](#importrdbparameters)
+* **Output**: any
 
 ## Function listKeys (Microsoft.Cache/redis@2022-06-01)
 * **Resource**: Microsoft.Cache/redis
@@ -71,6 +83,19 @@
 * **ApiVersion**: 2022-06-01
 * **Input**: [RedisRegenerateKeyParameters](#redisregeneratekeyparameters)
 * **Output**: [RedisAccessKeys](#redisaccesskeys)
+
+## ExportRDBParameters
+### Properties
+* **container**: string (Required): Container name to export to.
+* **format**: string: File format.
+* **preferred-data-archive-auth-method**: string: Preferred auth method to communicate to storage account used for data archive, specify SAS or ManagedIdentity, default value is SAS
+* **prefix**: string (Required): Prefix to use for exported files.
+
+## ImportRDBParameters
+### Properties
+* **files**: string[] (Required): files to import.
+* **format**: string: File format.
+* **preferred-data-archive-auth-method**: string: Preferred auth method to communicate to storage account used for data archive, specify SAS or ManagedIdentity, default value is SAS
 
 ## ManagedServiceIdentity
 ### Properties

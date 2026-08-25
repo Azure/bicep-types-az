@@ -379,6 +379,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function cancel (Microsoft.MachineLearningServices/workspaces/jobs@2022-12-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/jobs
+* **ApiVersion**: 2022-12-01-preview
+* **Output**: any
+
+## Function customServices (Microsoft.MachineLearningServices/workspaces/computes@2022-12-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2022-12-01-preview
+* **Input**: [CustomService](#customservice)[]
+* **Output**: any
+
 ## Function diagnose (Microsoft.MachineLearningServices/workspaces@2022-12-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2022-12-01-preview
@@ -442,15 +453,57 @@
 * **ApiVersion**: 2022-12-01-preview
 * **Output**: [ListStorageAccountKeysResult](#liststorageaccountkeysresult)
 
+## Function pause (Microsoft.MachineLearningServices/workspaces/labelingJobs@2022-12-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/labelingJobs
+* **ApiVersion**: 2022-12-01-preview
+* **Output**: any
+
 ## Function prepareNotebook (Microsoft.MachineLearningServices/workspaces@2022-12-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2022-12-01-preview
 * **Output**: [NotebookResourceInfo](#notebookresourceinfo)
 
+## Function regenerateKeys (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2022-12-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2022-12-01-preview
+* **Input**: [RegenerateEndpointKeysRequest](#regenerateendpointkeysrequest)
+* **Output**: any
+
+## Function restart (Microsoft.MachineLearningServices/workspaces/computes@2022-12-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2022-12-01-preview
+* **Output**: any
+
+## Function resume (Microsoft.MachineLearningServices/workspaces/labelingJobs@2022-12-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/labelingJobs
+* **ApiVersion**: 2022-12-01-preview
+* **Output**: any
+
+## Function resyncKeys (Microsoft.MachineLearningServices/workspaces@2022-12-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2022-12-01-preview
+* **Output**: any
+
+## Function start (Microsoft.MachineLearningServices/workspaces/computes@2022-12-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2022-12-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.MachineLearningServices/workspaces/computes@2022-12-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2022-12-01-preview
+* **Output**: any
+
 ## Function token (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2022-12-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
 * **ApiVersion**: 2022-12-01-preview
 * **Output**: [EndpointAuthToken](#endpointauthtoken)
+
+## Function updateIdleShutdownSetting (Microsoft.MachineLearningServices/workspaces/computes@2022-12-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2022-12-01-preview
+* **Input**: [IdleShutdownSetting](#idleshutdownsetting)
+* **Output**: any
 
 ## Function updateQuotas (Microsoft.MachineLearningServices/locations@2022-12-01-preview)
 * **Resource**: Microsoft.MachineLearningServices/locations
@@ -1740,6 +1793,10 @@ If 'NonDistributed' then only non distributed algorithms are chosen.
 ### Properties
 * **userAssignedIdentity**: string: The ArmId of the user assigned identity that will be used to access the customer managed key vault
 
+## IdleShutdownSetting
+### Properties
+* **idleTimeBeforeShutdown**: string: Time is defined in ISO8601 format. Minimum is 15 min, maximum is 3 days.
+
 ## Image
 ### Properties
 * **reference**: string: Image reference URL
@@ -2753,6 +2810,11 @@ If not present, the schedule will run indefinitely
 * **timeZone**: string: Specifies time zone in which the schedule runs.
 TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11
 * **triggerType**: 'Cron' | 'Recurrence' | string (Required): [Required]
+
+## RegenerateEndpointKeysRequest
+### Properties
+* **keyType**: 'Primary' | 'Secondary' | string (Required): [Required] Specification for which type of key to generate. Primary or Secondary.
+* **keyValue**: string: The value the key is set to.
 
 ## RegistryListCredentialsResult
 ### Properties

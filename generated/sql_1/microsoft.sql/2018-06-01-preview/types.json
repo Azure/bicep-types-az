@@ -3119,6 +3119,45 @@
     "writableScopes": 0
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disable",
+    "resourceType": "Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels",
+    "apiVersion": "2018-06-01-preview",
+    "output": {
+      "$ref": "#/228"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels",
+    "apiVersion": "2018-06-01-preview",
+    "output": {
+      "$ref": "#/228"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/servers/elasticPools",
+    "apiVersion": "2018-06-01-preview",
+    "output": {
+      "$ref": "#/228"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "failover",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "apiVersion": "2018-06-01-preview",
+    "output": {
+      "$ref": "#/228"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "CompleteDatabaseRestoreDefinition",
     "properties": {
@@ -3129,6 +3168,18 @@
         "flags": 1,
         "description": "The last backup name to apply"
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "completeRestore",
+    "resourceType": "Microsoft.Sql/managedInstances/databases",
+    "apiVersion": "2018-06-01-preview",
+    "output": {
+      "$ref": "#/228"
+    },
+    "input": {
+      "$ref": "#/233"
     }
   }
 ]

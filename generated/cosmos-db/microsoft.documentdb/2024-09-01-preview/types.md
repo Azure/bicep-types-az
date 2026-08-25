@@ -517,6 +517,23 @@
 * **ApiVersion**: 2024-09-01-preview
 * **Output**: [DataTransferJobGetResults](#datatransferjobgetresults)
 
+## Function deallocate (Microsoft.DocumentDB/cassandraClusters@2024-09-01-preview)
+* **Resource**: Microsoft.DocumentDB/cassandraClusters
+* **ApiVersion**: 2024-09-01-preview
+* **Output**: any
+
+## Function failoverPriorityChange (Microsoft.DocumentDB/databaseAccounts@2024-09-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2024-09-01-preview
+* **Input**: [FailoverPolicies](#failoverpolicies)
+* **Output**: any
+
+## Function invokeCommand (Microsoft.DocumentDB/cassandraClusters@2024-09-01-preview)
+* **Resource**: Microsoft.DocumentDB/cassandraClusters
+* **ApiVersion**: 2024-09-01-preview
+* **Input**: [CommandPostBody](#commandpostbody)
+* **Output**: [CommandOutput](#commandoutput)
+
 ## Function invokeCommandAsync (Microsoft.DocumentDB/cassandraClusters@2024-09-01-preview)
 * **Resource**: Microsoft.DocumentDB/cassandraClusters
 * **ApiVersion**: 2024-09-01-preview
@@ -638,6 +655,18 @@
 * **ApiVersion**: 2024-09-01-preview
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
+## Function offlineRegion (Microsoft.DocumentDB/databaseAccounts@2024-09-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2024-09-01-preview
+* **Input**: [RegionForOnlineOffline](#regionforonlineoffline)
+* **Output**: any
+
+## Function onlineRegion (Microsoft.DocumentDB/databaseAccounts@2024-09-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2024-09-01-preview
+* **Input**: [RegionForOnlineOffline](#regionforonlineoffline)
+* **Output**: any
+
 ## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2024-09-01-preview)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases
 * **ApiVersion**: 2024-09-01-preview
@@ -672,6 +701,11 @@
 * **ApiVersion**: 2024-09-01-preview
 * **Output**: [DatabaseAccountListReadOnlyKeysResult](#databaseaccountlistreadonlykeysresult)
 
+## Function reconcile (Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations@2024-09-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations
+* **ApiVersion**: 2024-09-01-preview
+* **Output**: any
+
 ## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2024-09-01-preview)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
 * **ApiVersion**: 2024-09-01-preview
@@ -695,6 +729,17 @@
 * **ApiVersion**: 2024-09-01-preview
 * **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
 * **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
+
+## Function regenerateAuthToken (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2024-09-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
+* **ApiVersion**: 2024-09-01-preview
+* **Output**: any
+
+## Function regenerateKey (Microsoft.DocumentDB/databaseAccounts@2024-09-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2024-09-01-preview
+* **Input**: [DatabaseAccountRegenerateKeyParameters](#databaseaccountregeneratekeyparameters)
+* **Output**: any
 
 ## Function resume (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2024-09-01-preview)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/dataTransferJobs
@@ -748,6 +793,16 @@
 * **ApiVersion**: 2024-09-01-preview
 * **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
 * **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
+
+## Function start (Microsoft.DocumentDB/cassandraClusters@2024-09-01-preview)
+* **Resource**: Microsoft.DocumentDB/cassandraClusters
+* **ApiVersion**: 2024-09-01-preview
+* **Output**: any
+
+## Function start (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2024-09-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
+* **ApiVersion**: 2024-09-01-preview
+* **Output**: any
 
 ## AccessRule
 ### Properties
@@ -989,6 +1044,10 @@
 * **name**: string: Name of the Cosmos DB Cassandra table column
 * **type**: string: Type of the Cosmos DB Cassandra table column
 
+## CommandOutput
+### Properties
+* **commandOutput**: string: Output of the command.
+
 ## CommandPostBody
 ### Properties
 * **arguments**: any: The arguments for the command to be run
@@ -1203,6 +1262,10 @@
 * **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
 
+## DatabaseAccountRegenerateKeyParameters
+### Properties
+* **keyKind**: 'primary' | 'primaryReadonly' | 'secondary' | 'secondaryReadonly' | string (Required): The access key to regenerate.
+
 ## DatabaseRestoreResource
 ### Properties
 * **collectionNames**: string[]: The names of the collections available for restore.
@@ -1307,6 +1370,10 @@
 ## ExcludedPath
 ### Properties
 * **path**: string: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+
+## FailoverPolicies
+### Properties
+* **failoverPolicies**: [FailoverPolicy](#failoverpolicy)[] (Required): List of failover policies.
 
 ## FailoverPolicy
 ### Properties
@@ -1666,6 +1733,10 @@
 * **sourcePhysicalPartitionThroughputInfo**: [PhysicalPartitionThroughputInfoResource](#physicalpartitionthroughputinforesource)[] (Required): Array of PhysicalPartitionThroughputInfoResource objects.
 * **targetPhysicalPartitionThroughputInfo**: [PhysicalPartitionThroughputInfoResource](#physicalpartitionthroughputinforesource)[] (Required): Array of PhysicalPartitionThroughputInfoResource objects.
 * **throughputPolicy**: 'custom' | 'equal' | 'none' | string (Required): ThroughputPolicy to apply for throughput redistribution
+
+## RegionForOnlineOffline
+### Properties
+* **region**: string (Required): Cosmos DB region, with spaces between words and each word capitalized.
 
 ## ResourceAssociation
 ### Properties

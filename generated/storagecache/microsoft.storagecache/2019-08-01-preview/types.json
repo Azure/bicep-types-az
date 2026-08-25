@@ -664,5 +664,14 @@
     "output": {
       "$ref": "#/5"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "upgrade",
+    "resourceType": "Microsoft.StorageCache/caches",
+    "apiVersion": "2019-08-01-preview",
+    "output": {
+      "$ref": "#/5"
+    }
   }
 ]

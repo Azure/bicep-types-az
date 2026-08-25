@@ -107,11 +107,22 @@
 * **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
 * **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
 
+## Function exportBackupJobs (Microsoft.DataProtection/backupVaults@2021-07-01)
+* **Resource**: Microsoft.DataProtection/backupVaults
+* **ApiVersion**: 2021-07-01
+* **Output**: any
+
 ## Function findRestorableTimeRanges (Microsoft.DataProtection/backupVaults/backupInstances@2021-07-01)
 * **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
 * **ApiVersion**: 2021-07-01
 * **Input**: [AzureBackupFindRestorableTimeRangesRequest](#azurebackupfindrestorabletimerangesrequest)
 * **Output**: [AzureBackupFindRestorableTimeRangesResponseResource](#azurebackupfindrestorabletimerangesresponseresource)
+
+## Function rehydrate (Microsoft.DataProtection/backupVaults/backupInstances@2021-07-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2021-07-01
+* **Input**: [AzureBackupRehydrationRequest](#azurebackuprehydrationrequest)
+* **Output**: any
 
 ## Function restore (Microsoft.DataProtection/backupVaults/backupInstances@2021-07-01)
 * **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
@@ -225,6 +236,12 @@
 * **retentionTagName**: string
 * **retentionTagVersion**: string
 
+
+## AzureBackupRehydrationRequest
+### Properties
+* **recoveryPointId**: string (Required): Id of the recovery point to be recovered
+* **rehydrationPriority**: 'High' | 'Invalid' | 'Standard' | string: Priority to be used for rehydration. Values High or Standard
+* **rehydrationRetentionDuration**: string (Required): Retention duration in ISO 8601 format i.e P10D .
 
 ## AzureBackupRestoreRequest
 * **Discriminator**: objectType

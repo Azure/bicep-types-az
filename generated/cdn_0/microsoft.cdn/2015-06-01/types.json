@@ -842,6 +842,345 @@
   },
   {
     "$type": "ObjectType",
+    "name": "Endpoint",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 0
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 1,
+        "description": "Resource tags"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EndpointProperties",
+    "properties": {
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The host name of the endpoint {endpointName}.{DNSZone}"
+      },
+      "originHostHeader": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The host header the CDN provider will send along with content requests to origins. The default value is the host name of the origin."
+      },
+      "originPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The path used for origin requests."
+      },
+      "contentTypesToCompress": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "List of content types on which compression will be applied. The value for the elements should be a valid MIME type."
+      },
+      "isCompressionEnabled": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Indicates whether the compression is enabled. Default value is false. If compression is enabled, the content transferred from cdn endpoint to end user will be compressed. The requested content must be larger than 1 byte and smaller than 1 MB."
+      },
+      "isHttpAllowed": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed."
+      },
+      "isHttpsAllowed": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Indicates whether https traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed."
+      },
+      "queryStringCachingBehavior": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "Defines the query string caching behavior."
+      },
+      "origins": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "The set of origins for the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options."
+      },
+      "resourceState": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 2,
+        "description": "Resource status of the endpoint."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 2,
+        "description": "Provisioning status of the endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IgnoreQueryString"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BypassCaching"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UseQueryString"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSet"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Starting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopping"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/87"
+      },
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2015-06-01",
+    "output": {
+      "$ref": "#/76"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2015-06-01",
+    "output": {
+      "$ref": "#/76"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PurgeParameters",
+    "properties": {
+      "contentPaths": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 1,
+        "description": "The path to the content to be purged. Can describe a file path or a wild card directory."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2015-06-01",
+    "output": {
+      "$ref": "#/101"
+    },
+    "input": {
+      "$ref": "#/99"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LoadParameters",
+    "properties": {
+      "contentPaths": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 1,
+        "description": "The path to the content to be loaded. Should describe a file path."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "load",
+    "resourceType": "Microsoft.Cdn/profiles/endpoints",
+    "apiVersion": "2015-06-01",
+    "output": {
+      "$ref": "#/101"
+    },
+    "input": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ValidateCustomDomainInput",
     "properties": {
       "hostName": {
@@ -886,10 +1225,10 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2015-06-01",
     "output": {
-      "$ref": "#/77"
+      "$ref": "#/107"
     },
     "input": {
-      "$ref": "#/76"
+      "$ref": "#/106"
     }
   }
 ]

@@ -835,10 +835,22 @@
 * **ApiVersion**: 2024-04-01-preview
 * **Output**: [IncidentAlertList](#incidentalertlist)
 
+## Function appendTags (Microsoft.SecurityInsights/threatIntelligence/indicators@2024-04-01-preview)
+* **Resource**: Microsoft.SecurityInsights/threatIntelligence/indicators
+* **ApiVersion**: 2024-04-01-preview
+* **Input**: [ThreatIntelligenceAppendTags](#threatintelligenceappendtags)
+* **Output**: any
+
 ## Function bookmarks (Microsoft.SecurityInsights/incidents@2024-04-01-preview)
 * **Resource**: Microsoft.SecurityInsights/incidents
 * **ApiVersion**: 2024-04-01-preview
 * **Output**: [IncidentBookmarkList](#incidentbookmarklist)
+
+## Function connect (Microsoft.SecurityInsights/dataConnectors@2024-04-01-preview)
+* **Resource**: Microsoft.SecurityInsights/dataConnectors
+* **ApiVersion**: 2024-04-01-preview
+* **Input**: [DataConnectorConnectBody](#dataconnectorconnectbody)
+* **Output**: any
 
 ## Function count (Microsoft.SecurityInsights/threatIntelligence@2024-04-01-preview)
 * **Resource**: Microsoft.SecurityInsights/threatIntelligence
@@ -857,6 +869,11 @@
 * **ApiVersion**: 2024-04-01-preview
 * **Input**: [TeamInformation](#teaminformation)
 * **Output**: [TeamInformation](#teaminformation)
+
+## Function disconnect (Microsoft.SecurityInsights/dataConnectors@2024-04-01-preview)
+* **Resource**: Microsoft.SecurityInsights/dataConnectors
+* **ApiVersion**: 2024-04-01-preview
+* **Output**: any
 
 ## Function entities (Microsoft.SecurityInsights/incidents@2024-04-01-preview)
 * **Resource**: Microsoft.SecurityInsights/incidents
@@ -922,10 +939,28 @@
 * **Input**: [ThreatIntelligenceIndicatorModel](#threatintelligenceindicatormodel)
 * **Output**: [ThreatIntelligenceInformation](#threatintelligenceinformation)
 
+## Function runPlaybook (Microsoft.SecurityInsights/entities@2024-04-01-preview)
+* **Resource**: Microsoft.SecurityInsights/entities
+* **ApiVersion**: 2024-04-01-preview
+* **Input**: [EntityManualTriggerRequestBody](#entitymanualtriggerrequestbody)
+* **Output**: any
+
+## Function runPlaybook (Microsoft.SecurityInsights/incidents@2024-04-01-preview)
+* **Resource**: Microsoft.SecurityInsights/incidents
+* **ApiVersion**: 2024-04-01-preview
+* **Input**: [ManualTriggerRequestBody](#manualtriggerrequestbody)
+* **Output**: any
+
 ## Function triggerEvaluation (Microsoft.SecurityInsights/recommendations@2024-04-01-preview)
 * **Resource**: Microsoft.SecurityInsights/recommendations
 * **ApiVersion**: 2024-04-01-preview
 * **Output**: [ReevaluateResponse](#reevaluateresponse)
+
+## Function triggerRuleRun (Microsoft.SecurityInsights/alertRules@2024-04-01-preview)
+* **Resource**: Microsoft.SecurityInsights/alertRules
+* **ApiVersion**: 2024-04-01-preview
+* **Input**: [AnalyticsRuleRunTrigger](#analyticsruleruntrigger)
+* **Output**: any
 
 ## AADDataConnectorProperties
 ### Properties
@@ -1030,6 +1065,14 @@
 ## AlertsDataTypeOfDataConnector
 ### Properties
 * **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon) (Required): Alerts data type connection.
+
+## AnalyticsRuleRunTrigger
+### Properties
+* **properties**: [AnalyticsRuleRunTriggerProperties](#analyticsruleruntriggerproperties) (Required): The analytics Rule Run Trigger request
+
+## AnalyticsRuleRunTriggerProperties
+### Properties
+* **executionTimeUtc**: string (Required)
 
 ## AnomaliesSettingsProperties
 ### Properties
@@ -1565,6 +1608,20 @@ The logo value should be in SVG format.
 * **description**: string (Required): Gets or sets the custom permissions description.
 * **name**: string (Required): Gets or sets the custom permissions name.
 
+## DataConnectorConnectBody
+### Properties
+* **apiKey**: string: The API key of the audit server.
+* **authorizationCode**: string: The authorization code used in OAuth 2.0 code flow to issue a token.
+* **clientId**: string: The client id of the OAuth 2.0 application.
+* **clientSecret**: string: The client secret of the OAuth 2.0 application.
+* **dataCollectionEndpoint**: string: Used in v2 logs connector. Represents the data collection ingestion endpoint in log analytics.
+* **dataCollectionRuleImmutableId**: string: Used in v2 logs connector. The data collection rule immutable id, the rule defines the transformation and data destination.
+* **kind**: 'APIKey' | 'Basic' | 'OAuth2' | string: The authentication kind used to poll the data
+* **outputStream**: string: Used in v2 logs connector. The stream we are sending the data to, this is the name of the streamDeclarations defined in the DCR.
+* **password**: string {sensitive}: The user password in the audit log server.
+* **requestConfigUserInputValues**: any[]
+* **userName**: string: The user name in the audit log server.
+
 ## DataConnectorDataTypeCommon
 ### Properties
 * **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
@@ -1967,6 +2024,12 @@ The logo value should be in SVG format.
 ### Properties
 * **endTime**: string: Insight query end time
 * **startTime**: string: Insight query start time
+
+## EntityManualTriggerRequestBody
+### Properties
+* **incidentArmId**: string: Incident ARM id.
+* **logicAppsResourceId**: string (Required): The resource id of the playbook resource.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The tenant id of the playbook resource.
 
 ## EntityMapping
 ### Properties
@@ -2624,6 +2687,11 @@ Foe Example: instruction step 1 might contain inner instruction steps: [instruct
 * **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
 * **malwareName**: string (ReadOnly): The malware name by the vendor, e.g. Win32/Toga!rfn
 * **processEntityIds**: string[] (ReadOnly): List of linked process entity identifiers on which the malware was found.
+
+## ManualTriggerRequestBody
+### Properties
+* **logicAppsResourceId**: string (Required)
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}
 
 ## McasDataConnectorDataTypes
 ### Properties
@@ -3457,6 +3525,10 @@ Foe Example: instruction step 1 might contain inner instruction steps: [instruct
 * **status**: 'Available' | 'Installed' | 'NotAvailable' | string: The alert rule template status.
 * **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule
 * **techniques**: string[]: The techniques of the alert rule
+
+## ThreatIntelligenceAppendTags
+### Properties
+* **threatIntelligenceTags**: string[]: List of tags to be appended.
 
 ## ThreatIntelligenceCount
 ### Properties

@@ -1940,5 +1940,77 @@
     "output": {
       "$ref": "#/164"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PromoteReplicaRequest",
+    "properties": {
+      "promoteOption": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 1,
+        "description": "The promote option to apply to the operation."
+      },
+      "mode": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 0,
+        "description": "The mode to apply to the promote operation. Value is optional and default value is 'Switchover'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Forced"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Planned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Switchover"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "promote",
+    "resourceType": "Microsoft.DocumentDB/mongoClusters",
+    "apiVersion": "2026-06-15-preview",
+    "output": {
+      "$ref": "#/174"
+    },
+    "input": {
+      "$ref": "#/168"
+    }
   }
 ]

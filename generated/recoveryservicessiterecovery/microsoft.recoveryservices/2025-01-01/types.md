@@ -327,6 +327,11 @@
 * **Input**: [MigrateInput](#migrateinput)
 * **Output**: [MigrationItem](#migrationitem)
 
+## Function migratetoaad (Microsoft.RecoveryServices/vaults/replicationFabrics@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics
+* **ApiVersion**: 2025-01-01
+* **Output**: any
+
 ## Function pauseReplication (Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems@2025-01-01)
 * **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems
 * **ApiVersion**: 2025-01-01
@@ -361,11 +366,43 @@
 * **ApiVersion**: 2025-01-01
 * **Output**: [RecoveryServicesProvider](#recoveryservicesprovider)
 
+## Function remove (Microsoft.RecoveryServices/vaults/replicationFabrics@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics
+* **ApiVersion**: 2025-01-01
+* **Output**: any
+
+## Function remove (Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers
+* **ApiVersion**: 2025-01-01
+* **Output**: any
+
+## Function remove (Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems
+* **ApiVersion**: 2025-01-01
+* **Input**: [DisableProtectionInput](#disableprotectioninput)
+* **Output**: any
+
+## Function remove (Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings
+* **ApiVersion**: 2025-01-01
+* **Input**: [RemoveProtectionContainerMappingInput](#removeprotectioncontainermappinginput)
+* **Output**: any
+
+## Function remove (Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders
+* **ApiVersion**: 2025-01-01
+* **Output**: any
+
 ## Function removeDisks (Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems@2025-01-01)
 * **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems
 * **ApiVersion**: 2025-01-01
 * **Input**: [RemoveDisksInput](#removedisksinput)
 * **Output**: [ReplicationProtectedItem](#replicationprotecteditem)
+
+## Function removeInfra (Microsoft.RecoveryServices/vaults/replicationFabrics@2025-01-01)
+* **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics
+* **ApiVersion**: 2025-01-01
+* **Output**: any
 
 ## Function renewCertificate (Microsoft.RecoveryServices/vaults/replicationFabrics@2025-01-01)
 * **Resource**: Microsoft.RecoveryServices/vaults/replicationFabrics
@@ -1091,6 +1128,26 @@
 * **dataStoreName**: string (ReadOnly): The datastore name.
 * **totalSnapshotsCreated**: int (ReadOnly): The total snapshots created for server migration in the datastore.
 * **totalSnapshotsSupported**: int (ReadOnly): The total count of snapshots supported by the datastore.
+
+## DisableProtectionInput
+### Properties
+* **properties**: [DisableProtectionInputProperties](#disableprotectioninputproperties) (Required): Disable protection input properties.
+
+## DisableProtectionInputProperties
+### Properties
+* **disableProtectionReason**: 'MigrationComplete' | 'NotSpecified' | string: Disable protection reason. It can have values NotSpecified/MigrationComplete.
+* **replicationProviderInput**: [DisableProtectionProviderSpecificInput](#disableprotectionproviderspecificinput): Replication provider specific input.
+
+## DisableProtectionProviderSpecificInput
+* **Discriminator**: instanceType
+
+### Base Properties
+
+### InMageDisableProtectionProviderSpecificInput
+#### Properties
+* **instanceType**: 'InMage' (Required): The class type.
+* **replicaVmDeletionStatus**: string: A value indicating whether the replica VM should be destroyed or retained. Values from Delete and Retain.
+
 
 ## DiscoverProtectableItemRequest
 ### Properties
@@ -3706,6 +3763,14 @@
 * **vmManagedDisksIds**: string[]: The list of vm managed disk Ids.
 
 
+## RemoveProtectionContainerMappingInput
+### Properties
+* **properties**: [RemoveProtectionContainerMappingInputProperties](#removeprotectioncontainermappinginputproperties): Configure protection input properties.
+
+## RemoveProtectionContainerMappingInputProperties
+### Properties
+* **providerSpecificInput**: [ReplicationProviderContainerUnmappingInput](#replicationprovidercontainerunmappinginput): Provider specific input for unpairing.
+
 ## RenewCertificateInput
 ### Properties
 * **properties**: [RenewCertificateInputProperties](#renewcertificateinputproperties): Renew certificate input properties.
@@ -3836,6 +3901,10 @@
 * **sharedDiskProperties**: [SharedDiskReplicationItemProperties](#shareddiskreplicationitemproperties): The shared disk properties.
 * **testFailoverState**: string: The Test failover state.
 * **testFailoverStateDescription**: string: The Test failover state description.
+
+## ReplicationProviderContainerUnmappingInput
+### Properties
+* **instanceType**: string: The class type.
 
 ## ReplicationProviderSpecificContainerCreationInput
 * **Discriminator**: instanceType

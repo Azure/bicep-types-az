@@ -94,6 +94,16 @@
 * **Input**: [DatabasePrincipalListRequest](#databaseprincipallistrequest)
 * **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
 
+## Function start (Microsoft.Kusto/clusters@2019-05-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2019-05-15
+* **Output**: any
+
+## Function stop (Microsoft.Kusto/clusters@2019-05-15)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2019-05-15
+* **Output**: any
+
 ## AzureSku
 ### Properties
 * **capacity**: int: The number of instances of the cluster.

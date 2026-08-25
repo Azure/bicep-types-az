@@ -7510,6 +7510,34 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ChangeSponsorRequest",
+    "properties": {
+      "sponsorId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Financial code identifying the new sponsor. This is an alphanumeric identifier assigned by the billing system, for example P20567384."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "changeSponsor",
+    "resourceType": "Microsoft.BillingBenefits/credits",
+    "apiVersion": "2026-06-01",
+    "output": {
+      "$ref": "#/548"
+    },
+    "input": {
+      "$ref": "#/547"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "Discount",
     "properties": {
       "properties": {
@@ -7563,7 +7591,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/548"
+          "$ref": "#/551"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -7619,7 +7647,7 @@
     "resourceType": "Microsoft.BillingBenefits/discounts",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/547"
+      "$ref": "#/550"
     }
   },
   {
@@ -7642,7 +7670,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/551"
+          "$ref": "#/554"
         },
         "flags": 0,
         "description": "Role assignment entity properties"
@@ -7682,7 +7710,7 @@
     "resourceType": "Microsoft.BillingBenefits/savingsPlanOrders",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/550"
+      "$ref": "#/553"
     }
   },
   {
@@ -7691,7 +7719,7 @@
     "properties": {
       "benefits": {
         "type": {
-          "$ref": "#/559"
+          "$ref": "#/562"
         },
         "flags": 0
       }
@@ -7710,7 +7738,7 @@
       },
       "appliedScopeType": {
         "type": {
-          "$ref": "#/558"
+          "$ref": "#/561"
         },
         "flags": 0,
         "description": "Type of the Applied Scope."
@@ -7753,13 +7781,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/555"
+        "$ref": "#/558"
       },
       {
-        "$ref": "#/556"
+        "$ref": "#/559"
       },
       {
-        "$ref": "#/557"
+        "$ref": "#/560"
       },
       {
         "$ref": "#/2"
@@ -7769,7 +7797,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/554"
+      "$ref": "#/557"
     }
   },
   {
@@ -7778,7 +7806,7 @@
     "properties": {
       "benefits": {
         "type": {
-          "$ref": "#/562"
+          "$ref": "#/565"
         },
         "flags": 0
       },
@@ -7821,7 +7849,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/561"
+      "$ref": "#/564"
     }
   },
   {
@@ -7830,10 +7858,10 @@
     "resourceType": "Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/560"
+      "$ref": "#/563"
     },
     "input": {
-      "$ref": "#/553"
+      "$ref": "#/556"
     }
   },
   {
@@ -7891,7 +7919,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/565"
+          "$ref": "#/568"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -7947,7 +7975,7 @@
     "resourceType": "Microsoft.BillingBenefits/maccs",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/564"
+      "$ref": "#/567"
     }
   },
   {
@@ -7969,10 +7997,10 @@
     "resourceType": "Microsoft.BillingBenefits/maccs",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/564"
+      "$ref": "#/567"
     },
     "input": {
-      "$ref": "#/567"
+      "$ref": "#/570"
     }
   },
   {
@@ -7981,7 +8009,7 @@
     "resourceType": "Microsoft.BillingBenefits/maccs",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/564"
+      "$ref": "#/567"
     }
   }
 ]

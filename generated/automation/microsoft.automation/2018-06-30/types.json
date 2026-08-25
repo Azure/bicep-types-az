@@ -966,5 +966,44 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "publish",
+    "resourceType": "Microsoft.Automation/automationAccounts/runbooks",
+    "apiVersion": "2018-06-30",
+    "output": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resume",
+    "resourceType": "Microsoft.Automation/automationAccounts/runbooks/draft",
+    "apiVersion": "2018-06-30",
+    "output": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.Automation/automationAccounts/runbooks/draft",
+    "apiVersion": "2018-06-30",
+    "output": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "suspend",
+    "resourceType": "Microsoft.Automation/automationAccounts/runbooks/draft",
+    "apiVersion": "2018-06-30",
+    "output": {
+      "$ref": "#/66"
+    }
   }
 ]

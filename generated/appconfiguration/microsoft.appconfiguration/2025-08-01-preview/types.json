@@ -2446,12 +2446,24 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "purge",
+    "resourceType": "Microsoft.AppConfiguration/locations/deletedConfigurationStores",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/191"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ApiKeyListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/193"
+          "$ref": "#/195"
         },
         "flags": 1,
         "description": "The ApiKey items on this page"
@@ -2516,7 +2528,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/192"
+      "$ref": "#/194"
     }
   },
   {
@@ -2525,7 +2537,7 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/191"
+      "$ref": "#/193"
     }
   },
   {
@@ -2547,10 +2559,10 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/192"
+      "$ref": "#/194"
     },
     "input": {
-      "$ref": "#/195"
+      "$ref": "#/197"
     }
   },
   {
@@ -2600,7 +2612,7 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores/networkSecurityPerimeterConfigurations",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/197"
+      "$ref": "#/199"
     }
   }
 ]

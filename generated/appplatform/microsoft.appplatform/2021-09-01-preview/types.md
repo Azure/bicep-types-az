@@ -103,10 +103,27 @@
 * **Input**: [NameAvailabilityParameters](#nameavailabilityparameters)
 * **Output**: [NameAvailability](#nameavailability)
 
+## Function disableTestEndpoint (Microsoft.AppPlatform/Spring@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: any
+
 ## Function enableTestEndpoint (Microsoft.AppPlatform/Spring@2021-09-01-preview)
 * **Resource**: Microsoft.AppPlatform/Spring
 * **ApiVersion**: 2021-09-01-preview
 * **Output**: [TestKeys](#testkeys)
+
+## Function generateHeapDump (Microsoft.AppPlatform/Spring/apps/deployments@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2021-09-01-preview
+* **Input**: [DiagnosticParameters](#diagnosticparameters)
+* **Output**: any
+
+## Function generateThreadDump (Microsoft.AppPlatform/Spring/apps/deployments@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2021-09-01-preview
+* **Input**: [DiagnosticParameters](#diagnosticparameters)
+* **Output**: any
 
 ## Function getLogFileUrl (Microsoft.AppPlatform/Spring/apps/deployments@2021-09-01-preview)
 * **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
@@ -128,6 +145,37 @@
 * **ApiVersion**: 2021-09-01-preview
 * **Input**: [RegenerateTestKeyRequestPayload](#regeneratetestkeyrequestpayload)
 * **Output**: [TestKeys](#testkeys)
+
+## Function restart (Microsoft.AppPlatform/Spring/apps/deployments@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: any
+
+## Function start (Microsoft.AppPlatform/Spring@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: any
+
+## Function start (Microsoft.AppPlatform/Spring/apps/deployments@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: any
+
+## Function StartJFR (Microsoft.AppPlatform/Spring/apps/deployments@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2021-09-01-preview
+* **Input**: [DiagnosticParameters](#diagnosticparameters)
+* **Output**: any
+
+## Function stop (Microsoft.AppPlatform/Spring@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: any
+
+## Function stop (Microsoft.AppPlatform/Spring/apps/deployments@2021-09-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring/apps/deployments
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: any
 
 ## Function validateDomain (Microsoft.AppPlatform/Spring/apps@2021-09-01-preview)
 * **Resource**: Microsoft.AppPlatform/Spring/apps
@@ -307,6 +355,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DiagnosticParameters
+### Properties
+* **appInstance**: string: App instance name
+* **duration**: string: Duration of your JFR. 1 min can be represented by 1m or 60s.
+* **filePath**: string: Your target file path in your own BYOS
 
 ## Error
 ### Properties

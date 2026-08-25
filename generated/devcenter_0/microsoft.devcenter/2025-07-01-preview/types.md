@@ -340,6 +340,36 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevCenter/projects/pools/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function buildImage (Microsoft.DevCenter/devcenters/catalogs/imageDefinitions@2025-07-01-preview)
+* **Resource**: Microsoft.DevCenter/devcenters/catalogs/imageDefinitions
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: any
+
+## Function buildImage (Microsoft.DevCenter/projects/catalogs/imageDefinitions@2025-07-01-preview)
+* **Resource**: Microsoft.DevCenter/projects/catalogs/imageDefinitions
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: any
+
+## Function cancel (Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds@2025-07-01-preview)
+* **Resource**: Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: any
+
+## Function cancel (Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds@2025-07-01-preview)
+* **Resource**: Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: any
+
+## Function connect (Microsoft.DevCenter/devcenters/catalogs@2025-07-01-preview)
+* **Resource**: Microsoft.DevCenter/devcenters/catalogs
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: any
+
+## Function connect (Microsoft.DevCenter/projects/catalogs@2025-07-01-preview)
+* **Resource**: Microsoft.DevCenter/projects/catalogs
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: any
+
 ## Function getBuildDetails (Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds@2025-07-01-preview)
 * **Resource**: Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds
 * **ApiVersion**: 2025-07-01-preview
@@ -394,6 +424,26 @@
 * **Resource**: Microsoft.DevCenter/projects
 * **ApiVersion**: 2025-07-01-preview
 * **Output**: [SkuListResult](#skulistresult)
+
+## Function runHealthChecks (Microsoft.DevCenter/networkConnections@2025-07-01-preview)
+* **Resource**: Microsoft.DevCenter/networkConnections
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: any
+
+## Function runHealthChecks (Microsoft.DevCenter/projects/pools@2025-07-01-preview)
+* **Resource**: Microsoft.DevCenter/projects/pools
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: any
+
+## Function sync (Microsoft.DevCenter/devcenters/catalogs@2025-07-01-preview)
+* **Resource**: Microsoft.DevCenter/devcenters/catalogs
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: any
+
+## Function sync (Microsoft.DevCenter/projects/catalogs@2025-07-01-preview)
+* **Resource**: Microsoft.DevCenter/projects/catalogs
+* **ApiVersion**: 2025-07-01-preview
+* **Output**: any
 
 ## ActiveHoursConfiguration
 ### Properties

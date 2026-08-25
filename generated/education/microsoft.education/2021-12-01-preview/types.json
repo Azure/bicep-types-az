@@ -1078,5 +1078,26 @@
     "input": {
       "$ref": "#/72"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "approve",
+    "resourceType": "Microsoft.Education/labs/joinRequests",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/75"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deny",
+    "resourceType": "Microsoft.Education/labs/joinRequests",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/75"
+    }
   }
 ]

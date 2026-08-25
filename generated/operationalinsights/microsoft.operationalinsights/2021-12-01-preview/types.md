@@ -25,6 +25,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.OperationalInsights/workspaces/tables' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function migrate (Microsoft.OperationalInsights/workspaces/tables@2021-12-01-preview)
+* **Resource**: Microsoft.OperationalInsights/workspaces/tables
+* **ApiVersion**: 2021-12-01-preview
+* **Output**: any
+
 ## Column
 ### Properties
 * **dataTypeHint**: 'armPath' | 'guid' | 'ip' | 'uri' | string: Column data type logical hint.

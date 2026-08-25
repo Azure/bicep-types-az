@@ -2706,6 +2706,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "executeScriptActions",
+    "resourceType": "Microsoft.HDInsight/clusters",
+    "apiVersion": "2025-01-15-preview",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/175"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "GatewaySettings",
     "properties": {
@@ -2732,7 +2744,7 @@
       },
       "restAuthEntraUsers": {
         "type": {
-          "$ref": "#/179"
+          "$ref": "#/180"
         },
         "flags": 0,
         "description": "List of Entra users for gateway access."
@@ -2769,7 +2781,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/178"
+      "$ref": "#/179"
     }
   },
   {
@@ -2778,7 +2790,7 @@
     "resourceType": "Microsoft.HDInsight/clusters",
     "apiVersion": "2025-01-15-preview",
     "output": {
-      "$ref": "#/177"
+      "$ref": "#/178"
     }
   },
   {
@@ -2809,6 +2821,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "rotatediskencryptionkey",
+    "resourceType": "Microsoft.HDInsight/clusters",
+    "apiVersion": "2025-01-15-preview",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/182"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "UpdateClusterIdentityCertificateParameters",
     "properties": {
@@ -2833,6 +2857,18 @@
         "flags": 0,
         "description": "The password of the certificate."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateClusterIdentityCertificate",
+    "resourceType": "Microsoft.HDInsight/clusters",
+    "apiVersion": "2025-01-15-preview",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/184"
     }
   },
   {
@@ -2862,7 +2898,7 @@
       },
       "restAuthEntraUsers": {
         "type": {
-          "$ref": "#/184"
+          "$ref": "#/187"
         },
         "flags": 0,
         "description": "List of Entra users for gateway access."
@@ -2872,7 +2908,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/178"
+      "$ref": "#/179"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "updateGatewaySettings",
+    "resourceType": "Microsoft.HDInsight/clusters",
+    "apiVersion": "2025-01-15-preview",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/186"
     }
   },
   {
@@ -2881,7 +2929,7 @@
     "properties": {
       "configurations": {
         "type": {
-          "$ref": "#/187"
+          "$ref": "#/191"
         },
         "flags": 0,
         "description": "The configuration object for the specified configuration for the specified cluster."
@@ -2901,7 +2949,7 @@
     "name": "ClusterConfigurations",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/186"
+      "$ref": "#/190"
     }
   },
   {
@@ -2910,7 +2958,7 @@
     "resourceType": "Microsoft.HDInsight/clusters",
     "apiVersion": "2025-01-15-preview",
     "output": {
-      "$ref": "#/185"
+      "$ref": "#/189"
     }
   },
   {
@@ -2943,7 +2991,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/189"
+      "$ref": "#/193"
     }
   },
   {
@@ -2952,13 +3000,25 @@
     "resourceType": "Microsoft.HDInsight/clusters",
     "apiVersion": "2025-01-15-preview",
     "output": {
-      "$ref": "#/190"
+      "$ref": "#/194"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restartHosts",
+    "resourceType": "Microsoft.HDInsight/clusters",
+    "apiVersion": "2025-01-15-preview",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/196"
     }
   },
   {
@@ -2975,6 +3035,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "autoscale",
+    "resourceType": "Microsoft.HDInsight/clusters/roles",
+    "apiVersion": "2025-01-15-preview",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/198"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ClusterResizeParameters",
     "properties": {
@@ -2985,6 +3057,18 @@
         "flags": 0,
         "description": "The target instance count for the operation."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resize",
+    "resourceType": "Microsoft.HDInsight/clusters/roles",
+    "apiVersion": "2025-01-15-preview",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/200"
     }
   },
   {
@@ -3040,10 +3124,10 @@
     "resourceType": "Microsoft.HDInsight/locations",
     "apiVersion": "2025-01-15-preview",
     "output": {
-      "$ref": "#/196"
+      "$ref": "#/203"
     },
     "input": {
-      "$ref": "#/195"
+      "$ref": "#/202"
     }
   },
   {
@@ -3087,21 +3171,21 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/199"
+          "$ref": "#/206"
         },
         "flags": 0,
         "description": "The resource tags."
       },
       "zones": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/207"
         },
         "flags": 0,
         "description": "The availability zones."
       },
       "properties": {
         "type": {
-          "$ref": "#/201"
+          "$ref": "#/208"
         },
         "flags": 0,
         "description": "The cluster create parameters."
@@ -3142,14 +3226,14 @@
       },
       "osType": {
         "type": {
-          "$ref": "#/204"
+          "$ref": "#/211"
         },
         "flags": 0,
         "description": "The type of operating system."
       },
       "tier": {
         "type": {
-          "$ref": "#/207"
+          "$ref": "#/214"
         },
         "flags": 0,
         "description": "The cluster tier."
@@ -3226,7 +3310,7 @@
       },
       "privateLinkConfigurations": {
         "type": {
-          "$ref": "#/208"
+          "$ref": "#/215"
         },
         "flags": 0,
         "description": "The private link configurations."
@@ -3245,10 +3329,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/202"
+        "$ref": "#/209"
       },
       {
-        "$ref": "#/203"
+        "$ref": "#/210"
       },
       {
         "$ref": "#/0"
@@ -3267,10 +3351,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/205"
+        "$ref": "#/212"
       },
       {
-        "$ref": "#/206"
+        "$ref": "#/213"
       },
       {
         "$ref": "#/0"
@@ -3289,14 +3373,14 @@
     "properties": {
       "validationErrors": {
         "type": {
-          "$ref": "#/212"
+          "$ref": "#/219"
         },
         "flags": 0,
         "description": "The validation errors."
       },
       "validationWarnings": {
         "type": {
-          "$ref": "#/213"
+          "$ref": "#/220"
         },
         "flags": 0,
         "description": "The validation warnings."
@@ -3310,7 +3394,7 @@
       },
       "aaddsResourcesDetails": {
         "type": {
-          "$ref": "#/215"
+          "$ref": "#/222"
         },
         "flags": 0,
         "description": "The Azure active directory domain service resource details."
@@ -3344,7 +3428,7 @@
       },
       "messageArguments": {
         "type": {
-          "$ref": "#/211"
+          "$ref": "#/218"
         },
         "flags": 0,
         "description": "The message arguments"
@@ -3360,13 +3444,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/210"
+      "$ref": "#/217"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/210"
+      "$ref": "#/217"
     }
   },
   {
@@ -3427,7 +3511,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/214"
+      "$ref": "#/221"
     }
   },
   {
@@ -3436,10 +3520,19 @@
     "resourceType": "Microsoft.HDInsight/locations",
     "apiVersion": "2025-01-15-preview",
     "output": {
-      "$ref": "#/209"
+      "$ref": "#/216"
     },
     "input": {
-      "$ref": "#/198"
+      "$ref": "#/205"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "promote",
+    "resourceType": "Microsoft.HDInsight/clusters/scriptExecutionHistory",
+    "apiVersion": "2025-01-15-preview",
+    "output": {
+      "$ref": "#/15"
     }
   }
 ]

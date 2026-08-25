@@ -60,6 +60,16 @@
 * **ApiVersion**: 2018-04-19
 * **Output**: [DataMigrationServiceStatusResponse](#datamigrationservicestatusresponse)
 
+## Function start (Microsoft.DataMigration/services@2018-04-19)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2018-04-19
+* **Output**: any
+
+## Function stop (Microsoft.DataMigration/services@2018-04-19)
+* **Resource**: Microsoft.DataMigration/services
+* **ApiVersion**: 2018-04-19
+* **Output**: any
+
 ## AzureActiveDirectoryApp
 ### Properties
 * **appKey**: string (Required): Key used to authenticate to the Azure Active Directory Application

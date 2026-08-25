@@ -3259,6 +3259,42 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/subscriptions",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/14"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/subscriptions",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/14"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regeneratePrimaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/14"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateSecondaryKey",
+    "resourceType": "Microsoft.ApiManagement/service/tenant",
+    "apiVersion": "2016-10-10",
+    "output": {
+      "$ref": "#/14"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DeployConfigurationParameters",
     "properties": {
@@ -3291,7 +3327,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/250"
+          "$ref": "#/254"
         },
         "flags": 0,
         "description": "Status of an async operation."
@@ -3319,7 +3355,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/251"
+          "$ref": "#/255"
         },
         "flags": 0,
         "description": "Error Body contract."
@@ -3346,16 +3382,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/246"
+        "$ref": "#/250"
       },
       {
-        "$ref": "#/247"
+        "$ref": "#/251"
       },
       {
-        "$ref": "#/248"
+        "$ref": "#/252"
       },
       {
-        "$ref": "#/249"
+        "$ref": "#/253"
       }
     ]
   },
@@ -3379,7 +3415,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/253"
+          "$ref": "#/257"
         },
         "flags": 0,
         "description": "The list of invalid fields send in request, in case of validation error."
@@ -3416,7 +3452,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/252"
+      "$ref": "#/256"
     }
   },
   {
@@ -3425,10 +3461,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2016-10-10",
     "output": {
-      "$ref": "#/245"
+      "$ref": "#/249"
     },
     "input": {
-      "$ref": "#/244"
+      "$ref": "#/248"
     }
   },
   {
@@ -3457,10 +3493,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2016-10-10",
     "output": {
-      "$ref": "#/245"
+      "$ref": "#/249"
     },
     "input": {
-      "$ref": "#/255"
+      "$ref": "#/259"
     }
   },
   {
@@ -3469,10 +3505,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2016-10-10",
     "output": {
-      "$ref": "#/245"
+      "$ref": "#/249"
     },
     "input": {
-      "$ref": "#/244"
+      "$ref": "#/248"
     }
   },
   {
@@ -3494,7 +3530,7 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2016-10-10",
     "output": {
-      "$ref": "#/258"
+      "$ref": "#/262"
     }
   },
   {
@@ -3503,7 +3539,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/263"
+          "$ref": "#/267"
         },
         "flags": 1,
         "description": "The Key to be used to generate token for user."
@@ -3529,10 +3565,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/261"
+        "$ref": "#/265"
       },
       {
-        "$ref": "#/262"
+        "$ref": "#/266"
       }
     ]
   },
@@ -3555,10 +3591,10 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2016-10-10",
     "output": {
-      "$ref": "#/264"
+      "$ref": "#/268"
     },
     "input": {
-      "$ref": "#/260"
+      "$ref": "#/264"
     }
   }
 ]

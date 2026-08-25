@@ -157,6 +157,12 @@
 * **ApiVersion**: 2017-04-26
 * **Output**: [PredictionTrainingResults](#predictiontrainingresults)
 
+## Function modelStatus (Microsoft.CustomerInsights/hubs/predictions@2017-04-26)
+* **Resource**: Microsoft.CustomerInsights/hubs/predictions
+* **ApiVersion**: 2017-04-26
+* **Input**: [PredictionModelStatus](#predictionmodelstatus)
+* **Output**: any
+
 ## Function regeneratePrimaryKey (Microsoft.CustomerInsights/hubs/authorizationPolicies@2017-04-26)
 * **Resource**: Microsoft.CustomerInsights/hubs/authorizationPolicies
 * **ApiVersion**: 2017-04-26
@@ -166,6 +172,11 @@
 * **Resource**: Microsoft.CustomerInsights/hubs/authorizationPolicies
 * **ApiVersion**: 2017-04-26
 * **Output**: [AuthorizationPolicy](#authorizationpolicy)
+
+## Function reprocess (Microsoft.CustomerInsights/hubs/kpi@2017-04-26)
+* **Resource**: Microsoft.CustomerInsights/hubs/kpi
+* **ApiVersion**: 2017-04-26
+* **Output**: any
 
 ## Function suggestRelationshipLinks (Microsoft.CustomerInsights/hubs/interactions@2017-04-26)
 * **Resource**: Microsoft.CustomerInsights/hubs/interactions

@@ -289,6 +289,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevCenter/projects/pools/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function connect (Microsoft.DevCenter/projects/catalogs@2024-05-01-preview)
+* **Resource**: Microsoft.DevCenter/projects/catalogs
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
+## Function connect (Microsoft.DevCenter/devcenters/catalogs@2024-05-01-preview)
+* **Resource**: Microsoft.DevCenter/devcenters/catalogs
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
 ## Function getErrorDetails (Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions@2024-05-01-preview)
 * **Resource**: Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions
 * **ApiVersion**: 2024-05-01-preview
@@ -318,6 +328,26 @@
 * **Resource**: Microsoft.DevCenter/devcenters/catalogs
 * **ApiVersion**: 2024-05-01-preview
 * **Output**: [SyncErrorDetails](#syncerrordetails)
+
+## Function runHealthChecks (Microsoft.DevCenter/projects/pools@2024-05-01-preview)
+* **Resource**: Microsoft.DevCenter/projects/pools
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
+## Function runHealthChecks (Microsoft.DevCenter/networkConnections@2024-05-01-preview)
+* **Resource**: Microsoft.DevCenter/networkConnections
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
+## Function sync (Microsoft.DevCenter/projects/catalogs@2024-05-01-preview)
+* **Resource**: Microsoft.DevCenter/projects/catalogs
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
+
+## Function sync (Microsoft.DevCenter/devcenters/catalogs@2024-05-01-preview)
+* **Resource**: Microsoft.DevCenter/devcenters/catalogs
+* **ApiVersion**: 2024-05-01-preview
+* **Output**: any
 
 ## AllowedEnvironmentTypeProperties
 ### Properties

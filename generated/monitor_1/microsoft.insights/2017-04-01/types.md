@@ -24,6 +24,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/activityLogAlerts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function subscribe (microsoft.insights/actionGroups@2017-04-01)
+* **Resource**: microsoft.insights/actionGroups
+* **ApiVersion**: 2017-04-01
+* **Input**: [EnableRequest](#enablerequest)
+* **Output**: any
+
 ## ActionGroup
 ### Properties
 * **automationRunbookReceivers**: [AutomationRunbookReceiver](#automationrunbookreceiver)[]: The list of AutomationRunbook receivers that are part of this action group.
@@ -85,6 +91,10 @@
 * **emailAddress**: string (Required): The email address of this receiver.
 * **name**: string (Required): The name of the email receiver. Names must be unique across all receivers within an action group.
 * **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail.
+
+## EnableRequest
+### Properties
+* **receiverName**: string (Required): The name of the receiver to resubscribe.
 
 ## ItsmReceiver
 ### Properties

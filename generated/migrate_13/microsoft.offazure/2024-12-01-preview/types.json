@@ -15528,6 +15528,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "importUri",
+    "resourceType": "Microsoft.OffAzure/masterSites/sqlSites",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/562"
+    },
+    "input": {
+      "$ref": "#/1048"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "SqlSiteRefreshBody",
     "properties": {
@@ -15549,7 +15561,7 @@
       "$ref": "#/562"
     },
     "input": {
-      "$ref": "#/1053"
+      "$ref": "#/1054"
     }
   },
   {
@@ -15585,7 +15597,7 @@
     "resourceType": "Microsoft.OffAzure/masterSites/sqlSites",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/1055"
+      "$ref": "#/1056"
     }
   },
   {
@@ -15634,7 +15646,7 @@
       "$ref": "#/562"
     },
     "input": {
-      "$ref": "#/1059"
+      "$ref": "#/1060"
     }
   },
   {
@@ -15659,7 +15671,7 @@
       "$ref": "#/562"
     },
     "input": {
-      "$ref": "#/1061"
+      "$ref": "#/1062"
     }
   },
   {
@@ -15695,7 +15707,7 @@
     "resourceType": "Microsoft.OffAzure/masterSites/webAppSites",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/1063"
+      "$ref": "#/1064"
     }
   },
   {
@@ -15704,7 +15716,7 @@
     "properties": {
       "webApps": {
         "type": {
-          "$ref": "#/1068"
+          "$ref": "#/1069"
         },
         "flags": 0,
         "description": "Gets or sets the list of web app properties."
@@ -15724,7 +15736,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1067"
+          "$ref": "#/1068"
         },
         "flags": 0,
         "description": "Gets or sets Tags."
@@ -15742,7 +15754,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1066"
+      "$ref": "#/1067"
     }
   },
   {
@@ -15754,7 +15766,7 @@
       "$ref": "#/562"
     },
     "input": {
-      "$ref": "#/1065"
+      "$ref": "#/1066"
     }
   },
   {

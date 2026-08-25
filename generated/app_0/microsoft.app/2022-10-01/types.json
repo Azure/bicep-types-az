@@ -6424,19 +6424,46 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "activate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-10-01",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "deactivate",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-10-01",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.App/containerApps/revisions",
+    "apiVersion": "2022-10-01",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "EnvironmentAuthToken",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/399"
+          "$ref": "#/402"
         },
         "flags": 0,
         "description": "Environment auth token resource specific properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/400"
+          "$ref": "#/403"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -6512,7 +6539,7 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2022-10-01",
     "output": {
-      "$ref": "#/398"
+      "$ref": "#/401"
     }
   },
   {

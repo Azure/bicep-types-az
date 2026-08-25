@@ -6720,6 +6720,51 @@
   },
   {
     "$type": "ObjectType",
+    "name": "HierarchySelector",
+    "properties": {
+      "contextId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Context Id"
+      },
+      "hierarchyIds": {
+        "type": {
+          "$ref": "#/526"
+        },
+        "flags": 0,
+        "description": "Hierarchy Ids"
+      },
+      "level": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Hierarchy Level"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "linkToHierarchies",
+    "resourceType": "Microsoft.Edge/configTemplates",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/525"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "VersionParameter",
     "properties": {
       "version": {
@@ -6750,7 +6795,19 @@
     "resourceType": "Microsoft.Edge/configTemplates",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/526"
+      "$ref": "#/529"
+    },
+    "input": {
+      "$ref": "#/528"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unLinkFromHierarchies",
+    "resourceType": "Microsoft.Edge/configTemplates",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/115"
     },
     "input": {
       "$ref": "#/525"
@@ -6762,7 +6819,7 @@
     "properties": {
       "updateType": {
         "type": {
-          "$ref": "#/532"
+          "$ref": "#/536"
         },
         "flags": 0,
         "description": "Update type"
@@ -6776,7 +6833,7 @@
       },
       "schemaVersion": {
         "type": {
-          "$ref": "#/533"
+          "$ref": "#/537"
         },
         "flags": 1,
         "description": "Schema Version"
@@ -6799,13 +6856,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/529"
+        "$ref": "#/533"
       },
       {
-        "$ref": "#/530"
+        "$ref": "#/534"
       },
       {
-        "$ref": "#/531"
+        "$ref": "#/535"
       },
       {
         "$ref": "#/2"
@@ -6866,10 +6923,10 @@
     "resourceType": "Microsoft.Edge/schemas",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/533"
+      "$ref": "#/537"
     },
     "input": {
-      "$ref": "#/528"
+      "$ref": "#/532"
     }
   },
   {
@@ -6878,10 +6935,10 @@
     "resourceType": "Microsoft.Edge/schemas",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/526"
+      "$ref": "#/529"
     },
     "input": {
-      "$ref": "#/525"
+      "$ref": "#/528"
     }
   },
   {
@@ -6890,7 +6947,7 @@
     "properties": {
       "updateType": {
         "type": {
-          "$ref": "#/540"
+          "$ref": "#/544"
         },
         "flags": 0,
         "description": "Update type"
@@ -6904,7 +6961,7 @@
       },
       "solutionTemplateVersion": {
         "type": {
-          "$ref": "#/541"
+          "$ref": "#/545"
         },
         "flags": 1,
         "description": "Solution Template Version"
@@ -6927,13 +6984,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/537"
+        "$ref": "#/541"
       },
       {
-        "$ref": "#/538"
+        "$ref": "#/542"
       },
       {
-        "$ref": "#/539"
+        "$ref": "#/543"
       },
       {
         "$ref": "#/2"
@@ -6994,10 +7051,34 @@
     "resourceType": "Microsoft.Edge/solutionTemplates",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/541"
+      "$ref": "#/545"
     },
     "input": {
-      "$ref": "#/536"
+      "$ref": "#/540"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "removeVersion",
+    "resourceType": "Microsoft.Edge/solutionTemplates",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/528"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "installSolution",
+    "resourceType": "Microsoft.Edge/targets",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/429"
     }
   },
   {
@@ -7061,10 +7142,42 @@
     "resourceType": "Microsoft.Edge/targets",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/543"
+      "$ref": "#/549"
     },
     "input": {
       "$ref": "#/432"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemoveRevisionParameter",
+    "properties": {
+      "solutionTemplateId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Solution Template ARM Id"
+      },
+      "solutionVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Solution Version Name"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "removeRevision",
+    "resourceType": "Microsoft.Edge/targets",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/551"
     }
   },
   {
@@ -7087,7 +7200,7 @@
       },
       "solutionDependencies": {
         "type": {
-          "$ref": "#/548"
+          "$ref": "#/556"
         },
         "flags": 0,
         "description": "Solution Dependencies"
@@ -7135,7 +7248,7 @@
       },
       "dependencies": {
         "type": {
-          "$ref": "#/547"
+          "$ref": "#/555"
         },
         "flags": 0,
         "description": "Solution dependencies"
@@ -7145,13 +7258,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/546"
+      "$ref": "#/554"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/546"
+      "$ref": "#/554"
     }
   },
   {
@@ -7173,10 +7286,10 @@
     "resourceType": "Microsoft.Edge/targets",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/549"
+      "$ref": "#/557"
     },
     "input": {
-      "$ref": "#/545"
+      "$ref": "#/553"
     }
   },
   {
@@ -7185,10 +7298,22 @@
     "resourceType": "Microsoft.Edge/targets",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/543"
+      "$ref": "#/549"
     },
     "input": {
-      "$ref": "#/545"
+      "$ref": "#/553"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "uninstallSolution",
+    "resourceType": "Microsoft.Edge/targets",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/435"
     }
   },
   {
@@ -7197,7 +7322,7 @@
     "resourceType": "Microsoft.Edge/targets",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/543"
+      "$ref": "#/549"
     },
     "input": {
       "$ref": "#/432"
@@ -7230,7 +7355,7 @@
       },
       "validationStatus": {
         "type": {
-          "$ref": "#/556"
+          "$ref": "#/565"
         },
         "flags": 1,
         "description": "Validation Status of external validation"
@@ -7249,10 +7374,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/554"
+        "$ref": "#/563"
       },
       {
-        "$ref": "#/555"
+        "$ref": "#/564"
       },
       {
         "$ref": "#/2"
@@ -7265,10 +7390,257 @@
     "resourceType": "Microsoft.Edge/targets",
     "apiVersion": "2026-03-01",
     "output": {
-      "$ref": "#/543"
+      "$ref": "#/549"
     },
     "input": {
-      "$ref": "#/553"
+      "$ref": "#/562"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BulkDeploySolutionParameter",
+    "properties": {
+      "targets": {
+        "type": {
+          "$ref": "#/569"
+        },
+        "flags": 1,
+        "description": "Targets to which solution needs to be deployed"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BulkDeployTargetDetails",
+    "properties": {
+      "solutionVersionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "ArmId of Target Solution Version"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/568"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "bulkDeploySolution",
+    "resourceType": "Microsoft.Edge/solutionTemplates/versions",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/567"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BulkPublishSolutionParameter",
+    "properties": {
+      "targets": {
+        "type": {
+          "$ref": "#/574"
+        },
+        "flags": 1,
+        "description": "Targets to which solution needs to be published"
+      },
+      "solutionInstanceName": {
+        "type": {
+          "$ref": "#/375"
+        },
+        "flags": 0,
+        "description": "Name of the solution instance"
+      },
+      "solutionDependencies": {
+        "type": {
+          "$ref": "#/575"
+        },
+        "flags": 0,
+        "description": "Solution dependencies"
+      },
+      "solutionConfiguration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Configuration of solution"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BulkPublishTargetDetails",
+    "properties": {
+      "targetId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "ArmId of Target"
+      },
+      "solutionDependencies": {
+        "type": {
+          "$ref": "#/573"
+        },
+        "flags": 0,
+        "description": "Solution dependencies"
+      },
+      "solutionInstanceName": {
+        "type": {
+          "$ref": "#/375"
+        },
+        "flags": 0,
+        "description": "Name of the solution instance"
+      },
+      "solutionVersionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ArmId of Target Solution Version"
+      },
+      "solutionConfiguration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Configuration of solution"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/554"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/572"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/554"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "bulkPublishSolution",
+    "resourceType": "Microsoft.Edge/solutionTemplates/versions",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/571"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BulkReviewSolutionParameter",
+    "properties": {
+      "targets": {
+        "type": {
+          "$ref": "#/580"
+        },
+        "flags": 1,
+        "description": "Targets to which solution needs to be published"
+      },
+      "solutionInstanceName": {
+        "type": {
+          "$ref": "#/375"
+        },
+        "flags": 0,
+        "description": "Name of the solution instance"
+      },
+      "solutionDependencies": {
+        "type": {
+          "$ref": "#/581"
+        },
+        "flags": 0,
+        "description": "Solution dependencies"
+      },
+      "solutionConfiguration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Configuration of solution"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BulkReviewTargetDetails",
+    "properties": {
+      "targetId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "ArmId of Target"
+      },
+      "solutionDependencies": {
+        "type": {
+          "$ref": "#/579"
+        },
+        "flags": 0,
+        "description": "Solution dependencies"
+      },
+      "solutionInstanceName": {
+        "type": {
+          "$ref": "#/375"
+        },
+        "flags": 0,
+        "description": "Name of the solution instance"
+      },
+      "solutionConfiguration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Configuration of solution"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/554"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/578"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/554"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "bulkReviewSolution",
+    "resourceType": "Microsoft.Edge/solutionTemplates/versions",
+    "apiVersion": "2026-03-01",
+    "output": {
+      "$ref": "#/115"
+    },
+    "input": {
+      "$ref": "#/577"
     }
   }
 ]

@@ -218,6 +218,11 @@
 * **Input**: [CrossRegionRestoreRequestObject](#crossregionrestorerequestobject)
 * **Output**: [OperationJobExtendedInfo](#operationjobextendedinfo)
 
+## Function exportBackupJobs (Microsoft.DataProtection/backupVaults@2026-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults
+* **ApiVersion**: 2026-03-01
+* **Output**: any
+
 ## Function fetchCrossRegionRestoreJob (Microsoft.DataProtection/locations@2026-03-01)
 * **Resource**: Microsoft.DataProtection/locations
 * **ApiVersion**: 2026-03-01
@@ -242,11 +247,50 @@
 * **Input**: [AzureBackupFindRestorableTimeRangesRequest](#azurebackupfindrestorabletimerangesrequest)
 * **Output**: [AzureBackupFindRestorableTimeRangesResponseResource](#azurebackupfindrestorabletimerangesresponseresource)
 
+## Function rehydrate (Microsoft.DataProtection/backupVaults/backupInstances@2026-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2026-03-01
+* **Input**: [AzureBackupRehydrationRequest](#azurebackuprehydrationrequest)
+* **Output**: any
+
 ## Function restore (Microsoft.DataProtection/backupVaults/backupInstances@2026-03-01)
 * **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
 * **ApiVersion**: 2026-03-01
 * **Input**: [AzureBackupRestoreRequest](#azurebackuprestorerequest)
 * **Output**: [OperationJobExtendedInfo](#operationjobextendedinfo)
+
+## Function resumeBackups (Microsoft.DataProtection/backupVaults/backupInstances@2026-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2026-03-01
+* **Output**: any
+
+## Function resumeProtection (Microsoft.DataProtection/backupVaults/backupInstances@2026-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2026-03-01
+* **Output**: any
+
+## Function stopProtection (Microsoft.DataProtection/backupVaults/backupInstances@2026-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2026-03-01
+* **Input**: [StopProtectionRequest](#stopprotectionrequest)
+* **Output**: any
+
+## Function suspendBackups (Microsoft.DataProtection/backupVaults/backupInstances@2026-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2026-03-01
+* **Input**: [SuspendBackupRequest](#suspendbackuprequest)
+* **Output**: any
+
+## Function sync (Microsoft.DataProtection/backupVaults/backupInstances@2026-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2026-03-01
+* **Input**: [SyncBackupInstanceRequest](#syncbackupinstancerequest)
+* **Output**: any
+
+## Function undelete (Microsoft.DataProtection/backupVaults/deletedBackupInstances@2026-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/deletedBackupInstances
+* **ApiVersion**: 2026-03-01
+* **Output**: any
 
 ## Function unlockDelete (Microsoft.DataProtection/backupVaults/backupResourceGuardProxies@2026-03-01)
 * **Resource**: Microsoft.DataProtection/backupVaults/backupResourceGuardProxies
@@ -265,6 +309,12 @@
 * **ApiVersion**: 2026-03-01
 * **Input**: [ValidateForBackupRequest](#validateforbackuprequest)
 * **Output**: [OperationJobExtendedInfo](#operationjobextendedinfo)
+
+## Function validateForModifyBackup (Microsoft.DataProtection/backupVaults/backupInstances@2026-03-01)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2026-03-01
+* **Input**: [ValidateForModifyBackupRequest](#validateformodifybackuprequest)
+* **Output**: any
 
 ## Function validateRestore (Microsoft.DataProtection/backupVaults/backupInstances@2026-03-01)
 * **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
@@ -395,6 +445,12 @@
 ### Properties
 * **nextLink**: string: The uri to fetch the next page of resources. Call ListNext() fetches next page of resources.
 * **value**: [AzureBackupRecoveryPointResource](#azurebackuprecoverypointresource)[]: List of resources.
+
+## AzureBackupRehydrationRequest
+### Properties
+* **recoveryPointId**: string (Required): Id of the recovery point to be recovered
+* **rehydrationPriority**: 'High' | 'Invalid' | 'Standard' | string: Priority to be used for rehydration. Values High or Standard
+* **rehydrationRetentionDuration**: string (Required): Retention duration in ISO 8601 format i.e P10D .
 
 ## AzureBackupRestoreRequest
 * **Discriminator**: objectType
@@ -1110,6 +1166,10 @@ If it is null, default will be considered as System Assigned.
 * **sourceDataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required): DataStoreInfo base
 * **targetDataStoreCopySettings**: [TargetCopySetting](#targetcopysetting)[]
 
+## StopProtectionRequest
+### Properties
+* **resourceGuardOperationRequests**: string[]: ResourceGuardOperationRequests on which LAC check will be performed
+
 ## StorageSetting
 ### Properties
 * **datastoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' | string: Gets or sets the type of the datastore.
@@ -1120,6 +1180,14 @@ If it is null, default will be considered as System Assigned.
 * **exposureControlledFeatures**: string[]: support feature type.
 * **featureName**: string: support feature type.
 * **supportStatus**: 'AlphaPreview' | 'GenerallyAvailable' | 'Invalid' | 'NotSupported' | 'PrivatePreview' | 'PublicPreview' | string: feature support status
+
+## SuspendBackupRequest
+### Properties
+* **resourceGuardOperationRequests**: string[]: ResourceGuardOperationRequests on which LAC check will be performed
+
+## SyncBackupInstanceRequest
+### Properties
+* **syncType**: 'Default' | 'ForceResync' | string: Field indicating sync type e.g. to sync only in case of failure or in all cases
 
 ## SystemData
 ### Properties
@@ -1231,6 +1299,10 @@ then this is needed if CrossSubscriptionRestore field of BackupVault is in any o
 * **restoreRequestObject**: [AzureBackupRestoreRequest](#azurebackuprestorerequest) (Required): Gets or sets the restore request object.
 
 ## ValidateForBackupRequest
+### Properties
+* **backupInstance**: [BackupInstance](#backupinstance) (Required): Backup Instance
+
+## ValidateForModifyBackupRequest
 ### Properties
 * **backupInstance**: [BackupInstance](#backupinstance) (Required): Backup Instance
 

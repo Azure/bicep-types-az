@@ -109,6 +109,12 @@
 * **properties**: [ClusterPrincipalProperties](#clusterprincipalproperties): The cluster principal.
 * **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addLanguageExtensions (Microsoft.Kusto/clusters@2021-01-01)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2021-01-01
+* **Input**: [LanguageExtensionsList](#languageextensionslist)
+* **Output**: any
+
 ## Function addPrincipals (Microsoft.Kusto/clusters/databases@2021-01-01)
 * **Resource**: Microsoft.Kusto/clusters/databases
 * **ApiVersion**: 2021-01-01
@@ -151,6 +157,12 @@
 * **Input**: [DataConnectionValidation](#dataconnectionvalidation)
 * **Output**: [DataConnectionValidationListResult](#dataconnectionvalidationlistresult)
 
+## Function detachFollowerDatabases (Microsoft.Kusto/clusters@2021-01-01)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2021-01-01
+* **Input**: [FollowerDatabaseDefinition](#followerdatabasedefinition)
+* **Output**: any
+
 ## Function diagnoseVirtualNetwork (Microsoft.Kusto/clusters@2021-01-01)
 * **Resource**: Microsoft.Kusto/clusters
 * **ApiVersion**: 2021-01-01
@@ -171,6 +183,12 @@
 * **ApiVersion**: 2021-01-01
 * **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
 
+## Function removeLanguageExtensions (Microsoft.Kusto/clusters@2021-01-01)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2021-01-01
+* **Input**: [LanguageExtensionsList](#languageextensionslist)
+* **Output**: any
+
 ## Function removePrincipals (Microsoft.Kusto/clusters/databases@2021-01-01)
 * **Resource**: Microsoft.Kusto/clusters/databases
 * **ApiVersion**: 2021-01-01
@@ -182,6 +200,16 @@
 * **ApiVersion**: 2021-01-01
 * **Input**: [ScriptCheckNameRequest](#scriptchecknamerequest)
 * **Output**: [CheckNameResult](#checknameresult)
+
+## Function start (Microsoft.Kusto/clusters@2021-01-01)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2021-01-01
+* **Output**: any
+
+## Function stop (Microsoft.Kusto/clusters@2021-01-01)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2021-01-01
+* **Output**: any
 
 ## AttachedDatabaseConfigurationProperties
 ### Properties

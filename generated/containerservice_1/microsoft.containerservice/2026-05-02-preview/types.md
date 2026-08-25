@@ -251,6 +251,27 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ContainerService/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function abort (Microsoft.ContainerService/managedClusters@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2026-05-02-preview
+* **Output**: any
+
+## Function abort (Microsoft.ContainerService/managedClusters/agentPools@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters/agentPools
+* **ApiVersion**: 2026-05-02-preview
+* **Output**: any
+
+## Function completeUpgrade (Microsoft.ContainerService/managedClusters/agentPools@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters/agentPools
+* **ApiVersion**: 2026-05-02-preview
+* **Output**: any
+
+## Function deleteMachines (Microsoft.ContainerService/managedClusters/agentPools@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters/agentPools
+* **ApiVersion**: 2026-05-02-preview
+* **Input**: [AgentPoolDeleteMachinesParameter](#agentpooldeletemachinesparameter)
+* **Output**: any
+
 ## Function listBootstrapData (Microsoft.ContainerService/managedClusters/agentPools@2026-05-02-preview)
 * **Resource**: Microsoft.ContainerService/managedClusters/agentPools
 * **ApiVersion**: 2026-05-02-preview
@@ -282,17 +303,60 @@
 * **ApiVersion**: 2026-05-02-preview
 * **Output**: [CredentialResults](#credentialresults)
 
+## Function rebalanceLoadBalancers (Microsoft.ContainerService/managedClusters@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2026-05-02-preview
+* **Input**: [RebalanceLoadBalancersRequestBody](#rebalanceloadbalancersrequestbody)
+* **Output**: any
+
+## Function resetAADProfile (Microsoft.ContainerService/managedClusters@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2026-05-02-preview
+* **Input**: [ManagedClusterAADProfile](#managedclusteraadprofile)
+* **Output**: any
+
+## Function resetServicePrincipalProfile (Microsoft.ContainerService/managedClusters@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2026-05-02-preview
+* **Input**: [ManagedClusterServicePrincipalProfile](#managedclusterserviceprincipalprofile)
+* **Output**: any
+
 ## Function resolvePrivateLinkServiceId (Microsoft.ContainerService/managedClusters@2026-05-02-preview)
 * **Resource**: Microsoft.ContainerService/managedClusters
 * **ApiVersion**: 2026-05-02-preview
 * **Input**: [PrivateLinkResource](#privatelinkresource)
 * **Output**: [PrivateLinkResource](#privatelinkresource)
 
+## Function rotateClusterCertificates (Microsoft.ContainerService/managedClusters@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2026-05-02-preview
+* **Output**: any
+
+## Function rotateServiceAccountSigningKeys (Microsoft.ContainerService/managedClusters@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2026-05-02-preview
+* **Output**: any
+
 ## Function runCommand (Microsoft.ContainerService/managedClusters@2026-05-02-preview)
 * **Resource**: Microsoft.ContainerService/managedClusters
 * **ApiVersion**: 2026-05-02-preview
 * **Input**: [RunCommandRequest](#runcommandrequest)
 * **Output**: [RunCommandResult](#runcommandresult)
+
+## Function start (Microsoft.ContainerService/managedClusters@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2026-05-02-preview
+* **Output**: any
+
+## Function stop (Microsoft.ContainerService/managedClusters@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2026-05-02-preview
+* **Output**: any
+
+## Function upgradeNodeImageVersion (Microsoft.ContainerService/managedClusters/agentPools@2026-05-02-preview)
+* **Resource**: Microsoft.ContainerService/managedClusters/agentPools
+* **ApiVersion**: 2026-05-02-preview
+* **Output**: [AgentPool](#agentpool)
 
 ## AbsoluteMonthlySchedule
 ### Properties
@@ -328,6 +392,14 @@
 ### Properties
 * **type**: 'None' | 'WireGuard' | 'mTLS' | string: Configures pod-to-pod encryption. This can be enabled only on Cilium-based clusters. If not specified, the default value is None.
 
+## AgentPool
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ManagedClusterAgentPoolProfileProperties](#managedclusteragentpoolprofileproperties): Properties of an agent pool.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## AgentPoolArtifactStreamingProfile
 ### Properties
 * **enabled**: bool: Artifact streaming speeds up the cold-start of containers on a node through on-demand image loading. To use this feature, container images must also enable artifact streaming on ACR. If not specified, the default is false.
@@ -338,6 +410,10 @@
 * **drainBatchSize**: string: The number or percentage of nodes to drain in batch during blue-green upgrade. Must be a non-zero number. This can either be set to an integer (e.g. '5') or a percentage (e.g. '50%'). If a percentage is specified, it is the percentage of the total number of blue nodes of the initial upgrade operation. For percentages, fractional nodes are rounded up. If not specified, the default is 10%. For more information, including best practices, see: https://learn.microsoft.com/en-us/azure/aks/upgrade-cluster
 * **drainTimeoutInMinutes**: int {minValue: 1, maxValue: 1440}: The drain timeout for a node, i.e., the amount of time (in minutes) to wait on eviction of pods and graceful termination per node. This eviction wait time honors waiting on pod disruption budgets. If this time is exceeded, the upgrade fails. If not specified, the default is 30 minutes.
 * **finalSoakDurationInMinutes**: int {minValue: 0, maxValue: 10080}: The soak duration for a node pool, i.e., the amount of time (in minutes) to wait after all old nodes are drained before we remove the old nodes. If not specified, the default is 60 minutes. Only applicable for blue-green upgrade strategy.
+
+## AgentPoolDeleteMachinesParameter
+### Properties
+* **machineNames**: string[] (Required): The agent pool machine names.
 
 ## AgentPoolGatewayProfile
 ### Properties
@@ -1772,6 +1848,10 @@ Only values from `recentlyUsedVersions` are allowed.
 ### Properties
 * **description**: string: The private link service connection description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private link service connection status.
+
+## RebalanceLoadBalancersRequestBody
+### Properties
+* **loadBalancerNames**: string[]: The load balancer names list.
 
 ## RelativeMonthlySchedule
 ### Properties

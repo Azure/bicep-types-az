@@ -2679,6 +2679,18 @@
     }
   },
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "sync",
+    "resourceType": "Microsoft.DevHub/iacProfiles",
+    "apiVersion": "2025-03-01-preview",
+    "output": {
+      "$ref": "#/207"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "AdooAuthCallRequest",
     "properties": {
@@ -2717,10 +2729,10 @@
     "resourceType": "Microsoft.DevHub/locations/adooauth",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/208"
+      "$ref": "#/210"
     },
     "input": {
-      "$ref": "#/207"
+      "$ref": "#/209"
     }
   },
   {
@@ -2737,7 +2749,7 @@
     "resourceType": "Microsoft.DevHub/locations",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/210"
+      "$ref": "#/212"
     },
     "input": {
       "$ref": "#/72"
@@ -2782,10 +2794,10 @@
     "resourceType": "Microsoft.DevHub/locations/githuboauth",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/213"
+      "$ref": "#/215"
     },
     "input": {
-      "$ref": "#/212"
+      "$ref": "#/214"
     }
   },
   {
@@ -2802,7 +2814,7 @@
     "properties": {
       "generatedFiles": {
         "type": {
-          "$ref": "#/217"
+          "$ref": "#/219"
         },
         "flags": 0,
         "description": "files returned as a map<path string,content string>"
@@ -2823,10 +2835,10 @@
     "resourceType": "Microsoft.DevHub/templates/versions",
     "apiVersion": "2025-03-01-preview",
     "output": {
-      "$ref": "#/216"
+      "$ref": "#/218"
     },
     "input": {
-      "$ref": "#/215"
+      "$ref": "#/217"
     }
   }
 ]

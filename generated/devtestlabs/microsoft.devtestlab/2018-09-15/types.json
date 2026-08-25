@@ -6093,6 +6093,27 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "claimAnyVm",
+    "resourceType": "Microsoft.DevTestLab/labs",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createEnvironment",
+    "resourceType": "Microsoft.DevTestLab/labs",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/135"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ExportResourceUsageParameters",
     "properties": {
@@ -6110,6 +6131,18 @@
         "flags": 0,
         "description": "The start time of the usage. If not provided, usage will be reported since the beginning of data collection."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportResourceUsage",
+    "resourceType": "Microsoft.DevTestLab/labs",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/346"
     }
   },
   {
@@ -6144,10 +6177,10 @@
     "resourceType": "Microsoft.DevTestLab/labs",
     "apiVersion": "2018-09-15",
     "output": {
-      "$ref": "#/346"
+      "$ref": "#/349"
     },
     "input": {
-      "$ref": "#/345"
+      "$ref": "#/348"
     }
   },
   {
@@ -6171,12 +6204,24 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "importVirtualMachine",
+    "resourceType": "Microsoft.DevTestLab/labs",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/351"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "LabVhdList",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/351"
+          "$ref": "#/355"
         },
         "flags": 1,
         "description": "The LabVhd items on this page"
@@ -6206,7 +6251,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/350"
+      "$ref": "#/354"
     }
   },
   {
@@ -6215,7 +6260,16 @@
     "resourceType": "Microsoft.DevTestLab/labs",
     "apiVersion": "2018-09-15",
     "output": {
-      "$ref": "#/349"
+      "$ref": "#/353"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "execute",
+    "resourceType": "Microsoft.DevTestLab/schedules",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
     }
   },
   {
@@ -6239,6 +6293,18 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "retarget",
+    "resourceType": "Microsoft.DevTestLab/schedules",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/358"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "GenerateArmTemplateRequest",
     "properties": {
@@ -6251,7 +6317,7 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/356"
+          "$ref": "#/362"
         },
         "flags": 0,
         "description": "The parameters of the ARM template."
@@ -6265,7 +6331,7 @@
       },
       "fileUploadOptions": {
         "type": {
-          "$ref": "#/359"
+          "$ref": "#/365"
         },
         "flags": 0,
         "description": "Options for uploading the files for the artifact. UploadFilesAndGenerateSasTokens is the default value."
@@ -6295,7 +6361,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/355"
+      "$ref": "#/361"
     }
   },
   {
@@ -6310,10 +6376,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/357"
+        "$ref": "#/363"
       },
       {
-        "$ref": "#/358"
+        "$ref": "#/364"
       },
       {
         "$ref": "#/0"
@@ -6326,14 +6392,14 @@
     "properties": {
       "template": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/367"
         },
         "flags": 0,
         "description": "The template's contents."
       },
       "parameters": {
         "type": {
-          "$ref": "#/362"
+          "$ref": "#/368"
         },
         "flags": 0,
         "description": "The parameters of the ARM template."
@@ -6362,10 +6428,10 @@
     "resourceType": "Microsoft.DevTestLab/labs/artifactsources/artifacts",
     "apiVersion": "2018-09-15",
     "output": {
-      "$ref": "#/360"
+      "$ref": "#/366"
     },
     "input": {
-      "$ref": "#/354"
+      "$ref": "#/360"
     }
   },
   {
@@ -6374,7 +6440,7 @@
     "properties": {
       "eventName": {
         "type": {
-          "$ref": "#/367"
+          "$ref": "#/373"
         },
         "flags": 0,
         "description": "The type of event (i.e. AutoShutdown, Cost)"
@@ -6400,10 +6466,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/365"
+        "$ref": "#/371"
       },
       {
-        "$ref": "#/366"
+        "$ref": "#/372"
       },
       {
         "$ref": "#/0"
@@ -6411,12 +6477,24 @@
     ]
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "notify",
+    "resourceType": "Microsoft.DevTestLab/labs/notificationchannels",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/370"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "EvaluatePoliciesRequest",
     "properties": {
       "policies": {
         "type": {
-          "$ref": "#/370"
+          "$ref": "#/377"
         },
         "flags": 0,
         "description": "Policies to evaluate."
@@ -6460,7 +6538,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/369"
+      "$ref": "#/376"
     }
   },
   {
@@ -6469,7 +6547,7 @@
     "properties": {
       "results": {
         "type": {
-          "$ref": "#/375"
+          "$ref": "#/382"
         },
         "flags": 0,
         "description": "Results of evaluating a policy set."
@@ -6489,7 +6567,7 @@
       },
       "policyViolations": {
         "type": {
-          "$ref": "#/374"
+          "$ref": "#/381"
         },
         "flags": 0,
         "description": "The list of policy violations."
@@ -6519,13 +6597,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/373"
+      "$ref": "#/380"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/372"
+      "$ref": "#/379"
     }
   },
   {
@@ -6534,10 +6612,19 @@
     "resourceType": "Microsoft.DevTestLab/labs/policysets",
     "apiVersion": "2018-09-15",
     "output": {
-      "$ref": "#/371"
+      "$ref": "#/378"
     },
     "input": {
-      "$ref": "#/368"
+      "$ref": "#/375"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "execute",
+    "resourceType": "Microsoft.DevTestLab/labs/schedules",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
     }
   },
   {
@@ -6546,7 +6633,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/378"
+          "$ref": "#/386"
         },
         "flags": 1,
         "description": "The Schedule items on this page"
@@ -6572,7 +6659,7 @@
     "resourceType": "Microsoft.DevTestLab/labs/schedules",
     "apiVersion": "2018-09-15",
     "output": {
-      "$ref": "#/377"
+      "$ref": "#/385"
     }
   },
   {
@@ -6586,6 +6673,18 @@
         "flags": 0,
         "description": "The resource ID of the Lab virtual machine to which the disk is attached."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "attach",
+    "resourceType": "Microsoft.DevTestLab/labs/users/disks",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/388"
     }
   },
   {
@@ -6603,6 +6702,18 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "detach",
+    "resourceType": "Microsoft.DevTestLab/labs/users/disks",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/390"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listApplicableSchedules",
     "resourceType": "Microsoft.DevTestLab/labs/users/servicefabrics",
     "apiVersion": "2018-09-15",
@@ -6611,12 +6722,51 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DevTestLab/labs/users/servicefabrics",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DevTestLab/labs/users/servicefabrics",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "execute",
+    "resourceType": "Microsoft.DevTestLab/labs/users/servicefabrics/schedules",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "addDataDisk",
+    "resourceType": "Microsoft.DevTestLab/labs/virtualmachines",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/150"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ApplyArtifactsRequest",
     "properties": {
       "artifacts": {
         "type": {
-          "$ref": "#/384"
+          "$ref": "#/398"
         },
         "flags": 0,
         "description": "The list of artifacts to apply."
@@ -6630,6 +6780,27 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "applyArtifacts",
+    "resourceType": "Microsoft.DevTestLab/labs/virtualmachines",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/397"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "claim",
+    "resourceType": "Microsoft.DevTestLab/labs/virtualmachines",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "DetachDataDiskProperties",
     "properties": {
@@ -6640,6 +6811,18 @@
         "flags": 0,
         "description": "Specifies the disk resource ID to detach from virtual machine."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "detachDataDisk",
+    "resourceType": "Microsoft.DevTestLab/labs/virtualmachines",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/401"
     }
   },
   {
@@ -6661,7 +6844,7 @@
     "resourceType": "Microsoft.DevTestLab/labs/virtualmachines",
     "apiVersion": "2018-09-15",
     "output": {
-      "$ref": "#/386"
+      "$ref": "#/403"
     }
   },
   {
@@ -6671,6 +6854,15 @@
     "apiVersion": "2018-09-15",
     "output": {
       "$ref": "#/259"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeploy",
+    "resourceType": "Microsoft.DevTestLab/labs/virtualmachines",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
     }
   },
   {
@@ -6684,6 +6876,72 @@
         "flags": 0,
         "description": "Specifies the size of the virtual machine."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resize",
+    "resourceType": "Microsoft.DevTestLab/labs/virtualmachines",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    },
+    "input": {
+      "$ref": "#/407"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Microsoft.DevTestLab/labs/virtualmachines",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.DevTestLab/labs/virtualmachines",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.DevTestLab/labs/virtualmachines",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "transferDisks",
+    "resourceType": "Microsoft.DevTestLab/labs/virtualmachines",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "unClaim",
+    "resourceType": "Microsoft.DevTestLab/labs/virtualmachines",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "execute",
+    "resourceType": "Microsoft.DevTestLab/labs/virtualmachines/schedules",
+    "apiVersion": "2018-09-15",
+    "output": {
+      "$ref": "#/330"
     }
   }
 ]

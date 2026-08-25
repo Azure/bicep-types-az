@@ -72,6 +72,28 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function addUsers (Microsoft.LabServices/labaccounts/labs@2018-10-15)
+* **Resource**: Microsoft.LabServices/labaccounts/labs
+* **ApiVersion**: 2018-10-15
+* **Input**: [AddUsersPayload](#adduserspayload)
+* **Output**: any
+
+## Function claim (Microsoft.LabServices/labaccounts/labs/environmentsettings/environments@2018-10-15)
+* **Resource**: Microsoft.LabServices/labaccounts/labs/environmentsettings/environments
+* **ApiVersion**: 2018-10-15
+* **Output**: any
+
+## Function claimAny (Microsoft.LabServices/labaccounts/labs/environmentsettings@2018-10-15)
+* **Resource**: Microsoft.LabServices/labaccounts/labs/environmentsettings
+* **ApiVersion**: 2018-10-15
+* **Output**: any
+
+## Function createLab (Microsoft.LabServices/labaccounts@2018-10-15)
+* **Resource**: Microsoft.LabServices/labaccounts
+* **ApiVersion**: 2018-10-15
+* **Input**: [CreateLabProperties](#createlabproperties)
+* **Output**: any
+
 ## Function getEnvironment (Microsoft.LabServices/users@2018-10-15)
 * **Resource**: Microsoft.LabServices/users
 * **ApiVersion**: 2018-10-15
@@ -112,6 +134,84 @@
 * **ApiVersion**: 2018-10-15
 * **Output**: [ListLabsResponse](#listlabsresponse)
 
+## Function publish (Microsoft.LabServices/labaccounts/labs/environmentsettings@2018-10-15)
+* **Resource**: Microsoft.LabServices/labaccounts/labs/environmentsettings
+* **ApiVersion**: 2018-10-15
+* **Input**: [PublishPayload](#publishpayload)
+* **Output**: any
+
+## Function register (Microsoft.LabServices/users@2018-10-15)
+* **Resource**: Microsoft.LabServices/users
+* **ApiVersion**: 2018-10-15
+* **Input**: [RegisterPayload](#registerpayload)
+* **Output**: any
+
+## Function register (Microsoft.LabServices/labaccounts/labs@2018-10-15)
+* **Resource**: Microsoft.LabServices/labaccounts/labs
+* **ApiVersion**: 2018-10-15
+* **Output**: any
+
+## Function resetPassword (Microsoft.LabServices/users@2018-10-15)
+* **Resource**: Microsoft.LabServices/users
+* **ApiVersion**: 2018-10-15
+* **Input**: [ResetPasswordPayload](#resetpasswordpayload)
+* **Output**: any
+
+## Function resetPassword (Microsoft.LabServices/labaccounts/labs/environmentsettings/environments@2018-10-15)
+* **Resource**: Microsoft.LabServices/labaccounts/labs/environmentsettings/environments
+* **ApiVersion**: 2018-10-15
+* **Input**: [ResetPasswordPayload](#resetpasswordpayload)
+* **Output**: any
+
+## Function start (Microsoft.LabServices/labaccounts/labs/environmentsettings@2018-10-15)
+* **Resource**: Microsoft.LabServices/labaccounts/labs/environmentsettings
+* **ApiVersion**: 2018-10-15
+* **Output**: any
+
+## Function start (Microsoft.LabServices/labaccounts/labs/environmentsettings/environments@2018-10-15)
+* **Resource**: Microsoft.LabServices/labaccounts/labs/environmentsettings/environments
+* **ApiVersion**: 2018-10-15
+* **Output**: any
+
+## Function startEnvironment (Microsoft.LabServices/users@2018-10-15)
+* **Resource**: Microsoft.LabServices/users
+* **ApiVersion**: 2018-10-15
+* **Input**: [EnvironmentOperationsPayload](#environmentoperationspayload)
+* **Output**: any
+
+## Function stop (Microsoft.LabServices/labaccounts/labs/environmentsettings@2018-10-15)
+* **Resource**: Microsoft.LabServices/labaccounts/labs/environmentsettings
+* **ApiVersion**: 2018-10-15
+* **Output**: any
+
+## Function stop (Microsoft.LabServices/labaccounts/labs/environmentsettings/environments@2018-10-15)
+* **Resource**: Microsoft.LabServices/labaccounts/labs/environmentsettings/environments
+* **ApiVersion**: 2018-10-15
+* **Output**: any
+
+## Function stopEnvironment (Microsoft.LabServices/users@2018-10-15)
+* **Resource**: Microsoft.LabServices/users
+* **ApiVersion**: 2018-10-15
+* **Input**: [EnvironmentOperationsPayload](#environmentoperationspayload)
+* **Output**: any
+
+## AddUsersPayload
+### Properties
+* **emailAddresses**: string[] (Required): List of user emails addresses to add to the lab.
+
+## CreateLabProperties
+### Properties
+* **environmentSettingCreationParameters**: [EnvironmentSettingCreationParameters](#environmentsettingcreationparameters): Settings related to creating an environment setting
+* **labCreationParameters**: [LabCreationParameters](#labcreationparameters) (Required): Settings related to creating a lab
+* **location**: string: The location of the resource
+* **name**: string (Required): The name of the resource
+* **tags**: [CreateLabPropertiesTags](#createlabpropertiestags): The tags of the resource.
+
+## CreateLabPropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## EnvironmentDetails
 ### Properties
 * **description**: string (ReadOnly): Description of the Environment
@@ -142,6 +242,10 @@
 * **resourceSets**: [ResourceSet](#resourceset): The set of a VM and the setting id it was created for
 * **totalUsage**: string (ReadOnly): How long the environment has been used by a lab user
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+
+## EnvironmentSettingCreationParameters
+### Properties
+* **resourceSettingCreationParameters**: [ResourceSettingCreationParameters](#resourcesettingcreationparameters) (Required): The resource specific settings
 
 ## EnvironmentSettingProperties
 ### Properties
@@ -207,6 +311,10 @@
 * **provisioningState**: string: The provisioning status of the resource.
 * **sizeConfiguration**: [SizeConfigurationProperties](#sizeconfigurationproperties) (ReadOnly): Represents the size configuration under the lab account
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
+
+## LabCreationParameters
+### Properties
+* **maxUsersInLab**: int: Maximum number of users allowed in the lab.
 
 ## LabDetails
 ### Properties
@@ -284,6 +392,10 @@
 * **labAccountResourceId**: string: Resource Id of the lab account
 * **labResourceId**: string: Resource Id of the lab to add/remove from the favorites list
 
+## PublishPayload
+### Properties
+* **useExistingImage**: bool: Whether to use existing VM custom image when publishing.
+
 ## ReferenceVm
 ### Properties
 * **password**: string: The password of the virtual machine. This will be set to null in GET resource API
@@ -291,15 +403,38 @@
 * **vmResourceId**: string (ReadOnly): VM resource Id for the environment
 * **vmStateDetails**: [VmStateDetails](#vmstatedetails) (ReadOnly): The state details for the reference virtual machine.
 
+## ReferenceVmCreationParameters
+### Properties
+* **password**: string (Required): The password of the virtual machine.
+* **userName**: string (Required): The username of the virtual machine
+
 ## RegionalAvailability
 ### Properties
 * **region**: string: Corresponding region
 * **sizeAvailabilities**: [SizeAvailability](#sizeavailability)[]: List of all the size information for the region
 
+## RegisterPayload
+### Properties
+* **registrationCode**: string: The registration code of the lab.
+
+## ResetPasswordPayload
+### Properties
+* **environmentId**: string (Required): The resourceId of the environment
+* **password**: string: The password to assign to the user specified in
+* **username**: string: The username for which the password will be reset.
+
 ## ResourceSet
 ### Properties
 * **resourceSettingId**: string: resourceSettingId for the environment
 * **vmResourceId**: string: VM resource Id for the environment
+
+## ResourceSettingCreationParameters
+### Properties
+* **galleryImageResourceId**: string (Required): The resource id of the gallery image used for creating the virtual machine
+* **location**: string: The location where the virtual machine will live
+* **name**: string: The name of the resource setting
+* **referenceVmCreationParameters**: [ReferenceVmCreationParameters](#referencevmcreationparameters) (Required): Creation parameters for Reference Vm
+* **size**: 'Basic' | 'Performance' | 'Standard' | string: The size of the virtual machine
 
 ## ResourceSettings
 ### Properties

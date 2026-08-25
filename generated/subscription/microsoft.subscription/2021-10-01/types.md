@@ -25,6 +25,27 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Subscription/policies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function acceptOwnership (Microsoft.Subscription/subscriptions@2021-10-01)
+* **Resource**: Microsoft.Subscription/subscriptions
+* **ApiVersion**: 2021-10-01
+* **Input**: [AcceptOwnershipRequest](#acceptownershiprequest)
+* **Output**: any
+
+## AcceptOwnershipRequest
+### Properties
+* **properties**: [AcceptOwnershipRequestProperties](#acceptownershiprequestproperties): Accept subscription ownership request properties.
+
+## AcceptOwnershipRequestProperties
+### Properties
+* **displayName**: string (Required): The friendly name of the subscription.
+* **managementGroupId**: string: Management group Id for the subscription.
+* **tags**: [AcceptOwnershipRequestPropertiesTags](#acceptownershiprequestpropertiestags): Tags for the subscription
+
+## AcceptOwnershipRequestPropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## PutAliasRequestAdditionalProperties
 ### Properties
 * **managementGroupId**: string: Management group Id for the subscription.

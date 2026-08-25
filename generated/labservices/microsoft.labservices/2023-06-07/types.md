@@ -71,6 +71,54 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data of the Lab virtual machine.
 * **type**: 'Microsoft.LabServices/labs/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function invite (Microsoft.LabServices/labs/users@2023-06-07)
+* **Resource**: Microsoft.LabServices/labs/users
+* **ApiVersion**: 2023-06-07
+* **Input**: [InviteBody](#invitebody)
+* **Output**: any
+
+## Function publish (Microsoft.LabServices/labs@2023-06-07)
+* **Resource**: Microsoft.LabServices/labs
+* **ApiVersion**: 2023-06-07
+* **Output**: any
+
+## Function redeploy (Microsoft.LabServices/labs/virtualMachines@2023-06-07)
+* **Resource**: Microsoft.LabServices/labs/virtualMachines
+* **ApiVersion**: 2023-06-07
+* **Output**: any
+
+## Function reimage (Microsoft.LabServices/labs/virtualMachines@2023-06-07)
+* **Resource**: Microsoft.LabServices/labs/virtualMachines
+* **ApiVersion**: 2023-06-07
+* **Output**: any
+
+## Function resetPassword (Microsoft.LabServices/labs/virtualMachines@2023-06-07)
+* **Resource**: Microsoft.LabServices/labs/virtualMachines
+* **ApiVersion**: 2023-06-07
+* **Input**: [ResetPasswordBody](#resetpasswordbody)
+* **Output**: any
+
+## Function saveImage (Microsoft.LabServices/labPlans@2023-06-07)
+* **Resource**: Microsoft.LabServices/labPlans
+* **ApiVersion**: 2023-06-07
+* **Input**: [SaveImageBody](#saveimagebody)
+* **Output**: any
+
+## Function start (Microsoft.LabServices/labs/virtualMachines@2023-06-07)
+* **Resource**: Microsoft.LabServices/labs/virtualMachines
+* **ApiVersion**: 2023-06-07
+* **Output**: any
+
+## Function stop (Microsoft.LabServices/labs/virtualMachines@2023-06-07)
+* **Resource**: Microsoft.LabServices/labs/virtualMachines
+* **ApiVersion**: 2023-06-07
+* **Output**: any
+
+## Function syncGroup (Microsoft.LabServices/labs@2023-06-07)
+* **Resource**: Microsoft.LabServices/labs
+* **ApiVersion**: 2023-06-07
+* **Output**: any
+
 ## AutoShutdownProfile
 ### Properties
 * **disconnectDelay**: string: The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
@@ -126,6 +174,10 @@
 * **sku**: string: The image SKU
 * **version**: string: The image version specified on creation.
 
+## InviteBody
+### Properties
+* **text**: string: Custom text for the invite email.
+
 ## LabNetworkProfile
 ### Properties
 * **loadBalancerId**: string {minLength: 3, maxLength: 2000}: The external load balancer resource id
@@ -170,6 +222,11 @@
 * **interval**: int {minValue: 1, maxValue: 365}: The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
 * **weekDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: The week days the schedule runs. Used for when the Frequency is set to Weekly.
 
+## ResetPasswordBody
+### Properties
+* **password**: string {sensitive} (Required, WriteOnly): The password
+* **username**: string (Required): The user whose password is being reset
+
 ## ResourceOperationError
 ### Properties
 * **action**: string: The operation action that failed
@@ -184,6 +241,11 @@
 * **ltiClientId**: string: The unique id of the azure lab services tool in the lms.
 * **ltiContextId**: string: The unique context identifier for the lab in the lms.
 * **ltiRosterEndpoint**: string: The uri of the names and roles service endpoint on the lms for the class attached to this lab.
+
+## SaveImageBody
+### Properties
+* **labVirtualMachineId**: string {minLength: 3, maxLength: 2000}: The ID of the lab virtual machine you want to save an image from.
+* **name**: string: The name for the image we create.
 
 ## ScheduleProperties
 ### Properties

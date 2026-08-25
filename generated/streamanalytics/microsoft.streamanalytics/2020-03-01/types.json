@@ -4032,6 +4032,27 @@
     ]
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "start",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs",
+    "apiVersion": "2020-03-01",
+    "output": {
+      "$ref": "#/29"
+    },
+    "input": {
+      "$ref": "#/260"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "stop",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs",
+    "apiVersion": "2020-03-01",
+    "output": {
+      "$ref": "#/29"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "ScaleStreamingJobParameters",
     "properties": {
@@ -4042,6 +4063,18 @@
         "flags": 0,
         "description": "Specifies the number of streaming units that the streaming job will scale to."
       }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "scale",
+    "resourceType": "Microsoft.StreamAnalytics/streamingjobs",
+    "apiVersion": "2020-03-01",
+    "output": {
+      "$ref": "#/29"
+    },
+    "input": {
+      "$ref": "#/267"
     }
   },
   {
@@ -4057,7 +4090,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/267"
+          "$ref": "#/270"
         },
         "flags": 2,
         "description": "Describes the error that occurred."
@@ -4090,7 +4123,7 @@
     "resourceType": "Microsoft.StreamAnalytics/streamingjobs/inputs",
     "apiVersion": "2020-03-01",
     "output": {
-      "$ref": "#/266"
+      "$ref": "#/269"
     },
     "input": {
       "$ref": "#/25"
@@ -4102,7 +4135,7 @@
     "resourceType": "Microsoft.StreamAnalytics/streamingjobs/outputs",
     "apiVersion": "2020-03-01",
     "output": {
-      "$ref": "#/266"
+      "$ref": "#/269"
     },
     "input": {
       "$ref": "#/107"
@@ -4114,7 +4147,7 @@
     "resourceType": "Microsoft.StreamAnalytics/streamingjobs/functions",
     "apiVersion": "2020-03-01",
     "output": {
-      "$ref": "#/266"
+      "$ref": "#/269"
     },
     "input": {
       "$ref": "#/183"
@@ -4127,10 +4160,10 @@
     "baseProperties": {},
     "elements": {
       "Microsoft.MachineLearning/WebService": {
-        "$ref": "#/272"
+        "$ref": "#/275"
       },
       "Microsoft.StreamAnalytics/JavascriptUdf": {
-        "$ref": "#/276"
+        "$ref": "#/279"
       }
     }
   },
@@ -4140,14 +4173,14 @@
     "properties": {
       "bindingRetrievalProperties": {
         "type": {
-          "$ref": "#/273"
+          "$ref": "#/276"
         },
         "flags": 0,
         "description": "The binding retrieval properties associated with an Azure Machine learning web service."
       },
       "bindingType": {
         "type": {
-          "$ref": "#/275"
+          "$ref": "#/278"
         },
         "flags": 1,
         "description": "Indicates the function binding type."
@@ -4167,7 +4200,7 @@
       },
       "udfType": {
         "type": {
-          "$ref": "#/274"
+          "$ref": "#/277"
         },
         "flags": 0,
         "description": "The function type."
@@ -4188,14 +4221,14 @@
     "properties": {
       "bindingRetrievalProperties": {
         "type": {
-          "$ref": "#/277"
+          "$ref": "#/280"
         },
         "flags": 0,
         "description": "The binding retrieval properties associated with a JavaScript function."
       },
       "bindingType": {
         "type": {
-          "$ref": "#/279"
+          "$ref": "#/282"
         },
         "flags": 1,
         "description": "Indicates the function binding type."
@@ -4215,7 +4248,7 @@
       },
       "udfType": {
         "type": {
-          "$ref": "#/278"
+          "$ref": "#/281"
         },
         "flags": 0,
         "description": "The function type."
@@ -4239,7 +4272,7 @@
       "$ref": "#/183"
     },
     "input": {
-      "$ref": "#/271"
+      "$ref": "#/274"
     }
   },
   {
@@ -4248,7 +4281,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/294"
+          "$ref": "#/297"
         },
         "flags": 2,
         "description": "A list of streaming jobs."
@@ -4282,7 +4315,7 @@
       },
       "jobState": {
         "type": {
-          "$ref": "#/293"
+          "$ref": "#/296"
         },
         "flags": 2,
         "description": "The current execution state of the streaming job."
@@ -4333,15 +4366,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/283"
-      },
-      {
-        "$ref": "#/284"
-      },
-      {
-        "$ref": "#/285"
-      },
-      {
         "$ref": "#/286"
       },
       {
@@ -4363,6 +4387,15 @@
         "$ref": "#/292"
       },
       {
+        "$ref": "#/293"
+      },
+      {
+        "$ref": "#/294"
+      },
+      {
+        "$ref": "#/295"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -4370,7 +4403,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/282"
+      "$ref": "#/285"
     }
   },
   {
@@ -4379,7 +4412,7 @@
     "resourceType": "Microsoft.StreamAnalytics/clusters",
     "apiVersion": "2020-03-01",
     "output": {
-      "$ref": "#/281"
+      "$ref": "#/284"
     }
   }
 ]

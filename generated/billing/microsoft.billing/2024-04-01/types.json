@@ -18384,6 +18384,70 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CancelSubscriptionRequest",
+    "properties": {
+      "cancellationReason": {
+        "type": {
+          "$ref": "#/1422"
+        },
+        "flags": 1,
+        "description": "Cancellation reason."
+      },
+      "customerId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The fully qualified ID that uniquely identifies a customer."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Other"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Compromise"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dispute"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1419"
+      },
+      {
+        "$ref": "#/1420"
+      },
+      {
+        "$ref": "#/1421"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
+    "apiVersion": "2024-04-01",
+    "output": {
+      "$ref": "#/1423"
+    },
+    "input": {
+      "$ref": "#/1418"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "BillingSubscriptionMergeRequest",
     "properties": {
       "targetBillingSubscriptionName": {
@@ -18415,7 +18479,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1420"
+          "$ref": "#/1427"
         },
         "flags": 0,
         "description": "Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \\ ? /"
@@ -18464,10 +18528,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/1419"
+      "$ref": "#/1426"
     },
     "input": {
-      "$ref": "#/1418"
+      "$ref": "#/1425"
     }
   },
   {
@@ -18496,10 +18560,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/1419"
+      "$ref": "#/1426"
     },
     "input": {
-      "$ref": "#/1422"
+      "$ref": "#/1429"
     }
   },
   {
@@ -18549,10 +18613,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/1419"
+      "$ref": "#/1426"
     },
     "input": {
-      "$ref": "#/1424"
+      "$ref": "#/1431"
     }
   },
   {
@@ -18568,7 +18632,7 @@
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/1427"
+          "$ref": "#/1434"
         },
         "flags": 0,
         "description": "Error details of the transfer eligibility validation."
@@ -18581,7 +18645,7 @@
     "properties": {
       "code": {
         "type": {
-          "$ref": "#/1456"
+          "$ref": "#/1463"
         },
         "flags": 0,
         "description": "Error code of the transfer validation response."
@@ -18718,27 +18782,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1428"
-      },
-      {
-        "$ref": "#/1429"
-      },
-      {
-        "$ref": "#/1430"
-      },
-      {
-        "$ref": "#/1431"
-      },
-      {
-        "$ref": "#/1432"
-      },
-      {
-        "$ref": "#/1433"
-      },
-      {
-        "$ref": "#/1434"
-      },
-      {
         "$ref": "#/1435"
       },
       {
@@ -18802,6 +18845,27 @@
         "$ref": "#/1455"
       },
       {
+        "$ref": "#/1456"
+      },
+      {
+        "$ref": "#/1457"
+      },
+      {
+        "$ref": "#/1458"
+      },
+      {
+        "$ref": "#/1459"
+      },
+      {
+        "$ref": "#/1460"
+      },
+      {
+        "$ref": "#/1461"
+      },
+      {
+        "$ref": "#/1462"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -18812,10 +18876,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/1426"
+      "$ref": "#/1433"
     },
     "input": {
-      "$ref": "#/1422"
+      "$ref": "#/1429"
     }
   },
   {
@@ -18833,7 +18897,7 @@
       "$ref": "#/1370"
     },
     "input": {
-      "$ref": "#/1458"
+      "$ref": "#/1465"
     }
   },
   {
@@ -18843,6 +18907,15 @@
     "apiVersion": "2024-04-01",
     "output": {
       "$ref": "#/1370"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "amend",
+    "resourceType": "Microsoft.Billing/billingAccounts/invoices",
+    "apiVersion": "2024-04-01",
+    "output": {
+      "$ref": "#/1423"
     }
   },
   {
@@ -18869,14 +18942,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1464"
+          "$ref": "#/1472"
         },
         "flags": 0,
         "description": "Details of the transfer."
       },
       "tags": {
         "type": {
-          "$ref": "#/1478"
+          "$ref": "#/1486"
         },
         "flags": 0,
         "description": "Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \\ ? /"
@@ -18924,7 +18997,7 @@
       },
       "transferStatus": {
         "type": {
-          "$ref": "#/1473"
+          "$ref": "#/1481"
         },
         "flags": 2,
         "description": "Overall transfer status."
@@ -18938,7 +19011,7 @@
       },
       "initiatorCustomerType": {
         "type": {
-          "$ref": "#/1476"
+          "$ref": "#/1484"
         },
         "flags": 2,
         "description": "The type of customer who sent the transfer request."
@@ -18973,7 +19046,7 @@
       },
       "detailedTransferStatus": {
         "type": {
-          "$ref": "#/1477"
+          "$ref": "#/1485"
         },
         "flags": 2,
         "description": "Detailed transfer status."
@@ -19016,28 +19089,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1465"
+        "$ref": "#/1473"
       },
       {
-        "$ref": "#/1466"
+        "$ref": "#/1474"
       },
       {
-        "$ref": "#/1467"
+        "$ref": "#/1475"
       },
       {
-        "$ref": "#/1468"
+        "$ref": "#/1476"
       },
       {
-        "$ref": "#/1469"
+        "$ref": "#/1477"
       },
       {
-        "$ref": "#/1470"
+        "$ref": "#/1478"
       },
       {
-        "$ref": "#/1471"
+        "$ref": "#/1479"
       },
       {
-        "$ref": "#/1472"
+        "$ref": "#/1480"
       },
       {
         "$ref": "#/2"
@@ -19056,10 +19129,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1474"
+        "$ref": "#/1482"
       },
       {
-        "$ref": "#/1475"
+        "$ref": "#/1483"
       },
       {
         "$ref": "#/2"
@@ -19086,7 +19159,7 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/customers/transfers",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/1463"
+      "$ref": "#/1471"
     }
   },
   {
@@ -19115,7 +19188,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1482"
+          "$ref": "#/1490"
         },
         "flags": 0,
         "description": "Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \\ ? /"
@@ -19164,10 +19237,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/products",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/1481"
+      "$ref": "#/1489"
     },
     "input": {
-      "$ref": "#/1480"
+      "$ref": "#/1488"
     }
   },
   {
@@ -19183,7 +19256,7 @@
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/1485"
+          "$ref": "#/1493"
         },
         "flags": 0,
         "description": "Error details of the transfer eligibility validation."
@@ -19196,7 +19269,7 @@
     "properties": {
       "code": {
         "type": {
-          "$ref": "#/1503"
+          "$ref": "#/1511"
         },
         "flags": 2,
         "description": "Error code for the product transfer validation."
@@ -19289,30 +19362,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1486"
-      },
-      {
-        "$ref": "#/1487"
-      },
-      {
-        "$ref": "#/1488"
-      },
-      {
-        "$ref": "#/1489"
-      },
-      {
-        "$ref": "#/1490"
-      },
-      {
-        "$ref": "#/1491"
-      },
-      {
-        "$ref": "#/1492"
-      },
-      {
-        "$ref": "#/1493"
-      },
-      {
         "$ref": "#/1494"
       },
       {
@@ -19340,6 +19389,30 @@
         "$ref": "#/1502"
       },
       {
+        "$ref": "#/1503"
+      },
+      {
+        "$ref": "#/1504"
+      },
+      {
+        "$ref": "#/1505"
+      },
+      {
+        "$ref": "#/1506"
+      },
+      {
+        "$ref": "#/1507"
+      },
+      {
+        "$ref": "#/1508"
+      },
+      {
+        "$ref": "#/1509"
+      },
+      {
+        "$ref": "#/1510"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -19350,10 +19423,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/products",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/1484"
+      "$ref": "#/1492"
     },
     "input": {
-      "$ref": "#/1480"
+      "$ref": "#/1488"
     }
   },
   {
@@ -19362,14 +19435,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1506"
+          "$ref": "#/1514"
         },
         "flags": 0,
         "description": "Details of the transfer."
       },
       "tags": {
         "type": {
-          "$ref": "#/1517"
+          "$ref": "#/1525"
         },
         "flags": 0,
         "description": "Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \\ ? /"
@@ -19417,7 +19490,7 @@
       },
       "transferStatus": {
         "type": {
-          "$ref": "#/1515"
+          "$ref": "#/1523"
         },
         "flags": 2,
         "description": "Overall transfer status."
@@ -19445,7 +19518,7 @@
       },
       "detailedTransferStatus": {
         "type": {
-          "$ref": "#/1516"
+          "$ref": "#/1524"
         },
         "flags": 2,
         "description": "Detailed transfer status."
@@ -19488,28 +19561,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1507"
+        "$ref": "#/1515"
       },
       {
-        "$ref": "#/1508"
+        "$ref": "#/1516"
       },
       {
-        "$ref": "#/1509"
+        "$ref": "#/1517"
       },
       {
-        "$ref": "#/1510"
+        "$ref": "#/1518"
       },
       {
-        "$ref": "#/1511"
+        "$ref": "#/1519"
       },
       {
-        "$ref": "#/1512"
+        "$ref": "#/1520"
       },
       {
-        "$ref": "#/1513"
+        "$ref": "#/1521"
       },
       {
-        "$ref": "#/1514"
+        "$ref": "#/1522"
       },
       {
         "$ref": "#/2"
@@ -19536,7 +19609,7 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/transfers",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/1505"
+      "$ref": "#/1513"
     }
   },
   {
@@ -19554,7 +19627,7 @@
     "properties": {
       "benefits": {
         "type": {
-          "$ref": "#/1526"
+          "$ref": "#/1534"
         },
         "flags": 0,
         "description": "The benefits of a savings plan."
@@ -19574,7 +19647,7 @@
       },
       "appliedScopeType": {
         "type": {
-          "$ref": "#/1525"
+          "$ref": "#/1533"
         },
         "flags": 0,
         "description": "Type of the Applied Scope."
@@ -19618,13 +19691,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1522"
+        "$ref": "#/1530"
       },
       {
-        "$ref": "#/1523"
+        "$ref": "#/1531"
       },
       {
-        "$ref": "#/1524"
+        "$ref": "#/1532"
       },
       {
         "$ref": "#/2"
@@ -19634,7 +19707,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1521"
+      "$ref": "#/1529"
     }
   },
   {
@@ -19643,7 +19716,7 @@
     "properties": {
       "benefits": {
         "type": {
-          "$ref": "#/1529"
+          "$ref": "#/1537"
         },
         "flags": 0
       },
@@ -19686,7 +19759,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1528"
+      "$ref": "#/1536"
     }
   },
   {
@@ -19695,10 +19768,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/savingsPlanOrders/savingsPlans",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/1527"
+      "$ref": "#/1535"
     },
     "input": {
-      "$ref": "#/1520"
+      "$ref": "#/1528"
     }
   },
   {
@@ -19707,7 +19780,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1532"
+          "$ref": "#/1540"
         },
         "flags": 0,
         "description": "Request parameters to accept transfer."
@@ -19720,7 +19793,7 @@
     "properties": {
       "productDetails": {
         "type": {
-          "$ref": "#/1540"
+          "$ref": "#/1548"
         },
         "flags": 0,
         "description": "Request parameters to accept transfer."
@@ -19733,7 +19806,7 @@
     "properties": {
       "productType": {
         "type": {
-          "$ref": "#/1539"
+          "$ref": "#/1547"
         },
         "flags": 0,
         "description": "Type of the product that is transferred."
@@ -19771,19 +19844,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1534"
+        "$ref": "#/1542"
       },
       {
-        "$ref": "#/1535"
+        "$ref": "#/1543"
       },
       {
-        "$ref": "#/1536"
+        "$ref": "#/1544"
       },
       {
-        "$ref": "#/1537"
+        "$ref": "#/1545"
       },
       {
-        "$ref": "#/1538"
+        "$ref": "#/1546"
       },
       {
         "$ref": "#/2"
@@ -19793,7 +19866,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1533"
+      "$ref": "#/1541"
     }
   },
   {
@@ -19809,7 +19882,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1542"
+          "$ref": "#/1550"
         },
         "flags": 0,
         "description": "Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \\ ? /"
@@ -19858,10 +19931,10 @@
     "resourceType": "Microsoft.Billing/transfers",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/1541"
+      "$ref": "#/1549"
     },
     "input": {
-      "$ref": "#/1531"
+      "$ref": "#/1539"
     }
   },
   {
@@ -19870,7 +19943,7 @@
     "resourceType": "Microsoft.Billing/transfers",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/1541"
+      "$ref": "#/1549"
     }
   },
   {
@@ -19879,7 +19952,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/1550"
+          "$ref": "#/1558"
         },
         "flags": 2,
         "description": "The list of transfer validation results."
@@ -19892,7 +19965,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1547"
+          "$ref": "#/1555"
         },
         "flags": 0,
         "description": "The properties of transfer validation response."
@@ -19919,7 +19992,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/1549"
+          "$ref": "#/1557"
         },
         "flags": 0,
         "description": "The array of validation results."
@@ -19956,13 +20029,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1548"
+      "$ref": "#/1556"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1546"
+      "$ref": "#/1554"
     }
   },
   {
@@ -19971,10 +20044,10 @@
     "resourceType": "Microsoft.Billing/transfers",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/1545"
+      "$ref": "#/1553"
     },
     "input": {
-      "$ref": "#/1531"
+      "$ref": "#/1539"
     }
   }
 ]

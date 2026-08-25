@@ -92,17 +92,54 @@
 * **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
 * **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
 
+## Function exportBackupJobs (Microsoft.DataProtection/backupVaults@2021-02-01-preview)
+* **Resource**: Microsoft.DataProtection/backupVaults
+* **ApiVersion**: 2021-02-01-preview
+* **Output**: any
+
 ## Function findRestorableTimeRanges (Microsoft.DataProtection/backupVaults/backupInstances@2021-02-01-preview)
 * **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
 * **ApiVersion**: 2021-02-01-preview
 * **Input**: [AzureBackupFindRestorableTimeRangesRequest](#azurebackupfindrestorabletimerangesrequest)
 * **Output**: [AzureBackupFindRestorableTimeRangesResponseResource](#azurebackupfindrestorabletimerangesresponseresource)
 
+## Function rehydrate (Microsoft.DataProtection/backupVaults/backupInstances@2021-02-01-preview)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2021-02-01-preview
+* **Input**: [AzureBackupRehydrationRequest](#azurebackuprehydrationrequest)
+* **Output**: any
+
 ## Function restore (Microsoft.DataProtection/backupVaults/backupInstances@2021-02-01-preview)
 * **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
 * **ApiVersion**: 2021-02-01-preview
 * **Input**: [AzureBackupRestoreRequest](#azurebackuprestorerequest)
 * **Output**: [OperationJobExtendedInfo](#operationjobextendedinfo)
+
+## Function resumeBackups (Microsoft.DataProtection/backupVaults/backupInstances@2021-02-01-preview)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2021-02-01-preview
+* **Output**: any
+
+## Function resumeProtection (Microsoft.DataProtection/backupVaults/backupInstances@2021-02-01-preview)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2021-02-01-preview
+* **Output**: any
+
+## Function stopProtection (Microsoft.DataProtection/backupVaults/backupInstances@2021-02-01-preview)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2021-02-01-preview
+* **Output**: any
+
+## Function suspendBackups (Microsoft.DataProtection/backupVaults/backupInstances@2021-02-01-preview)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2021-02-01-preview
+* **Output**: any
+
+## Function sync (Microsoft.DataProtection/backupVaults/backupInstances@2021-02-01-preview)
+* **Resource**: Microsoft.DataProtection/backupVaults/backupInstances
+* **ApiVersion**: 2021-02-01-preview
+* **Input**: [SyncBackupInstanceRequest](#syncbackupinstancerequest)
+* **Output**: any
 
 ## Function validateForBackup (Microsoft.DataProtection/backupVaults@2021-02-01-preview)
 * **Resource**: Microsoft.DataProtection/backupVaults
@@ -199,6 +236,12 @@
 * **retentionTagName**: string
 * **retentionTagVersion**: string
 
+
+## AzureBackupRehydrationRequest
+### Properties
+* **recoveryPointId**: string (Required): Id of the recovery point to be recovered
+* **rehydrationPriority**: 'High' | 'Invalid' | 'Standard' | string: Priority to be used for rehydration. Values High or Standard
+* **rehydrationRetentionDuration**: string (Required): Retention duration in ISO 8601 format i.e P10D .
 
 ## AzureBackupRestoreRequest
 * **Discriminator**: objectType
@@ -566,6 +609,10 @@ and should be part of AbsoluteMarker enum
 * **exposureControlledFeatures**: string[]: support feature type.
 * **featureName**: string: support feature type.
 * **supportStatus**: 'AlphaPreview' | 'GenerallyAvailable' | 'Invalid' | 'NotSupported' | 'PrivatePreview' | 'PublicPreview' | string: feature support status
+
+## SyncBackupInstanceRequest
+### Properties
+* **syncType**: 'Default' | 'ForceResync' | string: Field indicating sync type e.g. to sync only in case of failure or in all cases
 
 ## SystemData
 ### Properties
