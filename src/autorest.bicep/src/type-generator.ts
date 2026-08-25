@@ -245,6 +245,10 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
         }
       }
 
+      if (!action.responseSchema) {
+        logWarning(`Resource action ${action.actionName} under path '${action.postRequest.path}' has no response schema. Returning 'any'.`);
+      }
+
       const response = action.responseSchema
         ? parseType(undefined, action.responseSchema)
         : factory.addAnyType();

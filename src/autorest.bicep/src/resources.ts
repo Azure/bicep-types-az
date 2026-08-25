@@ -492,10 +492,11 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
   function getResponseSchema(operation?: Operation) {
     const responses = operation?.responses ?? [];
-    const successfulResponses = responses.filter(hasSuccessfulStatusCode);
-    const validResponses = successfulResponses.length > 0
-      ? successfulResponses
-      : responses.filter(r => hasStatusCode(r, "default"));
+    const validResponses = [
+      // order 2xx responses before default
+      ...responses.filter(hasSuccessfulStatusCode),
+      ...responses.filter(r => hasStatusCode(r, "default")),
+    ];
 
     if (!operation || validResponses.length === 0) {
       return;
