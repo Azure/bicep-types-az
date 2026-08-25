@@ -1694,7 +1694,7 @@
     "resourceType": "Test.Rp1/testType1",
     "apiVersion": "2021-10-31",
     "output": {
-      "$ref": "#/25"
+      "$ref": "#/24"
     }
   }
 ]
