@@ -105,6 +105,11 @@ function hasStatusCode(response: Response, statusCode: string) {
   return (statusCodes as string[]).includes(statusCode);
 }
 
+function hasSuccessfulStatusCode(response: Response) {
+  const statusCodes = (response.protocol.http as HttpResponse)?.statusCodes;
+  return (statusCodes as string[] | undefined)?.some(statusCode => /^2\d\d$/.test(statusCode));
+}
+
 function getNormalizedMethodPath(path: string) {
   if (resourceGroupMethod.test(path)) {
     // resource groups are a special case - the swagger API is not defined as a provider API, but they are still deployable in a template as if it was.
@@ -488,8 +493,8 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
   function getResponseSchema(operation?: Operation) {
     const responses = operation?.responses ?? [];
     const validResponses = [
-      // order 200 responses before default
-      ...responses.filter(r => hasStatusCode(r, "200")),
+      // order 2xx responses before default
+      ...responses.filter(hasSuccessfulStatusCode),
       ...responses.filter(r => hasStatusCode(r, "default")),
     ];
 

@@ -125,6 +125,11 @@
 * **Input**: [FoosRequest](#foosrequest)
 * **Output**: [FoosResponse](#foosresponse)
 
+## Function restart (Test.Rp1/testType1@2021-10-31)
+* **Resource**: Test.Rp1/testType1
+* **ApiVersion**: 2021-10-31
+* **Output**: any
+
 ## DiscriminatedUnionTestTypeProperties
 * **Discriminator**: type
 

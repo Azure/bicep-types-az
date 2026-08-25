@@ -246,11 +246,12 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       }
 
       if (!action.responseSchema) {
-        logWarning(`Skipping resource action ${action.actionName} under path '${action.postRequest.path}': failed to find a response schema`);
-        continue;
+        logWarning(`Resource action ${action.actionName} under path '${action.postRequest.path}' has no response schema. Returning 'any'.`);
       }
 
-      const response = parseType(undefined, action.responseSchema);
+      const response = action.responseSchema
+        ? parseType(undefined, action.responseSchema)
+        : factory.addAnyType();
       if (response === undefined) {
         continue;
       }
