@@ -11,7 +11,7 @@
 * **name**: string {minLength: 1, maxLength: 100, pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterResourceProperties](#clusterresourceproperties): Properties of a managed Cassandra cluster.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ClusterResourceTags](#clusterresourcetags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/cassandraClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/cassandraClusters/dataCenters@2026-04-01-preview
@@ -35,9 +35,9 @@
 * **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse' | string: Indicates the type of database account. This can only be set at database account creation.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties) (Required): Properties to create and update Azure Cosmos DB database accounts.
+* **properties**: [DatabaseAccountGetProperties](#databaseaccountgetproperties): Properties for the database account.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2026-04-01-preview
@@ -49,9 +49,9 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CassandraKeyspaceCreateUpdatePropertiesOrCassandraKeyspaceGetProperties](#cassandrakeyspacecreateupdatepropertiesorcassandrakeyspacegetproperties) (Required): Properties to create and update Azure Cosmos DB Cassandra keyspace.
+* **properties**: [CassandraKeyspaceGetProperties](#cassandrakeyspacegetproperties): The properties of an Azure Cosmos DB Cassandra keyspace
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2026-04-01-preview
@@ -63,24 +63,10 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CassandraTableCreateUpdatePropertiesOrCassandraTableGetProperties](#cassandratablecreateupdatepropertiesorcassandratablegetproperties) (Required): Properties to create and update Azure Cosmos DB Cassandra table.
+* **properties**: [CassandraTableGetProperties](#cassandratablegetproperties): The properties of an Azure Cosmos DB Cassandra table
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-04-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputSettingsUpdatePropertiesOrThroughputSettingsGetProperties](#throughputsettingsupdatepropertiesorthroughputsettingsgetproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-04-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -91,9 +77,9 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputSettingsUpdatePropertiesOrThroughputSettingsGetProperties](#throughputsettingsupdatepropertiesorthroughputsettingsgetproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
+* **properties**: [ThroughputSettingsGetProperties](#throughputsettingsgetproperties): The properties of an Azure Cosmos DB resource throughput
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views@2026-04-01-preview
@@ -105,24 +91,10 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CassandraViewCreateUpdatePropertiesOrCassandraViewGetProperties](#cassandraviewcreateupdatepropertiesorcassandraviewgetproperties) (Required): Properties to create and update Azure Cosmos DB Cassandra view.
+* **properties**: [CassandraViewGetProperties](#cassandraviewgetproperties): The properties of an Azure Cosmos DB Cassandra view
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-04-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputSettingsUpdatePropertiesOrThroughputSettingsGetProperties](#throughputsettingsupdatepropertiesorthroughputsettingsgetproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/cassandraRoleAssignments@2026-04-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -153,7 +125,7 @@
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ChaosFaultProperties](#chaosfaultproperties): A request object to enable/disable the chaos fault.
+* **properties**: [chaosFaultProperties](#chaosfaultproperties): A request object to enable/disable the chaos fault.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/chaosFaults' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -175,7 +147,7 @@
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [DataTransferJobProperties](#datatransferjobproperties) (Required): Data Transfer Create Job Properties
+* **properties**: [DataTransferJobProperties](#datatransferjobproperties): The properties of a DataTransfer Job
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/dataTransferJobs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -188,9 +160,9 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GraphResourceCreateUpdatePropertiesOrGraphResourceGetProperties](#graphresourcecreateupdatepropertiesorgraphresourcegetproperties) (Required): Properties to create and update Azure Cosmos DB Graph resource.
+* **properties**: [GraphResourceGetProperties](#graphresourcegetproperties): The properties of an Azure Cosmos DB Graph resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/graphs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2026-04-01-preview
@@ -202,9 +174,9 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GremlinDatabaseCreateUpdatePropertiesOrGremlinDatabaseGetProperties](#gremlindatabasecreateupdatepropertiesorgremlindatabasegetproperties) (Required): Properties to create and update Azure Cosmos DB Gremlin database.
+* **properties**: [GremlinDatabaseGetProperties](#gremlindatabasegetproperties): The properties of an Azure Cosmos DB SQL database
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2026-04-01-preview
@@ -216,38 +188,10 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GremlinGraphCreateUpdatePropertiesOrGremlinGraphGetProperties](#gremlingraphcreateupdatepropertiesorgremlingraphgetproperties) (Required): Properties to create and update Azure Cosmos DB Gremlin graph.
+* **properties**: [GremlinGraphGetProperties](#gremlingraphgetproperties): The properties of an Azure Cosmos DB Gremlin graph
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-04-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputSettingsUpdatePropertiesOrThroughputSettingsGetProperties](#throughputsettingsupdatepropertiesorthroughputsettingsgetproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-04-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputSettingsUpdatePropertiesOrThroughputSettingsGetProperties](#throughputsettingsupdatepropertiesorthroughputsettingsgetproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/gremlinRoleAssignments@2026-04-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -280,9 +224,9 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MongoDBDatabaseCreateUpdatePropertiesOrMongoDBDatabaseGetProperties](#mongodbdatabasecreateupdatepropertiesormongodbdatabasegetproperties) (Required): Properties to create and update Azure Cosmos DB MongoDB database.
+* **properties**: [MongoDBDatabaseGetProperties](#mongodbdatabasegetproperties): The properties of an Azure Cosmos DB MongoDB database
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-04-01-preview
@@ -294,38 +238,10 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MongoDBCollectionCreateUpdatePropertiesOrMongoDBCollectionGetProperties](#mongodbcollectioncreateupdatepropertiesormongodbcollectiongetproperties) (Required): Properties to create and update Azure Cosmos DB MongoDB collection.
+* **properties**: [MongoDBCollectionGetProperties](#mongodbcollectiongetproperties): The properties of an Azure Cosmos DB MongoDB collection
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputSettingsUpdatePropertiesOrThroughputSettingsGetProperties](#throughputsettingsupdatepropertiesorthroughputsettingsgetproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputSettingsUpdatePropertiesOrThroughputSettingsGetProperties](#throughputsettingsupdatepropertiesorthroughputsettingsgetproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2026-04-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -334,7 +250,7 @@
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MongoRoleDefinitionResource](#mongoroledefinitionresource): Properties to create and update an Azure Cosmos DB Mongo Role Definition.
+* **properties**: [MongoRoleDefinitionResource](#mongoroledefinitionresource): Properties related to the Mongo Role Definition.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -345,7 +261,7 @@
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MongoUserDefinitionResource](#mongouserdefinitionresource): Properties to create and update an Azure Cosmos DB Mongo User Definition.
+* **properties**: [MongoUserDefinitionResource](#mongouserdefinitionresource): Properties related to the User Definition.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -378,18 +294,18 @@
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties) (ReadOnly): Network security configuration properties.
+* **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties): Network security configuration properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-04-01-preview
 * **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [NotebookWorkspaceProperties](#notebookworkspaceproperties) (ReadOnly): Resource properties.
+* **properties**: [NotebookWorkspaceProperties](#notebookworkspaceproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -411,7 +327,7 @@
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Resource properties.
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -422,7 +338,7 @@
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 3, maxLength: 50} (Required, DeployTimeConstant): The resource name
-* **properties**: [ServiceResourceCreateUpdatePropertiesOrServiceResourceProperties](#serviceresourcecreateupdatepropertiesorserviceresourceproperties): Properties in ServiceResourceCreateUpdateParameters.
+* **properties**: [ServiceResourceProperties](#serviceresourceproperties): Services response resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/services' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -435,9 +351,9 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlDatabaseCreateUpdatePropertiesOrSqlDatabaseGetProperties](#sqldatabasecreateupdatepropertiesorsqldatabasegetproperties) (Required): Properties to create and update Azure Cosmos DB SQL database.
+* **properties**: [SqlDatabaseGetProperties](#sqldatabasegetproperties): The properties of an Azure Cosmos DB SQL database
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys@2026-04-01-preview
@@ -447,7 +363,7 @@
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClientEncryptionKeyCreateUpdatePropertiesOrClientEncryptionKeyGetProperties](#clientencryptionkeycreateupdatepropertiesorclientencryptionkeygetproperties) (Required): Properties to create and update ClientEncryptionKey.
+* **properties**: [ClientEncryptionKeyGetProperties](#clientencryptionkeygetproperties): The properties of a ClientEncryptionKey
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -460,9 +376,9 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlContainerCreateUpdatePropertiesOrSqlContainerGetProperties](#sqlcontainercreateupdatepropertiesorsqlcontainergetproperties) (Required): Properties to create and update Azure Cosmos DB container.
+* **properties**: [SqlContainerGetProperties](#sqlcontainergetproperties): The properties of an Azure Cosmos DB container
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2026-04-01-preview
@@ -474,24 +390,10 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlStoredProcedureCreateUpdatePropertiesOrSqlStoredProcedureGetProperties](#sqlstoredprocedurecreateupdatepropertiesorsqlstoredproceduregetproperties) (Required): Properties to create and update Azure Cosmos DB storedProcedure.
+* **properties**: [SqlStoredProcedureGetProperties](#sqlstoredproceduregetproperties): The properties of an Azure Cosmos DB storedProcedure
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputSettingsUpdatePropertiesOrThroughputSettingsGetProperties](#throughputsettingsupdatepropertiesorthroughputsettingsgetproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2026-04-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -502,9 +404,9 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlTriggerCreateUpdatePropertiesOrSqlTriggerGetProperties](#sqltriggercreateupdatepropertiesorsqltriggergetproperties) (Required): Properties to create and update Azure Cosmos DB trigger.
+* **properties**: [SqlTriggerGetProperties](#sqltriggergetproperties): The properties of an Azure Cosmos DB trigger
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2026-04-01-preview
@@ -516,24 +418,10 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlUserDefinedFunctionCreateUpdatePropertiesOrSqlUserDefinedFunctionGetProperties](#sqluserdefinedfunctioncreateupdatepropertiesorsqluserdefinedfunctiongetproperties) (Required): Properties to create and update Azure Cosmos DB userDefinedFunction.
+* **properties**: [SqlUserDefinedFunctionGetProperties](#sqluserdefinedfunctiongetproperties): The properties of an Azure Cosmos DB userDefinedFunction
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputSettingsUpdatePropertiesOrThroughputSettingsGetProperties](#throughputsettingsupdatepropertiesorthroughputsettingsgetproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2026-04-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -542,7 +430,7 @@
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlRoleAssignmentResource](#sqlroleassignmentresource): Properties to create and update an Azure Cosmos DB SQL Role Assignment.
+* **properties**: [SqlRoleAssignmentResource](#sqlroleassignmentresource): Properties related to the Role Assignment.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -553,7 +441,7 @@
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlRoleDefinitionResource](#sqlroledefinitionresource): Properties to create and update an Azure Cosmos DB SQL Role Definition.
+* **properties**: [SqlRoleDefinitionResource](#sqlroledefinitionresource): Properties related to the Role Definition.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -588,24 +476,10 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TableCreateUpdatePropertiesOrTableGetProperties](#tablecreateupdatepropertiesortablegetproperties) (Required): Properties to create and update Azure Cosmos DB Table.
+* **properties**: [TableGetProperties](#tablegetproperties): The properties of an Azure Cosmos DB Table
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+* **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-04-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputSettingsUpdatePropertiesOrThroughputSettingsGetProperties](#throughputsettingsupdatepropertiesorthroughputsettingsgetproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-* **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/fleets@2026-04-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -617,7 +491,7 @@
 * **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FleetResourceProperties](#fleetresourceproperties): Properties to update Azure Cosmos DB fleet resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.DocumentDB/fleets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/fleets/fleetAnalytics@2026-04-01-preview
@@ -664,7 +538,7 @@
 * **name**: string {minLength: 1, maxLength: 100, pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [GarnetClusterResourceProperties](#garnetclusterresourceproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.DocumentDB/garnetClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/locations@2026-04-01-preview
@@ -674,7 +548,7 @@
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LocationProperties](#locationproperties) (ReadOnly): Cosmos DB location metadata
+* **properties**: [LocationProperties](#locationproperties): Cosmos DB location metadata
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/locations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -684,44 +558,11 @@
 ### Properties
 * **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
+* **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RestorableDatabaseAccountProperties](#restorabledatabaseaccountproperties) (ReadOnly): The properties of a restorable database account.
+* **properties**: [RestorableDatabaseAccountProperties](#restorabledatabaseaccountproperties): The properties of a restorable database account.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/locations/restorableDatabaseAccounts' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts@2026-04-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: None
-### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
-* **properties**: [SoftDeletedDatabaseAccountProperties](#softdeleteddatabaseaccountproperties) (ReadOnly): The resource-specific properties for this resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases@2026-04-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: None
-### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[^/\\#?]+$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [SoftDeletedSqlDatabaseProperties](#softdeletedsqldatabaseproperties) (ReadOnly): The resource-specific properties for this resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases/softDeletedSqlContainers@2026-04-01-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: None
-### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[^/\\#?]+$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [SoftDeletedSqlContainerProperties](#softdeletedsqlcontainerproperties) (ReadOnly): The resource-specific properties for this resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases/softDeletedSqlContainers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/throughputPools@2026-04-01-preview
 * **Readable Scope(s)**: ResourceGroup
@@ -733,7 +574,7 @@
 * **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ThroughputPoolProperties](#throughputpoolproperties): Properties to update Azure Cosmos DB throughput pool.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.DocumentDB/throughputPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/throughputPools/throughputPoolAccounts@2026-04-01-preview
@@ -767,23 +608,6 @@
 * **ApiVersion**: 2026-04-01-preview
 * **Output**: [DataTransferJobGetResults](#datatransferjobgetresults)
 
-## Function deallocate (Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/cassandraClusters
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: any
-
-## Function failoverPriorityChange (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts
-* **ApiVersion**: 2026-04-01-preview
-* **Input**: [FailoverPolicies](#failoverpolicies)
-* **Output**: any
-
-## Function invokeCommand (Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/cassandraClusters
-* **ApiVersion**: 2026-04-01-preview
-* **Input**: [CommandPostBody](#commandpostbody)
-* **Output**: [CommandOutput](#commandoutput)
-
 ## Function invokeCommandAsync (Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview)
 * **Resource**: Microsoft.DocumentDB/cassandraClusters
 * **ApiVersion**: 2026-04-01-preview
@@ -805,138 +629,25 @@
 * **ApiVersion**: 2026-04-01-preview
 * **Output**: [DatabaseAccountListKeysResult](#databaseaccountlistkeysresult)
 
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
-
-## Function offlineRegion (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts
-* **ApiVersion**: 2026-04-01-preview
-* **Input**: [RegionForOnlineOffline](#regionforonlineoffline)
-* **Output**: any
-
-## Function onlineRegion (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts
-* **ApiVersion**: 2026-04-01-preview
-* **Input**: [RegionForOnlineOffline](#regionforonlineoffline)
-* **Output**: any
-
-## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-04-01-preview)
+## Function listMongoDBCollectionPartitionMerge (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-04-01-preview)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections
 * **ApiVersion**: 2026-04-01-preview
 * **Input**: [MergeParameters](#mergeparameters)
 * **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
 
-## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases
+## Function listReadOnlyKeys (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
 * **ApiVersion**: 2026-04-01-preview
-* **Input**: [MergeParameters](#mergeparameters)
-* **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
+* **Output**: [DatabaseAccountListReadOnlyKeysResult](#databaseaccountlistreadonlykeysresult)
 
-## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-04-01-preview)
+## Function listSqlContainerPartitionMerge (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-04-01-preview)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
 * **ApiVersion**: 2026-04-01-preview
 * **Input**: [MergeParameters](#mergeparameters)
 * **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
 
-## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases
+## Function mongoDBDatabasePartitionMerge (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2026-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases
 * **ApiVersion**: 2026-04-01-preview
 * **Input**: [MergeParameters](#mergeparameters)
 * **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
@@ -951,51 +662,6 @@
 * **ApiVersion**: 2026-04-01-preview
 * **Output**: [DataTransferJobGetResults](#datatransferjobgetresults)
 
-## Function readonlykeys (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: [DatabaseAccountListReadOnlyKeysResult](#databaseaccountlistreadonlykeysresult)
-
-## Function reconcile (Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: any
-
-## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
-* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
-
-## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
-* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
-
-## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
-* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
-
-## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
-* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
-
-## Function regenerateAuthToken (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: any
-
-## Function regenerateKey (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts
-* **ApiVersion**: 2026-04-01-preview
-* **Input**: [DatabaseAccountRegenerateKeyParameters](#databaseaccountregeneratekeyparameters)
-* **Output**: any
-
 ## Function resume (Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-04-01-preview)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/copyJobs
 * **ApiVersion**: 2026-04-01-preview
@@ -1006,8 +672,8 @@
 * **ApiVersion**: 2026-04-01-preview
 * **Output**: [DataTransferJobGetResults](#datatransferjobgetresults)
 
-## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
 * **ApiVersion**: 2026-04-01-preview
 * **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
 * **Output**: [BackupInformation](#backupinformation)
@@ -1018,70 +684,38 @@
 * **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
 * **Output**: [BackupInformation](#backupinformation)
 
-## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
-* **ApiVersion**: 2026-04-01-preview
-* **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
-* **Output**: [BackupInformation](#backupinformation)
-
 ## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/tables@2026-04-01-preview)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/tables
 * **ApiVersion**: 2026-04-01-preview
 * **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
 * **Output**: [BackupInformation](#backupinformation)
 
-## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2026-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs
 * **ApiVersion**: 2026-04-01-preview
-* **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
-* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
+* **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
+* **Output**: [BackupInformation](#backupinformation)
 
-## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
+## Function sqlDatabasePartitionMerge (Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2026-04-01-preview)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases
 * **ApiVersion**: 2026-04-01-preview
-* **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
-* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
-
-## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
-* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
-
-## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
-* **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
-* **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
-
-## Function start (Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/cassandraClusters
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: any
-
-## Function start (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-04-01-preview)
-* **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
-* **ApiVersion**: 2026-04-01-preview
-* **Output**: any
+* **Input**: [MergeParameters](#mergeparameters)
+* **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
 
 ## AccessRule
 ### Properties
 * **name**: string: Name of the access rule
-* **properties**: [AccessRuleProperties](#accessruleproperties): Properties of Access Rule
+* **properties**: [AccessRuleProperties](#accessruleproperties): Properties of the access rule
 
 ## AccessRuleProperties
 ### Properties
 * **addressPrefixes**: string[]: Address prefixes in the CIDR format for inbound rules
-* **direction**: 'Inbound' | 'Outbound' | string: Direction of Access Rule
+* **direction**: 'Inbound' | 'Outbound' | string: Direction of the access rule
 * **emailAddresses**: string[]: Email addresses for outbound rules
 * **fullyQualifiedDomainNames**: string[]: Fully qualified domain names (FQDN) for outbound rules
 * **networkSecurityPerimeters**: [NetworkSecurityPerimeter](#networksecurityperimeter)[]: Network security perimeters for inbound rules
 * **phoneNumbers**: string[]: Phone numbers for outbound rules
-* **subscriptions**: [AccessRulePropertiesSubscriptionsItem](#accessrulepropertiessubscriptionsitem)[]: Subscriptions for inbound rules
-
-## AccessRulePropertiesSubscriptionsItem
-### Properties
-* **id**: string: The fully qualified Azure resource ID of the subscription e.g. ('/subscriptions/00000000-0000-0000-0000-000000000000')
+* **subscriptions**: [AnonymousModel](#anonymousmodel)[]: Subscriptions for inbound rules
 
 ## AccountKeyMetadata
 ### Properties
@@ -1094,149 +728,13 @@ usage for this key.
 ### Properties
 * **schemaType**: 'FullFidelity' | 'WellDefined' | string: Describes the types of schema for analytical storage.
 
+## AnonymousModel
+### Properties
+* **id**: string: The fully qualified Azure resource ID of the subscription e.g. ('/subscriptions/00000000-0000-0000-0000-000000000000')
+
 ## ApiProperties
 ### Properties
 * **serverVersion**: '3.2' | '3.6' | '4.0' | '4.2' | '5.0' | '6.0' | '7.0' | string: Describes the version of the MongoDB account.
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ARMResourcePropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## AuthenticationMethodLdapProperties
 ### Properties
@@ -1247,7 +745,7 @@ usage for this key.
 * **serverHostname**: string: Hostname of the LDAP server.
 * **serverPort**: int: Port of the LDAP server.
 * **serviceUserDistinguishedName**: string: Distinguished name of the look up user account, who can look up user details on authentication.
-* **serviceUserPassword**: string {sensitive}: Password of the look up user.
+* **serviceUserPassword**: string: Password of the look up user.
 
 ## AutoscaleSettings
 ### Properties
@@ -1284,12 +782,14 @@ usage for this key.
 ### ContinuousModeBackupPolicy
 #### Properties
 * **continuousModeProperties**: [ContinuousModeProperties](#continuousmodeproperties): Configuration values for continuous mode backup
-* **type**: 'Continuous' (Required): Describes the mode of backups.
+* **migrationState**: [BackupPolicyMigrationState](#backuppolicymigrationstate): The object representing the state of the migration between the backup policies.
+* **type**: 'ContinuousModeBackupPolicy' (Required)
 
 ### PeriodicModeBackupPolicy
 #### Properties
+* **migrationState**: [BackupPolicyMigrationState](#backuppolicymigrationstate): The object representing the state of the migration between the backup policies.
 * **periodicModeProperties**: [PeriodicModeProperties](#periodicmodeproperties): Configuration values for periodic mode backup
-* **type**: 'Periodic' (Required): Describes the mode of backups.
+* **type**: 'PeriodicModeBackupPolicy' (Required)
 
 
 ## BackupPolicyMigrationState
@@ -1312,42 +812,42 @@ usage for this key.
 ### BlobToCassandraRUCopyJobProperties
 #### Properties
 * **destinationDetails**: [CosmosDBSourceSinkDetails](#cosmosdbsourcesinkdetails): Destination Cassandra DataStore details
-* **jobType**: 'AzureBlobStorageToCassandraRU' (Required): Copy Job Type
+* **jobType**: 'BlobToCassandraRUCopyJobProperties' (Required)
 * **sourceDetails**: [AzureBlobSourceSinkDetails](#azureblobsourcesinkdetails) (Required): Azure Storage container DataStore details
 * **tasks**: [BlobToCassandraRUCopyJobTask](#blobtocassandrarucopyjobtask)[] (Required): Copy Job tasks.
 
 ### CassandraRUToBlobCopyJobProperties
 #### Properties
 * **destinationDetails**: [AzureBlobSourceSinkDetails](#azureblobsourcesinkdetails) (Required): Destination Cassandra DataStore details
-* **jobType**: 'CassandraRUToAzureBlobStorage' (Required): Copy Job Type
+* **jobType**: 'CassandraRUToBlobCopyJobProperties' (Required)
 * **sourceDetails**: [CosmosDBSourceSinkDetails](#cosmosdbsourcesinkdetails): Source Cassandra DataStore details
 * **tasks**: [CassandraRUToBlobCopyJobTask](#cassandrarutoblobcopyjobtask)[] (Required): Copy Job tasks.
 
 ### CassandraRUToCassandraRUCopyJobProperties
 #### Properties
 * **destinationDetails**: [CosmosDBSourceSinkDetails](#cosmosdbsourcesinkdetails): Destination Cassandra DataStore details
-* **jobType**: 'CassandraRUToCassandraRU' (Required): Copy Job Type
+* **jobType**: 'CassandraRUToCassandraRUCopyJobProperties' (Required)
 * **sourceDetails**: [CosmosDBSourceSinkDetails](#cosmosdbsourcesinkdetails): Source Cassandra DataStore details
 * **tasks**: [CassandraRUToCassandraRUCopyJobTask](#cassandrarutocassandrarucopyjobtask)[] (Required): Copy Job tasks.
 
 ### MongoRUToMongoRUCopyJobProperties
 #### Properties
 * **destinationDetails**: [CosmosDBSourceSinkDetails](#cosmosdbsourcesinkdetails): Destination Mongo DataStore details
-* **jobType**: 'MongoRUToMongoRU' (Required): Copy Job Type
+* **jobType**: 'MongoRUToMongoRUCopyJobProperties' (Required)
 * **sourceDetails**: [CosmosDBSourceSinkDetails](#cosmosdbsourcesinkdetails): Source Mongo DataStore details
 * **tasks**: [MongoRUToMongoRUCopyJobTask](#mongorutomongorucopyjobtask)[] (Required): Copy Job tasks.
 
 ### MongoRUToMongoVCoreCopyJobProperties
 #### Properties
 * **destinationDetails**: [MongoVCoreSourceSinkDetails](#mongovcoresourcesinkdetails) (Required): Destination Mongo (vCore) DataStore details
-* **jobType**: 'MongoRUToMongoVCore' (Required): Copy Job Type
+* **jobType**: 'MongoRUToMongoVCoreCopyJobProperties' (Required)
 * **sourceDetails**: [CosmosDBSourceSinkDetails](#cosmosdbsourcesinkdetails): Source Mongo (RU) DataStore details
 * **tasks**: [MongoRUToMongoVCoreCopyJobTask](#mongorutomongovcorecopyjobtask)[] (Required): Copy Job tasks.
 
 ### NoSqlRUToNoSqlRUCopyJobProperties
 #### Properties
 * **destinationDetails**: [CosmosDBSourceSinkDetails](#cosmosdbsourcesinkdetails): Destination SQL DataStore details
-* **jobType**: 'NoSqlRUToNoSqlRU' (Required): Copy Job Type
+* **jobType**: 'NoSqlRUToNoSqlRUCopyJobProperties' (Required)
 * **sourceDetails**: [CosmosDBSourceSinkDetails](#cosmosdbsourcesinkdetails): Source SQL DataStore details
 * **tasks**: [NoSqlRUToNoSqlRUCopyJobTask](#nosqlrutonosqlrucopyjobtask)[] (Required): Copy Job tasks.
 
@@ -1365,7 +865,7 @@ usage for this key.
 
 ## Capacity
 ### Properties
-* **totalThroughputLimit**: int {minValue: -1}: The total throughput limit imposed on the account. A totalThroughputLimit of 2000 imposes a strict limit of max throughput that can be provisioned on that account to be 2000. A totalThroughputLimit of -1 indicates no limits on provisioning of throughput.
+* **totalThroughputLimit**: int: The total throughput limit imposed on the account. A totalThroughputLimit of 2000 imposes a strict limit of max throughput that can be provisioned on that account to be 2000. A totalThroughputLimit of -1 indicates no limits on provisioning of throughput.
 
 ## CapacityModeChangeTransitionState
 ### Properties
@@ -1383,12 +883,17 @@ usage for this key.
 * **message**: string: The message of the error.
 * **target**: string: The target resource of the error.
 
-## CassandraKeyspaceCreateUpdatePropertiesOrCassandraKeyspaceGetProperties
+## CassandraKeyspaceGetProperties
 ### Properties
-* **options**: [CreateUpdateOptionsOrCassandraKeyspaceGetPropertiesOptions](#createupdateoptionsorcassandrakeyspacegetpropertiesoptions): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [CassandraKeyspaceResourceOrCassandraKeyspaceGetPropertiesResource](#cassandrakeyspaceresourceorcassandrakeyspacegetpropertiesresource) (Required): The standard JSON format of a Cassandra keyspace
+* **options**: [CassandraKeyspaceGetPropertiesOptions](#cassandrakeyspacegetpropertiesoptions)
+* **resource**: [CassandraKeyspaceGetPropertiesResource](#cassandrakeyspacegetpropertiesresource)
 
-## CassandraKeyspaceResourceOrCassandraKeyspaceGetPropertiesResource
+## CassandraKeyspaceGetPropertiesOptions
+### Properties
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings.
+* **throughput**: int: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+
+## CassandraKeyspaceGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -1434,12 +939,17 @@ usage for this key.
 * **columns**: [Column](#column)[]: List of Cassandra table columns.
 * **partitionKeys**: [CassandraPartitionKey](#cassandrapartitionkey)[]: List of partition key.
 
-## CassandraTableCreateUpdatePropertiesOrCassandraTableGetProperties
+## CassandraTableGetProperties
 ### Properties
-* **options**: [CreateUpdateOptionsOrCassandraTableGetPropertiesOptions](#createupdateoptionsorcassandratablegetpropertiesoptions): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [CassandraTableResourceOrCassandraTableGetPropertiesResource](#cassandratableresourceorcassandratablegetpropertiesresource) (Required): The standard JSON format of a Cassandra table
+* **options**: [CassandraTableGetPropertiesOptions](#cassandratablegetpropertiesoptions)
+* **resource**: [CassandraTableGetPropertiesResource](#cassandratablegetpropertiesresource)
 
-## CassandraTableResourceOrCassandraTableGetPropertiesResource
+## CassandraTableGetPropertiesOptions
+### Properties
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings.
+* **throughput**: int: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+
+## CassandraTableGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -1449,12 +959,17 @@ usage for this key.
 * **id**: string (Required): Name of the Cosmos DB Cassandra table
 * **schema**: [CassandraSchema](#cassandraschema): Schema of the Cosmos DB Cassandra table
 
-## CassandraViewCreateUpdatePropertiesOrCassandraViewGetProperties
+## CassandraViewGetProperties
 ### Properties
-* **options**: [CreateUpdateOptionsOrCassandraViewGetPropertiesOptions](#createupdateoptionsorcassandraviewgetpropertiesoptions): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [CassandraViewResourceOrCassandraViewGetPropertiesResource](#cassandraviewresourceorcassandraviewgetpropertiesresource) (Required): The standard JSON format of a Cassandra view
+* **options**: [CassandraViewGetPropertiesOptions](#cassandraviewgetpropertiesoptions)
+* **resource**: [CassandraViewGetPropertiesResource](#cassandraviewgetpropertiesresource)
 
-## CassandraViewResourceOrCassandraViewGetPropertiesResource
+## CassandraViewGetPropertiesOptions
+### Properties
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings.
+* **throughput**: int: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+
+## CassandraViewGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -1466,7 +981,7 @@ usage for this key.
 ### Properties
 * **pem**: string: PEM formatted public key.
 
-## ChaosFaultProperties
+## chaosFaultProperties
 ### Properties
 * **action**: 'Disable' | 'Enable': Indicates whether what action to take for the Chaos Fault.
 * **containerName**: string: Container name.
@@ -1481,11 +996,11 @@ usage for this key.
 * **encryptionType**: string (Required): The type of encryption to be performed. Eg - Deterministic, Randomized.
 * **path**: string (Required): Path that needs to be encrypted.
 
-## ClientEncryptionKeyCreateUpdatePropertiesOrClientEncryptionKeyGetProperties
+## ClientEncryptionKeyGetProperties
 ### Properties
-* **resource**: [ClientEncryptionKeyResourceOrClientEncryptionKeyGetPropertiesResource](#clientencryptionkeyresourceorclientencryptionkeygetpropertiesresource) (Required): The standard JSON format of a ClientEncryptionKey
+* **resource**: [ClientEncryptionKeyGetPropertiesResource](#clientencryptionkeygetpropertiesresource)
 
-## ClientEncryptionKeyResourceOrClientEncryptionKeyGetPropertiesResource
+## ClientEncryptionKeyGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -1493,12 +1008,12 @@ usage for this key.
 * **encryptionAlgorithm**: string: Encryption algorithm that will be used along with this client encryption key to encrypt/decrypt data.
 * **id**: string: Name of the ClientEncryptionKey
 * **keyWrapMetadata**: [KeyWrapMetadata](#keywrapmetadata): Metadata for the wrapping provider that can be used to unwrap the wrapped client encryption key.
-* **wrappedDataEncryptionKey**: any: Wrapped (encrypted) form of the key represented as a byte array.
+* **wrappedDataEncryptionKey**: string: Wrapped (encrypted) form of the key represented as a byte array.
 
 ## ClientEncryptionPolicy
 ### Properties
 * **includedPaths**: [ClientEncryptionIncludedPath](#clientencryptionincludedpath)[] (Required): Paths of the item that need encryption along with path-specific settings.
-* **policyFormatVersion**: int {minValue: 1, maxValue: 2} (Required): Version of the client encryption policy definition. Supported versions are 1 and 2. Version 2 supports id and partition key path encryption.
+* **policyFormatVersion**: int (Required): Version of the client encryption policy definition. Supported versions are 1 and 2. Version 2 supports id and partition key path encryption.
 
 ## ClusterKey
 ### Properties
@@ -1524,7 +1039,7 @@ usage for this key.
 * **externalSeedNodes**: [SeedNode](#seednode)[]: List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.
 * **gossipCertificates**: [Certificate](#certificate)[] (ReadOnly): List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.
 * **hoursBetweenBackups**: int: (Deprecated) Number of hours to wait between taking a backup of the cluster.
-* **initialCassandraAdminPassword**: string {sensitive} (WriteOnly): Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.
+* **initialCassandraAdminPassword**: string (WriteOnly): Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.
 * **privateLinkResourceId**: string (ReadOnly): If the Connection Method is Vpn, this is the Id of the private link resource that the datacenters need to connect to.
 * **prometheusEndpoint**: [SeedNode](#seednode): Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.
 * **provisionError**: [CassandraError](#cassandraerror): Error related to resource provisioning.
@@ -1533,11 +1048,6 @@ usage for this key.
 * **restoreFromBackupId**: string (WriteOnly): To create an empty cluster, omit this field or set it to null. To restore a backup into a new cluster, set this field to the resource id of the backup.
 * **scheduledEventStrategy**: 'Ignore' | 'StopAny' | 'StopByRack' | string: How the nodes in the cluster react to scheduled events
 * **seedNodes**: [SeedNode](#seednode)[] (ReadOnly): List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.
-
-## ClusterResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Column
 ### Properties
@@ -1551,23 +1061,6 @@ usage for this key.
 * **command**: string (Required): The command which should be run
 * **host**: string (Required): IP address of the cassandra host to run the command on
 * **readWrite**: bool: If true, allows the command to *write* to the cassandra directory, otherwise read-only.
-
-## CommandOutput
-### Properties
-* **commandOutput**: string: Output of the command.
-
-## CommandPostBody
-### Properties
-* **arguments**: [CommandPostBodyArguments](#commandpostbodyarguments): The arguments for the command to be run
-* **cassandra-stop-start**: bool: If true, stops cassandra before executing the command and then start it again
-* **command**: string (Required): The command which should be run
-* **host**: string (Required): IP address of the cassandra host to run the command on
-* **readwrite**: bool: If true, allows the command to *write* to the cassandra directory, otherwise read-only.
-
-## CommandPostBodyArguments
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## CommandPublicResource
 ### Properties
@@ -1601,15 +1094,15 @@ usage for this key.
 ## ConsistencyPolicy
 ### Properties
 * **defaultConsistencyLevel**: 'BoundedStaleness' | 'ConsistentPrefix' | 'Eventual' | 'Session' | 'Strong' (Required): The default consistency level and configuration settings of the Cosmos DB account.
-* **maxIntervalInSeconds**: int {minValue: 5, maxValue: 86400}: When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
-* **maxStalenessPrefix**: int {minValue: 1, maxValue: 2147483647}: When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
+* **maxIntervalInSeconds**: int: When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
+* **maxStalenessPrefix**: int: When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
 
 ## ContainerPartitionKey
 ### Properties
 * **kind**: 'Hash' | 'MultiHash' | 'Range' | string: Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
 * **paths**: string[]: List of paths using which data within the container can be partitioned
 * **systemKey**: bool (ReadOnly): Indicates if the container is using a system generated partition key
-* **version**: int {minValue: 1, maxValue: 2}: Indicates the version of the partition key definition
+* **version**: int: Indicates the version of the partition key definition
 
 ## ContinuousBackupInformation
 ### Properties
@@ -1625,8 +1118,8 @@ usage for this key.
 
 ## CopyJobGetResults
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-* **name**: string (ReadOnly): The name of the resource
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string {pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$"} (Required, ReadOnly): Name of the Copy Job
 * **properties**: [CopyJobProperties](#copyjobproperties) (Required): The properties of a Copy Job
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
@@ -1641,7 +1134,7 @@ usage for this key.
 * **processedCount**: int (ReadOnly): Processed Count
 * **status**: 'Cancelled' | 'Completed' | 'Faulted' | 'Partitioning' | 'Paused' | 'Pending' | 'Running' | string (ReadOnly): Job Status
 * **totalCount**: int (ReadOnly): Total Count
-* **workerCount**: int {minValue: 0}: Worker count
+* **workerCount**: int: Worker count
 
 ## CorsPolicy
 ### Properties
@@ -1649,7 +1142,7 @@ usage for this key.
 * **allowedMethods**: string: The methods (HTTP request verbs) that the origin domain may use for a CORS request.
 * **allowedOrigins**: string (Required): The origin domains that are permitted to make a request against the service via CORS.
 * **exposedHeaders**: string: The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.
-* **maxAgeInSeconds**: int {minValue: 1, maxValue: 2147483647}: The maximum amount time that a browser should cache the preflight OPTIONS request.
+* **maxAgeInSeconds**: int: The maximum amount time that a browser should cache the preflight OPTIONS request.
 
 ## CosmosDBCassandraTable
 ### Properties
@@ -1675,66 +1168,6 @@ usage for this key.
 ### Properties
 * **remoteAccountName**: string: Name of remote account in case of cross-account data transfer.
 
-## CreateUpdateOptions
-### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not both.
-* **throughput**: int: Request Units per second. For example, "throughput": 10000.
-
-## CreateUpdateOptionsOrCassandraKeyspaceGetPropertiesOptions
-### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not both.
-* **throughput**: int: Request Units per second. For example, "throughput": 10000.
-
-## CreateUpdateOptionsOrCassandraTableGetPropertiesOptions
-### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not both.
-* **throughput**: int: Request Units per second. For example, "throughput": 10000.
-
-## CreateUpdateOptionsOrCassandraViewGetPropertiesOptions
-### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not both.
-* **throughput**: int: Request Units per second. For example, "throughput": 10000.
-
-## CreateUpdateOptionsOrGraphResourceGetPropertiesOptions
-### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not both.
-* **throughput**: int: Request Units per second. For example, "throughput": 10000.
-
-## CreateUpdateOptionsOrGremlinDatabaseGetPropertiesOptions
-### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not both.
-* **throughput**: int: Request Units per second. For example, "throughput": 10000.
-
-## CreateUpdateOptionsOrGremlinGraphGetPropertiesOptions
-### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not both.
-* **throughput**: int: Request Units per second. For example, "throughput": 10000.
-
-## CreateUpdateOptionsOrMongoDBCollectionGetPropertiesOptions
-### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not both.
-* **throughput**: int: Request Units per second. For example, "throughput": 10000.
-
-## CreateUpdateOptionsOrMongoDBDatabaseGetPropertiesOptions
-### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not both.
-* **throughput**: int: Request Units per second. For example, "throughput": 10000.
-
-## CreateUpdateOptionsOrSqlContainerGetPropertiesOptions
-### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not both.
-* **throughput**: int: Request Units per second. For example, "throughput": 10000.
-
-## CreateUpdateOptionsOrSqlDatabaseGetPropertiesOptions
-### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not both.
-* **throughput**: int: Request Units per second. For example, "throughput": 10000.
-
-## CreateUpdateOptionsOrTableGetPropertiesOptions
-### Properties
-* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not both.
-* **throughput**: int: Request Units per second. For example, "throughput": 10000.
-
 ## DatabaseAccountConnectionString
 ### Properties
 * **connectionString**: string (ReadOnly): Value of the connection string
@@ -1742,21 +1175,21 @@ usage for this key.
 * **keyKind**: 'Primary' | 'PrimaryReadonly' | 'Secondary' | 'SecondaryReadonly' | string (ReadOnly): Kind of the connection string key
 * **type**: 'Cassandra' | 'CassandraConnectorMetadata' | 'Gremlin' | 'GremlinV2' | 'MongoDB' | 'Sql' | 'SqlDedicatedGateway' | 'Table' | 'Undefined' | string (ReadOnly): Type of the connection string
 
-## DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties
+## DatabaseAccountGetProperties
 ### Properties
 * **analyticalStorageConfiguration**: [AnalyticalStorageConfiguration](#analyticalstorageconfiguration): Analytical storage specific properties.
-* **apiProperties**: [ApiProperties](#apiproperties): API specific properties. Currently, supported only for MongoDB API.
+* **apiProperties**: [ApiProperties](#apiproperties): API specific properties.
 * **backupPolicy**: [BackupPolicy](#backuppolicy): The object representing the policy for taking backups on an account.
 * **capabilities**: [Capability](#capability)[]: List of Cosmos DB capabilities for the account
 * **capacity**: [Capacity](#capacity): The object that represents all properties related to capacity enforcement on an account.
 * **capacityMode**: 'None' | 'Provisioned' | 'Serverless' | string: Indicates the capacityMode of the Cosmos DB account.
-* **capacityModeChangeTransitionState**: [CapacityModeChangeTransitionState](#capacitymodechangetransitionstate) (ReadOnly): The object that represents the migration state for the CapacityMode of the Cosmos DB account.
+* **capacityModeChangeTransitionState**: [CapacityModeChangeTransitionState](#capacitymodechangetransitionstate): The object that represents the migration state for the CapacityMode of the Cosmos DB account.
 * **connectorOffer**: 'Small' | string: The cassandra connector offer type for the Cosmos DB database C* account.
-* **consistencyPolicy**: [ConsistencyPolicy](#consistencypolicy): The consistency policy for the Cosmos DB account.
+* **consistencyPolicy**: [ConsistencyPolicy](#consistencypolicy): The consistency policy for the Cosmos DB database account.
 * **cors**: [CorsPolicy](#corspolicy)[]: The CORS policy for the Cosmos DB database account.
 * **createMode**: 'Default' | 'Restore' | string: Enum to indicate the mode of account creation.
 * **customerManagedKeyStatus**: string: Indicates the status of the Customer Managed Key feature on the account. In case there are errors, the property provides troubleshooting guidance.
-* **databaseAccountOfferType**: 'Standard' (Required): The offer type for the Cosmos DB database account.
+* **databaseAccountOfferType**: 'Standard' (ReadOnly): The offer type for the Cosmos DB database account. Default value: Standard.
 * **defaultIdentity**: string: The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.
 * **defaultPriorityLevel**: 'High' | 'Low' | string: Enum to indicate default Priority Level of request for Priority Based Execution.
 * **diagnosticLogSettings**: [DiagnosticLogSettings](#diagnosticlogsettings): The Object representing the different Diagnostic log settings for the Cosmos DB Account.
@@ -1779,10 +1212,10 @@ usage for this key.
 * **instanceId**: string (ReadOnly): A unique identifier assigned to the database account
 * **ipRules**: [IpAddressOrRange](#ipaddressorrange)[]: List of IpRules.
 * **isVirtualNetworkFilterEnabled**: bool: Flag to indicate whether to enable/disable Virtual Network ACL rules.
-* **keysMetadata**: [DatabaseAccountKeysMetadata](#databaseaccountkeysmetadata) (ReadOnly): This property is ignored during the update/create operation, as the metadata is read-only. The object represents the metadata for the Account Keys of the Cosmos DB account.
+* **keysMetadata**: [DatabaseAccountKeysMetadata](#databaseaccountkeysmetadata) (ReadOnly): The object that represents the metadata for the Account Keys of the Cosmos DB account.
 * **keyVaultKeyUri**: string: The URI of the key vault
 * **keyVaultKeyUriVersion**: string (ReadOnly): The version of the Customer Managed Key currently being used by the account
-* **locations**: [Location](#location)[] (Required): An array that contains the georeplication locations enabled for the Cosmos DB account.
+* **locations**: [Location](#location)[] (ReadOnly): An array that contains all of the locations enabled for the Cosmos DB account.
 * **minimalTlsVersion**: 'Tls' | 'Tls11' | 'Tls12' | string: Indicates the minimum allowed Tls version. The default is Tls 1.0, except for Cassandra and Mongo API's, which only work with Tls 1.2.
 * **networkAclBypass**: 'AzureServices' | 'None': Indicates what services are allowed to bypass firewall checks.
 * **networkAclBypassResourceIds**: string[]: An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
@@ -1792,8 +1225,8 @@ usage for this key.
 * **readLocations**: [Location](#location)[] (ReadOnly): An array that contains of the read locations enabled for the Cosmos DB account.
 * **restoreParameters**: [RestoreParameters](#restoreparameters): Parameters to indicate the information about the restore.
 * **softDeleteConfiguration**: [SoftDeleteConfiguration](#softdeleteconfiguration): The configuration for soft delete on the Cosmos DB account.
-* **throughputPoolDedicatedRUs**: int (ReadOnly): Total dedicated throughput (RU/s) for database account. Represents the sum of all manual provisioned throughput and all autoscale max RU/s across all shared throughput databases and dedicated throughput containers in the account for 1 region. READ ONLY.
-* **throughputPoolMaxConsumableRUs**: int (ReadOnly): When this account is part of a fleetspace with throughput pooling enabled, this is the maximum additional throughput (RU/s) that can be consumed from the pool, summed across all shared throughput databases and dedicated throughput containers in the account for 1 region.  READ ONLY.
+* **throughputPoolDedicatedRUs**: int: Total dedicated throughput (RU/s) for database account. Represents the sum of all manual provisioned throughput and all autoscale max RU/s across all shared throughput databases and dedicated throughput containers in the account for 1 region. READ ONLY.
+* **throughputPoolMaxConsumableRUs**: int: When this account is part of a fleetspace with throughput pooling enabled, this is the maximum additional throughput (RU/s) that can be consumed from the pool, summed across all shared throughput databases and dedicated throughput containers in the account for 1 region.  READ ONLY.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: List of Virtual Network ACL rules configured for the Cosmos DB account.
 * **writeLocations**: [Location](#location)[] (ReadOnly): An array that contains the write location for the Cosmos DB account.
 
@@ -1819,11 +1252,6 @@ usage for this key.
 ### Properties
 * **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
 * **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
-
-## DatabaseAccountRegenerateKeyParameters
-### Properties
-* **keyKind**: 'primary' | 'primaryReadonly' | 'secondary' | 'secondaryReadonly' | string (Required): The access key to regenerate.
-* **skipAccountKeysLastUsageCheck**: bool: Optional flag indicating whether to skip account keys last usage check.
 
 ## DatabaseRestoreResource
 ### Properties
@@ -1873,13 +1301,18 @@ usage for this key.
 
 ### AzureBlobDataTransferDataSourceSink
 #### Properties
-* **component**: 'AzureBlobStorage' (Required)
+* **component**: 'AzureBlobDataTransferDataSourceSink' (Required)
 * **containerName**: string (Required)
 * **endpointUrl**: string
 
+### BaseCosmosDataTransferDataSourceSink
+#### Properties
+* **component**: 'BaseCosmosDataTransferDataSourceSink' (Required)
+* **remoteAccountName**: string
+
 ### CosmosCassandraDataTransferDataSourceSink
 #### Properties
-* **component**: 'CosmosDBCassandra' (Required)
+* **component**: 'CosmosCassandraDataTransferDataSourceSink' (Required)
 * **keyspaceName**: string (Required)
 * **remoteAccountName**: string
 * **tableName**: string (Required)
@@ -1887,21 +1320,21 @@ usage for this key.
 ### CosmosMongoDataTransferDataSourceSink
 #### Properties
 * **collectionName**: string (Required)
-* **component**: 'CosmosDBMongo' (Required)
+* **component**: 'CosmosMongoDataTransferDataSourceSink' (Required)
 * **databaseName**: string (Required)
 * **remoteAccountName**: string
 
 ### CosmosMongoVCoreDataTransferDataSourceSink
 #### Properties
 * **collectionName**: string (Required)
-* **component**: 'CosmosDBMongoVCore' (Required)
+* **component**: 'CosmosMongoVCoreDataTransferDataSourceSink' (Required)
 * **connectionStringKeyVaultUri**: string
 * **databaseName**: string (Required)
 * **hostName**: string
 
 ### CosmosSqlDataTransferDataSourceSink
 #### Properties
-* **component**: 'CosmosDBSql' (Required)
+* **component**: 'CosmosSqlDataTransferDataSourceSink' (Required)
 * **containerName**: string (Required)
 * **databaseName**: string (Required)
 * **remoteAccountName**: string
@@ -1909,8 +1342,8 @@ usage for this key.
 
 ## DataTransferJobGetResults
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-* **name**: string (ReadOnly): The name of the resource
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string {pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$"} (Required, ReadOnly): Name of the Data Transfer Job
 * **properties**: [DataTransferJobProperties](#datatransferjobproperties): The properties of a DataTransfer Job
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
@@ -1919,7 +1352,7 @@ usage for this key.
 ### Properties
 * **destination**: [DataTransferDataSourceSink](#datatransferdatasourcesink) (Required): Destination DataStore details
 * **duration**: string (ReadOnly): Total Duration of Job
-* **error**: [ErrorResponseAutoGenerated](#errorresponseautogenerated) (ReadOnly): Error response for Faulted job
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Error response for Faulted job
 * **jobName**: string (ReadOnly): Job Name
 * **lastUpdatedUtcTime**: string (ReadOnly): Last Updated Time (ISO-8601 format).
 * **mode**: 'Offline' | 'Online' | string: Mode of job execution
@@ -1927,7 +1360,7 @@ usage for this key.
 * **source**: [DataTransferDataSourceSink](#datatransferdatasourcesink) (Required): Source DataStore details
 * **status**: string (ReadOnly): Job Status
 * **totalCount**: int (ReadOnly): Total Count.
-* **workerCount**: int {minValue: 0}: Worker count
+* **workerCount**: int: Worker count
 
 ## DataTransferRegionalServiceResource
 ### Properties
@@ -1956,22 +1389,13 @@ usage for this key.
 ### Properties
 * **error**: [ErrorDetail](#errordetail): The error object.
 
-## ErrorResponseAutoGenerated
-### Properties
-* **code**: string: Error code.
-* **message**: string: Error message indicating why the operation failed.
-
 ## ExcludedPath
 ### Properties
 * **path**: string: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
 
-## FailoverPolicies
-### Properties
-* **failoverPolicies**: [FailoverPolicy](#failoverpolicy)[] (Required): List of failover policies.
-
 ## FailoverPolicy
 ### Properties
-* **failoverPriority**: int {minValue: 0}: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+* **failoverPriority**: int: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
 * **id**: string (ReadOnly): The unique identifier of the region in which the database account replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.
 * **locationName**: string: The name of the region in which the database account exists.
 
@@ -1997,7 +1421,7 @@ usage for this key.
 
 ## FleetspaceProperties
 ### Properties
-* **dataRegions**: string[] {minLength: 1}: List of data regions assigned to the fleetspace. Eg [westus2]
+* **dataRegions**: string[]: List of data regions assigned to the fleetspace. Eg [westus2]
 * **fleetspaceApiKind**: 'NoSQL' | string: The kind of API this fleetspace belongs to. Acceptable values: 'NoSQL'
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Initializing' | 'InternallyReady' | 'Online' | 'Succeeded' | 'Uninitialized' | 'Updating' | string (ReadOnly): A provisioning state of the Fleetspace.
 * **serviceTier**: 'BusinessCritical' | 'GeneralPurpose' | string: Service Tier for the fleetspace. GeneralPurpose types refers to single write region accounts that can be added to this fleetspace, whereas BusinessCritical refers to multi write region.
@@ -2032,6 +1456,7 @@ usage for this key.
 * **clusterType**: 'NonProduction' | 'Production' | string: Type of the cluster. If set to Production, some operations might not be permitted on cluster.
 * **endPoints**: [GarnetClusterResourcePropertiesEndPointsItem](#garnetclusterresourcepropertiesendpointsitem)[] (ReadOnly): Endpoints for clients to connect to the cluster.
 * **extensions**: string[]: Extensions to be added or updated on cluster.
+* **nodeCount**: int: Number of nodes.
 * **nodeSku**: string: Virtual Machine SKU used for clusters. Default value is Standard_DS14_v2.
 * **persistence**: bool: Flag to indicate if persistence is enabled for the Garnet cluster.
 * **provisionError**: [ErrorDetail](#errordetail): Error related to resource provisioning.
@@ -2052,21 +1477,31 @@ usage for this key.
 * **name**: string (ReadOnly): The regional service name.
 * **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' | string (ReadOnly): Describes the status of a service.
 
-## GraphResourceCreateUpdatePropertiesOrGraphResourceGetProperties
+## GraphResourceGetProperties
 ### Properties
-* **options**: [CreateUpdateOptionsOrGraphResourceGetPropertiesOptions](#createupdateoptionsorgraphresourcegetpropertiesoptions): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [GraphResourceOrGraphResourceGetPropertiesResource](#graphresourceorgraphresourcegetpropertiesresource) (Required): The standard JSON format of a Graph resource
+* **options**: [GraphResourceGetPropertiesOptions](#graphresourcegetpropertiesoptions)
+* **resource**: [GraphResourceGetPropertiesResource](#graphresourcegetpropertiesresource)
 
-## GraphResourceOrGraphResourceGetPropertiesResource
+## GraphResourceGetPropertiesOptions
+### Properties
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings.
+* **throughput**: int: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+
+## GraphResourceGetPropertiesResource
 ### Properties
 * **id**: string (Required): Name of the Cosmos DB Graph
 
-## GremlinDatabaseCreateUpdatePropertiesOrGremlinDatabaseGetProperties
+## GremlinDatabaseGetProperties
 ### Properties
-* **options**: [CreateUpdateOptionsOrGremlinDatabaseGetPropertiesOptions](#createupdateoptionsorgremlindatabasegetpropertiesoptions): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [GremlinDatabaseResourceOrGremlinDatabaseGetPropertiesResource](#gremlindatabaseresourceorgremlindatabasegetpropertiesresource) (Required): The standard JSON format of a Gremlin database
+* **options**: [GremlinDatabaseGetPropertiesOptions](#gremlindatabasegetpropertiesoptions)
+* **resource**: [GremlinDatabaseGetPropertiesResource](#gremlindatabasegetpropertiesresource)
 
-## GremlinDatabaseResourceOrGremlinDatabaseGetPropertiesResource
+## GremlinDatabaseGetPropertiesOptions
+### Properties
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings.
+* **throughput**: int: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+
+## GremlinDatabaseGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -2080,12 +1515,17 @@ usage for this key.
 * **databaseName**: string: The name of the gremlin database available for restore.
 * **graphNames**: string[]: The names of the graphs available for restore.
 
-## GremlinGraphCreateUpdatePropertiesOrGremlinGraphGetProperties
+## GremlinGraphGetProperties
 ### Properties
-* **options**: [CreateUpdateOptionsOrGremlinGraphGetPropertiesOptions](#createupdateoptionsorgremlingraphgetpropertiesoptions): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [GremlinGraphResourceOrGremlinGraphGetPropertiesResource](#gremlingraphresourceorgremlingraphgetpropertiesresource) (Required): The standard JSON format of a Gremlin graph
+* **options**: [GremlinGraphGetPropertiesOptions](#gremlingraphgetpropertiesoptions)
+* **resource**: [GremlinGraphGetPropertiesResource](#gremlingraphgetpropertiesresource)
 
-## GremlinGraphResourceOrGremlinGraphGetPropertiesResource
+## GremlinGraphGetPropertiesOptions
+### Properties
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings.
+* **throughput**: int: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+
+## GremlinGraphGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -2151,7 +1591,7 @@ usage for this key.
 ## Location
 ### Properties
 * **documentEndpoint**: string (ReadOnly): The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
-* **failoverPriority**: int {minValue: 0}: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+* **failoverPriority**: int: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
 * **id**: string (ReadOnly): The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.
 * **isZoneRedundant**: bool: Flag to indicate whether or not this region is an AvailabilityZone region
 * **locationName**: string: The name of the region.
@@ -2177,17 +1617,7 @@ usage for this key.
 * **principalId**: string (ReadOnly): The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned': The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
-* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-## ManagedServiceIdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities)
-
-## ManagedServiceIdentityUserAssignedIdentities
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+* **userAssignedIdentities**: [Record](#record): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## MaterializedViewDefinition
 ### Properties
@@ -2215,12 +1645,17 @@ usage for this key.
 ### Properties
 * **isDryRun**: bool: Specifies whether the operation is a real merge operation or a simulation.
 
-## MongoDBCollectionCreateUpdatePropertiesOrMongoDBCollectionGetProperties
+## MongoDBCollectionGetProperties
 ### Properties
-* **options**: [CreateUpdateOptionsOrMongoDBCollectionGetPropertiesOptions](#createupdateoptionsormongodbcollectiongetpropertiesoptions): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [MongoDBCollectionResourceOrMongoDBCollectionGetPropertiesResource](#mongodbcollectionresourceormongodbcollectiongetpropertiesresource) (Required): The standard JSON format of a MongoDB collection
+* **options**: [MongoDBCollectionGetPropertiesOptions](#mongodbcollectiongetpropertiesoptions)
+* **resource**: [MongoDBCollectionGetPropertiesResource](#mongodbcollectiongetpropertiesresource)
 
-## MongoDBCollectionResourceOrMongoDBCollectionGetPropertiesResource
+## MongoDBCollectionGetPropertiesOptions
+### Properties
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings.
+* **throughput**: int: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+
+## MongoDBCollectionGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -2230,19 +1665,19 @@ usage for this key.
 * **id**: string (Required): Name of the Cosmos DB MongoDB collection
 * **indexes**: [MongoIndex](#mongoindex)[]: List of index keys
 * **restoreParameters**: [ResourceRestoreParameters](#resourcerestoreparameters): Parameters to indicate the information about the restore
-* **shardKey**: [MongoDBCollectionResourceShardKey](#mongodbcollectionresourceshardkey): A key-value pair of shard keys to be applied for the request.
+* **shardKey**: [Record](#record): A key-value pair of shard keys to be applied for the request.
 
-## MongoDBCollectionResourceShardKey
+## MongoDBDatabaseGetProperties
 ### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **options**: [MongoDBDatabaseGetPropertiesOptions](#mongodbdatabasegetpropertiesoptions)
+* **resource**: [MongoDBDatabaseGetPropertiesResource](#mongodbdatabasegetpropertiesresource)
 
-## MongoDBDatabaseCreateUpdatePropertiesOrMongoDBDatabaseGetProperties
+## MongoDBDatabaseGetPropertiesOptions
 ### Properties
-* **options**: [CreateUpdateOptionsOrMongoDBDatabaseGetPropertiesOptions](#createupdateoptionsormongodbdatabasegetpropertiesoptions): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [MongoDBDatabaseResourceOrMongoDBDatabaseGetPropertiesResource](#mongodbdatabaseresourceormongodbdatabasegetpropertiesresource) (Required): The standard JSON format of a MongoDB database
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings.
+* **throughput**: int: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
 
-## MongoDBDatabaseResourceOrMongoDBDatabaseGetPropertiesResource
+## MongoDBDatabaseGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -2307,7 +1742,7 @@ usage for this key.
 * **customData**: string: A custom definition for the USer Definition.
 * **databaseName**: string: The database name for which access is being granted for this User Definition.
 * **mechanisms**: string: The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
-* **password**: string {sensitive}: The password for User Definition. Response does not contain user password.
+* **password**: string: The password for User Definition. Response does not contain user password.
 * **roles**: [Role](#role)[]: The set of roles inherited by the User Definition.
 * **userName**: string: The user name for User Definition.
 
@@ -2320,15 +1755,15 @@ usage for this key.
 ### Properties
 * **id**: string: Fully qualified Azure resource ID of the NSP resource
 * **location**: string: Location of the network security perimeter
-* **perimeterGuid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Universal unique ID (UUID) of the network security perimeter
+* **perimeterGuid**: string: Universal unique ID (UUID) of the network security perimeter
 
 ## NetworkSecurityPerimeterConfigurationProperties
 ### Properties
-* **networkSecurityPerimeter**: [NetworkSecurityPerimeter](#networksecurityperimeter): Information about a network security perimeter (NSP)
+* **networkSecurityPerimeter**: [NetworkSecurityPerimeter](#networksecurityperimeter): Information about the network security perimeter (NSP)
 * **profile**: [NetworkSecurityProfile](#networksecurityprofile): Network security perimeter configuration profile
 * **provisioningIssues**: [ProvisioningIssue](#provisioningissue)[] (ReadOnly): List of provisioning issues, if any
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of a network security perimeter configuration that is being created or updated.
-* **resourceAssociation**: [ResourceAssociation](#resourceassociation): Information about resource association
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the network security perimeter configuration
+* **resourceAssociation**: [ResourceAssociation](#resourceassociation): Information about the resource association
 
 ## NetworkSecurityProfile
 ### Properties
@@ -2347,7 +1782,7 @@ usage for this key.
 
 ## NotebookWorkspaceConnectionInfoResult
 ### Properties
-* **authToken**: string {sensitive} (ReadOnly): Specifies auth token used for connecting to Notebook server (uses token-based auth).
+* **authToken**: string (ReadOnly): Specifies auth token used for connecting to Notebook server (uses token-based auth).
 * **notebookServerEndpoint**: string (ReadOnly): Specifies the endpoint of Notebook server.
 
 ## NotebookWorkspaceProperties
@@ -2357,8 +1792,8 @@ usage for this key.
 
 ## PeriodicModeProperties
 ### Properties
-* **backupIntervalInMinutes**: int {minValue: 0}: An integer representing the interval in minutes between two backups
-* **backupRetentionIntervalInHours**: int {minValue: 0}: An integer representing the time (in hours) that each backup is retained
+* **backupIntervalInMinutes**: int: An integer representing the interval in minutes between two backups
+* **backupRetentionIntervalInHours**: int: An integer representing the time (in hours) that each backup is retained
 * **backupStorageRedundancy**: 'Geo' | 'Local' | 'Zone' | string: Enum to indicate type of backup residency
 
 ## Permission
@@ -2367,47 +1802,19 @@ usage for this key.
 * **id**: string: The id for the permission.
 * **notDataActions**: string[]: An array of data actions that are denied.
 
-## PhysicalPartitionId
-### Properties
-* **id**: string (Required): Id of a physical partition
-
-## PhysicalPartitionStorageInfo
+## physicalPartitionStorageInfo
 ### Properties
 * **id**: string (ReadOnly): The unique identifier of the partition.
 * **storageInKB**: int (ReadOnly): The storage in KB for the physical partition.
 
 ## PhysicalPartitionStorageInfoCollection
 ### Properties
-* **physicalPartitionStorageInfoCollection**: [PhysicalPartitionStorageInfo](#physicalpartitionstorageinfo)[] (ReadOnly): List of physical partitions and their properties.
-
-## PhysicalPartitionThroughputInfoResource
-### Properties
-* **id**: string (Required): Id of a physical partition
-* **targetThroughput**: int: Target throughput of a physical partition
-* **throughput**: int: Throughput of a physical partition
-
-## PhysicalPartitionThroughputInfoResult
-### Properties
-* **id**: string (ReadOnly): The unique resource identifier of the ARM resource.
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: string (ReadOnly): The name of the ARM resource.
-* **properties**: [PhysicalPartitionThroughputInfoResultProperties](#physicalpartitionthroughputinforesultproperties): The properties of an Azure Cosmos DB PhysicalPartitionThroughputInfoResult object
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-* **type**: string (ReadOnly): The type of Azure resource.
-
-## PhysicalPartitionThroughputInfoResultProperties
-### Properties
-* **resource**: [PhysicalPartitionThroughputInfoResultPropertiesResource](#physicalpartitionthroughputinforesultpropertiesresource): properties of physical partition throughput info
-
-## PhysicalPartitionThroughputInfoResultPropertiesResource
-### Properties
-* **physicalPartitionThroughputInfo**: [PhysicalPartitionThroughputInfoResource](#physicalpartitionthroughputinforesource)[]: Array of physical partition throughput info objects
+* **physicalPartitionStorageInfoCollection**: [physicalPartitionStorageInfo](#physicalpartitionstorageinfo)[] (ReadOnly): List of physical partitions and their properties.
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-* **name**: string (ReadOnly): The name of the resource
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (Required, ReadOnly): The name of the private endpoint connection.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
@@ -2448,7 +1855,7 @@ usage for this key.
 ## ProvisioningIssue
 ### Properties
 * **name**: string (ReadOnly): Name of the issue
-* **properties**: [ProvisioningIssueProperties](#provisioningissueproperties) (ReadOnly): Details of a provisioning issue for a network security perimeter (NSP) configuration. Resource providers should generate separate provisioning issue elements for each separate issue detected, and include a meaningful and distinctive description, as well as any appropriate suggestedResourceIds and suggestedAccessRules
+* **properties**: [ProvisioningIssueProperties](#provisioningissueproperties) (ReadOnly): Details of the provisioning issue
 
 ## ProvisioningIssueProperties
 ### Properties
@@ -2458,29 +1865,10 @@ usage for this key.
 * **suggestedAccessRules**: [AccessRule](#accessrule)[] (ReadOnly): Access rules that can be added to the network security profile (NSP) to remediate the issue.
 * **suggestedResourceIds**: string[] (ReadOnly): Fully qualified resource IDs of suggested resources that can be associated to the network security perimeter (NSP) to remediate the issue.
 
-## RedistributeThroughputParameters
+## Record
 ### Properties
-* **id**: string (ReadOnly): The unique resource identifier of the ARM resource.
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: string (ReadOnly): The name of the ARM resource.
-* **properties**: [RedistributeThroughputProperties](#redistributethroughputproperties) (Required): Properties to redistribute throughput parameters object
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-* **type**: string (ReadOnly): The type of Azure resource.
-
-## RedistributeThroughputProperties
-### Properties
-* **resource**: [RedistributeThroughputPropertiesResource](#redistributethroughputpropertiesresource) (Required): The standard JSON format of a resource throughput
-
-## RedistributeThroughputPropertiesResource
-### Properties
-* **sourcePhysicalPartitionThroughputInfo**: [PhysicalPartitionThroughputInfoResource](#physicalpartitionthroughputinforesource)[] (Required): Array of PhysicalPartitionThroughputInfoResource objects.
-* **targetPhysicalPartitionThroughputInfo**: [PhysicalPartitionThroughputInfoResource](#physicalpartitionthroughputinforesource)[] (Required): Array of PhysicalPartitionThroughputInfoResource objects.
-* **throughputPolicy**: 'custom' | 'equal' | 'none' | string (Required): ThroughputPolicy to apply for throughput redistribution
-
-## RegionForOnlineOffline
-### Properties
-* **region**: string (Required): Cosmos DB region, with spaces between words and each word capitalized.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceAssociation
 ### Properties
@@ -2520,24 +1908,6 @@ usage for this key.
 * **sourceBackupLocation**: string: The source backup location for restore.
 * **tablesToRestore**: string[]: List of specific tables available for restore.
 
-## RetrieveThroughputParameters
-### Properties
-* **id**: string (ReadOnly): The unique resource identifier of the ARM resource.
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: string (ReadOnly): The name of the ARM resource.
-* **properties**: [RetrieveThroughputProperties](#retrievethroughputproperties) (Required): Properties to retrieve throughput parameters object
-* **tags**: [ARMResourcePropertiesTags](#armresourcepropertiestags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-* **type**: string (ReadOnly): The type of Azure resource.
-
-## RetrieveThroughputProperties
-### Properties
-* **resource**: [RetrieveThroughputPropertiesResource](#retrievethroughputpropertiesresource) (Required): The standard JSON format of a resource throughput
-
-## RetrieveThroughputPropertiesResource
-### Properties
-* **physicalPartitionIds**: [PhysicalPartitionId](#physicalpartitionid)[] (Required): Array of PhysicalPartitionId objects.
-
 ## Role
 ### Properties
 * **db**: string: The database name the role is applied.
@@ -2547,37 +1917,53 @@ usage for this key.
 ### Properties
 * **ipAddress**: string: IP address of this seed node.
 
-## ServiceResourceCreateUpdatePropertiesOrServiceResourceProperties
+## ServiceResourceProperties
 * **Discriminator**: serviceType
 
 ### Base Properties
 * **creationTime**: string (ReadOnly): Time of the last state change (ISO-8601 format).
-* **instanceCount**: int {minValue: 0}: Instance count for the service.
+* **instanceCount**: int: Instance count for the service.
 * **instanceSize**: 'Cosmos.D16s' | 'Cosmos.D4s' | 'Cosmos.D8s' | string: Instance type for the service.
 * **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' | string (ReadOnly): Describes the status of a service.
 
-### DataTransferServiceResourceCreateUpdatePropertiesOrDataTransferServiceResourceProperties
+### DataTransferServiceResourceProperties
 #### Properties
+* **creationTime**: string (ReadOnly): Time of the last state change (ISO-8601 format).
+* **instanceCount**: int: Instance count for the service.
+* **instanceSize**: 'Cosmos.D16s' | 'Cosmos.D4s' | 'Cosmos.D8s' | string: Instance type for the service.
 * **locations**: [DataTransferRegionalServiceResource](#datatransferregionalserviceresource)[] (ReadOnly): An array that contains all of the locations for the service.
-* **serviceType**: 'DataTransfer' (Required): ServiceType for the service.
+* **serviceType**: 'DataTransferServiceResourceProperties' (Required)
+* **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' | string (ReadOnly): Describes the status of a service.
 
-### GraphAPIComputeServiceResourceCreateUpdatePropertiesOrGraphAPIComputeServiceResourceProperties
+### GraphAPIComputeServiceResourceProperties
 #### Properties
-* **graphApiComputeEndpoint**: string (ReadOnly): GraphAPICompute endpoint for the service.
+* **creationTime**: string (ReadOnly): Time of the last state change (ISO-8601 format).
+* **graphApiComputeEndpoint**: string: GraphAPICompute endpoint for the service.
+* **instanceCount**: int: Instance count for the service.
+* **instanceSize**: 'Cosmos.D16s' | 'Cosmos.D4s' | 'Cosmos.D8s' | string: Instance type for the service.
 * **locations**: [GraphAPIComputeRegionalServiceResource](#graphapicomputeregionalserviceresource)[] (ReadOnly): An array that contains all of the locations for the service.
-* **serviceType**: 'GraphAPICompute' (Required): ServiceType for the service.
+* **serviceType**: 'GraphAPIComputeServiceResourceProperties' (Required)
+* **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' | string (ReadOnly): Describes the status of a service.
 
-### MaterializedViewsBuilderServiceResourceCreateUpdatePropertiesOrMaterializedViewsBuilderServiceResourceProperties
+### MaterializedViewsBuilderServiceResourceProperties
 #### Properties
+* **creationTime**: string (ReadOnly): Time of the last state change (ISO-8601 format).
+* **instanceCount**: int: Instance count for the service.
+* **instanceSize**: 'Cosmos.D16s' | 'Cosmos.D4s' | 'Cosmos.D8s' | string: Instance type for the service.
 * **locations**: [MaterializedViewsBuilderRegionalServiceResource](#materializedviewsbuilderregionalserviceresource)[] (ReadOnly): An array that contains all of the locations for the service.
-* **serviceType**: 'MaterializedViewsBuilder' (Required): ServiceType for the service.
+* **serviceType**: 'MaterializedViewsBuilderServiceResourceProperties' (Required)
+* **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' | string (ReadOnly): Describes the status of a service.
 
-### SqlDedicatedGatewayServiceResourceCreateUpdatePropertiesOrSqlDedicatedGatewayServiceResourceProperties
+### SqlDedicatedGatewayServiceResourceProperties
 #### Properties
+* **creationTime**: string (ReadOnly): Time of the last state change (ISO-8601 format).
 * **dedicatedGatewayType**: 'DistributedQuery' | 'IntegratedCache' | string: DedicatedGatewayType for the service.
+* **instanceCount**: int: Instance count for the service.
+* **instanceSize**: 'Cosmos.D16s' | 'Cosmos.D4s' | 'Cosmos.D8s' | string: Instance type for the service.
 * **locations**: [SqlDedicatedGatewayRegionalServiceResource](#sqldedicatedgatewayregionalserviceresource)[] (ReadOnly): An array that contains all of the locations for the service.
-* **serviceType**: 'SqlDedicatedGateway' (Required): ServiceType for the service.
-* **sqlDedicatedGatewayEndpoint**: string (ReadOnly): SqlDedicatedGateway endpoint for the service.
+* **serviceType**: 'SqlDedicatedGatewayServiceResourceProperties' (Required)
+* **sqlDedicatedGatewayEndpoint**: string: SqlDedicatedGateway endpoint for the service.
+* **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' | string (ReadOnly): Describes the status of a service.
 
 
 ## SoftDeleteConfiguration
@@ -2586,58 +1972,22 @@ usage for this key.
 * **softDeleteRetentionPeriodInMinutes**: int: Soft delete retention period in minutes for resources.
 * **softDeletionEnabled**: bool: Flag to indicate whether soft delete is enabled on the account.
 
-## SoftDeletedDatabaseAccountProperties
-### Properties
-* **accountName**: string: The name of the database account.
-* **resource**: [SoftDeletedDatabaseAccountResource](#softdeleteddatabaseaccountresource): A subset of properties of the underlying database account resource.
-* **softDeleteConfiguration**: [SoftDeleteConfiguration](#softdeleteconfiguration): The soft delete configuration for the database account.
-* **softDeletionMetadata**: [SoftDeletionMetadata](#softdeletionmetadata): Metadata related to the soft deletion of the database account.
-
-## SoftDeletedDatabaseAccountResource
-### Properties
-* **locations**: [Location](#location)[]: An array that contains all of the locations enabled for the Cosmos DB account.
-* **readLocations**: [Location](#location)[]: An array that contains the read locations enabled for the Cosmos DB account.
-* **writeLocations**: [Location](#location)[]: An array that contains the write location(s) for the Cosmos DB account.
-
-## SoftDeletedSqlContainerProperties
-### Properties
-* **resource**: [SoftDeletedSqlContainerResource](#softdeletedsqlcontainerresource): The resource information for the soft-deleted SQL container.
-* **softDeletionMetadata**: [SoftDeletionMetadata](#softdeletionmetadata): Metadata related to the soft deletion of the SQL container.
-
-## SoftDeletedSqlContainerResource
-### Properties
-* **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **defaultTtl**: int: Default time to live
-* **id**: string (Required): Name of the Cosmos DB SQL container
-* **partitionKey**: [ContainerPartitionKey](#containerpartitionkey): The configuration of the partition key to be used for partitioning data into multiple partitions
-
-## SoftDeletedSqlDatabaseProperties
-### Properties
-* **resource**: [SoftDeletedSqlDatabaseResource](#softdeletedsqldatabaseresource): The resource information for the soft-deleted SQL database.
-* **softDeletionMetadata**: [SoftDeletionMetadata](#softdeletionmetadata): Metadata related to the soft deletion of the SQL database.
-
-## SoftDeletedSqlDatabaseResource
-### Properties
-* **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **id**: string (Required): Name of the Cosmos DB SQL database
-
-## SoftDeletionMetadata
-### Properties
-* **isSoftDeleted**: bool: Indicates whether the resource is soft deleted.
-* **softDeletionResourceExpirationTimestamp**: int: The timestamp when the soft-deleted resource will expire and be permanently deleted.
-* **softDeletionStartTimestamp**: int: The timestamp when the soft deletion started.
-
 ## SpatialSpec
 ### Properties
 * **path**: string: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
 * **types**: ('LineString' | 'MultiPolygon' | 'Point' | 'Polygon' | string)[]: List of path's spatial type
 
-## SqlContainerCreateUpdatePropertiesOrSqlContainerGetProperties
+## SqlContainerGetProperties
 ### Properties
-* **options**: [CreateUpdateOptionsOrSqlContainerGetPropertiesOptions](#createupdateoptionsorsqlcontainergetpropertiesoptions): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [SqlContainerResourceOrSqlContainerGetPropertiesResource](#sqlcontainerresourceorsqlcontainergetpropertiesresource) (Required): The standard JSON format of a container
+* **options**: [SqlContainerGetPropertiesOptions](#sqlcontainergetpropertiesoptions)
+* **resource**: [SqlContainerGetPropertiesResource](#sqlcontainergetpropertiesresource)
 
-## SqlContainerResourceOrSqlContainerGetPropertiesResource
+## SqlContainerGetPropertiesOptions
+### Properties
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings.
+* **throughput**: int: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+
+## SqlContainerGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -2660,18 +2010,23 @@ usage for this key.
 * **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy): The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
 * **vectorEmbeddingPolicy**: [VectorEmbeddingPolicy](#vectorembeddingpolicy): The vector embedding policy for the container.
 
-## SqlDatabaseCreateUpdatePropertiesOrSqlDatabaseGetProperties
+## SqlDatabaseGetProperties
 ### Properties
-* **options**: [CreateUpdateOptionsOrSqlDatabaseGetPropertiesOptions](#createupdateoptionsorsqldatabasegetpropertiesoptions): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [SqlDatabaseResourceOrSqlDatabaseGetPropertiesResource](#sqldatabaseresourceorsqldatabasegetpropertiesresource) (Required): The standard JSON format of a SQL database
+* **options**: [SqlDatabaseGetPropertiesOptions](#sqldatabasegetpropertiesoptions)
+* **resource**: [SqlDatabaseGetPropertiesResource](#sqldatabasegetpropertiesresource)
 
-## SqlDatabaseResourceOrSqlDatabaseGetPropertiesResource
+## SqlDatabaseGetPropertiesOptions
 ### Properties
-* **_colls**: string (ReadOnly): A system generated property that specified the addressable path of the collections resource.
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings.
+* **throughput**: int: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+
+## SqlDatabaseGetPropertiesResource
+### Properties
+* **_colls**: string: A system generated property that specified the addressable path of the collections resource.
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
 * **_ts**: int (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
-* **_users**: string (ReadOnly): A system generated property that specifies the addressable path of the users resource.
+* **_users**: string: A system generated property that specifies the addressable path of the users resource.
 * **createMode**: 'Default' | 'Restore' | string: Enum to indicate the mode of account creation.
 * **id**: string (Required): Name of the Cosmos DB SQL database
 * **restoreParameters**: [ResourceRestoreParameters](#resourcerestoreparameters): Parameters to indicate the information about the restore
@@ -2696,12 +2051,11 @@ usage for this key.
 * **roleName**: string: A user-friendly name for the Role Definition. Must be unique for the database account.
 * **type**: 'BuiltInRole' | 'CustomRole': Indicates whether the Role Definition was built-in or user created.
 
-## SqlStoredProcedureCreateUpdatePropertiesOrSqlStoredProcedureGetProperties
+## SqlStoredProcedureGetProperties
 ### Properties
-* **options**: [CreateUpdateOptions](#createupdateoptions) (WriteOnly): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [SqlStoredProcedureResourceOrSqlStoredProcedureGetPropertiesResource](#sqlstoredprocedureresourceorsqlstoredproceduregetpropertiesresource) (Required): The standard JSON format of a storedProcedure
+* **resource**: [SqlStoredProcedureGetPropertiesResource](#sqlstoredproceduregetpropertiesresource)
 
-## SqlStoredProcedureResourceOrSqlStoredProcedureGetPropertiesResource
+## SqlStoredProcedureGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -2709,12 +2063,11 @@ usage for this key.
 * **body**: string: Body of the Stored Procedure
 * **id**: string (Required): Name of the Cosmos DB SQL storedProcedure
 
-## SqlTriggerCreateUpdatePropertiesOrSqlTriggerGetProperties
+## SqlTriggerGetProperties
 ### Properties
-* **options**: [CreateUpdateOptions](#createupdateoptions) (WriteOnly): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [SqlTriggerResourceOrSqlTriggerGetPropertiesResource](#sqltriggerresourceorsqltriggergetpropertiesresource) (Required): The standard JSON format of a trigger
+* **resource**: [SqlTriggerGetPropertiesResource](#sqltriggergetpropertiesresource)
 
-## SqlTriggerResourceOrSqlTriggerGetPropertiesResource
+## SqlTriggerGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -2724,12 +2077,11 @@ usage for this key.
 * **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update' | string: The operation the trigger is associated with
 * **triggerType**: 'Post' | 'Pre' | string: Type of the Trigger
 
-## SqlUserDefinedFunctionCreateUpdatePropertiesOrSqlUserDefinedFunctionGetProperties
+## SqlUserDefinedFunctionGetProperties
 ### Properties
-* **options**: [CreateUpdateOptions](#createupdateoptions) (WriteOnly): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [SqlUserDefinedFunctionResourceOrSqlUserDefinedFunctionGetPropertiesResource](#sqluserdefinedfunctionresourceorsqluserdefinedfunctiongetpropertiesresource) (Required): The standard JSON format of a userDefinedFunction
+* **resource**: [SqlUserDefinedFunctionGetPropertiesResource](#sqluserdefinedfunctiongetpropertiesresource)
 
-## SqlUserDefinedFunctionResourceOrSqlUserDefinedFunctionGetPropertiesResource
+## SqlUserDefinedFunctionGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -2746,12 +2098,17 @@ usage for this key.
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
-## TableCreateUpdatePropertiesOrTableGetProperties
+## TableGetProperties
 ### Properties
-* **options**: [CreateUpdateOptionsOrTableGetPropertiesOptions](#createupdateoptionsortablegetpropertiesoptions): A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-* **resource**: [TableResourceOrTableGetPropertiesResource](#tableresourceortablegetpropertiesresource) (Required): The standard JSON format of a Table
+* **options**: [TableGetPropertiesOptions](#tablegetpropertiesoptions)
+* **resource**: [TableGetPropertiesResource](#tablegetpropertiesresource)
 
-## TableResourceOrTableGetPropertiesResource
+## TableGetPropertiesOptions
+### Properties
+* **autoscaleSettings**: [AutoscaleSettings](#autoscalesettings): Specifies the Autoscale settings.
+* **throughput**: int: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+
+## TableGetPropertiesResource
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
@@ -2815,54 +2172,6 @@ usage for this key.
 * **throughput**: int: Value of the Cosmos DB resource throughput. Either throughput is required or autoscaleSettings is required, but not both.
 * **throughputBuckets**: [ThroughputBucketResource](#throughputbucketresource)[]: Array of throughput bucket limits to be applied to the Cosmos DB container
 
-## ThroughputSettingsGetResults
-### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **location**: string: The location of the resource group to which the resource belongs.
-* **name**: string (ReadOnly): The name of the resource
-* **properties**: [ThroughputSettingsGetProperties](#throughputsettingsgetproperties): The properties of an Azure Cosmos DB resource throughput
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ThroughputSettingsGetResultsTags](#throughputsettingsgetresultstags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\".
-* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-
-## ThroughputSettingsGetResultsTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ThroughputSettingsResourceOrThroughputSettingsGetPropertiesResource
-### Properties
-* **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
-* **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: int (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
-* **autoscaleSettings**: [AutoscaleSettingsResource](#autoscalesettingsresource): Cosmos DB resource for autoscale settings. Either throughput is required or autoscaleSettings is required, but not both.
-* **instantMaximumThroughput**: string (ReadOnly): The offer throughput value to instantly scale up without triggering splits
-* **minimumThroughput**: string (ReadOnly): The minimum throughput of the resource
-* **offerReplacePending**: string (ReadOnly): The throughput replace is pending
-* **softAllowedMaximumThroughput**: string (ReadOnly): The maximum throughput value or the maximum maxThroughput value (for autoscale) that can be specified
-* **throughput**: int: Value of the Cosmos DB resource throughput. Either throughput is required or autoscaleSettings is required, but not both.
-* **throughputBuckets**: [ThroughputBucketResource](#throughputbucketresource)[]: Array of throughput bucket limits to be applied to the Cosmos DB container
-
-## ThroughputSettingsUpdatePropertiesOrThroughputSettingsGetProperties
-### Properties
-* **resource**: [ThroughputSettingsResourceOrThroughputSettingsGetPropertiesResource](#throughputsettingsresourceorthroughputsettingsgetpropertiesresource) (Required): The standard JSON format of a resource throughput
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## UniqueKey
 ### Properties
 * **paths**: string[]: List of paths must be unique for each document in the Azure Cosmos DB service
@@ -2884,9 +2193,9 @@ usage for this key.
 
 ## VectorIndex
 ### Properties
-* **indexingSearchListSize**: int {minValue: 25, maxValue: 500}: This is the size of the candidate list of approximate neighbors stored while building the DiskANN index as part of the optimization processes. Large values may improve recall at the expense of latency. This is only applicable for the diskANN vector index type.
+* **indexingSearchListSize**: int: This is the size of the candidate list of approximate neighbors stored while building the DiskANN index as part of the optimization processes. Large values may improve recall at the expense of latency. This is only applicable for the diskANN vector index type.
 * **path**: string (Required): The path to the vector field in the document.
-* **quantizationByteSize**: int {minValue: 4}: The number of bytes used in product quantization of the vectors. A larger value may result in better recall for vector searches at the expense of latency. This is only applicable for the quantizedFlat and diskANN vector index types.
+* **quantizationByteSize**: int: The number of bytes used in product quantization of the vectors. A larger value may result in better recall for vector searches at the expense of latency. This is only applicable for the quantizedFlat and diskANN vector index types.
 * **type**: 'diskANN' | 'flat' | 'quantizedFlat' | string (Required): The index type of the vector. Currently, flat, diskANN, and quantizedFlat are supported.
 * **vectorIndexShardKey**: string[]: Array of shard keys for the vector index. This is only applicable for the quantizedFlat and diskANN vector index types.
 

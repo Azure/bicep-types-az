@@ -15,10 +15,10 @@
                 "--wait-for-debugger"
             ],
             "cwd": "${workspaceFolder}/src/generator",
-            "preLaunchTask": "build autorest.bicep"
+            "preLaunchTask": "build emitters"
         },
         {
-            "name": "Generate Single",
+            "name": "Generate (Path Prefix)",
             "type": "node",
             "request": "launch",
             "runtimeExecutable": "npm",
@@ -28,12 +28,12 @@
                 "--",
                 "--specs-dir",
                 "../../../azure-rest-api-specs",
-                "--single-path",
-                "${input:pickSinglePath}",
+                "--path-prefix",
+                "${input:pickPathPrefix}",
                 "--wait-for-debugger"
             ],
             "cwd": "${workspaceFolder}/src/generator",
-            "preLaunchTask": "build autorest.bicep"
+            "preLaunchTask": "build emitters"
         },
         {
             "name": "Test autorest.bicep",
@@ -55,10 +55,10 @@
     ],
     "inputs": [
         {
-            "id": "pickSinglePath",
-            "default": "compute",
+            "id": "pickPathPrefix",
+            "default": "dns",
             "type": "promptString",
-            "description": "Pick a specific base path to generate types for"
+            "description": "Enter a top-level path to generate types for"
         }
     ]
 }

@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ZoneProperties](#zoneproperties): The properties of the zone.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.Network/dnsZones' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/A@2023-07-01-preview
@@ -67,7 +67,7 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): The etag of the DNSSEC configuration.
+* **etag**: string: The etag of the DNSSEC configuration.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DnssecProperties](#dnssecproperties) (ReadOnly): The DNSSEC properties.
@@ -244,6 +244,11 @@
 ### Properties
 * **ptrdname**: string: The PTR target domain name for this PTR record.
 
+## Record
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## RecordSetProperties
 ### Properties
 * **AAAARecords**: [AaaaRecord](#aaaarecord)[]: The list of AAAA records in the record set.
@@ -252,7 +257,7 @@
 * **CNAMERecord**: [CnameRecord](#cnamerecord): The CNAME record in the  record set.
 * **DSRecords**: [DsRecord](#dsrecord)[]: The list of DS records in the record set.
 * **fqdn**: string (ReadOnly): Fully qualified domain name of the record set.
-* **metadata**: [RecordSetPropertiesMetadata](#recordsetpropertiesmetadata): The metadata attached to the record set.
+* **metadata**: [Record](#record): The metadata attached to the record set.
 * **MXRecords**: [MxRecord](#mxrecord)[]: The list of MX records in the record set.
 * **NAPTRRecords**: [NaptrRecord](#naptrrecord)[]: The list of NAPTR records in the record set.
 * **NSRecords**: [NsRecord](#nsrecord)[]: The list of NS records in the record set.
@@ -265,11 +270,6 @@
 * **trafficManagementProfile**: [SubResource](#subresource): A reference to an azure traffic manager profile resource from where the dns resource value is taken.
 * **TTL**: int: The TTL (time-to-live) of the records in the record set.
 * **TXTRecords**: [TxtRecord](#txtrecord)[]: The list of TXT records in the record set.
-
-## RecordSetPropertiesMetadata
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## SigningKey
 ### Properties
@@ -316,11 +316,6 @@
 * **matchingType**: int: The matching type specifies how the certificate association is presented.
 * **selector**: int: The selector specifies which part of the TLS certificate presented by the server will be matched against the association data.
 * **usage**: int: The usage specifies the provided association that will be used to match the certificate presented in the TLS handshake.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## TxtRecord
 ### Properties

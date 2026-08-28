@@ -231,6 +231,20 @@
         },
         "flags": 0,
         "description": "A property with only maxLength."
+      },
+      "emptyPattern": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A property with an empty pattern, which should be excluded."
+      },
+      "constrainedAlias": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "A scalar alias with string constraints."
       }
     }
   },
@@ -251,6 +265,12 @@
   {
     "$type": "StringType",
     "maxLength": 256
+  },
+  {
+    "$type": "StringType",
+    "minLength": 2,
+    "maxLength": 32,
+    "pattern": "^[a-z]+$"
   },
   {
     "$type": "ResourceType",
@@ -289,14 +309,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/22"
+          "$ref": "#/23"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -324,7 +344,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/25"
+          "$ref": "#/26"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -348,7 +368,7 @@
     "$type": "ResourceType",
     "name": "Test.EdgeCases/Namespaces@2024-01-01",
     "body": {
-      "$ref": "#/24"
+      "$ref": "#/25"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -381,14 +401,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/27"
+          "$ref": "#/28"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/28"
+          "$ref": "#/29"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -402,7 +422,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/30"
+          "$ref": "#/31"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -415,7 +435,7 @@
     "properties": {
       "rights": {
         "type": {
-          "$ref": "#/31"
+          "$ref": "#/32"
         },
         "flags": 0,
         "description": "The rights associated with the rule."
@@ -432,7 +452,7 @@
     "$type": "ResourceType",
     "name": "Test.EdgeCases/Namespaces/AuthorizationRules@2024-01-01",
     "body": {
-      "$ref": "#/29"
+      "$ref": "#/30"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -465,14 +485,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/33"
+          "$ref": "#/34"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/34"
+          "$ref": "#/35"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -486,7 +506,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/36"
+          "$ref": "#/37"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -506,7 +526,7 @@
       },
       "requiredMembers": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/38"
         },
         "flags": 2,
         "description": "Required members"
@@ -523,7 +543,7 @@
     "$type": "ResourceType",
     "name": "Test.EdgeCases/Namespaces/privateLinkResources@2024-01-01",
     "body": {
-      "$ref": "#/35"
+      "$ref": "#/36"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -534,7 +554,7 @@
     "properties": {
       "keys": {
         "type": {
-          "$ref": "#/41"
+          "$ref": "#/42"
         },
         "flags": 0,
         "description": "The list of keys."
@@ -571,7 +591,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/40"
+      "$ref": "#/41"
     }
   },
   {
@@ -580,7 +600,7 @@
     "resourceType": "Test.EdgeCases/Namespaces",
     "apiVersion": "2024-01-01",
     "output": {
-      "$ref": "#/39"
+      "$ref": "#/40"
     }
   }
 ]

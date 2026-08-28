@@ -3,15 +3,15 @@
 import os from 'os';
 import path from 'path';
 import { existsSync } from 'fs';
-import { mkdir, rm, writeFile, readFile, readdir, stat } from 'fs/promises';
+import { mkdir, rm, writeFile, readFile } from 'fs/promises';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers'
-import { GeneratorConfig, getConfig } from '../config';
 import * as markdown from '@ts-common/commonmark-to-markdown'
 import * as yaml from 'js-yaml'
 import { TypeFile, TypeSettings, buildIndex, writeIndexJson, writeIndexMarkdown, readTypesJson } from 'bicep-types';
-import { copyRecursive, executeSynchronous, getLogger, lowerCaseCompare, logErr, logOut, ILogger, defaultLogger, executeCmd, findRecursive } from '../utils';
+import { executeSynchronous, getLogger, logErr, logOut, ILogger, defaultLogger, executeCmd, findRecursive, replaceRecursive } from '../utils';
 import { addAzExtensionConfigurationType } from '../index/azExtensionConfiguration';
+import { getPathData } from '../pathData';
 
 const rootDir = `${__dirname}/../../../../`;
 
@@ -25,7 +25,7 @@ const argsConfig = yargs(hideBin(process.argv))
   .strict()
   .option('specs-dir', { type: 'string', demandOption: true, desc: 'Path to the specs dir' })
   .option('out-dir', { type: 'string', default: defaultOutDir, desc: 'Output path for generated files' })
-  .option('single-path', { type: 'string', default: undefined, desc: 'Only regenerate under a specific file path - e.g. "compute"' })
+  .option('path-prefix', { type: 'string', default: undefined, desc: 'Only regenerate under a specific top-level path - e.g. "dns"' })
   .option('logging-level', { type: 'string', default: 'warning', choices: ['debug', 'verbose', 'information', 'warning', 'error', 'fatal'] })
   .option('wait-for-debugger', { type: 'boolean', default: false, desc: 'Wait for a C# debugger to be attached before running the Autorest extension' });
 
@@ -35,89 +35,48 @@ executeSynchronous(async () => {
   const outputBaseDir = path.resolve(args['out-dir']);
   const logLevel = args['logging-level'];
   const waitForDebugger = args['wait-for-debugger'];
-  const singlePath = args['single-path'];
+  const pathPrefix = args['path-prefix'];
 
-  if (!existsSync(`${extensionDir}/dist`)) {
-    throw `Unable to find ${extensionDir}/dist. Did you forget to run 'npm run build'?`;
-  }
-
-  // find all readme paths in the specs path
   const specsPath = path.join(inputBaseDir, 'specification');
-  const readmePaths = await findReadmePaths(specsPath);
-  if (readmePaths.length === 0) {
-    throw `Unable to find specs in folder ${inputBaseDir}`;
-  }
-
   const tmpOutputPath = `${os.tmpdir()}/_bcp_${new Date().getTime()}`;
   await rm(tmpOutputPath, { recursive: true, force: true, });
 
-  // this file is deliberately gitignored as it'll be overwritten when using --single-path
+  // this file is deliberately gitignored as it'll be overwritten when using --path-prefix
   // it's used to generate the git commit message
   await mkdir(outputBaseDir, { recursive: true });
-  const subdirsCreated = new Set<string>();
   const summaryLogger = await getLogger(`${outputBaseDir}/summary.log`);
-  const getBasePath = (readmePath: string) => path.relative(specsPath, readmePath).split(path.sep)[0].toLowerCase();
-
-  const basePathData = readmePaths
-    // use sorting to ensure determinism
-    .sort(lowerCaseCompare)
-    .map(readmePath => ({ readmePath, basePath: getBasePath(readmePath) }))
-    .filter(x => !singlePath || lowerCaseCompare(singlePath, x.basePath) === 0);
-
-  const pathData = basePathData.map(entry => {
-    const { readmePath, basePath } = entry;
-    const readmesInBasePath = basePathData.filter(x => x.basePath === basePath);
-    const outputBasePath = readmesInBasePath.length > 1 ? `${basePath}_${readmesInBasePath.indexOf(entry)}` : basePath;
-
-    return {
-      readmePath,
-      relativeReadmePath: path.relative(inputBaseDir, readmePath),
-      bicepReadmePath: `${path.dirname(readmePath)}/readme.bicep.md`,
-      config: getConfig(basePath),
-      tmpOutputDir: `${tmpOutputPath}/${outputBasePath}`,
-      outputDir: `${outputBaseDir}/${outputBasePath}`,
-    };
-  });
+  const pathData = await getPathData(specsPath, pathPrefix, inputBaseDir, tmpOutputPath, outputBaseDir);
+  if (pathData.some(entry => entry.kind === 'autorest') && !existsSync(`${extensionDir}/dist`)) {
+    throw `Unable to find ${extensionDir}/dist. Did you forget to run 'npm run build'?`;
+  }
 
   for (const entry of pathData) {
-    const { readmePath, relativeReadmePath, bicepReadmePath, config, tmpOutputDir, outputDir } = entry;
-    // prepare temp dir for output
+    const { relativeSourcePath, tmpOutputDir, outputDir } = entry;
     await rm(tmpOutputDir, { recursive: true, force: true, });
     await mkdir(tmpOutputDir, { recursive: true });
     const logger = await getLogger(`${tmpOutputDir}/log.out`);
 
     try {
-      logger.out(`Generating types for '${relativeReadmePath}'\n`);
+      logger.out(`Generating types for '${relativeSourcePath}'\n`);
 
-      if (config.useTypeSpec) {
-        // Use TypeSpec emitter instead of AutoRest for specs with TypeSpec definitions
-        const readmeDir = path.dirname(readmePath);
-        const typeSpecProjects = await findTypeSpecProjects(readmeDir);
-        for (const projectDir of typeSpecProjects) {
-          const relativeProject = path.relative(inputBaseDir, projectDir);
-          logger.out(`Running TypeSpec emitter for '${relativeProject}'\n`);
-          await runTypeSpec(logger, projectDir, tmpOutputDir, isVerboseLoggingLevel(logLevel));
-        }
+      if (entry.kind === 'typespec') {
+        const projectDir = path.dirname(entry.typeSpecConfigPath);
+        const relativeProject = path.relative(inputBaseDir, projectDir);
+        logger.out(`Running TypeSpec emitter for '${relativeProject}'\n`);
+        await runTypeSpec(logger, projectDir, tmpOutputDir, isVerboseLoggingLevel(logLevel));
+
+        await replaceRecursive(tmpOutputDir, outputDir);
       } else {
-        // autorest readme.bicep.md files are not checked in, so we must generate them before invoking autorest
-        await generateAutorestConfig(logger, readmePath, bicepReadmePath, config);
-        await runAutorest(logger, readmePath, tmpOutputDir, logLevel, waitForDebugger);
-      }
+        await generateAutorestConfig(logger, entry.readmePath, entry.bicepReadmePath);
+        await runAutorest(logger, entry.readmePath, tmpOutputDir, logLevel, waitForDebugger);
 
-      if (!subdirsCreated.has(outputDir)) {
-        subdirsCreated.add(outputDir);
-        // remove all previously-generated files and copy over results
-        await rm(outputDir, { recursive: true, force: true, });
-        await mkdir(outputDir, { recursive: true });
+        await replaceRecursive(tmpOutputDir, outputDir);
       }
-      await copyRecursive(tmpOutputDir, outputDir);
     } catch (err) {
       logErr(logger, err);
-
-      // Use markdown formatting as this summary will be included in the PR description
       logOut(summaryLogger,
 `<details>
-  <summary>Failed to generate types for '${relativeReadmePath}'</summary>
+  <summary>Failed to generate types for '${relativeSourcePath}'</summary>
 
 \`\`\`
 ${err}
@@ -126,21 +85,17 @@ ${err}
 `);
     }
 
-    // clean up temp dirs
     await rm(tmpOutputDir, { recursive: true, force: true, });
-    await clearAutorestTempDir(logger, logLevel, waitForDebugger);
-    // clean up autorest readme.bicep.md files
-    await rm(bicepReadmePath, { force: true });
+    if (entry.kind === 'autorest') {
+      await clearAutorestTempDir(logger, logLevel, waitForDebugger);
+      await rm(entry.bicepReadmePath, { force: true });
+    }
   }
 
-  // build the type index
   await buildTypeIndex(defaultLogger, outputBaseDir);
 
-  // we only want to clear stale type folders if re-generating the full directory
-  if (!singlePath) {
-    // log if there are any type dirs with no corresponding readme (e.g. if a swagger directory has been removed).
+  if (!pathPrefix) {
     const shouldRebuildTypeIndex = await clearStaleTypeFolders(defaultLogger, outputBaseDir, pathData.map(x => x.outputDir));
-
     if (shouldRebuildTypeIndex) {
       await buildTypeIndex(defaultLogger, outputBaseDir);
     }
@@ -152,7 +107,7 @@ function normalizeJsonPath(jsonPath: string) {
   return path.normalize(jsonPath).replace(/[\\\/]/g, '/');
 }
 
-async function generateAutorestConfig(logger: ILogger, readmePath: string, bicepReadmePath: string, config: GeneratorConfig) {
+async function generateAutorestConfig(logger: ILogger, readmePath: string, bicepReadmePath: string) {
   // We expect a path format convention of <provider>/(any/number/of/intervening/folders)/<yyyy>-<mm>-<dd>(|-preview)/<filename>.json
   // This information is used to generate individual tags in the generated autorest configuration
   // eslint-disable-next-line no-useless-escape
@@ -161,7 +116,7 @@ async function generateAutorestConfig(logger: ILogger, readmePath: string, bicep
   const readmeContents = await readFile(readmePath, { encoding: 'utf8' });
   const readmeMarkdown = markdown.parse(readmeContents);
 
-  const inputFiles = new Set<string>(config.additionalFiles ?? []);
+  const inputFiles = new Set<string>([]);
   // we need to look for all autorest configuration elements containing input files, and collect that list of files. These will look like (e.g.):
   // ```yaml $(tag) == 'someTag'
   // input-file:
@@ -267,18 +222,6 @@ function applyCommonAutoRestParameters(autoRestParams: string[], logLevel: strin
   return autoRestParams;
 }
 
-async function findReadmePaths(specsPath: string) {
-  return await findRecursive(specsPath, filePath => {
-    if (path.basename(filePath).toLowerCase() !== 'readme.md') {
-      return false;
-    }
-
-    return filePath
-      .split(path.sep)
-      .some(parent => parent == 'resource-manager');
-  });
-}
-
 async function clearStaleTypeFolders(logger: ILogger, outputBaseDir: string, outputDirs: string[]) {
   const typesPaths = await findRecursive(outputBaseDir, filePath => {
     return path.basename(filePath) === 'types.json';
@@ -340,55 +283,6 @@ function isVerboseLoggingLevel(logLevel: string) {
     default:
       return false;
   }
-}
-
-/**
- * Discovers TypeSpec project directories relative to a readme.md's directory.
- *
- * The azure-rest-api-specs repo places TypeSpec definitions in subdirectories
- * alongside the readme.md, e.g.:
- *   specification/dns/resource-manager/readme.md
- *   specification/dns/resource-manager/Microsoft.Network/Dns/tspconfig.yaml
- *   specification/dns/resource-manager/Microsoft.Network/Dns/main.tsp
- *
- * This function recursively searches for directories containing both
- * tspconfig.yaml and main.tsp starting from the same directory as the readme.
- */
-async function findTypeSpecProjects(readmeDir: string): Promise<string[]> {
-  const projects: string[] = [];
-
-  async function searchDir(dir: string): Promise<void> {
-    let entries;
-    try {
-      entries = await readdir(dir);
-    } catch {
-      return;
-    }
-
-    const hasConfig = entries.includes('tspconfig.yaml');
-    const hasMain = entries.includes('main.tsp');
-
-    if (hasConfig && hasMain) {
-      projects.push(dir);
-      // Don't search subdirectories of a TypeSpec project
-      return;
-    }
-
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry);
-      try {
-        const s = await stat(fullPath);
-        if (s.isDirectory()) {
-          await searchDir(fullPath);
-        }
-      } catch {
-        // skip inaccessible entries
-      }
-    }
-  }
-
-  await searchDir(readmeDir);
-  return projects;
 }
 
 /**

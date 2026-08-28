@@ -59,9 +59,11 @@
 
 ## ConstrainedProperties
 ### Properties
+* **constrainedAlias**: string {minLength: 2, maxLength: 32, pattern: "^[a-z]+$"}: A scalar alias with string constraints.
 * **correlationId**: string {pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: A property with only a pattern constraint.
 * **description**: string {maxLength: 256}: A property with only maxLength.
 * **displayName**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z][a-zA-Z0-9-]*$"}: A name with pattern, minLength, and maxLength constraints
+* **emptyPattern**: string: A property with an empty pattern, which should be excluded.
 * **requiredName**: string {minLength: 1}: A property with only minLength.
 
 ## KeyInfo

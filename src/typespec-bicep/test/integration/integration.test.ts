@@ -2,8 +2,8 @@
 // Licensed under the MIT License.
 
 import path from "path";
-import { rm } from "fs/promises";
-import { readFile } from "fs/promises";
+import { tmpdir } from "os";
+import { mkdtemp, readFile, rm } from "fs/promises";
 import { describe, it, expect } from "vitest";
 import {
   defaultLogger,
@@ -27,25 +27,30 @@ describe("integration tests (bicep types)", () => {
         await rm(outputDir, { recursive: true, force: true });
         await runTypeSpecEmitter(defaultLogger, tspMainFile, outputDir);
       } else {
-        const stagingOutputDir = path.join(__dirname, `temp/${spec}`);
-        await rm(stagingOutputDir, { recursive: true, force: true });
-
-        await runTypeSpecEmitter(defaultLogger, tspMainFile, stagingOutputDir);
-
-        const compareResult = await compareDirectories(
-          stagingOutputDir,
-          outputDir,
+        const stagingOutputDir = await mkdtemp(
+          path.join(tmpdir(), `typespec-bicep-${spec}-`),
         );
 
-        // Assert that the generated files match the baseline files which have been checked in.
-        // Set BASELINE_RECORD=true to run the tests in record mode and overwrite baselines.
-        if (compareResult.differences > 0) {
-          console.error("Differences found:");
-          for (const detail of compareResult.details) {
-            console.error(`  ${detail}`);
+        try {
+          await runTypeSpecEmitter(defaultLogger, tspMainFile, stagingOutputDir);
+
+          const compareResult = await compareDirectories(
+            stagingOutputDir,
+            outputDir,
+          );
+
+          // Assert that the generated files match the baseline files which have been checked in.
+          // Set BASELINE_RECORD=true to run the tests in record mode and overwrite baselines.
+          if (compareResult.differences > 0) {
+            console.error("Differences found:");
+            for (const detail of compareResult.details) {
+              console.error(`  ${detail}`);
+            }
           }
+          expect(compareResult.differences).toBe(0);
+        } finally {
+          await rm(stagingOutputDir, { recursive: true, force: true });
         }
-        expect(compareResult.differences).toBe(0);
       }
     });
   }
