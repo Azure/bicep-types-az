@@ -120,7 +120,7 @@ model TestType1Properties {
   password?: string;
 
   @doc("A UUID property")
-  uuidProperty?: string;
+  uuidProperty?: uuid;
 
   @doc("An integer with a default value")
   intWithDefaultValue?: int32;

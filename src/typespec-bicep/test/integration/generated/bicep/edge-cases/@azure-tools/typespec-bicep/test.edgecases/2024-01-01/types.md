@@ -1,5 +1,16 @@
 # Test.EdgeCases @ 2024-01-01
 
+## Resource Test.EdgeCases/alternateParents/customRouteResources@2024-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CustomRouteProperties](#customrouteproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Test.EdgeCases/alternateParents/customRouteResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Test.EdgeCases/constrainedResources@2024-01-01
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
@@ -48,10 +59,27 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Test.EdgeCases/Namespaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Test.EdgeCases/parents/customRouteResources@2024-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CustomRouteProperties](#customrouteproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Test.EdgeCases/parents/customRouteResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listKeys (Test.EdgeCases/Namespaces@2024-01-01)
 * **Resource**: Test.EdgeCases/Namespaces
 * **ApiVersion**: 2024-01-01
 * **Output**: [KeyListResult](#keylistresult)
+
+## Function regenerateKey (Test.EdgeCases/Namespaces@2024-01-01)
+* **Resource**: Test.EdgeCases/Namespaces
+* **ApiVersion**: 2024-01-01
+* **Input**: [KeyInfo](#keyinfo)
+* **Output**: any
 
 ## AuthorizationRuleProperties
 ### Properties
@@ -64,7 +92,14 @@
 * **description**: string {maxLength: 256}: A property with only maxLength.
 * **displayName**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z][a-zA-Z0-9-]*$"}: A name with pattern, minLength, and maxLength constraints
 * **emptyPattern**: string: A property with an empty pattern, which should be excluded.
+* **password**: string {sensitive}: A sensitive value.
+* **polymorphicValue**: [PolymorphicBase](#polymorphicbase): A polymorphic value.
+* **quotedDescription**: string: A description containing an escaped "quoted value".
 * **requiredName**: string {minLength: 1}: A property with only minLength.
+
+## CustomRouteProperties
+### Properties
+* **value**: string
 
 ## KeyInfo
 ### Properties
@@ -79,6 +114,22 @@
 ## NamespaceProperties
 ### Properties
 * **status**: string (ReadOnly): The namespace status
+
+## PolymorphicBase
+* **Discriminator**: kind
+
+### Base Properties
+
+### FirstVariant
+#### Properties
+* **firstProperty**: string
+* **kind**: 'first-value' (Required): The first variant kind.
+
+### SecondVariant
+#### Properties
+* **kind**: 'second-value' (Required): The polymorphic kind.
+* **secondProperty**: string
+
 
 ## PrivateLinkResourceProperties
 ### Properties

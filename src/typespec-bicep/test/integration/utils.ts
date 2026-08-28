@@ -112,7 +112,6 @@ export async function runTypeSpecEmitter(
   logger: ILogger,
   tspMainFile: string,
   outputDir: string,
-  armSchema: boolean = false,
 ): Promise<void> {
   const emitterPath = extensionDir;
 
@@ -123,11 +122,6 @@ export async function runTypeSpecEmitter(
   const program = await compile(NodeHost, tspMainFile, {
     noEmit: false,
     emit: [emitterPath],
-    options: {
-      [emitterPath]: {
-        "arm-schema": armSchema,
-      },
-    },
     outputDir,
   });
 

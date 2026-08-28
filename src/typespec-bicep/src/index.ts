@@ -31,7 +31,6 @@ export async function $onEmit(
   const start = Date.now();
   const program = context.program;
   const outputDir = context.emitterOutputDir;
-  const options = context.options;
 
   const providerDefinitions = getProviderDefinitions(context);
 
@@ -53,25 +52,19 @@ export async function $onEmit(
     // Ensure output directory exists
     mkdirSync(outFolder, { recursive: true });
 
-    if (!options["arm-schema"]) {
-      // Bicep type output mode
-      const types = generateTypes(program, definition);
+    const types = generateTypes(program, definition);
 
-      // Write types.json
-      writeFileSync(
-        join(outFolder, "types.json"),
-        writeTypesJson(types),
-        "utf-8",
-      );
+    writeFileSync(
+      join(outFolder, "types.json"),
+      writeTypesJson(types),
+      "utf-8",
+    );
 
-      // Write types.md
-      writeFileSync(
-        join(outFolder, "types.md"),
-        writeMarkdown(types, `${namespace} @ ${apiVersion}`),
-        "utf-8",
-      );
-    }
-    // ARM schema mode could be added here in the future
+    writeFileSync(
+      join(outFolder, "types.md"),
+      writeMarkdown(types, `${namespace} @ ${apiVersion}`),
+      "utf-8",
+    );
   }
 
   program.trace(

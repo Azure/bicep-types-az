@@ -17,10 +17,6 @@ Add the emitter to your `tspconfig.yaml`:
 ```yaml
 emit:
   - "@azure-tools/typespec-bicep"
-options:
-  "@azure-tools/typespec-bicep":
-    # Optional: generate ARM schema instead of Bicep types
-    # arm-schema: true
 ```
 
 Then run the TypeSpec compiler:
@@ -69,12 +65,6 @@ This package mirrors the architecture of `@autorest/bicep` (the AutoRest plugin 
 | **Resource discovery** | Parse HTTP paths from CodeModel operations | Walk TypeSpec AST for ARM resource models |
 | **Type conversion** | `@autorest/codemodel` Schema types | TypeSpec compiler `Type` system |
 | **Output** | `host.writeFile()` via AutoRest | Direct filesystem writes |
-
-## Configuration Options
-
-| Option | Type | Default | Description |
-|---|---|---|---|
-| `arm-schema` | `boolean` | `false` | Generate ARM ResourceSchema JSON instead of Bicep types |
 
 ## Dependencies
 
