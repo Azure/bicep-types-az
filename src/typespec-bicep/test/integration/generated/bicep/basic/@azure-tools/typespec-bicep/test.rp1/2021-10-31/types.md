@@ -59,7 +59,7 @@
 * **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 12, pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TestType1Properties](#testtype1properties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [Record](#record): Resource tags.

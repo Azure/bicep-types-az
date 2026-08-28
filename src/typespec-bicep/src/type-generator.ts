@@ -62,15 +62,17 @@ export function generateTypes(
       return factory.addStringLiteralType(definition.descriptor.constantName);
     }
 
-    const nameType = definition.nameType;
-    if (!nameType) {
+    const nameProperty = definition.nameProperty;
+    if (!nameProperty) {
       logWarning(
         `Skipping resource type ${fullyQualifiedType}: could not determine name type`,
       );
       return undefined;
     }
 
-    return parseType(nameType);
+    // Use parsePropertyType so constraint decorators (@pattern, @minLength, @maxLength)
+    // applied directly to the 'name' property are preserved.
+    return parsePropertyType(nameProperty);
   }
 
   // --- Standard ARM resource properties ---
@@ -303,6 +305,11 @@ export function generateTypes(
 
   // --- Type parsing ---
 
+  // An empty pattern imposes no constraint, so treat it as absent.
+  function getNonEmptyPattern(target: Scalar | ModelProperty): string | undefined {
+    return getPattern(program, target) || undefined;
+  }
+
   /**
    * Parse a property's type, applying any property-level string constraints
    * (@minLength, @maxLength, @pattern decorators on the property itself).
@@ -311,7 +318,7 @@ export function generateTypes(
     // Check if the property itself has string constraint decorators
     const minLen = getMinLength(program, prop);
     const maxLen = getMaxLength(program, prop);
-    const pattern = getPattern(program, prop);
+    const pattern = getNonEmptyPattern(prop);
 
     if (minLen !== undefined || maxLen !== undefined || pattern !== undefined) {
       // If the underlying type is a string-like scalar, generate a constrained string
@@ -333,7 +340,20 @@ export function generateTypes(
   function isStringScalar(scalar: Scalar): boolean {
     let current: Scalar | undefined = scalar;
     while (current) {
-      if (["string", "url", "uuid", "duration", "armResourceIdentifier"].includes(current.name)) {
+      if (
+        [
+          "string",
+          "url",
+          "uuid",
+          "duration",
+          "armResourceIdentifier",
+          "bytes",
+          "plainDate",
+          "plainTime",
+          "utcDateTime",
+          "offsetDateTime",
+        ].includes(current.name)
+      ) {
         return true;
       }
       current = current.baseScalar;
@@ -458,7 +478,7 @@ export function generateTypes(
     // Collect string constraints from the scalar hierarchy
     const minLen = getMinLength(program, scalar);
     const maxLen = getMaxLength(program, scalar);
-    const pattern = getPattern(program, scalar);
+    const pattern = getNonEmptyPattern(scalar);
 
     // Walk the scalar hierarchy to find a built-in base type
     let current: Scalar | undefined = scalar;
@@ -491,12 +511,12 @@ export function generateTypes(
         case "numeric":
           return factory.addIntegerType(); // Bicep doesn't have float; use int
         case "bytes":
-          return factory.addStringType(); // Base64-encoded
+          return factory.addStringType(undefined, minLen, maxLen, pattern); // Base64-encoded
         case "plainDate":
         case "plainTime":
         case "utcDateTime":
         case "offsetDateTime":
-          return factory.addStringType();
+          return factory.addStringType(undefined, minLen, maxLen, pattern);
         case "null":
           return factory.addNullType();
       }

@@ -25,6 +25,11 @@ using Azure.ResourceManager;
 @doc("Test.EdgeCases spec for integration testing edge cases")
 namespace Test.EdgeCases;
 
+@pattern("^[a-z]+$")
+@minLength(2)
+@maxLength(32)
+scalar ConstrainedString extends string;
+
 /** API Versions */
 enum Versions {
   @doc("2024-01-01")
@@ -54,6 +59,13 @@ model ConstrainedProperties {
   @doc("A property with only maxLength.")
   @maxLength(256)
   description?: string;
+
+  @doc("A property with an empty pattern, which should be excluded.")
+  @pattern("")
+  emptyPattern?: string;
+
+  @doc("A scalar alias with string constraints.")
+  constrainedAlias?: ConstrainedString;
 }
 
 @doc("A resource with string-constrained properties")

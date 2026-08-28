@@ -9,6 +9,23 @@
             "problemMatcher": [],
             "label": "build autorest.bicep",
             "detail": "tsc -p ."
+        },
+        {
+            "type": "npm",
+            "script": "build",
+            "path": "src/typespec-bicep/",
+            "group": "build",
+            "problemMatcher": [],
+            "label": "build typespec-bicep",
+            "detail": "tsc -p ."
+        },
+        {
+            "label": "build emitters",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "build autorest.bicep",
+                "build typespec-bicep"
+            ]
         }
     ]
 }

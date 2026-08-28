@@ -42,23 +42,16 @@
         "flags": 10,
         "description": "The resource api version"
       },
-      "properties": {
+      "systemData": {
         "type": {
           "$ref": "#/4"
         },
-        "flags": 0,
-        "description": "The properties of the zone."
-      },
-      "etag": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The etag of the zone."
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "tags": {
         "type": {
-          "$ref": "#/17"
+          "$ref": "#/15"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -70,223 +63,20 @@
         "flags": 1,
         "description": "The geo-location where the resource lives"
       },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ZoneProperties",
-    "properties": {
-      "maxNumberOfRecordSets": {
-        "type": {
-          "$ref": "#/5"
-        },
-        "flags": 2,
-        "description": "The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored."
-      },
-      "maxNumberOfRecordsPerRecordSet": {
-        "type": {
-          "$ref": "#/5"
-        },
-        "flags": 2,
-        "description": "The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored."
-      },
-      "numberOfRecordSets": {
-        "type": {
-          "$ref": "#/5"
-        },
-        "flags": 2,
-        "description": "The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored."
-      },
-      "nameServers": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 2,
-        "description": "The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored."
-      },
-      "zoneType": {
-        "type": {
-          "$ref": "#/9"
-        },
-        "flags": 0,
-        "description": "The type of this DNS zone (Public or Private)."
-      },
-      "registrationVirtualNetworks": {
-        "type": {
-          "$ref": "#/11"
-        },
-        "flags": 0,
-        "description": "A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private."
-      },
-      "resolutionVirtualNetworks": {
-        "type": {
-          "$ref": "#/12"
-        },
-        "flags": 0,
-        "description": "A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private."
-      },
-      "signingKeys": {
+      "properties": {
         "type": {
           "$ref": "#/16"
         },
-        "flags": 2,
-        "description": "The list of signing keys."
-      }
-    }
-  },
-  {
-    "$type": "IntegerType"
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Public"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Private"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/7"
+        "flags": 0,
+        "description": "The properties of the zone."
       },
-      {
-        "$ref": "#/8"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SubResource",
-    "properties": {
-      "id": {
+      "etag": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 0,
-        "description": "Resource Id."
+        "description": "The etag of the zone."
       }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/10"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/10"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SigningKey",
-    "properties": {
-      "delegationSignerInfo": {
-        "type": {
-          "$ref": "#/15"
-        },
-        "flags": 2,
-        "description": "The delegation signer information."
-      },
-      "flags": {
-        "type": {
-          "$ref": "#/5"
-        },
-        "flags": 2,
-        "description": "The flags specifies how the key is used."
-      },
-      "keyTag": {
-        "type": {
-          "$ref": "#/5"
-        },
-        "flags": 2,
-        "description": "The key tag value of the DNSKEY Resource Record."
-      },
-      "protocol": {
-        "type": {
-          "$ref": "#/5"
-        },
-        "flags": 2,
-        "description": "The protocol value. The value is always 3."
-      },
-      "publicKey": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The public key, represented as a Base64 encoding."
-      },
-      "securityAlgorithmType": {
-        "type": {
-          "$ref": "#/5"
-        },
-        "flags": 2,
-        "description": "The security algorithm type represents the standard security algorithm number of the DNSKEY Resource Record. See: https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DelegationSignerInfo",
-    "properties": {
-      "digestAlgorithmType": {
-        "type": {
-          "$ref": "#/5"
-        },
-        "flags": 2,
-        "description": "The digest algorithm type represents the standard digest algorithm number used to construct the digest. See: https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml"
-      },
-      "digestValue": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The digest value is a cryptographic hash value of the referenced DNSKEY Resource Record."
-      },
-      "record": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The record represents a delegation signer (DS) record."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/14"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/13"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "TrackedResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/0"
     }
   },
   {
@@ -302,7 +92,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/9"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -323,7 +113,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/28"
+          "$ref": "#/14"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -357,16 +147,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/19"
+        "$ref": "#/5"
       },
       {
-        "$ref": "#/20"
+        "$ref": "#/6"
       },
       {
-        "$ref": "#/21"
+        "$ref": "#/7"
       },
       {
-        "$ref": "#/22"
+        "$ref": "#/8"
       },
       {
         "$ref": "#/0"
@@ -393,21 +183,231 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/24"
+        "$ref": "#/10"
       },
       {
-        "$ref": "#/25"
+        "$ref": "#/11"
       },
       {
-        "$ref": "#/26"
+        "$ref": "#/12"
       },
       {
-        "$ref": "#/27"
+        "$ref": "#/13"
       },
       {
         "$ref": "#/0"
       }
     ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Record",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ZoneProperties",
+    "properties": {
+      "maxNumberOfRecordSets": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored."
+      },
+      "maxNumberOfRecordsPerRecordSet": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored."
+      },
+      "numberOfRecordSets": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored."
+      },
+      "nameServers": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored."
+      },
+      "zoneType": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The type of this DNS zone (Public or Private)."
+      },
+      "registrationVirtualNetworks": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private."
+      },
+      "resolutionVirtualNetworks": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private."
+      },
+      "signingKeys": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "The list of signing keys."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Public"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Private"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SigningKey",
+    "properties": {
+      "delegationSignerInfo": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "The delegation signer information."
+      },
+      "flags": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The flags specifies how the key is used."
+      },
+      "keyTag": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The key tag value of the DNSKEY Resource Record."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The protocol value. The value is always 3."
+      },
+      "publicKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The public key, represented as a Base64 encoding."
+      },
+      "securityAlgorithmType": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The security algorithm type represents the standard security algorithm number of the DNSKEY Resource Record. See: https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DelegationSignerInfo",
+    "properties": {
+      "digestAlgorithmType": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The digest algorithm type represents the standard digest algorithm number used to construct the digest. See: https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml"
+      },
+      "digestValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The digest value is a cryptographic hash value of the referenced DNSKEY Resource Record."
+      },
+      "record": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The record represents a delegation signer (DS) record."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/26"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/25"
+    }
   },
   {
     "$type": "ResourceType",
@@ -458,6 +458,13 @@
         "flags": 10,
         "description": "The resource api version"
       },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
       "properties": {
         "type": {
           "$ref": "#/33"
@@ -471,13 +478,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -487,14 +487,14 @@
     "properties": {
       "metadata": {
         "type": {
-          "$ref": "#/34"
+          "$ref": "#/15"
         },
         "flags": 0,
         "description": "The metadata attached to the record set."
       },
       "TTL": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The TTL (time-to-live) of the records in the record set."
@@ -515,117 +515,109 @@
       },
       "targetResource": {
         "type": {
-          "$ref": "#/10"
+          "$ref": "#/22"
         },
         "flags": 0,
         "description": "A reference to an azure resource from where the dns resource value is taken."
       },
       "trafficManagementProfile": {
         "type": {
-          "$ref": "#/10"
+          "$ref": "#/22"
         },
         "flags": 0,
         "description": "A reference to an azure traffic manager profile resource from where the dns resource value is taken."
       },
       "ARecords": {
         "type": {
-          "$ref": "#/36"
+          "$ref": "#/35"
         },
         "flags": 0,
         "description": "The list of A records in the record set."
       },
       "AAAARecords": {
         "type": {
-          "$ref": "#/38"
+          "$ref": "#/37"
         },
         "flags": 0,
         "description": "The list of AAAA records in the record set."
       },
       "MXRecords": {
         "type": {
-          "$ref": "#/40"
+          "$ref": "#/39"
         },
         "flags": 0,
         "description": "The list of MX records in the record set."
       },
       "NSRecords": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/41"
         },
         "flags": 0,
         "description": "The list of NS records in the record set."
       },
       "PTRRecords": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/43"
         },
         "flags": 0,
         "description": "The list of PTR records in the record set."
       },
       "SRVRecords": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/45"
         },
         "flags": 0,
         "description": "The list of SRV records in the record set."
       },
       "TXTRecords": {
         "type": {
-          "$ref": "#/49"
+          "$ref": "#/48"
         },
         "flags": 0,
         "description": "The list of TXT records in the record set."
       },
       "CNAMERecord": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/49"
         },
         "flags": 0,
         "description": "The CNAME record in the  record set."
       },
       "SOARecord": {
         "type": {
-          "$ref": "#/51"
+          "$ref": "#/50"
         },
         "flags": 0,
         "description": "The SOA record in the record set."
       },
       "caaRecords": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/52"
         },
         "flags": 0,
         "description": "The list of CAA records in the record set."
       },
       "DSRecords": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/55"
         },
         "flags": 0,
         "description": "The list of DS records in the record set."
       },
       "TLSARecords": {
         "type": {
-          "$ref": "#/58"
+          "$ref": "#/57"
         },
         "flags": 0,
         "description": "The list of TLSA records in the record set."
       },
       "NAPTRRecords": {
         "type": {
-          "$ref": "#/60"
+          "$ref": "#/59"
         },
         "flags": 0,
         "description": "The list of NAPTR records in the record set."
       }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RecordSetPropertiesMetadata",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/0"
     }
   },
   {
@@ -644,7 +636,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/35"
+      "$ref": "#/34"
     }
   },
   {
@@ -663,7 +655,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/37"
+      "$ref": "#/36"
     }
   },
   {
@@ -672,7 +664,7 @@
     "properties": {
       "preference": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The preference value for this MX record."
@@ -689,7 +681,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/39"
+      "$ref": "#/38"
     }
   },
   {
@@ -708,7 +700,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/41"
+      "$ref": "#/40"
     }
   },
   {
@@ -727,7 +719,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/43"
+      "$ref": "#/42"
     }
   },
   {
@@ -736,21 +728,21 @@
     "properties": {
       "priority": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The priority value for this SRV record."
       },
       "weight": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The weight value for this SRV record."
       },
       "port": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The port value for this SRV record."
@@ -767,7 +759,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/45"
+      "$ref": "#/44"
     }
   },
   {
@@ -776,7 +768,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/48"
+          "$ref": "#/47"
         },
         "flags": 0,
         "description": "The text value of this TXT record."
@@ -792,7 +784,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/47"
+      "$ref": "#/46"
     }
   },
   {
@@ -828,35 +820,35 @@
       },
       "serialNumber": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The serial number for this SOA record."
       },
       "refreshTime": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The refresh value for this SOA record."
       },
       "retryTime": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The retry time for this SOA record."
       },
       "expireTime": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The expire time for this SOA record."
       },
       "minimumTTL": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The minimum value for this SOA record. By convention this is used to determine the negative caching duration."
@@ -869,7 +861,7 @@
     "properties": {
       "flags": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The flags for this CAA record as an integer between 0 and 255."
@@ -893,7 +885,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/52"
+      "$ref": "#/51"
     }
   },
   {
@@ -902,21 +894,21 @@
     "properties": {
       "keyTag": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The key tag value is used to determine which DNSKEY Resource Record is used for signature verification."
       },
       "algorithm": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The security algorithm type represents the standard security algorithm number of the DNSKEY Resource Record. See: https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml"
       },
       "digest": {
         "type": {
-          "$ref": "#/55"
+          "$ref": "#/54"
         },
         "flags": 0,
         "description": "The digest entity."
@@ -929,7 +921,7 @@
     "properties": {
       "algorithmType": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The digest algorithm type represents the standard digest algorithm number used to construct the digest. See: https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml"
@@ -946,7 +938,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/54"
+      "$ref": "#/53"
     }
   },
   {
@@ -955,21 +947,21 @@
     "properties": {
       "usage": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The usage specifies the provided association that will be used to match the certificate presented in the TLS handshake."
       },
       "selector": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The selector specifies which part of the TLS certificate presented by the server will be matched against the association data."
       },
       "matchingType": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The matching type specifies how the certificate association is presented."
@@ -986,7 +978,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/57"
+      "$ref": "#/56"
     }
   },
   {
@@ -995,14 +987,14 @@
     "properties": {
       "order": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The order in which the NAPTR records MUST be processed in order to accurately represent the ordered list of rules. The ordering is from lowest to highest. Valid values: 0-65535."
       },
       "preference": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The preference specifies the order in which NAPTR records with equal 'order' values should be processed, low numbers being processed before high numbers. Valid values: 0-65535."
@@ -1040,7 +1032,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/59"
+      "$ref": "#/58"
     }
   },
   {
@@ -1080,17 +1072,24 @@
       },
       "type": {
         "type": {
-          "$ref": "#/62"
+          "$ref": "#/61"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/63"
+          "$ref": "#/62"
         },
         "flags": 10,
         "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "properties": {
         "type": {
@@ -1105,13 +1104,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1119,7 +1111,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/AAAA@2023-07-01-preview",
     "body": {
-      "$ref": "#/64"
+      "$ref": "#/63"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1152,17 +1144,24 @@
       },
       "type": {
         "type": {
-          "$ref": "#/66"
+          "$ref": "#/65"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/66"
         },
         "flags": 10,
         "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "properties": {
         "type": {
@@ -1177,13 +1176,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1191,7 +1183,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/CAA@2023-07-01-preview",
     "body": {
-      "$ref": "#/68"
+      "$ref": "#/67"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1224,17 +1216,24 @@
       },
       "type": {
         "type": {
-          "$ref": "#/70"
+          "$ref": "#/69"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/71"
+          "$ref": "#/70"
         },
         "flags": 10,
         "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "properties": {
         "type": {
@@ -1249,13 +1248,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1263,7 +1255,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/CNAME@2023-07-01-preview",
     "body": {
-      "$ref": "#/72"
+      "$ref": "#/71"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1296,17 +1288,24 @@
       },
       "type": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/73"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/75"
+          "$ref": "#/74"
         },
         "flags": 10,
         "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "properties": {
         "type": {
@@ -1321,13 +1320,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1335,7 +1327,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/MX@2023-07-01-preview",
     "body": {
-      "$ref": "#/76"
+      "$ref": "#/75"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1368,17 +1360,24 @@
       },
       "type": {
         "type": {
-          "$ref": "#/78"
+          "$ref": "#/77"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/79"
+          "$ref": "#/78"
         },
         "flags": 10,
         "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "properties": {
         "type": {
@@ -1393,13 +1392,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1407,7 +1399,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/NS@2023-07-01-preview",
     "body": {
-      "$ref": "#/80"
+      "$ref": "#/79"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1440,17 +1432,24 @@
       },
       "type": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/81"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/83"
+          "$ref": "#/82"
         },
         "flags": 10,
         "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "properties": {
         "type": {
@@ -1465,13 +1464,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1479,7 +1471,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/PTR@2023-07-01-preview",
     "body": {
-      "$ref": "#/84"
+      "$ref": "#/83"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1512,17 +1504,24 @@
       },
       "type": {
         "type": {
-          "$ref": "#/86"
+          "$ref": "#/85"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/87"
+          "$ref": "#/86"
         },
         "flags": 10,
         "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "properties": {
         "type": {
@@ -1537,13 +1536,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1551,7 +1543,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/SOA@2023-07-01-preview",
     "body": {
-      "$ref": "#/88"
+      "$ref": "#/87"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1584,17 +1576,24 @@
       },
       "type": {
         "type": {
-          "$ref": "#/90"
+          "$ref": "#/89"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/90"
         },
         "flags": 10,
         "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "properties": {
         "type": {
@@ -1609,13 +1608,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1623,7 +1615,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/SRV@2023-07-01-preview",
     "body": {
-      "$ref": "#/92"
+      "$ref": "#/91"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1656,17 +1648,24 @@
       },
       "type": {
         "type": {
-          "$ref": "#/94"
+          "$ref": "#/93"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/94"
         },
         "flags": 10,
         "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "properties": {
         "type": {
@@ -1681,13 +1680,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1695,7 +1687,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/TXT@2023-07-01-preview",
     "body": {
-      "$ref": "#/96"
+      "$ref": "#/95"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1728,17 +1720,24 @@
       },
       "type": {
         "type": {
-          "$ref": "#/98"
+          "$ref": "#/97"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/99"
+          "$ref": "#/98"
         },
         "flags": 10,
         "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "properties": {
         "type": {
@@ -1753,13 +1752,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1767,7 +1759,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/TLSA@2023-07-01-preview",
     "body": {
-      "$ref": "#/100"
+      "$ref": "#/99"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1800,17 +1792,24 @@
       },
       "type": {
         "type": {
-          "$ref": "#/102"
+          "$ref": "#/101"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/103"
+          "$ref": "#/102"
         },
         "flags": 10,
         "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "properties": {
         "type": {
@@ -1825,13 +1824,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1839,7 +1831,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/DS@2023-07-01-preview",
     "body": {
-      "$ref": "#/104"
+      "$ref": "#/103"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1872,17 +1864,24 @@
       },
       "type": {
         "type": {
-          "$ref": "#/106"
+          "$ref": "#/105"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/107"
+          "$ref": "#/106"
         },
         "flags": 10,
         "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "properties": {
         "type": {
@@ -1897,13 +1896,6 @@
         },
         "flags": 0,
         "description": "The etag of the record set."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1911,7 +1903,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/NAPTR@2023-07-01-preview",
     "body": {
-      "$ref": "#/108"
+      "$ref": "#/107"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1941,28 +1933,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/110"
+          "$ref": "#/109"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/111"
+          "$ref": "#/110"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/112"
+          "$ref": "#/111"
         },
         "flags": 10,
         "description": "The resource api version"
       },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
       "properties": {
         "type": {
-          "$ref": "#/114"
+          "$ref": "#/113"
         },
         "flags": 2,
         "description": "The DNSSEC properties."
@@ -1971,15 +1970,8 @@
         "type": {
           "$ref": "#/0"
         },
-        "flags": 2,
+        "flags": 0,
         "description": "The etag of the DNSSEC configuration."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -1996,7 +1988,7 @@
       },
       "signingKeys": {
         "type": {
-          "$ref": "#/115"
+          "$ref": "#/114"
         },
         "flags": 2,
         "description": "The list of signing keys."
@@ -2006,14 +1998,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/13"
+      "$ref": "#/25"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.Network/dnsZones/dnssecConfigs@2023-07-01-preview",
     "body": {
-      "$ref": "#/113"
+      "$ref": "#/112"
     },
     "readableScopes": 8,
     "writableScopes": 8

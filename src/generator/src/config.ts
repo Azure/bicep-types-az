@@ -1,22 +1,22 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-export interface GeneratorConfig {
-  additionalFiles?: string[];
+interface GeneratorConfig {
   /**
-   * When true, the generator will additionally invoke the TypeSpec emitter
-   * (typespec-bicep) for spec folders that contain TypeSpec definitions
-   * (tspconfig.yaml + main.tsp). TypeSpec output is merged alongside
-   * the AutoRest output.
+   * When true, the generator invokes only the TypeSpec emitter for a given base path. Existing
+   * AutoRest output is retained as a fallback for types TypeSpec does not emit.
    */
-  useTypeSpec?: boolean;
+  useTypeSpec: Record<string, boolean>;
 }
 
-const defaultConfig: GeneratorConfig = {};
-
-const config: Record<string, GeneratorConfig> = {
+const config: GeneratorConfig = {
+  useTypeSpec: {
+    dns: true,
+    'cosmos-db': true,
+  }
 }
 
-export function getConfig(basePath: string): GeneratorConfig {
-  return config[basePath.toLowerCase()] || defaultConfig;
+export function isTypeSpecEnabled(basePath: string): boolean {
+  const firstBasePath = basePath.split('/')[0].toLowerCase();
+  return config.useTypeSpec[firstBasePath] ?? false;
 }

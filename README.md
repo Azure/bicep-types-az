@@ -44,9 +44,9 @@ See [/generated/index.md](./generated/index.md) for a searchable list of all the
     ```sh
     npm run generate -- --specs-dir {path to azure-rest-api-specs}
     ```
-1. To run generation for a single path in the specs repo (e.g. 'compute'):
+1. To run generation for a top-level path in the specs repo (e.g. 'dns'):
     ```sh
-    npm run generate -- --specs-dir {path to azure-rest-api-specs} --single-path compute
+    npm run generate -- --specs-dir {path to azure-rest-api-specs} --path-prefix dns
     ```
 1. To see other available generation parameters, including debugging options:
     ```sh

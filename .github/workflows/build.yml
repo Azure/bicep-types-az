@@ -156,3 +156,48 @@ jobs:
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+
+  build-typespec:
+    name: "Build TypeSpec.Bicep"
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
+          submodules: recursive
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        with:
+          languages: javascript
+
+      - name: Setup Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22.x
+
+      - name: Build bicep-types dependency
+        run: |
+          npm ci
+          npm run build
+        working-directory: bicep-types/src/bicep-types
+
+      - name: Install
+        run: npm ci
+        working-directory: ./src/typespec-bicep
+
+      - name: Build
+        run: npm run build
+        working-directory: ./src/typespec-bicep
+
+      - name: Test
+        run: npm test
+        working-directory: ./src/typespec-bicep
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9

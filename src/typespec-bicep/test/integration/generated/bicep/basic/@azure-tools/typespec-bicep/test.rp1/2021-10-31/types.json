@@ -1,10 +1,16 @@
 [
   {
-    "$type": "StringType"
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 12,
+    "pattern": "^[a-z][a-z0-9]*$"
   },
   {
     "$type": "StringLiteralType",
     "value": "Test.Rp1/testType1"
+  },
+  {
+    "$type": "StringType"
   },
   {
     "$type": "StringLiteralType",
@@ -16,7 +22,7 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 10,
         "description": "The resource id"
@@ -37,35 +43,35 @@
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/3"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "systemData": {
         "type": {
-          "$ref": "#/4"
+          "$ref": "#/5"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "tags": {
         "type": {
-          "$ref": "#/15"
+          "$ref": "#/16"
         },
         "flags": 0,
         "description": "Resource tags."
       },
       "location": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 1,
         "description": "The geo-location where the resource lives"
       },
       "properties": {
         "type": {
-          "$ref": "#/16"
+          "$ref": "#/17"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -78,42 +84,42 @@
     "properties": {
       "createdBy": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The identity that created the resource."
       },
       "createdByType": {
         "type": {
-          "$ref": "#/9"
+          "$ref": "#/10"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
       },
       "createdAt": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The timestamp of resource creation (UTC)."
       },
       "lastModifiedBy": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The identity that last modified the resource."
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/14"
+          "$ref": "#/15"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
       },
       "lastModifiedAt": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The timestamp of resource last modification (UTC)"
@@ -140,9 +146,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/5"
-      },
-      {
         "$ref": "#/6"
       },
       {
@@ -152,7 +155,10 @@
         "$ref": "#/8"
       },
       {
-        "$ref": "#/0"
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/2"
       }
     ]
   },
@@ -176,9 +182,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/10"
-      },
-      {
         "$ref": "#/11"
       },
       {
@@ -188,7 +191,10 @@
         "$ref": "#/13"
       },
       {
-        "$ref": "#/0"
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/2"
       }
     ]
   },
@@ -197,7 +203,7 @@
     "name": "Record",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/0"
+      "$ref": "#/2"
     }
   },
   {
@@ -206,90 +212,90 @@
     "properties": {
       "basicString": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "Description for a basic string property."
       },
       "stringEnum": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/20"
         },
         "flags": 0,
         "description": "Description for a basic enum property."
       },
       "emptyEnum": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "Description for a empty enum property."
       },
       "encryptionProperties": {
         "type": {
-          "$ref": "#/20"
+          "$ref": "#/21"
         },
         "flags": 0,
         "description": "TestType1 encryption properties"
       },
       "password": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0
       },
       "uuidProperty": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "A UUID property"
       },
       "intWithDefaultValue": {
         "type": {
-          "$ref": "#/25"
+          "$ref": "#/26"
         },
         "flags": 0,
         "description": "An integer with a default value"
       },
       "special.char-property": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "A property with special characters in its name"
       },
       "locationData": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/27"
         },
         "flags": 2,
         "description": "Metadata pertaining to the geographic location of the resource."
       },
       "base64EncodedBytes": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 2,
         "description": "Base64 encoded bytes"
       },
       "binaryBuffer": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 2,
         "description": "A binary buffer property"
       },
       "subnetId": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 2,
         "description": "A fully-qualified resource ID"
       },
       "percentageProperty": {
         "type": {
-          "$ref": "#/25"
+          "$ref": "#/26"
         },
         "flags": 2,
         "description": "A percentage property"
@@ -308,13 +314,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/0"
-      },
-      {
-        "$ref": "#/17"
+        "$ref": "#/2"
       },
       {
         "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
       }
     ]
   },
@@ -324,14 +330,14 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "Indicates whether or not the encryption is enabled for container registry."
       },
       "keyVaultProperties": {
         "type": {
-          "$ref": "#/24"
+          "$ref": "#/25"
         },
         "flags": 0,
         "description": "Key vault properties."
@@ -350,13 +356,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/0"
-      },
-      {
-        "$ref": "#/21"
+        "$ref": "#/2"
       },
       {
         "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
       }
     ]
   },
@@ -366,14 +372,14 @@
     "properties": {
       "keyIdentifier": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "Key vault uri to access the encryption key."
       },
       "identity": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The client ID of the identity which will be used to access key vault."
@@ -389,28 +395,28 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 1,
         "description": "A canonical name for the geographic or physical location."
       },
       "city": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The city or locality where the resource is located."
       },
       "district": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The district, state, or province where the resource is located."
       },
       "countryOrRegion": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The country or region where the resource is located."
@@ -421,7 +427,7 @@
     "$type": "ResourceType",
     "name": "Test.Rp1/testType1@2021-10-31",
     "body": {
-      "$ref": "#/3"
+      "$ref": "#/4"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -440,56 +446,56 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 10,
         "description": "The resource id"
       },
       "name": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/28"
+          "$ref": "#/29"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/29"
+          "$ref": "#/30"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "systemData": {
         "type": {
-          "$ref": "#/4"
+          "$ref": "#/5"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "tags": {
         "type": {
-          "$ref": "#/15"
+          "$ref": "#/16"
         },
         "flags": 0,
         "description": "Resource tags."
       },
       "location": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 1,
         "description": "The geo-location where the resource lives"
       },
       "properties": {
         "type": {
-          "$ref": "#/31"
+          "$ref": "#/32"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -502,7 +508,7 @@
     "properties": {
       "plan": {
         "type": {
-          "$ref": "#/32"
+          "$ref": "#/33"
         },
         "flags": 2,
         "description": "A plan property"
@@ -515,21 +521,21 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The plan name"
       },
       "publisher": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The plan publisher"
       },
       "product": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The plan product"
@@ -540,7 +546,7 @@
     "$type": "ResourceType",
     "name": "Test.Rp1/readOnlyTestType@2021-10-31",
     "body": {
-      "$ref": "#/30"
+      "$ref": "#/31"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -559,56 +565,56 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 10,
         "description": "The resource id"
       },
       "name": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/34"
+          "$ref": "#/35"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/35"
+          "$ref": "#/36"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "systemData": {
         "type": {
-          "$ref": "#/4"
+          "$ref": "#/5"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "tags": {
         "type": {
-          "$ref": "#/15"
+          "$ref": "#/16"
         },
         "flags": 0,
         "description": "Resource tags."
       },
       "location": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 1,
         "description": "The geo-location where the resource lives"
       },
       "properties": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/38"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -621,7 +627,7 @@
     "properties": {
       "basicString": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "A basic string property."
@@ -632,7 +638,7 @@
     "$type": "ResourceType",
     "name": "Test.Rp1/writeOnlyTestType@2021-10-31",
     "body": {
-      "$ref": "#/36"
+      "$ref": "#/37"
     },
     "readableScopes": 0,
     "writableScopes": 8
@@ -651,56 +657,56 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 10,
         "description": "The resource id"
       },
       "name": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/39"
+          "$ref": "#/40"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/40"
+          "$ref": "#/41"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "systemData": {
         "type": {
-          "$ref": "#/4"
+          "$ref": "#/5"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "tags": {
         "type": {
-          "$ref": "#/15"
+          "$ref": "#/16"
         },
         "flags": 0,
         "description": "Resource tags."
       },
       "location": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 1,
         "description": "The geo-location where the resource lives"
       },
       "properties": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/43"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -713,7 +719,7 @@
     "properties": {
       "basicString": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "A basic string property."
@@ -724,7 +730,7 @@
     "$type": "ResourceType",
     "name": "Test.Rp1/tenantScopeType@2021-10-31",
     "body": {
-      "$ref": "#/41"
+      "$ref": "#/42"
     },
     "readableScopes": 1,
     "writableScopes": 1
@@ -743,56 +749,56 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 10,
         "description": "The resource id"
       },
       "name": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/45"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/46"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "systemData": {
         "type": {
-          "$ref": "#/4"
+          "$ref": "#/5"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "tags": {
         "type": {
-          "$ref": "#/15"
+          "$ref": "#/16"
         },
         "flags": 0,
         "description": "Resource tags."
       },
       "location": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 1,
         "description": "The geo-location where the resource lives"
       },
       "properties": {
         "type": {
-          "$ref": "#/47"
+          "$ref": "#/48"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -805,7 +811,7 @@
     "properties": {
       "basicString": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "A basic string property."
@@ -816,7 +822,7 @@
     "$type": "ResourceType",
     "name": "Test.Rp1/subscriptionScopeType@2021-10-31",
     "body": {
-      "$ref": "#/46"
+      "$ref": "#/47"
     },
     "readableScopes": 4,
     "writableScopes": 4
@@ -835,56 +841,56 @@
     "properties": {
       "id": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 10,
         "description": "The resource id"
       },
       "name": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/49"
+          "$ref": "#/50"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/51"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "systemData": {
         "type": {
-          "$ref": "#/4"
+          "$ref": "#/5"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       },
       "tags": {
         "type": {
-          "$ref": "#/15"
+          "$ref": "#/16"
         },
         "flags": 0,
         "description": "Resource tags."
       },
       "location": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 1,
         "description": "The geo-location where the resource lives"
       },
       "properties": {
         "type": {
-          "$ref": "#/52"
+          "$ref": "#/53"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -898,14 +904,14 @@
     "baseProperties": {
       "foo": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The foo property"
       },
       "bar": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The bar property"
@@ -913,13 +919,13 @@
     },
     "elements": {
       "BranchWithInheritedProps": {
-        "$ref": "#/53"
+        "$ref": "#/54"
       },
       "BranchWithAllInlineProps": {
-        "$ref": "#/56"
+        "$ref": "#/57"
       },
       "BranchWithOverride": {
-        "$ref": "#/59"
+        "$ref": "#/60"
       }
     }
   },
@@ -929,34 +935,34 @@
     "properties": {
       "foo": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The foo property"
       },
       "bar": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The bar property"
       },
       "type": {
         "type": {
-          "$ref": "#/55"
+          "$ref": "#/56"
         },
         "flags": 1
       },
       "baz": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The baz property"
       },
       "quux": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "A property defined inline"
@@ -977,41 +983,41 @@
     "properties": {
       "foo": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The foo property"
       },
       "bar": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The bar property"
       },
       "type": {
         "type": {
-          "$ref": "#/58"
+          "$ref": "#/59"
         },
         "flags": 1
       },
       "fizz": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The fizz property"
       },
       "buzz": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The buzz property"
       },
       "pop": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The pop property"
@@ -1032,27 +1038,27 @@
     "properties": {
       "foo": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The foo property"
       },
       "bar": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The bar property"
       },
       "type": {
         "type": {
-          "$ref": "#/61"
+          "$ref": "#/62"
         },
         "flags": 1
       },
       "fooOverride": {
         "type": {
-          "$ref": "#/25"
+          "$ref": "#/26"
         },
         "flags": 0,
         "description": "The overridden foo integer property"
@@ -1071,7 +1077,7 @@
     "$type": "ResourceType",
     "name": "Test.Rp1/discriminatedUnionTestType@2021-10-31",
     "body": {
-      "$ref": "#/51"
+      "$ref": "#/52"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1082,14 +1088,14 @@
     "properties": {
       "someString": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 1,
         "description": "The foo request string"
       },
       "locationData": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/27"
         },
         "flags": 0,
         "description": "Location data"
@@ -1102,7 +1108,7 @@
     "properties": {
       "someString": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/2"
         },
         "flags": 0,
         "description": "The foo response string"
@@ -1115,10 +1121,10 @@
     "resourceType": "Test.Rp1/testType1",
     "apiVersion": "2021-10-31",
     "output": {
-      "$ref": "#/64"
+      "$ref": "#/65"
     },
     "input": {
-      "$ref": "#/63"
+      "$ref": "#/64"
     }
   }
 ]

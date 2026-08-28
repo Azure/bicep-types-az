@@ -5,6 +5,7 @@ import {
   EmitContext,
   Enum,
   Model,
+  ModelProperty,
   Namespace,
   Program,
   Type,
@@ -40,8 +41,8 @@ export interface ResourceDefinition {
   putModel?: Model;
   /** The TypeSpec Model representing the resource response (GET response). */
   getModel?: Model;
-  /** The name property type on the resource. */
-  nameType?: Type;
+  /** The name property on the resource, including any constraint decorators. */
+  nameProperty?: ModelProperty;
 }
 
 /**
@@ -122,16 +123,22 @@ export function getProviderDefinitions(
     // For parameterized segments like {recordType}, the resolver may not include
     // the collection name, so we ensure it's present.
     let typeSegments: string[];
-    if (resolved?.resourceType?.types) {
+    if (resolved?.resourceType.types.length) {
       typeSegments = [...resolved.resourceType.types];
       const collectionName = armResource.collectionName;
       // If the last type segment doesn't match the collection name, append it
       // Use case-insensitive comparison to avoid duplicates like "AuthorizationRules/authorizationRules"
-      if (typeSegments[typeSegments.length - 1].toLowerCase() !== collectionName.toLowerCase()) {
+      if (
+        collectionName &&
+        typeSegments[typeSegments.length - 1].toLowerCase() !==
+          collectionName.toLowerCase()
+      ) {
         typeSegments.push(collectionName);
       }
-    } else {
+    } else if (armResource.collectionName) {
       typeSegments = [armResource.collectionName];
+    } else {
+      continue;
     }
 
     // Determine scopes from operations and paths
@@ -178,7 +185,7 @@ export function getProviderDefinitions(
         },
         putModel: model,
         getModel: model,
-        nameType: getResourceNameType(model),
+        nameProperty: getResourceNameProperty(model),
       };
 
       provider.resourcesByType[fullyQualifiedType].push(definition);
@@ -476,14 +483,12 @@ function getApiVersion(
 }
 
 /**
- * Get the type of the 'name' property on a resource model.
+ * Get the 'name' property on a resource model.
  */
-function getResourceNameType(
+function getResourceNameProperty(
   model: Model,
-): Type | undefined {
-  const nameProp = model.properties.get("name");
-  if (!nameProp) return undefined;
-  return nameProp.type;
+): ModelProperty | undefined {
+  return model.properties.get("name");
 }
 
 /**

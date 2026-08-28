@@ -17,6 +17,12 @@ export const defaultLogger: ILogger = {
   err: data => process.stderr.write(data),
 }
 
+export async function replaceRecursive(sourceBasePath: string, destinationBasePath: string) {
+  await rm(destinationBasePath, { recursive: true, force: true, });
+  await mkdir(destinationBasePath, { recursive: true });
+  await copyRecursive(sourceBasePath, destinationBasePath);
+}
+
 export async function copyRecursive(sourceBasePath: string, destinationBasePath: string): Promise<void> {
   for (const filePath of await findRecursive(sourceBasePath, () => true)) {
     const destinationPath = path.join(destinationBasePath, path.relative(sourceBasePath, filePath));
@@ -62,7 +68,7 @@ export function executeCmd(logger: ILogger, verbose: boolean, cwd: string, cmd: 
     const child = spawn(cmd, args, {
       cwd: cwd,
       windowsHide: true,
-      shell: true,
+      shell: true
     });
 
     child.stdout.on('data', data => logger.out(colors.grey(data.toString())));
