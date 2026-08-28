@@ -286,4 +286,26 @@ describe("output structure tests", () => {
     );
     expect(resourceTypes.length).toBeGreaterThanOrEqual(2);
   });
+
+  it("should preserve TypeSpec metadata and custom resource routes", async () => {
+    const typesMdPath = path.join(
+      outputBaseDir,
+      "bicep/edge-cases/@azure-tools/typespec-bicep/test.edgecases/2024-01-01/types.md",
+    );
+    const typesMd = await readFile(typesMdPath, "utf-8");
+
+    expect(typesMd).toContain(
+      "## Resource Test.EdgeCases/parents/customRouteResources@2024-01-01",
+    );
+    expect(typesMd).toContain(
+      "## Resource Test.EdgeCases/alternateParents/customRouteResources@2024-01-01",
+    );
+    expect(typesMd).toContain("**kind**: 'first-value' (Required)");
+    expect(typesMd).toContain("**kind**: 'second-value' (Required)");
+    expect(typesMd).toContain("**password**: string {sensitive}");
+    expect(typesMd).toContain(
+      'A description containing an escaped "quoted value".',
+    );
+    expect(typesMd).not.toContain('\\"quoted value\\"');
+  });
 });

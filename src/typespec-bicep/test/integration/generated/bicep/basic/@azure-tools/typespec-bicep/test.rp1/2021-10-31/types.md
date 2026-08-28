@@ -91,6 +91,14 @@
 * **bar**: string: The bar property
 * **foo**: string: The foo property
 
+### BranchWithInheritedProps
+#### Properties
+* **bar**: string: The bar property
+* **baz**: string: The baz property
+* **foo**: string: The foo property
+* **quux**: string: A property defined inline
+* **type**: 'inherited' (Required): The variant type
+
 ### BranchWithAllInlineProps
 #### Properties
 * **bar**: string: The bar property
@@ -98,22 +106,14 @@
 * **fizz**: string: The fizz property
 * **foo**: string: The foo property
 * **pop**: string: The pop property
-* **type**: 'BranchWithAllInlineProps' (Required)
-
-### BranchWithInheritedProps
-#### Properties
-* **bar**: string: The bar property
-* **baz**: string: The baz property
-* **foo**: string: The foo property
-* **quux**: string: A property defined inline
-* **type**: 'BranchWithInheritedProps' (Required)
+* **type**: 'inline' (Required): The variant type
 
 ### BranchWithOverride
 #### Properties
 * **bar**: string: The bar property
 * **foo**: string: The foo property
 * **fooOverride**: int: The overridden foo integer property
-* **type**: 'BranchWithOverride' (Required)
+* **type**: 'override' (Required): The variant type
 
 
 ## EncryptionProperties
@@ -183,12 +183,12 @@
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
 * **intWithDefaultValue**: int: An integer with a default value
 * **locationData**: [LocationData](#locationdata) (ReadOnly): Metadata pertaining to the geographic location of the resource.
-* **password**: string
-* **percentageProperty**: int (ReadOnly): A percentage property
+* **password**: string {sensitive}
+* **percentageProperty**: int {minValue: 0, maxValue: 100} (ReadOnly): A percentage property
 * **special.char-property**: string: A property with special characters in its name
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
 * **subnetId**: string (ReadOnly): A fully-qualified resource ID
-* **uuidProperty**: string: A UUID property
+* **uuidProperty**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: A UUID property
 
 ## WriteOnlyTestTypeProperties
 ### Properties

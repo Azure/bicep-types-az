@@ -3,25 +3,12 @@
 
 import { createTypeSpecLibrary, JSONSchemaType } from "@typespec/compiler";
 
-export interface BicepEmitterOptions {
-  /**
-   * When true, generates ARM deployment template JSON Schema output
-   * instead of Bicep type definitions.
-   */
-  "arm-schema"?: boolean;
-}
+export type BicepEmitterOptions = Record<string, never>;
 
 const BicepEmitterOptionsSchema: JSONSchemaType<BicepEmitterOptions> = {
   type: "object",
-  additionalProperties: true,
-  properties: {
-    "arm-schema": {
-      type: "boolean",
-      nullable: true,
-      description:
-        "When true, generates ARM deployment template JSON Schema instead of Bicep type definitions.",
-    },
-  },
+  additionalProperties: false,
+  properties: {},
   required: [],
 };
 

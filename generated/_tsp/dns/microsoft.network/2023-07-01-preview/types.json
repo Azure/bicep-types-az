@@ -1042,7 +1042,7 @@
       "$ref": "#/32"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1114,7 +1114,7 @@
       "$ref": "#/63"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1186,7 +1186,7 @@
       "$ref": "#/67"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1258,7 +1258,7 @@
       "$ref": "#/71"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1330,7 +1330,7 @@
       "$ref": "#/75"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1402,7 +1402,7 @@
       "$ref": "#/79"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1474,7 +1474,7 @@
       "$ref": "#/83"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1546,7 +1546,7 @@
       "$ref": "#/87"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1618,7 +1618,7 @@
       "$ref": "#/91"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1690,7 +1690,7 @@
       "$ref": "#/95"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1762,7 +1762,7 @@
       "$ref": "#/99"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1834,7 +1834,7 @@
       "$ref": "#/103"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1906,7 +1906,7 @@
       "$ref": "#/107"
     },
     "readableScopes": 8,
-    "writableScopes": 8
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",

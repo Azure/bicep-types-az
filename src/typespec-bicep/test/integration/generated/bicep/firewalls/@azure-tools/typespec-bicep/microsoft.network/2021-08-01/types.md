@@ -56,13 +56,13 @@
 ## AzureFirewallApplicationRuleCollectionPropertiesFormat
 ### Properties
 * **action**: [AzureFirewallRCAction](#azurefirewallrcaction): The action type of a rule collection.
-* **priority**: int: Priority of the application rule collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the application rule collection resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the application rule collection resource.
 * **rules**: [AzureFirewallApplicationRule](#azurefirewallapplicationrule)[]: Collection of rules used by a application rule collection.
 
 ## AzureFirewallApplicationRuleProtocol
 ### Properties
-* **port**: int: Port number for the protocol, cannot be greater than 64000.
+* **port**: int {minValue: 0, maxValue: 64000}: Port number for the protocol, cannot be greater than 64000.
 * **protocolType**: 'Http' | 'Https' | 'Mssql' | string: Protocol type.
 
 ## AzureFirewallIPConfiguration
@@ -108,7 +108,7 @@
 ## AzureFirewallNatRuleCollectionProperties
 ### Properties
 * **action**: [AzureFirewallNatRCAction](#azurefirewallnatrcaction): The action type of a NAT rule collection.
-* **priority**: int: Priority of the NAT rule collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the NAT rule collection resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the NAT rule collection resource.
 * **rules**: [AzureFirewallNatRule](#azurefirewallnatrule)[]: Collection of rules used by a NAT rule collection.
 
@@ -132,7 +132,7 @@
 ## AzureFirewallNetworkRuleCollectionPropertiesFormat
 ### Properties
 * **action**: [AzureFirewallRCAction](#azurefirewallrcaction): The action type of a rule collection.
-* **priority**: int: Priority of the network rule collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the network rule collection resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the network rule collection resource.
 * **rules**: [AzureFirewallNetworkRule](#azurefirewallnetworkrule)[]: Collection of rules used by a network rule collection.
 
@@ -267,7 +267,7 @@
 * **fqdnTags**: string[]: List of FQDN Tags for this rule.
 * **name**: string: Name of the rule.
 * **protocols**: [FirewallPolicyRuleApplicationProtocol](#firewallpolicyruleapplicationprotocol)[]: Array of Application Protocols.
-* **ruleType**: 'ApplicationRule' (Required)
+* **ruleType**: 'ApplicationRule' (Required): Rule type.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
 * **targetFqdns**: string[]: List of FQDNs for this rule.
@@ -282,7 +282,7 @@
 * **destinationPorts**: string[]: List of destination ports.
 * **ipProtocols**: ('Any' | 'ICMP' | 'TCP' | 'UDP' | string)[]: Array of FirewallPolicyRuleNetworkProtocols.
 * **name**: string: Name of the rule.
-* **ruleType**: 'NatRule' (Required)
+* **ruleType**: 'NatRule' (Required): Rule type.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
 * **translatedAddress**: string: The translated address for this NAT rule.
@@ -298,14 +298,14 @@
 * **destinationPorts**: string[]: List of destination ports.
 * **ipProtocols**: ('Any' | 'ICMP' | 'TCP' | 'UDP' | string)[]: Array of FirewallPolicyRuleNetworkProtocols.
 * **name**: string: Name of the rule.
-* **ruleType**: 'NetworkRule' (Required)
+* **ruleType**: 'NetworkRule' (Required): Rule type.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
 
 
 ## FirewallPolicyRuleApplicationProtocol
 ### Properties
-* **port**: int: Port number for the protocol, cannot be greater than 64000.
+* **port**: int {minValue: 0, maxValue: 64000}: Port number for the protocol, cannot be greater than 64000.
 * **protocolType**: 'Http' | 'Https' | 'Mssql' | string: Protocol type.
 
 ## FirewallPolicyRuleCollection
@@ -313,28 +313,28 @@
 
 ### Base Properties
 * **name**: string: The name of the rule collection.
-* **priority**: int: Priority of the Firewall Policy Rule Collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the Firewall Policy Rule Collection resource.
 
 ### FirewallPolicyFilterRuleCollection
 #### Properties
 * **action**: [FirewallPolicyFilterRuleCollectionAction](#firewallpolicyfilterrulecollectionaction): The action type of a Filter rule collection.
 * **name**: string: The name of the rule collection.
-* **priority**: int: Priority of the Firewall Policy Rule Collection resource.
-* **ruleCollectionType**: 'FirewallPolicyFilterRuleCollection' (Required)
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the Firewall Policy Rule Collection resource.
+* **ruleCollectionType**: 'FirewallPolicyFilterRuleCollection' (Required): The type of rule collection.
 * **rules**: [FirewallPolicyRule](#firewallpolicyrule)[]: List of rules included in a rule collection.
 
 ### FirewallPolicyNatRuleCollection
 #### Properties
 * **action**: [FirewallPolicyNatRuleCollectionAction](#firewallpolicynatrulecollectionaction): The action type of a Nat rule collection.
 * **name**: string: The name of the rule collection.
-* **priority**: int: Priority of the Firewall Policy Rule Collection resource.
-* **ruleCollectionType**: 'FirewallPolicyNatRuleCollection' (Required)
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the Firewall Policy Rule Collection resource.
+* **ruleCollectionType**: 'FirewallPolicyNatRuleCollection' (Required): The type of rule collection.
 * **rules**: [FirewallPolicyRule](#firewallpolicyrule)[]: List of rules included in a rule collection.
 
 
 ## FirewallPolicyRuleCollectionGroupProperties
 ### Properties
-* **priority**: int: Priority of the Firewall Policy Rule Collection Group resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the Firewall Policy Rule Collection Group resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the firewall policy rule collection group resource.
 * **ruleCollections**: [FirewallPolicyRuleCollection](#firewallpolicyrulecollection)[]: Group of Firewall Policy rule collections.
 
