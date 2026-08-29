@@ -29,18 +29,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
           submodules: recursive
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
         with:
           node-version: 22.x
 
       - name: Clone azure-rest-api-specs
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: ${{ env.AZURE_SPECS_REPO }}
           path: workflow-temp/azure-rest-api-specs
@@ -86,7 +86,7 @@ jobs:
         working-directory: workflow-temp/azure-rest-api-specs
 
       - name: Commit and push
-        uses: stefanzweifel/git-auto-commit-action@v7
+        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0
         with:
           commit_message: |
             Update types from ${{ steps.get_swagger_gh_uri.outputs.gh_uri }} ${{ env.SINGLE_PATH && format('(single path: {0})', env.SINGLE_PATH) || '' }}
