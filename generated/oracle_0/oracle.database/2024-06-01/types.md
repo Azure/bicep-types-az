@@ -518,7 +518,7 @@
 * **displayName**: string {minLength: 1, maxLength: 255} (Required): Display Name
 * **domain**: string: The domain name for the cloud VM cluster.
 * **giVersion**: string (Required): Oracle Grid Infrastructure (GI) software version
-* **hostname**: string {minLength: 1, maxLength: 23} (Required): The hostname for the cloud VM cluster.
+* **hostname**: string {minLength: 1, maxLength: 23} (Required): The hostname for the cloud VM cluster. Hostname and domain combined length cannot exceed 112 characters.
 * **iormConfigCache**: [ExadataIormConfig](#exadataiormconfig) (ReadOnly): iormConfigCache details for cloud VM cluster.
 * **isLocalBackupEnabled**: bool: If true, database backup on local Exadata storage is configured for the cloud VM cluster. If false, database backup on local Exadata storage is not available in the cloud VM cluster.
 * **isSparseDiskgroupEnabled**: bool: If true, sparse disk group is configured for the cloud VM cluster. If false, sparse disk group is not created.

@@ -968,7 +968,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'AdditionalWorkspace
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'IoTSecurityAggregatedAlert' (4 differences):
   - properties.properties.$ref: "#/components/schemas/schemas:51" => "#/components/schemas/schemas:277"
   - properties.tags: {"$ref":"#/components/schemas/schemas:46","description":"Resource tags"} => <none>
-  - allOf.0.$ref: "#/components/schemas/schemas:418" => "#/components/schemas/schemas:572"
+  - allOf.0.$ref: "#/components/schemas/schemas:516" => "#/components/schemas/schemas:572"
   - allOf.1: <none> => {"$ref":"#/components/schemas/schemas:141"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'IoTSecurityAggregatedAlertList' (5 differences):
   - properties.value.$ref: "#/components/schemas/schemas:49" => "#/components/schemas/schemas:268"
@@ -982,7 +982,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'IoTSecurityAggregat
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'IoTSecurityAggregatedRecommendation' (4 differences):
   - properties.properties.$ref: "#/components/schemas/schemas:74" => "#/components/schemas/schemas:296"
   - properties.tags: {"$ref":"#/components/schemas/schemas:69","description":"Resource tags"} => <none>
-  - allOf.0.$ref: "#/components/schemas/schemas:418" => "#/components/schemas/schemas:572"
+  - allOf.0.$ref: "#/components/schemas/schemas:516" => "#/components/schemas/schemas:572"
   - allOf.1: <none> => {"$ref":"#/components/schemas/schemas:141"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'IoTSecurityAggregatedRecommendationList' (5 differences):
   - properties.value.$ref: "#/components/schemas/schemas:72" => "#/components/schemas/schemas:271"
@@ -998,7 +998,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'IoTSecurityDeviceRe
   - properties.reportedSeverity.x-ms-enum: <none> => {"name":"reportedSeverity","modelAsString":true,"values":[{"value":"Informational"},{"value":"Low"},{"value":"Medium"},{"value":"High"}]}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'IoTSecuritySolutionAnalyticsModel' (2 differences):
   - properties.properties.$ref: "#/components/schemas/schemas:97" => "#/components/schemas/schemas:259"
-  - allOf.0.$ref: "#/components/schemas/schemas:418" => "#/components/schemas/schemas:572"
+  - allOf.0.$ref: "#/components/schemas/schemas:516" => "#/components/schemas/schemas:572"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'IoTSecuritySolutionAnalyticsModelList' (5 differences):
   - properties.value.$ref: "#/components/schemas/schemas:95" => "#/components/schemas/schemas:265"
   - properties.value.description: "The IoTSecuritySolutionAnalyticsModel items on this page" => "List of Security analytics of your IoT Security solution"
@@ -1020,8 +1020,8 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'IoTSecuritySolution
   - properties.location.x-ms-mutability: ["read","create"] => <none>
   - properties.location.$ref: "#/components/schemas/schemas:108" => "#/components/schemas/schemas:333"
   - properties.location.description: "The geo-location where the resource lives" => "The resource location."
-  - properties.systemData: <none> => {"readOnly":true,"type":"object","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:447"}
-  - allOf.0.$ref: "#/components/schemas/schemas:418" => "#/components/schemas/schemas:572"
+  - properties.systemData: <none> => {"readOnly":true,"type":"object","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:441"}
+  - allOf.0.$ref: "#/components/schemas/schemas:516" => "#/components/schemas/schemas:572"
   - allOf.1: <none> => {"$ref":"#/components/schemas/schemas:141"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'IoTSecuritySolutionProperties' (12 differences):
   - properties.status.x-ms-enum.values: [{"name":"Enabled","value":"Enabled","description":"Enabled"},{"name":"Disabled","value":"Disabled","description":"Disabled"}] => <none>
@@ -1056,11 +1056,11 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'UserDefinedResource
   - properties.querySubscriptions.$ref: "#/components/schemas/schemas:156" => "#/components/schemas/schemas:351"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (6 differences):
   - title: "Resource" => <none>
-  - properties.id.$ref: "#/components/schemas/schemas:420" => "#/components/schemas/schemas:573"
+  - properties.id.$ref: "#/components/schemas/schemas:518" => "#/components/schemas/schemas:573"
   - properties.id.description: "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\"" => "Resource Id"
   - properties.name.description: "The name of the resource" => "Resource name"
   - properties.type.description: "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\"" => "Resource type"
-  - properties.systemData: {"$ref":"#/components/schemas/schemas:447","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true} => <none>
+  - properties.systemData: {"$ref":"#/components/schemas/schemas:441","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true} => <none>
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'IoTSecuritySolutionsList' -> 'IoTSecuritySolutionsListAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'IoTSecuritySolutionModel' -> 'IoTSecuritySolutionModelAutoGenerated'
@@ -1150,6 +1150,19 @@ warning | Resource action dismiss under path '/subscriptions/{subscriptionId}/pr
 warning | Resource action inProgress under path '/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}/inProgress' has no response schema. Returning 'any'.
 warning | Resource action resolve under path '/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}/resolve' has no response schema. Returning 'any'.
 warning | Resource action simulate under path '/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/default/simulate' has no response schema. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.

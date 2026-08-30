@@ -57,7 +57,7 @@
 * **capacityType**: 'VCpu' | 'VM' | string (Required): The unit type for the capacity value.
 * **osType**: 'Linux' | 'Windows' | string: The OS type. Required when allocationStrategy is LowestPrice because pricing varies by OS.
 * **priority**: 'Regular' | 'Spot' | string (Required): The priority of the VMs to allocate.
-* **spotPriorityProfile**: [SkuMixPlacementSpotPriorityProfile](#skumixplacementspotpriorityprofile): Required when priority is Spot. Contains spot-specific configuration.
+* **spotPriorityProfile**: [SkuMixPlacementSpotPriorityProfile](#skumixplacementspotpriorityprofile): Contains spot-specific configuration.
 * **zoneAllocationPolicy**: [SkuMixPlacementZoneAllocationPolicy](#skumixplacementzoneallocationpolicy): Zone allocation policy. Default: BestEffortBalanced.
 
 ## SkuMixPlacementDeploymentChoice

@@ -9976,7 +9976,7 @@
     "properties": {
       "databricksAccessToken": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/370"
         },
         "flags": 0,
         "description": "Databricks access token"
@@ -10054,7 +10054,7 @@
       },
       "password": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/370"
         },
         "flags": 0,
         "description": "Password of admin account"
@@ -11667,7 +11667,7 @@
       },
       "secretAccessKey": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/370"
         },
         "flags": 0
       }
@@ -11703,7 +11703,7 @@
     "properties": {
       "key": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/370"
         },
         "flags": 0
       }
@@ -11739,7 +11739,7 @@
     "properties": {
       "key": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/370"
         },
         "flags": 0
       }
@@ -11961,7 +11961,7 @@
     "properties": {
       "pat": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/370"
         },
         "flags": 0
       }
@@ -11996,7 +11996,7 @@
     "properties": {
       "sas": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/370"
         },
         "flags": 0
       }
@@ -31760,7 +31760,7 @@
     "properties": {
       "databricksAccessToken": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/370"
         },
         "flags": 0,
         "description": "access token for databricks account."

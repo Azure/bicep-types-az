@@ -114,7 +114,7 @@
 ### Properties
 * **alias**: string (ReadOnly): The alias of the extension as defined in the deployment template.
 * **config**: [DeploymentExtensionDefinitionConfig](#deploymentextensiondefinitionconfig) (ReadOnly): The extension configuration.
-* **configId**: string (ReadOnly): The extension configuration ID. It uniquely identifies a deployment control plane within an extension.
+* **configId**: string (ReadOnly): The extension configuration ID. It uniquely identifies a deployment target within an extension.
 * **name**: string (ReadOnly): The extension name.
 * **version**: string (ReadOnly): The extension version.
 
@@ -453,7 +453,7 @@
 * **deploymentId**: string: The resource id of the Deployment responsible for this change.
 * **extension**: [DeploymentExtensionDefinition](#deploymentextensiondefinition): The extension the resource was deployed with.
 * **identifiers**: any: A subset of properties that uniquely identify a Bicep extensible resource because it lacks a resource id like an Azure resource has.
-* **resourceId**: string: Resource ID
+* **resourceId**: string: The fully-qualified ARM resource ID for this change.
 * **symbolicName**: string: The symbolic name of the resource responsible for this change.
 * **unsupportedReason**: string: The explanation about why the resource is unsupported by What-If.
 

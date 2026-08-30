@@ -3602,3 +3602,98 @@ warning | Modeler/MissingType | The schema 'paths·138jh75·providers-microsoft-
 warning | Skipping resource POST action path '/providers/Microsoft.Resources/calculateTemplateHash': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action cancel under path '/{scope}/providers/Microsoft.Resources/deployments/{deploymentName}/cancel' has no response schema. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'DeploymentPropertiesExtended-outputs' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/DeploymentPropertiesExtended-outputs
+warning | Modeler/MissingType | The schema 'DeploymentPropertiesExtended-parameters' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/DeploymentPropertiesExtended-parameters
+warning | Modeler/MissingType | The schema 'DeploymentExtensionConfigItem-value' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/DeploymentExtensionConfigItem-value
+warning | Modeler/MissingType | The schema 'ResourceReference-identifiers' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/ResourceReference-identifiers
+warning | Modeler/MissingType | The schema 'DeploymentProperties-template' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/DeploymentProperties-template
+warning | Modeler/MissingType | The schema 'DeploymentParameter-value' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/DeploymentParameter-value
+warning | Modeler/MissingType | The schema 'DeploymentExternalInput-value' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/DeploymentExternalInput-value
+warning | Modeler/MissingType | The schema 'DeploymentExternalInputDefinition-config' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/DeploymentExternalInputDefinition-config
+warning | Modeler/MissingType | The schema 'DeploymentExportResult-template' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/DeploymentExportResult-template
+warning | Modeler/MissingType | The schema 'TargetResource-identifiers' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/TargetResource-identifiers
+warning | Modeler/MissingType | The schema 'HttpMessage-content' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/HttpMessage-content
+warning | Modeler/MissingType | The schema 'DeploymentResourceWhatIfPrediction-identifiers' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/DeploymentResourceWhatIfPrediction-identifiers
+warning | Modeler/MissingType | The schema 'WhatIfChange-identifiers' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/WhatIfChange-identifiers
+warning | Modeler/MissingType | The schema 'WhatIfChange-before' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/WhatIfChange-before
+warning | Modeler/MissingType | The schema 'WhatIfChange-after' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/WhatIfChange-after
+warning | Modeler/MissingType | The schema 'WhatIfPropertyChange-before' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/WhatIfPropertyChange-before
+warning | Modeler/MissingType | The schema 'WhatIfPropertyChange-after' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/WhatIfPropertyChange-after
+warning | Modeler/MissingType | The schema 'paths·138jh75·providers-microsoft-resources-calculatetemplatehash·post·requestbody·content·application-json·schema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/deployments/stable/2026-06-01/deployments.json#/components/schemas/paths·138jh75·providers-microsoft-resources-calculatetemplatehash·post·requestbody·content·application-json·schema
+warning | Skipping resource POST action path '/providers/Microsoft.Resources/calculateTemplateHash': Unable to find type segments
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action cancel under path '/{scope}/providers/Microsoft.Resources/deployments/{deploymentName}/cancel' has no response schema. Returning 'any'.

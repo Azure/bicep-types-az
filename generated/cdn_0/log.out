@@ -115,6 +115,43 @@ warning | Resource action purge under path '/subscriptions/{subscriptionId}/reso
 warning | Resource action refreshValidationToken under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/customDomains/{customDomainName}/refreshValidationToken' has no response schema. Returning 'any'.
 warning | Resource action load under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/load' has no response schema. Returning 'any'.
 warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/purge' has no response schema. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'OriginProperties' has a property 'hostName' that is already declared the parent schema 'OriginUpdatePropertiesParameters' but isn't significantly different. The property has been removed from OriginProperties
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "metrics"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "dateTimeBegin"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "dateTimeEnd"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "granularity"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "customDomains"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "protocols"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "rankings"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "metrics"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "maxRanking"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "dateTimeBegin"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "dateTimeEnd"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsMetrics due to required query parameter "metrics"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsMetrics due to required query parameter "dateTimeBegin"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsMetrics due to required query parameter "dateTimeEnd"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsMetrics due to required query parameter "granularity"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "metrics"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "dateTimeBegin"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "dateTimeEnd"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "maxRanking"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "rankings"
+warning | Skipping resource POST action path '/providers/Microsoft.Cdn/checkNameAvailability': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cdn/checkNameAvailability': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cdn/validateProbe': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/checkEndpointNameAvailability': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Cdn/checkResourceUsage': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/canMigrate': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/migrate': Unable to find type segments
+warning | Resource action migrationAbort under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/migrationAbort' has no response schema. Returning 'any'.
+warning | Resource action migrationCommit under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/migrationCommit' has no response schema. Returning 'any'.
+warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/afdEndpoints/{endpointName}/purge' has no response schema. Returning 'any'.
+warning | Resource action refreshValidationToken under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/customDomains/{customDomainName}/refreshValidationToken' has no response schema. Returning 'any'.
+warning | Resource action load under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/load' has no response schema. Returning 'any'.
+warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/purge' has no response schema. Returning 'any'.
 warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/webAgents/{webAgentName}/knowledgeSources/{knowledgeSourceName}/purge' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.

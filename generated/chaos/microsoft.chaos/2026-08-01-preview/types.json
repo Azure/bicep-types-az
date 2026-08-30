@@ -2448,8 +2448,7 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/193"
-    },
-    "minLength": 1
+    }
   },
   {
     "$type": "ObjectType",

@@ -12,3 +12,6 @@ warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/pr
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.AzureTerraform/exportTerraform': Unable to find type segments
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.AzureTerraform/exportTerraform': Unable to find type segments

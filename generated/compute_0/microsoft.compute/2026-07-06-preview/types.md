@@ -339,7 +339,7 @@
 
 ## CancelOccurrenceRequest
 ### Properties
-* **resourceIds**: string[] (Required): The resources the cancellation should act on. If no resource is passed in the list, Scheduled Action will cancel the occurrence for all resources.
+* **resourceIds**: string[] (Required): The resources for which operations should be canceled. An empty array cancels all operations for all resources for the occurrence.
 
 ## CancelOperationsRequest
 ### Properties
@@ -391,8 +391,8 @@
 
 ## DelayRequest
 ### Properties
-* **delay**: string (Required): The exact time to delay the operations to
-* **resourceIds**: string[] (Required): The resources that should be delayed. If empty, the delay will apply to the all resources in the occurrence.
+* **delay**: string (Required): The new date and time for the occurrence, including the UTC offset.
+* **resourceIds**: string[] (Required): The resources to delay. An empty array delays all resources in the occurrence.
 
 ## DeleteResourceOperationResponse
 ### Properties
@@ -615,10 +615,10 @@
 
 ## NotificationProperties
 ### Properties
-* **destination**: string (Required): Where the notification should be sent. For email, it should follow email format.
-* **disabled**: bool: Tells if the notification is enabled or not.
-* **language**: 'en-us' | string (Required): The language the notification should be sent on.
-* **type**: 'Email' | string (Required): Type of notification to be sent.
+* **destination**: string (Required): The notification destination. For email notifications, specify a valid email address.
+* **disabled**: bool: If true, notifications to this destination are disabled.
+* **language**: 'en-us' | string (Required): The language used for the notification.
+* **type**: 'Email' | string (Required): The notification delivery method.
 
 ## Occurrence
 ### Properties
@@ -630,14 +630,14 @@
 
 ## OccurrenceProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Cancelling' | 'Created' | 'Failed' | 'Rescheduling' | 'Scheduled' | 'Succeeded' | string (ReadOnly): The aggregated provisioning state of the occurrence
-* **resultSummary**: [OccurrenceResultSummary](#occurrenceresultsummary) (Required, ReadOnly): The result for occurrences that achieved a terminal state
-* **scheduledTime**: string (Required, ReadOnly): The time the occurrence is scheduled for. This value can be changed by calling the delay API
+* **provisioningState**: 'Canceled' | 'Cancelling' | 'Created' | 'Failed' | 'Rescheduling' | 'Scheduled' | 'Succeeded' | string (ReadOnly): Read-only. The current state of the occurrence.
+* **resultSummary**: [OccurrenceResultSummary](#occurrenceresultsummary) (Required, ReadOnly): Read-only. The result summary after the occurrence reaches a final state.
+* **scheduledTime**: string (Required, ReadOnly): Read-only. The UTC date and time when the occurrence is scheduled to run.
 
 ## OccurrenceResultSummary
 ### Properties
-* **statuses**: [ResourceResultSummary](#resourceresultsummary)[] (Required): The summarized status of the resources.
-* **total**: int (Required): The total number of resources that the occurrence was supposed to act on.
+* **statuses**: [ResourceResultSummary](#resourceresultsummary)[] (Required): Resource counts grouped by result code.
+* **total**: int (Required): The number of resources targeted by the occurrence.
 
 ## OSDisk
 ### Properties
@@ -714,14 +714,14 @@
 
 ## RecurringScheduledActionsExecutionParameters
 ### Properties
-* **optimizationPreference**: 'Availability' | 'Cost' | 'CostAvailabilityBalanced' | string: Details that could optimize the user's request
-* **retryPolicy**: [RecurringScheduledActionsRetryPolicy](#recurringscheduledactionsretrypolicy): Retry policy the user can pass
+* **optimizationPreference**: 'Availability' | 'Cost' | 'CostAvailabilityBalanced' | string: The preferred optimization goal.
+* **retryPolicy**: [RecurringScheduledActionsRetryPolicy](#recurringscheduledactionsretrypolicy): The retry settings for failed resource operations.
 
 ## RecurringScheduledActionsRetryPolicy
 ### Properties
-* **onFailureAction**: 'Create' | 'Deallocate' | 'Delete' | 'Hibernate' | 'Start' | 'Unknown' | string: Action to take on failure
-* **retryCount**: int: Retry count for the request
-* **retryWindowInMinutes**: int: Retry window in minutes for the request
+* **onFailureAction**: 'Create' | 'Deallocate' | 'Delete' | 'Hibernate' | 'Start' | 'Unknown' | string: The resource operation to retry after a failure.
+* **retryCount**: int: The maximum number of retry attempts.
+* **retryWindowInMinutes**: int: The time window, in minutes, during which retries can occur.
 
 ## ReimagePayload
 ### Properties
@@ -742,11 +742,11 @@
 
 ## ResourceAttachRequest
 ### Properties
-* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): List of resources to be attached/patched
+* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The list of resources to attach to the scheduled action.
 
 ## ResourceDetachRequest
 ### Properties
-* **resources**: string[] (Required): List of resources to be detached
+* **resources**: string[] (Required): The Azure resource IDs of the resources to remove.
 
 ## ResourceNotificationDetails
 ### Properties
@@ -783,12 +783,12 @@
 
 ## ResourceOperationResponse
 ### Properties
-* **resourcesStatuses**: [ResourceStatus](#resourcestatus)[] (Required): The resource status of for each resource
-* **totalResources**: int (Required): The total number of resources operated on
+* **resourcesStatuses**: [ResourceStatus](#resourcestatus)[] (Required): The operation result for each resource.
+* **totalResources**: int (Required): The number of resources included in the operation.
 
 ## ResourcePatchRequest
 ### Properties
-* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The list of resources we watch to patch
+* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The resources and notification settings to update.
 
 ## ResourceProvisionPayload
 ### Properties
@@ -827,9 +827,9 @@
 
 ## ResourceResultSummary
 ### Properties
-* **code**: string (Required): The error code for those resources. In case of success, code is populated with Success.
-* **count**: int (Required): The number of resources that the code applies to.
-* **errorDetails**: [AzureCoreFoundationsError](#azurecorefoundationserror): The error details for the resources. Not populated on success cases.
+* **code**: string (Required): The result code shared by the resources in this group. A successful result uses `Success`.
+* **count**: int (Required): The number of resources with this result code.
+* **errorDetails**: [AzureCoreFoundationsError](#azurecorefoundationserror): Error details for failed resources. This property is omitted for successful results.
 
 ## Resources
 ### Properties
@@ -837,9 +837,9 @@
 
 ## ResourceStatus
 ### Properties
-* **error**: [AzureCoreFoundationsError](#azurecorefoundationserror): Errors encountered while trying to perform
-* **resourceId**: string (Required): The arm identifier of the resource
-* **status**: 'Failed' | 'Succeeded' | string (Required, ReadOnly): The state the resource is currently on
+* **error**: [AzureCoreFoundationsError](#azurecorefoundationserror): Error details when the operation fails for the resource.
+* **resourceId**: string (Required): The Azure resource ID of the targeted resource.
+* **status**: 'Failed' | 'Succeeded' | string (Required, ReadOnly): The result of the operation for the resource.
 
 ## ResourcesWithContext
 ### Properties
@@ -858,30 +858,29 @@
 
 ## ScheduledActionProperties
 ### Properties
-* **actionType**: 'Deallocate' | 'Hibernate' | 'Start' | string (Required): The action the scheduled action should perform in the resources
-* **disabled**: bool: Tell if the scheduled action is disabled or not
-* **endTime**: string: The time when the scheduled action is supposed to stop scheduling
-* **notificationSettings**: [NotificationProperties](#notificationproperties)[] (Required): The notification settings for the scheduled action
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last provisioning operation performed on the resource.
-* **resourceType**: 'VirtualMachine' | 'VirtualMachineScaleSet' | string (Required): The type of resource the scheduled action is targeting
-* **schedule**: [ScheduledActionsSchedule](#scheduledactionsschedule) (Required): The schedule the scheduled action is supposed to follow
-* **startTime**: string (Required): The time which the scheduled action is supposed to start running
+* **actionType**: 'Deallocate' | 'Hibernate' | 'Start' | string (Required): The operation performed on the targeted resources.
+* **disabled**: bool: Indicates whether new occurrences are disabled.
+* **endTime**: string: The date and time, including UTC offset, after which no new occurrences are scheduled.
+* **notificationSettings**: [NotificationProperties](#notificationproperties)[] (Required): Notification settings that apply to the scheduled action.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): Read-only. The provisioning state of the scheduled action.
+* **resourceType**: 'VirtualMachine' | 'VirtualMachineScaleSet' | string (Required): The type of compute resource targeted by the action.
+* **schedule**: [ScheduledActionsSchedule](#scheduledactionsschedule) (Required): The recurring schedule.
+* **startTime**: string (Required): The date and time, including UTC offset, when the schedule becomes active.
 
 ## ScheduledActionResourceInput
 ### Properties
-* **notificationSettings**: [NotificationProperties](#notificationproperties)[]: The desired notification settings for the specified resource.
-* **resourceId**: string (Required): The ARM Id of the resource.
-"subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Compute/virtualMachines/{vmName}"
+* **notificationSettings**: [NotificationProperties](#notificationproperties)[]: Notification settings that apply only to this resource.
+* **resourceId**: string (Required): The Azure resource ID of the targeted virtual machine.
 
 ## ScheduledActionsSchedule
 ### Properties
-* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: The type of deadline the scheduled action is supposed to follow for the schedule. If no value is passed, it will default to InitiateAt.
-* **executionParameters**: [RecurringScheduledActionsExecutionParameters](#recurringscheduledactionsexecutionparameters): The execution parameters the scheduled action is supposed to follow
-* **requestedDaysOfTheMonth**: (int {minValue: 1, maxValue: 31})[]: The days of the month the scheduled action is supposed to run on. If empty, it means it will run on every day of the month.
-* **requestedMonths**: ('All' | 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string)[]: The months the scheduled action is supposed to run on. If empty, it means it will run on every month.
-* **requestedWeekDays**: ('All' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: The week days the scheduled action is supposed to run on. If empty, it means it will run on every week day.
-* **scheduledTime**: string (Required): The time the scheduled action is supposed to run on
-* **timeZone**: string (Required): The timezone the scheduled time is specified on
+* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: How the scheduled time is interpreted. The default is `InitiateAt`.
+* **executionParameters**: [RecurringScheduledActionsExecutionParameters](#recurringscheduledactionsexecutionparameters): Settings that control operation execution and retries.
+* **requestedDaysOfTheMonth**: (int {minValue: 1, maxValue: 31})[]: The calendar days when the action runs. An empty array means every day of the month.
+* **requestedMonths**: ('All' | 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string)[]: The months when the action runs. An empty array means every month.
+* **requestedWeekDays**: ('All' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: The days of the week when the action runs. An empty array means every day of the week.
+* **scheduledTime**: string (Required): The local time of day when the scheduled action runs.
+* **timeZone**: string (Required): The time zone used to interpret the scheduled time.
 
 ## ScheduledEventsAdditionalPublishingTargets
 ### Properties

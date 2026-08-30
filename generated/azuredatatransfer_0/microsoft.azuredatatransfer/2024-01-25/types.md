@@ -140,7 +140,7 @@
 * **dataType**: 'Blob' | 'Table' | string: Transfer Storage Blobs or Tables
 * **flowId**: string (ReadOnly): Dataflow GUID associated with this flow
 * **flowType**: 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'Unknown' | string: The flow type for this flow
-* **keyVaultUri**: string: AME, PME, or TORUS only! AKV Chain Containing SAS Token
+* **keyVaultUri**: string: URI to a Key Vault Secret containing a SAS token.
 * **linkedFlowId**: string (ReadOnly): Resource ID of the linked flow
 * **linkStatus**: 'Linked' | 'Unlinked' | string (ReadOnly): Link status of the current flow
 * **messagingOptions**: [MessagingOptions](#messagingoptions): The messaging options for this flow
@@ -218,7 +218,7 @@
 * **flowId**: string (ReadOnly): Dataflow GUID associated with this flow
 * **flowType**: 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'Unknown' | string: The flow type for this flow
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-* **keyVaultUri**: string: AME, PME, or TORUS only! AKV Chain Containing SAS Token
+* **keyVaultUri**: string: URI to a Key Vault Secret containing a SAS token.
 * **linkedFlowId**: string (ReadOnly): Resource ID of the linked flow
 * **linkStatus**: 'Linked' | 'Unlinked' | string (ReadOnly): Link status of the current flow
 * **location**: string (Required): The geo-location where the resource lives

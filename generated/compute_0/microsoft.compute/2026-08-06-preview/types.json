@@ -5550,56 +5550,56 @@
           "$ref": "#/433"
         },
         "flags": 1,
-        "description": "The type of resource the scheduled action is targeting"
+        "description": "The type of compute resource targeted by the action."
       },
       "actionType": {
         "type": {
           "$ref": "#/437"
         },
         "flags": 1,
-        "description": "The action the scheduled action should perform in the resources"
+        "description": "The operation performed on the targeted resources."
       },
       "startTime": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The time which the scheduled action is supposed to start running"
+        "description": "The date and time, including UTC offset, when the schedule becomes active."
       },
       "endTime": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The time when the scheduled action is supposed to stop scheduling"
+        "description": "The date and time, including UTC offset, after which no new occurrences are scheduled."
       },
       "schedule": {
         "type": {
           "$ref": "#/438"
         },
         "flags": 1,
-        "description": "The schedule the scheduled action is supposed to follow"
+        "description": "The recurring schedule."
       },
       "notificationSettings": {
         "type": {
           "$ref": "#/488"
         },
         "flags": 1,
-        "description": "The notification settings for the scheduled action"
+        "description": "Notification settings that apply to the scheduled action."
       },
       "disabled": {
         "type": {
           "$ref": "#/44"
         },
         "flags": 0,
-        "description": "Tell if the scheduled action is disabled or not"
+        "description": "Indicates whether new occurrences are disabled."
       },
       "provisioningState": {
         "type": {
           "$ref": "#/493"
         },
         "flags": 2,
-        "description": "The status of the last provisioning operation performed on the resource."
+        "description": "Read-only. The provisioning state of the scheduled action."
       }
     }
   },
@@ -5663,49 +5663,49 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The time the scheduled action is supposed to run on"
+        "description": "The local time of day when the scheduled action runs."
       },
       "timeZone": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The timezone the scheduled time is specified on"
+        "description": "The time zone used to interpret the scheduled time."
       },
       "requestedWeekDays": {
         "type": {
           "$ref": "#/448"
         },
         "flags": 0,
-        "description": "The week days the scheduled action is supposed to run on. If empty, it means it will run on every week day."
+        "description": "The days of the week when the action runs. An empty array means every day of the week."
       },
       "requestedMonths": {
         "type": {
           "$ref": "#/463"
         },
         "flags": 0,
-        "description": "The months the scheduled action is supposed to run on. If empty, it means it will run on every month."
+        "description": "The months when the action runs. An empty array means every month."
       },
       "requestedDaysOfTheMonth": {
         "type": {
           "$ref": "#/465"
         },
         "flags": 0,
-        "description": "The days of the month the scheduled action is supposed to run on. If empty, it means it will run on every day of the month."
+        "description": "The calendar days when the action runs. An empty array means every day of the month."
       },
       "executionParameters": {
         "type": {
           "$ref": "#/466"
         },
         "flags": 0,
-        "description": "The execution parameters the scheduled action is supposed to follow"
+        "description": "Settings that control operation execution and retries."
       },
       "deadlineType": {
         "type": {
           "$ref": "#/482"
         },
         "flags": 0,
-        "description": "The type of deadline the scheduled action is supposed to follow for the schedule. If no value is passed, it will default to InitiateAt."
+        "description": "How the scheduled time is interpreted. The default is `InitiateAt`."
       }
     }
   },
@@ -5904,14 +5904,14 @@
           "$ref": "#/470"
         },
         "flags": 0,
-        "description": "Details that could optimize the user's request"
+        "description": "The preferred optimization goal."
       },
       "retryPolicy": {
         "type": {
           "$ref": "#/471"
         },
         "flags": 0,
-        "description": "Retry policy the user can pass"
+        "description": "The retry settings for failed resource operations."
       }
     }
   },
@@ -5953,21 +5953,21 @@
           "$ref": "#/17"
         },
         "flags": 0,
-        "description": "Retry count for the request"
+        "description": "The maximum number of retry attempts."
       },
       "retryWindowInMinutes": {
         "type": {
           "$ref": "#/17"
         },
         "flags": 0,
-        "description": "Retry window in minutes for the request"
+        "description": "The time window, in minutes, during which retries can occur."
       },
       "onFailureAction": {
         "type": {
           "$ref": "#/478"
         },
         "flags": 0,
-        "description": "Action to take on failure"
+        "description": "The resource operation to retry after a failure."
       }
     }
   },
@@ -6059,28 +6059,28 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "Where the notification should be sent. For email, it should follow email format."
+        "description": "The notification destination. For email notifications, specify a valid email address."
       },
       "type": {
         "type": {
           "$ref": "#/485"
         },
         "flags": 1,
-        "description": "Type of notification to be sent."
+        "description": "The notification delivery method."
       },
       "language": {
         "type": {
           "$ref": "#/487"
         },
         "flags": 1,
-        "description": "The language the notification should be sent on."
+        "description": "The language used for the notification."
       },
       "disabled": {
         "type": {
           "$ref": "#/44"
         },
         "flags": 0,
-        "description": "Tells if the notification is enabled or not."
+        "description": "If true, notifications to this destination are disabled."
       }
     }
   },
@@ -6242,21 +6242,21 @@
           "$ref": "#/2"
         },
         "flags": 3,
-        "description": "The time the occurrence is scheduled for. This value can be changed by calling the delay API"
+        "description": "Read-only. The UTC date and time when the occurrence is scheduled to run."
       },
       "resultSummary": {
         "type": {
           "$ref": "#/501"
         },
         "flags": 3,
-        "description": "The result for occurrences that achieved a terminal state"
+        "description": "Read-only. The result summary after the occurrence reaches a final state."
       },
       "provisioningState": {
         "type": {
           "$ref": "#/514"
         },
         "flags": 2,
-        "description": "The aggregated provisioning state of the occurrence"
+        "description": "Read-only. The current state of the occurrence."
       }
     }
   },
@@ -6269,14 +6269,14 @@
           "$ref": "#/17"
         },
         "flags": 1,
-        "description": "The total number of resources that the occurrence was supposed to act on."
+        "description": "The number of resources targeted by the occurrence."
       },
       "statuses": {
         "type": {
           "$ref": "#/506"
         },
         "flags": 1,
-        "description": "The summarized status of the resources."
+        "description": "Resource counts grouped by result code."
       }
     }
   },
@@ -6289,21 +6289,21 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The error code for those resources. In case of success, code is populated with Success."
+        "description": "The result code shared by the resources in this group. A successful result uses `Success`."
       },
       "count": {
         "type": {
           "$ref": "#/17"
         },
         "flags": 1,
-        "description": "The number of resources that the code applies to."
+        "description": "The number of resources with this result code."
       },
       "errorDetails": {
         "type": {
           "$ref": "#/503"
         },
         "flags": 0,
-        "description": "The error details for the resources. Not populated on success cases."
+        "description": "Error details for failed resources. This property is omitted for successful results."
       }
     }
   },
@@ -6457,14 +6457,21 @@
   },
   {
     "$type": "ObjectType",
-    "name": "GetOperationStatusResponse",
+    "name": "BulkCreateCustomOperationStatusListResult",
     "properties": {
       "results": {
         "type": {
           "$ref": "#/566"
         },
         "flags": 1,
-        "description": "An array of resource operations based on their operation ids"
+        "description": "The virtual machine operation statuses on this page."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of operation statuses."
       }
     }
   },
@@ -7123,7 +7130,7 @@
           "$ref": "#/572"
         },
         "flags": 1,
-        "description": "List of resources to be attached/patched"
+        "description": "The list of resources to attach to the scheduled action."
       }
     }
   },
@@ -7136,14 +7143,14 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The ARM Id of the resource.\n\"subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Compute/virtualMachines/{vmName}\""
+        "description": "The Azure resource ID of the targeted virtual machine."
       },
       "notificationSettings": {
         "type": {
           "$ref": "#/571"
         },
         "flags": 0,
-        "description": "The desired notification settings for the specified resource."
+        "description": "Notification settings that apply only to this resource."
       }
     }
   },
@@ -7168,14 +7175,14 @@
           "$ref": "#/17"
         },
         "flags": 1,
-        "description": "The total number of resources operated on"
+        "description": "The number of resources included in the operation."
       },
       "resourcesStatuses": {
         "type": {
           "$ref": "#/578"
         },
         "flags": 1,
-        "description": "The resource status of for each resource"
+        "description": "The operation result for each resource."
       }
     }
   },
@@ -7188,21 +7195,21 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The arm identifier of the resource"
+        "description": "The Azure resource ID of the targeted resource."
       },
       "status": {
         "type": {
           "$ref": "#/577"
         },
         "flags": 3,
-        "description": "The state the resource is currently on"
+        "description": "The result of the operation for the resource."
       },
       "error": {
         "type": {
           "$ref": "#/503"
         },
         "flags": 0,
-        "description": "Errors encountered while trying to perform"
+        "description": "Error details when the operation fails for the resource."
       }
     }
   },
@@ -7255,7 +7262,7 @@
           "$ref": "#/581"
         },
         "flags": 1,
-        "description": "The resources the cancellation should act on. If no resource is passed in the list, Scheduled Action will cancel the occurrence for all resources."
+        "description": "The resources for which operations should be canceled. An empty array cancels all operations for all resources for the occurrence."
       }
     }
   },
@@ -7286,7 +7293,7 @@
           "$ref": "#/584"
         },
         "flags": 1,
-        "description": "List of resources to be detached"
+        "description": "The Azure resource IDs of the resources to remove."
       }
     }
   },
@@ -7335,7 +7342,7 @@
           "$ref": "#/589"
         },
         "flags": 1,
-        "description": "The list of resources we watch to patch"
+        "description": "The resources and notification settings to update."
       }
     }
   },
@@ -7904,12 +7911,31 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "GetOperationStatusResponse",
+    "properties": {
+      "results": {
+        "type": {
+          "$ref": "#/629"
+        },
+        "flags": 1,
+        "description": "An array of resource operations based on their operation ids"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/518"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "virtualMachinesBulkGetOperationStatus",
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-08-06-preview",
     "output": {
-      "$ref": "#/517"
+      "$ref": "#/628"
     },
     "input": {
       "$ref": "#/626"
@@ -7969,7 +7995,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/631"
+          "$ref": "#/633"
         },
         "flags": 0,
         "description": "The results from the Hibernate request if no errors exist"
@@ -7988,10 +8014,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-08-06-preview",
     "output": {
-      "$ref": "#/630"
+      "$ref": "#/632"
     },
     "input": {
-      "$ref": "#/629"
+      "$ref": "#/631"
     }
   },
   {
@@ -8021,7 +8047,7 @@
       },
       "reimageParameters": {
         "type": {
-          "$ref": "#/634"
+          "$ref": "#/636"
         },
         "flags": 0,
         "description": "Reimage parameters including base profile and per-resource overrides"
@@ -8034,14 +8060,14 @@
     "properties": {
       "baseProfile": {
         "type": {
-          "$ref": "#/635"
+          "$ref": "#/637"
         },
         "flags": 0,
         "description": "Common reimage profile applied to all resources unless overridden"
       },
       "resourceOverrides": {
         "type": {
-          "$ref": "#/638"
+          "$ref": "#/640"
         },
         "flags": 0,
         "description": "Per-resource reimage overrides"
@@ -8068,7 +8094,7 @@
       },
       "osProfile": {
         "type": {
-          "$ref": "#/636"
+          "$ref": "#/638"
         },
         "flags": 0,
         "description": "Specifies information required for reimaging the non-ephemeral OS disk."
@@ -8108,7 +8134,7 @@
       },
       "profile": {
         "type": {
-          "$ref": "#/635"
+          "$ref": "#/637"
         },
         "flags": 1,
         "description": "Per-resource reimage profile override"
@@ -8118,7 +8144,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/637"
+      "$ref": "#/639"
     }
   },
   {
@@ -8148,7 +8174,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/640"
+          "$ref": "#/642"
         },
         "flags": 0,
         "description": "The results from the reimage request if no errors exist"
@@ -8167,10 +8193,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-08-06-preview",
     "output": {
-      "$ref": "#/639"
+      "$ref": "#/641"
     },
     "input": {
-      "$ref": "#/633"
+      "$ref": "#/635"
     }
   },
   {
@@ -8227,7 +8253,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/644"
+          "$ref": "#/646"
         },
         "flags": 0,
         "description": "The results from the start request if no errors exist"
@@ -8246,10 +8272,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-08-06-preview",
     "output": {
-      "$ref": "#/643"
+      "$ref": "#/645"
     },
     "input": {
-      "$ref": "#/642"
+      "$ref": "#/644"
     }
   },
   {
@@ -8258,7 +8284,7 @@
     "properties": {
       "resourceConfigParameters": {
         "type": {
-          "$ref": "#/647"
+          "$ref": "#/649"
         },
         "flags": 1,
         "description": "resource creation payload"
@@ -8278,14 +8304,14 @@
     "properties": {
       "baseProfile": {
         "type": {
-          "$ref": "#/648"
+          "$ref": "#/650"
         },
         "flags": 0,
         "description": "Bulk Actions Virtual Machine Profile object that contains VM properties that are common across all VMs in this batch"
       },
       "resourceOverrides": {
         "type": {
-          "$ref": "#/650"
+          "$ref": "#/652"
         },
         "flags": 0,
         "description": "Bulk Actions Virtual Machine Profile array, that contains VM properties that should be overridden for each VM in the batch"
@@ -8306,7 +8332,7 @@
       },
       "flexProperties": {
         "type": {
-          "$ref": "#/651"
+          "$ref": "#/653"
         },
         "flags": 1,
         "description": "Flex properties used for VDI resource creation scenarios"
@@ -8332,7 +8358,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/649"
+      "$ref": "#/651"
     }
   },
   {
@@ -8341,14 +8367,14 @@
     "properties": {
       "vmSizeProfiles": {
         "type": {
-          "$ref": "#/652"
+          "$ref": "#/654"
         },
         "flags": 1,
         "description": "The list of VM size profiles to use for flex creation"
       },
       "osType": {
         "type": {
-          "$ref": "#/655"
+          "$ref": "#/657"
         },
         "flags": 1,
         "description": "The operating system type for the VMs"
@@ -8396,10 +8422,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/653"
+        "$ref": "#/655"
       },
       {
-        "$ref": "#/654"
+        "$ref": "#/656"
       },
       {
         "$ref": "#/2"
@@ -8415,7 +8441,7 @@
       "$ref": "#/610"
     },
     "input": {
-      "$ref": "#/646"
+      "$ref": "#/648"
     }
   },
   {
@@ -8439,14 +8465,14 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The exact time to delay the operations to"
+        "description": "The new date and time for the occurrence, including the UTC offset."
       },
       "resourceIds": {
         "type": {
-          "$ref": "#/659"
+          "$ref": "#/661"
         },
         "flags": 1,
-        "description": "The resources that should be delayed. If empty, the delay will apply to the all resources in the occurrence."
+        "description": "The resources to delay. An empty array delays all resources in the occurrence."
       }
     }
   },
@@ -8465,7 +8491,7 @@
       "$ref": "#/573"
     },
     "input": {
-      "$ref": "#/658"
+      "$ref": "#/660"
     }
   }
 ]

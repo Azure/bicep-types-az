@@ -327,6 +327,7 @@ When specified and not empty, only the referenced policy definitions will be enr
 * **description**: string: The description of the policy exemption.
 * **displayName**: string: The display name of the policy exemption.
 * **exemptionCategory**: 'Mitigated' | 'Waiver' | string (Required): The policy exemption category. Possible values are Waiver and Mitigated.
+* **exemptionManagementMode**: 'Admin' | 'UserSelfServe' | string: The mode indicating how the policy exemption is managed.
 * **expiresOn**: string: The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
 * **metadata**: any: The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
 * **policyAssignmentId**: string (Required): The ID of the policy assignment that is being exempted.
