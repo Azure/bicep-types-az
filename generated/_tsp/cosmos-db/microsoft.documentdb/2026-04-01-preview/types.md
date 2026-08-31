@@ -1800,7 +1800,7 @@ usage for this key.
 
 ## FleetspaceProperties
 ### Properties
-* **dataRegions**: string[]: List of data regions assigned to the fleetspace. Eg [westus2]
+* **dataRegions**: string[] {minLength: 1}: List of data regions assigned to the fleetspace. Eg [westus2]
 * **fleetspaceApiKind**: 'NoSQL' | string: The kind of API this fleetspace belongs to. Acceptable values: 'NoSQL'
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Initializing' | 'InternallyReady' | 'Online' | 'Succeeded' | 'Uninitialized' | 'Updating' | string (ReadOnly): A provisioning state of the Fleetspace.
 * **serviceTier**: 'BusinessCritical' | 'GeneralPurpose' | string: Service Tier for the fleetspace. GeneralPurpose types refers to single write region accounts that can be added to this fleetspace, whereas BusinessCritical refers to multi write region.

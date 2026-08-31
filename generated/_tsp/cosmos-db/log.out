@@ -22,7 +22,7 @@ TypeSpec compiler v1.15.0
 - Compiling...
 ✔ Compiling
 - Running @azure-tools/typespec-bicep...
-✔ @azure-tools/typespec-bicep 310ms ../../../../../../../tmp/_bcp_1788175071928/cosmos-db_1/
+✔ @azure-tools/typespec-bicep 380ms ../../../../../../../tmp/_bcp_1788177517453/cosmos-db_1/
 
 Compilation completed successfully.
 

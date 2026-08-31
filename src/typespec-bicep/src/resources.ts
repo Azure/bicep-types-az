@@ -1,16 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {
-  EmitContext,
-  Enum,
-  Model,
-  ModelProperty,
-  Namespace,
-  Operation,
-  Program,
-  Type,
-} from "@typespec/compiler";
+import { EmitContext, Enum, Model, ModelProperty, Namespace, Operation, Program, Type } from "@typespec/compiler";
 import { ScopeType } from "bicep-types";
 import {
   getArmResources,
@@ -22,7 +13,7 @@ import {
   getSingletonResourceKey,
 } from "@azure-tools/typespec-azure-resource-manager";
 import { getAllHttpServices, getHttpOperation, HttpOperation } from "@typespec/http";
-import { BicepEmitterOptions } from "./lib.js";
+import { BicepEmitterOptions, $lib } from "./lib.js";
 
 /**
  * Describes the scope path segments for an ARM resource type.
@@ -83,9 +74,7 @@ export function getFullyQualifiedType(descriptor: ResourceDescriptor): string {
  * (getArmResources, resolveArmResources) to discover ARM resources,
  * their operations, and determine scopes from actual REST paths.
  */
-export function getProviderDefinitions(
-  context: EmitContext<BicepEmitterOptions>,
-): ProviderDefinition[] {
+export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>): ProviderDefinition[] {
   const program = context.program;
   const providers = new Map<string, ProviderDefinition>();
 
@@ -93,16 +82,29 @@ export function getProviderDefinitions(
   const armResources = getArmResources(program);
   const resolvedProvider = resolveArmResources(program);
   const resolvedResources = resolvedProvider.resources ?? [];
-  const customResourceRoutes = getCustomResourceRoutes(program);
-  const httpResourceScopes = getHttpResourceScopes(program);
+  const { customResourceRoutes, httpResourceScopes } = getHttpResourceMetadata(program);
 
   for (const armResource of armResources) {
     const namespace = armResource.armProviderNamespace;
-    if (!namespace) continue;
+    if (!namespace) {
+      $lib.reportDiagnostic(program, {
+        code: "missing-provider-namespace",
+        target: armResource.typespecType,
+        format: { resource: armResource.name },
+      });
+      continue;
+    }
 
     const model = armResource.typespecType;
     const apiVersion = getApiVersion(program, model);
-    if (!apiVersion) continue;
+    if (!apiVersion) {
+      $lib.reportDiagnostic(program, {
+        code: "missing-api-version",
+        target: model,
+        format: { resource: armResource.name },
+      });
+      continue;
+    }
 
     const key = `${namespace.toLowerCase()}/${apiVersion}`;
     if (!providers.has(key)) {
@@ -122,27 +124,18 @@ export function getProviderDefinitions(
     // lifecycle operation returns a different model (e.g. a "backups" or
     // "commands" sub-path read that returns an unrelated response type) —
     // those aren't real instances of this resource.
-    const resolvedMatches = resolvedResources.filter(
-      (r) =>
-        (r.type === model || r.resourceName === armResource.name) &&
-        resolvedRepresentsModel(r, armResource),
-    );
+    const resolvedMatches = resolvedResources.filter((r) => (r.type === model || r.resourceName === armResource.name) && resolvedRepresentsModel(r, armResource));
 
     // Determine scopes from operations and paths
-    const { readableScopes, writableScopes } = getResourceScopesFromArm(
-      program,
-      armResource,
-      resolvedProvider,
-      resolvedMatches,
-      httpResourceScopes,
-    );
+    const { readableScopes, writableScopes } = getResourceScopesFromArm(program, armResource, resolvedMatches, httpResourceScopes);
 
     const routeMatches = customResourceRoutes.get(model) ?? [];
-    if (
-      readableScopes === ScopeType.None &&
-      writableScopes === ScopeType.None &&
-      routeMatches.length === 0
-    ) {
+    if (readableScopes === ScopeType.None && writableScopes === ScopeType.None && routeMatches.length === 0) {
+      $lib.reportDiagnostic(program, {
+        code: "no-resource-scopes",
+        target: model,
+        format: { resource: armResource.name },
+      });
       continue;
     }
 
@@ -150,34 +143,40 @@ export function getProviderDefinitions(
     const isSingleton = isSingletonResource(program, model);
     const singletonKey = isSingleton ? getSingletonResourceKey(program, model) : undefined;
 
-    const resourcePaths: ResourceRoute[] = resolvedMatches.length > 0
-      ? resolvedMatches.map((resolved) => ({
-          typeSegments: getResolvedTypeSegments(
-            resolved.resourceType.types,
-            armResource.collectionName,
-          ),
-          readableScopes,
-          writableScopes,
-          resolved,
-        }))
-      : routeMatches.length > 0
-        ? routeMatches
-        : [{
-            typeSegments: armResource.collectionName
-              ? [armResource.collectionName]
-              : [],
+    const resourcePaths: ResourceRoute[] =
+      resolvedMatches.length > 0
+        ? resolvedMatches.map((resolved) => ({
+            typeSegments: getResolvedTypeSegments(resolved.resourceType.types, armResource.collectionName),
             readableScopes,
             writableScopes,
-          }];
+            resolved,
+          }))
+        : routeMatches.length > 0
+          ? routeMatches.map((route) => ({
+              ...route,
+              readableScopes: route.readableScopes | readableScopes,
+              writableScopes: route.writableScopes | writableScopes,
+            }))
+          : [
+              {
+                typeSegments: armResource.collectionName ? [armResource.collectionName] : [],
+                readableScopes,
+                writableScopes,
+              },
+            ];
     const seenResourcePaths = new Set<string>();
 
     for (const resourcePath of resourcePaths) {
-      if (resourcePath.typeSegments.length === 0) continue;
+      if (resourcePath.typeSegments.length === 0) {
+        $lib.reportDiagnostic(program, {
+          code: "unmapped-type-segments",
+          target: model,
+          format: { resource: armResource.name },
+        });
+        continue;
+      }
 
-      const expandedSegmentSets = expandParameterizedSegments(
-        resourcePath.typeSegments,
-        armResource,
-      );
+      const expandedSegmentSets = expandParameterizedSegments(resourcePath.typeSegments, armResource);
 
       for (const segments of expandedSegmentSets) {
         const fullyQualifiedType = `${namespace}/${segments.join("/")}`.toLowerCase();
@@ -236,24 +235,14 @@ interface ResourceScopes {
  * such operations get attached to the outer resource type even though their
  * request/response body is unrelated to it.
  */
-function resolvedRepresentsModel(
-  resolved: ResolvedResource,
-  armResource: ArmResourceDetails,
-): boolean {
+function resolvedRepresentsModel(resolved: ResolvedResource, armResource: ArmResourceDetails): boolean {
   const collectionName = armResource.collectionName;
-  return collectionName !== undefined &&
-    resolved.resourceType.types.at(-1)?.toLowerCase() === collectionName.toLowerCase();
+  return collectionName !== undefined && resolved.resourceType.types.at(-1)?.toLowerCase() === collectionName.toLowerCase();
 }
 
-function getResolvedTypeSegments(
-  resolvedTypes: string[],
-  collectionName: string | undefined,
-): string[] {
+function getResolvedTypeSegments(resolvedTypes: string[], collectionName: string | undefined): string[] {
   const typeSegments = [...resolvedTypes];
-  if (
-    collectionName &&
-    typeSegments.at(-1)?.toLowerCase() !== collectionName.toLowerCase()
-  ) {
+  if (collectionName && typeSegments.at(-1)?.toLowerCase() !== collectionName.toLowerCase()) {
     typeSegments.push(collectionName);
   }
 
@@ -264,72 +253,53 @@ function getResolvedTypeSegments(
  * Finds resource instance GET routes that are intentionally implemented as
  * custom HTTP operations instead of @armResourceOperations interfaces.
  */
-function getCustomResourceRoutes(
-  program: Program,
-): Map<Model, ResourceRoute[]> {
-  const routes = new Map<Model, ResourceRoute[]>();
+function getHttpResourceMetadata(program: Program): {
+  customResourceRoutes: Map<Model, ResourceRoute[]>;
+  httpResourceScopes: Map<string, ResourceScopes>;
+} {
+  const customResourceRoutes = new Map<Model, ResourceRoute[]>();
+  const httpResourceScopes = new Map<string, ResourceScopes>();
   const [services, diagnostics] = getAllHttpServices(program);
   program.reportDiagnostics(diagnostics);
 
   for (const service of services) {
     for (const operation of service.operations) {
-      if (operation.verb !== "get" || !isResourceInstancePath(operation.path)) {
+      if (!isResourceInstancePath(operation.path)) {
         continue;
       }
 
       const typeSegments = getTypeSegmentsFromPath(operation.path);
       if (!typeSegments) continue;
 
-      for (const responseModel of getResponseBodyModels(operation)) {
-        const existing = routes.get(responseModel) ?? [];
-        if (!existing.some((route) =>
-          route.typeSegments.join("/").toLowerCase() ===
-          typeSegments.join("/").toLowerCase()
-        )) {
-          existing.push({
-            typeSegments,
-            readableScopes: getScopeFromPath(operation.path),
-            writableScopes: ScopeType.None,
-          });
-          routes.set(responseModel, existing);
-        }
-      }
-    }
-  }
-
-  return routes;
-}
-
-function getHttpResourceScopes(program: Program): Map<string, ResourceScopes> {
-  const scopes = new Map<string, ResourceScopes>();
-  const [services, diagnostics] = getAllHttpServices(program);
-  program.reportDiagnostics(diagnostics);
-
-  for (const service of services) {
-    for (const operation of service.operations) {
-      if (!isResourceInstancePath(operation.path)) continue;
-
-      const typeSegments = getTypeSegmentsFromPath(operation.path);
-      if (!typeSegments) continue;
-
       const key = typeSegments.join("/").toLowerCase();
-      const existing = scopes.get(key) ?? {
+      const scopes = httpResourceScopes.get(key) ?? {
         readableScopes: ScopeType.None,
         writableScopes: ScopeType.None,
       };
       const scope = getScopeFromPath(operation.path);
 
       if (operation.verb === "get") {
-        existing.readableScopes |= scope;
-      } else if (operation.verb === "put" || operation.verb === "patch") {
-        existing.writableScopes |= scope;
-      }
+        scopes.readableScopes |= scope;
 
-      scopes.set(key, existing);
+        for (const responseModel of getResponseBodyModels(operation)) {
+          const existing = customResourceRoutes.get(responseModel) ?? [];
+          if (!existing.some((route) => route.typeSegments.join("/").toLowerCase() === key)) {
+            existing.push({
+              typeSegments,
+              readableScopes: scope,
+              writableScopes: ScopeType.None,
+            });
+            customResourceRoutes.set(responseModel, existing);
+          }
+        }
+      } else if (operation.verb === "put" || operation.verb === "patch") {
+        scopes.writableScopes |= scope;
+      }
+      httpResourceScopes.set(key, scopes);
     }
   }
 
-  return scopes;
+  return { customResourceRoutes, httpResourceScopes };
 }
 
 function isResourceInstancePath(path: string): boolean {
@@ -338,9 +308,7 @@ function isResourceInstancePath(path: string): boolean {
 
 function getTypeSegmentsFromPath(path: string): string[] | undefined {
   const segments = path.split("/").filter(Boolean);
-  const providerIndex = segments.findIndex(
-    (segment) => segment.toLowerCase() === "providers",
-  );
+  const providerIndex = segments.findIndex((segment) => segment.toLowerCase() === "providers");
   if (providerIndex < 0 || providerIndex + 2 >= segments.length) {
     return undefined;
   }
@@ -350,9 +318,7 @@ function getTypeSegmentsFromPath(path: string): string[] | undefined {
   return typeSegments.length > 0 ? typeSegments : undefined;
 }
 
-function* getResponseBodyModels(
-  operation: HttpOperation,
-): IterableIterator<Model> {
+function* getResponseBodyModels(operation: HttpOperation): IterableIterator<Model> {
   for (const response of operation.responses) {
     for (const content of response.responses) {
       if (content.body?.type.kind === "Model") {
@@ -376,33 +342,17 @@ function* getResponseBodyModels(
  * If no parameterized segments exist, returns the original array wrapped
  * in a single-element array.
  */
-function expandParameterizedSegments(
-  typeSegments: string[],
-  armResource: ArmResourceDetails,
-): string[][] {
-  // Find parameterized segments (segments wrapped in {})
-  const paramIndex = typeSegments.findIndex(
-    (seg) => seg.startsWith("{") && seg.endsWith("}"),
-  );
-  if (paramIndex === -1) {
-    return [typeSegments];
+function expandParameterizedSegments(typeSegments: string[], armResource: ArmResourceDetails): string[][] {
+  let expandedSegments: string[][] = [[]];
+
+  for (const segment of typeSegments) {
+    const isParameter = segment.startsWith("{") && segment.endsWith("}");
+    const values = isParameter ? (resolvePathParameterEnum(segment.slice(1, -1), armResource) ?? [segment]) : [segment];
+
+    expandedSegments = expandedSegments.flatMap((prefix) => values.map((value) => [...prefix, value]));
   }
 
-  const paramName = typeSegments[paramIndex].slice(1, -1);
-  const enumValues = resolvePathParameterEnum(paramName, armResource);
-  if (!enumValues || enumValues.length === 0) {
-    // Cannot resolve — keep the parameterized segment as-is
-    return [typeSegments];
-  }
-
-  // Replace the parameterized segment with each concrete value
-  const result: string[][] = [];
-  for (const value of enumValues) {
-    const expanded = [...typeSegments];
-    expanded[paramIndex] = value;
-    result.push(expanded);
-  }
-  return result;
+  return expandedSegments;
 }
 
 /**
@@ -411,10 +361,7 @@ function expandParameterizedSegments(
  * Searches the resource's lifecycle and action operations for a @path
  * parameter matching the given name, then extracts enum member values.
  */
-function resolvePathParameterEnum(
-  paramName: string,
-  armResource: ArmResourceDetails,
-): string[] | undefined {
+function resolvePathParameterEnum(paramName: string, armResource: ArmResourceDetails): string[] | undefined {
   // Collect all operations to search through
   const ops = armResource.operations;
   const allOps: { httpOperation: { parameters: { parameters: { param: { name: string; type: Type } }[] } } }[] = [];
@@ -478,29 +425,17 @@ function extractEnumValues(type: Type): string[] | undefined {
 function getResourceScopesFromArm(
   _program: Program,
   armResource: ArmResourceDetails,
-  resolvedProvider: ReturnType<typeof resolveArmResources>,
   resolvedMatches: ResolvedResource[],
   httpResourceScopes: Map<string, ResourceScopes>,
 ): { readableScopes: ScopeType; writableScopes: ScopeType } {
-  const lifecycle = resolveResourceOperations(
-    _program,
-    armResource.typespecType,
-  ).lifecycle;
+  const lifecycle = resolveResourceOperations(_program, armResource.typespecType).lifecycle;
 
-  // Try to find resolved resource details with path information
-  const resolvedResources = resolvedProvider.resources ?? [];
-  const matched = resolvedResources.filter(
-    (r) =>
-      r.type === armResource.typespecType ||
-      r.resourceName === armResource.name,
-  );
-
-  if (matched.length > 0) {
+  if (resolvedMatches.length > 0) {
     let readableScopes = ScopeType.None;
     let writableScopes = ScopeType.None;
 
-    for (const resolved of matched) {
-      const scope = getScopeFromPath(resolved.resourceInstancePath);
+    for (const resolved of resolvedMatches) {
+      const scope = armResource.kind === "Extension" ? ScopeType.Extension : getScopeFromPath(resolved.resourceInstancePath);
       const ops = resolved.operations;
 
       // Check for read operations
@@ -515,9 +450,7 @@ function getResourceScopesFromArm(
     }
 
     for (const resolved of resolvedMatches) {
-      const httpScopes = httpResourceScopes.get(
-        resolved.resourceType.types.join("/").toLowerCase(),
-      );
+      const httpScopes = httpResourceScopes.get(resolved.resourceType.types.join("/").toLowerCase());
       if (httpScopes) {
         readableScopes |= httpScopes.readableScopes;
         writableScopes |= httpScopes.writableScopes;
@@ -546,7 +479,7 @@ function getResourceScopesFromArm(
 
   // Refine scope from read operation path if available
   const firstLifecycleOperation = lifecycle.read ?? lifecycle.createOrUpdate ?? lifecycle.update;
-  if (firstLifecycleOperation) {
+  if (firstLifecycleOperation && armResource.kind !== "Extension") {
     scope = getArmOperationScope(_program, firstLifecycleOperation);
   }
 
@@ -569,14 +502,9 @@ function getArmOperationScope(
     return getScopeFromPath(operation.path);
   }
 
-  const [httpOperation, diagnostics] = getHttpOperation(
-    program,
-    operation.operation,
-  );
+  const [httpOperation, diagnostics] = getHttpOperation(program, operation.operation);
   program.reportDiagnostics(diagnostics);
-  return httpOperation.path
-    ? getScopeFromPath(httpOperation.path)
-    : getDefaultScopeFromKind(operation.resourceKind ?? "Proxy");
+  return httpOperation.path ? getScopeFromPath(httpOperation.path) : getDefaultScopeFromKind(operation.resourceKind ?? "Proxy");
 }
 
 /**
@@ -615,30 +543,14 @@ function getScopeFromPath(path: string): ScopeType {
  * Get default scope based on ARM resource kind.
  */
 function getDefaultScopeFromKind(kind: string): ScopeType {
-  switch (kind) {
-    case "Extension":
-      return ScopeType.Extension;
-    case "Tracked":
-      return ScopeType.ResourceGroup;
-    case "Proxy":
-      return ScopeType.ResourceGroup;
-    default:
-      return ScopeType.ResourceGroup;
-  }
+  return kind === "Extension" ? ScopeType.Extension : ScopeType.ResourceGroup;
 }
 
 /**
  * Discover POST actions associated with a canonical resolved resource path.
  */
-function discoverResourceActions(
-  resolved: ResolvedResource,
-  provider: ProviderDefinition,
-  typeSegments: string[],
-): void {
-  const operations = [
-    ...resolved.operations.actions,
-    ...resolved.operations.lists,
-  ];
+function discoverResourceActions(resolved: ResolvedResource, provider: ProviderDefinition, typeSegments: string[]): void {
+  const operations = [...resolved.operations.actions, ...resolved.operations.lists];
 
   for (const action of operations) {
     if (action.httpOperation.verb !== "post") continue;
@@ -657,10 +569,7 @@ function discoverResourceActions(
       writableScopes: getScopeFromPath(action.path),
     };
     const duplicate = provider.resourceActions.some(
-      (existing) =>
-        existing.actionName.toLowerCase() === actionName.toLowerCase() &&
-        getFullyQualifiedType(existing.descriptor).toLowerCase() ===
-          getFullyQualifiedType(descriptor).toLowerCase(),
+      (existing) => existing.actionName.toLowerCase() === actionName.toLowerCase() && getFullyQualifiedType(existing.descriptor).toLowerCase() === getFullyQualifiedType(descriptor).toLowerCase(),
     );
     if (duplicate) continue;
 
@@ -676,10 +585,7 @@ function discoverResourceActions(
 /**
  * Get the API version for a resource model.
  */
-function getApiVersion(
-  _program: Program,
-  model: Model,
-): string | undefined {
+function getApiVersion(_program: Program, model: Model): string | undefined {
   const ns = model.namespace;
   if (!ns) return undefined;
 
@@ -704,18 +610,14 @@ function getApiVersion(
 /**
  * Get the 'name' property on a resource model.
  */
-function getResourceNameProperty(
-  model: Model,
-): ModelProperty | undefined {
+function getResourceNameProperty(model: Model): ModelProperty | undefined {
   return model.properties.get("name");
 }
 
 /**
  * Get the response model from an ARM resource operation.
  */
-function getOperationResponseModel(
-  action: { httpOperation: { responses: readonly { type?: Type }[] } },
-): Model | undefined {
+function getOperationResponseModel(action: { httpOperation: { responses: readonly { type?: Type }[] } }): Model | undefined {
   for (const response of action.httpOperation.responses) {
     if (response.type && response.type.kind === "Model") {
       return response.type;
@@ -727,9 +629,7 @@ function getOperationResponseModel(
 /**
  * Get the request body model from an ARM resource operation.
  */
-function getOperationRequestModel(
-  action: { httpOperation: { parameters: { body?: { type?: Type } } } },
-): Model | undefined {
+function getOperationRequestModel(action: { httpOperation: { parameters: { body?: { type?: Type } } } }): Model | undefined {
   const body = action.httpOperation.parameters.body;
   if (body?.type?.kind === "Model") {
     return body.type;

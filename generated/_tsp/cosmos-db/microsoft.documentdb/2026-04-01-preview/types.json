@@ -522,7 +522,8 @@
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/2"
-    }
+    },
+    "minLength": 1
   },
   {
     "$type": "ObjectType",

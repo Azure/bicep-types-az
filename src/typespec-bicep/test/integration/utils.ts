@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { readFile, readdir, stat, rm, mkdir, writeFile } from "fs/promises";
+import { readFile, readdir, stat, mkdir } from "fs/promises";
 import path from "path";
-import { compile, NodeHost } from "@typespec/compiler";
+import { compile, NodeHost, SourceLocation } from "@typespec/compiler";
 
 export const extensionDir = path.resolve(`${__dirname}/../../`);
 
@@ -20,10 +20,7 @@ export const defaultLogger: ILogger = {
 /**
  * Recursively find files matching a filter function.
  */
-export async function findRecursive(
-  basePath: string,
-  filter: (name: string) => boolean,
-): Promise<string[]> {
+export async function findRecursive(basePath: string, filter: (name: string) => boolean): Promise<string[]> {
   let results: string[] = [];
 
   for (const subPathName of await readdir(basePath)) {
@@ -53,10 +50,7 @@ export async function findRecursive(
  * Compare two directories recursively for content equality.
  * Returns the number of differences found.
  */
-export async function compareDirectories(
-  dir1: string,
-  dir2: string,
-): Promise<{ differences: number; details: string[] }> {
+export async function compareDirectories(dir1: string, dir2: string): Promise<{ differences: number; details: string[] }> {
   const details: string[] = [];
   let differences = 0;
 
@@ -108,11 +102,7 @@ export async function compareDirectories(
  *
  * This is the TypeSpec equivalent of autorest.bicep's `runAutorest` function.
  */
-export async function runTypeSpecEmitter(
-  logger: ILogger,
-  tspMainFile: string,
-  outputDir: string,
-): Promise<void> {
+export async function runTypeSpecEmitter(logger: ILogger, tspMainFile: string, outputDir: string): Promise<void> {
   const emitterPath = extensionDir;
 
   logger.out(`Compiling ${tspMainFile} -> ${outputDir}\n`);
@@ -128,12 +118,10 @@ export async function runTypeSpecEmitter(
   if (program.hasError()) {
     const diagnostics = program.diagnostics
       .filter((d) => d.severity === "error")
-      .map(
-        (d) => {
-          const loc = d.target && "file" in d.target ? ` at ${(d.target as any).file?.path}` : "";
-          return `${d.code}: ${typeof d.message === "string" ? d.message : d.message}${loc}`;
-        },
-      )
+      .map((d) => {
+        const loc = (d.target as SourceLocation)?.file.path ?? "";
+        return `${d.code}: ${typeof d.message === "string" ? d.message : d.message}${loc}`;
+      })
       .join("\n");
     throw new Error(`TypeSpec compilation failed:\n${diagnostics}`);
   }
@@ -141,9 +129,7 @@ export async function runTypeSpecEmitter(
   // Log warnings
   for (const diag of program.diagnostics) {
     if (diag.severity === "warning") {
-      logger.err(
-        `Warning: ${diag.code}: ${typeof diag.message === "string" ? diag.message : diag.message}\n`,
-      );
+      logger.err(`Warning: ${diag.code}: ${typeof diag.message === "string" ? diag.message : diag.message}\n`);
     }
   }
 }

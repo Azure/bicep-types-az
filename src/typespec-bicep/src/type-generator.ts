@@ -1,43 +1,12 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {
-  Enum,
-  getDiscriminatedUnionFromInheritance,
-  getDiscriminator,
-  getDoc,
-  getFormat,
-  getLifecycleVisibilityEnum,
-  getMaxLength,
-  getMaxValue,
-  getMinLength,
-  getMinValue,
-  getPattern,
-  getVisibilityForClass,
-  IntrinsicType,
-  isSecret,
-  Model,
-  ModelProperty,
-  Program,
-  Scalar,
-  Type,
-  Union,
-} from "@typespec/compiler";
-import {
-  BicepType,
-  DiscriminatedObjectType,
-  ObjectTypeProperty,
-  ObjectTypePropertyFlags,
-  TypeBaseKind,
-  TypeFactory,
-  TypeReference,
-} from "bicep-types";
-import {
-  getFullyQualifiedType,
-  ProviderDefinition,
-  ResourceDefinition,
-  ResourceDescriptor,
-} from "./resources.js";
+import { Enum, getDiscriminatedUnionFromInheritance, getDiscriminator, getDoc, getFormat, getNamespaceFullName, getLifecycleVisibilityEnum, getMaxItems, getMaxLength,
+  getMaxValue, getMinItems, getMinLength, getMinValue, getPattern, getVisibilityForClass, IntrinsicType, isSecret, Model, ModelProperty,
+  NoTarget, Program, Scalar, Type, Union } from "@typespec/compiler";
+import { BicepType, DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, TypeBaseKind, TypeFactory, TypeReference } from "bicep-types";
+import { getFullyQualifiedType, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources.js";
+import { $lib } from "./lib.js";
 
 const uuidLength = 36;
 const uuidPattern = "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$";
@@ -48,23 +17,25 @@ const uuidPattern = "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$";
  * This is the TypeSpec equivalent of autorest.bicep's type-generator.ts.
  * It converts TypeSpec model types into Bicep-types TypeFactory entries.
  */
-export function generateTypes(
-  program: Program,
-  definition: ProviderDefinition,
-): BicepType[] {
+export function generateTypes(program: Program, definition: ProviderDefinition): BicepType[] {
   const factory = new TypeFactory();
-  const namedDefinitions = new Map<string, TypeReference>();
+  const modelDefinitions = new Map<Model, TypeReference>();
+  const modelNames = new Map<Model, string>();
+  const usedModelNames = new Set<string>();
+  let anonymousModelCount = 0;
 
   function logWarning(message: string) {
     program.trace("typespec-bicep.warning", message);
+    $lib.reportDiagnostic(program, {
+      code: "emitter-warning",
+      target: NoTarget,
+      format: { message },
+    });
   }
 
   // --- Name type resolution ---
 
-  function getNameType(
-    fullyQualifiedType: string,
-    definition: ResourceDefinition,
-  ): TypeReference | undefined {
+  function getNameType(fullyQualifiedType: string, definition: ResourceDefinition): TypeReference | undefined {
     // Singletons have a fixed constant name (e.g. "default")
     if (definition.descriptor.constantName) {
       return factory.addStringLiteralType(definition.descriptor.constantName);
@@ -72,9 +43,7 @@ export function generateTypes(
 
     const nameProperty = definition.nameProperty;
     if (!nameProperty) {
-      logWarning(
-        `Skipping resource type ${fullyQualifiedType}: could not determine name type`,
-      );
+      logWarning(`Skipping resource type ${fullyQualifiedType}: could not determine name type`);
       return undefined;
     }
 
@@ -85,37 +54,16 @@ export function generateTypes(
 
   // --- Standard ARM resource properties ---
 
-  function getStandardizedResourceProperties(
-    descriptor: ResourceDescriptor,
-    resourceName: TypeReference,
-  ): Record<string, ObjectTypeProperty> {
-    const type = factory.addStringLiteralType(
-      getFullyQualifiedType(descriptor),
-    );
+  function getStandardizedResourceProperties(descriptor: ResourceDescriptor, resourceName: TypeReference): Record<string, ObjectTypeProperty> {
+    const type = factory.addStringLiteralType(getFullyQualifiedType(descriptor));
 
     return {
-      id: createObjectTypeProperty(
-        factory.addStringType(),
-        ObjectTypePropertyFlags.ReadOnly |
-          ObjectTypePropertyFlags.DeployTimeConstant,
-        "The resource id",
-      ),
-      name: createObjectTypeProperty(
-        resourceName,
-        ObjectTypePropertyFlags.Required |
-          ObjectTypePropertyFlags.DeployTimeConstant,
-        "The resource name",
-      ),
-      type: createObjectTypeProperty(
-        type,
-        ObjectTypePropertyFlags.ReadOnly |
-          ObjectTypePropertyFlags.DeployTimeConstant,
-        "The resource type",
-      ),
+      id: createObjectTypeProperty(factory.addStringType(), ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, "The resource id"),
+      name: createObjectTypeProperty(resourceName, ObjectTypePropertyFlags.Required | ObjectTypePropertyFlags.DeployTimeConstant, "The resource name"),
+      type: createObjectTypeProperty(type, ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, "The resource type"),
       apiVersion: createObjectTypeProperty(
         factory.addStringLiteralType(descriptor.apiVersion),
-        ObjectTypePropertyFlags.ReadOnly |
-          ObjectTypePropertyFlags.DeployTimeConstant,
+        ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant,
         "The resource api version",
       ),
     };
@@ -123,10 +71,7 @@ export function generateTypes(
 
   // --- Resource body processing ---
 
-  function processResourceBody(
-    fullyQualifiedType: string,
-    definition: ResourceDefinition,
-  ): TypeReference | undefined {
+  function processResourceBody(fullyQualifiedType: string, definition: ResourceDefinition): TypeReference | undefined {
     const { descriptor, putModel, getModel } = definition;
     const bodyModel = putModel ?? getModel;
 
@@ -135,27 +80,16 @@ export function generateTypes(
       return undefined;
     }
 
-    const resourceProperties = getStandardizedResourceProperties(
-      descriptor,
-      nameTypeRef,
-    );
+    const resourceProperties = getStandardizedResourceProperties(descriptor, nameTypeRef);
 
     let resourceDefinition: TypeReference;
     if (bodyModel) {
       // Check for discriminator
       const discriminatorProp = getDiscriminatorProperty(bodyModel);
       if (discriminatorProp) {
-        resourceDefinition = factory.addDiscriminatedObjectType(
-          getFullyQualifiedType(descriptor),
-          discriminatorProp,
-          resourceProperties,
-          {},
-        );
+        resourceDefinition = factory.addDiscriminatedObjectType(getFullyQualifiedType(descriptor), discriminatorProp, resourceProperties, {});
       } else {
-        resourceDefinition = factory.addObjectType(
-          getFullyQualifiedType(descriptor),
-          resourceProperties,
-        );
+        resourceDefinition = factory.addObjectType(getFullyQualifiedType(descriptor), resourceProperties);
       }
 
       // Add properties from the model (including inherited ARM envelope properties)
@@ -168,26 +102,17 @@ export function generateTypes(
         if (propertyType !== undefined) {
           const flags = parsePropertyFlags(prop);
           const description = getPropertyDescription(prop);
-          resourceProperties[propName] = createObjectTypeProperty(
-            propertyType,
-            flags,
-            description,
-          );
+          resourceProperties[propName] = createObjectTypeProperty(propertyType, flags, description);
         }
       }
 
       // Handle discriminated subtypes
       if (discriminatorProp) {
-        const discriminatedType = factory.lookupType(
-          resourceDefinition,
-        ) as DiscriminatedObjectType;
+        const discriminatedType = factory.lookupType(resourceDefinition) as DiscriminatedObjectType;
         handlePolymorphicType(discriminatedType, bodyModel);
       }
     } else {
-      resourceDefinition = factory.addObjectType(
-        getFullyQualifiedType(descriptor),
-        resourceProperties,
-      );
+      resourceDefinition = factory.addObjectType(getFullyQualifiedType(descriptor), resourceProperties);
     }
 
     return resourceDefinition;
@@ -206,9 +131,7 @@ export function generateTypes(
       // Multiple definitions for the same type — create discriminated type
       for (const def of definitions) {
         if (!def.descriptor.constantName) {
-          logWarning(
-            `Skipping resource type ${fullyQualifiedType}: found multiple definitions for the same type`,
-          );
+          logWarning(`Skipping resource type ${fullyQualifiedType}: found multiple definitions for the same type`);
           return null;
         }
       }
@@ -222,12 +145,7 @@ export function generateTypes(
         polymorphicBodies[def.descriptor.constantName] = bodyType;
       }
 
-      const discriminatedBodyType = factory.addDiscriminatedObjectType(
-        fullyQualifiedType,
-        "name",
-        {},
-        polymorphicBodies,
-      );
+      const discriminatedBodyType = factory.addDiscriminatedObjectType(fullyQualifiedType, "name", {}, polymorphicBodies);
 
       return {
         descriptor: {
@@ -263,41 +181,29 @@ export function generateTypes(
       }
 
       const { descriptor, bodyType } = output;
-      factory.addResourceType(
-        `${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`,
-        bodyType,
-        descriptor.readableScopes,
-        descriptor.writableScopes,
-      );
+      factory.addResourceType(`${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`, bodyType, descriptor.readableScopes, descriptor.writableScopes);
     }
 
     // Process resource actions (POST list* operations)
     for (const action of resourceActions) {
+      const actionType = `${getFullyQualifiedType(action.descriptor)}`;
       let request: TypeReference | undefined;
       if (action.requestModel) {
         request = parseType(action.requestModel);
         if (request === undefined) {
+          logWarning(`Skipping resource action '${action.actionName}' on '${actionType}': unable to parse its request body type.`);
           continue;
         }
       }
 
-      const unwrappedResponse = action.responseModel
-        ? unwrapArmResponseEnvelope(action.responseModel)
-        : undefined;
-      const response = unwrappedResponse
-        ? parseType(unwrappedResponse)
-        : factory.addAnyType();
+      const unwrappedResponse = action.responseModel ? unwrapArmResponseEnvelope(action.responseModel) : undefined;
+      const response = unwrappedResponse ? parseType(unwrappedResponse) : factory.addAnyType();
       if (response === undefined) {
+        logWarning(`Skipping resource action '${action.actionName}' on '${actionType}': unable to parse its response body type.`);
         continue;
       }
 
-      factory.addResourceFunctionType(
-        action.actionName,
-        getFullyQualifiedType(action.descriptor),
-        action.descriptor.apiVersion,
-        response,
-        request,
-      );
+      factory.addResourceFunctionType(action.actionName, getFullyQualifiedType(action.descriptor), action.descriptor.apiVersion, response, request);
     }
 
     return factory.types;
@@ -312,61 +218,29 @@ export function generateTypes(
 
   /** Parse a property's type, applying property-level constraints. */
   function parsePropertyType(prop: ModelProperty): TypeReference | undefined {
-    const sensitive =
-      isSecret(program, prop) || isSecret(program, prop.type)
-        ? true
-        : undefined;
+    const sensitive = isSecret(program, prop) || isSecret(program, prop.type) ? true : undefined;
     const baseType = prop.type;
-    const format = getFormat(program, prop) ??
-      (baseType.kind === "Scalar" ? getFormat(program, baseType) : undefined);
-    const minLen =
-      getMinLength(program, prop) ??
-      (baseType.kind === "Scalar"
-        ? getMinLength(program, baseType)
-        : undefined) ??
-      (format === "uuid" ? uuidLength : undefined);
-    const maxLen =
-      getMaxLength(program, prop) ??
-      (baseType.kind === "Scalar"
-        ? getMaxLength(program, baseType)
-        : undefined) ??
-      (format === "uuid" ? uuidLength : undefined);
-    const pattern =
-      getNonEmptyPattern(prop) ??
-      (baseType.kind === "Scalar"
-        ? getNonEmptyPattern(baseType)
-        : undefined) ??
-      (format === "uuid" ? uuidPattern : undefined);
-    const minValue =
-      getMinValue(program, prop) ??
-      (baseType.kind === "Scalar"
-        ? getMinValue(program, baseType)
-        : undefined);
-    const maxValue =
-      getMaxValue(program, prop) ??
-      (baseType.kind === "Scalar"
-        ? getMaxValue(program, baseType)
-        : undefined);
+    const format = getFormat(program, prop) ?? (baseType.kind === "Scalar" ? getFormat(program, baseType) : undefined);
+    const minLen = getMinLength(program, prop) ?? (baseType.kind === "Scalar" ? getMinLength(program, baseType) : undefined) ?? (format === "uuid" ? uuidLength : undefined);
+    const maxLen = getMaxLength(program, prop) ?? (baseType.kind === "Scalar" ? getMaxLength(program, baseType) : undefined) ?? (format === "uuid" ? uuidLength : undefined);
+    const pattern = getNonEmptyPattern(prop) ?? (baseType.kind === "Scalar" ? getNonEmptyPattern(baseType) : undefined) ?? (format === "uuid" ? uuidPattern : undefined);
+    const minValue = getMinValue(program, prop) ?? (baseType.kind === "Scalar" ? getMinValue(program, baseType) : undefined);
+    const maxValue = getMaxValue(program, prop) ?? (baseType.kind === "Scalar" ? getMaxValue(program, baseType) : undefined);
+    const minItems = getMinItems(program, prop);
+    const maxItems = getMaxItems(program, prop);
 
-    if (
-      baseType.kind === "Scalar" &&
-      isIntegerScalar(baseType) &&
-      (minValue !== undefined || maxValue !== undefined)
-    ) {
+    if (baseType.kind === "Model" && isArrayModel(baseType)) {
+      const itemType = baseType.indexer?.value ? parseType(baseType.indexer.value) : undefined;
+      return factory.addArrayType(itemType ?? factory.addAnyType(), minItems, maxItems);
+    }
+
+    if (baseType.kind === "Scalar" && isIntegerScalar(baseType) && (minValue !== undefined || maxValue !== undefined)) {
       return factory.addIntegerType(minValue, maxValue);
     }
 
-    if (
-      sensitive ||
-      minLen !== undefined ||
-      maxLen !== undefined ||
-      pattern !== undefined
-    ) {
+    if (sensitive || minLen !== undefined || maxLen !== undefined || pattern !== undefined) {
       // If the underlying type is a string-like scalar, generate a constrained string
-      if (
-        (baseType.kind === "Scalar" && isStringScalar(baseType)) ||
-        (baseType.kind === "Model" && baseType.name === "string")
-      ) {
+      if ((baseType.kind === "Scalar" && isStringScalar(baseType)) || (baseType.kind === "Model" && baseType.name === "string")) {
         return factory.addStringType(sensitive, minLen, maxLen, pattern);
       }
     }
@@ -380,20 +254,7 @@ export function generateTypes(
   function isStringScalar(scalar: Scalar): boolean {
     let current: Scalar | undefined = scalar;
     while (current) {
-      if (
-        [
-          "string",
-          "url",
-          "uuid",
-          "duration",
-          "armResourceIdentifier",
-          "bytes",
-          "plainDate",
-          "plainTime",
-          "utcDateTime",
-          "offsetDateTime",
-        ].includes(current.name)
-      ) {
+      if (["string", "url", "uuid", "duration", "armResourceIdentifier", "bytes", "plainDate", "plainTime", "utcDateTime", "offsetDateTime"].includes(current.name)) {
         return true;
       }
       current = current.baseScalar;
@@ -404,20 +265,7 @@ export function generateTypes(
   function isIntegerScalar(scalar: Scalar): boolean {
     let current: Scalar | undefined = scalar;
     while (current) {
-      if (
-        [
-          "int8",
-          "int16",
-          "int32",
-          "int64",
-          "uint8",
-          "uint16",
-          "uint32",
-          "uint64",
-          "integer",
-          "safeint",
-        ].includes(current.name)
-      ) {
+      if (["int8", "int16", "int32", "int64", "uint8", "uint16", "uint32", "uint64", "integer", "safeint"].includes(current.name)) {
         return true;
       }
       current = current.baseScalar;
@@ -434,9 +282,7 @@ export function generateTypes(
       case "Enum":
         return parseEnumType(type);
       case "EnumMember":
-        return factory.addStringLiteralType(
-          typeof type.value === "string" ? type.value : (type.value?.toString() ?? type.name),
-        );
+        return factory.addStringLiteralType(typeof type.value === "string" ? type.value : (type.value?.toString() ?? type.name));
       case "String":
         return factory.addStringLiteralType(type.value);
       case "Number":
@@ -457,33 +303,28 @@ export function generateTypes(
     // Handle well-known built-in models
     if (isArrayModel(model)) {
       const elementType = model.indexer?.value;
-      const itemType = elementType
-        ? parseType(elementType)
-        : factory.addAnyType();
+      const itemType = elementType ? parseType(elementType) : factory.addAnyType();
       return factory.addArrayType(itemType ?? factory.addAnyType());
     }
 
     if (isRecordModel(model)) {
       const modelName = getModelName(model);
-      if (namedDefinitions.has(modelName)) {
-        return namedDefinitions.get(modelName)!;
+      const existing = modelDefinitions.get(model);
+      if (existing) {
+        return existing;
       }
       const valueType = model.indexer?.value;
       const additionalProps = valueType ? parseType(valueType) : undefined;
-      const ref = factory.addObjectType(
-        modelName || "Record",
-        {},
-        additionalProps,
-        isSecret(program, model) || undefined,
-      );
-      namedDefinitions.set(modelName, ref);
+      const ref = factory.addObjectType(modelName || "Record", {}, additionalProps, isSecret(program, model) || undefined);
+      modelDefinitions.set(model, ref);
       return ref;
     }
 
     // Check for cached named definition
     const modelName = getModelName(model);
-    if (namedDefinitions.has(modelName)) {
-      return namedDefinitions.get(modelName)!;
+    const existing = modelDefinitions.get(model);
+    if (existing) {
+      return existing;
     }
 
     // Build object type
@@ -497,23 +338,13 @@ export function generateTypes(
 
     let definition: TypeReference;
     if (discriminatorProp) {
-      definition = factory.addDiscriminatedObjectType(
-        modelName,
-        discriminatorProp,
-        properties,
-        {},
-      );
+      definition = factory.addDiscriminatedObjectType(modelName, discriminatorProp, properties, {});
     } else {
-      definition = factory.addObjectType(
-        modelName,
-        properties,
-        additionalProperties,
-        isSecret(program, model) || undefined,
-      );
+      definition = factory.addObjectType(modelName, properties, additionalProperties, isSecret(program, model) || undefined);
     }
 
     // Cache before recursing to handle circular references
-    namedDefinitions.set(modelName, definition);
+    modelDefinitions.set(model, definition);
 
     // Add properties
     for (const [propName, prop] of getAllProperties(model)) {
@@ -525,19 +356,13 @@ export function generateTypes(
       if (propertyType !== undefined) {
         const flags = parsePropertyFlags(prop);
         const description = getPropertyDescription(prop);
-        properties[propName] = createObjectTypeProperty(
-          propertyType,
-          flags,
-          description,
-        );
+        properties[propName] = createObjectTypeProperty(propertyType, flags, description);
       }
     }
 
     // Handle discriminated subtypes
     if (discriminatorProp) {
-      const discriminatedType = factory.lookupType(
-        definition,
-      ) as DiscriminatedObjectType;
+      const discriminatedType = factory.lookupType(definition) as DiscriminatedObjectType;
       handlePolymorphicType(discriminatedType, model);
     }
 
@@ -547,12 +372,9 @@ export function generateTypes(
   function parseScalarType(scalar: Scalar): TypeReference {
     // Collect string constraints from the scalar hierarchy
     const format = getFormat(program, scalar);
-    const minLen = getMinLength(program, scalar) ??
-      (format === "uuid" ? uuidLength : undefined);
-    const maxLen = getMaxLength(program, scalar) ??
-      (format === "uuid" ? uuidLength : undefined);
-    const pattern = getNonEmptyPattern(scalar) ??
-      (format === "uuid" ? uuidPattern : undefined);
+    const minLen = getMinLength(program, scalar) ?? (format === "uuid" ? uuidLength : undefined);
+    const maxLen = getMaxLength(program, scalar) ?? (format === "uuid" ? uuidLength : undefined);
+    const pattern = getNonEmptyPattern(scalar) ?? (format === "uuid" ? uuidPattern : undefined);
     const sensitive = isSecret(program, scalar) ? true : undefined;
     const minValue = getMinValue(program, scalar);
     const maxValue = getMaxValue(program, scalar);
@@ -610,26 +432,13 @@ export function generateTypes(
       return factory.addStringType();
     }
 
-    // Check if all members are string values
-    const allString = members.every(
-      (m) => typeof m.value === "string" || m.value === undefined,
-    );
+    const memberTypes = members.filter((member) => typeof member.value !== "number").map((member) => factory.addStringLiteralType(typeof member.value === "string" ? member.value : member.name));
 
-    if (allString) {
-      const enumTypes = members.map((m) =>
-        factory.addStringLiteralType(
-          typeof m.value === "string" ? m.value : m.name,
-        ),
-      );
-
-      if (enumTypes.length === 1) {
-        return enumTypes[0];
-      }
-      return factory.addUnionType(enumTypes);
+    if (members.some((member) => typeof member.value === "number")) {
+      memberTypes.push(factory.addIntegerType());
     }
 
-    // Non-string enums: just use the base type
-    return factory.addStringType();
+    return memberTypes.length === 1 ? memberTypes[0] : factory.addUnionType(memberTypes);
   }
 
   function parseUnionType(union: Union): TypeReference {
@@ -713,26 +522,23 @@ export function generateTypes(
     return undefined;
   }
 
-  function handlePolymorphicType(
-    discriminatedObjectType: DiscriminatedObjectType,
-    model: Model,
-  ): void {
+  function handlePolymorphicType(discriminatedObjectType: DiscriminatedObjectType, model: Model): void {
     const discriminator = getDiscriminator(program, model);
     if (!discriminator) return;
 
-    const [discriminatedUnion, diagnostics] =
-      getDiscriminatedUnionFromInheritance(model, discriminator);
+    const [discriminatedUnion, diagnostics] = getDiscriminatedUnionFromInheritance(model, discriminator);
     program.reportDiagnostics(diagnostics);
 
     for (const [discriminatorValue, derived] of discriminatedUnion.variants) {
       const objectTypeRef = parseModelType(derived);
-      if (objectTypeRef === undefined) continue;
+      if (objectTypeRef === undefined) {
+        logWarning(`Skipping subtype '${String(discriminatorValue)}' of discriminated type '${discriminatedObjectType.name}': unable to parse its model.`);
+        continue;
+      }
 
       const objectType = factory.lookupType(objectTypeRef);
       if (objectType.type !== TypeBaseKind.ObjectType) {
-        logWarning(
-          `Found unexpected element of discriminated type '${discriminatedObjectType.name}'`,
-        );
+        logWarning(`Found unexpected element of discriminated type '${discriminatedObjectType.name}'`);
         continue;
       }
 
@@ -741,23 +547,33 @@ export function generateTypes(
       // Add the discriminator property to the subtype
       const discriminatorName = discriminatedObjectType.discriminator;
       const baseDiscriminatorProperty = model.properties.get(discriminatorName);
-      const description = objectType.properties[discriminatorName]?.description ??
-        (baseDiscriminatorProperty
-          ? getPropertyDescription(baseDiscriminatorProperty)
-          : undefined);
-      objectType.properties[discriminatorName] =
-        createObjectTypeProperty(
-          factory.addStringLiteralType(discriminatorValue),
-          ObjectTypePropertyFlags.Required,
-          description,
-        );
+      const description = objectType.properties[discriminatorName]?.description ?? (baseDiscriminatorProperty ? getPropertyDescription(baseDiscriminatorProperty) : undefined);
+      objectType.properties[discriminatorName] = createObjectTypeProperty(factory.addStringLiteralType(discriminatorValue), ObjectTypePropertyFlags.Required, description);
     }
   }
 
   // --- Model helpers ---
 
   function getModelName(model: Model): string {
-    return model.name || "AnonymousModel";
+    const existing = modelNames.get(model);
+    if (existing) {
+      return existing;
+    }
+
+    let name = model.name || `AnonymousModel${++anonymousModelCount}`;
+    if (usedModelNames.has(name) && model.namespace) {
+      name = `${getNamespaceFullName(model.namespace)}.${name}`;
+    }
+
+    let suffix = 2;
+    const baseName = name;
+    while (usedModelNames.has(name)) {
+      name = `${baseName}${suffix++}`;
+    }
+
+    modelNames.set(model, name);
+    usedModelNames.add(name);
+    return name;
   }
 
   function isArrayModel(model: Model): boolean {
@@ -768,9 +584,7 @@ export function generateTypes(
     return model.name === "Record" && model.indexer !== undefined;
   }
 
-  function* getAllProperties(
-    model: Model,
-  ): IterableIterator<[string, ModelProperty]> {
+  function* getAllProperties(model: Model): IterableIterator<[string, ModelProperty]> {
     // Include inherited properties from base models
     if (model.baseModel) {
       yield* getAllProperties(model.baseModel);
@@ -797,7 +611,8 @@ export function generateTypes(
     // Check if this is a template instantiation with a template argument
     if (model.templateMapper?.args && model.templateMapper.args.length > 0) {
       // Check if the source template looks like an ARM response wrapper
-      const isArmResponse = model.name === "" || // Anonymous template instantiation
+      const isArmResponse =
+        model.name === "" || // Anonymous template instantiation
         (model.sourceModel && /Response|Accepted|NoContent/.test(model.sourceModel.name ?? ""));
 
       if (isArmResponse) {
@@ -835,14 +650,8 @@ export function generateTypes(
     return model;
   }
 
-  function createObjectTypeProperty(
-    type: TypeReference,
-    flags: ObjectTypePropertyFlags,
-    description?: string,
-  ): ObjectTypeProperty {
-    const normalizedDescription = description
-      ?.replaceAll('\\"', '"')
-      .trim();
+  function createObjectTypeProperty(type: TypeReference, flags: ObjectTypePropertyFlags, description?: string): ObjectTypeProperty {
+    const normalizedDescription = description?.replaceAll('\\"', '"').trim();
 
     return {
       type,

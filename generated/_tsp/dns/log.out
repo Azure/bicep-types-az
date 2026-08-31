@@ -2,7 +2,7 @@ Generating types for 'specification/dns/resource-manager/Microsoft.Network/Dns/t
 Running TypeSpec emitter for 'specification/dns/resource-manager/Microsoft.Network/Dns'
 npm warn cli npm v12.0.2 does not support Node.js v24.14.1. This version of npm supports the following node versions: `^22.22.2 || ^24.15.0 || >=26.0.0`. You can find the latest version at https://nodejs.org/.
 
-up to date, audited 871 packages in 2s
+up to date, audited 871 packages in 3s
 
 211 packages are looking for funding
   run `npm fund` for details
@@ -22,7 +22,7 @@ TypeSpec compiler v1.15.0
 - Compiling...
 ✔ Compiling
 - Running @azure-tools/typespec-bicep...
-✔ @azure-tools/typespec-bicep 43ms ../../../../../../../tmp/_bcp_1788175131504/dns/
+✔ @azure-tools/typespec-bicep 44ms ../../../../../../../tmp/_bcp_1788177930059/dns/
 
 Compilation completed successfully.
 

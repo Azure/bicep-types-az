@@ -38,6 +38,23 @@ enum Versions {
   `2024-01-01`,
 }
 
+namespace FirstModels {
+  model Shared {
+    firstValue?: string;
+  }
+}
+
+namespace SecondModels {
+  model Shared {
+    secondValue?: string;
+  }
+}
+
+enum NumericKind {
+  One: 1,
+  Two: 2,
+}
+
 // ============================================================
 // String constraint decorators
 // ============================================================
@@ -62,6 +79,11 @@ model ConstrainedProperties {
   @maxLength(256)
   description?: string;
 
+  @doc("An array with minItems and maxItems constraints.")
+  @minItems(1)
+  @maxItems(3)
+  constrainedItems?: string[];
+
   @doc("A property with an empty pattern, which should be excluded.")
   @pattern("")
   emptyPattern?: string;
@@ -78,6 +100,10 @@ model ConstrainedProperties {
 
   @doc("A polymorphic value.")
   polymorphicValue?: PolymorphicBase;
+
+  firstShared?: FirstModels.Shared;
+  secondShared?: SecondModels.Shared;
+  numericKind?: NumericKind;
 }
 
 @discriminator("kind")
@@ -102,6 +128,17 @@ model ConstrainedResource is TrackedResource<ConstrainedProperties> {
   @doc("The resource name.")
   @key("constrainedResourceName")
   @segment("constrainedResources")
+  @path
+  name: string;
+}
+
+model ExtensionProperties {
+  value?: string;
+}
+
+model ExtensionTestResource is ExtensionResource<ExtensionProperties> {
+  @key("extensionTestResourceName")
+  @segment("extensionTestResources")
   @path
   name: string;
 }
@@ -213,6 +250,48 @@ interface CustomRouteOperations {
   ): ArmResponse<CustomRouteResource> | ErrorResponse;
 }
 
+enum ParameterizedResourceKind {
+  First,
+  Second,
+}
+
+@parentResource(NamespaceResource)
+model ParameterizedRouteResource is ProxyResource<CustomRouteProperties> {
+  @key("parameterizedRouteName")
+  @segment("{resourceKind}")
+  @path
+  name: string;
+}
+
+#suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-interface-requires-decorator" "Parameterized route regression coverage"
+#suppress "@azure-tools/typespec-azure-core/use-standard-operations" "Parameterized route regression coverage"
+interface ParameterizedRouteOperations {
+  @route("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Test.EdgeCases/Namespaces/{namespaceName}/{resourceKind}/{parameterizedRouteName}")
+  @get
+  @armResourceRead(ParameterizedRouteResource)
+  get(
+    ...ApiVersionParameter,
+    ...SubscriptionIdParameter,
+    ...ResourceGroupParameter,
+    @path namespaceName: string,
+    @path resourceKind: ParameterizedResourceKind,
+    @path parameterizedRouteName: string,
+  ): ArmResponse<ParameterizedRouteResource> | ErrorResponse;
+
+  @route("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Test.EdgeCases/Namespaces/{namespaceName}/{resourceKind}/{parameterizedRouteName}")
+  @put
+  @armResourceCreateOrUpdate(ParameterizedRouteResource)
+  createOrUpdate(
+    ...ApiVersionParameter,
+    ...SubscriptionIdParameter,
+    ...ResourceGroupParameter,
+    @path namespaceName: string,
+    @path resourceKind: ParameterizedResourceKind,
+    @path parameterizedRouteName: string,
+    @bodyRoot resource: ParameterizedRouteResource,
+  ): ArmResponse<ParameterizedRouteResource> | ErrorResponse;
+}
+
 // ============================================================
 // ARM response envelope unwrapping
 // A POST action that returns a concrete model (should unwrap from
@@ -248,6 +327,10 @@ interface ConstrainedResourceOperations {
   get is ArmResourceRead<ConstrainedResource>;
   createOrUpdate is ArmResourceCreateOrReplaceAsync<ConstrainedResource>;
 }
+
+@armResourceOperations
+interface ExtensionTestResourceOperations
+  extends ExtensionResourceOperations<ExtensionTestResource, ExtensionProperties> {}
 
 @armResourceOperations
 interface NamespaceOperations {
