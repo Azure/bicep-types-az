@@ -1,13 +1,12 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { EmitContext } from "@typespec/compiler";
+import { emitFile, EmitContext } from "@typespec/compiler";
 import { writeTypesJson, writeMarkdown } from "bicep-types";
 import { BicepEmitterOptions, $lib } from "./lib.js";
 import { getProviderDefinitions } from "./resources.js";
 import { generateTypes } from "./type-generator.js";
 import { join } from "path";
-import { mkdirSync, writeFileSync } from "fs";
 
 export { $lib } from "./lib.js";
 
@@ -21,9 +20,7 @@ export { $lib } from "./lib.js";
  * generates Bicep type definitions (or ARM schema), and writes
  * the output files to the emitter output directory.
  */
-export async function $onEmit(
-  context: EmitContext<BicepEmitterOptions>,
-): Promise<void> {
+export async function $onEmit(context: EmitContext<BicepEmitterOptions>): Promise<void> {
   if (context.program.compilerOptions.noEmit || context.program.hasError()) {
     return;
   }
@@ -44,31 +41,20 @@ export async function $onEmit(
 
   for (const definition of providerDefinitions) {
     const { namespace, apiVersion } = definition;
-    const outFolder = join(
-      outputDir,
-      `${namespace}/${apiVersion}`.toLowerCase(),
-    );
-
-    // Ensure output directory exists
-    mkdirSync(outFolder, { recursive: true });
+    const outFolder = join(outputDir, `${namespace}/${apiVersion}`.toLowerCase());
 
     const types = generateTypes(program, definition);
 
-    writeFileSync(
-      join(outFolder, "types.json"),
-      writeTypesJson(types),
-      "utf-8",
-    );
+    await emitFile(program, {
+      path: join(outFolder, "types.json"),
+      content: writeTypesJson(types),
+    });
 
-    writeFileSync(
-      join(outFolder, "types.md"),
-      writeMarkdown(types, `${namespace} @ ${apiVersion}`),
-      "utf-8",
-    );
+    await emitFile(program, {
+      path: join(outFolder, "types.md"),
+      content: writeMarkdown(types, `${namespace} @ ${apiVersion}`),
+    });
   }
 
-  program.trace(
-    "typespec-bicep",
-    `typespec-bicep took ${Date.now() - start}ms`,
-  );
+  program.trace("typespec-bicep", `typespec-bicep took ${Date.now() - start}ms`);
 }

@@ -191,6 +191,10 @@ jobs:
         run: npm ci
         working-directory: ./src/typespec-bicep
 
+      - name: Lint
+        run: npm run lint
+        working-directory: ./src/typespec-bicep
+
       - name: Build
         run: npm run build
         working-directory: ./src/typespec-bicep

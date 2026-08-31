@@ -17,8 +17,8 @@
     "test": "vitest run",
     "test:fix": "cross-env BASELINE_RECORD=true vitest run",
     "test:watch": "vitest",
-    "lint": "eslint src --ext ts",
-    "lint:fix": "eslint src --ext ts --fix"
+    "lint": "eslint . --ext ts",
+    "lint:fix": "eslint . --ext ts --fix"
   },
   "files": [
     "dist/src",
@@ -48,12 +48,16 @@
     "@azure-tools/typespec-azure-core": ">=0.71.0",
     "@azure-tools/typespec-azure-resource-manager": ">=0.71.0",
     "@types/node": "^26.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.68.0",
+    "@typescript-eslint/parser": "^8.68.0",
     "@typespec/compiler": ">=1.15.0",
     "@typespec/http": ">=1.15.0",
     "@typespec/openapi": ">=1.15.0",
     "@typespec/rest": ">=0.85.0",
     "cross-env": "^10.1.0",
-    "typescript": "~7.0.2",
+    "eslint": "^8.57.1",
+    "eslint-plugin-header": "^3.1.1",
+    "typescript": "~6.0.3",
     "vitest": "^4.1.11"
   }
 }

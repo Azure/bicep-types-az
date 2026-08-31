@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { createTypeSpecLibrary, JSONSchemaType } from "@typespec/compiler";
+import { createTypeSpecLibrary, JSONSchemaType, paramMessage } from "@typespec/compiler";
 
 export type BicepEmitterOptions = Record<string, never>;
 
@@ -18,27 +18,37 @@ const libDef = {
     "no-arm-resources": {
       severity: "warning",
       messages: {
-        default:
-          "No ARM resource types were found in the TypeSpec program. Ensure you are using @azure-tools/typespec-azure-resource-manager decorators.",
+        default: "No ARM resource types were found in the TypeSpec program. Ensure you are using @azure-tools/typespec-azure-resource-manager decorators.",
       },
     },
-    "unsupported-type": {
+    "missing-provider-namespace": {
       severity: "warning",
       messages: {
-        default: "Unsupported type encountered; defaulting to 'any'.",
+        default: paramMessage`Skipping ARM resource '${"resource"}': could not determine its provider namespace (@armProviderNamespace).`,
       },
     },
-    "missing-resource-name": {
+    "missing-api-version": {
       severity: "warning",
       messages: {
-        default:
-          "Could not determine resource name type; skipping resource.",
+        default: paramMessage`Skipping ARM resource '${"resource"}': could not determine its API version. Ensure the resource's namespace declares a 'Versions' enum.`,
       },
     },
-    "resource-processing-error": {
-      severity: "error",
+    "no-resource-scopes": {
+      severity: "warning",
       messages: {
-        default: "An error occurred while processing a resource type.",
+        default: paramMessage`Skipping ARM resource '${"resource"}': could not determine any readable or writable scopes from its operations or routes.`,
+      },
+    },
+    "unmapped-type-segments": {
+      severity: "warning",
+      messages: {
+        default: paramMessage`Skipping a route for ARM resource '${"resource"}': could not resolve any resource type segments from its path.`,
+      },
+    },
+    "emitter-warning": {
+      severity: "warning",
+      messages: {
+        default: paramMessage`${"message"}`,
       },
     },
   },
@@ -48,4 +58,3 @@ const libDef = {
 } as const;
 
 export const $lib = createTypeSpecLibrary(libDef);
-export const { reportDiagnostic } = $lib;

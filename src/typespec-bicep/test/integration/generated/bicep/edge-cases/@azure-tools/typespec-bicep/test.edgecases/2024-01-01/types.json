@@ -232,6 +232,13 @@
         "flags": 0,
         "description": "A property with only maxLength."
       },
+      "constrainedItems": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "An array with minItems and maxItems constraints."
+      },
       "emptyPattern": {
         "type": {
           "$ref": "#/0"
@@ -241,7 +248,7 @@
       },
       "constrainedAlias": {
         "type": {
-          "$ref": "#/21"
+          "$ref": "#/22"
         },
         "flags": 0,
         "description": "A scalar alias with string constraints."
@@ -255,17 +262,35 @@
       },
       "password": {
         "type": {
-          "$ref": "#/22"
+          "$ref": "#/23"
         },
         "flags": 0,
         "description": "A sensitive value."
       },
       "polymorphicValue": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "A polymorphic value."
+      },
+      "firstShared": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0
+      },
+      "secondShared": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0
+      },
+      "numericKind": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0
       }
     }
   },
@@ -288,6 +313,14 @@
     "maxLength": 256
   },
   {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    },
+    "minLength": 1,
+    "maxLength": 3
+  },
+  {
     "$type": "StringType",
     "minLength": 2,
     "maxLength": 32,
@@ -304,10 +337,10 @@
     "baseProperties": {},
     "elements": {
       "first-value": {
-        "$ref": "#/24"
+        "$ref": "#/25"
       },
       "second-value": {
-        "$ref": "#/27"
+        "$ref": "#/28"
       }
     }
   },
@@ -317,7 +350,7 @@
     "properties": {
       "kind": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/27"
         },
         "flags": 1,
         "description": "The first variant kind."
@@ -344,7 +377,7 @@
     "properties": {
       "kind": {
         "type": {
-          "$ref": "#/29"
+          "$ref": "#/30"
         },
         "flags": 1,
         "description": "The polymorphic kind."
@@ -366,6 +399,33 @@
     "value": "second-value"
   },
   {
+    "$type": "ObjectType",
+    "name": "Shared",
+    "properties": {
+      "firstValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.EdgeCases.SecondModels.Shared",
+    "properties": {
+      "secondValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
     "$type": "ResourceType",
     "name": "Test.EdgeCases/constrainedResources@2024-01-01",
     "body": {
@@ -373,6 +433,83 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.EdgeCases/extensionTestResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.EdgeCases/extensionTestResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtensionProperties",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.EdgeCases/extensionTestResources@2024-01-01",
+    "body": {
+      "$ref": "#/37"
+    },
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -402,14 +539,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/31"
+          "$ref": "#/40"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/32"
+          "$ref": "#/41"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -437,7 +574,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/34"
+          "$ref": "#/43"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -461,7 +598,7 @@
     "$type": "ResourceType",
     "name": "Test.EdgeCases/Namespaces@2024-01-01",
     "body": {
-      "$ref": "#/33"
+      "$ref": "#/42"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -494,14 +631,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/36"
+          "$ref": "#/45"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/46"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -515,7 +652,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/39"
+          "$ref": "#/48"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -528,7 +665,7 @@
     "properties": {
       "rights": {
         "type": {
-          "$ref": "#/40"
+          "$ref": "#/49"
         },
         "flags": 0,
         "description": "The rights associated with the rule."
@@ -545,7 +682,7 @@
     "$type": "ResourceType",
     "name": "Test.EdgeCases/Namespaces/AuthorizationRules@2024-01-01",
     "body": {
-      "$ref": "#/38"
+      "$ref": "#/47"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -578,14 +715,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/51"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/43"
+          "$ref": "#/52"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -599,7 +736,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/54"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -619,7 +756,7 @@
       },
       "requiredMembers": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/55"
         },
         "flags": 2,
         "description": "Required members"
@@ -636,7 +773,7 @@
     "$type": "ResourceType",
     "name": "Test.EdgeCases/Namespaces/privateLinkResources@2024-01-01",
     "body": {
-      "$ref": "#/44"
+      "$ref": "#/53"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -669,14 +806,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/48"
+          "$ref": "#/57"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/49"
+          "$ref": "#/58"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -690,7 +827,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/51"
+          "$ref": "#/60"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -713,7 +850,7 @@
     "$type": "ResourceType",
     "name": "Test.EdgeCases/parents/customRouteResources@2024-01-01",
     "body": {
-      "$ref": "#/50"
+      "$ref": "#/59"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -746,14 +883,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/62"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/54"
+          "$ref": "#/63"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -767,7 +904,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/51"
+          "$ref": "#/60"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -778,10 +915,140 @@
     "$type": "ResourceType",
     "name": "Test.EdgeCases/alternateParents/customRouteResources@2024-01-01",
     "body": {
-      "$ref": "#/55"
+      "$ref": "#/64"
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.EdgeCases/Namespaces/First"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.EdgeCases/Namespaces/First",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.EdgeCases/Namespaces/First@2024-01-01",
+    "body": {
+      "$ref": "#/68"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.EdgeCases/Namespaces/Second"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.EdgeCases/Namespaces/Second",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.EdgeCases/Namespaces/Second@2024-01-01",
+    "body": {
+      "$ref": "#/72"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "ObjectType",
@@ -789,7 +1056,7 @@
     "properties": {
       "keys": {
         "type": {
-          "$ref": "#/59"
+          "$ref": "#/76"
         },
         "flags": 0,
         "description": "The list of keys."
@@ -826,7 +1093,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/58"
+      "$ref": "#/75"
     }
   },
   {
@@ -835,7 +1102,7 @@
     "resourceType": "Test.EdgeCases/Namespaces",
     "apiVersion": "2024-01-01",
     "output": {
-      "$ref": "#/57"
+      "$ref": "#/74"
     }
   },
   {
@@ -847,10 +1114,10 @@
     "resourceType": "Test.EdgeCases/Namespaces",
     "apiVersion": "2024-01-01",
     "output": {
-      "$ref": "#/61"
+      "$ref": "#/78"
     },
     "input": {
-      "$ref": "#/58"
+      "$ref": "#/75"
     }
   }
 ]
