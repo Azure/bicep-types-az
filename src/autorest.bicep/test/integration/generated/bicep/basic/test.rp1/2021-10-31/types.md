@@ -114,6 +114,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Test.Rp1/writeOnlyTestType' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Test.Rp1@2021-10-31)
+* **Resource**: Test.Rp1
+* **ApiVersion**: 2021-10-31
+* **Input**: [FoosRequest](#foosrequest)
+* **Output**: [FoosResponse](#foosresponse)
+
 ## Function listArrayOfFoos (Test.Rp1/testType1@2021-10-31)
 * **Resource**: Test.Rp1/testType1
 * **ApiVersion**: 2021-10-31
