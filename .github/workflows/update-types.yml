@@ -9,7 +9,7 @@ on:
         description: 'Git ref or full SHA for https://github.com/Azure/azure-rest-api-specs (e.g. "my_branch" or "17365a7eb28d3ee578e5307f6091ee172bdfbfa3").'
         default: main
         required: true
-      single_path:
+      path_prefix:
         description: 'A folder name under https://github.com/Azure/azure-rest-api-specs/tree/main/specification (e.g. "compute", or "keyvault"). Leave blank to generate types for all folders.'
         required: false
       api_specs_owner:
@@ -19,7 +19,7 @@ on:
 env:
   AZURE_SPECS_REPO: ${{ github.event.inputs.api_specs_owner || 'Azure' }}/azure-rest-api-specs
   AZURE_SPECS_GIT_REF: ${{ github.event.inputs.api_specs_ref || 'main' }}
-  SINGLE_PATH: ${{ github.event.inputs.single_path }}
+  PATH_PREFIX: ${{ github.event.inputs.path_prefix }}
 
 jobs:
   update-types:
@@ -60,17 +60,25 @@ jobs:
         run: npm run build
         working-directory: src/autorest.bicep
 
+      - name: Install typespec-bicep npm packages
+        run: npm ci
+        working-directory: src/typespec-bicep
+
+      - name: Build typespec-bicep
+        run: npm run build
+        working-directory: src/typespec-bicep
+
       - name: Install generator npm packages
         run: npm ci
         working-directory: src/generator
 
       - name: Run generator
         run: |
-          if [ -z "${{ env.SINGLE_PATH }}" ]
+          if [ -z "${{ env.PATH_PREFIX }}" ]
           then
             npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs
           else
-            npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --single-path ${{ env.SINGLE_PATH }}
+            npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --path-prefix ${{ env.PATH_PREFIX }}
           fi
         working-directory: src/generator
 
@@ -89,7 +97,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0
         with:
           commit_message: |
-            Update types from ${{ steps.get_swagger_gh_uri.outputs.gh_uri }} ${{ env.SINGLE_PATH && format('(single path: {0})', env.SINGLE_PATH) || '' }}
-          branch: ${{ env.SINGLE_PATH && format('autogenerate-{0}', env.SINGLE_PATH) || 'autogenerate' }}
+            Update types from ${{ steps.get_swagger_gh_uri.outputs.gh_uri }} ${{ env.PATH_PREFIX && format('(path prefix: {0})', env.PATH_PREFIX) || '' }}
+          branch: ${{ env.PATH_PREFIX && format('autogenerate-{0}', env.PATH_PREFIX) || 'autogenerate' }}
           push_options: '--force'
           create_branch: true

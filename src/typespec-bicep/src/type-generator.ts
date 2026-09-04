@@ -1,0 +1,664 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+import { Enum, getDiscriminatedUnionFromInheritance, getDiscriminator, getDoc, getFormat, getNamespaceFullName, getLifecycleVisibilityEnum, getMaxItems, getMaxLength,
+  getMaxValue, getMinItems, getMinLength, getMinValue, getPattern, getVisibilityForClass, IntrinsicType, isSecret, Model, ModelProperty,
+  NoTarget, Program, Scalar, Type, Union } from "@typespec/compiler";
+import { BicepType, DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, TypeBaseKind, TypeFactory, TypeReference } from "bicep-types";
+import { getFullyQualifiedType, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources.js";
+import { $lib } from "./lib.js";
+
+const uuidLength = 36;
+const uuidPattern = "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$";
+
+/**
+ * Generate Bicep type definitions for all resources within a provider definition.
+ *
+ * This is the TypeSpec equivalent of autorest.bicep's type-generator.ts.
+ * It converts TypeSpec model types into Bicep-types TypeFactory entries.
+ */
+export function generateTypes(program: Program, definition: ProviderDefinition): BicepType[] {
+  const factory = new TypeFactory();
+  const modelDefinitions = new Map<Model, TypeReference>();
+  const modelNames = new Map<Model, string>();
+  const usedModelNames = new Set<string>();
+  let anonymousModelCount = 0;
+
+  function logWarning(message: string) {
+    program.trace("typespec-bicep.warning", message);
+    $lib.reportDiagnostic(program, {
+      code: "emitter-warning",
+      target: NoTarget,
+      format: { message },
+    });
+  }
+
+  // --- Name type resolution ---
+
+  function getNameType(fullyQualifiedType: string, definition: ResourceDefinition): TypeReference | undefined {
+    // Singletons have a fixed constant name (e.g. "default")
+    if (definition.descriptor.constantName) {
+      return factory.addStringLiteralType(definition.descriptor.constantName);
+    }
+
+    const nameProperty = definition.nameProperty;
+    if (!nameProperty) {
+      logWarning(`Skipping resource type ${fullyQualifiedType}: could not determine name type`);
+      return undefined;
+    }
+
+    // Use parsePropertyType so constraint decorators (@pattern, @minLength, @maxLength)
+    // applied directly to the 'name' property are preserved.
+    return parsePropertyType(nameProperty);
+  }
+
+  // --- Standard ARM resource properties ---
+
+  function getStandardizedResourceProperties(descriptor: ResourceDescriptor, resourceName: TypeReference): Record<string, ObjectTypeProperty> {
+    const type = factory.addStringLiteralType(getFullyQualifiedType(descriptor));
+
+    return {
+      id: createObjectTypeProperty(factory.addStringType(), ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, "The resource id"),
+      name: createObjectTypeProperty(resourceName, ObjectTypePropertyFlags.Required | ObjectTypePropertyFlags.DeployTimeConstant, "The resource name"),
+      type: createObjectTypeProperty(type, ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, "The resource type"),
+      apiVersion: createObjectTypeProperty(
+        factory.addStringLiteralType(descriptor.apiVersion),
+        ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant,
+        "The resource api version",
+      ),
+    };
+  }
+
+  // --- Resource body processing ---
+
+  function processResourceBody(fullyQualifiedType: string, definition: ResourceDefinition): TypeReference | undefined {
+    const { descriptor, putModel, getModel } = definition;
+    const bodyModel = putModel ?? getModel;
+
+    const nameTypeRef = getNameType(fullyQualifiedType, definition);
+    if (!nameTypeRef) {
+      return undefined;
+    }
+
+    const resourceProperties = getStandardizedResourceProperties(descriptor, nameTypeRef);
+
+    let resourceDefinition: TypeReference;
+    if (bodyModel) {
+      // Check for discriminator
+      const discriminatorProp = getDiscriminatorProperty(bodyModel);
+      if (discriminatorProp) {
+        resourceDefinition = factory.addDiscriminatedObjectType(getFullyQualifiedType(descriptor), discriminatorProp, resourceProperties, {});
+      } else {
+        resourceDefinition = factory.addObjectType(getFullyQualifiedType(descriptor), resourceProperties);
+      }
+
+      // Add properties from the model (including inherited ARM envelope properties)
+      for (const [propName, prop] of getAllProperties(bodyModel)) {
+        if (resourceProperties[propName]) {
+          continue; // Skip standard properties (id, name, type, apiVersion)
+        }
+
+        const propertyType = parsePropertyType(prop);
+        if (propertyType !== undefined) {
+          const flags = parsePropertyFlags(prop);
+          const description = getPropertyDescription(prop);
+          resourceProperties[propName] = createObjectTypeProperty(propertyType, flags, description);
+        }
+      }
+
+      // Handle discriminated subtypes
+      if (discriminatorProp) {
+        const discriminatedType = factory.lookupType(resourceDefinition) as DiscriminatedObjectType;
+        handlePolymorphicType(discriminatedType, bodyModel);
+      }
+    } else {
+      resourceDefinition = factory.addObjectType(getFullyQualifiedType(descriptor), resourceProperties);
+    }
+
+    return resourceDefinition;
+  }
+
+  // --- Resource processing ---
+
+  function processResource(
+    fullyQualifiedType: string,
+    definitions: ResourceDefinition[],
+  ): {
+    descriptor: ResourceDescriptor;
+    bodyType: TypeReference;
+  } | null {
+    if (definitions.length > 1) {
+      // Multiple definitions for the same type — create discriminated type
+      for (const def of definitions) {
+        if (!def.descriptor.constantName) {
+          logWarning(`Skipping resource type ${fullyQualifiedType}: found multiple definitions for the same type`);
+          return null;
+        }
+      }
+
+      const polymorphicBodies: Record<string, TypeReference> = {};
+      for (const def of definitions) {
+        const bodyType = processResourceBody(fullyQualifiedType, def);
+        if (!bodyType || !def.descriptor.constantName) {
+          return null;
+        }
+        polymorphicBodies[def.descriptor.constantName] = bodyType;
+      }
+
+      const discriminatedBodyType = factory.addDiscriminatedObjectType(fullyQualifiedType, "name", {}, polymorphicBodies);
+
+      return {
+        descriptor: {
+          ...definitions[0].descriptor,
+          constantName: undefined,
+        },
+        bodyType: discriminatedBodyType,
+      };
+    } else {
+      const definition = definitions[0];
+      const bodyType = processResourceBody(fullyQualifiedType, definition);
+      if (!bodyType) {
+        return null;
+      }
+
+      return {
+        descriptor: definition.descriptor,
+        bodyType,
+      };
+    }
+  }
+
+  // --- Main generation loop ---
+
+  function generate(): BicepType[] {
+    const { resourcesByType, resourceActions } = definition;
+
+    for (const fullyQualifiedType in resourcesByType) {
+      const definitions = resourcesByType[fullyQualifiedType];
+      const output = processResource(fullyQualifiedType, definitions);
+      if (!output) {
+        continue;
+      }
+
+      const { descriptor, bodyType } = output;
+      factory.addResourceType(`${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`, bodyType, descriptor.readableScopes, descriptor.writableScopes);
+    }
+
+    // Process resource actions (POST list* operations)
+    for (const action of resourceActions) {
+      const actionType = `${getFullyQualifiedType(action.descriptor)}`;
+      let request: TypeReference | undefined;
+      if (action.requestModel) {
+        request = parseType(action.requestModel);
+        if (request === undefined) {
+          logWarning(`Skipping resource action '${action.actionName}' on '${actionType}': unable to parse its request body type.`);
+          continue;
+        }
+      }
+
+      const unwrappedResponse = action.responseModel ? unwrapArmResponseEnvelope(action.responseModel) : undefined;
+      const response = unwrappedResponse ? parseType(unwrappedResponse) : factory.addAnyType();
+      if (response === undefined) {
+        logWarning(`Skipping resource action '${action.actionName}' on '${actionType}': unable to parse its response body type.`);
+        continue;
+      }
+
+      factory.addResourceFunctionType(action.actionName, getFullyQualifiedType(action.descriptor), action.descriptor.apiVersion, response, request);
+    }
+
+    return factory.types;
+  }
+
+  // --- Type parsing ---
+
+  // An empty pattern imposes no constraint, so treat it as absent.
+  function getNonEmptyPattern(target: Scalar | ModelProperty): string | undefined {
+    return getPattern(program, target) || undefined;
+  }
+
+  /** Parse a property's type, applying property-level constraints. */
+  function parsePropertyType(prop: ModelProperty): TypeReference | undefined {
+    const sensitive = isSecret(program, prop) || isSecret(program, prop.type) ? true : undefined;
+    const baseType = prop.type;
+    const format = getFormat(program, prop) ?? (baseType.kind === "Scalar" ? getFormat(program, baseType) : undefined);
+    const minLen = getMinLength(program, prop) ?? (baseType.kind === "Scalar" ? getMinLength(program, baseType) : undefined) ?? (format === "uuid" ? uuidLength : undefined);
+    const maxLen = getMaxLength(program, prop) ?? (baseType.kind === "Scalar" ? getMaxLength(program, baseType) : undefined) ?? (format === "uuid" ? uuidLength : undefined);
+    const pattern = getNonEmptyPattern(prop) ?? (baseType.kind === "Scalar" ? getNonEmptyPattern(baseType) : undefined) ?? (format === "uuid" ? uuidPattern : undefined);
+    const minValue = getMinValue(program, prop) ?? (baseType.kind === "Scalar" ? getMinValue(program, baseType) : undefined);
+    const maxValue = getMaxValue(program, prop) ?? (baseType.kind === "Scalar" ? getMaxValue(program, baseType) : undefined);
+    const minItems = getMinItems(program, prop);
+    const maxItems = getMaxItems(program, prop);
+
+    if (baseType.kind === "Model" && isArrayModel(baseType)) {
+      const itemType = baseType.indexer?.value ? parseType(baseType.indexer.value) : undefined;
+      return factory.addArrayType(itemType ?? factory.addAnyType(), minItems, maxItems);
+    }
+
+    if (baseType.kind === "Scalar" && isIntegerScalar(baseType) && (minValue !== undefined || maxValue !== undefined)) {
+      return factory.addIntegerType(minValue, maxValue);
+    }
+
+    if (sensitive || minLen !== undefined || maxLen !== undefined || pattern !== undefined) {
+      // If the underlying type is a string-like scalar, generate a constrained string
+      if ((baseType.kind === "Scalar" && isStringScalar(baseType)) || (baseType.kind === "Model" && baseType.name === "string")) {
+        return factory.addStringType(sensitive, minLen, maxLen, pattern);
+      }
+    }
+
+    return parseType(prop.type);
+  }
+
+  /**
+   * Check if a scalar type resolves to a string base type.
+   */
+  function isStringScalar(scalar: Scalar): boolean {
+    let current: Scalar | undefined = scalar;
+    while (current) {
+      if (["string", "url", "uuid", "duration", "armResourceIdentifier", "bytes", "plainDate", "plainTime", "utcDateTime", "offsetDateTime"].includes(current.name)) {
+        return true;
+      }
+      current = current.baseScalar;
+    }
+    return false;
+  }
+
+  function isIntegerScalar(scalar: Scalar): boolean {
+    let current: Scalar | undefined = scalar;
+    while (current) {
+      if (["int8", "int16", "int32", "int64", "uint8", "uint16", "uint32", "uint64", "integer", "safeint"].includes(current.name)) {
+        return true;
+      }
+      current = current.baseScalar;
+    }
+    return false;
+  }
+
+  function parseType(type: Type): TypeReference | undefined {
+    switch (type.kind) {
+      case "Model":
+        return parseModelType(type);
+      case "Scalar":
+        return parseScalarType(type);
+      case "Enum":
+        return parseEnumType(type);
+      case "EnumMember":
+        return factory.addStringLiteralType(typeof type.value === "string" ? type.value : (type.value?.toString() ?? type.name));
+      case "String":
+        return factory.addStringLiteralType(type.value);
+      case "Number":
+        return factory.addIntegerType();
+      case "Boolean":
+        return factory.addBooleanType();
+      case "Union":
+        return parseUnionType(type);
+      case "Intrinsic":
+        return parseIntrinsicType(type);
+      default:
+        logWarning(`Unrecognized type kind: ${type.kind}. Returning 'any'.`);
+        return factory.addAnyType();
+    }
+  }
+
+  function parseModelType(model: Model): TypeReference | undefined {
+    // Handle well-known built-in models
+    if (isArrayModel(model)) {
+      const elementType = model.indexer?.value;
+      const itemType = elementType ? parseType(elementType) : factory.addAnyType();
+      return factory.addArrayType(itemType ?? factory.addAnyType());
+    }
+
+    if (isRecordModel(model)) {
+      const modelName = getModelName(model);
+      const existing = modelDefinitions.get(model);
+      if (existing) {
+        return existing;
+      }
+      const valueType = model.indexer?.value;
+      const additionalProps = valueType ? parseType(valueType) : undefined;
+      const ref = factory.addObjectType(modelName || "Record", {}, additionalProps, isSecret(program, model) || undefined);
+      modelDefinitions.set(model, ref);
+      return ref;
+    }
+
+    // Check for cached named definition
+    const modelName = getModelName(model);
+    const existing = modelDefinitions.get(model);
+    if (existing) {
+      return existing;
+    }
+
+    // Build object type
+    const properties: Record<string, ObjectTypeProperty> = {};
+    const discriminatorProp = getDiscriminatorProperty(model);
+
+    let additionalProperties: TypeReference | undefined;
+    if (model.indexer?.value) {
+      additionalProperties = parseType(model.indexer.value);
+    }
+
+    let definition: TypeReference;
+    if (discriminatorProp) {
+      definition = factory.addDiscriminatedObjectType(modelName, discriminatorProp, properties, {});
+    } else {
+      definition = factory.addObjectType(modelName, properties, additionalProperties, isSecret(program, model) || undefined);
+    }
+
+    // Cache before recursing to handle circular references
+    modelDefinitions.set(model, definition);
+
+    // Add properties
+    for (const [propName, prop] of getAllProperties(model)) {
+      if (discriminatorProp && propName === discriminatorProp) {
+        continue; // Skip discriminator property
+      }
+
+      const propertyType = parsePropertyType(prop);
+      if (propertyType !== undefined) {
+        const flags = parsePropertyFlags(prop);
+        const description = getPropertyDescription(prop);
+        properties[propName] = createObjectTypeProperty(propertyType, flags, description);
+      }
+    }
+
+    // Handle discriminated subtypes
+    if (discriminatorProp) {
+      const discriminatedType = factory.lookupType(definition) as DiscriminatedObjectType;
+      handlePolymorphicType(discriminatedType, model);
+    }
+
+    return definition;
+  }
+
+  function parseScalarType(scalar: Scalar): TypeReference {
+    // Collect string constraints from the scalar hierarchy
+    const format = getFormat(program, scalar);
+    const minLen = getMinLength(program, scalar) ?? (format === "uuid" ? uuidLength : undefined);
+    const maxLen = getMaxLength(program, scalar) ?? (format === "uuid" ? uuidLength : undefined);
+    const pattern = getNonEmptyPattern(scalar) ?? (format === "uuid" ? uuidPattern : undefined);
+    const sensitive = isSecret(program, scalar) ? true : undefined;
+    const minValue = getMinValue(program, scalar);
+    const maxValue = getMaxValue(program, scalar);
+
+    // Walk the scalar hierarchy to find a built-in base type
+    let current: Scalar | undefined = scalar;
+    while (current) {
+      switch (current.name) {
+        case "string":
+        case "url":
+        case "uuid":
+        case "duration":
+        case "armResourceIdentifier":
+          return factory.addStringType(sensitive, minLen, maxLen, pattern);
+        case "boolean":
+          return factory.addBooleanType();
+        case "int8":
+        case "int16":
+        case "int32":
+        case "int64":
+        case "uint8":
+        case "uint16":
+        case "uint32":
+        case "uint64":
+        case "integer":
+        case "safeint":
+          return factory.addIntegerType(minValue, maxValue);
+        case "float":
+        case "float32":
+        case "float64":
+        case "decimal":
+        case "decimal128":
+        case "numeric":
+          return factory.addIntegerType(); // Bicep doesn't have float; use int
+        case "bytes":
+          return factory.addStringType(sensitive, minLen, maxLen, pattern); // Base64-encoded
+        case "plainDate":
+        case "plainTime":
+        case "utcDateTime":
+        case "offsetDateTime":
+          return factory.addStringType(sensitive, minLen, maxLen, pattern);
+        case "null":
+          return factory.addNullType();
+      }
+      current = current.baseScalar;
+    }
+
+    logWarning(`Unknown scalar type: ${scalar.name}. Returning 'any'.`);
+    return factory.addAnyType();
+  }
+
+  function parseEnumType(enumType: Enum): TypeReference {
+    const members = [...enumType.members.values()];
+    if (members.length === 0) {
+      return factory.addStringType();
+    }
+
+    const memberTypes = members.filter((member) => typeof member.value !== "number").map((member) => factory.addStringLiteralType(typeof member.value === "string" ? member.value : member.name));
+
+    if (members.some((member) => typeof member.value === "number")) {
+      memberTypes.push(factory.addIntegerType());
+    }
+
+    return memberTypes.length === 1 ? memberTypes[0] : factory.addUnionType(memberTypes);
+  }
+
+  function parseUnionType(union: Union): TypeReference {
+    const variants = [...union.variants.values()];
+    if (variants.length === 0) {
+      return factory.addAnyType();
+    }
+
+    // Check if it's a string literal union (common for enums in TypeSpec)
+    const memberTypes: TypeReference[] = [];
+    for (const variant of variants) {
+      const parsed = parseType(variant.type);
+      if (parsed !== undefined) {
+        memberTypes.push(parsed);
+      }
+    }
+
+    if (memberTypes.length === 0) {
+      return factory.addAnyType();
+    }
+    if (memberTypes.length === 1) {
+      return memberTypes[0];
+    }
+    return factory.addUnionType(memberTypes);
+  }
+
+  function parseIntrinsicType(intrinsic: IntrinsicType): TypeReference {
+    switch (intrinsic.name) {
+      case "null":
+        return factory.addNullType();
+      case "void":
+      case "never":
+        return factory.addAnyType();
+      default:
+        return factory.addAnyType();
+    }
+  }
+
+  // --- Property helpers ---
+
+  function parsePropertyFlags(prop: ModelProperty): ObjectTypePropertyFlags {
+    let flags = ObjectTypePropertyFlags.None;
+
+    if (!prop.optional) {
+      flags |= ObjectTypePropertyFlags.Required;
+    }
+
+    // Use TypeSpec compiler lifecycle visibility APIs
+    const lifecycleEnum = getLifecycleVisibilityEnum(program);
+    if (lifecycleEnum) {
+      const visibilityModifiers = getVisibilityForClass(program, prop, lifecycleEnum);
+      const modifierNames = new Set([...visibilityModifiers].map((m) => m.name));
+
+      const hasRead = modifierNames.has("Read");
+      const hasCreate = modifierNames.has("Create");
+      const hasUpdate = modifierNames.has("Update");
+      const writable = hasCreate || hasUpdate;
+
+      if (hasRead && !writable) {
+        flags |= ObjectTypePropertyFlags.ReadOnly;
+      }
+      if (writable && !hasRead) {
+        flags |= ObjectTypePropertyFlags.WriteOnly;
+      }
+    }
+
+    return flags;
+  }
+
+  function getPropertyDescription(prop: ModelProperty): string | undefined {
+    return getDoc(program, prop);
+  }
+
+  // --- Discriminated type helpers ---
+
+  function getDiscriminatorProperty(model: Model): string | undefined {
+    const discriminator = getDiscriminator(program, model);
+    if (discriminator) {
+      return discriminator.propertyName;
+    }
+    return undefined;
+  }
+
+  function handlePolymorphicType(discriminatedObjectType: DiscriminatedObjectType, model: Model): void {
+    const discriminator = getDiscriminator(program, model);
+    if (!discriminator) return;
+
+    const [discriminatedUnion, diagnostics] = getDiscriminatedUnionFromInheritance(model, discriminator);
+    program.reportDiagnostics(diagnostics);
+
+    for (const [discriminatorValue, derived] of discriminatedUnion.variants) {
+      const objectTypeRef = parseModelType(derived);
+      if (objectTypeRef === undefined) {
+        logWarning(`Skipping subtype '${String(discriminatorValue)}' of discriminated type '${discriminatedObjectType.name}': unable to parse its model.`);
+        continue;
+      }
+
+      const objectType = factory.lookupType(objectTypeRef);
+      if (objectType.type !== TypeBaseKind.ObjectType) {
+        logWarning(`Found unexpected element of discriminated type '${discriminatedObjectType.name}'`);
+        continue;
+      }
+
+      discriminatedObjectType.elements[discriminatorValue] = objectTypeRef;
+
+      // Add the discriminator property to the subtype
+      const discriminatorName = discriminatedObjectType.discriminator;
+      const baseDiscriminatorProperty = model.properties.get(discriminatorName);
+      const description = objectType.properties[discriminatorName]?.description ?? (baseDiscriminatorProperty ? getPropertyDescription(baseDiscriminatorProperty) : undefined);
+      objectType.properties[discriminatorName] = createObjectTypeProperty(factory.addStringLiteralType(discriminatorValue), ObjectTypePropertyFlags.Required, description);
+    }
+  }
+
+  // --- Model helpers ---
+
+  function getModelName(model: Model): string {
+    const existing = modelNames.get(model);
+    if (existing) {
+      return existing;
+    }
+
+    let name = model.name || `AnonymousModel${++anonymousModelCount}`;
+    if (usedModelNames.has(name) && model.namespace) {
+      name = `${getNamespaceFullName(model.namespace)}.${name}`;
+    }
+
+    let suffix = 2;
+    const baseName = name;
+    while (usedModelNames.has(name)) {
+      name = `${baseName}${suffix++}`;
+    }
+
+    modelNames.set(model, name);
+    usedModelNames.add(name);
+    return name;
+  }
+
+  function isArrayModel(model: Model): boolean {
+    return model.name === "Array" && model.indexer !== undefined;
+  }
+
+  function isRecordModel(model: Model): boolean {
+    return model.name === "Record" && model.indexer !== undefined;
+  }
+
+  function* getAllProperties(model: Model): IterableIterator<[string, ModelProperty]> {
+    // Include inherited properties from base models
+    if (model.baseModel) {
+      yield* getAllProperties(model.baseModel);
+    }
+
+    // Include own properties
+    for (const [name, prop] of model.properties) {
+      yield [name, prop];
+    }
+  }
+
+  // --- Utility ---
+
+  /**
+   * Unwrap ARM response envelope types.
+   * ARM response types like ArmResponse<T> are wrapper models whose
+   * template argument is the actual payload type. We detect these by:
+   * 1. Checking if the model's templateMapper has arguments (template instantiation)
+   * 2. Checking if the model name contains "Response" (ARM convention)
+   * If so, we return the first template argument as the unwrapped type.
+   * If the inner type is void/never, we return undefined (no output).
+   */
+  function unwrapArmResponseEnvelope(model: Model): Model | undefined {
+    // Check if this is a template instantiation with a template argument
+    if (model.templateMapper?.args && model.templateMapper.args.length > 0) {
+      // Check if the source template looks like an ARM response wrapper
+      const isArmResponse =
+        model.name === "" || // Anonymous template instantiation
+        (model.sourceModel && /Response|Accepted|NoContent/.test(model.sourceModel.name ?? ""));
+
+      if (isArmResponse) {
+        const innerArg = model.templateMapper.args[0];
+        if (innerArg.entityKind === "Type") {
+          if (innerArg.kind === "Model") {
+            return innerArg;
+          }
+          if (innerArg.kind === "Intrinsic" && (innerArg.name === "void" || innerArg.name === "never")) {
+            return undefined;
+          }
+        }
+      }
+    }
+
+    // Check for a "body" property that wraps the actual content
+    // This handles cases like { @statusCode code: 200; @body body: T; }
+    const bodyProp = model.properties.get("body");
+    if (bodyProp && bodyProp.type.kind === "Model") {
+      // Only unwrap if this looks like a response envelope (has statusCode or similar)
+      const hasStatusCode = model.properties.has("statusCode");
+      if (hasStatusCode) {
+        return bodyProp.type;
+      }
+    }
+
+    // Check for void response types (only statusCode, no body) — these represent
+    // operations with no response payload (e.g. purgeDeleted, accepted LRO responses)
+    const hasStatusCode = model.properties.has("statusCode");
+    if (hasStatusCode && !model.properties.has("body")) {
+      return undefined; // No meaningful output
+    }
+
+    // Not an envelope — return as-is
+    return model;
+  }
+
+  function createObjectTypeProperty(type: TypeReference, flags: ObjectTypePropertyFlags, description?: string): ObjectTypeProperty {
+    const normalizedDescription = description?.replaceAll('\\"', '"').trim();
+
+    return {
+      type,
+      flags,
+      description: normalizedDescription || undefined,
+    };
+  }
+
+  return generate();
+}
