@@ -9,7 +9,7 @@ import { hideBin } from 'yargs/helpers'
 import { GeneratorConfig, getConfig } from '../config';
 import * as markdown from '@ts-common/commonmark-to-markdown'
 import * as yaml from 'js-yaml'
-import { TypeFile, TypeSettings, buildIndex, writeIndexJson, writeIndexMarkdown, readTypesJson } from 'bicep-types';
+import { TypeFile, TypeSettings, buildIndex, writeIndexJson, writeIndexMarkdown, readTypesJson } from '@azure/bicep-types';
 import { copyRecursive, executeSynchronous, getLogger, lowerCaseCompare, logErr, logOut, ILogger, defaultLogger, executeCmd, findRecursive } from '../utils';
 import { addAzExtensionConfigurationType } from '../index/azExtensionConfiguration';
 

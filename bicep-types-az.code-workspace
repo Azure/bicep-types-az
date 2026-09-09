@@ -14,17 +14,12 @@
 		{
 			"name": "generator",
 			"path": "src/generator"
-		},
-		{
-			"name": "bicep-types",
-			"path": "bicep-types/src/bicep-types"
 		}
 	],
 	"settings": {
 		"jest.disabledWorkspaceFolders": [
 			"bicep-types-az",
 			"generator",
-			"bicep-types",
 			"autorest.bicep",
 		]
 	}

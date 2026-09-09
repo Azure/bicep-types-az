@@ -3,7 +3,7 @@
 import os from 'os';
 import path from 'path';
 import { mkdtemp, readFile, rm } from 'fs/promises';
-import { CrossFileTypeReference, TypeBaseKind, ObjectType, StringLiteralType, readTypesJson } from 'bicep-types';
+import { CrossFileTypeReference, TypeBaseKind, ObjectType, StringLiteralType, readTypesJson } from '@azure/bicep-types';
 import { addAzExtensionConfigurationType } from '../../src/index/azExtensionConfiguration';
 
 describe('addAzExtensionConfigurationType', () => {
