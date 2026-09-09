@@ -1696,5 +1696,17 @@
     "output": {
       "$ref": "#/24"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Test.Rp1",
+    "apiVersion": "2021-10-31",
+    "output": {
+      "$ref": "#/109"
+    },
+    "input": {
+      "$ref": "#/108"
+    }
   }
 ]

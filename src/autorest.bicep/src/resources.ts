@@ -650,6 +650,23 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     const routingScope = actionRoutingScope.substr(0, actionRoutingScope.lastIndexOf('/'));
     const actionName = actionRoutingScope.substr(actionRoutingScope.lastIndexOf('/') + 1);
 
+    if (!routingScope.includes('/')) {
+      if (isPathVariable(routingScope)) {
+        return failure(`Unable to process parameterized provider namespace "${routingScope}"`);
+      }
+
+      return success({
+        descriptors: [{
+          namespace: routingScope,
+          typeSegments: [],
+          apiVersion,
+          readableScopes: ScopeType.None,
+          writableScopes: scopeType,
+        }],
+        actionName,
+      });
+    }
+
     const resourceDescriptorsResult = parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope, false, true);
     if (!resourceDescriptorsResult.success) {
       return failure(resourceDescriptorsResult.error);
