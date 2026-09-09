@@ -116,6 +116,18 @@
 * **Input**: [ResourceBody](#resourcebody)
 * **Output**: [Flow](#flow)
 
+## Function listApprovedSchemas (Microsoft.AzureDataTransfer@2026-02-06-preview)
+* **Resource**: Microsoft.AzureDataTransfer
+* **ApiVersion**: 2026-02-06-preview
+* **Input**: [ListApprovedSchemasRequest](#listapprovedschemasrequest)
+* **Output**: [SchemasListResult](#schemaslistresult)
+
+## Function listFlowProfiles (Microsoft.AzureDataTransfer@2026-02-06-preview)
+* **Resource**: Microsoft.AzureDataTransfer
+* **ApiVersion**: 2026-02-06-preview
+* **Input**: [ListFlowProfilesRequest](#listflowprofilesrequest)
+* **Output**: [FlowProfilesListResult](#flowprofileslistresult)
+
 ## Function listFlows (Microsoft.AzureDataTransfer/pipelines@2026-02-06-preview)
 * **Resource**: Microsoft.AzureDataTransfer/pipelines
 * **ApiVersion**: 2026-02-06-preview
@@ -131,6 +143,12 @@
 * **Resource**: Microsoft.AzureDataTransfer/connections
 * **ApiVersion**: 2026-02-06-preview
 * **Output**: [PendingFlowListResult](#pendingflowlistresult)
+
+## Function listPipelineMetadata (Microsoft.AzureDataTransfer@2026-02-06-preview)
+* **Resource**: Microsoft.AzureDataTransfer
+* **ApiVersion**: 2026-02-06-preview
+* **Input**: [ListPipelineMetadataRequest](#listpipelinemetadatarequest)
+* **Output**: [ListPipelineMetadataResult](#listpipelinemetadataresult)
 
 ## Function listSchemas (Microsoft.AzureDataTransfer/pipelines@2026-02-06-preview)
 * **Resource**: Microsoft.AzureDataTransfer/pipelines
@@ -167,6 +185,12 @@
 * **ApiVersion**: 2026-02-06-preview
 * **Input**: [SetSourceAddresses](#setsourceaddresses)
 * **Output**: [Flow](#flow)
+
+## Function validateSchema (Microsoft.AzureDataTransfer@2026-02-06-preview)
+* **Resource**: Microsoft.AzureDataTransfer
+* **ApiVersion**: 2026-02-06-preview
+* **Input**: [Schema](#schema)
+* **Output**: [ValidateSchemaResult](#validateschemaresult)
 
 ## Action
 ### Properties
@@ -254,6 +278,16 @@
 * **maximum**: int {minValue: 0}: Optional. Specifies the maximum allowed size (in bytes) for files to be replicated. Any file size greater than maximum will be denied replication.
 * **minimum**: int {minValue: 0}: Optional. Default is 0. Specifies the minimum required size (in bytes) for a file to be eligible for replication. Any file size less than minimum will be denied replication.
 
+## DirectionSettings
+### Properties
+* **completeLinking**: 'Disabled' | 'Enabled' | string (Required): Indicates whether this direction completes the connection linking process.
+* **connectionApprovals**: 'Disabled' | 'Enabled' | string (Required): Indicates whether connections in this direction require approval.
+* **flowApprovals**: 'Disabled' | 'Enabled' | string: Indicates whether flow approvals are required for this direction.
+* **flowProfileDataClassesAvailable**: ('API' | 'Complex' | 'Files' | 'Messaging' | 'SoftwareArtifacts' | 'Stream' | string)[]: The data class types available for FlowProfile-based transfers in this direction.
+* **flowTypesAvailable**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types supported for this direction.
+* **messagingFlowsPricingOptions**: ('BlobTransport' | 'Premium' | 'Standard' | string)[]: The pricing options available for messaging flows in this direction.
+* **messagingFlowTypeSchemaValidation**: 'Disabled' | 'Enabled' | string: Indicates whether schema validation is required for data transfer in this direction.
+
 ## Flow
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
@@ -292,6 +326,10 @@
 * **mimeFilters**: [MimeFilterRuleset](#mimefilterruleset): Rules for filtering files based on MIME types.
 * **textMatching**: [TextMatchingRuleset](#textmatchingruleset): Rules for detecting and blocking specific text patterns.
 * **xmlFilters**: [XmlFilterRuleset](#xmlfilterruleset): Rules for filtering XML content using XSD schemas.
+
+## FlowProfilesListResult
+### Properties
+* **value**: [FlowProfileMetadata](#flowprofilemetadata)[]: FlowProfileMetadata array.
 
 ## FlowProperties
 ### Properties
@@ -346,6 +384,15 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## ListApprovedSchemasRequest
+### Properties
+* **direction**: 'Receive' | 'Send' | string: The direction pipeline to filter approved schemas.
+* **pipeline**: string: The name of the pipeline to filter approved schemas.
+
+## ListFlowProfilesRequest
+### Properties
+* **pipeline**: string: The name of the pipeline for which to retrieve associated FlowProfiles.
+
 ## ListFlowsByPipelineConnection
 ### Properties
 * **flows**: [Flow](#flow)[]: List of flows associated with the connection.
@@ -354,6 +401,15 @@
 ## ListFlowsByPipelineResult
 ### Properties
 * **value**: [ListFlowsByPipelineConnection](#listflowsbypipelineconnection)[]: List flows by pipeline result by connection
+
+## ListPipelineMetadataRequest
+### Properties
+* **pipeline**: string (Required): The name of the pipeline for which to retrieve associated metadata.
+
+## ListPipelineMetadataResult
+### Properties
+* **receive**: [DirectionSettings](#directionsettings): Returns the settings associated with receive direction of the pipeline.
+* **send**: [DirectionSettings](#directionsettings): Returns the settings associated with send direction of the pipeline.
 
 ## ManagedServiceIdentity
 ### Properties
@@ -649,6 +705,11 @@
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
+## ValidateSchemaResult
+### Properties
+* **message**: string: Message describing the schema validation
+* **status**: 'Failed' | 'Succeeded' | string (ReadOnly): Validation status of the schema
 
 ## XmlFilterRuleset
 ### Properties

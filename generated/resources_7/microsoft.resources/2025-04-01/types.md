@@ -14,6 +14,12 @@
 * **tags**: [DeploymentTags](#deploymenttags): Deployment tags
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function calculateTemplateHash (Microsoft.Resources@2025-04-01)
+* **Resource**: Microsoft.Resources
+* **ApiVersion**: 2025-04-01
+* **Input**: any
+* **Output**: [TemplateHashResult](#templatehashresult)
+
 ## Function cancel (Microsoft.Resources/deployments@2025-04-01)
 * **Resource**: Microsoft.Resources/deployments
 * **ApiVersion**: 2025-04-01
@@ -430,6 +436,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TemplateHashResult
+### Properties
+* **minifiedTemplate**: string: The minified template string.
+* **templateHash**: string: The template hash.
 
 ## TemplateLink
 ### Properties

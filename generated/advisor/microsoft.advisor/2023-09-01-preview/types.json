@@ -1941,6 +1941,230 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "generateRecommendations",
+    "resourceType": "Microsoft.Advisor",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 0,
+        "description": "Request properties for prediction recommendation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionRequestProperties",
+    "properties": {
+      "predictionType": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 0,
+        "description": "Type of the prediction."
+      },
+      "extendedProperties": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Extended properties are arguments specific for each prediction type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PredictiveRightsizing"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "The properties of the prediction."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionResponseProperties",
+    "properties": {
+      "extendedProperties": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Extended properties"
+      },
+      "predictionType": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 0,
+        "description": "Type of the prediction."
+      },
+      "category": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 0,
+        "description": "The category of the recommendation."
+      },
+      "impact": {
+        "type": {
+          "$ref": "#/166"
+        },
+        "flags": 0,
+        "description": "The business impact of the recommendation."
+      },
+      "impactedField": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type identified by Advisor."
+      },
+      "lastUpdated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The most recent time that Advisor checked the validity of the recommendation."
+      },
+      "shortDescription": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "A summary of the recommendation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PredictiveRightsizing"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HighAvailability"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Security"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Performance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cost"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationalExcellence"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/157"
+      },
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "predict",
+    "resourceType": "Microsoft.Advisor",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/153"
+    },
+    "input": {
+      "$ref": "#/149"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "approve",
     "resourceType": "Microsoft.Advisor/triageRecommendations",
     "apiVersion": "2023-09-01-preview",
@@ -1954,7 +2178,7 @@
     "properties": {
       "reasonForRejection": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/172"
         },
         "flags": 0,
         "description": "Reason for rejecting recommendation."
@@ -1973,10 +2197,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/150"
+        "$ref": "#/170"
       },
       {
-        "$ref": "#/151"
+        "$ref": "#/171"
       },
       {
         "$ref": "#/0"
@@ -1992,7 +2216,7 @@
       "$ref": "#/70"
     },
     "input": {
-      "$ref": "#/149"
+      "$ref": "#/169"
     }
   },
   {

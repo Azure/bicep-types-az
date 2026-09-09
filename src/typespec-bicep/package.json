@@ -34,7 +34,7 @@
   "author": "Microsoft Corporation",
   "license": "MIT",
   "dependencies": {
-    "bicep-types": "file:../../bicep-types/src/bicep-types"
+    "@azure/bicep-types": "^0.6.129"
   },
   "peerDependencies": {
     "@azure-tools/typespec-azure-core": "^0.71.0",

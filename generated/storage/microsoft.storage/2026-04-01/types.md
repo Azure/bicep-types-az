@@ -286,6 +286,12 @@
 * **ApiVersion**: 2026-04-01
 * **Output**: any
 
+## Function checkNameAvailability (Microsoft.Storage@2026-04-01)
+* **Resource**: Microsoft.Storage
+* **ApiVersion**: 2026-04-01
+* **Input**: [StorageAccountCheckNameAvailabilityParameters](#storageaccountchecknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function clearLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2026-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2026-04-01
@@ -557,6 +563,12 @@
 ### Properties
 * **enabled**: bool: Indicates whether change feed event logging is enabled for the Blob service.
 * **retentionInDays**: int {minValue: 1, maxValue: 146000}: Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): Gets an error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used.
+* **reason**: 'AccountNameInvalid' | 'AlreadyExists' (ReadOnly): Gets the reason that a storage account name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## ContainerProperties
 ### Properties
@@ -1244,6 +1256,11 @@
 * **enabled**: bool (Required): Indicates whether static website support is enabled for the specified account.
 * **errorDocument404Path**: string: The absolute path to a webpage that Azure Storage serves for requests that don't correspond to an existing file. The contents of the page are returned with HTTP 404 Not Found. Only a single custom 404 page is supported in each static website.
 * **indexDocument**: string: The webpage that Azure Storage serves for requests to the root of a website or any subfolder (for example, index.html). The value is case-sensitive.
+
+## StorageAccountCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The storage account name.
+* **type**: 'Microsoft.Storage/storageAccounts' (Required): The type of resource, Microsoft.Storage/storageAccounts
 
 ## StorageAccountCreateParametersTags
 ### Properties

@@ -19094,6 +19094,93 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1398"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Sql/servers"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name whose availability was checked."
+      },
+      "available": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "True if the name is available, otherwise false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/1402"
+        },
+        "flags": 2,
+        "description": "The reason code explaining why the name is unavailable. Will be undefined if the name is available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A message explaining why the name is unavailable. Will be undefined if the name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1400"
+      },
+      {
+        "$ref": "#/1401"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Sql",
+    "apiVersion": "2021-11-01",
+    "output": {
+      "$ref": "#/1399"
+    },
+    "input": {
+      "$ref": "#/1397"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ImportNewDatabaseDefinition",
     "properties": {
       "databaseName": {
@@ -19126,7 +19213,7 @@
       },
       "storageKeyType": {
         "type": {
-          "$ref": "#/1400"
+          "$ref": "#/1407"
         },
         "flags": 5,
         "description": "Storage key type."
@@ -19187,10 +19274,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1398"
+        "$ref": "#/1405"
       },
       {
-        "$ref": "#/1399"
+        "$ref": "#/1406"
       },
       {
         "$ref": "#/0"
@@ -19206,7 +19293,7 @@
       "$ref": "#/1301"
     },
     "input": {
-      "$ref": "#/1397"
+      "$ref": "#/1404"
     }
   },
   {
@@ -19240,7 +19327,7 @@
     "resourceType": "Microsoft.Sql/servers/syncAgents",
     "apiVersion": "2021-11-01",
     "output": {
-      "$ref": "#/1403"
+      "$ref": "#/1410"
     }
   },
   {
@@ -19285,7 +19372,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1410"
+          "$ref": "#/1417"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -19319,7 +19406,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/1413"
+          "$ref": "#/1420"
         },
         "flags": 2,
         "description": "The status of the DNS refresh operation."
@@ -19338,10 +19425,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1411"
+        "$ref": "#/1418"
       },
       {
-        "$ref": "#/1412"
+        "$ref": "#/1419"
       },
       {
         "$ref": "#/0"
@@ -19354,7 +19441,7 @@
     "resourceType": "Microsoft.Sql/virtualClusters",
     "apiVersion": "2021-11-01",
     "output": {
-      "$ref": "#/1409"
+      "$ref": "#/1416"
     }
   }
 ]

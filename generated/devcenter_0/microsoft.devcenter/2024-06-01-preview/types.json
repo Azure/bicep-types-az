@@ -7384,6 +7384,126 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/505"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/680"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/678"
+      },
+      {
+        "$ref": "#/679"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DevCenter",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/677"
+    },
+    "input": {
+      "$ref": "#/676"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckScopedNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id to scope the name check."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkScopedNameAvailability",
+    "resourceType": "Microsoft.DevCenter",
+    "apiVersion": "2024-06-01-preview",
+    "output": {
+      "$ref": "#/677"
+    },
+    "input": {
+      "$ref": "#/682"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "getErrorDetails",
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/tasks",

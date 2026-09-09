@@ -70,6 +70,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DBforPostgreSQL@2022-12-01)
+* **Resource**: Microsoft.DBforPostgreSQL
+* **ApiVersion**: 2022-12-01
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function checkNameAvailability (Microsoft.DBforPostgreSQL/locations@2022-12-01)
 * **Resource**: Microsoft.DBforPostgreSQL/locations
 * **ApiVersion**: 2022-12-01
@@ -81,6 +87,11 @@
 * **ApiVersion**: 2022-12-01
 * **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
 * **Output**: [VirtualNetworkSubnetUsageResult](#virtualnetworksubnetusageresult)
+
+## Function getPrivateDnsZoneSuffix (Microsoft.DBforPostgreSQL@2022-12-01)
+* **Resource**: Microsoft.DBforPostgreSQL
+* **ApiVersion**: 2022-12-01
+* **Output**: string
 
 ## Function restart (Microsoft.DBforPostgreSQL/flexibleServers@2022-12-01)
 * **Resource**: Microsoft.DBforPostgreSQL/flexibleServers

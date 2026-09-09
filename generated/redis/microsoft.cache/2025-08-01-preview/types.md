@@ -82,6 +82,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Cache/redis/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Cache@2025-08-01-preview)
+* **Resource**: Microsoft.Cache
+* **ApiVersion**: 2025-08-01-preview
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: any
+
 ## Function export (Microsoft.Cache/redis@2025-08-01-preview)
 * **Resource**: Microsoft.Cache/redis
 * **ApiVersion**: 2025-08-01-preview
@@ -115,6 +121,11 @@
 * **ApiVersion**: 2025-08-01-preview
 * **Input**: [RedisRegenerateKeyParameters](#redisregeneratekeyparameters)
 * **Output**: [RedisAccessKeys](#redisaccesskeys)
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): Resource name.
+* **type**: string (Required): Resource type. The only legal value of this property for checking redis cache name availability is 'Microsoft.Cache/redis'.
 
 ## ErrorAdditionalInfo
 ### Properties

@@ -102,6 +102,12 @@
 * **Input**: [ResourceBody](#resourcebody)
 * **Output**: [Flow](#flow)
 
+## Function listApprovedSchemas (Microsoft.AzureDataTransfer@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer
+* **ApiVersion**: 2025-04-11-preview
+* **Input**: [ListApprovedSchemasRequest](#listapprovedschemasrequest)
+* **Output**: [SchemasListResult](#schemaslistresult)
+
 ## Function listFlows (Microsoft.AzureDataTransfer/pipelines@2025-04-11-preview)
 * **Resource**: Microsoft.AzureDataTransfer/pipelines
 * **ApiVersion**: 2025-04-11-preview
@@ -153,6 +159,12 @@
 * **ApiVersion**: 2025-04-11-preview
 * **Input**: [SetSourceAddresses](#setsourceaddresses)
 * **Output**: [Flow](#flow)
+
+## Function validateSchema (Microsoft.AzureDataTransfer@2025-04-11-preview)
+* **Resource**: Microsoft.AzureDataTransfer
+* **ApiVersion**: 2025-04-11-preview
+* **Input**: [Schema](#schema)
+* **Output**: [ValidateSchemaResult](#validateschemaresult)
 
 ## Action
 ### Properties
@@ -271,6 +283,11 @@
 * **statusSetBy**: string (ReadOnly): User that last set the approved status for this connection
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## ListApprovedSchemasRequest
+### Properties
+* **direction**: 'Receive' | 'Send' | string: The direction pipeline to filter approved schemas.
+* **pipeline**: string: The name of the pipeline to filter approved schemas.
 
 ## ListFlowsByPipelineConnection
 ### Properties
@@ -539,4 +556,9 @@
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
+## ValidateSchemaResult
+### Properties
+* **message**: string: Message describing the schema validation
+* **status**: 'Failed' | 'Succeeded' | string (ReadOnly): Validation status of the schema
 

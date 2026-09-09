@@ -47,6 +47,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Resource system metadata.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/replicas' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppConfiguration@2023-03-01)
+* **Resource**: Microsoft.AppConfiguration
+* **ApiVersion**: 2023-03-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [NameAvailabilityStatus](#nameavailabilitystatus)
+
 ## Function checkNameAvailability (Microsoft.AppConfiguration/locations@2023-03-01)
 * **Resource**: Microsoft.AppConfiguration/locations
 * **ApiVersion**: 2023-03-01

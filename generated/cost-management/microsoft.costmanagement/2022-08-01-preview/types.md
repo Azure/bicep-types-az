@@ -22,6 +22,12 @@
 * **properties**: [ViewProperties](#viewproperties): The properties of the view.
 * **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function forecast (Microsoft.CostManagement@2022-08-01-preview)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2022-08-01-preview
+* **Input**: [ForecastDefinition](#forecastdefinition)
+* **Output**: [QueryResult](#queryresult)
+
 ## Function forecast (Microsoft.CostManagement/externalSubscriptions@2022-08-01-preview)
 * **Resource**: Microsoft.CostManagement/externalSubscriptions
 * **ApiVersion**: 2022-08-01-preview
@@ -32,6 +38,12 @@
 * **Resource**: Microsoft.CostManagement/externalBillingAccounts
 * **ApiVersion**: 2022-08-01-preview
 * **Input**: [ForecastDefinition](#forecastdefinition)
+* **Output**: [QueryResult](#queryresult)
+
+## Function query (Microsoft.CostManagement@2022-08-01-preview)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2022-08-01-preview
+* **Input**: [QueryDefinition](#querydefinition)
 * **Output**: [QueryResult](#queryresult)
 
 ## Function query (Microsoft.CostManagement/externalSubscriptions@2022-08-01-preview)

@@ -680,6 +680,105 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The namespace name to check for availability. The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the namespace."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Value indicating namespace is available. Returns true if the namespace is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a namespace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionIsDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInLockdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TooManyNamespaceInCurrentSubscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Relay",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/53"
+    },
+    "input": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AccessKeys",
     "properties": {
       "primaryConnectionString": {
@@ -725,7 +824,7 @@
     "resourceType": "Microsoft.Relay/namespaces/authorizationRules",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/62"
     }
   },
   {
@@ -734,7 +833,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/57"
+          "$ref": "#/67"
         },
         "flags": 1,
         "description": "The access key to regenerate."
@@ -760,10 +859,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/55"
+        "$ref": "#/65"
       },
       {
-        "$ref": "#/56"
+        "$ref": "#/66"
       }
     ]
   },
@@ -773,10 +872,10 @@
     "resourceType": "Microsoft.Relay/namespaces/authorizationRules",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/62"
     },
     "input": {
-      "$ref": "#/54"
+      "$ref": "#/64"
     }
   },
   {
@@ -785,7 +884,7 @@
     "resourceType": "Microsoft.Relay/namespaces/hybridConnections/authorizationRules",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/62"
     }
   },
   {
@@ -794,10 +893,10 @@
     "resourceType": "Microsoft.Relay/namespaces/hybridConnections/authorizationRules",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/62"
     },
     "input": {
-      "$ref": "#/54"
+      "$ref": "#/64"
     }
   },
   {
@@ -806,7 +905,7 @@
     "resourceType": "Microsoft.Relay/namespaces/wcfRelays/authorizationRules",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/62"
     }
   },
   {
@@ -815,10 +914,10 @@
     "resourceType": "Microsoft.Relay/namespaces/wcfRelays/authorizationRules",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/62"
     },
     "input": {
-      "$ref": "#/54"
+      "$ref": "#/64"
     }
   }
 ]

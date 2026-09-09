@@ -1333,6 +1333,105 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name to check the namespace name availability"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the Namespace."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Value indicating Namespace is availability, true if the Namespace is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a Namespace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionIsDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInLockdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TooManyNamespaceInCurrentSubscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.EventHub",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/106"
+    },
+    "input": {
+      "$ref": "#/105"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules",
@@ -1350,7 +1449,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/106"
+      "$ref": "#/116"
     }
   },
   {
@@ -1359,7 +1458,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/106"
+      "$ref": "#/116"
     }
   },
   {

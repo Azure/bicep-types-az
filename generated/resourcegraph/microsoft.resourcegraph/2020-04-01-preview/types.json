@@ -1,0 +1,878 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "ResourcesHistoryRequest",
+    "properties": {
+      "subscriptions": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "query": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0
+      },
+      "options": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0
+      },
+      "managementGroupId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourcesHistoryRequestOptions",
+    "properties": {
+      "interval": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "An interval in time specifying the date and time for the inclusive start and exclusive end, i.e. `[start, end)`."
+      },
+      "$top": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0
+      },
+      "$skip": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0
+      },
+      "$skipToken": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0
+      },
+      "resultFormat": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DateTimeInterval",
+    "properties": {
+      "start": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "A datetime indicating the inclusive/closed start of the time interval, i.e. `[`**`start`**`, end)`. Specifying a `start` that occurs chronologically after `end` will result in an error."
+      },
+      "end": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "A datetime indicating the exclusive/open end of the time interval, i.e. `[start, `**`end`**`)`. Specifying an `end` that occurs chronologically before `start` will result in an error."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "table"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "objectArray"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resourcesHistory",
+    "resourceType": "Microsoft.ResourceGraph",
+    "apiVersion": "2020-04-01-preview",
+    "output": {
+      "$ref": "#/9"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryRequest",
+    "properties": {
+      "subscriptions": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Azure subscriptions against which to execute the query."
+      },
+      "managementGroupId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The management group identifier."
+      },
+      "query": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The resources query."
+      },
+      "options": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The query evaluation options"
+      },
+      "facets": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "An array of facet requests to be computed against the query result."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryRequestOptions",
+    "properties": {
+      "$skipToken": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "Continuation token for pagination, capturing the next page size and offset, as well as the context of the query."
+      },
+      "$top": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The maximum number of rows that the query should return. Overrides the page size when ```$skipToken``` property is present."
+      },
+      "$skip": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "The number of rows to skip from the beginning of the results. Overrides the next page offset when ```$skipToken``` property is present."
+      },
+      "resultFormat": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Defines in which format query result returned."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 1000
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "table"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "objectArray"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FacetRequest",
+    "properties": {
+      "expression": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The column or list of columns to summarize by"
+      },
+      "options": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The options for facet evaluation"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FacetRequestOptions",
+    "properties": {
+      "sortBy": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The column name or query expression to sort on. Defaults to count if not present."
+      },
+      "sortOrder": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The sorting order by the selected column (count by default)."
+      },
+      "filter": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "Specifies the filter condition for the 'where' clause which will be run on main query's result, just before the actual faceting."
+      },
+      "$top": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The maximum number of facet rows that should be returned."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "asc"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "desc"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryResponse",
+    "properties": {
+      "totalRecords": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Number of total records matching the query."
+      },
+      "count": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Number of records returned in the current response. In the case of paging, this is the number of records in the current page."
+      },
+      "resultTruncated": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 1,
+        "description": "Indicates whether the query results are truncated."
+      },
+      "$skipToken": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "When present, the value can be passed to a subsequent query call (together with the same query and subscriptions used in the current request) to retrieve the next page of data."
+      },
+      "data": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 1,
+        "description": "Query output in tabular format."
+      },
+      "facets": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Query facets."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "true"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "false"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Facet",
+    "discriminator": "resultType",
+    "baseProperties": {
+      "expression": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Facet expression, same as in the corresponding facet request."
+      }
+    },
+    "elements": {
+      "FacetError": {
+        "$ref": "#/30"
+      },
+      "FacetResult": {
+        "$ref": "#/34"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FacetError",
+    "properties": {
+      "errors": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 1,
+        "description": "An array containing detected facet errors with details."
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 1,
+        "description": "Result type"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetails",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Error code identifying the specific error."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "A human readable error message."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/9"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FacetError"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FacetResult",
+    "properties": {
+      "totalRecords": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Number of total records in the facet results."
+      },
+      "count": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Number of records returned in the facet response."
+      },
+      "data": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 1,
+        "description": "A table containing the desired facets. Only present if the facet is valid."
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 1,
+        "description": "Result type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FacetResult"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resources",
+    "resourceType": "Microsoft.ResourceGraph",
+    "apiVersion": "2020-04-01-preview",
+    "output": {
+      "$ref": "#/25"
+    },
+    "input": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangesRequestParameters",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Specifies the resource for a changes request."
+      },
+      "interval": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 1,
+        "description": "Specifies the date and time interval for a changes request."
+      },
+      "$skipToken": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "Acts as the continuation token for paged responses."
+      },
+      "$top": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The maximum number of changes the client can accept in a paged response."
+      },
+      "fetchPropertyChanges": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "The flag if set to true will fetch property changes"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangesRequestParametersInterval",
+    "properties": {
+      "start": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "A datetime indicating the inclusive/closed start of the time interval, i.e. `[`**`start`**`, end)`. Specifying a `start` that occurs chronologically after `end` will result in an error."
+      },
+      "end": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "A datetime indicating the exclusive/open end of the time interval, i.e. `[start, `**`end`**`)`. Specifying an `end` that occurs chronologically before `start` will result in an error."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangeList",
+    "properties": {
+      "changes": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "The pageable value returned by the operation, i.e. a list of changes to the resource.\n\n- The list is ordered from the most recent changes to the least recent changes.\n- This list will be empty if there were no changes during the requested interval.\n- The `Before` snapshot timestamp value of the oldest change can be outside of the specified time interval."
+      },
+      "$skipToken": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Skip token that encodes the skip information while executing the current request"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangeData",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The ID of the resource"
+      },
+      "changeId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The change ID. Valid and unique within the specified resource only."
+      },
+      "beforeSnapshot": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "The snapshot before the change."
+      },
+      "afterSnapshot": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 1,
+        "description": "The snapshot after the change."
+      },
+      "changeType": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "The change type for snapshot. PropertyChanges will be provided in case of Update change type"
+      },
+      "propertyChanges": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "An array of resource property change"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangeDataBeforeSnapshot",
+    "properties": {
+      "snapshotId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The ID of the snapshot."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The time when the snapshot was created.\nThe snapshot timestamp provides an approximation as to when a modification to a resource was detected.  There can be a difference between the actual modification time and the detection time.  This is due to differences in how operations that modify a resource are processed, versus how operation that record resource snapshots are processed."
+      },
+      "content": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The resource snapshot content (in resourceChangeDetails response only)."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangeDataAfterSnapshot",
+    "properties": {
+      "snapshotId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The ID of the snapshot."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The time when the snapshot was created.\nThe snapshot timestamp provides an approximation as to when a modification to a resource was detected.  There can be a difference between the actual modification time and the detection time.  This is due to differences in how operations that modify a resource are processed, versus how operation that record resource snapshots are processed."
+      },
+      "content": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The resource snapshot content (in resourceChangeDetails response only)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Create"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Update"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourcePropertyChange",
+    "properties": {
+      "propertyName": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The property name"
+      },
+      "beforeValue": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The property value in before snapshot"
+      },
+      "afterValue": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The property value in after snapshot"
+      },
+      "changeCategory": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 1,
+        "description": "The change category."
+      },
+      "propertyChangeType": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 1,
+        "description": "The property change Type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Insert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Update"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Remove"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resourceChanges",
+    "resourceType": "Microsoft.ResourceGraph",
+    "apiVersion": "2020-04-01-preview",
+    "output": {
+      "$ref": "#/41"
+    },
+    "input": {
+      "$ref": "#/38"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangeDetailsRequestParameters",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Specifies the resource for a change details request."
+      },
+      "changeId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Specifies the change ID."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resourceChangeDetails",
+    "resourceType": "Microsoft.ResourceGraph",
+    "apiVersion": "2020-04-01-preview",
+    "output": {
+      "$ref": "#/42"
+    },
+    "input": {
+      "$ref": "#/60"
+    }
+  }
+]

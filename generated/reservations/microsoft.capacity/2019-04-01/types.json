@@ -2041,5 +2041,146 @@
     "input": {
       "$ref": "#/169"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculatePriceResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculatePriceResponseProperties",
+    "properties": {
+      "billingCurrencyTotal": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 0,
+        "description": "Currency and amount that customer will be charged in customer's local currency. Tax is not included."
+      },
+      "netTotal": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Net total"
+      },
+      "taxTotal": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Tax total"
+      },
+      "grandTotal": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Grand Total"
+      },
+      "isBillingPartnerManaged": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "True if billing is managed by Microsoft Partner. Used only for CSP accounts."
+      },
+      "reservationOrderId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "GUID that represents reservation order that can be placed after calculating price."
+      },
+      "skuTitle": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Title of SKU that is being purchased."
+      },
+      "skuDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of SKU that is being purchased."
+      },
+      "pricingCurrencyTotal": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 0,
+        "description": "Amount that Microsoft uses for record. Used during refund for calculating refund limit. Tax is not included."
+      },
+      "paymentSchedule": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculatePriceResponsePropertiesBillingCurrencyTotal",
+    "properties": {
+      "currencyCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "amount": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculatePriceResponsePropertiesPricingCurrencyTotal",
+    "properties": {
+      "currencyCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "amount": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "calculatePrice",
+    "resourceType": "Microsoft.Capacity",
+    "apiVersion": "2019-04-01",
+    "output": {
+      "$ref": "#/174"
+    },
+    "input": {
+      "$ref": "#/106"
+    }
   }
 ]

@@ -118,6 +118,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.CostManagement@2025-03-01)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2025-03-01
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function download (Microsoft.CostManagement/pricesheets@2025-03-01)
 * **Resource**: Microsoft.CostManagement/pricesheets
 * **ApiVersion**: 2025-03-01
@@ -127,6 +133,12 @@
 * **Resource**: Microsoft.CostManagement/scheduledActions
 * **ApiVersion**: 2025-03-01
 * **Output**: any
+
+## Function forecast (Microsoft.CostManagement@2025-03-01)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2025-03-01
+* **Input**: [ForecastDefinition](#forecastdefinition)
+* **Output**: [ForecastResult](#forecastresult)
 
 ## Function forecast (Microsoft.CostManagement/externalSubscriptions@2025-03-01)
 * **Resource**: Microsoft.CostManagement/externalSubscriptions
@@ -139,6 +151,30 @@
 * **ApiVersion**: 2025-03-01
 * **Input**: [ForecastDefinition](#forecastdefinition)
 * **Output**: [ForecastResult](#forecastresult)
+
+## Function generateBenefitUtilizationSummariesReport (Microsoft.CostManagement@2025-03-01)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2025-03-01
+* **Input**: [BenefitUtilizationSummariesRequest](#benefitutilizationsummariesrequest)
+* **Output**: [BenefitUtilizationSummariesOperationStatus](#benefitutilizationsummariesoperationstatus)
+
+## Function generateCostDetailsReport (Microsoft.CostManagement@2025-03-01)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2025-03-01
+* **Input**: [GenerateCostDetailsReportRequestDefinition](#generatecostdetailsreportrequestdefinition)
+* **Output**: [CostDetailsOperationResults](#costdetailsoperationresults)
+
+## Function generateDetailedCostReport (Microsoft.CostManagement@2025-03-01)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2025-03-01
+* **Input**: [GenerateDetailedCostReportDefinition](#generatedetailedcostreportdefinition)
+* **Output**: [GenerateDetailedCostReportOperationResult](#generatedetailedcostreportoperationresult)
+
+## Function query (Microsoft.CostManagement@2025-03-01)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2025-03-01
+* **Input**: [QueryDefinition](#querydefinition)
+* **Output**: [QueryResult](#queryresult)
 
 ## Function query (Microsoft.CostManagement/externalSubscriptions@2025-03-01)
 * **Resource**: Microsoft.CostManagement/externalSubscriptions
@@ -202,6 +238,34 @@
 * **timeGrainType**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'None' | 'Quarterly' | string: Type of timegrain cadence
 * **triggeredBy**: string: notificationId that triggered this alert
 * **unit**: string: unit of currency being used
+
+## AsyncOperationStatusProperties
+### Properties
+* **reportUrl**: 'AvgUtilizationPercentage' | 'BenefitId' | 'BenefitOrderId' | 'BenefitType' | 'Kind' | 'MaxUtilizationPercentage' | 'MinUtilizationPercentage' | 'UsageDate' | 'UtilizedPercentage' | string: Sas url to the async benefit utilization summaries report. Will be empty if the report is in Running or Failed state.
+* **secondaryReportUrl**: 'AvgUtilizationPercentage' | 'BenefitId' | 'BenefitOrderId' | 'BenefitType' | 'Kind' | 'MaxUtilizationPercentage' | 'MinUtilizationPercentage' | 'UsageDate' | 'UtilizedPercentage' | string: Sas url to async benefit utilization summaries report in secondary storage in case of primary outage. Will be empty if the report is in Running or Failed state.
+* **validUntil**: string: The date that the sas url provided in reportUrl expires.
+
+## BenefitUtilizationSummariesOperationStatus
+### Properties
+* **input**: [BenefitUtilizationSummariesRequest](#benefitutilizationsummariesrequest): Input given to create the benefit utilization summaries report.
+* **properties**: [AsyncOperationStatusProperties](#asyncoperationstatusproperties): Contains sas url to the async benefit utilization summaries report and a date that the url is valid until. These values will be empty if the report is in a Running or Failed state
+* **status**: 'Completed' | 'Failed' | 'Running' | string: The status of the creation of the benefit utilization summaries report.
+
+## BenefitUtilizationSummariesRequest
+### Properties
+* **benefitId**: string: Benefit id the benefit utilization summaries report is for. Required for benefit id scope. Not supported for benefit order or any billing scopes.
+* **benefitOrderId**: string: Benefit order id the benefit utilization summaries report is for. Required for benefit order and benefit id scopes. Not supported for any billing scopes.
+* **billingAccountId**: string: Billing account the benefit utilization summaries report is for. Required for billing account and billing profile scopes. Not supported for any benefit scopes.
+* **billingProfileId**: string: Billing profile id the benefit utilization summaries report is for. Required for billing profile scope. Not supported for billing account or any benefit scopes.
+* **endDate**: string (Required): The end date of the summaries data that will be served in the report.
+* **grain**: 'Daily' | 'Hourly' | 'Monthly' | string (Required): The grain the summaries data is served at in the report. Accepted values are 'Daily' or 'Monthly'.
+* **kind**: 'IncludedQuantity' | 'Reservation' | 'SavingsPlan' | string: The type of benefit data requested. Required for billing account and billing profile scopes. Implied and not to be passed at benefit scopes. Supported values are Reservation and SavingsPlan
+* **startDate**: string (Required): The start date of the summaries data that will be served in the report.
+
+## BlobInfo
+### Properties
+* **blobLink**: string: Link to the blob to download file.
+* **byteCount**: int: Bytes in the blob.
 
 ## BudgetComparisonExpression
 ### Properties
@@ -307,6 +371,17 @@ Required for CategoryType(s): Cost, ReservationUtilization.
 
 - Constraints for **CategoryType: ReservationUtilization** - Must be on or after the current date and less than the end date.
 
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
+
 ## CommonExportProperties
 ### Properties
 * **compressionMode**: 'gzip' | 'none' | 'snappy' | string: Allow customers to select compress data for exports. This setting will enable destination file compression scheme at runtime. By default set to None. Gzip is for csv and snappy for parquet.
@@ -337,6 +412,21 @@ Required for CategoryType(s): Cost, ReservationUtilization.
 * **details**: [CostAllocationRuleDetails](#costallocationruledetails) (Required): Resource information for the cost allocation rule
 * **status**: 'Active' | 'NotActive' | 'Processing' | string (Required): Status of the rule
 * **updatedDate**: string (ReadOnly): Time at which the rule was last updated.
+
+## CostDetailsOperationResults
+### Properties
+* **error**: [ErrorDetails](#errordetails): The details of the error.
+* **id**: string: The id of the long running operation.
+* **manifest**: [ReportManifest](#reportmanifest): The manifest of the report generated by the operation.
+* **name**: string: The name of the long running operation.
+* **status**: 'Completed' | 'Failed' | 'NoDataFound' | string: The status of the cost details operation
+* **type**: string: The type of the long running operation.
+* **validTill**: string: The time at which report URL becomes invalid/expires in UTC e.g. 2020-12-08T05:55:59.4394737Z.
+
+## CostDetailsTimePeriod
+### Properties
+* **end**: string (Required): The end date to pull data to. example format 2020-03-15
+* **start**: string (Required): The start date to pull data from. example format 2020-03-15
 
 ## CostManagementResourceTags
 ### Properties
@@ -546,6 +636,34 @@ Required for CategoryType(s): Cost, ReservationUtilization.
 * **from**: string (Required): The start date to pull data from.
 * **to**: string (Required): The end date to pull data to.
 
+## GenerateCostDetailsReportRequestDefinition
+### Properties
+* **billingPeriod**: string: This parameter can be used only by Enterprise Agreement customers. Use the YearMonth(e.g. 202008) format. This parameter cannot be used alongside either the invoiceId or timePeriod parameters. If a timePeriod, invoiceId or billingPeriod parameter is not provided in the request body the API will return the current month's cost.
+* **invoiceId**: string: This parameter can only be used by Microsoft Customer Agreement customers. Additionally, it can only be used at the Billing Profile or Customer scope. This parameter cannot be used alongside either the billingPeriod or timePeriod parameters. If a timePeriod, invoiceId or billingPeriod parameter is not provided in the request body the API will return the current month's cost.
+* **metric**: 'ActualCost' | 'AmortizedCost' | string: The type of the detailed report. By default ActualCost is provided
+* **timePeriod**: [CostDetailsTimePeriod](#costdetailstimeperiod): The specific date range of cost details requested for the report. This parameter cannot be used alongside either the invoiceId or billingPeriod parameters. If a timePeriod, invoiceId or billingPeriod parameter is not provided in the request body the API will return the current month's cost. API only allows data to be pulled for 1 month or less and no older than 13 months. If no timePeriod or billingPeriod or invoiceId is provided the API defaults to the open month time period
+
+## GenerateDetailedCostReportDefinition
+### Properties
+* **billingPeriod**: string: Billing period in YearMonth(e.g. 202008) format. Only for legacy enterprise customers can use this. Can only have one of either timePeriod or invoiceId or billingPeriod parameters. If none provided current month cost is provided.
+* **customerId**: string: Customer ID for Microsoft Customer Agreement scopes (Invoice Id is also required for this).
+* **invoiceId**: string: Invoice ID for Pay-as-you-go and Microsoft Customer Agreement scopes. Can only have one of either timePeriod or invoiceId or billingPeriod parameters. If none provided current month cost is provided.
+* **metric**: 'ActualCost' | 'AmortizedCost' | string: The type of the detailed report. By default ActualCost is provided
+* **timePeriod**: [GenerateDetailedCostReportTimePeriod](#generatedetailedcostreporttimeperiod): Has time period for pulling data for the cost detailed report. Can only have one of either timePeriod or invoiceId or billingPeriod parameters. If none provided current month cost is provided.
+
+## GenerateDetailedCostReportOperationResult
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [DownloadURL](#downloadurl): The properties of the resource generated.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## GenerateDetailedCostReportTimePeriod
+### Properties
+* **end**: string (Required): The end date to pull data to. example format 2020-03-15
+* **start**: string (Required): The start date to pull data from. example format 2020-03-15
+
 ## KpiProperties
 ### Properties
 * **enabled**: bool: show the KPI in the UI?
@@ -744,10 +862,25 @@ Supported for CategoryType(s): Cost.
 * **from**: string (Required): The start date to pull data from.
 * **to**: string (Required): The end date to pull data to.
 
+## ReportManifest
+### Properties
+* **blobCount**: int: The total number of blobs.
+* **blobs**: [BlobInfo](#blobinfo)[]: List of blob information generated by this operation.
+* **byteCount**: int: The total number of bytes in all blobs.
+* **compressData**: bool: Is the data in compressed format.
+* **dataFormat**: 'Csv' | string: The data format of the report
+* **manifestVersion**: string: The Manifest version.
+* **requestContext**: [RequestContext](#requestcontext): The context of the Cost Details request.
+
 ## ReportURL
 ### Properties
 * **reportUrl**: 'InstanceFlexibilityGroup' | 'InstanceFlexibilityRatio' | 'InstanceId' | 'Kind' | 'ReservationId' | 'ReservationOrderId' | 'ReservedHours' | 'SkuName' | 'TotalReservedQuantity' | 'UsageDate' | 'UsedHours' | string: The CSV file from the reportUrl blob link consists of reservation usage data with the following schema at daily granularity
 * **validUntil**: string: The time at which report URL becomes invalid.
+
+## RequestContext
+### Properties
+* **requestBody**: [GenerateCostDetailsReportRequestDefinition](#generatecostdetailsreportrequestdefinition): The request payload body provided in Cost Details call
+* **requestScope**: string: The request scope of the request.
 
 ## ScheduledActionProperties
 ### Properties

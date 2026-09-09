@@ -6297,6 +6297,95 @@
     "writableScopes": 0
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name whose availability is to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/531"
+        },
+        "flags": 1,
+        "description": "The type of resource that is used as the scope of the availability check."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Sql/servers"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "available": {
+        "type": {
+          "$ref": "#/315"
+        },
+        "flags": 2,
+        "description": "True if the name is available, otherwise false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A message explaining why the name is unavailable. Will be null if the name is available."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name whose availability was checked."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/535"
+        },
+        "flags": 2,
+        "description": "The reason code explaining why the name is unavailable. Will be null if the name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/533"
+      },
+      {
+        "$ref": "#/534"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Sql",
+    "apiVersion": "2014-04-01",
+    "output": {
+      "$ref": "#/532"
+    },
+    "input": {
+      "$ref": "#/530"
+    }
+  },
+  {
     "$type": "AnyType"
   },
   {
@@ -6305,7 +6394,7 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2014-04-01",
     "output": {
-      "$ref": "#/530"
+      "$ref": "#/537"
     }
   },
   {
@@ -6314,7 +6403,7 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2014-04-01",
     "output": {
-      "$ref": "#/530"
+      "$ref": "#/537"
     }
   },
   {
@@ -6323,7 +6412,7 @@
     "properties": {
       "storageKeyType": {
         "type": {
-          "$ref": "#/536"
+          "$ref": "#/543"
         },
         "flags": 1,
         "description": "The type of the storage key to use."
@@ -6358,7 +6447,7 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/539"
+          "$ref": "#/546"
         },
         "flags": 0,
         "description": "The authentication type."
@@ -6377,10 +6466,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/534"
+        "$ref": "#/541"
       },
       {
-        "$ref": "#/535"
+        "$ref": "#/542"
       }
     ]
   },
@@ -6396,10 +6485,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/537"
+        "$ref": "#/544"
       },
       {
-        "$ref": "#/538"
+        "$ref": "#/545"
       }
     ]
   },
@@ -6409,7 +6498,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/541"
+          "$ref": "#/548"
         },
         "flags": 0,
         "description": "The import/export operation properties."
@@ -6512,10 +6601,10 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2014-04-01",
     "output": {
-      "$ref": "#/540"
+      "$ref": "#/547"
     },
     "input": {
-      "$ref": "#/533"
+      "$ref": "#/540"
     }
   },
   {
@@ -6531,14 +6620,14 @@
       },
       "edition": {
         "type": {
-          "$ref": "#/558"
+          "$ref": "#/565"
         },
         "flags": 1,
         "description": "The edition for the database being created.\r\n\r\nThe list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:\r\n\r\n```azurecli\r\naz sql db list-editions -l <location> -o table\r\n````\r\n\r\n```powershell\r\nGet-AzSqlServerServiceObjective -Location <location>\r\n````"
       },
       "serviceObjectiveName": {
         "type": {
-          "$ref": "#/624"
+          "$ref": "#/631"
         },
         "flags": 1,
         "description": "The name of the service objective to assign to the database."
@@ -6552,7 +6641,7 @@
       },
       "storageKeyType": {
         "type": {
-          "$ref": "#/627"
+          "$ref": "#/634"
         },
         "flags": 1,
         "description": "The type of the storage key to use."
@@ -6587,7 +6676,7 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/630"
+          "$ref": "#/637"
         },
         "flags": 0,
         "description": "The authentication type."
@@ -6654,27 +6743,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/544"
-      },
-      {
-        "$ref": "#/545"
-      },
-      {
-        "$ref": "#/546"
-      },
-      {
-        "$ref": "#/547"
-      },
-      {
-        "$ref": "#/548"
-      },
-      {
-        "$ref": "#/549"
-      },
-      {
-        "$ref": "#/550"
-      },
-      {
         "$ref": "#/551"
       },
       {
@@ -6694,6 +6762,27 @@
       },
       {
         "$ref": "#/557"
+      },
+      {
+        "$ref": "#/558"
+      },
+      {
+        "$ref": "#/559"
+      },
+      {
+        "$ref": "#/560"
+      },
+      {
+        "$ref": "#/561"
+      },
+      {
+        "$ref": "#/562"
+      },
+      {
+        "$ref": "#/563"
+      },
+      {
+        "$ref": "#/564"
       },
       {
         "$ref": "#/0"
@@ -6964,27 +7053,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/559"
-      },
-      {
-        "$ref": "#/560"
-      },
-      {
-        "$ref": "#/561"
-      },
-      {
-        "$ref": "#/562"
-      },
-      {
-        "$ref": "#/563"
-      },
-      {
-        "$ref": "#/564"
-      },
-      {
-        "$ref": "#/565"
-      },
-      {
         "$ref": "#/566"
       },
       {
@@ -7159,6 +7227,27 @@
         "$ref": "#/623"
       },
       {
+        "$ref": "#/624"
+      },
+      {
+        "$ref": "#/625"
+      },
+      {
+        "$ref": "#/626"
+      },
+      {
+        "$ref": "#/627"
+      },
+      {
+        "$ref": "#/628"
+      },
+      {
+        "$ref": "#/629"
+      },
+      {
+        "$ref": "#/630"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -7175,10 +7264,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/625"
+        "$ref": "#/632"
       },
       {
-        "$ref": "#/626"
+        "$ref": "#/633"
       }
     ]
   },
@@ -7194,10 +7283,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/628"
+        "$ref": "#/635"
       },
       {
-        "$ref": "#/629"
+        "$ref": "#/636"
       }
     ]
   },
@@ -7207,10 +7296,10 @@
     "resourceType": "Microsoft.Sql/servers",
     "apiVersion": "2014-04-01",
     "output": {
-      "$ref": "#/540"
+      "$ref": "#/547"
     },
     "input": {
-      "$ref": "#/543"
+      "$ref": "#/550"
     }
   },
   {
@@ -7219,7 +7308,7 @@
     "resourceType": "Microsoft.Sql/servers/disasterRecoveryConfiguration",
     "apiVersion": "2014-04-01",
     "output": {
-      "$ref": "#/530"
+      "$ref": "#/537"
     }
   },
   {
@@ -7228,7 +7317,7 @@
     "resourceType": "Microsoft.Sql/servers/disasterRecoveryConfiguration",
     "apiVersion": "2014-04-01",
     "output": {
-      "$ref": "#/530"
+      "$ref": "#/537"
     }
   },
   {
@@ -7237,7 +7326,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/replicationLinks",
     "apiVersion": "2014-04-01",
     "output": {
-      "$ref": "#/530"
+      "$ref": "#/537"
     }
   },
   {
@@ -7246,7 +7335,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/replicationLinks",
     "apiVersion": "2014-04-01",
     "output": {
-      "$ref": "#/530"
+      "$ref": "#/537"
     }
   },
   {
@@ -7268,10 +7357,10 @@
     "resourceType": "Microsoft.Sql/servers/databases/replicationLinks",
     "apiVersion": "2014-04-01",
     "output": {
-      "$ref": "#/530"
+      "$ref": "#/537"
     },
     "input": {
-      "$ref": "#/636"
+      "$ref": "#/643"
     }
   }
 ]

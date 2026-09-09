@@ -1251,5 +1251,229 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateRecommendations",
+    "resourceType": "Microsoft.Advisor",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/74"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Request properties for prediction recommendation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionRequestProperties",
+    "properties": {
+      "predictionType": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 0,
+        "description": "Type of the prediction."
+      },
+      "extendedProperties": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "Extended properties are arguments specific for each prediction type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PredictiveRightsizing"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 0,
+        "description": "The properties of the prediction."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredictionResponseProperties",
+    "properties": {
+      "extendedProperties": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 0,
+        "description": "Extended properties"
+      },
+      "predictionType": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "Type of the prediction."
+      },
+      "category": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "The category of the recommendation."
+      },
+      "impact": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "The business impact of the recommendation."
+      },
+      "impactedField": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type identified by Advisor."
+      },
+      "lastUpdated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The most recent time that Advisor checked the validity of the recommendation."
+      },
+      "shortDescription": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "A summary of the recommendation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PredictiveRightsizing"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HighAvailability"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Security"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Performance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cost"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationalExcellence"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "predict",
+    "resourceType": "Microsoft.Advisor",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/109"
+    },
+    "input": {
+      "$ref": "#/105"
+    }
   }
 ]

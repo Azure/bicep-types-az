@@ -1533,6 +1533,1371 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ProductFamiliesRequest",
+    "properties": {
+      "filterableProperties": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 1,
+        "description": "Dictionary of filterable properties on product family."
+      },
+      "customerSubscriptionDetails": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FilterableProperty",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 1,
+        "description": "Type of product filter."
+      },
+      "supportedValues": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 1,
+        "description": "Values to be filtered."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ShipToCountries"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DoubleEncryptionStatus"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductFamiliesRequestFilterableProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/118"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomerSubscriptionDetails",
+    "properties": {
+      "registeredFeatures": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "List of registered feature flags for subscription"
+      },
+      "locationPlacementId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Location placement Id of a subscription"
+      },
+      "quotaId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Quota ID of a subscription"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomerSubscriptionRegisteredFeatures",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of subscription registered feature"
+      },
+      "state": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "State of subscription registered feature"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/121"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductFamilies",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 2,
+        "description": "List of product families."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Link for the next set of product families."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductFamily",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "Properties of product family"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductFamilyProperties",
+    "properties": {
+      "productLines": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 2,
+        "description": "List of product lines supported in the product family"
+      },
+      "resourceProviderDetails": {
+        "type": {
+          "$ref": "#/201"
+        },
+        "flags": 0,
+        "description": "Contains details related to resource provider"
+      },
+      "filterableProperties": {
+        "type": {
+          "$ref": "#/202"
+        },
+        "flags": 2,
+        "description": "list of filters supported for a product"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name for the product system."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 2,
+        "description": "Description related to the product system."
+      },
+      "imageInformation": {
+        "type": {
+          "$ref": "#/203"
+        },
+        "flags": 2,
+        "description": "Image information for the product system."
+      },
+      "costInformation": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "Cost information for the product system."
+      },
+      "availabilityInformation": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 2,
+        "description": "Availability information of the product system."
+      },
+      "hierarchyInformation": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "Hierarchy information of a product."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductLine",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 2,
+        "description": "Properties of product line"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductLineProperties",
+    "properties": {
+      "products": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 2,
+        "description": "List of products in the product line"
+      },
+      "filterableProperties": {
+        "type": {
+          "$ref": "#/198"
+        },
+        "flags": 2,
+        "description": "list of filters supported for a product"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name for the product system."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 2,
+        "description": "Description related to the product system."
+      },
+      "imageInformation": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 2,
+        "description": "Image information for the product system."
+      },
+      "costInformation": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "Cost information for the product system."
+      },
+      "availabilityInformation": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 2,
+        "description": "Availability information of the product system."
+      },
+      "hierarchyInformation": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "Hierarchy information of a product."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Product",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Properties of product"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductProperties",
+    "properties": {
+      "configurations": {
+        "type": {
+          "$ref": "#/194"
+        },
+        "flags": 2,
+        "description": "List of configurations for the product"
+      },
+      "filterableProperties": {
+        "type": {
+          "$ref": "#/195"
+        },
+        "flags": 2,
+        "description": "list of filters supported for a product"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name for the product system."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 2,
+        "description": "Description related to the product system."
+      },
+      "imageInformation": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 2,
+        "description": "Image information for the product system."
+      },
+      "costInformation": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "Cost information for the product system."
+      },
+      "availabilityInformation": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 2,
+        "description": "Availability information of the product system."
+      },
+      "hierarchyInformation": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "Hierarchy information of a product."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Configuration",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 2,
+        "description": "Properties of configuration"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationProperties",
+    "properties": {
+      "specifications": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 2,
+        "description": "Specifications of the configuration"
+      },
+      "dimensions": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 2,
+        "description": "Dimensions of the configuration"
+      },
+      "filterableProperties": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 2,
+        "description": "list of filters supported for a product"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name for the product system."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 2,
+        "description": "Description related to the product system."
+      },
+      "imageInformation": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 2,
+        "description": "Image information for the product system."
+      },
+      "costInformation": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 2,
+        "description": "Cost information for the product system."
+      },
+      "availabilityInformation": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 2,
+        "description": "Availability information of the product system."
+      },
+      "hierarchyInformation": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "Hierarchy information of a product."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Specification",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the specification"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Value of the specification"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/132"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Dimensions",
+    "properties": {
+      "length": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Length of the device."
+      },
+      "height": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Height of the device."
+      },
+      "width": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Width of the device."
+      },
+      "lengthHeightUnit": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 2,
+        "description": "Unit for the dimensions of length, height and width."
+      },
+      "weight": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Weight of the device."
+      },
+      "depth": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Depth of the device."
+      },
+      "weightUnit": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 2,
+        "description": "Unit for the dimensions of weight."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IN"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CM"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LBS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KGS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/138"
+      },
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Description",
+    "properties": {
+      "descriptionType": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 2,
+        "description": "Type of description."
+      },
+      "shortDescription": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Short description of the product system."
+      },
+      "longDescription": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Long description of the product system."
+      },
+      "keywords": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 2,
+        "description": "Keywords for the product system."
+      },
+      "attributes": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 2,
+        "description": "Attributes for the product system."
+      },
+      "links": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 2,
+        "description": "Links for the product system."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Base"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Link",
+    "properties": {
+      "linkType": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 2,
+        "description": "Type of link"
+      },
+      "linkUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Url of the link"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Generic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TermsAndConditions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Specification"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Documentation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KnowMore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SignUp"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/147"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageInformation",
+    "properties": {
+      "imageType": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 2,
+        "description": "Type of the image"
+      },
+      "imageUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Url of the image"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MainImage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BulletImage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GenericImage"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/157"
+      },
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/156"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CostInformation",
+    "properties": {
+      "billingMeterDetails": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 2,
+        "description": "Details on the various billing aspects for the product system."
+      },
+      "billingInfoUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Default url to display billing information"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingMeterDetails",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Represents Billing type name"
+      },
+      "meterDetails": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 2,
+        "description": "Represents MeterDetails"
+      },
+      "meteringType": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 2,
+        "description": "Represents Metering type (eg one-time or recurrent)"
+      },
+      "frequency": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Frequency of recurrence"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "MeterDetails",
+    "discriminator": "billingType",
+    "baseProperties": {
+      "multiplier": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Billing unit applicable for Pav2 billing"
+      },
+      "chargingType": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 2,
+        "description": "Charging type."
+      }
+    },
+    "elements": {
+      "Pav2": {
+        "$ref": "#/168"
+      },
+      "Purchase": {
+        "$ref": "#/170"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PerOrder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PerDevice"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Pav2MeterDetails",
+    "properties": {
+      "meterGuid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Validation status of requested data center and transport."
+      },
+      "billingType": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 1,
+        "description": "Represents billing type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pav2"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PurchaseMeterDetails",
+    "properties": {
+      "productId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Product Id"
+      },
+      "skuId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Sku Id"
+      },
+      "termId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Term Id"
+      },
+      "billingType": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 1,
+        "description": "Represents billing type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Purchase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OneTime"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Recurring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Adhoc"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/163"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailabilityInformation",
+    "properties": {
+      "availabilityStage": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 2,
+        "description": "Current availability stage of the product. Availability stage"
+      },
+      "disabledReason": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 2,
+        "description": "Reason why the product is disabled."
+      },
+      "disabledReasonMessage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Message for why the product is disabled."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ComingSoon"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Preview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprecated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Signup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Country"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Region"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Feature"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OfferType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoSubscriptionInfo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAvailable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OutOfStock"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/189"
+      },
+      {
+        "$ref": "#/190"
+      },
+      {
+        "$ref": "#/191"
+      },
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/130"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/156"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/128"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/156"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/126"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/95"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/156"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listProductFamilies",
+    "resourceType": "Microsoft.EdgeOrder",
+    "apiVersion": "2020-12-01-preview",
+    "output": {
+      "$ref": "#/123"
+    },
+    "input": {
+      "$ref": "#/112"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationsRequest",
+    "properties": {
+      "configurationFilters": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 1,
+        "description": "Holds details about product hierarchy information and filterable property."
+      },
+      "customerSubscriptionDetails": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationFilters",
+    "properties": {
+      "hierarchyInformation": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 1,
+        "description": "Product hierarchy information"
+      },
+      "filterableProperty": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 0,
+        "description": "Filters specific to product"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/207"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Configurations",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 2,
+        "description": "List of configurations."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Link for the next set of configurations."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/130"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listConfigurations",
+    "resourceType": "Microsoft.EdgeOrder",
+    "apiVersion": "2020-12-01-preview",
+    "output": {
+      "$ref": "#/210"
+    },
+    "input": {
+      "$ref": "#/206"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductFamiliesMetadata",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 2,
+        "description": "List of product family metadata details."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Link for the next set of product families."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductFamiliesMetadataDetails",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 2,
+        "description": "Product family properties"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/214"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "productFamiliesMetadata",
+    "resourceType": "Microsoft.EdgeOrder",
+    "apiVersion": "2020-12-01-preview",
+    "output": {
+      "$ref": "#/213"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "CancellationReason",
     "properties": {
       "reason": {
@@ -1553,7 +2918,7 @@
       "$ref": "#/100"
     },
     "input": {
-      "$ref": "#/112"
+      "$ref": "#/217"
     }
   },
   {
@@ -1599,7 +2964,7 @@
       "$ref": "#/100"
     },
     "input": {
-      "$ref": "#/114"
+      "$ref": "#/219"
     }
   }
 ]

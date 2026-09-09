@@ -342,5 +342,424 @@
     },
     "readableScopes": 0,
     "writableScopes": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "the name to check for availability"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "fully qualified resource type which includes provider namespace"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Management/managementGroups"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Required. True indicates name is valid and available. False indicates the name is invalid, unavailable, or both."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "Required if nameAvailable == false. Invalid indicates the name provided does not match the resource provider's naming requirements (incorrect length, unsupported characters, etc.) AlreadyExists indicates that the name is already in use and is therefore unavailable."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Required if nameAvailable == false. Localized. If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that is already in use, and direct them to select a different name."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Management",
+    "apiVersion": "2019-11-01",
+    "output": {
+      "$ref": "#/25"
+    },
+    "input": {
+      "$ref": "#/23"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TenantBackfillStatusResult",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "The status of the Tenant Backfill"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotStarted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotStartedButGroupsExist"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Started"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "startTenantBackfill",
+    "resourceType": "Microsoft.Management",
+    "apiVersion": "2019-11-01",
+    "output": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "tenantBackfillStatus",
+    "resourceType": "Microsoft.Management",
+    "apiVersion": "2019-11-01",
+    "output": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The list of entities."
+      },
+      "count": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Total count of records that match the filter"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL to use for getting the next set of results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityInfo",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The fully qualified ID for the entity.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. For example, Microsoft.Management/managementGroups"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the entity. For example, 00000000-0000-0000-0000-000000000000"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "The generic properties of an entity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityInfoProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The AAD Tenant ID associated with the entity. For example, 00000000-0000-0000-0000-000000000000"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The friendly name of the management group."
+      },
+      "parent": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "(Optional) The ID of the parent management group."
+      },
+      "permissions": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "The users specific permissions to this item."
+      },
+      "inheritedPermissions": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "The users specific permissions to this item."
+      },
+      "numberOfDescendants": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Number of Descendants"
+      },
+      "numberOfChildren": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Number of children is the number of Groups and Subscriptions that are exactly one level underneath the current Group."
+      },
+      "numberOfChildGroups": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Number of children is the number of Groups that are exactly one level underneath the current Group."
+      },
+      "parentDisplayNameChain": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "The parent display name chain from the root group to the immediate parent"
+      },
+      "parentNameChain": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The parent name chain from the root group to the immediate parent"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityParentGroupInfo",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "noaccess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "view"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "edit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "delete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "noaccess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "view"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "edit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "delete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getEntities",
+    "resourceType": "Microsoft.Management",
+    "apiVersion": "2019-11-01",
+    "output": {
+      "$ref": "#/41"
+    }
   }
 ]

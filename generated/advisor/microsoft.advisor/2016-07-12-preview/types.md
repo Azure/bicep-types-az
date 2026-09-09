@@ -13,6 +13,11 @@
 * **ttl**: string: The duration for which the suppression is valid.
 * **type**: 'Microsoft.Advisor/recommendations/suppressions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateRecommendations (Microsoft.Advisor@2016-07-12-preview)
+* **Resource**: Microsoft.Advisor
+* **ApiVersion**: 2016-07-12-preview
+* **Output**: any
+
 ## ResourceTags
 ### Properties
 ### Additional Properties

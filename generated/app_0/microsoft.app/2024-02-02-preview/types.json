@@ -12892,19 +12892,28 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "getCustomDomainVerificationId",
+    "resourceType": "Microsoft.App",
+    "apiVersion": "2024-02-02-preview",
+    "output": {
+      "$ref": "#/2"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "EnvironmentAuthToken",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/846"
+          "$ref": "#/847"
         },
         "flags": 0,
         "description": "Environment auth token resource specific properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/847"
+          "$ref": "#/848"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -12980,7 +12989,7 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2024-02-02-preview",
     "output": {
-      "$ref": "#/845"
+      "$ref": "#/846"
     }
   },
   {
@@ -13033,7 +13042,7 @@
       },
       "filesToDelete": {
         "type": {
-          "$ref": "#/853"
+          "$ref": "#/854"
         },
         "flags": 0,
         "description": "Files of the app to delete."
@@ -13055,7 +13064,7 @@
       "$ref": "#/174"
     },
     "input": {
-      "$ref": "#/852"
+      "$ref": "#/853"
     }
   },
   {
@@ -13099,7 +13108,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/856"
+          "$ref": "#/857"
         },
         "flags": 0,
         "description": "Additional workflow properties."
@@ -13119,14 +13128,14 @@
       },
       "flowState": {
         "type": {
-          "$ref": "#/863"
+          "$ref": "#/864"
         },
         "flags": 0,
         "description": "Gets or sets the state of the workflow."
       },
       "health": {
         "type": {
-          "$ref": "#/864"
+          "$ref": "#/865"
         },
         "flags": 0,
         "description": "Gets or sets workflow health."
@@ -13161,9 +13170,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/857"
-      },
-      {
         "$ref": "#/858"
       },
       {
@@ -13179,6 +13185,9 @@
         "$ref": "#/862"
       },
       {
+        "$ref": "#/863"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -13189,14 +13198,14 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/869"
+          "$ref": "#/870"
         },
         "flags": 1,
         "description": "Gets or sets the workflow health state."
       },
       "error": {
         "type": {
-          "$ref": "#/870"
+          "$ref": "#/871"
         },
         "flags": 0,
         "description": "Gets or sets the workflow error."
@@ -13223,9 +13232,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/865"
-      },
-      {
         "$ref": "#/866"
       },
       {
@@ -13233,6 +13239,9 @@
       },
       {
         "$ref": "#/868"
+      },
+      {
+        "$ref": "#/869"
       }
     ]
   },
@@ -13256,21 +13265,21 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/871"
+          "$ref": "#/872"
         },
         "flags": 0,
         "description": "Parameters for the template."
       },
       "innerErrors": {
         "type": {
-          "$ref": "#/872"
+          "$ref": "#/873"
         },
         "flags": 0,
         "description": "Inner errors."
       },
       "details": {
         "type": {
-          "$ref": "#/873"
+          "$ref": "#/874"
         },
         "flags": 0,
         "description": "Error Details."
@@ -13307,13 +13316,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/870"
+      "$ref": "#/871"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/870"
+      "$ref": "#/871"
     }
   },
   {
@@ -13322,7 +13331,7 @@
     "resourceType": "Microsoft.App/logicApps",
     "apiVersion": "2024-02-02-preview",
     "output": {
-      "$ref": "#/855"
+      "$ref": "#/856"
     }
   }
 ]

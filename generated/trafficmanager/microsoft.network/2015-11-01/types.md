@@ -12,6 +12,17 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkTrafficManagerNameAvailability (Microsoft.Network@2015-11-01)
+* **Resource**: Microsoft.Network
+* **ApiVersion**: 2015-11-01
+* **Input**: [CheckTrafficManagerRelativeDnsNameAvailabilityParameters](#checktrafficmanagerrelativednsnameavailabilityparameters)
+* **Output**: [TrafficManagerNameAvailability](#trafficmanagernameavailability)
+
+## CheckTrafficManagerRelativeDnsNameAvailabilityParameters
+### Properties
+* **name**: string: Gets or sets the name of the resource.
+* **type**: string: Gets or sets the type of the resource.
+
 ## DnsConfig
 ### Properties
 * **fqdn**: string: Gets or sets the fully-qualified domain name (FQDN) of the Traffic Manager profile.  This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.
@@ -55,4 +66,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TrafficManagerNameAvailability
+### Properties
+* **message**: string: Descriptive message that explains why the name is not available, when applicable.
+* **name**: string: The relative name.
+* **nameAvailable**: bool: Describes whether the relative name is available or not.
+* **reason**: string: The reason why the name is not available, when applicable.
+* **type**: string: Traffic Manager profile resource type.
 

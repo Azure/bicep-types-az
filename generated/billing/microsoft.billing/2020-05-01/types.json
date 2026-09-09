@@ -4349,6 +4349,73 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ValidateAddressResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/294"
+        },
+        "flags": 0,
+        "description": "status of the address validation."
+      },
+      "suggestedAddresses": {
+        "type": {
+          "$ref": "#/295"
+        },
+        "flags": 0,
+        "description": "The list of suggested addresses."
+      },
+      "validationMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Validation error message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Valid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/292"
+      },
+      {
+        "$ref": "#/293"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/16"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateAddress",
+    "resourceType": "Microsoft.Billing",
+    "apiVersion": "2020-05-01",
+    "output": {
+      "$ref": "#/291"
+    },
+    "input": {
+      "$ref": "#/16"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "TransferBillingSubscriptionRequestProperties",
     "properties": {
       "destinationInvoiceSectionId": {
@@ -4400,10 +4467,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
     "apiVersion": "2020-05-01",
     "output": {
-      "$ref": "#/292"
+      "$ref": "#/298"
     },
     "input": {
-      "$ref": "#/291"
+      "$ref": "#/297"
     }
   },
   {
@@ -4419,7 +4486,7 @@
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/295"
+          "$ref": "#/301"
         },
         "flags": 0,
         "description": "Validation error details."
@@ -4432,7 +4499,7 @@
     "properties": {
       "code": {
         "type": {
-          "$ref": "#/316"
+          "$ref": "#/322"
         },
         "flags": 0,
         "description": "Error code for the product transfer validation."
@@ -4537,24 +4604,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/296"
-      },
-      {
-        "$ref": "#/297"
-      },
-      {
-        "$ref": "#/298"
-      },
-      {
-        "$ref": "#/299"
-      },
-      {
-        "$ref": "#/300"
-      },
-      {
-        "$ref": "#/301"
-      },
-      {
         "$ref": "#/302"
       },
       {
@@ -4597,6 +4646,24 @@
         "$ref": "#/315"
       },
       {
+        "$ref": "#/316"
+      },
+      {
+        "$ref": "#/317"
+      },
+      {
+        "$ref": "#/318"
+      },
+      {
+        "$ref": "#/319"
+      },
+      {
+        "$ref": "#/320"
+      },
+      {
+        "$ref": "#/321"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -4607,10 +4674,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingSubscriptions",
     "apiVersion": "2020-05-01",
     "output": {
-      "$ref": "#/294"
+      "$ref": "#/300"
     },
     "input": {
-      "$ref": "#/291"
+      "$ref": "#/297"
     }
   },
   {
@@ -4628,7 +4695,7 @@
       "$ref": "#/289"
     },
     "input": {
-      "$ref": "#/318"
+      "$ref": "#/324"
     }
   },
   {
@@ -4684,10 +4751,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/products",
     "apiVersion": "2020-05-01",
     "output": {
-      "$ref": "#/321"
+      "$ref": "#/327"
     },
     "input": {
-      "$ref": "#/320"
+      "$ref": "#/326"
     }
   },
   {
@@ -4703,7 +4770,7 @@
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/324"
+          "$ref": "#/330"
         },
         "flags": 0,
         "description": "Validation error details."
@@ -4716,7 +4783,7 @@
     "properties": {
       "code": {
         "type": {
-          "$ref": "#/334"
+          "$ref": "#/340"
         },
         "flags": 0,
         "description": "Error code for the product transfer validation."
@@ -4777,24 +4844,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/325"
-      },
-      {
-        "$ref": "#/326"
-      },
-      {
-        "$ref": "#/327"
-      },
-      {
-        "$ref": "#/328"
-      },
-      {
-        "$ref": "#/329"
-      },
-      {
-        "$ref": "#/330"
-      },
-      {
         "$ref": "#/331"
       },
       {
@@ -4802,6 +4851,24 @@
       },
       {
         "$ref": "#/333"
+      },
+      {
+        "$ref": "#/334"
+      },
+      {
+        "$ref": "#/335"
+      },
+      {
+        "$ref": "#/336"
+      },
+      {
+        "$ref": "#/337"
+      },
+      {
+        "$ref": "#/338"
+      },
+      {
+        "$ref": "#/339"
       },
       {
         "$ref": "#/0"
@@ -4814,10 +4881,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/products",
     "apiVersion": "2020-05-01",
     "output": {
-      "$ref": "#/323"
+      "$ref": "#/329"
     },
     "input": {
-      "$ref": "#/320"
+      "$ref": "#/326"
     }
   }
 ]

@@ -1,18 +1,39 @@
 [
   {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enableLockbox",
+    "resourceType": "Microsoft.CustomerLockbox",
+    "apiVersion": "2018-02-28-preview",
+    "output": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "disableLockbox",
+    "resourceType": "Microsoft.CustomerLockbox",
+    "apiVersion": "2018-02-28-preview",
+    "output": {
+      "$ref": "#/0"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "Approval",
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/17"
+          "$ref": "#/20"
         },
         "flags": 0,
         "description": "Approval decision to the Lockbox request."
       },
       "reason": {
         "type": {
-          "$ref": "#/16"
+          "$ref": "#/19"
         },
         "flags": 0,
         "description": "Reason of the decision"
@@ -86,15 +107,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1"
-      },
-      {
-        "$ref": "#/2"
-      },
-      {
-        "$ref": "#/3"
-      },
-      {
         "$ref": "#/4"
       },
       {
@@ -132,6 +144,15 @@
       },
       {
         "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
       }
     ]
   },
@@ -141,10 +162,10 @@
     "resourceType": "Microsoft.CustomerLockbox/requests",
     "apiVersion": "2018-02-28-preview",
     "output": {
-      "$ref": "#/0"
+      "$ref": "#/3"
     },
     "input": {
-      "$ref": "#/0"
+      "$ref": "#/3"
     }
   }
 ]

@@ -32,7 +32,6 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
-          submodules: recursive
 
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
@@ -45,12 +44,6 @@ jobs:
           repository: ${{ env.AZURE_SPECS_REPO }}
           path: workflow-temp/azure-rest-api-specs
           ref: ${{ env.AZURE_SPECS_GIT_REF }}
-
-      - name: Build bicep-types dependency
-        run: |
-          npm ci
-          npm run build
-        working-directory: bicep-types/src/bicep-types
 
       - name: Install autorest.bicep npm packages
         run: npm ci

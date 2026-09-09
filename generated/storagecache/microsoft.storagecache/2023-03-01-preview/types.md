@@ -54,6 +54,12 @@
 * **ApiVersion**: 2023-03-01-preview
 * **Output**: any
 
+## Function checkAmlFSSubnets (Microsoft.StorageCache@2023-03-01-preview)
+* **Resource**: Microsoft.StorageCache
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [AmlFilesystemSubnetInfo](#amlfilesystemsubnetinfo)
+* **Output**: any
+
 ## Function debugInfo (Microsoft.StorageCache/caches@2023-03-01-preview)
 * **Resource**: Microsoft.StorageCache/caches
 * **ApiVersion**: 2023-03-01-preview
@@ -73,6 +79,12 @@
 * **Resource**: Microsoft.StorageCache/caches/storageTargets
 * **ApiVersion**: 2023-03-01-preview
 * **Output**: any
+
+## Function getRequiredAmlFSSubnetsSize (Microsoft.StorageCache@2023-03-01-preview)
+* **Resource**: Microsoft.StorageCache
+* **ApiVersion**: 2023-03-01-preview
+* **Input**: [RequiredAmlFilesystemSubnetsSizeInfo](#requiredamlfilesystemsubnetssizeinfo)
+* **Output**: [RequiredAmlFilesystemSubnetsSize](#requiredamlfilesystemsubnetssize)
 
 ## Function invalidate (Microsoft.StorageCache/caches/storageTargets@2023-03-01-preview)
 * **Resource**: Microsoft.StorageCache/caches/storageTargets
@@ -203,6 +215,13 @@
 ### Properties
 * **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of the week on which the maintenance window will occur.
 * **timeOfDayUTC**: string {pattern: "^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"}: The time of day (in UTC) to start the maintenance window.
+
+## AmlFilesystemSubnetInfo
+### Properties
+* **filesystemSubnet**: string: Subnet used for managing the AML file system and for client-facing operations. This subnet should have at least a /24 subnet mask within the VNET's address space.
+* **location**: string: Region that the AML file system will be created in.
+* **sku**: [SkuName](#skuname): SKU for the resource.
+* **storageCapacityTiB**: int: The size of the AML file system, in TiB.
 
 ## BlobNfsTarget
 ### Properties
@@ -387,6 +406,15 @@
 ## PrimingJobIdParameter
 ### Properties
 * **primingJobId**: string {pattern: "^[-0-9a-zA-Z_]{1,80}$"} (Required): The unique identifier of the priming job.
+
+## RequiredAmlFilesystemSubnetsSize
+### Properties
+* **filesystemSubnetSize**: int: The number of available IP addresses that are required for the AML file system.
+
+## RequiredAmlFilesystemSubnetsSizeInfo
+### Properties
+* **sku**: [SkuName](#skuname): SKU for the resource.
+* **storageCapacityTiB**: int: The size of the AML file system, in TiB.
 
 ## SkuName
 ### Properties

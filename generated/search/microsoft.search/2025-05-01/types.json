@@ -2052,6 +2052,91 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityInput",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The search service name to validate. Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 1,
+        "description": "The type of the resource whose name is to be validated. This value must always be 'searchServices'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "searchServices"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityOutput",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "A value indicating whether the name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 2,
+        "description": "The reason why the name is not available. 'Invalid' indicates the name provided does not match the naming requirements (incorrect length, unsupported characters, etc.). 'AlreadyExists' indicates that the name is already in use and is therefore unavailable."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "A message that explains why the name is invalid and provides resource naming requirements. Available only if 'Invalid' is returned in the 'reason' property."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Search",
+    "apiVersion": "2025-05-01",
+    "output": {
+      "$ref": "#/181"
+    },
+    "input": {
+      "$ref": "#/179"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SearchService",
     "properties": {
       "properties": {
@@ -2077,7 +2162,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/180"
+          "$ref": "#/187"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2133,7 +2218,7 @@
     "resourceType": "Microsoft.Search/searchServices",
     "apiVersion": "2025-05-01",
     "output": {
-      "$ref": "#/179"
+      "$ref": "#/186"
     }
   },
   {
@@ -2142,7 +2227,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/184"
+          "$ref": "#/191"
         },
         "flags": 2,
         "description": "The query keys for the Azure AI Search service."
@@ -2179,7 +2264,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/183"
+      "$ref": "#/190"
     }
   },
   {
@@ -2188,7 +2273,7 @@
     "resourceType": "Microsoft.Search/searchServices",
     "apiVersion": "2025-05-01",
     "output": {
-      "$ref": "#/182"
+      "$ref": "#/189"
     }
   },
   {
@@ -2217,7 +2302,7 @@
     "resourceType": "Microsoft.Search/searchServices",
     "apiVersion": "2025-05-01",
     "output": {
-      "$ref": "#/186"
+      "$ref": "#/193"
     }
   },
   {

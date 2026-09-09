@@ -1561,6 +1561,169 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource name to verify for availability"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified resource type which includes provider namespace"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Error message"
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0,
+        "description": "Indicates if name is valid and available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 0,
+        "description": "The reason the name is not available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Purview",
+    "apiVersion": "2021-12-01",
+    "output": {
+      "$ref": "#/129"
+    },
+    "input": {
+      "$ref": "#/128"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultAccountPayload",
+    "properties": {
+      "accountName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the account that is set as the default."
+      },
+      "resourceGroupName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource group name of the account that is set as the default."
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The scope object ID. For example, sub ID or tenant ID."
+      },
+      "scopeTenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The scope tenant in which the default account is set."
+      },
+      "scopeType": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 0,
+        "description": "The scope where the default account is set."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The subscription ID of the account that is set as the default."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tenant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setDefaultAccount",
+    "resourceType": "Microsoft.Purview",
+    "apiVersion": "2021-12-01",
+    "output": {
+      "$ref": "#/134"
+    },
+    "input": {
+      "$ref": "#/134"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listFeatures",
     "resourceType": "Microsoft.Purview/locations",

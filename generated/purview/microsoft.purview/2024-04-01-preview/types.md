@@ -54,6 +54,12 @@
 * **Input**: [CollectionAdminUpdate](#collectionadminupdate)
 * **Output**: any
 
+## Function checkNameAvailability (Microsoft.Purview@2024-04-01-preview)
+* **Resource**: Microsoft.Purview
+* **ApiVersion**: 2024-04-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function ingestionPrivateEndpointConnectionStatus (Microsoft.Purview/accounts@2024-04-01-preview)
 * **Resource**: Microsoft.Purview/accounts
 * **ApiVersion**: 2024-04-01-preview
@@ -76,6 +82,12 @@
 * **Resource**: Microsoft.Purview/accounts
 * **ApiVersion**: 2024-04-01-preview
 * **Output**: [AccessKeys](#accesskeys)
+
+## Function setDefaultAccount (Microsoft.Purview@2024-04-01-preview)
+* **Resource**: Microsoft.Purview
+* **ApiVersion**: 2024-04-01-preview
+* **Input**: [DefaultAccountPayload](#defaultaccountpayload)
+* **Output**: [DefaultAccountPayload](#defaultaccountpayload)
 
 ## AccessKeys
 ### Properties
@@ -160,6 +172,17 @@ Only applicable for the secondary account.
 ### Additional Properties
 * **Additional Properties Type**: bool
 
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: Resource name to verify for availability
+* **type**: string: Fully qualified resource type which includes provider namespace
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string: Error message
+* **nameAvailable**: bool: Indicates if name is valid and available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason the name is not available.
+
 ## CloudConnectors
 ### Properties
 * **awsExternalId**: string (ReadOnly): AWS external identifier.
@@ -173,6 +196,15 @@ Configured in AWS to allow use of the role arn used for scanning
 ### Properties
 * **identityId**: string: Identity identifier for UserAssign type.
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: Identity Type.
+
+## DefaultAccountPayload
+### Properties
+* **accountName**: string: The name of the account that is set as the default.
+* **resourceGroupName**: string: The resource group name of the account that is set as the default.
+* **scope**: string: The scope object ID. For example, sub ID or tenant ID.
+* **scopeTenantId**: string: The scope tenant in which the default account is set.
+* **scopeType**: 'Subscription' | 'Tenant' | string: The scope where the default account is set.
+* **subscriptionId**: string: The subscription ID of the account that is set as the default.
 
 ## ErrorModel
 ### Properties

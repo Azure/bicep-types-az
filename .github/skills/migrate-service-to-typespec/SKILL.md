@@ -45,15 +45,12 @@ TypeSpec — this repo change only affects how *we* generate types, not the sour
 Generation requires compiled output for whichever emitter(s) it invokes:
 
 - If the folder still has any AutoRest-generated entries left, `src/autorest.bicep` must be built.
-- The TypeSpec path always needs `src/typespec-bicep` built (and it depends on `bicep-types` being
-  built first).
+- The TypeSpec path always needs `src/typespec-bicep` built; it pulls in `@azure/bicep-types` from
+  the package dependency, so `npm ci` in that folder is sufficient to restore the dependency.
 
 Use the "build emitters" VS Code task (runs both), or individually:
 
 ```sh
-# one-time, if not already built
-pushd bicep-types/src/bicep-types && npm ci && npm run build && popd
-
 cd src/autorest.bicep && npm ci && npm run build
 cd ../typespec-bicep && npm ci && npm run build
 ```

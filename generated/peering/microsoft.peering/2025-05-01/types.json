@@ -2497,6 +2497,72 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckServiceProviderAvailabilityInput",
+    "properties": {
+      "peeringServiceLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the peering service location."
+      },
+      "peeringServiceProvider": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the peering service provider."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/219"
+      },
+      {
+        "$ref": "#/220"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkServiceProviderAvailability",
+    "resourceType": "Microsoft.Peering",
+    "apiVersion": "2025-05-01",
+    "output": {
+      "$ref": "#/221"
+    },
+    "input": {
+      "$ref": "#/218"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initializeConnectionMonitor",
+    "resourceType": "Microsoft.Peering",
+    "apiVersion": "2025-05-01",
+    "output": {
+      "$ref": "#/223"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "PeeringRegisteredPrefix",
     "properties": {
       "properties": {
@@ -2542,7 +2608,7 @@
     "resourceType": "Microsoft.Peering/peerings/registeredPrefixes",
     "apiVersion": "2025-05-01",
     "output": {
-      "$ref": "#/218"
+      "$ref": "#/225"
     }
   }
 ]

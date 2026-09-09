@@ -1,0 +1,462 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "CheckRestrictionsRequest",
+    "properties": {
+      "resourceDetails": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The information about the resource that will be evaluated."
+      },
+      "pendingFields": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The list of fields and values that should be evaluated for potential restrictions."
+      },
+      "includeAuditEffect": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Whether to include policies with the 'audit' effect in the results. Defaults to false."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckRestrictionsResourceDetails",
+    "properties": {
+      "resourceContent": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource content. This should include whatever properties are already known and can be a partial set of all resource properties."
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "The api-version of the resource content."
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "The scope where the resource is being created. For example, if the resource is a child resource this would be the parent resource's resource ID."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PendingField",
+    "properties": {
+      "field": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 1,
+        "description": "The name of the field. This can be a top-level property like 'name' or 'type' or an Azure Policy field alias."
+      },
+      "values": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The list of potential values for the field that should be evaluated against Azure Policy."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/3"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/4"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckRestrictionsResult",
+    "properties": {
+      "fieldRestrictions": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The restrictions that will be placed on various fields in the resource by policy."
+      },
+      "contentEvaluationResult": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Evaluation results for the provided partial resource content."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FieldRestrictions",
+    "properties": {
+      "field": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 2,
+        "description": "The name of the field. This can be a top-level property like 'name' or 'type' or an Azure Policy field alias."
+      },
+      "restrictions": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The restrictions placed on that field by policy."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FieldRestriction",
+    "properties": {
+      "result": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "The type of restriction that is imposed on the field."
+      },
+      "defaultValue": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 2,
+        "description": "The value that policy will set for the field if the user does not provide a value."
+      },
+      "values": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "The values that policy either requires or denies for the field."
+      },
+      "policy": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The details of the policy that is causing the field restriction."
+      },
+      "policyEffect": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 2,
+        "description": "The effect of the policy that is causing the field restriction. http://aka.ms/policyeffects"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 2,
+        "description": "The reason for the restriction."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Removed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Audit"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/3"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/3"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyReference",
+    "properties": {
+      "policyDefinitionId": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 2,
+        "description": "The resource identifier of the policy definition."
+      },
+      "policySetDefinitionId": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 2,
+        "description": "The resource identifier of the policy set definition."
+      },
+      "policyDefinitionReferenceId": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 2,
+        "description": "The reference identifier of a specific policy definition within a policy set definition."
+      },
+      "policyAssignmentId": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 2,
+        "description": "The resource identifier of the policy assignment."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/10"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/9"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckRestrictionsResultContentEvaluationResult",
+    "properties": {
+      "policyEvaluations": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Policy evaluation results against the given resource content. This will indicate if the partial content that was provided will be denied as-is."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyEvaluationResult",
+    "properties": {
+      "policyInfo": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The details of the policy that was evaluated."
+      },
+      "evaluationResult": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 2,
+        "description": "The result of the policy evaluation against the resource. This will typically be 'NonCompliant' but may contain other values if errors were encountered."
+      },
+      "evaluationDetails": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "The detailed results of the policy expressions and values that were evaluated."
+      },
+      "effectDetails": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "The details of the effect that was applied to the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckRestrictionEvaluationDetails",
+    "properties": {
+      "evaluatedExpressions": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Details of the evaluated expressions."
+      },
+      "ifNotExistsDetails": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Evaluation details of IfNotExists effect."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 2,
+        "description": "The reason for the evaluation result."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExpressionEvaluationDetails",
+    "properties": {
+      "result": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "Evaluation result."
+      },
+      "expression": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "Expression evaluated."
+      },
+      "expressionKind": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 2,
+        "description": "The kind of expression that was evaluated."
+      },
+      "path": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "Property path if the expression is a field or an alias."
+      },
+      "expressionValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Value of the expression."
+      },
+      "targetValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Target value to be compared with the expression value."
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "Operator to compare the expression value and the target value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/23"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IfNotExistsEvaluationDetails",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "ID of the last evaluated resource for IfNotExists effect."
+      },
+      "totalResources": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Total number of resources to which the existence condition is applicable."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyEffectDetails",
+    "properties": {
+      "policyEffect": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 2,
+        "description": "The effect that was applied to the resource. http://aka.ms/policyeffects"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/21"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkPolicyRestrictions",
+    "resourceType": "Microsoft.PolicyInsights",
+    "apiVersion": "2023-03-01",
+    "output": {
+      "$ref": "#/8"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  }
+]

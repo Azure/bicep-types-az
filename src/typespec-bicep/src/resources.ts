@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import { EmitContext, Enum, getNamespaceFullName, Model, ModelProperty, Namespace, Operation, Program, Type } from "@typespec/compiler";
-import { ScopeType } from "bicep-types";
+import { ScopeType } from "@azure/bicep-types";
 import {
   getArmResources,
   resolveArmResources,
@@ -80,6 +80,19 @@ export function getFullyQualifiedType(descriptor: ResourceDescriptor): string {
 }
 
 /**
+ * Get the existing provider entry for a namespace/apiVersion pair, creating it if absent.
+ */
+function getOrCreateProvider(providers: Map<string, ProviderDefinition>, namespace: string, apiVersion: string): ProviderDefinition {
+  const key = `${namespace.toLowerCase()}/${apiVersion}`;
+  let provider = providers.get(key);
+  if (!provider) {
+    provider = { namespace, apiVersion, resourcesByType: {}, resourceActions: [], providerOperations: [] };
+    providers.set(key, provider);
+  }
+  return provider;
+}
+
+/**
  * Extract all ARM provider definitions from a TypeSpec program.
  *
  * Uses the official @azure-tools/typespec-azure-resource-manager APIs
@@ -94,9 +107,11 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
   const armResources = getArmResources(program);
   const resolvedProvider = resolveArmResources(program);
   const resolvedResources = resolvedProvider.resources ?? [];
+  const providerOperations = resolvedProvider.providerOperations ?? [];
   const { customResourceRoutes, httpResourceScopes } = getHttpResourceMetadata(program);
 
-  for (const armResource of armResources) {
+  /** Discover a single ARM resource's type(s) and record them on its provider. */
+  function processArmResource(armResource: (typeof armResources)[number]): void {
     const namespace = armResource.armProviderNamespace;
     if (!namespace) {
       $lib.reportDiagnostic(program, {
@@ -104,7 +119,7 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
         target: armResource.typespecType,
         format: { resource: armResource.name },
       });
-      continue;
+      return;
     }
 
     const model = armResource.typespecType;
@@ -115,21 +130,10 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
         target: model,
         format: { resource: armResource.name },
       });
-      continue;
+      return;
     }
 
-    const key = `${namespace.toLowerCase()}/${apiVersion}`;
-    if (!providers.has(key)) {
-      providers.set(key, {
-        namespace,
-        apiVersion,
-        resourcesByType: {},
-        resourceActions: [],
-        providerOperations: [],
-      });
-    }
-
-    const provider = providers.get(key)!;
+    const provider = getOrCreateProvider(providers, namespace, apiVersion);
 
     // A single resource model can be exposed at multiple paths. Preserve every
     // resolved instance instead of selecting only the first one. Exclude
@@ -149,7 +153,7 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
         target: model,
         format: { resource: armResource.name },
       });
-      continue;
+      return;
     }
 
     // Check for singleton resources (e.g. @singleton("default"))
@@ -160,13 +164,7 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
     // 1. Use resolved matches from ARM library
     // 2. Fall back to custom HTTP routes
     // 3. Fall back to collection name or empty
-    const resourcePaths = buildResourcePaths(
-      resolvedMatches,
-      routeMatches,
-      armResource,
-      readableScopes,
-      writableScopes
-    );
+    const resourcePaths = buildResourcePaths(resolvedMatches, routeMatches, armResource, readableScopes, writableScopes);
     const seenResourcePaths = new Set<string>();
 
     for (const resourcePath of resourcePaths) {
@@ -214,56 +212,46 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
     }
   }
 
-  // Process provider-level operations
-  const providerOperations = resolvedProvider.providerOperations ?? [];
-  for (const operation of providerOperations) {
+  /** Record a top-level provider operation (e.g. checkNameAvailability) on its provider. */
+  function processProviderOperation(operation: (typeof providerOperations)[number]): void {
     if (operation.httpOperation.verb !== "post") {
-      continue;
+      return;
     }
 
     const operationNs = operation.operation.namespace;
     if (!operationNs) {
-      continue;
+      return;
     }
     const operationNamespace = getNamespaceFullName(operationNs);
 
     const apiVersion = getApiVersion(operationNs);
     if (!apiVersion) {
-      continue;
+      return;
     }
 
-    const key = `${operationNamespace.toLowerCase()}/${apiVersion}`;
-    if (!providers.has(key)) {
-      // Create a provider entry if it doesn't exist
-      const newProvider: ProviderDefinition = {
-        namespace: operationNamespace,
-        apiVersion,
-        resourcesByType: {},
-        resourceActions: [],
-        providerOperations: [],
-      };
-      providers.set(key, newProvider);
-    }
-
-    const provider = providers.get(key)!;
+    const provider = getOrCreateProvider(providers, operationNamespace, apiVersion);
     const operationName = operation.name;
-
-    // Extract request and response models from the HTTP operation
-    const requestModel = getOperationRequestModel(operation);
-    const responseType = getOperationResponseType(operation);
 
     // Avoid duplicates
     if (provider.providerOperations.some((op) => op.operationName.toLowerCase() === operationName.toLowerCase())) {
-      continue;
+      return;
     }
 
     provider.providerOperations.push({
       operationName,
       namespace: operationNamespace,
       apiVersion,
-      requestModel,
-      responseType,
+      requestModel: getOperationRequestModel(operation),
+      responseType: getOperationResponseType(operation),
     });
+  }
+
+  for (const armResource of armResources) {
+    processArmResource(armResource);
+  }
+
+  for (const operation of providerOperations) {
+    processProviderOperation(operation);
   }
 
   return [...providers.values()];

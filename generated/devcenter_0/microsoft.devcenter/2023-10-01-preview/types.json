@@ -5723,11 +5723,92 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/413"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/529"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/527"
+      },
+      {
+        "$ref": "#/528"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DevCenter",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/526"
+    },
+    "input": {
+      "$ref": "#/525"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "CatalogResourceValidationErrorDetails",
     "properties": {
       "errors": {
         "type": {
-          "$ref": "#/526"
+          "$ref": "#/532"
         },
         "flags": 2,
         "description": "Errors associated with resources synchronized from the catalog."
@@ -5746,7 +5827,7 @@
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/devboxdefinitions",
     "apiVersion": "2023-10-01-preview",
     "output": {
-      "$ref": "#/525"
+      "$ref": "#/531"
     }
   },
   {
@@ -5755,7 +5836,7 @@
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/tasks",
     "apiVersion": "2023-10-01-preview",
     "output": {
-      "$ref": "#/525"
+      "$ref": "#/531"
     }
   },
   {
@@ -5764,7 +5845,7 @@
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions",
     "apiVersion": "2023-10-01-preview",
     "output": {
-      "$ref": "#/525"
+      "$ref": "#/531"
     }
   },
   {

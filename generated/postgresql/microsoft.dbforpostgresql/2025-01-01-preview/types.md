@@ -154,6 +154,12 @@
 * **Input**: [MigrationNameAvailabilityResource](#migrationnameavailabilityresource)
 * **Output**: [MigrationNameAvailabilityResource](#migrationnameavailabilityresource)
 
+## Function checkNameAvailability (Microsoft.DBforPostgreSQL@2025-01-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL
+* **ApiVersion**: 2025-01-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function checkNameAvailability (Microsoft.DBforPostgreSQL/locations@2025-01-01-preview)
 * **Resource**: Microsoft.DBforPostgreSQL/locations
 * **ApiVersion**: 2025-01-01-preview
@@ -175,6 +181,11 @@
 * **Resource**: Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions
 * **ApiVersion**: 2025-01-01-preview
 * **Output**: any
+
+## Function getPrivateDnsZoneSuffix (Microsoft.DBforPostgreSQL@2025-01-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL
+* **ApiVersion**: 2025-01-01-preview
+* **Output**: string
 
 ## Function ltrPreBackup (Microsoft.DBforPostgreSQL/flexibleServers@2025-01-01-preview)
 * **Resource**: Microsoft.DBforPostgreSQL/flexibleServers

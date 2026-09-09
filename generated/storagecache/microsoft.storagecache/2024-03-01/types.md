@@ -67,6 +67,12 @@
 * **ApiVersion**: 2024-03-01
 * **Output**: any
 
+## Function checkAmlFSSubnets (Microsoft.StorageCache@2024-03-01)
+* **Resource**: Microsoft.StorageCache
+* **ApiVersion**: 2024-03-01
+* **Input**: [AmlFilesystemSubnetInfo](#amlfilesystemsubnetinfo)
+* **Output**: any
+
 ## Function debugInfo (Microsoft.StorageCache/caches@2024-03-01)
 * **Resource**: Microsoft.StorageCache/caches
 * **ApiVersion**: 2024-03-01
@@ -86,6 +92,12 @@
 * **Resource**: Microsoft.StorageCache/caches/storageTargets
 * **ApiVersion**: 2024-03-01
 * **Output**: any
+
+## Function getRequiredAmlFSSubnetsSize (Microsoft.StorageCache@2024-03-01)
+* **Resource**: Microsoft.StorageCache
+* **ApiVersion**: 2024-03-01
+* **Input**: [RequiredAmlFilesystemSubnetsSizeInfo](#requiredamlfilesystemsubnetssizeinfo)
+* **Output**: [RequiredAmlFilesystemSubnetsSize](#requiredamlfilesystemsubnetssize)
 
 ## Function invalidate (Microsoft.StorageCache/caches/storageTargets@2024-03-01)
 * **Resource**: Microsoft.StorageCache/caches/storageTargets
@@ -237,6 +249,13 @@
 * **squashGID**: int: Group ID to squash to.
 * **squashUID**: int: User ID to squash to.
 * **status**: string (ReadOnly): AML file system squash status.
+
+## AmlFilesystemSubnetInfo
+### Properties
+* **filesystemSubnet**: string: Subnet used for managing the AML file system and for client-facing operations. This subnet should have at least a /24 subnet mask within the VNET's address space.
+* **location**: string: Region that the AML file system will be created in.
+* **sku**: [SkuName](#skuname): SKU for the resource.
+* **storageCapacityTiB**: int: The size of the AML file system, in TiB.
 
 ## BlobNfsTarget
 ### Properties
@@ -441,6 +460,15 @@
 ## PrimingJobIdParameter
 ### Properties
 * **primingJobId**: string {pattern: "^[-0-9a-zA-Z_]{1,80}$"} (Required): The unique identifier of the priming job.
+
+## RequiredAmlFilesystemSubnetsSize
+### Properties
+* **filesystemSubnetSize**: int: The number of available IP addresses that are required for the AML file system.
+
+## RequiredAmlFilesystemSubnetsSizeInfo
+### Properties
+* **sku**: [SkuName](#skuname): SKU for the resource.
+* **storageCapacityTiB**: int: The size of the AML file system, in TiB.
 
 ## SkuName
 ### Properties

@@ -4480,6 +4480,170 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "SupportInfoModel",
+    "properties": {
+      "productSku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "product SKU associated with given resource"
+      },
+      "productSerial": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "product Serial associated with given resource"
+      },
+      "accountRegistrationStatus": {
+        "type": {
+          "$ref": "#/341"
+        },
+        "flags": 0,
+        "description": "account registered in Customer Support Portal"
+      },
+      "accountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Support account associated with given resource"
+      },
+      "freeTrial": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 0,
+        "description": "Product usage is in free trial period"
+      },
+      "freeTrialDaysLeft": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Free trial days remaining"
+      },
+      "freeTrialCreditLeft": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Free trial credit remaining"
+      },
+      "helpURL": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL for paloaltonetworks live community"
+      },
+      "supportURL": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL for paloaltonetworks Customer Service Portal"
+      },
+      "registerURL": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL for registering product in paloaltonetworks Customer Service Portal"
+      },
+      "hubUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL for Strata Cloud Manager"
+      },
+      "credits": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "credits purchased, unit per hour"
+      },
+      "monthlyCreditLeft": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "monthly credit is computed as credits * days in calendar month"
+      },
+      "startDateForCredits": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "date in format yyyy-mm-dd"
+      },
+      "endDateForCredits": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "date in format yyyy-mm-dd"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Registered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Not Registered"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/339"
+      },
+      {
+        "$ref": "#/340"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/342"
+      },
+      {
+        "$ref": "#/343"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listSupportInfo",
+    "resourceType": "PaloAltoNetworks.Cloudngfw",
+    "apiVersion": "2024-01-19-preview",
+    "output": {
+      "$ref": "#/338"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "commit",
     "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",

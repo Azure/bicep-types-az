@@ -57,6 +57,12 @@
 * **properties**: [SnapshotProperties](#snapshotproperties): All snapshot properties.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppConfiguration@2024-06-01)
+* **Resource**: Microsoft.AppConfiguration
+* **ApiVersion**: 2024-06-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [NameAvailabilityStatus](#nameavailabilitystatus)
+
 ## Function checkNameAvailability (Microsoft.AppConfiguration/locations@2024-06-01)
 * **Resource**: Microsoft.AppConfiguration/locations
 * **ApiVersion**: 2024-06-01

@@ -47,10 +47,26 @@
 * **Input**: [AcceptOwnershipRequest](#acceptownershiprequest)
 * **Output**: any
 
+## Function cancel (Microsoft.Subscription@2025-11-01-preview)
+* **Resource**: Microsoft.Subscription
+* **ApiVersion**: 2025-11-01-preview
+* **Output**: [CanceledSubscriptionId](#canceledsubscriptionid)
+
 ## Function changeTenantStatus (Microsoft.Subscription/subscriptions@2025-11-01-preview)
 * **Resource**: Microsoft.Subscription/subscriptions
 * **ApiVersion**: 2025-11-01-preview
 * **Output**: [TargetDirectoryResultProperties](#targetdirectoryresultproperties)
+
+## Function enable (Microsoft.Subscription@2025-11-01-preview)
+* **Resource**: Microsoft.Subscription
+* **ApiVersion**: 2025-11-01-preview
+* **Output**: [EnabledSubscriptionId](#enabledsubscriptionid)
+
+## Function rename (Microsoft.Subscription@2025-11-01-preview)
+* **Resource**: Microsoft.Subscription
+* **ApiVersion**: 2025-11-01-preview
+* **Input**: [SubscriptionName](#subscriptionname)
+* **Output**: [RenamedSubscriptionId](#renamedsubscriptionid)
 
 ## AcceptOwnershipRequest
 ### Properties
@@ -66,6 +82,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CanceledSubscriptionId
+### Properties
+* **subscriptionId**: string (ReadOnly): The ID of the canceled subscription
+
+## EnabledSubscriptionId
+### Properties
+* **subscriptionId**: string (ReadOnly): The ID of the subscriptions that is being enabled
 
 ## PutAliasRequestAdditionalProperties
 ### Properties
@@ -98,10 +122,18 @@ For Legacy EA - /billingAccounts/{billingAccountName}/enrollmentAccounts/{enroll
 * **tags**: [SubscriptionAliasResponsePropertiesTags](#subscriptionaliasresponsepropertiestags) (ReadOnly): Tags for the subscription
 * **workload**: 'DevTest' | 'Production' | string: The workload type of the subscription. It can be either Production or DevTest.
 
+## RenamedSubscriptionId
+### Properties
+* **subscriptionId**: string (ReadOnly): The ID of the subscriptions that is being renamed
+
 ## SubscriptionAliasResponsePropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SubscriptionName
+### Properties
+* **subscriptionName**: string: New subscription name
 
 ## SystemData
 ### Properties

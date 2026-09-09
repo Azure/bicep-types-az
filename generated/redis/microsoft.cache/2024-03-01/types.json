@@ -1819,6 +1819,38 @@
     "writableScopes": 8
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource type. The only legal value of this property for checking redis cache name availability is 'Microsoft.Cache/redis'."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "CheckNameAvailability",
+    "resourceType": "Microsoft.Cache",
+    "apiVersion": "2024-03-01",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/141"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.Cache/redis",
@@ -1833,7 +1865,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/147"
         },
         "flags": 1,
         "description": "The Redis access key to regenerate."
@@ -1852,10 +1884,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/143"
+        "$ref": "#/145"
       },
       {
-        "$ref": "#/144"
+        "$ref": "#/146"
       }
     ]
   },
@@ -1868,7 +1900,7 @@
       "$ref": "#/44"
     },
     "input": {
-      "$ref": "#/142"
+      "$ref": "#/144"
     }
   },
   {
@@ -1877,7 +1909,7 @@
     "properties": {
       "rebootType": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/153"
         },
         "flags": 0,
         "description": "Which Redis node(s) to reboot. Depending on this value data loss is possible."
@@ -1891,7 +1923,7 @@
       },
       "ports": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/154"
         },
         "flags": 0,
         "description": "A list of redis instances to reboot, specified by per-instance SSL ports or non-SSL ports."
@@ -1914,13 +1946,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/148"
-      },
-      {
-        "$ref": "#/149"
-      },
-      {
         "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
       },
       {
         "$ref": "#/0"
@@ -1952,10 +1984,10 @@
     "resourceType": "Microsoft.Cache/redis",
     "apiVersion": "2024-03-01",
     "output": {
-      "$ref": "#/153"
+      "$ref": "#/155"
     },
     "input": {
-      "$ref": "#/147"
+      "$ref": "#/149"
     }
   },
   {
@@ -1971,7 +2003,7 @@
       },
       "files": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/158"
         },
         "flags": 1,
         "description": "files to import."
@@ -2007,7 +2039,7 @@
       "$ref": "#/16"
     },
     "input": {
-      "$ref": "#/155"
+      "$ref": "#/157"
     }
   },
   {
@@ -2060,7 +2092,7 @@
       "$ref": "#/16"
     },
     "input": {
-      "$ref": "#/158"
+      "$ref": "#/160"
     }
   },
   {
@@ -2090,7 +2122,7 @@
       },
       "percentComplete": {
         "type": {
-          "$ref": "#/161"
+          "$ref": "#/163"
         },
         "flags": 0,
         "description": "Percent of the operation that is complete."
@@ -2111,14 +2143,14 @@
       },
       "operations": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/164"
         },
         "flags": 0,
         "description": "The operations list."
       },
       "error": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/165"
         },
         "flags": 0,
         "description": "If present, details of the operation error."
@@ -2133,7 +2165,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/160"
+      "$ref": "#/162"
     }
   },
   {
@@ -2163,14 +2195,14 @@
       },
       "details": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/166"
         },
         "flags": 2,
         "description": "The error details."
       },
       "additionalInfo": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/168"
         },
         "flags": 2,
         "description": "The error additional info."
@@ -2180,7 +2212,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/163"
+      "$ref": "#/165"
     }
   },
   {
@@ -2206,7 +2238,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/165"
+      "$ref": "#/167"
     }
   },
   {
@@ -2215,7 +2247,7 @@
     "resourceType": "Microsoft.Cache/redis",
     "apiVersion": "2024-03-01",
     "output": {
-      "$ref": "#/160"
+      "$ref": "#/162"
     }
   }
 ]

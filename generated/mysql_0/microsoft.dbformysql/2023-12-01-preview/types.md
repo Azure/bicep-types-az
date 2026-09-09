@@ -43,6 +43,12 @@
 * **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
 * **Output**: [NameAvailability](#nameavailability)
 
+## Function checkNameAvailability (Microsoft.DBforMySQL@2023-12-01-preview)
+* **Resource**: Microsoft.DBforMySQL
+* **ApiVersion**: 2023-12-01-preview
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function checkVirtualNetworkSubnetUsage (Microsoft.DBforMySQL/locations@2023-12-01-preview)
 * **Resource**: Microsoft.DBforMySQL/locations
 * **ApiVersion**: 2023-12-01-preview
@@ -58,6 +64,11 @@
 * **Resource**: Microsoft.DBforMySQL/flexibleServers
 * **ApiVersion**: 2023-12-01-preview
 * **Output**: any
+
+## Function getPrivateDnsZoneSuffix (Microsoft.DBforMySQL@2023-12-01-preview)
+* **Resource**: Microsoft.DBforMySQL
+* **ApiVersion**: 2023-12-01-preview
+* **Output**: [GetPrivateDnsZoneSuffixResponse](#getprivatednszonesuffixresponse)
 
 ## Function resetGtid (Microsoft.DBforMySQL/flexibleServers@2023-12-01-preview)
 * **Resource**: Microsoft.DBforMySQL/flexibleServers
@@ -118,6 +129,10 @@
 ### Properties
 * **subnetName**: string (ReadOnly): name of the subnet
 * **usage**: int (ReadOnly): Number of used delegated subnets
+
+## GetPrivateDnsZoneSuffixResponse
+### Properties
+* **privateDnsZoneSuffix**: string: Represents the private DNS zone suffix.
 
 ## HighAvailability
 ### Properties

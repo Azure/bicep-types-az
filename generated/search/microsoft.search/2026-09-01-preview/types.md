@@ -48,6 +48,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Search/searchServices/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Search@2026-09-01-preview)
+* **Resource**: Microsoft.Search
+* **ApiVersion**: 2026-09-01-preview
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
+## Function fetchOfferings (Microsoft.Search@2026-09-01-preview)
+* **Resource**: Microsoft.Search
+* **ApiVersion**: 2026-09-01-preview
+* **Output**: [OfferingsResult](#offeringsresult)
+
 ## Function listAdminKeys (Microsoft.Search/searchServices@2026-09-01-preview)
 * **Resource**: Microsoft.Search/searchServices
 * **ApiVersion**: 2026-09-01-preview
@@ -97,6 +108,17 @@
 * **applicationId**: string: The application (client) ID of an App Registration in the tenant.
 * **applicationSecret**: string {sensitive}: An AAD client secret that was generated for the App Registration used to authenticate with Azure Key Vault.
 
+## CheckNameAvailabilityInput
+### Properties
+* **name**: string (Required): The search service name to validate. Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.
+* **type**: 'searchServices' (Required): The type of the resource whose name is to be validated. This value must always be 'searchServices'.
+
+## CheckNameAvailabilityOutput
+### Properties
+* **message**: string (ReadOnly): A message that explains why the name is invalid and provides resource naming requirements. Available only if 'Invalid' is returned in the 'reason' property.
+* **nameAvailable**: bool (ReadOnly): A value indicating whether the name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string (ReadOnly): The reason why the name is not available. 'Invalid' indicates the name provided does not match the naming requirements (incorrect length, unsupported characters, etc.). 'AlreadyExists' indicates that the name is already in use and is therefore unavailable.
+
 ## DataIdentity
 * **Discriminator**: @odata.type
 
@@ -127,6 +149,10 @@
 * **encryptionComplianceStatus**: 'Compliant' | 'NonCompliant' (ReadOnly): Returns the status of search service compliance with respect to non-CMK-encrypted objects. If a service has more than one unencrypted object, and enforcement is enabled, the service is marked as noncompliant.
 * **enforcement**: 'Disabled' | 'Enabled' | 'Unspecified': Describes how a search service should enforce compliance if it finds objects that aren't encrypted with the customer-managed key.
 * **serviceLevelEncryptionKey**: [SearchResourceEncryptionKey](#searchresourceencryptionkey): Describes the customer-managed key configuration for encrypting the search service.
+
+## FeatureOffering
+### Properties
+* **name**: string: The name of the feature offered in this region.
 
 ## Identity
 ### Properties
@@ -175,6 +201,17 @@
 * **diagnosticSettingsVersion**: int: Current diagnostic settings version
 * **enabledLogCategories**: string[]: List of log categories that are enabled
 * **name**: string: Name of the profile
+
+## OfferingsByRegion
+### Properties
+* **features**: [FeatureOffering](#featureoffering)[]: The list of features offered in this region.
+* **regionName**: string: The name of the region.
+* **skus**: [SkuOffering](#skuoffering)[]: The list of SKUs offered in this region.
+
+## OfferingsResult
+### Properties
+* **defaultRegion**: string (ReadOnly): The recommended default region for creating new Azure AI Search services.
+* **regions**: [OfferingsByRegion](#offeringsbyregion)[] (ReadOnly): The list of Azure AI Search offerings by region.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -289,6 +326,21 @@
 ## Sku
 ### Properties
 * **name**: 'basic' | 'free' | 'serverless' | 'standard' | 'standard2' | 'standard3' | 'storage_optimized_l1' | 'storage_optimized_l2' | string: The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions. 'serverless': Serverless tier with auto-scaling capabilities.
+
+## SkuLimits
+### Properties
+* **indexers**: int: The maximum number of indexers available for this SKU.
+* **indexes**: int: The maximum number of indexes available for this SKU.
+* **partitions**: int: The maximum number of partitions available for this SKU.
+* **partitionStorageInGigabytes**: int: The maximum storage size in Gigabytes available for this SKU per partition.
+* **partitionVectorStorageInGigabytes**: int: The maximum vector storage size in Gigabytes available for this SKU per partition.
+* **replicas**: int: The maximum number of replicas available for this SKU.
+* **searchUnits**: int: The maximum number of search units available for this SKU.
+
+## SkuOffering
+### Properties
+* **limits**: [SkuLimits](#skulimits): The limits associated with this SKU offered in this region.
+* **sku**: [Sku](#sku): The SKU definition.
 
 ## SystemData
 ### Properties

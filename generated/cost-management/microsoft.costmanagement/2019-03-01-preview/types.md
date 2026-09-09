@@ -41,11 +41,36 @@
 * **properties**: [ShowbackRuleProperties](#showbackruleproperties): Showback rule properties
 * **type**: 'Microsoft.CostManagement/showbackRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkConnectorEligibility (Microsoft.CostManagement@2019-03-01-preview)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2019-03-01-preview
+* **Input**: [CheckEligibilityDefinition](#checkeligibilitydefinition)
+* **Output**: [ConnectorDefinition](#connectordefinition)
+
+## Function Forecast (Microsoft.CostManagement@2019-03-01-preview)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2019-03-01-preview
+* **Input**: [ReportConfigDefinition](#reportconfigdefinition)
+* **Output**: [QueryResult](#queryresult)
+
 ## Function Forecast (Microsoft.CostManagement/externalBillingAccounts@2019-03-01-preview)
 * **Resource**: Microsoft.CostManagement/externalBillingAccounts
 * **ApiVersion**: 2019-03-01-preview
 * **Input**: [ReportConfigDefinition](#reportconfigdefinition)
 * **Output**: [QueryResult](#queryresult)
+
+## Function Query (Microsoft.CostManagement@2019-03-01-preview)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2019-03-01-preview
+* **Input**: [ReportConfigDefinition](#reportconfigdefinition)
+* **Output**: [QueryResult](#queryresult)
+
+## CheckEligibilityDefinition
+### Properties
+* **credentialsKey**: string: Credentials authentication key (eg AWS ARN)
+* **credentialsSecret**: string (WriteOnly): Credentials secret (eg AWS ExternalId)
+* **kind**: string: Connector kind (eg aws)
+* **reportId**: string: Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
 
 ## ConnectorCollectionErrorInfo
 ### Properties
@@ -60,6 +85,14 @@
 * **lastChecked**: string (ReadOnly): Last time the data acquisition process initiated connecting to the external provider
 * **lastUpdated**: string (ReadOnly): Last time the external data was updated into Azure
 * **sourceLastUpdated**: string (ReadOnly): Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
+
+## ConnectorDefinition
+### Properties
+* **id**: string (ReadOnly): Connector id
+* **kind**: string: Connector kind (eg aws)
+* **name**: string (ReadOnly): Connector name
+* **properties**: [ConnectorProperties](#connectorproperties): Connector properties
+* **type**: string (ReadOnly): Connector type
 
 ## ConnectorProperties
 ### Properties

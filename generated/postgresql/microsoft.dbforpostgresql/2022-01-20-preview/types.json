@@ -1217,6 +1217,110 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "getPrivateDnsZoneSuffix",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "apiVersion": "2022-01-20-preview",
+    "output": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource type used for verification."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error Message."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 2,
+        "description": "Indicates whether the resource name is available."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "name of the PostgreSQL server."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "type of the server"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 2,
+        "description": "The name availability reason."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "apiVersion": "2022-01-20-preview",
+    "output": {
+      "$ref": "#/94"
+    },
+    "input": {
+      "$ref": "#/93"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "RestartParameter",
     "properties": {
@@ -1229,7 +1333,7 @@
       },
       "failoverMode": {
         "type": {
-          "$ref": "#/97"
+          "$ref": "#/104"
         },
         "flags": 0,
         "description": "Failover mode."
@@ -1256,16 +1360,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/93"
+        "$ref": "#/100"
       },
       {
-        "$ref": "#/94"
+        "$ref": "#/101"
       },
       {
-        "$ref": "#/95"
+        "$ref": "#/102"
       },
       {
-        "$ref": "#/96"
+        "$ref": "#/103"
       },
       {
         "$ref": "#/0"
@@ -1281,10 +1385,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2022-01-20-preview",
     "output": {
-      "$ref": "#/98"
+      "$ref": "#/105"
     },
     "input": {
-      "$ref": "#/92"
+      "$ref": "#/99"
     }
   },
   {
@@ -1293,7 +1397,7 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2022-01-20-preview",
     "output": {
-      "$ref": "#/98"
+      "$ref": "#/105"
     }
   },
   {
@@ -1302,7 +1406,7 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2022-01-20-preview",
     "output": {
-      "$ref": "#/98"
+      "$ref": "#/105"
     }
   },
   {
@@ -1324,7 +1428,7 @@
     "properties": {
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/105"
+          "$ref": "#/112"
         },
         "flags": 2
       },
@@ -1367,7 +1471,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/104"
+      "$ref": "#/111"
     }
   },
   {
@@ -1376,10 +1480,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2022-01-20-preview",
     "output": {
-      "$ref": "#/103"
+      "$ref": "#/110"
     },
     "input": {
-      "$ref": "#/102"
+      "$ref": "#/109"
     }
   }
 ]

@@ -40,6 +40,18 @@
 * **Input**: [AvailableScopeRequest](#availablescoperequest)
 * **Output**: [AvailableScopeProperties](#availablescopeproperties)
 
+## Function calculateExchange (Microsoft.Capacity@2022-11-01)
+* **Resource**: Microsoft.Capacity
+* **ApiVersion**: 2022-11-01
+* **Input**: [CalculateExchangeRequest](#calculateexchangerequest)
+* **Output**: [CalculateExchangeOperationResultResponse](#calculateexchangeoperationresultresponse)
+
+## Function calculatePrice (Microsoft.Capacity@2022-11-01)
+* **Resource**: Microsoft.Capacity
+* **ApiVersion**: 2022-11-01
+* **Input**: [PurchaseRequest](#purchaserequest)
+* **Output**: [CalculatePriceResponse](#calculatepriceresponse)
+
 ## Function calculateRefund (Microsoft.Capacity/reservationOrders@2022-11-01)
 * **Resource**: Microsoft.Capacity/reservationOrders
 * **ApiVersion**: 2022-11-01
@@ -51,6 +63,12 @@
 * **ApiVersion**: 2022-11-01
 * **Input**: [ChangeDirectoryRequest](#changedirectoryrequest)
 * **Output**: [ChangeDirectoryResponse](#changedirectoryresponse)
+
+## Function exchange (Microsoft.Capacity@2022-11-01)
+* **Resource**: Microsoft.Capacity
+* **ApiVersion**: 2022-11-01
+* **Input**: [ExchangeRequest](#exchangerequest)
+* **Output**: [ExchangeOperationResultResponse](#exchangeoperationresultresponse)
 
 ## Function merge (Microsoft.Capacity/reservationOrders@2022-11-01)
 * **Resource**: Microsoft.Capacity/reservationOrders
@@ -95,6 +113,69 @@
 ### Properties
 * **scopes**: string[]
 
+## BillingInformation
+### Properties
+* **billingCurrencyProratedAmount**: [Price](#price): Pricing information containing the amount and the currency code
+* **billingCurrencyRemainingCommitmentAmount**: [Price](#price): Pricing information containing the amount and the currency code
+* **billingCurrencyTotalPaidAmount**: [Price](#price): Pricing information containing the amount and the currency code
+
+## CalculateExchangeOperationResultResponse
+### Properties
+* **error**: [OperationResultError](#operationresulterror): Required if status == failed or status == canceled.
+* **id**: string: It should match what is used to GET the operation result.
+* **name**: string: It must match the last segment of the id field, and will typically be a GUID / system generated value.
+* **properties**: [CalculateExchangeResponseProperties](#calculateexchangeresponseproperties): CalculateExchange response properties
+* **status**: 'Cancelled' | 'Failed' | 'Pending' | 'Succeeded' | string: Status of the operation.
+
+## CalculateExchangeRequest
+### Properties
+* **properties**: [CalculateExchangeRequestProperties](#calculateexchangerequestproperties): Calculate exchange request properties
+
+## CalculateExchangeRequestProperties
+### Properties
+* **reservationsToExchange**: [ReservationToReturn](#reservationtoreturn)[]: List of reservations that are being returned in this exchange.
+* **reservationsToPurchase**: [PurchaseRequest](#purchaserequest)[]: List of reservations that are being purchased in this exchange.
+* **savingsPlansToPurchase**: [SavingsPlanPurchaseRequest](#savingsplanpurchaserequest)[]: List of savings plans that are being purchased in this exchange.
+
+## CalculateExchangeResponseProperties
+### Properties
+* **netPayable**: [Price](#price): Pricing information containing the amount and the currency code
+* **policyResult**: [ExchangePolicyErrors](#exchangepolicyerrors): Exchange policy errors
+* **purchasesTotal**: [Price](#price): Pricing information containing the amount and the currency code
+* **refundsTotal**: [Price](#price): Pricing information containing the amount and the currency code
+* **reservationsToExchange**: [ReservationToExchange](#reservationtoexchange)[]: Details of the reservations being returned
+* **reservationsToPurchase**: [ReservationToPurchaseCalculateExchange](#reservationtopurchasecalculateexchange)[]: Details of the reservations being purchased
+* **savingsPlansToPurchase**: [SavingsPlanToPurchaseCalculateExchange](#savingsplantopurchasecalculateexchange)[]: Details of the savings plans being purchased
+* **sessionId**: string: Exchange session identifier
+
+## CalculatePriceResponse
+### Properties
+* **properties**: [CalculatePriceResponseProperties](#calculatepriceresponseproperties): Properties for calculate price response
+
+## CalculatePriceResponseProperties
+### Properties
+* **billingCurrencyTotal**: [CalculatePriceResponsePropertiesBillingCurrencyTotal](#calculatepriceresponsepropertiesbillingcurrencytotal): Currency and amount that customer will be charged in customer's local currency. Tax is not included.
+* **grandTotal**: int: Total amount in pricing currency.
+* **isBillingPartnerManaged**: bool: True if billing is managed by Microsoft Partner. Used only for CSP accounts.
+* **isTaxIncluded**: bool: Whether or not tax is included in grand total
+* **netTotal**: int: Net total amount in pricing currency.
+* **paymentSchedule**: [PaymentDetail](#paymentdetail)[]
+* **pricingCurrencyTotal**: [CalculatePriceResponsePropertiesPricingCurrencyTotal](#calculatepriceresponsepropertiespricingcurrencytotal): Amount that Microsoft uses for record. Used during refund for calculating refund limit. Tax is not included.
+* **reservationOrderId**: string: GUID that represents reservation order that can be placed after calculating price.
+* **skuDescription**: string: Description of sku that is being purchased.
+* **skuTitle**: string: Title of sku that is being purchased.
+* **taxTotal**: int: Tax amount in pricing currency.
+
+## CalculatePriceResponsePropertiesBillingCurrencyTotal
+### Properties
+* **amount**: int: Amount in pricing currency. Tax is not included.
+* **currencyCode**: string: The ISO 4217 3-letter currency code for the currency used by this purchase record.
+
+## CalculatePriceResponsePropertiesPricingCurrencyTotal
+### Properties
+* **amount**: int
+* **currencyCode**: string: The ISO 4217 3-letter currency code for the currency used by this purchase record.
+
 ## CalculateRefundRequest
 ### Properties
 * **id**: string: Fully qualified identifier of the reservation order being returned
@@ -126,6 +207,48 @@
 * **isSucceeded**: bool: True if change directory operation succeeded on this reservation order or reservation
 * **name**: string: Name of the reservation order or reservation
 
+## Commitment
+### Properties
+* **amount**: int
+* **currencyCode**: string: The ISO 4217 3-letter currency code for the currency used by this purchase record.
+* **grain**: 'Hourly' | string: Commitment grain.
+
+## ExchangeOperationResultResponse
+### Properties
+* **error**: [OperationResultError](#operationresulterror): Required if status == failed or status == canceled.
+* **id**: string: It should match what is used to GET the operation result.
+* **name**: string: It must match the last segment of the id field, and will typically be a GUID / system generated value.
+* **properties**: [ExchangeResponseProperties](#exchangeresponseproperties): Exchange response properties
+* **status**: 'Cancelled' | 'Failed' | 'PendingPurchases' | 'PendingRefunds' | 'Succeeded' | string: Status of the operation.
+
+## ExchangePolicyError
+### Properties
+* **code**: string
+* **message**: string
+
+## ExchangePolicyErrors
+### Properties
+* **policyErrors**: [ExchangePolicyError](#exchangepolicyerror)[]: Exchange Policy errors
+
+## ExchangeRequest
+### Properties
+* **properties**: [ExchangeRequestProperties](#exchangerequestproperties): Exchange request properties
+
+## ExchangeRequestProperties
+### Properties
+* **sessionId**: string: SessionId that was returned by CalculateExchange API.
+
+## ExchangeResponseProperties
+### Properties
+* **netPayable**: [Price](#price): Pricing information containing the amount and the currency code
+* **policyResult**: [ExchangePolicyErrors](#exchangepolicyerrors): Exchange policy errors
+* **purchasesTotal**: [Price](#price): Pricing information containing the amount and the currency code
+* **refundsTotal**: [Price](#price): Pricing information containing the amount and the currency code
+* **reservationsToExchange**: [ReservationToReturnForExchange](#reservationtoreturnforexchange)[]: Details of the reservations being returned
+* **reservationsToPurchase**: [ReservationToPurchaseExchange](#reservationtopurchaseexchange)[]: Details of the reservations being purchased
+* **savingsPlansToPurchase**: [SavingsPlanToPurchaseExchange](#savingsplantopurchaseexchange)[]: Details of the savings plans being purchased
+* **sessionId**: string: Exchange session identifier
+
 ## ExtendedStatusInfo
 ### Properties
 * **message**: string: The message giving detailed information about the status code.
@@ -138,6 +261,11 @@
 ## MergeRequest
 ### Properties
 * **properties**: [MergeProperties](#mergeproperties): Properties for reservation merge
+
+## OperationResultError
+### Properties
+* **code**: string: Required if status == failed or status == cancelled. If status == failed, provide an invariant error code used for error troubleshooting, aggregation, and analysis.
+* **message**: string: Required if status == failed. Localized. If status == failed, provide an actionable error message indicating what error occurred, and what the user can do to address the issue.
 
 ## PaymentDetail
 ### Properties
@@ -365,10 +493,38 @@
 * **swapDestination**: string: Reservation resource id that the original resource gets swapped to. Format of the resource id is /providers/microsoft.capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
 * **swapSource**: string: Resource id of the source reservation that gets swapped. Format of the resource id is /providers/microsoft.capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
 
+## ReservationToExchange
+### Properties
+* **billingInformation**: [BillingInformation](#billinginformation): billing information
+* **billingRefundAmount**: [Price](#price): Pricing information containing the amount and the currency code
+* **quantity**: int: Quantity to be returned
+* **reservationId**: string: Fully qualified id of the reservation being returned.
+
+## ReservationToPurchaseCalculateExchange
+### Properties
+* **billingCurrencyTotal**: [Price](#price): Pricing information containing the amount and the currency code
+* **properties**: [PurchaseRequest](#purchaserequest): The request for reservation purchase
+
+## ReservationToPurchaseExchange
+### Properties
+* **billingCurrencyTotal**: [Price](#price): Pricing information containing the amount and the currency code
+* **properties**: [PurchaseRequest](#purchaserequest): The request for reservation purchase
+* **reservationId**: string: Fully qualified id of the reservation being purchased. This value is only guaranteed to be non-null if the purchase is successful.
+* **reservationOrderId**: string: Fully qualified id of the reservationOrder being purchased
+* **status**: 'Cancelled' | 'Failed' | 'Pending' | 'Succeeded' | string: Status of the individual operation.
+
 ## ReservationToReturn
 ### Properties
 * **quantity**: int: Quantity to be returned. Must be greater than zero.
 * **reservationId**: string: Fully qualified identifier of the reservation being returned
+
+## ReservationToReturnForExchange
+### Properties
+* **billingInformation**: [BillingInformation](#billinginformation): billing information
+* **billingRefundAmount**: [Price](#price): Pricing information containing the amount and the currency code
+* **quantity**: int: Quantity to be returned
+* **reservationId**: string: Fully qualified id of the reservation being returned.
+* **status**: 'Cancelled' | 'Failed' | 'Pending' | 'Succeeded' | string: Status of the individual operation.
 
 ## ReservationUtilizationAggregates
 ### Properties
@@ -376,6 +532,34 @@
 * **grainUnit**: string (ReadOnly): The grain unit of the aggregate
 * **value**: int (ReadOnly): The aggregate value
 * **valueUnit**: string (ReadOnly): The aggregate value unit
+
+## SavingsPlanPurchaseRequest
+### Properties
+* **properties**: [SavingsPlanPurchaseRequestProperties](#savingsplanpurchaserequestproperties): Properties of a savings plan purchase
+* **sku**: [SkuName](#skuname): The name of sku
+
+## SavingsPlanPurchaseRequestProperties
+### Properties
+* **appliedScopeProperties**: [AppliedScopeProperties](#appliedscopeproperties): Properties specific to applied scope type. Not required if not applicable. Required and need to provide tenantId and managementGroupId if AppliedScopeType is ManagementGroup
+* **appliedScopeType**: 'ManagementGroup' | 'Shared' | 'Single' | string: Type of the Applied Scope.
+* **billingPlan**: 'P1M' | string: Represents the billing plan in ISO 8601 format. Required only for monthly billing plans.
+* **billingScopeId**: string: Subscription that will be charged for purchasing reservation or savings plan
+* **commitment**: [Commitment](#commitment): Commitment towards the benefit.
+* **displayName**: string: Friendly name of the savings plan
+* **term**: 'P1Y' | 'P3Y' | string: Represent savings plan term in ISO 8601 format.
+
+## SavingsPlanToPurchaseCalculateExchange
+### Properties
+* **billingCurrencyTotal**: [Price](#price): Pricing information containing the amount and the currency code
+* **properties**: [SavingsPlanPurchaseRequest](#savingsplanpurchaserequest): Request body for savings plan purchase
+
+## SavingsPlanToPurchaseExchange
+### Properties
+* **billingCurrencyTotal**: [Price](#price): Pricing information containing the amount and the currency code
+* **properties**: [SavingsPlanPurchaseRequest](#savingsplanpurchaserequest): Request body for savings plan purchase
+* **savingsPlanId**: string: Fully qualified id of the savings plan being purchased. This value is only guaranteed to be non-null if the purchase is successful.
+* **savingsPlanOrderId**: string: Fully qualified id of the savings plan order being purchased
+* **status**: 'Cancelled' | 'Failed' | 'Pending' | 'Succeeded' | string: Status of the individual operation.
 
 ## ScopeProperties
 ### Properties

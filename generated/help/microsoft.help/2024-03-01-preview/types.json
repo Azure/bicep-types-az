@@ -2467,11 +2467,345 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 0,
+        "description": "Returns true or false depending on the availability of the name"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason for why value is not available. This field is returned if nameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets an error message explaining the 'reason' value with more details. This field is returned iif nameAvailable is false."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Help",
+    "apiVersion": "2024-03-01-preview",
+    "output": {
+      "$ref": "#/193"
+    },
+    "input": {
+      "$ref": "#/192"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscoveryNlpRequest",
+    "properties": {
+      "issueSummary": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Natural language description of the issue."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ARM resource Id of the resource that is having the issue. Only applicable for Discovery Solution NLP Subscription Scope."
+      },
+      "serviceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ARM service Id of the service that is having the issue. For more information on service Id see https://learn.microsoft.com/rest/api/support/services/list?tabs=HTTP."
+      },
+      "additionalContext": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Additional information in the form of a string."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiscoveryNlpResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/210"
+        },
+        "flags": 0,
+        "description": "The list of solution metadata."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SolutionNlpMetadataResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/198"
+        },
+        "flags": 0,
+        "description": "Solution metadata Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NlpSolutions",
+    "properties": {
+      "problemTitle": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Title of the problem classification."
+      },
+      "problemDescription": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description of the problem classification."
+      },
+      "serviceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the service (https://learn.microsoft.com/en-us/rest/api/support/services?view=rest-support-2020-04-01) that may be used to create a support ticket."
+      },
+      "problemClassificationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the ProblemClassification (https://learn.microsoft.com/en-us/rest/api/support/problem-classifications?view=rest-support-2020-04-01) that may be used to create a support ticket."
+      },
+      "solutions": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 0,
+        "description": "The list of solution metadata."
+      },
+      "relatedServices": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 0,
+        "description": "The set of services that are most likely related to the request. If relatedServices is included in the response then solutions may not be discovered until the client calls a second time specifying one of the service Ids in the relatedServices object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SolutionMetadataProperties",
+    "properties": {
+      "solutionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Solution Id."
+      },
+      "solutionType": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 2,
+        "description": "Solution Type."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "A detailed description of solution."
+      },
+      "requiredInputs": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 2,
+        "description": "Required parameters for invoking this particular solution."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Diagnostics"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Solutions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Troubleshooters"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SelfHelp"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/199"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClassificationService",
+    "properties": {
+      "serviceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Azure resource Id of the service."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Localized name of the azure service."
+      },
+      "resourceTypes": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 0,
+        "description": "List of applicable ARM resource types for this service."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/207"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/197"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "discoverSolutions",
+    "resourceType": "Microsoft.Help",
+    "apiVersion": "2024-03-01-preview",
+    "output": {
+      "$ref": "#/196"
+    },
+    "input": {
+      "$ref": "#/195"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SolutionWarmUpRequestBody",
     "properties": {
       "parameters": {
         "type": {
-          "$ref": "#/193"
+          "$ref": "#/213"
         },
         "flags": 0,
         "description": "Dictionary of <string>"
@@ -2495,7 +2829,7 @@
       "$ref": "#/176"
     },
     "input": {
-      "$ref": "#/192"
+      "$ref": "#/212"
     }
   },
   {
@@ -2511,7 +2845,7 @@
       },
       "responses": {
         "type": {
-          "$ref": "#/204"
+          "$ref": "#/224"
         },
         "flags": 0
       }
@@ -2530,7 +2864,7 @@
       },
       "questionType": {
         "type": {
-          "$ref": "#/203"
+          "$ref": "#/223"
         },
         "flags": 0,
         "description": "Type of Question"
@@ -2572,22 +2906,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/197"
+        "$ref": "#/217"
       },
       {
-        "$ref": "#/198"
+        "$ref": "#/218"
       },
       {
-        "$ref": "#/199"
+        "$ref": "#/219"
       },
       {
-        "$ref": "#/200"
+        "$ref": "#/220"
       },
       {
-        "$ref": "#/201"
+        "$ref": "#/221"
       },
       {
-        "$ref": "#/202"
+        "$ref": "#/222"
       },
       {
         "$ref": "#/2"
@@ -2597,7 +2931,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/196"
+      "$ref": "#/216"
     }
   },
   {
@@ -2609,7 +2943,7 @@
       "$ref": "#/176"
     },
     "input": {
-      "$ref": "#/195"
+      "$ref": "#/215"
     }
   },
   {
@@ -2640,7 +2974,7 @@
     "resourceType": "Microsoft.Help/troubleshooters",
     "apiVersion": "2024-03-01-preview",
     "output": {
-      "$ref": "#/207"
+      "$ref": "#/227"
     }
   }
 ]

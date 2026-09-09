@@ -47,6 +47,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Cdn@2017-04-02)
+* **Resource**: Microsoft.Cdn
+* **ApiVersion**: 2017-04-02
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
 ## Function checkResourceUsage (Microsoft.Cdn/profiles@2017-04-02)
 * **Resource**: Microsoft.Cdn/profiles
 * **ApiVersion**: 2017-04-02
@@ -54,6 +60,11 @@
 
 ## Function checkResourceUsage (Microsoft.Cdn/profiles/endpoints@2017-04-02)
 * **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2017-04-02
+* **Output**: [ResourceUsageListResult](#resourceusagelistresult)
+
+## Function checkResourceUsage (Microsoft.Cdn@2017-04-02)
+* **Resource**: Microsoft.Cdn
 * **ApiVersion**: 2017-04-02
 * **Output**: [ResourceUsageListResult](#resourceusagelistresult)
 
@@ -104,6 +115,23 @@
 * **ApiVersion**: 2017-04-02
 * **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
 * **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
+## Function validateProbe (Microsoft.Cdn@2017-04-02)
+* **Resource**: Microsoft.Cdn
+* **ApiVersion**: 2017-04-02
+* **Input**: [ValidateProbeInput](#validateprobeinput)
+* **Output**: [ValidateProbeOutput](#validateprobeoutput)
+
+## CheckNameAvailabilityInput
+### Properties
+* **name**: string (Required): The resource name to validate.
+* **type**: 'Microsoft.Cdn/Profiles/Endpoints' (Required): The type of the resource whose name is to be validated.
+
+## CheckNameAvailabilityOutput
+### Properties
+* **message**: string (ReadOnly): The detailed error message describing why the name is not available.
+* **nameAvailable**: bool (ReadOnly): Indicates whether the name is available.
+* **reason**: string (ReadOnly): The reason why the name is not available.
 
 ## CustomDomain
 ### Properties
@@ -247,4 +275,14 @@
 * **customDomainValidated**: bool (ReadOnly): Indicates whether the custom domain is valid or not.
 * **message**: string (ReadOnly): Error message describing why the custom domain is not valid.
 * **reason**: string (ReadOnly): The reason why the custom domain is not valid.
+
+## ValidateProbeInput
+### Properties
+* **probeURL**: string (Required): The probe URL to validate.
+
+## ValidateProbeOutput
+### Properties
+* **errorCode**: string (ReadOnly): Specifies the error code when the probe url is not accepted.
+* **isValid**: bool (ReadOnly): Indicates whether the probe URL is accepted or not.
+* **message**: string (ReadOnly): The detailed error message describing why the probe URL is not accepted.
 

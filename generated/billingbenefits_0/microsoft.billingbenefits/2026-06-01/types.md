@@ -267,6 +267,18 @@
 * **ApiVersion**: 2026-06-01
 * **Output**: [RoleAssignmentEntity](#roleassignmententity)
 
+## Function listSellerResources (Microsoft.BillingBenefits@2026-06-01)
+* **Resource**: Microsoft.BillingBenefits
+* **ApiVersion**: 2026-06-01
+* **Input**: [SellerResourceListRequest](#sellerresourcelistrequest)
+* **Output**: [Macc](#macc)[]
+
+## Function validate (Microsoft.BillingBenefits@2026-06-01)
+* **Resource**: Microsoft.BillingBenefits
+* **ApiVersion**: 2026-06-01
+* **Input**: [BenefitValidateRequest](#benefitvalidaterequest)
+* **Output**: [BenefitValidateResponse](#benefitvalidateresponse)
+
 ## Function validate (Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans@2026-06-01)
 * **Resource**: Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans
 * **ApiVersion**: 2026-06-01
@@ -301,6 +313,75 @@
 * **resourceId**: string (ReadOnly): Resource ID for the awarded credit.
 * **startAt**: string: Start date when the credit becomes effective
 * **systemId**: string (ReadOnly): This is the globally unique identifier of the credit which will not change for its lifetime.
+
+## BenefitValidateModel
+* **Discriminator**: benefitType
+
+### Base Properties
+
+### ConditionalCreditsValidateModel
+#### Properties
+* **benefitType**: 'ConditionalCredits' (Required): Type of benefit to validate. This is used to determine the model type for validation.
+* **properties**: [ConditionalCreditProperties](#conditionalcreditproperties): Conditional Credits validate properties
+
+### CreditsValidateModel
+#### Properties
+* **benefitType**: 'Credits' (Required): Type of benefit to validate. This is used to determine the model type for validation.
+* **properties**: [Credit](#credit): Credits validate properties
+
+### DiscountValidateModel
+#### Properties
+* **benefitType**: 'Discounts' (Required): Type of benefit to validate. This is used to determine the model type for validation.
+* **properties**: [DiscountProperties](#discountproperties): Discount validate properties
+
+### MaccValidateModel
+#### Properties
+* **benefitType**: 'MACC' (Required): Type of benefit to validate. This is used to determine the model type for validation.
+* **properties**: [MaccModelProperties](#maccmodelproperties): MACC validate properties
+
+### MaccsValidateModel
+#### Properties
+* **benefitType**: 'Maccs' (Required): Type of benefit to validate. This is used to determine the model type for validation.
+* **properties**: [MaccModelProperties](#maccmodelproperties): MACC validate properties
+
+### SavingsPlanValidateModel
+#### Properties
+* **benefitType**: 'SavingsPlan' (Required): Type of benefit to validate. This is used to determine the model type for validation.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **kind**: string: Resource provider kind
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [SavingsPlanOrderAliasProperties](#savingsplanorderaliasproperties): Savings plan order alias properties
+* **sku**: [ResourceSku](#resourcesku) (Required): Savings plan SKU
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+### SavingsPlansValidateModel
+#### Properties
+* **benefitType**: 'SavingsPlans' (Required): Type of benefit to validate. This is used to determine the model type for validation.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **kind**: string: Resource provider kind
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [SavingsPlanOrderAliasProperties](#savingsplanorderaliasproperties): Savings plan order alias properties
+* **sku**: [ResourceSku](#resourcesku) (Required): Savings plan SKU
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+
+## BenefitValidateRequest
+### Properties
+* **benefits**: [BenefitValidateModel](#benefitvalidatemodel)[]: Defines benefits for validation.
+
+## BenefitValidateResponse
+### Properties
+* **benefits**: [BenefitValidateResponseProperty](#benefitvalidateresponseproperty)[]: Defines benefit validation response for benefits.
+* **nextLink**: string: Url to get the next page.
+
+## BenefitValidateResponseProperty
+### Properties
+* **reason**: string: Failure reason if the provided input was invalid
+* **reasonCode**: string: Failure reason code if the provided input was invalid
+* **resourceId**: string: Resource identifier of the benefit that was validated.
+* **valid**: bool: Indicates if the provided input was valid
 
 ## BillingPlanInformation
 ### Properties
@@ -888,6 +969,18 @@
 * **reason**: string: Failure reason if the provided input was invalid
 * **reasonCode**: string: Failure reason code if the provided input was invalid
 * **valid**: bool: Indicates if the provided input was valid
+
+## SellerResourceListRequest
+### Properties
+* **properties**: [SellerResourceListRequestProperties](#sellerresourcelistrequestproperties): Request properties to list maccs under a billing account
+
+## SellerResourceListRequestProperties
+### Properties
+* **$filter**: string: This is an OData expresssion to filter the list of MACCs based on the properties of MACC passed in the filter.
+* **billingAccountResourceId**: string (Required): Fully-qualified billing account resource identifier where the benefit is applied. Present only for Enterprise Agreement customers.
+* **contributors**: bool: Setting it to true will return the list of contributors associated with the MACC.
+* **milestones**: bool: Setting it to true will return the list of milestones associated with the MACC.
+* **primaryResourceId**: string: Fully-qualified resource identifier of the primary MACC. Format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BillingBenefits/maccs/{maccName}.
 
 ## Shortfall
 ### Properties

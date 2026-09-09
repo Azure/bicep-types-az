@@ -24,6 +24,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Portal/tenantConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listTenantConfigurationViolations (Microsoft.Portal@2020-09-01-preview)
+* **Resource**: Microsoft.Portal
+* **ApiVersion**: 2020-09-01-preview
+* **Output**: [ViolationsList](#violationslist)
+
 ## ConfigurationProperties
 ### Properties
 * **enforcePrivateMarkdownStorage**: bool: When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
@@ -95,4 +100,15 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Violation
+### Properties
+* **errorMessage**: string (ReadOnly): Error message.
+* **id**: string (ReadOnly): Id of the item that violates tenant configuration.
+* **userId**: string (ReadOnly): Id of the user who owns violated item.
+
+## ViolationsList
+### Properties
+* **nextLink**: string: The link to the next page of items
+* **value**: [Violation](#violation)[] (Required): The Violation items on this page
 

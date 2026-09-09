@@ -13,6 +13,23 @@
 * **tags**: [EnergyServiceTags](#energyservicetags): Resource tags.
 * **type**: 'Microsoft.OpenEnergyPlatform/energyServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.OpenEnergyPlatform@2021-06-01-preview)
+* **Resource**: Microsoft.OpenEnergyPlatform
+* **ApiVersion**: 2021-06-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
+
 ## DataPartitionNames
 ### Properties
 * **name**: string

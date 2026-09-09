@@ -26438,5 +26438,776 @@
     "output": {
       "$ref": "#/634"
     }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "DataConnectorsCheckRequirements",
+    "discriminator": "kind",
+    "baseProperties": {},
+    "elements": {
+      "AmazonWebServicesCloudTrail": {
+        "$ref": "#/2092"
+      },
+      "AmazonWebServicesS3": {
+        "$ref": "#/2094"
+      },
+      "AzureActiveDirectory": {
+        "$ref": "#/2096"
+      },
+      "AzureAdvancedThreatProtection": {
+        "$ref": "#/2099"
+      },
+      "AzureSecurityCenter": {
+        "$ref": "#/2102"
+      },
+      "Dynamics365": {
+        "$ref": "#/2105"
+      },
+      "IOT": {
+        "$ref": "#/2108"
+      },
+      "MicrosoftCloudAppSecurity": {
+        "$ref": "#/2111"
+      },
+      "MicrosoftDefenderAdvancedThreatProtection": {
+        "$ref": "#/2114"
+      },
+      "MicrosoftPurviewInformationProtection": {
+        "$ref": "#/2117"
+      },
+      "MicrosoftThreatIntelligence": {
+        "$ref": "#/2120"
+      },
+      "MicrosoftThreatProtection": {
+        "$ref": "#/2123"
+      },
+      "Office365Project": {
+        "$ref": "#/2126"
+      },
+      "OfficeATP": {
+        "$ref": "#/2129"
+      },
+      "OfficeIRM": {
+        "$ref": "#/2132"
+      },
+      "OfficePowerBI": {
+        "$ref": "#/2135"
+      },
+      "ThreatIntelligence": {
+        "$ref": "#/2138"
+      },
+      "ThreatIntelligenceTaxii": {
+        "$ref": "#/2141"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AwsCloudTrailCheckRequirements",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2093"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AmazonWebServicesCloudTrail"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AwsS3CheckRequirements",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2095"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AmazonWebServicesS3"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AADCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2097"
+        },
+        "flags": 0,
+        "description": "AADIP (Azure Active Directory Identity Protection) requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2098"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AADCheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureActiveDirectory"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AatpCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2100"
+        },
+        "flags": 0,
+        "description": "AATP (Azure Advanced Threat Protection) requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2101"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AatpCheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureAdvancedThreatProtection"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ASCCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2103"
+        },
+        "flags": 0,
+        "description": "ASC (Azure Security Center) requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2104"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ASCCheckRequirementsProperties",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The subscription id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSecurityCenter"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Dynamics365CheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2106"
+        },
+        "flags": 0,
+        "description": "Dynamics365 requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2107"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Dynamics365CheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dynamics365"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IoTCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2109"
+        },
+        "flags": 0,
+        "description": "IoT requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2110"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IoTCheckRequirementsProperties",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The subscription id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IOT"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "McasCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2112"
+        },
+        "flags": 0,
+        "description": "MCAS (Microsoft Cloud App Security) requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2113"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "McasCheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftCloudAppSecurity"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MdatpCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2115"
+        },
+        "flags": 0,
+        "description": "MDATP (Microsoft Defender Advanced Threat Protection) requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2116"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MdatpCheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftDefenderAdvancedThreatProtection"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MicrosoftPurviewInformationProtectionCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2118"
+        },
+        "flags": 0,
+        "description": "MicrosoftPurviewInformationProtection requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2119"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MicrosoftPurviewInformationProtectionCheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftPurviewInformationProtection"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MstiCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2121"
+        },
+        "flags": 0,
+        "description": "Microsoft Threat Intelligence requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2122"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MstiCheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftThreatIntelligence"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MtpCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2124"
+        },
+        "flags": 0,
+        "description": "MTP (Microsoft Threat Protection) requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2125"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MTPCheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftThreatProtection"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Office365ProjectCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2127"
+        },
+        "flags": 0,
+        "description": "Office365 Project requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2128"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Office365ProjectCheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Office365Project"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OfficeATPCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2130"
+        },
+        "flags": 0,
+        "description": "OfficeATP (Office 365 Advanced Threat Protection) requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2131"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OfficeATPCheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OfficeATP"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OfficeIRMCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2133"
+        },
+        "flags": 0,
+        "description": "OfficeIRM (Microsoft Insider Risk Management) requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2134"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OfficeIRMCheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OfficeIRM"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OfficePowerBICheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2136"
+        },
+        "flags": 0,
+        "description": "Office Power BI requirements check properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2137"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OfficePowerBICheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OfficePowerBI"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TICheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2139"
+        },
+        "flags": 0,
+        "description": "Threat Intelligence Platforms data connector check required properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2140"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TICheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThreatIntelligence"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TiTaxiiCheckRequirements",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/2142"
+        },
+        "flags": 0,
+        "description": "Threat Intelligence TAXII check required properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2143"
+        },
+        "flags": 1,
+        "description": "Describes the kind of connector to be checked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TiTaxiiCheckRequirementsProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The tenant id to connect to, and get the data from."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ThreatIntelligenceTaxii"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataConnectorRequirementsState",
+    "properties": {
+      "authorizationState": {
+        "type": {
+          "$ref": "#/2147"
+        },
+        "flags": 0,
+        "description": "Authorization state for this connector"
+      },
+      "licenseState": {
+        "type": {
+          "$ref": "#/2151"
+        },
+        "flags": 0,
+        "description": "License state for this connector"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Valid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2145"
+      },
+      {
+        "$ref": "#/2146"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Valid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/2148"
+      },
+      {
+        "$ref": "#/2149"
+      },
+      {
+        "$ref": "#/2150"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "dataConnectorsCheckRequirements",
+    "resourceType": "Microsoft.SecurityInsights",
+    "apiVersion": "2023-07-01-preview",
+    "output": {
+      "$ref": "#/2144"
+    },
+    "input": {
+      "$ref": "#/2091"
+    }
   }
 ]

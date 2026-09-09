@@ -35,6 +35,12 @@
 * **tags**: [SecretCreateOrUpdateParametersTags](#secretcreateorupdateparameterstags): The tags that will be assigned to the secret.
 * **type**: 'Microsoft.KeyVault/vaults/secrets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.KeyVault@2016-10-01)
+* **Resource**: Microsoft.KeyVault
+* **ApiVersion**: 2016-10-01
+* **Input**: [VaultCheckNameAvailabilityParameters](#vaultchecknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function purge (Microsoft.KeyVault/locations/deletedVaults@2016-10-01)
 * **Resource**: Microsoft.KeyVault/locations/deletedVaults
 * **ApiVersion**: 2016-10-01
@@ -46,6 +52,12 @@
 * **objectId**: string (Required): The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
 * **permissions**: [Permissions](#permissions) (Required): Permissions the identity has for keys, secrets and certificates.
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): An error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): A boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used.
+* **reason**: 'AccountNameInvalid' | 'AlreadyExists' (ReadOnly): The reason that a vault name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## Permissions
 ### Properties
@@ -83,6 +95,11 @@
 ## VaultAccessPolicyProperties
 ### Properties
 * **accessPolicies**: [AccessPolicyEntry](#accesspolicyentry)[] (Required): An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
+
+## VaultCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The vault name.
+* **type**: 'Microsoft.KeyVault/vaults' (Required): The type of resource, Microsoft.KeyVault/vaults
 
 ## VaultCreateOrUpdateParametersTags
 ### Properties

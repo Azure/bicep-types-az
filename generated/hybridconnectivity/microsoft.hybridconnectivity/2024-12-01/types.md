@@ -68,6 +68,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.HybridConnectivity/solutionTypes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateAwsTemplate (Microsoft.HybridConnectivity@2024-12-01)
+* **Resource**: Microsoft.HybridConnectivity
+* **ApiVersion**: 2024-12-01
+* **Input**: [GenerateAwsTemplateRequest](#generateawstemplaterequest)
+* **Output**: any
+
 ## Function listCredentials (Microsoft.HybridConnectivity/endpoints@2024-12-01)
 * **Resource**: Microsoft.HybridConnectivity/endpoints
 * **ApiVersion**: 2024-12-01
@@ -129,6 +135,11 @@
 * **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
 * **message**: string (ReadOnly): The error message.
 * **target**: string (ReadOnly): The error target.
+
+## GenerateAwsTemplateRequest
+### Properties
+* **connectorId**: string (Required): The name of public cloud connector
+* **solutionTypes**: [SolutionTypeSettings](#solutiontypesettings)[]: The list of solution types and their settings
 
 ## IngressGatewayResource
 ### Properties
@@ -217,12 +228,22 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## SolutionSettings
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## SolutionTypeProperties
 ### Properties
 * **description**: string: Short description of solution type.
 * **solutionSettings**: [SolutionTypeSettingsProperties](#solutiontypesettingsproperties)[]: Array of solution settings and its description.
 * **solutionType**: string: The name of the solution type.
 * **supportedAzureRegions**: string[]: The locations this solution is supported in.
+
+## SolutionTypeSettings
+### Properties
+* **solutionSettings**: [SolutionSettings](#solutionsettings): Solution settings
+* **solutionType**: string (Required): The type of the solution
 
 ## SolutionTypeSettingsProperties
 ### Properties

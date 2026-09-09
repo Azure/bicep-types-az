@@ -229,6 +229,12 @@
 * **Input**: [TransferProductRequestProperties](#transferproductrequestproperties)
 * **Output**: [Product](#product)
 
+## Function validateAddress (Microsoft.Billing@2020-05-01)
+* **Resource**: Microsoft.Billing
+* **ApiVersion**: 2020-05-01
+* **Input**: [AddressDetails](#addressdetails)
+* **Output**: [ValidateAddressResponse](#validateaddressresponse)
+
 ## Function validateMoveEligibility (Microsoft.Billing/billingAccounts/billingSubscriptions@2020-05-01)
 * **Resource**: Microsoft.Billing/billingAccounts/billingSubscriptions
 * **ApiVersion**: 2020-05-01
@@ -654,6 +660,12 @@
 ## TransferProductRequestProperties
 ### Properties
 * **destinationInvoiceSectionId**: string: The destination invoice section id.
+
+## ValidateAddressResponse
+### Properties
+* **status**: 'Invalid' | 'Valid' | string: status of the address validation.
+* **suggestedAddresses**: [AddressDetails](#addressdetails)[]: The list of suggested addresses.
+* **validationMessage**: string: Validation error message.
 
 ## ValidateProductTransferEligibilityError
 ### Properties

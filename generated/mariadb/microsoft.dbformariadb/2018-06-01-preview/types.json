@@ -1249,5 +1249,64 @@
     "input": {
       "$ref": "#/91"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource type used for verification."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error Message."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "Indicates whether the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Reason for name being unavailable."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforMariaDB",
+    "apiVersion": "2018-06-01-preview",
+    "output": {
+      "$ref": "#/96"
+    },
+    "input": {
+      "$ref": "#/95"
+    }
   }
 ]

@@ -1561,6 +1561,108 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Name to check the namespace name availability and The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Value indicating namespace is availability, true if the namespace is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a namespace."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the namespace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionIsDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInLockdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TooManyNamespaceInCurrentSubscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "CheckNameAvailability",
+    "resourceType": "Microsoft.ServiceBus",
+    "apiVersion": "2015-08-01",
+    "output": {
+      "$ref": "#/116"
+    },
+    "input": {
+      "$ref": "#/115"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ResourceListKeys",
     "properties": {
       "primaryConnectionString": {
@@ -1606,7 +1708,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
     "apiVersion": "2015-08-01",
     "output": {
-      "$ref": "#/115"
+      "$ref": "#/125"
     }
   },
   {
@@ -1615,7 +1717,7 @@
     "properties": {
       "Policykey": {
         "type": {
-          "$ref": "#/120"
+          "$ref": "#/130"
         },
         "flags": 0,
         "description": "Key that needs to be regenerated."
@@ -1634,10 +1736,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/118"
+        "$ref": "#/128"
       },
       {
-        "$ref": "#/119"
+        "$ref": "#/129"
       }
     ]
   },
@@ -1647,10 +1749,10 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
     "apiVersion": "2015-08-01",
     "output": {
-      "$ref": "#/115"
+      "$ref": "#/125"
     },
     "input": {
-      "$ref": "#/117"
+      "$ref": "#/127"
     }
   },
   {
@@ -1659,7 +1761,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
     "apiVersion": "2015-08-01",
     "output": {
-      "$ref": "#/115"
+      "$ref": "#/125"
     }
   },
   {
@@ -1668,10 +1770,10 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
     "apiVersion": "2015-08-01",
     "output": {
-      "$ref": "#/115"
+      "$ref": "#/125"
     },
     "input": {
-      "$ref": "#/117"
+      "$ref": "#/127"
     }
   },
   {
@@ -1680,7 +1782,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
     "apiVersion": "2015-08-01",
     "output": {
-      "$ref": "#/115"
+      "$ref": "#/125"
     }
   },
   {
@@ -1689,10 +1791,10 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
     "apiVersion": "2015-08-01",
     "output": {
-      "$ref": "#/115"
+      "$ref": "#/125"
     },
     "input": {
-      "$ref": "#/117"
+      "$ref": "#/127"
     }
   }
 ]

@@ -20049,5 +20049,190 @@
     "input": {
       "$ref": "#/1539"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddressDetails",
+    "properties": {
+      "addressLine1": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 1,
+        "description": "Address line 1."
+      },
+      "addressLine2": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Address line 2."
+      },
+      "addressLine3": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Address line 3."
+      },
+      "city": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Address city."
+      },
+      "companyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Company name. Optional for MCA Individual (Pay-as-you-go)."
+      },
+      "country": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 1,
+        "description": "Country code uses ISO 3166-1 Alpha-2 format."
+      },
+      "district": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Address district."
+      },
+      "email": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Email address."
+      },
+      "firstName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "First name. Optional for MCA Enterprise."
+      },
+      "lastName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Last name. Optional for MCA Enterprise."
+      },
+      "middleName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Middle name."
+      },
+      "phoneNumber": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Phone number."
+      },
+      "postalCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Postal code."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Address region."
+      },
+      "isValidAddress": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Indicates if the address is incomplete."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddressValidationResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/1565"
+        },
+        "flags": 2,
+        "description": "Status of the address validation."
+      },
+      "suggestedAddresses": {
+        "type": {
+          "$ref": "#/1566"
+        },
+        "flags": 2,
+        "description": "The list of suggested addresses."
+      },
+      "validationMessage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Validation error message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Other"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Valid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1562"
+      },
+      {
+        "$ref": "#/1563"
+      },
+      {
+        "$ref": "#/1564"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1560"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateAddress",
+    "resourceType": "Microsoft.Billing",
+    "apiVersion": "2024-04-01",
+    "output": {
+      "$ref": "#/1561"
+    },
+    "input": {
+      "$ref": "#/1560"
+    }
   }
 ]

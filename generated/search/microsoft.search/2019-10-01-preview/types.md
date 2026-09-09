@@ -24,6 +24,12 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
 * **type**: 'Microsoft.Search/searchServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Search@2019-10-01-preview)
+* **Resource**: Microsoft.Search
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
 ## Function listAdminKeys (Microsoft.Search/searchServices@2019-10-01-preview)
 * **Resource**: Microsoft.Search/searchServices
 * **ApiVersion**: 2019-10-01-preview
@@ -38,6 +44,17 @@
 ### Properties
 * **primaryKey**: string (ReadOnly): The primary admin API key of the Search service.
 * **secondaryKey**: string (ReadOnly): The secondary admin API key of the Search service.
+
+## CheckNameAvailabilityInput
+### Properties
+* **name**: string (Required): The Search service name to validate. Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.
+* **type**: 'searchServices' (Required): The type of the resource whose name is to be validated. This value must always be 'searchServices'.
+
+## CheckNameAvailabilityOutput
+### Properties
+* **message**: string (ReadOnly): A message that explains why the name is invalid and provides resource naming requirements. Available only if 'Invalid' is returned in the 'reason' property.
+* **nameAvailable**: bool (ReadOnly): A value indicating whether the name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string (ReadOnly): The reason why the name is not available. 'Invalid' indicates the name provided does not match the naming requirements (incorrect length, unsupported characters, etc.). 'AlreadyExists' indicates that the name is already in use and is therefore unavailable.
 
 ## Identity
 ### Properties

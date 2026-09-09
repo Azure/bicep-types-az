@@ -3062,6 +3062,105 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name to check the namespace name availability"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the Namespace."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Value indicating Namespace is availability, true if the Namespace is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/235"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a Namespace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionIsDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInLockdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TooManyNamespaceInCurrentSubscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/229"
+      },
+      {
+        "$ref": "#/230"
+      },
+      {
+        "$ref": "#/231"
+      },
+      {
+        "$ref": "#/232"
+      },
+      {
+        "$ref": "#/233"
+      },
+      {
+        "$ref": "#/234"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.EventHub",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/228"
+    },
+    "input": {
+      "$ref": "#/227"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "reconcile",
     "resourceType": "Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations",

@@ -1429,6 +1429,38 @@
     "writableScopes": 8
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource type. The only legal value of this property for checking redis cache name availability is 'Microsoft.Cache/redis'."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "CheckNameAvailability",
+    "resourceType": "Microsoft.Cache",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/15"
+    },
+    "input": {
+      "$ref": "#/106"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.Cache/redis",
@@ -1443,7 +1475,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/110"
+          "$ref": "#/112"
         },
         "flags": 1,
         "description": "The Redis access key to regenerate."
@@ -1462,10 +1494,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/108"
+        "$ref": "#/110"
       },
       {
-        "$ref": "#/109"
+        "$ref": "#/111"
       }
     ]
   },
@@ -1478,7 +1510,7 @@
       "$ref": "#/39"
     },
     "input": {
-      "$ref": "#/107"
+      "$ref": "#/109"
     }
   },
   {
@@ -1487,7 +1519,7 @@
     "properties": {
       "rebootType": {
         "type": {
-          "$ref": "#/116"
+          "$ref": "#/118"
         },
         "flags": 0,
         "description": "Which Redis node(s) to reboot. Depending on this value data loss is possible."
@@ -1501,7 +1533,7 @@
       },
       "ports": {
         "type": {
-          "$ref": "#/117"
+          "$ref": "#/119"
         },
         "flags": 0,
         "description": "A list of redis instances to reboot, specified by per-instance SSL ports or non-SSL ports."
@@ -1524,13 +1556,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/113"
-      },
-      {
-        "$ref": "#/114"
-      },
-      {
         "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
       },
       {
         "$ref": "#/0"
@@ -1562,10 +1594,10 @@
     "resourceType": "Microsoft.Cache/redis",
     "apiVersion": "2021-06-01",
     "output": {
-      "$ref": "#/118"
+      "$ref": "#/120"
     },
     "input": {
-      "$ref": "#/112"
+      "$ref": "#/114"
     }
   },
   {
@@ -1581,7 +1613,7 @@
       },
       "files": {
         "type": {
-          "$ref": "#/121"
+          "$ref": "#/123"
         },
         "flags": 1,
         "description": "files to import."
@@ -1603,7 +1635,7 @@
       "$ref": "#/15"
     },
     "input": {
-      "$ref": "#/120"
+      "$ref": "#/122"
     }
   },
   {
@@ -1642,7 +1674,7 @@
       "$ref": "#/15"
     },
     "input": {
-      "$ref": "#/123"
+      "$ref": "#/125"
     }
   }
 ]

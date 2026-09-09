@@ -9528,19 +9528,28 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "getCustomDomainVerificationId",
+    "resourceType": "Microsoft.App",
+    "apiVersion": "2025-01-01",
+    "output": {
+      "$ref": "#/0"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "EnvironmentAuthToken",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/611"
+          "$ref": "#/612"
         },
         "flags": 0,
         "description": "Environment auth token resource specific properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/612"
+          "$ref": "#/613"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -9616,7 +9625,7 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2025-01-01",
     "output": {
-      "$ref": "#/610"
+      "$ref": "#/611"
     }
   },
   {

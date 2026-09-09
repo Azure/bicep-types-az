@@ -797,6 +797,105 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name to check the namespace name availability"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Value indicating Namespace is availability, true if the Namespace is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a Namespace."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the Namespace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionIsDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInLockdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TooManyNamespaceInCurrentSubscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "CheckNameAvailability",
+    "resourceType": "Microsoft.EventHub",
+    "apiVersion": "2015-08-01",
+    "output": {
+      "$ref": "#/69"
+    },
+    "input": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ResourceListKeys",
     "properties": {
       "primaryConnectionString": {
@@ -842,7 +941,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/AuthorizationRules",
     "apiVersion": "2015-08-01",
     "output": {
-      "$ref": "#/68"
+      "$ref": "#/78"
     }
   },
   {
@@ -851,7 +950,7 @@
     "properties": {
       "policykey": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/83"
         },
         "flags": 0,
         "description": "Key that needs to be regenerated."
@@ -870,10 +969,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/71"
+        "$ref": "#/81"
       },
       {
-        "$ref": "#/72"
+        "$ref": "#/82"
       }
     ]
   },
@@ -883,10 +982,10 @@
     "resourceType": "Microsoft.EventHub/namespaces/AuthorizationRules",
     "apiVersion": "2015-08-01",
     "output": {
-      "$ref": "#/68"
+      "$ref": "#/78"
     },
     "input": {
-      "$ref": "#/70"
+      "$ref": "#/80"
     }
   },
   {
@@ -895,7 +994,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules",
     "apiVersion": "2015-08-01",
     "output": {
-      "$ref": "#/68"
+      "$ref": "#/78"
     }
   },
   {
@@ -904,10 +1003,10 @@
     "resourceType": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules",
     "apiVersion": "2015-08-01",
     "output": {
-      "$ref": "#/68"
+      "$ref": "#/78"
     },
     "input": {
-      "$ref": "#/70"
+      "$ref": "#/80"
     }
   }
 ]

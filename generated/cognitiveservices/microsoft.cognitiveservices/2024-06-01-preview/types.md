@@ -197,6 +197,18 @@
 * **Input**: [RaiBlocklistItemBulkRequest](#raiblocklistitembulkrequest)[]
 * **Output**: [RaiBlocklist](#raiblocklist)
 
+## Function calculateModelCapacity (Microsoft.CognitiveServices@2024-06-01-preview)
+* **Resource**: Microsoft.CognitiveServices
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [CalculateModelCapacityParameter](#calculatemodelcapacityparameter)
+* **Output**: [CalculateModelCapacityResult](#calculatemodelcapacityresult)
+
+## Function checkDomainAvailability (Microsoft.CognitiveServices@2024-06-01-preview)
+* **Resource**: Microsoft.CognitiveServices
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [CheckDomainAvailabilityParameter](#checkdomainavailabilityparameter)
+* **Output**: [DomainAvailability](#domainavailability)
+
 ## Function checkSkuAvailability (Microsoft.CognitiveServices/locations@2024-06-01-preview)
 * **Resource**: Microsoft.CognitiveServices/locations
 * **ApiVersion**: 2024-06-01-preview
@@ -299,11 +311,34 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## CalculateModelCapacityParameter
+### Properties
+* **model**: [DeploymentModel](#deploymentmodel): Properties of Cognitive Services account deployment model.
+* **skuName**: string: The name of SKU.
+* **workloads**: [ModelCapacityCalculatorWorkload](#modelcapacitycalculatorworkload)[]: List of Model Capacity Calculator Workload.
+
+## CalculateModelCapacityResult
+### Properties
+* **estimatedCapacity**: [CalculateModelCapacityResultEstimatedCapacity](#calculatemodelcapacityresultestimatedcapacity): Model Estimated Capacity.
+* **model**: [DeploymentModel](#deploymentmodel): Properties of Cognitive Services account deployment model.
+* **skuName**: string
+
+## CalculateModelCapacityResultEstimatedCapacity
+### Properties
+* **deployableValue**: int
+* **value**: int
+
 ## CallRateLimit
 ### Properties
 * **count**: int: The count value of Call Rate Limit.
 * **renewalPeriod**: int: The renewal period in seconds of Call Rate Limit.
 * **rules**: [ThrottlingRule](#throttlingrule)[]
+
+## CheckDomainAvailabilityParameter
+### Properties
+* **kind**: string: The Kind of the resource.
+* **subdomainName**: string (Required): The subdomain name to use.
+* **type**: string (Required): The Type of the resource.
 
 ## CheckSkuAvailabilityParameter
 ### Properties
@@ -418,6 +453,14 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## DomainAvailability
+### Properties
+* **isSubdomainAvailable**: bool: Indicates the given SKU is available or not.
+* **kind**: string: The Kind of the resource.
+* **reason**: string: Reason why the SKU is not available.
+* **subdomainName**: string: The subdomain name to use.
+* **type**: string: The Type of the resource.
+
 ## Encryption
 ### Properties
 * **keySource**: 'Microsoft.CognitiveServices' | 'Microsoft.KeyVault' | string: Enumerates the possible value of keySource for Encryption
@@ -457,6 +500,16 @@
 * **keyName**: string: Name of the Key from KeyVault
 * **keyVaultUri**: string: Uri of KeyVault
 * **keyVersion**: string: Version of the Key from KeyVault
+
+## ModelCapacityCalculatorWorkload
+### Properties
+* **requestParameters**: [ModelCapacityCalculatorWorkloadRequestParam](#modelcapacitycalculatorworkloadrequestparam): Dictionary, Model Capacity Calculator Workload Parameters.
+* **requestPerMinute**: int: Request per minute.
+
+## ModelCapacityCalculatorWorkloadRequestParam
+### Properties
+* **avgGeneratedTokens**: int: Average generated tokens.
+* **avgPromptTokens**: int: Average prompt tokens.
 
 ## MultiRegionSettings
 ### Properties

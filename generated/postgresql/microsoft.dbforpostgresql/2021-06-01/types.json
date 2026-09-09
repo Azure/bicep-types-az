@@ -1208,6 +1208,110 @@
   },
   {
     "$type": "ObjectType",
+    "name": "NameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource type used for verification."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error Message."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 2,
+        "description": "Indicates whether the resource name is available."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "name of the PostgreSQL server."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "type of the server"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 2,
+        "description": "The name availability reason."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/97"
+    },
+    "input": {
+      "$ref": "#/96"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getPrivateDnsZoneSuffix",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "apiVersion": "2021-06-01",
+    "output": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "VirtualNetworkSubnetUsageParameter",
     "properties": {
       "virtualNetworkArmResourceId": {
@@ -1239,7 +1343,7 @@
       },
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/99"
+          "$ref": "#/106"
         },
         "flags": 2
       }
@@ -1268,7 +1372,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/98"
+      "$ref": "#/105"
     }
   },
   {
@@ -1277,10 +1381,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2021-06-01",
     "output": {
-      "$ref": "#/97"
+      "$ref": "#/104"
     },
     "input": {
-      "$ref": "#/96"
+      "$ref": "#/103"
     }
   }
 ]

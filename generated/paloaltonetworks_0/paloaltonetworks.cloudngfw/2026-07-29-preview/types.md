@@ -194,6 +194,11 @@
 * **ApiVersion**: 2026-07-29-preview
 * **Output**: any
 
+## Function createProductSerialNumber (PaloAltoNetworks.Cloudngfw@2026-07-29-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw
+* **ApiVersion**: 2026-07-29-preview
+* **Output**: [ProductSerialNumberRequestStatus](#productserialnumberrequeststatus)
+
 ## Function getChangeLog (PaloAltoNetworks.Cloudngfw/globalRulestacks@2026-07-29-preview)
 * **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks
 * **ApiVersion**: 2026-07-29-preview
@@ -249,6 +254,11 @@
 * **ApiVersion**: 2026-07-29-preview
 * **Output**: [ListAppIdResponse](#listappidresponse)
 
+## Function listCloudManagerTenants (PaloAltoNetworks.Cloudngfw@2026-07-29-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw
+* **ApiVersion**: 2026-07-29-preview
+* **Output**: [CloudManagerTenantList](#cloudmanagertenantlist)
+
 ## Function listCountries (PaloAltoNetworks.Cloudngfw/globalRulestacks@2026-07-29-preview)
 * **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks
 * **ApiVersion**: 2026-07-29-preview
@@ -278,6 +288,16 @@
 * **Resource**: PaloAltoNetworks.Cloudngfw/localRulestacks
 * **ApiVersion**: 2026-07-29-preview
 * **Output**: [PredefinedUrlCategoriesResponse](#predefinedurlcategoriesresponse)
+
+## Function listProductSerialNumberStatus (PaloAltoNetworks.Cloudngfw@2026-07-29-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw
+* **ApiVersion**: 2026-07-29-preview
+* **Output**: [ProductSerialNumberStatus](#productserialnumberstatus)
+
+## Function listSupportInfo (PaloAltoNetworks.Cloudngfw@2026-07-29-preview)
+* **Resource**: PaloAltoNetworks.Cloudngfw
+* **ApiVersion**: 2026-07-29-preview
+* **Output**: [SupportInfoModel](#supportinfomodel)
 
 ## Function refreshCounters (PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules@2026-07-29-preview)
 * **Resource**: PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules
@@ -381,6 +401,10 @@
 * **changes**: string[] (Required): list of changes
 * **lastCommitted**: string: lastCommitted timestamp
 * **lastModified**: string: lastModified timestamp
+
+## CloudManagerTenantList
+### Properties
+* **value**: string[] (Required): List of Cloud Manager Tenants
 
 ## CountriesResponse
 ### Properties
@@ -616,6 +640,15 @@
 * **prefixList**: string[] (Required): prefix list
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 
+## ProductSerialNumberRequestStatus
+### Properties
+* **status**: string (Required): allocation status of the product serial number
+
+## ProductSerialNumberStatus
+### Properties
+* **serialNumber**: string: product Serial associated with given resource
+* **status**: 'Allocated' | 'InProgress' (Required): allocation status of the product serial number
+
 ## RuleCounter
 ### Properties
 * **appSeen**: [AppSeenData](#appseendata): apps seen
@@ -725,6 +758,24 @@
 * **supportURL**: string: URL for paloaltonetworks Customer Service Portal
 * **userDomainSupported**: 'FALSE' | 'TRUE' | string: user domain is supported in Customer Support Portal
 * **userRegistered**: 'FALSE' | 'TRUE' | string: user registered in Customer Support Portal
+
+## SupportInfoModel
+### Properties
+* **accountId**: string: Support account associated with given resource
+* **accountRegistrationStatus**: 'Not Registered' | 'Registered' | string: account registered in Customer Support Portal
+* **credits**: int: credits purchased, unit per hour
+* **endDateForCredits**: string: date in format yyyy-mm-dd
+* **freeTrial**: 'Disabled' | 'Enabled' | string: Product usage is in free trial period
+* **freeTrialCreditLeft**: int: Free trial credit remaining
+* **freeTrialDaysLeft**: int: Free trial days remaining
+* **helpURL**: string: URL for paloaltonetworks live community
+* **hubUrl**: string: URL for Strata Cloud Manager
+* **monthlyCreditLeft**: int: monthly credit is computed as credits * days in calendar month
+* **productSerial**: string: product Serial associated with given resource
+* **productSku**: string: product SKU associated with given resource
+* **registerURL**: string: URL for registering product in paloaltonetworks Customer Service Portal
+* **startDateForCredits**: string: date in format yyyy-mm-dd
+* **supportURL**: string: URL for paloaltonetworks Customer Service Portal
 
 ## SystemData
 ### Properties

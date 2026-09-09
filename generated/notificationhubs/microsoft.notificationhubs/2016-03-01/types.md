@@ -52,6 +52,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNamespaceAvailability (Microsoft.NotificationHubs@2016-03-01)
+* **Resource**: Microsoft.NotificationHubs
+* **ApiVersion**: 2016-03-01
+* **Input**: [CheckAvailabilityParameters](#checkavailabilityparameters)
+* **Output**: [CheckAvailabilityResult](#checkavailabilityresult)
+
 ## Function checkNotificationHubAvailability (Microsoft.NotificationHubs/namespaces@2016-03-01)
 * **Resource**: Microsoft.NotificationHubs/namespaces
 * **ApiVersion**: 2016-03-01

@@ -561,11 +561,93 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CanceledSubscriptionId",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the canceled subscription"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Subscription",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/41"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionName",
+    "properties": {
+      "subscriptionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "New subscription name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RenamedSubscriptionId",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the subscriptions that is being renamed"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rename",
+    "resourceType": "Microsoft.Subscription",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/44"
+    },
+    "input": {
+      "$ref": "#/43"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnabledSubscriptionId",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the subscriptions that is being enabled"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.Subscription",
+    "apiVersion": "2021-10-01",
+    "output": {
+      "$ref": "#/46"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AcceptOwnershipRequest",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/49"
         },
         "flags": 0,
         "description": "Accept subscription ownership request properties."
@@ -592,7 +674,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/43"
+          "$ref": "#/50"
         },
         "flags": 0,
         "description": "Tags for the subscription"
@@ -616,10 +698,10 @@
     "resourceType": "Microsoft.Subscription/subscriptions",
     "apiVersion": "2021-10-01",
     "output": {
-      "$ref": "#/44"
+      "$ref": "#/51"
     },
     "input": {
-      "$ref": "#/41"
+      "$ref": "#/48"
     }
   }
 ]

@@ -4,12 +4,89 @@
 import { Enum, getDiscriminatedUnionFromInheritance, getDiscriminator, getDoc, getFormat, getNamespaceFullName, getLifecycleVisibilityEnum, getMaxItems, getMaxLength,
   getMaxValue, getMinItems, getMinLength, getMinValue, getPattern, getVisibilityForClass, IntrinsicType, isSecret, Model, ModelProperty,
   NoTarget, Program, Scalar, Type, Union } from "@typespec/compiler";
-import { BicepType, DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, TypeBaseKind, TypeFactory, TypeReference } from "bicep-types";
+import { BicepType, DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, TypeBaseKind, TypeFactory, TypeReference } from "@azure/bicep-types";
 import { getFullyQualifiedType, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources.js";
 import { $lib } from "./lib.js";
 
 const uuidLength = 36;
 const uuidPattern = "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$";
+
+// Single source of truth for how built-in TypeSpec scalars map to Bicep kinds,
+// so classification logic isn't duplicated across the functions that need it.
+const STRING_SCALAR_NAMES = new Set(["string", "url", "uuid", "duration", "armResourceIdentifier", "bytes", "plainDate", "plainTime", "utcDateTime", "offsetDateTime"]);
+const INTEGER_SCALAR_NAMES = new Set(["int8", "int16", "int32", "int64", "uint8", "uint16", "uint32", "uint64", "integer", "safeint"]);
+const FLOAT_SCALAR_NAMES = new Set(["float", "float32", "float64", "decimal", "decimal128", "numeric"]);
+
+type ScalarBaseKind = "string" | "integer" | "float" | "boolean" | "null";
+
+/** Walk a scalar's base-scalar chain and classify it by its built-in root type, if any. */
+function getScalarBaseKind(scalar: Scalar): ScalarBaseKind | undefined {
+  let current: Scalar | undefined = scalar;
+  while (current) {
+    if (STRING_SCALAR_NAMES.has(current.name)) return "string";
+    if (INTEGER_SCALAR_NAMES.has(current.name)) return "integer";
+    if (FLOAT_SCALAR_NAMES.has(current.name)) return "float";
+    if (current.name === "boolean") return "boolean";
+    if (current.name === "null") return "null";
+    current = current.baseScalar;
+  }
+  return undefined;
+}
+
+interface StringConstraints {
+  sensitive?: true;
+  minLen?: number;
+  maxLen?: number;
+  pattern?: string;
+}
+
+interface NumericConstraints {
+  minValue?: number;
+  maxValue?: number;
+}
+
+// An empty pattern imposes no constraint, so treat it as absent.
+function getNonEmptyPattern(program: Program, target: Scalar | ModelProperty): string | undefined {
+  return getPattern(program, target) || undefined;
+}
+
+/** Resolve a scalar's own string/numeric constraints, applying uuid defaults where applicable. */
+function resolveScalarConstraints(program: Program, scalar: Scalar): StringConstraints & NumericConstraints {
+  const isUuid = getFormat(program, scalar) === "uuid";
+
+  return {
+    sensitive: isSecret(program, scalar) ? true : undefined,
+    minLen: getMinLength(program, scalar) ?? (isUuid ? uuidLength : undefined),
+    maxLen: getMaxLength(program, scalar) ?? (isUuid ? uuidLength : undefined),
+    pattern: getNonEmptyPattern(program, scalar) ?? (isUuid ? uuidPattern : undefined),
+    minValue: getMinValue(program, scalar),
+    maxValue: getMaxValue(program, scalar),
+  };
+}
+
+/** Resolve a property's string constraints, falling back to its scalar base type's constraints. */
+function resolvePropertyStringConstraints(program: Program, prop: ModelProperty, baseType: Type): StringConstraints {
+  const scalarConstraints = baseType.kind === "Scalar" ? resolveScalarConstraints(program, baseType) : undefined;
+  const format = getFormat(program, prop) ?? (baseType.kind === "Scalar" ? getFormat(program, baseType) : undefined);
+  const isUuid = format === "uuid";
+
+  return {
+    sensitive: isSecret(program, prop) || isSecret(program, baseType) ? true : undefined,
+    minLen: getMinLength(program, prop) ?? scalarConstraints?.minLen ?? (isUuid ? uuidLength : undefined),
+    maxLen: getMaxLength(program, prop) ?? scalarConstraints?.maxLen ?? (isUuid ? uuidLength : undefined),
+    pattern: getNonEmptyPattern(program, prop) ?? scalarConstraints?.pattern ?? (isUuid ? uuidPattern : undefined),
+  };
+}
+
+/** Resolve a property's numeric constraints, falling back to its scalar base type's constraints. */
+function resolvePropertyNumericConstraints(program: Program, prop: ModelProperty, baseType: Type): NumericConstraints {
+  const scalarConstraints = baseType.kind === "Scalar" ? resolveScalarConstraints(program, baseType) : undefined;
+
+  return {
+    minValue: getMinValue(program, prop) ?? scalarConstraints?.minValue,
+    maxValue: getMaxValue(program, prop) ?? scalarConstraints?.maxValue,
+  };
+}
 
 /**
  * Generate Bicep type definitions for all resources within a provider definition.
@@ -230,33 +307,23 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
 
   // --- Type parsing ---
 
-  // An empty pattern imposes no constraint, so treat it as absent.
-  function getNonEmptyPattern(target: Scalar | ModelProperty): string | undefined {
-    return getPattern(program, target) || undefined;
-  }
-
   /** Parse a property's type, applying property-level constraints. */
   function parsePropertyType(prop: ModelProperty): TypeReference | undefined {
-    const sensitive = isSecret(program, prop) || isSecret(program, prop.type) ? true : undefined;
     const baseType = prop.type;
-    const format = getFormat(program, prop) ?? (baseType.kind === "Scalar" ? getFormat(program, baseType) : undefined);
-    const minLen = getMinLength(program, prop) ?? (baseType.kind === "Scalar" ? getMinLength(program, baseType) : undefined) ?? (format === "uuid" ? uuidLength : undefined);
-    const maxLen = getMaxLength(program, prop) ?? (baseType.kind === "Scalar" ? getMaxLength(program, baseType) : undefined) ?? (format === "uuid" ? uuidLength : undefined);
-    const pattern = getNonEmptyPattern(prop) ?? (baseType.kind === "Scalar" ? getNonEmptyPattern(baseType) : undefined) ?? (format === "uuid" ? uuidPattern : undefined);
-    const minValue = getMinValue(program, prop) ?? (baseType.kind === "Scalar" ? getMinValue(program, baseType) : undefined);
-    const maxValue = getMaxValue(program, prop) ?? (baseType.kind === "Scalar" ? getMaxValue(program, baseType) : undefined);
-    const minItems = getMinItems(program, prop);
-    const maxItems = getMaxItems(program, prop);
 
     if (baseType.kind === "Model" && isArrayModel(baseType)) {
       const itemType = baseType.indexer?.value ? parseType(baseType.indexer.value) : undefined;
-      return factory.addArrayType(itemType ?? factory.addAnyType(), minItems, maxItems);
+      return factory.addArrayType(itemType ?? factory.addAnyType(), getMinItems(program, prop), getMaxItems(program, prop));
     }
 
-    if (baseType.kind === "Scalar" && isIntegerScalar(baseType) && (minValue !== undefined || maxValue !== undefined)) {
-      return factory.addIntegerType(minValue, maxValue);
+    if (baseType.kind === "Scalar" && isIntegerScalar(baseType)) {
+      const { minValue, maxValue } = resolvePropertyNumericConstraints(program, prop, baseType);
+      if (minValue !== undefined || maxValue !== undefined) {
+        return factory.addIntegerType(minValue, maxValue);
+      }
     }
 
+    const { sensitive, minLen, maxLen, pattern } = resolvePropertyStringConstraints(program, prop, baseType);
     if (sensitive || minLen !== undefined || maxLen !== undefined || pattern !== undefined) {
       // If the underlying type is a string-like scalar, generate a constrained string
       if ((baseType.kind === "Scalar" && isStringScalar(baseType)) || (baseType.kind === "Model" && baseType.name === "string")) {
@@ -267,29 +334,12 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
     return parseType(prop.type);
   }
 
-  /**
-   * Check if a scalar type resolves to a string base type.
-   */
   function isStringScalar(scalar: Scalar): boolean {
-    let current: Scalar | undefined = scalar;
-    while (current) {
-      if (["string", "url", "uuid", "duration", "armResourceIdentifier", "bytes", "plainDate", "plainTime", "utcDateTime", "offsetDateTime"].includes(current.name)) {
-        return true;
-      }
-      current = current.baseScalar;
-    }
-    return false;
+    return getScalarBaseKind(scalar) === "string";
   }
 
   function isIntegerScalar(scalar: Scalar): boolean {
-    let current: Scalar | undefined = scalar;
-    while (current) {
-      if (["int8", "int16", "int32", "int64", "uint8", "uint16", "uint32", "uint64", "integer", "safeint"].includes(current.name)) {
-        return true;
-      }
-      current = current.baseScalar;
-    }
-    return false;
+    return getScalarBaseKind(scalar) === "integer";
   }
 
   function parseType(type: Type): TypeReference | undefined {
@@ -389,60 +439,24 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
   }
 
   function parseScalarType(scalar: Scalar): TypeReference {
-    // Collect string constraints from the scalar hierarchy
-    const format = getFormat(program, scalar);
-    const minLen = getMinLength(program, scalar) ?? (format === "uuid" ? uuidLength : undefined);
-    const maxLen = getMaxLength(program, scalar) ?? (format === "uuid" ? uuidLength : undefined);
-    const pattern = getNonEmptyPattern(scalar) ?? (format === "uuid" ? uuidPattern : undefined);
-    const sensitive = isSecret(program, scalar) ? true : undefined;
-    const minValue = getMinValue(program, scalar);
-    const maxValue = getMaxValue(program, scalar);
+    const { sensitive, minLen, maxLen, pattern, minValue, maxValue } = resolveScalarConstraints(program, scalar);
 
-    // Walk the scalar hierarchy to find a built-in base type
-    let current: Scalar | undefined = scalar;
-    while (current) {
-      switch (current.name) {
-        case "string":
-        case "url":
-        case "uuid":
-        case "duration":
-        case "armResourceIdentifier":
-          return factory.addStringType(sensitive, minLen, maxLen, pattern);
-        case "boolean":
-          return factory.addBooleanType();
-        case "int8":
-        case "int16":
-        case "int32":
-        case "int64":
-        case "uint8":
-        case "uint16":
-        case "uint32":
-        case "uint64":
-        case "integer":
-        case "safeint":
-          return factory.addIntegerType(minValue, maxValue);
-        case "float":
-        case "float32":
-        case "float64":
-        case "decimal":
-        case "decimal128":
-        case "numeric":
-          return factory.addIntegerType(); // Bicep doesn't have float; use int
-        case "bytes":
-          return factory.addStringType(sensitive, minLen, maxLen, pattern); // Base64-encoded
-        case "plainDate":
-        case "plainTime":
-        case "utcDateTime":
-        case "offsetDateTime":
-          return factory.addStringType(sensitive, minLen, maxLen, pattern);
-        case "null":
-          return factory.addNullType();
-      }
-      current = current.baseScalar;
+    switch (getScalarBaseKind(scalar)) {
+      case "string":
+        // Includes "bytes" (base64-encoded) and date/time scalars, which are all represented as strings.
+        return factory.addStringType(sensitive, minLen, maxLen, pattern);
+      case "boolean":
+        return factory.addBooleanType();
+      case "integer":
+        return factory.addIntegerType(minValue, maxValue);
+      case "float":
+        return factory.addIntegerType(); // Bicep doesn't have float; use int
+      case "null":
+        return factory.addNullType();
+      default:
+        logWarning(`Unknown scalar type: ${scalar.name}. Returning 'any'.`);
+        return factory.addAnyType();
     }
-
-    logWarning(`Unknown scalar type: ${scalar.name}. Returning 'any'.`);
-    return factory.addAnyType();
   }
 
   function parseEnumType(enumType: Enum): TypeReference {

@@ -3248,5 +3248,39 @@
     "input": {
       "$ref": "#/232"
     }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforMySQL",
+    "apiVersion": "2023-06-30",
+    "output": {
+      "$ref": "#/233"
+    },
+    "input": {
+      "$ref": "#/232"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GetPrivateDnsZoneSuffixResponse",
+    "properties": {
+      "privateDnsZoneSuffix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Represents the private DNS zone suffix."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getPrivateDnsZoneSuffix",
+    "resourceType": "Microsoft.DBforMySQL",
+    "apiVersion": "2023-06-30",
+    "output": {
+      "$ref": "#/237"
+    }
   }
 ]

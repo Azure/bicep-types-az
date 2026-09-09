@@ -43,6 +43,12 @@
 * **ApiVersion**: 2025-10-01-preview
 * **Output**: [ScheduledEventsApproveResponse](#scheduledeventsapproveresponse)
 
+## Function scheduledevents (Microsoft.Maintenance@2025-10-01-preview)
+* **Resource**: Microsoft.Maintenance
+* **ApiVersion**: 2025-10-01-preview
+* **Input**: [ScheduledEventsIdList](#scheduledeventsidlist)
+* **Output**: [ScheduledEventsApproveResponse](#scheduledeventsapproveresponse)
+
 ## ConfigurationAssignmentFilterProperties
 ### Properties
 * **locations**: string[]: List of locations to scope the query to.
@@ -111,6 +117,10 @@
 ## ScheduledEventsApproveResponse
 ### Properties
 * **value**: string: Successfully Approved
+
+## ScheduledEventsIdList
+### Properties
+* **value**: string[] (Required): The list of ScheduledEvents Id.
 
 ## SystemData
 ### Properties

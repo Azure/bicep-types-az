@@ -896,5 +896,37 @@
     "output": {
       "$ref": "#/53"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TemplateHashResult",
+    "properties": {
+      "minifiedTemplate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The minified template string."
+      },
+      "templateHash": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The template hash."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "calculateTemplateHash",
+    "resourceType": "Microsoft.Resources",
+    "apiVersion": "2017-05-10",
+    "output": {
+      "$ref": "#/55"
+    },
+    "input": {
+      "$ref": "#/6"
+    }
   }
 ]

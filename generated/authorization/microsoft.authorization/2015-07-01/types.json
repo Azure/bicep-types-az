@@ -229,5 +229,17 @@
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "elevateAccess",
+    "resourceType": "Microsoft.Authorization",
+    "apiVersion": "2015-07-01",
+    "output": {
+      "$ref": "#/16"
+    }
   }
 ]

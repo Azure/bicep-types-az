@@ -158,6 +158,12 @@
 * **tags**: [AccountTags](#accounttags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkDomainAvailability (Microsoft.CognitiveServices@2023-10-01-preview)
+* **Resource**: Microsoft.CognitiveServices
+* **ApiVersion**: 2023-10-01-preview
+* **Input**: [CheckDomainAvailabilityParameter](#checkdomainavailabilityparameter)
+* **Output**: [DomainAvailability](#domainavailability)
+
 ## Function checkSkuAvailability (Microsoft.CognitiveServices/locations@2023-10-01-preview)
 * **Resource**: Microsoft.CognitiveServices/locations
 * **ApiVersion**: 2023-10-01-preview
@@ -253,6 +259,12 @@
 * **count**: int: The count value of Call Rate Limit.
 * **renewalPeriod**: int: The renewal period in seconds of Call Rate Limit.
 * **rules**: [ThrottlingRule](#throttlingrule)[]
+
+## CheckDomainAvailabilityParameter
+### Properties
+* **kind**: string: The Kind of the resource.
+* **subdomainName**: string (Required): The subdomain name to use.
+* **type**: string (Required): The Type of the resource.
 
 ## CheckSkuAvailabilityParameter
 ### Properties
@@ -351,6 +363,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DomainAvailability
+### Properties
+* **isSubdomainAvailable**: bool: Indicates the given SKU is available or not.
+* **kind**: string: The Kind of the resource.
+* **reason**: string: Reason why the SKU is not available.
+* **subdomainName**: string: The subdomain name to use.
+* **type**: string: The Type of the resource.
 
 ## Encryption
 ### Properties

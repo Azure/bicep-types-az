@@ -47,6 +47,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Dynatrace.Observability/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getAllConnectedResourcesCount (Dynatrace.Observability@2024-04-24)
+* **Resource**: Dynatrace.Observability
+* **ApiVersion**: 2024-04-24
+* **Input**: [MarketplaceSubscriptionIdRequest](#marketplacesubscriptionidrequest)
+* **Output**: [ConnectedResourcesCountResponse](#connectedresourcescountresponse)
+
+## Function getMarketplaceSaaSResourceDetails (Dynatrace.Observability@2024-04-24)
+* **Resource**: Dynatrace.Observability
+* **ApiVersion**: 2024-04-24
+* **Input**: [MarketplaceSaaSResourceDetailsRequest](#marketplacesaasresourcedetailsrequest)
+* **Output**: [MarketplaceSaaSResourceDetailsResponse](#marketplacesaasresourcedetailsresponse)
+
 ## Function getMetricStatus (Dynatrace.Observability/monitors@2024-04-24)
 * **Resource**: Dynatrace.Observability/monitors
 * **ApiVersion**: 2024-04-24
@@ -120,6 +132,10 @@
 ### Properties
 * **nextLink**: string: The link to the next page of items
 * **value**: [AppServiceInfo](#appserviceinfo)[] (Required): The AppServiceInfo items on this page
+
+## ConnectedResourcesCountResponse
+### Properties
+* **connectedResourcesCount**: int: Count of the connected resources
 
 ## DynatraceEnvironmentProperties
 ### Properties
@@ -198,6 +214,21 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 ## ManageAgentList
 ### Properties
 * **id**: string: The ARM id of the resource to install/uninstall agent.
+
+## MarketplaceSaaSResourceDetailsRequest
+### Properties
+* **tenantId**: string (Required): Tenant Id
+
+## MarketplaceSaaSResourceDetailsResponse
+### Properties
+* **marketplaceSaaSResourceId**: string: Id of the Marketplace SaaS Resource
+* **marketplaceSaaSResourceName**: string: Name of the Marketplace SaaS Resource
+* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended' | 'Unsubscribed' | string: Marketplace subscription status
+* **planId**: string: Id of the plan
+
+## MarketplaceSubscriptionIdRequest
+### Properties
+* **marketplaceSubscriptionId**: string (Required): Marketplace Subscription Id
 
 ## MetricRules
 ### Properties

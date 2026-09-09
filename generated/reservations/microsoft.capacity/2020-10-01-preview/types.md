@@ -32,6 +32,24 @@
 * **Input**: [AvailableScopeRequest](#availablescoperequest)
 * **Output**: [AvailableScopeProperties](#availablescopeproperties)
 
+## Function calculateExchange (Microsoft.Capacity@2020-10-01-preview)
+* **Resource**: Microsoft.Capacity
+* **ApiVersion**: 2020-10-01-preview
+* **Input**: [CalculateExchangeRequest](#calculateexchangerequest)
+* **Output**: [CalculateExchangeOperationResultResponse](#calculateexchangeoperationresultresponse)
+
+## Function calculatePrice (Microsoft.Capacity@2020-10-01-preview)
+* **Resource**: Microsoft.Capacity
+* **ApiVersion**: 2020-10-01-preview
+* **Input**: [PurchaseRequest](#purchaserequest)
+* **Output**: [CalculatePriceResponse](#calculatepriceresponse)
+
+## Function exchange (Microsoft.Capacity@2020-10-01-preview)
+* **Resource**: Microsoft.Capacity
+* **ApiVersion**: 2020-10-01-preview
+* **Input**: [ExchangeRequest](#exchangerequest)
+* **Output**: [ExchangeOperationResultResponse](#exchangeoperationresultresponse)
+
 ## Function merge (Microsoft.Capacity/reservationOrders@2020-10-01-preview)
 * **Resource**: Microsoft.Capacity/reservationOrders
 * **ApiVersion**: 2020-10-01-preview
@@ -56,6 +74,98 @@
 ### Properties
 * **scopes**: string[]
 
+## BillingInformation
+### Properties
+* **billingCurrencyProratedAmount**: [Price](#price)
+* **billingCurrencyRemainingCommitmentAmount**: [Price](#price)
+* **billingCurrencyTotalPaidAmount**: [Price](#price)
+
+## CalculateExchangeOperationResultResponse
+### Properties
+* **error**: [OperationResultError](#operationresulterror): Required if status == failed or status == canceled.
+* **id**: string: It should match what is used to GET the operation result.
+* **name**: string: It must match the last segment of the id field, and will typically be a GUID / system generated value.
+* **properties**: [CalculateExchangeResponseProperties](#calculateexchangeresponseproperties): CalculateExchange response properties
+* **status**: 'Cancelled' | 'Failed' | 'Pending' | 'Succeeded' | string: Status of the operation.
+
+## CalculateExchangeRequest
+### Properties
+* **properties**: [CalculateExchangeRequestProperties](#calculateexchangerequestproperties): Calculate exchange request properties
+
+## CalculateExchangeRequestProperties
+### Properties
+* **reservationsToExchange**: [ReservationToReturn](#reservationtoreturn)[]: List of reservations that are being returned in this exchange.
+* **reservationsToPurchase**: [PurchaseRequest](#purchaserequest)[]: List of reservations that are being purchased in this exchange.
+
+## CalculateExchangeResponseProperties
+### Properties
+* **netPayable**: [Price](#price)
+* **policyResult**: [ExchangePolicyErrors](#exchangepolicyerrors): Exchange policy errors
+* **purchasesTotal**: [Price](#price)
+* **refundsTotal**: [Price](#price)
+* **reservationsToExchange**: [ReservationToExchange](#reservationtoexchange)[]: Details of the reservations being returned
+* **reservationsToPurchase**: [ReservationToPurchaseCalculateExchange](#reservationtopurchasecalculateexchange)[]: Details of the reservations being purchased
+* **sessionId**: string: Exchange session identifier
+
+## CalculatePriceResponse
+### Properties
+* **properties**: [CalculatePriceResponseProperties](#calculatepriceresponseproperties)
+
+## CalculatePriceResponseProperties
+### Properties
+* **billingCurrencyTotal**: [CalculatePriceResponsePropertiesBillingCurrencyTotal](#calculatepriceresponsepropertiesbillingcurrencytotal): Currency and amount that customer will be charged in customer's local currency. Tax is not included.
+* **isBillingPartnerManaged**: bool: True if billing is managed by Microsoft Partner. Used only for CSP accounts.
+* **paymentSchedule**: [PaymentDetail](#paymentdetail)[]
+* **pricingCurrencyTotal**: [CalculatePriceResponsePropertiesPricingCurrencyTotal](#calculatepriceresponsepropertiespricingcurrencytotal): Amount that Microsoft uses for record. Used during refund for calculating refund limit. Tax is not included.
+* **reservationOrderId**: string: GUID that represents reservation order that can be placed after calculating price.
+* **skuDescription**: string: Description of SKU that is being purchased.
+* **skuTitle**: string: Title of SKU that is being purchased.
+
+## CalculatePriceResponsePropertiesBillingCurrencyTotal
+### Properties
+* **amount**: int
+* **currencyCode**: string
+
+## CalculatePriceResponsePropertiesPricingCurrencyTotal
+### Properties
+* **amount**: int
+* **currencyCode**: string
+
+## ExchangeOperationResultResponse
+### Properties
+* **error**: [OperationResultError](#operationresulterror): Required if status == failed or status == canceled.
+* **id**: string: It should match what is used to GET the operation result.
+* **name**: string: It must match the last segment of the id field, and will typically be a GUID / system generated value.
+* **properties**: [ExchangeResponseProperties](#exchangeresponseproperties): Exchange response properties
+* **status**: 'Cancelled' | 'Failed' | 'PendingPurchases' | 'PendingRefunds' | 'Succeeded' | string: Status of the operation.
+
+## ExchangePolicyError
+### Properties
+* **code**: string
+* **message**: string
+
+## ExchangePolicyErrors
+### Properties
+* **policyErrors**: [ExchangePolicyError](#exchangepolicyerror)[]: Exchange Policy errors
+
+## ExchangeRequest
+### Properties
+* **properties**: [ExchangeRequestProperties](#exchangerequestproperties): Exchange request properties
+
+## ExchangeRequestProperties
+### Properties
+* **sessionId**: string: SessionId that was returned by CalculateExchange API.
+
+## ExchangeResponseProperties
+### Properties
+* **netPayable**: [Price](#price)
+* **policyResult**: [ExchangePolicyErrors](#exchangepolicyerrors): Exchange policy errors
+* **purchasesTotal**: [Price](#price)
+* **refundsTotal**: [Price](#price)
+* **reservationsToExchange**: [ReservationToReturnForExchange](#reservationtoreturnforexchange)[]: Details of the reservations being returned
+* **reservationsToPurchase**: [ReservationToPurchaseExchange](#reservationtopurchaseexchange)[]: Details of the reservations being purchased
+* **sessionId**: string: Exchange session identifier
+
 ## ExtendedStatusInfo
 ### Properties
 * **message**: string: The message giving detailed information about the status code.
@@ -68,6 +178,11 @@
 ## MergeRequest
 ### Properties
 * **properties**: [MergeProperties](#mergeproperties)
+
+## OperationResultError
+### Properties
+* **code**: string: Required if status == failed or status == cancelled. If status == failed, provide an invariant error code used for error troubleshooting, aggregation, and analysis.
+* **message**: string: Required if status == failed. Localized. If status == failed, provide an actionable error message indicating what error occurred, and what the user can do to address the issue.
 
 ## PaymentDetail
 ### Properties
@@ -193,6 +308,39 @@
 ### Properties
 * **splitDestinations**: string[]: List of destination Resource Id that are created due to split. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
 * **splitSource**: string: Resource Id of the Reservation from which this is split. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+
+## ReservationToExchange
+### Properties
+* **billingInformation**: [BillingInformation](#billinginformation): billing information
+* **billingRefundAmount**: [Price](#price)
+* **quantity**: int: Quantity to be returned
+* **reservationId**: string: Fully qualified id of the Reservation being returned.
+
+## ReservationToPurchaseCalculateExchange
+### Properties
+* **billingCurrencyTotal**: [Price](#price)
+* **properties**: [PurchaseRequest](#purchaserequest)
+
+## ReservationToPurchaseExchange
+### Properties
+* **billingCurrencyTotal**: [Price](#price)
+* **properties**: [PurchaseRequest](#purchaserequest)
+* **reservationId**: string: Fully qualified id of the Reservation being purchased. This value is only guaranteed to be non-null if the purchase is successful.
+* **reservationOrderId**: string: Fully qualified id of the ReservationOrder being purchased
+* **status**: 'Cancelled' | 'Failed' | 'Pending' | 'Succeeded' | string: Status of the individual operation.
+
+## ReservationToReturn
+### Properties
+* **quantity**: int: Quantity to be returned. Must be greater than zero.
+* **reservationId**: string: Fully qualified identifier of the Reservation being returned
+
+## ReservationToReturnForExchange
+### Properties
+* **billingInformation**: [BillingInformation](#billinginformation): billing information
+* **billingRefundAmount**: [Price](#price)
+* **quantity**: int: Quantity to be returned
+* **reservationId**: string: Fully qualified id of the Reservation being returned.
+* **status**: 'Cancelled' | 'Failed' | 'Pending' | 'Succeeded' | string: Status of the individual operation.
 
 ## ScopeProperties
 ### Properties

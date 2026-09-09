@@ -85,6 +85,12 @@
 * **Input**: [SavingsPlanUpdateValidateRequest](#savingsplanupdatevalidaterequest)
 * **Output**: [SavingsPlanValidateResponse](#savingsplanvalidateresponse)
 
+## Function validate (Microsoft.BillingBenefits@2024-11-01-preview)
+* **Resource**: Microsoft.BillingBenefits
+* **ApiVersion**: 2024-11-01-preview
+* **Input**: [SavingsPlanPurchaseValidateRequest](#savingsplanpurchasevalidaterequest)
+* **Output**: [SavingsPlanValidateResponse](#savingsplanvalidateresponse)
+
 ## AppliedScopeProperties
 ### Properties
 * **displayName**: string: Display name
@@ -343,6 +349,16 @@
 * **userFriendlyAppliedScopeType**: string (ReadOnly): The applied scope type of the savings plan for display, e.g. Shared
 * **utilization**: [Utilization](#utilization) (ReadOnly): Savings plan utilization
 
+## SavingsPlanOrderAliasModel
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **kind**: string: Resource provider kind
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [SavingsPlanOrderAliasProperties](#savingsplanorderaliasproperties): Savings plan order alias properties
+* **sku**: [ResourceSku](#resourcesku) (Required): Savings plan SKU
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## SavingsPlanOrderAliasProperties
 ### Properties
 * **appliedScopeProperties**: [AppliedScopeProperties](#appliedscopeproperties): Properties specific to applied scope type. Not required if not applicable.
@@ -371,6 +387,10 @@
 * **provisioningState**: 'Cancelled' | 'ConfirmedBilling' | 'Created' | 'Creating' | 'Expired' | 'Failed' | 'PendingBilling' | 'Succeeded' | string (ReadOnly): Provisioning state
 * **savingsPlans**: string[]
 * **term**: 'P1Y' | 'P3Y' | 'P5Y' | string: Represent benefit term in ISO 8601 format.
+
+## SavingsPlanPurchaseValidateRequest
+### Properties
+* **benefits**: [SavingsPlanOrderAliasModel](#savingsplanorderaliasmodel)[]
 
 ## SavingsPlanUpdateRequestProperties
 ### Properties

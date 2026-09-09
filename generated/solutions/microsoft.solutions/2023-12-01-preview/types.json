@@ -2184,5 +2184,112 @@
     "input": {
       "$ref": "#/157"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistryPackagePlan",
+    "properties": {
+      "publisher": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The publisher ID."
+      },
+      "offer": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The offer Id."
+      },
+      "plan": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The plan Id."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The plan's version."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistryPackage",
+    "properties": {
+      "publisher": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The publisher"
+      },
+      "offer": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The offer Id"
+      },
+      "plan": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The plan Id"
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The version of the plan"
+      },
+      "packageLinks": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 1,
+        "description": "The registry package links."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistryPackageLinks",
+    "properties": {
+      "createUiDefinitionLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The create ui definition link."
+      },
+      "deploymentTemplateLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The deployment template link."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "portalRegistryPackage",
+    "resourceType": "Microsoft.Solutions",
+    "apiVersion": "2023-12-01-preview",
+    "output": {
+      "$ref": "#/172"
+    },
+    "input": {
+      "$ref": "#/171"
+    }
   }
 ]

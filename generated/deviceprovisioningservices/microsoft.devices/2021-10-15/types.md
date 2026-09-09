@@ -40,6 +40,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Devices/provisioningServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkProvisioningServiceNameAvailability (Microsoft.Devices@2021-10-15)
+* **Resource**: Microsoft.Devices
+* **ApiVersion**: 2021-10-15
+* **Input**: [OperationInputs](#operationinputs)
+* **Output**: [NameAvailabilityInfo](#nameavailabilityinfo)
+
 ## Function generateVerificationCode (Microsoft.Devices/provisioningServices/certificates@2021-10-15)
 * **Resource**: Microsoft.Devices/provisioningServices/certificates
 * **ApiVersion**: 2021-10-15
@@ -116,6 +122,16 @@ Indicates if the DPS instance has Data Residency enabled, removing the cross geo
 * **filterName**: string (Required): The name of the IP filter rule.
 * **ipMask**: string (Required): A string that contains the IP address range in CIDR notation for the rule.
 * **target**: 'all' | 'deviceApi' | 'serviceApi': Target for requests captured by this rule.
+
+## NameAvailabilityInfo
+### Properties
+* **message**: string: message containing a detailed reason name is unavailable
+* **nameAvailable**: bool: specifies if a name is available or not
+* **reason**: 'AlreadyExists' | 'Invalid' | string: specifies the reason a name is unavailable
+
+## OperationInputs
+### Properties
+* **name**: string (Required): The name of the Provisioning Service to check.
 
 ## PrivateEndpoint
 ### Properties

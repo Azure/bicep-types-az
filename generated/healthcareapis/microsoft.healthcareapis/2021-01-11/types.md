@@ -38,6 +38,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System metadata for this resource.
 * **type**: 'Microsoft.HealthcareApis/services/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.HealthcareApis@2021-01-11)
+* **Resource**: Microsoft.HealthcareApis
+* **ApiVersion**: 2021-01-11
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [ServicesNameAvailabilityInfo](#servicesnameavailabilityinfo)
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name of the service instance to check.
+* **type**: string (Required): The fully qualified resource type which includes provider namespace.
+
 ## PrivateEndpoint
 ### Properties
 * **id**: string (ReadOnly): The ARM identifier for Private Endpoint
@@ -97,6 +108,12 @@
 ## ServiceExportConfigurationInfo
 ### Properties
 * **storageAccountName**: string: The name of the default export storage account.
+
+## ServicesNameAvailabilityInfo
+### Properties
+* **message**: string: The detailed reason message.
+* **nameAvailable**: bool (ReadOnly): The value which indicates whether the provided name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason for unavailability.
 
 ## ServicesProperties
 ### Properties

@@ -619,5 +619,110 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The namespace name to check for availability. The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the namespace."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Value indicating namespace is available. Returns true if the namespace is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a namespace."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionIsDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInLockdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TooManyNamespaceInCurrentSubscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Relay",
+    "apiVersion": "2018-01-01-preview",
+    "output": {
+      "$ref": "#/56"
+    },
+    "input": {
+      "$ref": "#/55"
+    }
   }
 ]

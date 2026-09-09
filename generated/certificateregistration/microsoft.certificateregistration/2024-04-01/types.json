@@ -1445,11 +1445,86 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AppServiceCertificateOrder",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "AppServiceCertificateOrder resource specific properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource. If the resource is an app, you can refer to https://github.com/Azure/app-service-linux-docs/blob/master/Things_You_Should_Know/kind_property.md#app-service-resource-kind-reference for details supported values for kind."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource Location."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateCertificateRegistrationInformation",
+    "resourceType": "Microsoft.CertificateRegistration",
+    "apiVersion": "2024-04-01",
+    "output": {
+      "$ref": "#/110"
+    },
+    "input": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ReissueCertificateOrderRequest",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/120"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "ReissueCertificateOrderRequest resource specific properties"
@@ -1527,7 +1602,7 @@
       "$ref": "#/110"
     },
     "input": {
-      "$ref": "#/119"
+      "$ref": "#/122"
     }
   },
   {
@@ -1536,7 +1611,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/126"
         },
         "flags": 0,
         "description": "RenewCertificateOrderRequest resource specific properties"
@@ -1607,7 +1682,7 @@
       "$ref": "#/110"
     },
     "input": {
-      "$ref": "#/122"
+      "$ref": "#/125"
     }
   },
   {
@@ -1641,7 +1716,7 @@
       "$ref": "#/110"
     },
     "input": {
-      "$ref": "#/126"
+      "$ref": "#/129"
     }
   },
   {
@@ -1683,10 +1758,10 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/129"
+      "$ref": "#/132"
     },
     "input": {
-      "$ref": "#/128"
+      "$ref": "#/131"
     }
   },
   {
@@ -1704,7 +1779,7 @@
     "properties": {
       "actionType": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/150"
         },
         "flags": 2,
         "description": "Action type."
@@ -1778,15 +1853,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/133"
-      },
-      {
-        "$ref": "#/134"
-      },
-      {
-        "$ref": "#/135"
-      },
-      {
         "$ref": "#/136"
       },
       {
@@ -1818,13 +1884,22 @@
       },
       {
         "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/132"
+      "$ref": "#/135"
     }
   },
   {
@@ -1833,7 +1908,7 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/148"
+      "$ref": "#/151"
     }
   },
   {
@@ -1859,7 +1934,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/150"
+      "$ref": "#/153"
     }
   },
   {
@@ -1868,7 +1943,7 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2024-04-01",
     "output": {
-      "$ref": "#/151"
+      "$ref": "#/154"
     }
   }
 ]

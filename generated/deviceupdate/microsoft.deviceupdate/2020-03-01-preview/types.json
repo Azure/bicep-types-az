@@ -1511,6 +1511,87 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checknameavailability",
+    "resourceType": "Microsoft.DeviceUpdate",
+    "apiVersion": "2020-03-01-preview",
+    "output": {
+      "$ref": "#/114"
+    },
+    "input": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "PrivateEndpointConnectionProxy",
     "properties": {
       "properties": {
@@ -1580,10 +1661,10 @@
     "resourceType": "Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies",
     "apiVersion": "2020-03-01-preview",
     "output": {
-      "$ref": "#/114"
+      "$ref": "#/120"
     },
     "input": {
-      "$ref": "#/113"
+      "$ref": "#/119"
     }
   },
   {
@@ -1633,10 +1714,10 @@
     "resourceType": "Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies",
     "apiVersion": "2020-03-01-preview",
     "output": {
-      "$ref": "#/114"
+      "$ref": "#/120"
     },
     "input": {
-      "$ref": "#/116"
+      "$ref": "#/122"
     }
   }
 ]

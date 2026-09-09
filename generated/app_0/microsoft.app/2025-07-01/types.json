@@ -11073,19 +11073,28 @@
     }
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "getCustomDomainVerificationId",
+    "resourceType": "Microsoft.App",
+    "apiVersion": "2025-07-01",
+    "output": {
+      "$ref": "#/0"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "EnvironmentAuthToken",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/734"
+          "$ref": "#/735"
         },
         "flags": 0,
         "description": "Environment auth token resource specific properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/735"
+          "$ref": "#/736"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -11161,7 +11170,7 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2025-07-01",
     "output": {
-      "$ref": "#/733"
+      "$ref": "#/734"
     }
   },
   {
@@ -11191,7 +11200,7 @@
     "properties": {
       "kind": {
         "type": {
-          "$ref": "#/743"
+          "$ref": "#/744"
         },
         "flags": 0,
         "description": "Gets the logic app hybrid workflow kind."
@@ -11249,13 +11258,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/740"
-      },
-      {
         "$ref": "#/741"
       },
       {
         "$ref": "#/742"
+      },
+      {
+        "$ref": "#/743"
       },
       {
         "$ref": "#/0"
@@ -11268,7 +11277,7 @@
     "resourceType": "Microsoft.App/logicApps",
     "apiVersion": "2025-07-01",
     "output": {
-      "$ref": "#/739"
+      "$ref": "#/740"
     }
   }
 ]

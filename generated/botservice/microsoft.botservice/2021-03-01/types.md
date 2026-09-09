@@ -48,6 +48,17 @@
 * **type**: 'Microsoft.BotService/botServices/connections' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[] (ReadOnly): Entity zones
 
+## Function checkNameAvailability (Microsoft.BotService@2021-03-01)
+* **Resource**: Microsoft.BotService
+* **ApiVersion**: 2021-03-01
+* **Input**: [CheckNameAvailabilityRequestBody](#checknameavailabilityrequestbody)
+* **Output**: [CheckNameAvailabilityResponseBody](#checknameavailabilityresponsebody)
+
+## Function listAuthServiceProviders (Microsoft.BotService@2021-03-01)
+* **Resource**: Microsoft.BotService
+* **ApiVersion**: 2021-03-01
+* **Output**: [ServiceProviderResponseList](#serviceproviderresponselist)
+
 ## Function listChannelWithKeys (Microsoft.BotService/botServices/channels@2021-03-01)
 * **Resource**: Microsoft.BotService/botServices/channels
 * **ApiVersion**: 2021-03-01
@@ -243,6 +254,17 @@
 * **requireTermsAgreement**: bool: Whether customer needs to agree to new terms.
 * **sites**: [Site](#site)[]: The list of sites
 
+## CheckNameAvailabilityRequestBody
+### Properties
+* **name**: string: the name of the bot for which availability needs to be checked.
+* **type**: string: the type of the bot for which availability needs to be checked
+
+## CheckNameAvailabilityResponseBody
+### Properties
+* **absCode**: string: response code from ABS
+* **message**: string: additional message from the bot management api showing why a bot name is not available
+* **valid**: bool: indicates if the bot name is valid.
+
 ## ConnectionSetting
 ### Properties
 * **etag**: string: Entity Tag
@@ -408,6 +430,42 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ServiceProvider
+### Properties
+* **properties**: [ServiceProviderProperties](#serviceproviderproperties): The Properties of a Service Provider Object
+
+## ServiceProviderParameter
+### Properties
+* **default**: string (ReadOnly): Default Name for the Service Provider
+* **description**: string (ReadOnly): Description of the Service Provider
+* **displayName**: string (ReadOnly): Display Name of the Service Provider
+* **helpUrl**: string (ReadOnly): Help Url for the  Service Provider
+* **metadata**: [ServiceProviderParameterMetadata](#serviceproviderparametermetadata) (ReadOnly): Meta data for the Service Provider
+* **name**: string (ReadOnly): Name of the Service Provider
+* **type**: string (ReadOnly): Type of the Service Provider
+
+## ServiceProviderParameterMetadata
+### Properties
+* **constraints**: [ServiceProviderParameterMetadataConstraints](#serviceproviderparametermetadataconstraints): the constraints of the bot meta data.
+
+## ServiceProviderParameterMetadataConstraints
+### Properties
+* **required**: bool: Whether required the constraints of the bot meta data.
+
+## ServiceProviderProperties
+### Properties
+* **devPortalUrl**: string (ReadOnly): URL of Dev Portal
+* **displayName**: string (ReadOnly): Display Name of the Service Provider
+* **iconUrl**: string: The URL of icon
+* **id**: string (ReadOnly): Id for Service Provider
+* **parameters**: [ServiceProviderParameter](#serviceproviderparameter)[]: The list of parameters for the Service Provider
+* **serviceProviderName**: string (ReadOnly): Name of the Service Provider
+
+## ServiceProviderResponseList
+### Properties
+* **nextLink**: string: The link used to get the next page of bot service providers.
+* **value**: [ServiceProvider](#serviceprovider)[] (ReadOnly): Gets the list of bot service providers and their properties.
 
 ## Site
 ### Properties

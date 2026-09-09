@@ -280,6 +280,11 @@
 * **ApiVersion**: 2023-05-02-preview
 * **Output**: [EnvironmentAuthToken](#environmentauthtoken)
 
+## Function getCustomDomainVerificationId (Microsoft.App@2023-05-02-preview)
+* **Resource**: Microsoft.App
+* **ApiVersion**: 2023-05-02-preview
+* **Output**: string
+
 ## Function listCustomHostNameAnalysis (Microsoft.App/containerApps@2023-05-02-preview)
 * **Resource**: Microsoft.App/containerApps
 * **ApiVersion**: 2023-05-02-preview

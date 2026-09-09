@@ -165,6 +165,12 @@
 * **ApiVersion**: 2024-01-01
 * **Output**: any
 
+## Function checkNameAvailability (Microsoft.EventHub@2024-01-01)
+* **Resource**: Microsoft.EventHub
+* **ApiVersion**: 2024-01-01
+* **Input**: [CheckNameAvailabilityParameter](#checknameavailabilityparameter)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function failover (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2024-01-01)
 * **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
 * **ApiVersion**: 2024-01-01
@@ -256,6 +262,16 @@
 ### Properties
 * **type**: 'SystemAssigned' | 'UserAssigned': Type of Azure Active Directory Managed Identity.
 * **userAssignedIdentity**: string: ARM ID of Managed User Identity. This property is required is the type is UserAssignedIdentity. If type is SystemAssigned, then the System Assigned Identity Associated with the namespace will be used.
+
+## CheckNameAvailabilityParameter
+### Properties
+* **name**: string (Required): Name to check the namespace name availability
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the Namespace.
+* **nameAvailable**: bool: Value indicating Namespace is availability, true if the Namespace is available; otherwise, false.
+* **reason**: 'InvalidName' | 'NameInLockdown' | 'NameInUse' | 'None' | 'SubscriptionIsDisabled' | 'TooManyNamespaceInCurrentSubscription': The reason for unavailability of a Namespace.
 
 ## ClusterProperties
 ### Properties

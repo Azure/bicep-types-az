@@ -82,6 +82,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppConfiguration/locations/deletedConfigurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppConfiguration@2025-02-01-preview)
+* **Resource**: Microsoft.AppConfiguration
+* **ApiVersion**: 2025-02-01-preview
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [NameAvailabilityStatus](#nameavailabilitystatus)
+
 ## Function checkNameAvailability (Microsoft.AppConfiguration/locations@2025-02-01-preview)
 * **Resource**: Microsoft.AppConfiguration/locations
 * **ApiVersion**: 2025-02-01-preview

@@ -6494,216 +6494,56 @@
   },
   {
     "$type": "ObjectType",
-    "name": "RoleAssignmentEntity",
+    "name": "SellerResourceListRequest",
     "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Role assignment entity id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Role assignment entity name"
-      },
       "properties": {
         "type": {
           "$ref": "#/474"
         },
         "flags": 0,
-        "description": "Role assignment entity properties"
+        "description": "Request properties to list maccs under a billing account"
       }
     }
   },
   {
     "$type": "ObjectType",
-    "name": "RoleAssignmentEntityProperties",
+    "name": "SellerResourceListRequestProperties",
     "properties": {
-      "principalId": {
+      "billingAccountResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Fully-qualified billing account resource identifier where the benefit is applied. Present only for Enterprise Agreement customers."
+      },
+      "$filter": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Principal Id"
+        "description": "This is an OData expresssion to filter the list of MACCs based on the properties of MACC passed in the filter."
       },
-      "roleDefinitionId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Role definition id"
-      },
-      "scope": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Scope of the role assignment entity"
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "elevate",
-    "resourceType": "Microsoft.BillingBenefits/savingsPlanOrders",
-    "apiVersion": "2025-12-01-preview",
-    "output": {
-      "$ref": "#/473"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SavingsPlanUpdateValidateRequest",
-    "properties": {
-      "benefits": {
-        "type": {
-          "$ref": "#/482"
-        },
-        "flags": 0
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SavingsPlanUpdateRequestProperties",
-    "properties": {
-      "displayName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Display name"
-      },
-      "appliedScopeType": {
-        "type": {
-          "$ref": "#/481"
-        },
-        "flags": 0,
-        "description": "Type of the Applied Scope."
-      },
-      "appliedScopeProperties": {
-        "type": {
-          "$ref": "#/220"
-        },
-        "flags": 0,
-        "description": "Properties specific to applied scope type. Not required if not applicable."
-      },
-      "renew": {
+      "contributors": {
         "type": {
           "$ref": "#/222"
         },
         "flags": 0,
-        "description": "Setting this to true will automatically purchase a new benefit on the expiration date time."
+        "description": "Setting it to true will return the list of contributors associated with the MACC."
       },
-      "renewProperties": {
-        "type": {
-          "$ref": "#/420"
-        },
-        "flags": 0
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Single"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Shared"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ManagementGroup"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/478"
-      },
-      {
-        "$ref": "#/479"
-      },
-      {
-        "$ref": "#/480"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/477"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SavingsPlanValidateResponse",
-    "properties": {
-      "benefits": {
-        "type": {
-          "$ref": "#/485"
-        },
-        "flags": 0
-      },
-      "nextLink": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Url to get the next page."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SavingsPlanValidResponseProperty",
-    "properties": {
-      "valid": {
+      "milestones": {
         "type": {
           "$ref": "#/222"
         },
         "flags": 0,
-        "description": "Indicates if the provided input was valid"
+        "description": "Setting it to true will return the list of milestones associated with the MACC."
       },
-      "reasonCode": {
+      "primaryResourceId": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Failure reason code if the provided input was invalid"
-      },
-      "reason": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Failure reason if the provided input was invalid"
+        "description": "Fully-qualified resource identifier of the primary MACC. Format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BillingBenefits/maccs/{maccName}."
       }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/484"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "validate",
-    "resourceType": "Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans",
-    "apiVersion": "2025-12-01-preview",
-    "output": {
-      "$ref": "#/483"
-    },
-    "input": {
-      "$ref": "#/476"
     }
   },
   {
@@ -6761,7 +6601,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/488"
+          "$ref": "#/476"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -6812,12 +6652,493 @@
     }
   },
   {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/475"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listSellerResources",
+    "resourceType": "Microsoft.BillingBenefits",
+    "apiVersion": "2025-12-01-preview",
+    "output": {
+      "$ref": "#/477"
+    },
+    "input": {
+      "$ref": "#/473"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BenefitValidateRequest",
+    "properties": {
+      "benefits": {
+        "type": {
+          "$ref": "#/489"
+        },
+        "flags": 0,
+        "description": "Defines benefits for validation."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "BenefitValidateModel",
+    "discriminator": "benefitType",
+    "baseProperties": {},
+    "elements": {
+      "ConditionalCredits": {
+        "$ref": "#/481"
+      },
+      "Credits": {
+        "$ref": "#/483"
+      },
+      "MACC": {
+        "$ref": "#/485"
+      },
+      "SavingsPlan": {
+        "$ref": "#/487"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConditionalCreditsValidateModel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Conditional Credits validate properties"
+      },
+      "benefitType": {
+        "type": {
+          "$ref": "#/482"
+        },
+        "flags": 1,
+        "description": "Type of benefit to validate. This is used to determine the model type for validation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ConditionalCredits"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreditsValidateModel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/467"
+        },
+        "flags": 0,
+        "description": "Credits validate properties"
+      },
+      "benefitType": {
+        "type": {
+          "$ref": "#/484"
+        },
+        "flags": 1,
+        "description": "Type of benefit to validate. This is used to determine the model type for validation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Credits"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MaccValidateModel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/304"
+        },
+        "flags": 0,
+        "description": "MACC validate properties"
+      },
+      "benefitType": {
+        "type": {
+          "$ref": "#/486"
+        },
+        "flags": 1,
+        "description": "Type of benefit to validate. This is used to determine the model type for validation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MACC"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanValidateModel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 0,
+        "description": "Savings plan order alias properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 1,
+        "description": "Savings plan SKU"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource provider kind"
+      },
+      "benefitType": {
+        "type": {
+          "$ref": "#/488"
+        },
+        "flags": 1,
+        "description": "Type of benefit to validate. This is used to determine the model type for validation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SavingsPlan"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/480"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BenefitValidateResponse",
+    "properties": {
+      "benefits": {
+        "type": {
+          "$ref": "#/492"
+        },
+        "flags": 0,
+        "description": "Defines benefit validation response for benefits."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Url to get the next page."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BenefitValidateResponseProperty",
+    "properties": {
+      "valid": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 0,
+        "description": "Indicates if the provided input was valid"
+      },
+      "reasonCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Failure reason code if the provided input was invalid"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Failure reason if the provided input was invalid"
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource identifier of the benefit that was validated."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/491"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.BillingBenefits",
+    "apiVersion": "2025-12-01-preview",
+    "output": {
+      "$ref": "#/490"
+    },
+    "input": {
+      "$ref": "#/479"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentEntity",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Role assignment entity id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Role assignment entity name"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/495"
+        },
+        "flags": 0,
+        "description": "Role assignment entity properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleAssignmentEntityProperties",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Principal Id"
+      },
+      "roleDefinitionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Role definition id"
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Scope of the role assignment entity"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "elevate",
+    "resourceType": "Microsoft.BillingBenefits/savingsPlanOrders",
+    "apiVersion": "2025-12-01-preview",
+    "output": {
+      "$ref": "#/494"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanUpdateValidateRequest",
+    "properties": {
+      "benefits": {
+        "type": {
+          "$ref": "#/503"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanUpdateRequestProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Display name"
+      },
+      "appliedScopeType": {
+        "type": {
+          "$ref": "#/502"
+        },
+        "flags": 0,
+        "description": "Type of the Applied Scope."
+      },
+      "appliedScopeProperties": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 0,
+        "description": "Properties specific to applied scope type. Not required if not applicable."
+      },
+      "renew": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 0,
+        "description": "Setting this to true will automatically purchase a new benefit on the expiration date time."
+      },
+      "renewProperties": {
+        "type": {
+          "$ref": "#/420"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Single"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shared"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagementGroup"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/499"
+      },
+      {
+        "$ref": "#/500"
+      },
+      {
+        "$ref": "#/501"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/498"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanValidateResponse",
+    "properties": {
+      "benefits": {
+        "type": {
+          "$ref": "#/506"
+        },
+        "flags": 0
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Url to get the next page."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanValidResponseProperty",
+    "properties": {
+      "valid": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 0,
+        "description": "Indicates if the provided input was valid"
+      },
+      "reasonCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Failure reason code if the provided input was invalid"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Failure reason if the provided input was invalid"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/505"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.BillingBenefits/savingsPlanOrders/savingsPlans",
+    "apiVersion": "2025-12-01-preview",
+    "output": {
+      "$ref": "#/504"
+    },
+    "input": {
+      "$ref": "#/497"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "cancel",
     "resourceType": "Microsoft.BillingBenefits/maccs",
     "apiVersion": "2025-12-01-preview",
     "output": {
-      "$ref": "#/487"
+      "$ref": "#/475"
     }
   },
   {
@@ -6839,10 +7160,10 @@
     "resourceType": "Microsoft.BillingBenefits/maccs",
     "apiVersion": "2025-12-01-preview",
     "output": {
-      "$ref": "#/487"
+      "$ref": "#/475"
     },
     "input": {
-      "$ref": "#/490"
+      "$ref": "#/509"
     }
   },
   {
@@ -6851,7 +7172,7 @@
     "resourceType": "Microsoft.BillingBenefits/maccs",
     "apiVersion": "2025-12-01-preview",
     "output": {
-      "$ref": "#/487"
+      "$ref": "#/475"
     }
   }
 ]

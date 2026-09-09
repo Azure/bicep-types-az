@@ -15930,6 +15930,93 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1160"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Sql/servers"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name whose availability was checked."
+      },
+      "available": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "True if the name is available, otherwise false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/1164"
+        },
+        "flags": 2,
+        "description": "The reason code explaining why the name is unavailable. Will be undefined if the name is available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A message explaining why the name is unavailable. Will be undefined if the name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1162"
+      },
+      {
+        "$ref": "#/1163"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Sql",
+    "apiVersion": "2020-08-01-preview",
+    "output": {
+      "$ref": "#/1161"
+    },
+    "input": {
+      "$ref": "#/1159"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SyncAgentKeyProperties",
     "properties": {
       "syncAgentKey": {
@@ -15947,7 +16034,7 @@
     "resourceType": "Microsoft.Sql/servers/syncAgents",
     "apiVersion": "2020-08-01-preview",
     "output": {
-      "$ref": "#/1159"
+      "$ref": "#/1166"
     }
   },
   {
@@ -15992,7 +16079,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1166"
+          "$ref": "#/1173"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -16026,7 +16113,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/1169"
+          "$ref": "#/1176"
         },
         "flags": 2,
         "description": "The status of the DNS refresh operation."
@@ -16045,10 +16132,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1167"
+        "$ref": "#/1174"
       },
       {
-        "$ref": "#/1168"
+        "$ref": "#/1175"
       },
       {
         "$ref": "#/0"
@@ -16061,7 +16148,7 @@
     "resourceType": "Microsoft.Sql/virtualClusters",
     "apiVersion": "2020-08-01-preview",
     "output": {
-      "$ref": "#/1165"
+      "$ref": "#/1172"
     }
   }
 ]

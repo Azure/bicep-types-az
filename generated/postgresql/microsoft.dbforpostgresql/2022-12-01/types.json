@@ -1753,6 +1753,27 @@
   {
     "$type": "ResourceFunctionType",
     "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "apiVersion": "2022-12-01",
+    "output": {
+      "$ref": "#/133"
+    },
+    "input": {
+      "$ref": "#/132"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getPrivateDnsZoneSuffix",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "apiVersion": "2022-12-01",
+    "output": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2022-12-01",
     "output": {
@@ -1781,7 +1802,7 @@
     "properties": {
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/143"
         },
         "flags": 2
       },
@@ -1824,7 +1845,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/140"
+      "$ref": "#/142"
     }
   },
   {
@@ -1833,10 +1854,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2022-12-01",
     "output": {
-      "$ref": "#/139"
+      "$ref": "#/141"
     },
     "input": {
-      "$ref": "#/138"
+      "$ref": "#/140"
     }
   },
   {
@@ -1852,7 +1873,7 @@
       },
       "failoverMode": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/150"
         },
         "flags": 0,
         "description": "Failover mode."
@@ -1879,16 +1900,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/144"
-      },
-      {
-        "$ref": "#/145"
-      },
-      {
         "$ref": "#/146"
       },
       {
         "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
       },
       {
         "$ref": "#/0"
@@ -1904,10 +1925,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2022-12-01",
     "output": {
-      "$ref": "#/149"
+      "$ref": "#/151"
     },
     "input": {
-      "$ref": "#/143"
+      "$ref": "#/145"
     }
   },
   {
@@ -1916,7 +1937,7 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2022-12-01",
     "output": {
-      "$ref": "#/149"
+      "$ref": "#/151"
     }
   },
   {
@@ -1925,7 +1946,7 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2022-12-01",
     "output": {
-      "$ref": "#/149"
+      "$ref": "#/151"
     }
   }
 ]

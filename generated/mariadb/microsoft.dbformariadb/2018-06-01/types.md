@@ -133,6 +133,12 @@
 * **properties**: [WaitStatisticProperties](#waitstatisticproperties) (ReadOnly): The properties of a wait statistic.
 * **type**: 'Microsoft.DBforMariaDB/servers/waitStatistics' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DBforMariaDB@2018-06-01)
+* **Resource**: Microsoft.DBforMariaDB
+* **ApiVersion**: 2018-06-01
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function resetQueryPerformanceInsightData (Microsoft.DBforMariaDB/servers@2018-06-01)
 * **Resource**: Microsoft.DBforMariaDB/servers
 * **ApiVersion**: 2018-06-01
@@ -178,6 +184,17 @@
 ### Properties
 * **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the server firewall rule. Must be IPv4 format.
 * **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+
+## NameAvailability
+### Properties
+* **message**: string: Error Message.
+* **nameAvailable**: bool: Indicates whether the resource name is available.
+* **reason**: string: Reason for name being unavailable.
+
+## NameAvailabilityRequest
+### Properties
+* **name**: string (Required): Resource name to verify.
+* **type**: string: Resource type used for verification.
 
 ## PrivateEndpointConnectionProperties
 ### Properties

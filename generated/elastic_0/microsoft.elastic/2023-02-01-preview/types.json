@@ -1596,5 +1596,55 @@
     "output": {
       "$ref": "#/100"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserEmailId",
+    "properties": {
+      "emailId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The User email Id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserApiKeyResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserApiKeyResponseProperties",
+    "properties": {
+      "apiKey": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "The User Api Key Generated based on GenerateApiKey flag. This is applicable for non-Portal clients only."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getOrganizationApiKey",
+    "resourceType": "Microsoft.Elastic",
+    "apiVersion": "2023-02-01-preview",
+    "output": {
+      "$ref": "#/124"
+    },
+    "input": {
+      "$ref": "#/123"
+    }
   }
 ]

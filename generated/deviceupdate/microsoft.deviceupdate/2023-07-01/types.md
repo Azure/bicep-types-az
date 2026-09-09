@@ -63,6 +63,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DeviceUpdate/accounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checknameavailability (Microsoft.DeviceUpdate@2023-07-01)
+* **Resource**: Microsoft.DeviceUpdate
+* **ApiVersion**: 2023-07-01
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function updatePrivateEndpointProperties (Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies@2023-07-01)
 * **Resource**: Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies
 * **ApiVersion**: 2023-07-01
@@ -84,6 +90,17 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for the account.
 * **sku**: 'Free' | 'Standard' | string: Device Update Sku
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
 
 ## ConnectionDetails
 ### Properties

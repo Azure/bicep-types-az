@@ -73,15 +73,32 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.BotService/botServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.BotService@2023-09-15-preview)
+* **Resource**: Microsoft.BotService
+* **ApiVersion**: 2023-09-15-preview
+* **Input**: [CheckNameAvailabilityRequestBody](#checknameavailabilityrequestbody)
+* **Output**: [CheckNameAvailabilityResponseBody](#checknameavailabilityresponsebody)
+
 ## Function createEmailSignInUrl (Microsoft.BotService/botServices@2023-09-15-preview)
 * **Resource**: Microsoft.BotService/botServices
 * **ApiVersion**: 2023-09-15-preview
 * **Output**: [CreateEmailSignInUrlResponse](#createemailsigninurlresponse)
 
+## Function listAuthServiceProviders (Microsoft.BotService@2023-09-15-preview)
+* **Resource**: Microsoft.BotService
+* **ApiVersion**: 2023-09-15-preview
+* **Output**: [ServiceProviderResponseList](#serviceproviderresponselist)
+
 ## Function listChannelWithKeys (Microsoft.BotService/botServices/channels@2023-09-15-preview)
 * **Resource**: Microsoft.BotService/botServices/channels
 * **ApiVersion**: 2023-09-15-preview
 * **Output**: [ListChannelWithKeysResponse](#listchannelwithkeysresponse)
+
+## Function listQnAMakerEndpointKeys (Microsoft.BotService@2023-09-15-preview)
+* **Resource**: Microsoft.BotService
+* **ApiVersion**: 2023-09-15-preview
+* **Input**: [QnAMakerEndpointKeysRequestBody](#qnamakerendpointkeysrequestbody)
+* **Output**: [QnAMakerEndpointKeysResponse](#qnamakerendpointkeysresponse)
 
 ## Function listWithSecrets (Microsoft.BotService/botServices/connections@2023-09-15-preview)
 * **Resource**: Microsoft.BotService/botServices/connections
@@ -300,6 +317,17 @@
 * **isEnabled**: bool: Whether this channel is enabled for the bot
 * **requireTermsAgreement**: bool: Whether customer needs to agree to new terms.
 * **sites**: [Site](#site)[]: The list of sites
+
+## CheckNameAvailabilityRequestBody
+### Properties
+* **name**: string: the name of the bot for which availability needs to be checked.
+* **type**: string: the type of the bot for which availability needs to be checked
+
+## CheckNameAvailabilityResponseBody
+### Properties
+* **absCode**: string: response code from ABS
+* **message**: string: additional message from the bot management api showing why a bot name is not available
+* **valid**: bool: indicates if the bot name is valid.
 
 ## ConnectionSetting
 ### Properties
@@ -548,10 +576,58 @@
 * **suggestedAccessRules**: [NspAccessRule](#nspaccessrule)[]: Access rules that can be added to the same profile to remediate the issue.
 * **suggestedResourceIds**: string[] (ReadOnly): ARM IDs of resources that can be associated to the same perimeter to remediate the issue.
 
+## QnAMakerEndpointKeysRequestBody
+### Properties
+* **authkey**: string: Subscription key which provides access to this API.
+* **hostname**: string: the host name of the QnA Maker endpoint
+
+## QnAMakerEndpointKeysResponse
+### Properties
+* **installedVersion**: string: Current version of runtime.
+* **lastStableVersion**: string: Latest version of runtime.
+* **primaryEndpointKey**: string: Primary Access Key.
+* **secondaryEndpointKey**: string: Secondary Access Key.
+
 ## ResourceAssociation
 ### Properties
 * **accessMode**: 'Audit' | 'Enforced' | 'Learning' | string: Access Mode of the resource association
 * **name**: string: Name of the resource association
+
+## ServiceProvider
+### Properties
+* **properties**: [ServiceProviderProperties](#serviceproviderproperties): The Properties of a Service Provider Object
+
+## ServiceProviderParameter
+### Properties
+* **default**: string (ReadOnly): Default Name for the Service Provider
+* **description**: string (ReadOnly): Description of the Service Provider
+* **displayName**: string (ReadOnly): Display Name of the Service Provider
+* **helpUrl**: string (ReadOnly): Help Url for the  Service Provider
+* **metadata**: [ServiceProviderParameterMetadata](#serviceproviderparametermetadata) (ReadOnly): Meta data for the Service Provider
+* **name**: string (ReadOnly): Name of the Service Provider
+* **type**: string (ReadOnly): Type of the Service Provider
+
+## ServiceProviderParameterMetadata
+### Properties
+* **constraints**: [ServiceProviderParameterMetadataConstraints](#serviceproviderparametermetadataconstraints): the constraints of the bot meta data.
+
+## ServiceProviderParameterMetadataConstraints
+### Properties
+* **required**: bool: Whether required the constraints of the bot meta data.
+
+## ServiceProviderProperties
+### Properties
+* **devPortalUrl**: string (ReadOnly): URL of Dev Portal
+* **displayName**: string (ReadOnly): Display Name of the Service Provider
+* **iconUrl**: string: The URL of icon
+* **id**: string (ReadOnly): Id for Service Provider
+* **parameters**: [ServiceProviderParameter](#serviceproviderparameter)[]: The list of parameters for the Service Provider
+* **serviceProviderName**: string (ReadOnly): Name of the Service Provider
+
+## ServiceProviderResponseList
+### Properties
+* **nextLink**: string: The link used to get the next page of bot service providers.
+* **value**: [ServiceProvider](#serviceprovider)[] (ReadOnly): Gets the list of bot service providers and their properties.
 
 ## Site
 ### Properties

@@ -78,6 +78,12 @@
 * **properties**: [ManagementPolicyProperties](#managementpolicyproperties): Returns the Storage Account Data Policies Rules.
 * **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Storage@2019-04-01)
+* **Resource**: Microsoft.Storage
+* **ApiVersion**: 2019-04-01
+* **Input**: [StorageAccountCheckNameAvailabilityParameters](#storageaccountchecknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function clearLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2019-04-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2019-04-01
@@ -176,6 +182,12 @@
 ## ChangeFeed
 ### Properties
 * **enabled**: bool: Indicates whether change feed event logging is enabled for the Blob service.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): Gets an error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used.
+* **reason**: 'AccountNameInvalid' | 'AlreadyExists' (ReadOnly): Gets the reason that a storage account name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## ContainerProperties
 ### Properties
@@ -429,6 +441,11 @@
 ### Properties
 * **name**: string (ReadOnly): The name of capability, The capability information in the specified SKU, including file encryption, network ACLs, change notification, etc.
 * **value**: string (ReadOnly): A string value to indicate states of given capability. Possibly 'true' or 'false'.
+
+## StorageAccountCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The storage account name.
+* **type**: 'Microsoft.Storage/storageAccounts' (Required): The type of resource, Microsoft.Storage/storageAccounts
 
 ## StorageAccountCreateParametersTags
 ### Properties

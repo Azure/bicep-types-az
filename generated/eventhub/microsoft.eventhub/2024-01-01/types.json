@@ -3461,6 +3461,105 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name to check the namespace name availability"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the Namespace."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Value indicating Namespace is availability, true if the Namespace is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/266"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a Namespace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionIsDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInLockdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TooManyNamespaceInCurrentSubscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/260"
+      },
+      {
+        "$ref": "#/261"
+      },
+      {
+        "$ref": "#/262"
+      },
+      {
+        "$ref": "#/263"
+      },
+      {
+        "$ref": "#/264"
+      },
+      {
+        "$ref": "#/265"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.EventHub",
+    "apiVersion": "2024-01-01",
+    "output": {
+      "$ref": "#/259"
+    },
+    "input": {
+      "$ref": "#/258"
+    }
+  },
+  {
     "$type": "AnyType"
   },
   {
@@ -3469,7 +3568,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations",
     "apiVersion": "2024-01-01",
     "output": {
-      "$ref": "#/258"
+      "$ref": "#/268"
     }
   },
   {
@@ -3487,7 +3586,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs",
     "apiVersion": "2024-01-01",
     "output": {
-      "$ref": "#/258"
+      "$ref": "#/268"
     }
   },
   {
@@ -3496,7 +3595,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs",
     "apiVersion": "2024-01-01",
     "output": {
-      "$ref": "#/258"
+      "$ref": "#/268"
     }
   },
   {

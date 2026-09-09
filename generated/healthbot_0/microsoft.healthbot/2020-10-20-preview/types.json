@@ -326,5 +326,67 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequestBody",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "the name of the bot for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "the type of the bot for which availability needs to be checked"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponseBody",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "indicates if the bot name is valid and available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason for the result"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "additional message from server"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.HealthBot",
+    "apiVersion": "2020-10-20-preview",
+    "output": {
+      "$ref": "#/28"
+    },
+    "input": {
+      "$ref": "#/27"
+    }
   }
 ]

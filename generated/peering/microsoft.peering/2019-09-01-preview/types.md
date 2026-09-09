@@ -46,6 +46,12 @@
 * **properties**: [PeeringServicePrefixProperties](#peeringserviceprefixproperties): Gets or sets the peering prefix properties.
 * **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function CheckServiceProviderAvailability (Microsoft.Peering@2019-09-01-preview)
+* **Resource**: Microsoft.Peering
+* **ApiVersion**: 2019-09-01-preview
+* **Input**: [CheckServiceProviderAvailabilityInput](#checkserviceprovideravailabilityinput)
+* **Output**: 'Available' | 'Unavailable' | string
+
 ## BgpSession
 ### Properties
 * **maxPrefixesAdvertisedV4**: int: The maximum number of prefixes advertised over the IPv4 session.
@@ -59,6 +65,11 @@
 * **sessionPrefixV6**: string: The IPv6 prefix that contains both ends' IPv6 addresses.
 * **sessionStateV4**: 'Active' | 'Connect' | 'Established' | 'Idle' | 'None' | 'OpenConfirm' | 'OpenReceived' | 'OpenSent' | 'PendingAdd' | 'PendingRemove' | 'PendingUpdate' | string (ReadOnly): The state of the IPv4 session.
 * **sessionStateV6**: 'Active' | 'Connect' | 'Established' | 'Idle' | 'None' | 'OpenConfirm' | 'OpenReceived' | 'OpenSent' | 'PendingAdd' | 'PendingRemove' | 'PendingUpdate' | string (ReadOnly): The state of the IPv6 session.
+
+## CheckServiceProviderAvailabilityInput
+### Properties
+* **peeringServiceLocation**: string: Gets or sets the PeeringServiceLocation
+* **peeringServiceProvider**: string: Gets or sets the PeeringServiceProvider
 
 ## ContactInfo
 ### Properties

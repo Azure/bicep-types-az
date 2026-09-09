@@ -61,6 +61,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Cdn@2019-06-15)
+* **Resource**: Microsoft.Cdn
+* **ApiVersion**: 2019-06-15
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
 ## Function checkResourceUsage (Microsoft.Cdn/profiles@2019-06-15)
 * **Resource**: Microsoft.Cdn/profiles
 * **ApiVersion**: 2019-06-15
@@ -68,6 +74,11 @@
 
 ## Function checkResourceUsage (Microsoft.Cdn/profiles/endpoints@2019-06-15)
 * **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2019-06-15
+* **Output**: [ResourceUsageListResult](#resourceusagelistresult)
+
+## Function checkResourceUsage (Microsoft.Cdn@2019-06-15)
+* **Resource**: Microsoft.Cdn
 * **ApiVersion**: 2019-06-15
 * **Output**: [ResourceUsageListResult](#resourceusagelistresult)
 
@@ -120,6 +131,12 @@
 * **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
 * **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
 
+## Function validateProbe (Microsoft.Cdn@2019-06-15)
+* **Resource**: Microsoft.Cdn
+* **ApiVersion**: 2019-06-15
+* **Input**: [ValidateProbeInput](#validateprobeinput)
+* **Output**: [ValidateProbeOutput](#validateprobeoutput)
+
 ## CacheExpirationActionParameters
 ### Properties
 * **@odata.type**: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters' | string (Required)
@@ -151,6 +168,17 @@
 * **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the WebApplicationFirewallPolicy.
 * **rateLimitRules**: [RateLimitRuleList](#ratelimitrulelist): Describes rate limit rules inside the policy.
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Resource status of the policy.
+
+## CheckNameAvailabilityInput
+### Properties
+* **name**: string (Required): The resource name to validate.
+* **type**: 'Microsoft.Cdn/Profiles/Endpoints' (Required): The type of the resource whose name is to be validated.
+
+## CheckNameAvailabilityOutput
+### Properties
+* **message**: string (ReadOnly): The detailed error message describing why the name is not available.
+* **nameAvailable**: bool (ReadOnly): Indicates whether the name is available.
+* **reason**: string (ReadOnly): The reason why the name is not available.
 
 ## CookiesMatchConditionParameters
 ### Properties
@@ -661,4 +689,14 @@
 * **customDomainValidated**: bool (ReadOnly): Indicates whether the custom domain is valid or not.
 * **message**: string (ReadOnly): Error message describing why the custom domain is not valid.
 * **reason**: string (ReadOnly): The reason why the custom domain is not valid.
+
+## ValidateProbeInput
+### Properties
+* **probeURL**: string (Required): The probe URL to validate.
+
+## ValidateProbeOutput
+### Properties
+* **errorCode**: string (ReadOnly): Specifies the error code when the probe url is not accepted.
+* **isValid**: bool (ReadOnly): Indicates whether the probe URL is accepted or not.
+* **message**: string (ReadOnly): The detailed error message describing why the probe URL is not accepted.
 

@@ -2487,6 +2487,1178 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CalculateExchangeRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/217"
+        },
+        "flags": 0,
+        "description": "Calculate exchange request properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateExchangeRequestProperties",
+    "properties": {
+      "reservationsToPurchase": {
+        "type": {
+          "$ref": "#/218"
+        },
+        "flags": 0,
+        "description": "List of reservations that are being purchased in this exchange."
+      },
+      "savingsPlansToPurchase": {
+        "type": {
+          "$ref": "#/233"
+        },
+        "flags": 0,
+        "description": "List of savings plans that are being purchased in this exchange."
+      },
+      "reservationsToExchange": {
+        "type": {
+          "$ref": "#/235"
+        },
+        "flags": 0,
+        "description": "List of reservations that are being returned in this exchange."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/147"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanPurchaseRequest",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The name of sku"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 0,
+        "description": "Properties of a savings plan purchase"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanPurchaseRequestProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Friendly name of the savings plan"
+      },
+      "billingScopeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Subscription that will be charged for purchasing reservation or savings plan"
+      },
+      "term": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 0,
+        "description": "Represent savings plan term in ISO 8601 format."
+      },
+      "billingPlan": {
+        "type": {
+          "$ref": "#/225"
+        },
+        "flags": 0,
+        "description": "Represents the billing plan in ISO 8601 format. Required only for monthly billing plans."
+      },
+      "appliedScopeType": {
+        "type": {
+          "$ref": "#/229"
+        },
+        "flags": 0,
+        "description": "Type of the Applied Scope."
+      },
+      "appliedScopeProperties": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Properties specific to applied scope type. Not required if not applicable. Required and need to provide tenantId and managementGroupId if AppliedScopeType is ManagementGroup"
+      },
+      "commitment": {
+        "type": {
+          "$ref": "#/230"
+        },
+        "flags": 0,
+        "description": "Commitment towards the benefit."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "P1Y"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "P3Y"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/221"
+      },
+      {
+        "$ref": "#/222"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "P1M"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/224"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Single"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shared"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagementGroup"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/226"
+      },
+      {
+        "$ref": "#/227"
+      },
+      {
+        "$ref": "#/228"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Commitment",
+    "properties": {
+      "grain": {
+        "type": {
+          "$ref": "#/232"
+        },
+        "flags": 0,
+        "description": "Commitment grain."
+      },
+      "currencyCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ISO 4217 3-letter currency code for the currency used by this purchase record."
+      },
+      "amount": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hourly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/231"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/219"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReservationToReturn",
+    "properties": {
+      "reservationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified identifier of the reservation being returned"
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Quantity to be returned. Must be greater than zero."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/234"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateExchangeOperationResultResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "It should match what is used to GET the operation result."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "It must match the last segment of the id field, and will typically be a GUID / system generated value."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/241"
+        },
+        "flags": 0,
+        "description": "Status of the operation."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/242"
+        },
+        "flags": 0,
+        "description": "CalculateExchange response properties"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/253"
+        },
+        "flags": 0,
+        "description": "Required if status == failed or status == canceled."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/237"
+      },
+      {
+        "$ref": "#/238"
+      },
+      {
+        "$ref": "#/239"
+      },
+      {
+        "$ref": "#/240"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateExchangeResponseProperties",
+    "properties": {
+      "sessionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Exchange session identifier"
+      },
+      "netPayable": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      },
+      "refundsTotal": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      },
+      "purchasesTotal": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      },
+      "reservationsToPurchase": {
+        "type": {
+          "$ref": "#/244"
+        },
+        "flags": 0,
+        "description": "Details of the reservations being purchased"
+      },
+      "savingsPlansToPurchase": {
+        "type": {
+          "$ref": "#/246"
+        },
+        "flags": 0,
+        "description": "Details of the savings plans being purchased"
+      },
+      "reservationsToExchange": {
+        "type": {
+          "$ref": "#/249"
+        },
+        "flags": 0,
+        "description": "Details of the reservations being returned"
+      },
+      "policyResult": {
+        "type": {
+          "$ref": "#/250"
+        },
+        "flags": 0,
+        "description": "Exchange policy errors"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReservationToPurchaseCalculateExchange",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 0,
+        "description": "The request for reservation purchase"
+      },
+      "billingCurrencyTotal": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/243"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanToPurchaseCalculateExchange",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/219"
+        },
+        "flags": 0,
+        "description": "Request body for savings plan purchase"
+      },
+      "billingCurrencyTotal": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/245"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReservationToExchange",
+    "properties": {
+      "reservationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified id of the reservation being returned."
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Quantity to be returned"
+      },
+      "billingRefundAmount": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      },
+      "billingInformation": {
+        "type": {
+          "$ref": "#/248"
+        },
+        "flags": 0,
+        "description": "billing information"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingInformation",
+    "properties": {
+      "billingCurrencyTotalPaidAmount": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      },
+      "billingCurrencyProratedAmount": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      },
+      "billingCurrencyRemainingCommitmentAmount": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/247"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangePolicyErrors",
+    "properties": {
+      "policyErrors": {
+        "type": {
+          "$ref": "#/252"
+        },
+        "flags": 0,
+        "description": "Exchange Policy errors"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangePolicyError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/251"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationResultError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Required if status == failed or status == cancelled. If status == failed, provide an invariant error code used for error troubleshooting, aggregation, and analysis."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Required if status == failed. Localized. If status == failed, provide an actionable error message indicating what error occurred, and what the user can do to address the issue."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "calculateExchange",
+    "resourceType": "Microsoft.Capacity",
+    "apiVersion": "2022-11-01",
+    "output": {
+      "$ref": "#/236"
+    },
+    "input": {
+      "$ref": "#/216"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculatePriceResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/256"
+        },
+        "flags": 0,
+        "description": "Properties for calculate price response"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculatePriceResponseProperties",
+    "properties": {
+      "billingCurrencyTotal": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 0,
+        "description": "Currency and amount that customer will be charged in customer's local currency. Tax is not included."
+      },
+      "netTotal": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Net total amount in pricing currency."
+      },
+      "taxTotal": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Tax amount in pricing currency."
+      },
+      "grandTotal": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Total amount in pricing currency."
+      },
+      "isTaxIncluded": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Whether or not tax is included in grand total"
+      },
+      "isBillingPartnerManaged": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "True if billing is managed by Microsoft Partner. Used only for CSP accounts."
+      },
+      "reservationOrderId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "GUID that represents reservation order that can be placed after calculating price."
+      },
+      "skuTitle": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Title of sku that is being purchased."
+      },
+      "skuDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of sku that is being purchased."
+      },
+      "pricingCurrencyTotal": {
+        "type": {
+          "$ref": "#/258"
+        },
+        "flags": 0,
+        "description": "Amount that Microsoft uses for record. Used during refund for calculating refund limit. Tax is not included."
+      },
+      "paymentSchedule": {
+        "type": {
+          "$ref": "#/259"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculatePriceResponsePropertiesBillingCurrencyTotal",
+    "properties": {
+      "currencyCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ISO 4217 3-letter currency code for the currency used by this purchase record."
+      },
+      "amount": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Amount in pricing currency. Tax is not included."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculatePriceResponsePropertiesPricingCurrencyTotal",
+    "properties": {
+      "currencyCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ISO 4217 3-letter currency code for the currency used by this purchase record."
+      },
+      "amount": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "calculatePrice",
+    "resourceType": "Microsoft.Capacity",
+    "apiVersion": "2022-11-01",
+    "output": {
+      "$ref": "#/255"
+    },
+    "input": {
+      "$ref": "#/147"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangeRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/262"
+        },
+        "flags": 0,
+        "description": "Exchange request properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangeRequestProperties",
+    "properties": {
+      "sessionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "SessionId that was returned by CalculateExchange API."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangeOperationResultResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "It should match what is used to GET the operation result."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "It must match the last segment of the id field, and will typically be a GUID / system generated value."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/269"
+        },
+        "flags": 0,
+        "description": "Status of the operation."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/270"
+        },
+        "flags": 0,
+        "description": "Exchange response properties"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/253"
+        },
+        "flags": 0,
+        "description": "Required if status == failed or status == canceled."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingRefunds"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingPurchases"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/264"
+      },
+      {
+        "$ref": "#/265"
+      },
+      {
+        "$ref": "#/266"
+      },
+      {
+        "$ref": "#/267"
+      },
+      {
+        "$ref": "#/268"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangeResponseProperties",
+    "properties": {
+      "sessionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Exchange session identifier"
+      },
+      "netPayable": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      },
+      "refundsTotal": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      },
+      "purchasesTotal": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      },
+      "reservationsToPurchase": {
+        "type": {
+          "$ref": "#/277"
+        },
+        "flags": 0,
+        "description": "Details of the reservations being purchased"
+      },
+      "savingsPlansToPurchase": {
+        "type": {
+          "$ref": "#/284"
+        },
+        "flags": 0,
+        "description": "Details of the savings plans being purchased"
+      },
+      "reservationsToExchange": {
+        "type": {
+          "$ref": "#/291"
+        },
+        "flags": 0,
+        "description": "Details of the reservations being returned"
+      },
+      "policyResult": {
+        "type": {
+          "$ref": "#/250"
+        },
+        "flags": 0,
+        "description": "Exchange policy errors"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReservationToPurchaseExchange",
+    "properties": {
+      "reservationOrderId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified id of the reservationOrder being purchased"
+      },
+      "reservationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified id of the reservation being purchased. This value is only guaranteed to be non-null if the purchase is successful."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 0,
+        "description": "The request for reservation purchase"
+      },
+      "billingCurrencyTotal": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/276"
+        },
+        "flags": 0,
+        "description": "Status of the individual operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/272"
+      },
+      {
+        "$ref": "#/273"
+      },
+      {
+        "$ref": "#/274"
+      },
+      {
+        "$ref": "#/275"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/271"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanToPurchaseExchange",
+    "properties": {
+      "savingsPlanOrderId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified id of the savings plan order being purchased"
+      },
+      "savingsPlanId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified id of the savings plan being purchased. This value is only guaranteed to be non-null if the purchase is successful."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/219"
+        },
+        "flags": 0,
+        "description": "Request body for savings plan purchase"
+      },
+      "billingCurrencyTotal": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/283"
+        },
+        "flags": 0,
+        "description": "Status of the individual operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/279"
+      },
+      {
+        "$ref": "#/280"
+      },
+      {
+        "$ref": "#/281"
+      },
+      {
+        "$ref": "#/282"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/278"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReservationToReturnForExchange",
+    "properties": {
+      "reservationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified id of the reservation being returned."
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Quantity to be returned"
+      },
+      "billingRefundAmount": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Pricing information containing the amount and the currency code"
+      },
+      "billingInformation": {
+        "type": {
+          "$ref": "#/248"
+        },
+        "flags": 0,
+        "description": "billing information"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/290"
+        },
+        "flags": 0,
+        "description": "Status of the individual operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/286"
+      },
+      {
+        "$ref": "#/287"
+      },
+      {
+        "$ref": "#/288"
+      },
+      {
+        "$ref": "#/289"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/285"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exchange",
+    "resourceType": "Microsoft.Capacity",
+    "apiVersion": "2022-11-01",
+    "output": {
+      "$ref": "#/263"
+    },
+    "input": {
+      "$ref": "#/261"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ChangeDirectoryRequest",
     "properties": {
       "destinationTenantId": {
@@ -2504,14 +3676,14 @@
     "properties": {
       "reservationOrder": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/295"
         },
         "flags": 0,
         "description": "Change directory result for reservation order or reservation"
       },
       "reservations": {
         "type": {
-          "$ref": "#/219"
+          "$ref": "#/296"
         },
         "flags": 0
       }
@@ -2554,7 +3726,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/218"
+      "$ref": "#/295"
     }
   },
   {
@@ -2563,10 +3735,10 @@
     "resourceType": "Microsoft.Capacity/reservationOrders",
     "apiVersion": "2022-11-01",
     "output": {
-      "$ref": "#/217"
+      "$ref": "#/294"
     },
     "input": {
-      "$ref": "#/216"
+      "$ref": "#/293"
     }
   },
   {
@@ -2582,7 +3754,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/222"
+          "$ref": "#/299"
         },
         "flags": 0,
         "description": "Properties needed for calculate refund including the scope and the reservation to be returned."
@@ -2602,30 +3774,10 @@
       },
       "reservationToReturn": {
         "type": {
-          "$ref": "#/223"
+          "$ref": "#/234"
         },
         "flags": 0,
         "description": "Reservation to return"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ReservationToReturn",
-    "properties": {
-      "reservationId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Fully qualified identifier of the reservation being returned"
-      },
-      "quantity": {
-        "type": {
-          "$ref": "#/40"
-        },
-        "flags": 0,
-        "description": "Quantity to be returned. Must be greater than zero."
       }
     }
   },
@@ -2642,7 +3794,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/225"
+          "$ref": "#/301"
         },
         "flags": 0,
         "description": "The refund properties of reservation"
@@ -2683,14 +3835,14 @@
       },
       "policyResult": {
         "type": {
-          "$ref": "#/226"
+          "$ref": "#/302"
         },
         "flags": 0,
         "description": "Refund policy result"
       },
       "billingInformation": {
         "type": {
-          "$ref": "#/289"
+          "$ref": "#/365"
         },
         "flags": 0,
         "description": "billing information"
@@ -2703,7 +3855,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/227"
+          "$ref": "#/303"
         },
         "flags": 0,
         "description": "Refund policy result property"
@@ -2730,7 +3882,7 @@
       },
       "policyErrors": {
         "type": {
-          "$ref": "#/288"
+          "$ref": "#/364"
         },
         "flags": 0,
         "description": "Refund Policy errors"
@@ -2743,7 +3895,7 @@
     "properties": {
       "code": {
         "type": {
-          "$ref": "#/287"
+          "$ref": "#/363"
         },
         "flags": 0,
         "description": "Error code describing the reason that service is not able to process the incoming request"
@@ -2992,178 +4144,178 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/229"
+        "$ref": "#/305"
       },
       {
-        "$ref": "#/230"
+        "$ref": "#/306"
       },
       {
-        "$ref": "#/231"
+        "$ref": "#/307"
       },
       {
-        "$ref": "#/232"
+        "$ref": "#/308"
       },
       {
-        "$ref": "#/233"
+        "$ref": "#/309"
       },
       {
-        "$ref": "#/234"
+        "$ref": "#/310"
       },
       {
-        "$ref": "#/235"
+        "$ref": "#/311"
       },
       {
-        "$ref": "#/236"
+        "$ref": "#/312"
       },
       {
-        "$ref": "#/237"
+        "$ref": "#/313"
       },
       {
-        "$ref": "#/238"
+        "$ref": "#/314"
       },
       {
-        "$ref": "#/239"
+        "$ref": "#/315"
       },
       {
-        "$ref": "#/240"
+        "$ref": "#/316"
       },
       {
-        "$ref": "#/241"
+        "$ref": "#/317"
       },
       {
-        "$ref": "#/242"
+        "$ref": "#/318"
       },
       {
-        "$ref": "#/243"
+        "$ref": "#/319"
       },
       {
-        "$ref": "#/244"
+        "$ref": "#/320"
       },
       {
-        "$ref": "#/245"
+        "$ref": "#/321"
       },
       {
-        "$ref": "#/246"
+        "$ref": "#/322"
       },
       {
-        "$ref": "#/247"
+        "$ref": "#/323"
       },
       {
-        "$ref": "#/248"
+        "$ref": "#/324"
       },
       {
-        "$ref": "#/249"
+        "$ref": "#/325"
       },
       {
-        "$ref": "#/250"
+        "$ref": "#/326"
       },
       {
-        "$ref": "#/251"
+        "$ref": "#/327"
       },
       {
-        "$ref": "#/252"
+        "$ref": "#/328"
       },
       {
-        "$ref": "#/253"
+        "$ref": "#/329"
       },
       {
-        "$ref": "#/254"
+        "$ref": "#/330"
       },
       {
-        "$ref": "#/255"
+        "$ref": "#/331"
       },
       {
-        "$ref": "#/256"
+        "$ref": "#/332"
       },
       {
-        "$ref": "#/257"
+        "$ref": "#/333"
       },
       {
-        "$ref": "#/258"
+        "$ref": "#/334"
       },
       {
-        "$ref": "#/259"
+        "$ref": "#/335"
       },
       {
-        "$ref": "#/260"
+        "$ref": "#/336"
       },
       {
-        "$ref": "#/261"
+        "$ref": "#/337"
       },
       {
-        "$ref": "#/262"
+        "$ref": "#/338"
       },
       {
-        "$ref": "#/263"
+        "$ref": "#/339"
       },
       {
-        "$ref": "#/264"
+        "$ref": "#/340"
       },
       {
-        "$ref": "#/265"
+        "$ref": "#/341"
       },
       {
-        "$ref": "#/266"
+        "$ref": "#/342"
       },
       {
-        "$ref": "#/267"
+        "$ref": "#/343"
       },
       {
-        "$ref": "#/268"
+        "$ref": "#/344"
       },
       {
-        "$ref": "#/269"
+        "$ref": "#/345"
       },
       {
-        "$ref": "#/270"
+        "$ref": "#/346"
       },
       {
-        "$ref": "#/271"
+        "$ref": "#/347"
       },
       {
-        "$ref": "#/272"
+        "$ref": "#/348"
       },
       {
-        "$ref": "#/273"
+        "$ref": "#/349"
       },
       {
-        "$ref": "#/274"
+        "$ref": "#/350"
       },
       {
-        "$ref": "#/275"
+        "$ref": "#/351"
       },
       {
-        "$ref": "#/276"
+        "$ref": "#/352"
       },
       {
-        "$ref": "#/277"
+        "$ref": "#/353"
       },
       {
-        "$ref": "#/278"
+        "$ref": "#/354"
       },
       {
-        "$ref": "#/279"
+        "$ref": "#/355"
       },
       {
-        "$ref": "#/280"
+        "$ref": "#/356"
       },
       {
-        "$ref": "#/281"
+        "$ref": "#/357"
       },
       {
-        "$ref": "#/282"
+        "$ref": "#/358"
       },
       {
-        "$ref": "#/283"
+        "$ref": "#/359"
       },
       {
-        "$ref": "#/284"
+        "$ref": "#/360"
       },
       {
-        "$ref": "#/285"
+        "$ref": "#/361"
       },
       {
-        "$ref": "#/286"
+        "$ref": "#/362"
       },
       {
         "$ref": "#/0"
@@ -3173,7 +4325,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/228"
+      "$ref": "#/304"
     }
   },
   {
@@ -3182,7 +4334,7 @@
     "properties": {
       "billingPlan": {
         "type": {
-          "$ref": "#/292"
+          "$ref": "#/368"
         },
         "flags": 0,
         "description": "Represent the billing plans."
@@ -3236,10 +4388,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/290"
+        "$ref": "#/366"
       },
       {
-        "$ref": "#/291"
+        "$ref": "#/367"
       },
       {
         "$ref": "#/0"
@@ -3252,10 +4404,10 @@
     "resourceType": "Microsoft.Capacity/reservationOrders",
     "apiVersion": "2022-11-01",
     "output": {
-      "$ref": "#/224"
+      "$ref": "#/300"
     },
     "input": {
-      "$ref": "#/221"
+      "$ref": "#/298"
     }
   },
   {
@@ -3264,7 +4416,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/295"
+          "$ref": "#/371"
         },
         "flags": 0,
         "description": "Properties for reservation merge"
@@ -3277,7 +4429,7 @@
     "properties": {
       "sources": {
         "type": {
-          "$ref": "#/296"
+          "$ref": "#/372"
         },
         "flags": 0,
         "description": "Format of the resource id should be /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}"
@@ -3302,10 +4454,10 @@
     "resourceType": "Microsoft.Capacity/reservationOrders",
     "apiVersion": "2022-11-01",
     "output": {
-      "$ref": "#/297"
+      "$ref": "#/373"
     },
     "input": {
-      "$ref": "#/294"
+      "$ref": "#/370"
     }
   },
   {
@@ -3314,7 +4466,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/300"
+          "$ref": "#/376"
         },
         "flags": 0,
         "description": "Properties for reservation split"
@@ -3327,7 +4479,7 @@
     "properties": {
       "quantities": {
         "type": {
-          "$ref": "#/301"
+          "$ref": "#/377"
         },
         "flags": 0,
         "description": "List of the quantities in the new reservations to create."
@@ -3359,10 +4511,10 @@
     "resourceType": "Microsoft.Capacity/reservationOrders",
     "apiVersion": "2022-11-01",
     "output": {
-      "$ref": "#/302"
+      "$ref": "#/378"
     },
     "input": {
-      "$ref": "#/299"
+      "$ref": "#/375"
     }
   },
   {
@@ -3371,7 +4523,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/305"
+          "$ref": "#/381"
         },
         "flags": 0,
         "description": "Properties needed for refund request including the session id from calculate refund, the scope, the reservation to be returned and the return reason."
@@ -3398,7 +4550,7 @@
       },
       "reservationToReturn": {
         "type": {
-          "$ref": "#/223"
+          "$ref": "#/234"
         },
         "flags": 0,
         "description": "Reservation to return"
@@ -3418,7 +4570,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/307"
+          "$ref": "#/383"
         },
         "flags": 0,
         "description": "Properties of a reservation order."
@@ -3514,21 +4666,21 @@
       },
       "term": {
         "type": {
-          "$ref": "#/311"
+          "$ref": "#/387"
         },
         "flags": 0,
         "description": "Represent the term of reservation."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/325"
+          "$ref": "#/401"
         },
         "flags": 0,
         "description": "Current state of the reservation."
       },
       "billingPlan": {
         "type": {
-          "$ref": "#/328"
+          "$ref": "#/404"
         },
         "flags": 0,
         "description": "Represent the billing plans."
@@ -3542,7 +4694,7 @@
       },
       "reservations": {
         "type": {
-          "$ref": "#/329"
+          "$ref": "#/405"
         },
         "flags": 0
       },
@@ -3571,13 +4723,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/308"
+        "$ref": "#/384"
       },
       {
-        "$ref": "#/309"
+        "$ref": "#/385"
       },
       {
-        "$ref": "#/310"
+        "$ref": "#/386"
       },
       {
         "$ref": "#/0"
@@ -3640,43 +4792,43 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/312"
+        "$ref": "#/388"
       },
       {
-        "$ref": "#/313"
+        "$ref": "#/389"
       },
       {
-        "$ref": "#/314"
+        "$ref": "#/390"
       },
       {
-        "$ref": "#/315"
+        "$ref": "#/391"
       },
       {
-        "$ref": "#/316"
+        "$ref": "#/392"
       },
       {
-        "$ref": "#/317"
+        "$ref": "#/393"
       },
       {
-        "$ref": "#/318"
+        "$ref": "#/394"
       },
       {
-        "$ref": "#/319"
+        "$ref": "#/395"
       },
       {
-        "$ref": "#/320"
+        "$ref": "#/396"
       },
       {
-        "$ref": "#/321"
+        "$ref": "#/397"
       },
       {
-        "$ref": "#/322"
+        "$ref": "#/398"
       },
       {
-        "$ref": "#/323"
+        "$ref": "#/399"
       },
       {
-        "$ref": "#/324"
+        "$ref": "#/400"
       },
       {
         "$ref": "#/0"
@@ -3695,10 +4847,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/326"
+        "$ref": "#/402"
       },
       {
-        "$ref": "#/327"
+        "$ref": "#/403"
       },
       {
         "$ref": "#/0"
@@ -3717,10 +4869,10 @@
     "resourceType": "Microsoft.Capacity/reservationOrders",
     "apiVersion": "2022-11-01",
     "output": {
-      "$ref": "#/306"
+      "$ref": "#/382"
     },
     "input": {
-      "$ref": "#/304"
+      "$ref": "#/380"
     }
   },
   {
@@ -3732,7 +4884,7 @@
     "resourceType": "Microsoft.Capacity/reservationOrders/reservations",
     "apiVersion": "2022-11-01",
     "output": {
-      "$ref": "#/331"
+      "$ref": "#/407"
     }
   },
   {
@@ -3741,7 +4893,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/334"
+          "$ref": "#/410"
         },
         "flags": 0,
         "description": "Available scope request properties"
@@ -3754,7 +4906,7 @@
     "properties": {
       "scopes": {
         "type": {
-          "$ref": "#/335"
+          "$ref": "#/411"
         },
         "flags": 0
       }
@@ -3772,7 +4924,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/337"
+          "$ref": "#/413"
         },
         "flags": 0,
         "description": "The scopes checked by the available scope api."
@@ -3785,7 +4937,7 @@
     "properties": {
       "scopes": {
         "type": {
-          "$ref": "#/339"
+          "$ref": "#/415"
         },
         "flags": 0
       }
@@ -3812,7 +4964,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/338"
+      "$ref": "#/414"
     }
   },
   {
@@ -3821,10 +4973,10 @@
     "resourceType": "Microsoft.Capacity/reservationOrders/reservations",
     "apiVersion": "2022-11-01",
     "output": {
-      "$ref": "#/336"
+      "$ref": "#/412"
     },
     "input": {
-      "$ref": "#/333"
+      "$ref": "#/409"
     }
   },
   {
@@ -3833,7 +4985,7 @@
     "resourceType": "Microsoft.Capacity/reservationOrders/reservations",
     "apiVersion": "2022-11-01",
     "output": {
-      "$ref": "#/331"
+      "$ref": "#/407"
     }
   }
 ]

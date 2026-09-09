@@ -644,5 +644,148 @@
     },
     "readableScopes": 12,
     "writableScopes": 12
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 2,
+        "description": "The list of usage data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Query",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryProperties",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "columns": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Array of columns"
+      },
+      "rows": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryColumn",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/57"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Query",
+    "resourceType": "Microsoft.CostManagement",
+    "apiVersion": "2018-05-31",
+    "output": {
+      "$ref": "#/51"
+    },
+    "input": {
+      "$ref": "#/19"
+    }
   }
 ]

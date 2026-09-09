@@ -26,6 +26,12 @@
 * **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): properties of a certificate
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkProvisioningServiceNameAvailability (Microsoft.Devices@2020-01-01)
+* **Resource**: Microsoft.Devices
+* **ApiVersion**: 2020-01-01
+* **Input**: [OperationInputs](#operationinputs)
+* **Output**: [NameAvailabilityInfo](#nameavailabilityinfo)
+
 ## Function generateVerificationCode (Microsoft.Devices/provisioningServices/certificates@2020-01-01)
 * **Resource**: Microsoft.Devices/provisioningServices/certificates
 * **ApiVersion**: 2020-01-01
@@ -97,6 +103,16 @@
 * **filterName**: string (Required): The name of the IP filter rule.
 * **ipMask**: string (Required): A string that contains the IP address range in CIDR notation for the rule.
 * **target**: 'all' | 'deviceApi' | 'serviceApi': Target for requests captured by this rule.
+
+## NameAvailabilityInfo
+### Properties
+* **message**: string: message containing a detailed reason name is unavailable
+* **nameAvailable**: bool: specifies if a name is available or not
+* **reason**: 'AlreadyExists' | 'Invalid' | string: specifies the reason a name is unavailable
+
+## OperationInputs
+### Properties
+* **name**: string (Required): The name of the Provisioning Service to check.
 
 ## ResourceTags
 ### Properties

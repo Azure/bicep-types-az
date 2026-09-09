@@ -172,6 +172,12 @@
 * **Input**: [BillingProfileCreationParameters](#billingprofilecreationparameters)
 * **Output**: [BillingProfile](#billingprofile)
 
+## Function createBillingRoleAssignment (Microsoft.Billing@2018-11-01-preview)
+* **Resource**: Microsoft.Billing
+* **ApiVersion**: 2018-11-01-preview
+* **Input**: [BillingRoleAssignmentPayload](#billingroleassignmentpayload)
+* **Output**: [BillingRoleAssignmentListResult](#billingroleassignmentlistresult)
+
 ## Function declineTransfer (Microsoft.Billing/transfers@2018-11-01-preview)
 * **Resource**: Microsoft.Billing/transfers
 * **ApiVersion**: 2018-11-01-preview
@@ -222,6 +228,12 @@
 * **ApiVersion**: 2018-11-01-preview
 * **Input**: [UpdateAutoRenewRequest](#updateautorenewrequest)
 * **Output**: [UpdateAutoRenewOperationSummary](#updateautorenewoperationsummary)
+
+## Function validateAddress (Microsoft.Billing@2018-11-01-preview)
+* **Resource**: Microsoft.Billing
+* **ApiVersion**: 2018-11-01-preview
+* **Input**: [Address](#address)
+* **Output**: [ValidateAddressResponse](#validateaddressresponse)
 
 ## Function validateTransferEligibility (Microsoft.Billing/billingAccounts/invoiceSections/billingSubscriptions@2018-11-01-preview)
 * **Resource**: Microsoft.Billing/billingAccounts/invoiceSections/billingSubscriptions
@@ -322,6 +334,22 @@
 * **invoiceSections**: [InvoiceSection](#invoicesection)[]: The invoice sections associated to the billing profile.
 * **isClassic**: bool (ReadOnly): Is OMS bootstrapped billing profile.
 * **poNumber**: string: Purchase order number.
+
+## BillingRoleAssignment
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [BillingRoleAssignmentProperties](#billingroleassignmentproperties): The role assignment the caller has
+* **type**: string (ReadOnly): Resource type.
+
+## BillingRoleAssignmentListResult
+### Properties
+* **value**: [BillingRoleAssignment](#billingroleassignment)[] (ReadOnly): The list role assignments
+
+## BillingRoleAssignmentPayload
+### Properties
+* **billingRoleDefinitionId**: string: The role definition id
+* **principalId**: string: The user's principal id that the role gets assigned to
 
 ## BillingRoleAssignmentProperties
 ### Properties
@@ -605,6 +633,12 @@
 ## UpdateAutoRenewRequest
 ### Properties
 * **autoRenew**: 'false' | 'true' | string: Request parameters to update auto renew policy a product.
+
+## ValidateAddressResponse
+### Properties
+* **status**: 'Invalid' | 'Valid' | string: status of the address validation.
+* **suggestedAddresses**: [Address](#address)[]: list of suggested addresses.
+* **validationMessage**: string: Validation error message.
 
 ## ValidateProductTransferEligibilityError
 ### Properties

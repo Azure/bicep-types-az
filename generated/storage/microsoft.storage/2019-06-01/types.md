@@ -161,6 +161,12 @@
 * **properties**: [TableProperties](#tableproperties) (ReadOnly): Table resource properties.
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices/tables' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Storage@2019-06-01)
+* **Resource**: Microsoft.Storage
+* **ApiVersion**: 2019-06-01
+* **Input**: [StorageAccountCheckNameAvailabilityParameters](#storageaccountchecknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function clearLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2019-06-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2019-06-01
@@ -322,6 +328,12 @@
 ### Properties
 * **enabled**: bool: Indicates whether change feed event logging is enabled for the Blob service.
 * **retentionInDays**: int {minValue: 1, maxValue: 146000}: Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): Gets an error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used.
+* **reason**: 'AccountNameInvalid' | 'AlreadyExists' (ReadOnly): Gets the reason that a storage account name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## ContainerProperties
 ### Properties
@@ -689,6 +701,11 @@
 ### Properties
 * **name**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_GRS' | 'Standard_GZRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_RAGZRS' | 'Standard_ZRS' | string (Required): The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.
 * **tier**: 'Premium' | 'Standard' (ReadOnly): The SKU tier. This is based on the SKU name.
+
+## StorageAccountCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The storage account name.
+* **type**: 'Microsoft.Storage/storageAccounts' (Required): The type of resource, Microsoft.Storage/storageAccounts
 
 ## StorageAccountCreateParametersTags
 ### Properties

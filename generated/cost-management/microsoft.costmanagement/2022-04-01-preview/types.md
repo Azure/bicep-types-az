@@ -13,10 +13,27 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CostManagement/scheduledActions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.CostManagement@2022-04-01-preview)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2022-04-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function execute (Microsoft.CostManagement/scheduledActions@2022-04-01-preview)
 * **Resource**: Microsoft.CostManagement/scheduledActions
 * **ApiVersion**: 2022-04-01-preview
 * **Output**: any
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
 
 ## FileDestination
 ### Properties

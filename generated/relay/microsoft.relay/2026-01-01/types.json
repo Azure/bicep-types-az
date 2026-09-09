@@ -1505,6 +1505,108 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The namespace name to check for availability. The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the namespace."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Value indicating namespace is available. Returns true if the namespace is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a namespace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionIsDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInLockdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TooManyNamespaceInCurrentSubscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Relay",
+    "apiVersion": "2026-01-01",
+    "output": {
+      "$ref": "#/111"
+    },
+    "input": {
+      "$ref": "#/110"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AccessKeys",
     "properties": {
       "primaryConnectionString": {
@@ -1550,7 +1652,7 @@
     "resourceType": "Microsoft.Relay/namespaces/authorizationRules",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/110"
+      "$ref": "#/120"
     }
   },
   {
@@ -1559,7 +1661,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/115"
+          "$ref": "#/125"
         },
         "flags": 1,
         "description": "The access key to regenerate."
@@ -1585,10 +1687,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/113"
+        "$ref": "#/123"
       },
       {
-        "$ref": "#/114"
+        "$ref": "#/124"
       },
       {
         "$ref": "#/2"
@@ -1601,10 +1703,10 @@
     "resourceType": "Microsoft.Relay/namespaces/authorizationRules",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/110"
+      "$ref": "#/120"
     },
     "input": {
-      "$ref": "#/112"
+      "$ref": "#/122"
     }
   },
   {
@@ -1613,7 +1715,7 @@
     "resourceType": "Microsoft.Relay/namespaces/hybridConnections/authorizationRules",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/110"
+      "$ref": "#/120"
     }
   },
   {
@@ -1622,10 +1724,10 @@
     "resourceType": "Microsoft.Relay/namespaces/hybridConnections/authorizationRules",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/110"
+      "$ref": "#/120"
     },
     "input": {
-      "$ref": "#/112"
+      "$ref": "#/122"
     }
   },
   {
@@ -1634,7 +1736,7 @@
     "resourceType": "Microsoft.Relay/namespaces/wcfRelays/authorizationRules",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/110"
+      "$ref": "#/120"
     }
   },
   {
@@ -1643,10 +1745,10 @@
     "resourceType": "Microsoft.Relay/namespaces/wcfRelays/authorizationRules",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/110"
+      "$ref": "#/120"
     },
     "input": {
-      "$ref": "#/112"
+      "$ref": "#/122"
     }
   }
 ]

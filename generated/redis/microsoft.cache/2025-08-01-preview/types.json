@@ -2087,6 +2087,38 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource type. The only legal value of this property for checking redis cache name availability is 'Microsoft.Cache/redis'."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Cache",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/16"
+    },
+    "input": {
+      "$ref": "#/162"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ExportRDBParameters",
     "properties": {
       "format": {
@@ -2135,7 +2167,7 @@
       "$ref": "#/16"
     },
     "input": {
-      "$ref": "#/162"
+      "$ref": "#/164"
     }
   },
   {
@@ -2165,7 +2197,7 @@
       },
       "percentComplete": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "Percent of the operation that is complete."
@@ -2186,14 +2218,14 @@
       },
       "operations": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/168"
         },
         "flags": 0,
         "description": "The operations list."
       },
       "error": {
         "type": {
-          "$ref": "#/167"
+          "$ref": "#/169"
         },
         "flags": 0,
         "description": "If present, details of the operation error."
@@ -2208,7 +2240,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/164"
+      "$ref": "#/166"
     }
   },
   {
@@ -2238,14 +2270,14 @@
       },
       "details": {
         "type": {
-          "$ref": "#/168"
+          "$ref": "#/170"
         },
         "flags": 2,
         "description": "The error details."
       },
       "additionalInfo": {
         "type": {
-          "$ref": "#/170"
+          "$ref": "#/172"
         },
         "flags": 2,
         "description": "The error additional info."
@@ -2255,7 +2287,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/167"
+      "$ref": "#/169"
     }
   },
   {
@@ -2281,7 +2313,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/169"
+      "$ref": "#/171"
     }
   },
   {
@@ -2290,7 +2322,7 @@
     "resourceType": "Microsoft.Cache/redis",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/164"
+      "$ref": "#/166"
     }
   },
   {
@@ -2299,7 +2331,7 @@
     "properties": {
       "rebootType": {
         "type": {
-          "$ref": "#/176"
+          "$ref": "#/178"
         },
         "flags": 0,
         "description": "Which Redis node(s) to reboot. Depending on this value data loss is possible."
@@ -2313,7 +2345,7 @@
       },
       "ports": {
         "type": {
-          "$ref": "#/177"
+          "$ref": "#/179"
         },
         "flags": 0,
         "description": "A list of redis instances to reboot, specified by per-instance SSL ports or non-SSL ports."
@@ -2336,13 +2368,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/173"
-      },
-      {
-        "$ref": "#/174"
-      },
-      {
         "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
       },
       {
         "$ref": "#/0"
@@ -2374,10 +2406,10 @@
     "resourceType": "Microsoft.Cache/redis",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/178"
+      "$ref": "#/180"
     },
     "input": {
-      "$ref": "#/172"
+      "$ref": "#/174"
     }
   },
   {
@@ -2393,7 +2425,7 @@
       },
       "files": {
         "type": {
-          "$ref": "#/181"
+          "$ref": "#/183"
         },
         "flags": 1,
         "description": "files to import."
@@ -2429,7 +2461,7 @@
       "$ref": "#/16"
     },
     "input": {
-      "$ref": "#/180"
+      "$ref": "#/182"
     }
   },
   {
@@ -2447,7 +2479,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/187"
+          "$ref": "#/189"
         },
         "flags": 1,
         "description": "The Redis access key to regenerate."
@@ -2466,10 +2498,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/185"
+        "$ref": "#/187"
       },
       {
-        "$ref": "#/186"
+        "$ref": "#/188"
       }
     ]
   },
@@ -2482,7 +2514,7 @@
       "$ref": "#/53"
     },
     "input": {
-      "$ref": "#/184"
+      "$ref": "#/186"
     }
   }
 ]

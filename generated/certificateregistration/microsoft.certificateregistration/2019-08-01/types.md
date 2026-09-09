@@ -65,6 +65,12 @@
 * **Input**: [SiteSealRequest](#sitesealrequest)
 * **Output**: [SiteSeal](#siteseal)
 
+## Function validateCertificateRegistrationInformation (Microsoft.CertificateRegistration@2019-08-01)
+* **Resource**: Microsoft.CertificateRegistration
+* **ApiVersion**: 2019-08-01
+* **Input**: [AppServiceCertificateOrder](#appservicecertificateorder)
+* **Output**: any
+
 ## Function verifyDomainOwnership (Microsoft.CertificateRegistration/certificateOrders@2019-08-01)
 * **Resource**: Microsoft.CertificateRegistration/certificateOrders
 * **ApiVersion**: 2019-08-01
@@ -75,6 +81,16 @@
 * **keyVaultId**: string: Key Vault resource Id.
 * **keyVaultSecretName**: string: Key Vault secret name.
 * **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
+
+## AppServiceCertificateOrder
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **location**: string (Required): Resource Location.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [AppServiceCertificateOrderProperties](#appservicecertificateorderproperties): AppServiceCertificateOrder resource specific properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
 
 ## AppServiceCertificateOrderProperties
 ### Properties
@@ -173,6 +189,11 @@
 * **csr**: string: Csr to be used for re-key operation.
 * **isPrivateKeyExternal**: bool: Should we change the ASC type (from managed private key to external private key and vice versa).
 * **keySize**: int: Certificate Key Size.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

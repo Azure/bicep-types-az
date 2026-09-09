@@ -14,8 +14,8 @@
     "@autorest/codemodel": "^4.20.1",
     "@autorest/extension-base": "^3.6.1",
     "@types/lodash": "^4.17.25",
+    "@azure/bicep-types": "^0.6.129",
     "autorest": "^3.8.0",
-    "bicep-types": "file:../../bicep-types/src/bicep-types",
     "json-schema": "^0.4.0",
     "lodash": "^4.18.1"
   },

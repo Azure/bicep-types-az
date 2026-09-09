@@ -4931,6 +4931,27 @@
   {
     "$type": "ResourceFunctionType",
     "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/412"
+    },
+    "input": {
+      "$ref": "#/411"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getPrivateDnsZoneSuffix",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "apiVersion": "2025-06-01-preview",
+    "output": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2025-06-01-preview",
     "output": {
@@ -4959,7 +4980,7 @@
     "properties": {
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/420"
+          "$ref": "#/422"
         },
         "flags": 2
       },
@@ -5002,7 +5023,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/419"
+      "$ref": "#/421"
     }
   },
   {
@@ -5011,10 +5032,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2025-06-01-preview",
     "output": {
-      "$ref": "#/418"
+      "$ref": "#/420"
     },
     "input": {
-      "$ref": "#/417"
+      "$ref": "#/419"
     }
   }
 ]

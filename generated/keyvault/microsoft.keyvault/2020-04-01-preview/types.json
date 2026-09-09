@@ -2373,5 +2373,87 @@
     "output": {
       "$ref": "#/214"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VaultCheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The vault name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/217"
+        },
+        "flags": 1,
+        "description": "The type of resource, Microsoft.KeyVault/vaults"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.KeyVault/vaults"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "A boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 2,
+        "description": "The reason that a vault name could not be used. The Reason element is only returned if NameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "An error message explaining the Reason value in more detail."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AccountNameInvalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/219"
+      },
+      {
+        "$ref": "#/220"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.KeyVault",
+    "apiVersion": "2020-04-01-preview",
+    "output": {
+      "$ref": "#/218"
+    },
+    "input": {
+      "$ref": "#/216"
+    }
   }
 ]

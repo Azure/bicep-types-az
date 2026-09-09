@@ -922,5 +922,87 @@
     "input": {
       "$ref": "#/60"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CanceledSubscriptionId",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the canceled subscription"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Subscription",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/64"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnabledSubscriptionId",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the subscriptions that is being enabled"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.Subscription",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionName",
+    "properties": {
+      "subscriptionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "New subscription name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RenamedSubscriptionId",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the subscriptions that is being renamed"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rename",
+    "resourceType": "Microsoft.Subscription",
+    "apiVersion": "2025-11-01-preview",
+    "output": {
+      "$ref": "#/69"
+    },
+    "input": {
+      "$ref": "#/68"
+    }
   }
 ]

@@ -62,6 +62,12 @@
 * **ApiVersion**: 2023-06-01
 * **Output**: any
 
+## Function getOrganizationApiKey (Microsoft.Elastic@2023-06-01)
+* **Resource**: Microsoft.Elastic
+* **ApiVersion**: 2023-06-01
+* **Input**: [UserEmailId](#useremailid)
+* **Output**: [UserApiKeyResponse](#userapikeyresponse)
+
 ## Function listAllTrafficFilters (Microsoft.Elastic/monitors@2023-06-01)
 * **Resource**: Microsoft.Elastic/monitors
 * **ApiVersion**: 2023-06-01
@@ -264,6 +270,18 @@
 ### Properties
 * **currentVersion**: string: Current version of the elastic monitor
 * **upgradableVersions**: string[]: Stack Versions that this version can upgrade to
+
+## UserApiKeyResponse
+### Properties
+* **properties**: [UserApiKeyResponseProperties](#userapikeyresponseproperties)
+
+## UserApiKeyResponseProperties
+### Properties
+* **apiKey**: string {sensitive}: The User Api Key Generated based on GenerateApiKey flag. This is applicable for non-Portal clients only.
+
+## UserEmailId
+### Properties
+* **emailId**: string: The User email Id
 
 ## UserInfo
 ### Properties

@@ -20,6 +20,12 @@
 * **properties**: [CommunicationDetailsProperties](#communicationdetailsproperties): Properties of the resource
 * **type**: 'Microsoft.Support/supportTickets/communications' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Support@2019-05-01-preview)
+* **Resource**: Microsoft.Support
+* **ApiVersion**: 2019-05-01-preview
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
 ## Function checkNameAvailability (Microsoft.Support/supportTickets@2019-05-01-preview)
 * **Resource**: Microsoft.Support/supportTickets
 * **ApiVersion**: 2019-05-01-preview

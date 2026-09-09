@@ -3087,6 +3087,105 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Name to check the namespace name availability and The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the namespace."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "Value indicating namespace is availability, true if the namespace is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a namespace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionIsDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInLockdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TooManyNamespaceInCurrentSubscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/206"
+      },
+      {
+        "$ref": "#/207"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "CheckNameAvailability",
+    "resourceType": "Microsoft.ServiceBus",
+    "apiVersion": "2024-01-01",
+    "output": {
+      "$ref": "#/201"
+    },
+    "input": {
+      "$ref": "#/200"
+    }
+  },
+  {
     "$type": "AnyType"
   },
   {
@@ -3095,7 +3194,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
     "apiVersion": "2024-01-01",
     "output": {
-      "$ref": "#/200"
+      "$ref": "#/210"
     }
   },
   {
@@ -3104,7 +3203,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/203"
+          "$ref": "#/213"
         },
         "flags": 0,
         "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
@@ -3130,10 +3229,10 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
     "apiVersion": "2024-01-01",
     "output": {
-      "$ref": "#/200"
+      "$ref": "#/210"
     },
     "input": {
-      "$ref": "#/202"
+      "$ref": "#/212"
     }
   },
   {
@@ -3151,7 +3250,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
     "apiVersion": "2024-01-01",
     "output": {
-      "$ref": "#/200"
+      "$ref": "#/210"
     }
   },
   {
@@ -3160,7 +3259,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
     "apiVersion": "2024-01-01",
     "output": {
-      "$ref": "#/200"
+      "$ref": "#/210"
     }
   },
   {

@@ -6,7 +6,7 @@ import { JSONSchema4, JSONSchema4TypeName } from 'json-schema';
 import { chain, Dictionary, escapeRegExp, keys, orderBy, uniq } from 'lodash';
 import { getFullyQualifiedType, getNameSchema, getSerializedName, NameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
 import { isEmpty } from 'lodash';
-import { ScopeType } from "bicep-types";
+import { ScopeType } from "@azure/bicep-types";
 import { AnyObjectSchema, AnySchema, ArraySchema, ByteArraySchema, ChoiceSchema, ComplexSchema, ConstantSchema, DateTimeSchema, DictionarySchema, Metadata, NumberSchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema, UuidSchema } from '@autorest/codemodel';
 import { failure, success } from './utils';
 

@@ -55,6 +55,12 @@
 * **properties**: [ServerKeyProperties](#serverkeyproperties): Properties of the ServerKey Resource.
 * **type**: 'Microsoft.DBForMySql/flexibleServers/keys' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DBForMySql@2020-07-01-preview)
+* **Resource**: Microsoft.DBForMySql
+* **ApiVersion**: 2020-07-01-preview
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function checkVirtualNetworkSubnetUsage (Microsoft.DBForMySql/locations@2020-07-01-preview)
 * **Resource**: Microsoft.DBForMySql/locations
 * **ApiVersion**: 2020-07-01-preview
@@ -137,6 +143,17 @@
 * **dayOfWeek**: int: day of week for maintenance window
 * **startHour**: int: start hour for maintenance window
 * **startMinute**: int: start minute for maintenance window
+
+## NameAvailability
+### Properties
+* **message**: string: Error Message.
+* **nameAvailable**: bool: Indicates whether the resource name is available.
+* **reason**: string: Reason for name being unavailable.
+
+## NameAvailabilityRequest
+### Properties
+* **name**: string (Required): Resource name to verify.
+* **type**: string: Resource type used for verification.
 
 ## PrivateDnsZoneArguments
 ### Properties

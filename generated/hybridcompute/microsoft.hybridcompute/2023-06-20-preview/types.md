@@ -118,6 +118,12 @@
 * **Input**: [MachineExtensionUpgrade](#machineextensionupgrade)
 * **Output**: any
 
+## Function validateLicense (Microsoft.HybridCompute@2023-06-20-preview)
+* **Resource**: Microsoft.HybridCompute
+* **ApiVersion**: 2023-06-20-preview
+* **Input**: [License](#license)
+* **Output**: [License](#license)
+
 ## AgentConfiguration
 ### Properties
 * **configMode**: 'full' | 'monitor' | string (ReadOnly): Name of configuration mode to use. Modes are pre-defined configurations of security controls, extension allowlists and guest configuration, maintained by Microsoft.

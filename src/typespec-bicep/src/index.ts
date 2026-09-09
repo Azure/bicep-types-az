@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import { emitFile, EmitContext } from "@typespec/compiler";
-import { writeTypesJson, writeMarkdown } from "bicep-types";
+import { writeTypesJson, writeMarkdown } from "@azure/bicep-types";
 import { BicepEmitterOptions, $lib } from "./lib.js";
 import { getProviderDefinitions } from "./resources.js";
 import { generateTypes } from "./type-generator.js";

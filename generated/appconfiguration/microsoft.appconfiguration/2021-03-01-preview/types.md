@@ -35,6 +35,12 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The properties of a private endpoint.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppConfiguration@2021-03-01-preview)
+* **Resource**: Microsoft.AppConfiguration
+* **ApiVersion**: 2021-03-01-preview
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [NameAvailabilityStatus](#nameavailabilitystatus)
+
 ## Function listKeys (Microsoft.AppConfiguration/configurationStores@2021-03-01-preview)
 * **Resource**: Microsoft.AppConfiguration/configurationStores
 * **ApiVersion**: 2021-03-01-preview
@@ -59,6 +65,11 @@
 ### Properties
 * **nextLink**: string: The URI that can be used to request the next set of paged results.
 * **value**: [ApiKey](#apikey)[]: The collection value.
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name to check for availability.
+* **type**: 'Microsoft.AppConfiguration/configurationStores' | string (Required): The resource type to check for name availability.
 
 ## ConfigurationStoreProperties
 ### Properties
@@ -98,6 +109,12 @@ A locked key-value may not be modified until it is unlocked.
 ### Properties
 * **identityClientId**: string: The client id of the identity which will be used to access key vault.
 * **keyIdentifier**: string: The URI of the key vault key used to encrypt data.
+
+## NameAvailabilityStatus
+### Properties
+* **message**: string (ReadOnly): If any, the error message that provides more detail for the reason that the name is not available.
+* **nameAvailable**: bool (ReadOnly): The value indicating whether the resource name is available.
+* **reason**: string (ReadOnly): If any, the reason that the name is not available.
 
 ## PrivateEndpoint
 ### Properties

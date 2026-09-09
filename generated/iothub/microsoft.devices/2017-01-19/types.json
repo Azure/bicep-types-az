@@ -1175,11 +1175,82 @@
   },
   {
     "$type": "ObjectType",
+    "name": "OperationInputs",
+    "properties": {
+      "Name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the IoT hub to check."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IotHubNameAvailabilityInfo",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "The value which indicates whether the provided name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 2,
+        "description": "The reason for unavailability."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The detailed reason message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Devices",
+    "apiVersion": "2017-01-19",
+    "output": {
+      "$ref": "#/91"
+    },
+    "input": {
+      "$ref": "#/90"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SharedAccessSignatureAuthorizationRuleListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/97"
         },
         "flags": 0,
         "description": "The list of shared access policies."
@@ -1205,7 +1276,7 @@
     "resourceType": "Microsoft.Devices/IotHubs",
     "apiVersion": "2017-01-19",
     "output": {
-      "$ref": "#/90"
+      "$ref": "#/96"
     }
   },
   {
@@ -1255,14 +1326,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/105"
+          "$ref": "#/111"
         },
         "flags": 2,
         "description": "The type of the job."
       },
       "status": {
         "type": {
-          "$ref": "#/112"
+          "$ref": "#/118"
         },
         "flags": 2,
         "description": "The status of the job."
@@ -1334,24 +1405,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/95"
-      },
-      {
-        "$ref": "#/96"
-      },
-      {
-        "$ref": "#/97"
-      },
-      {
-        "$ref": "#/98"
-      },
-      {
-        "$ref": "#/99"
-      },
-      {
-        "$ref": "#/100"
-      },
-      {
         "$ref": "#/101"
       },
       {
@@ -1362,6 +1415,24 @@
       },
       {
         "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
       },
       {
         "$ref": "#/0"
@@ -1396,22 +1467,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/106"
+        "$ref": "#/112"
       },
       {
-        "$ref": "#/107"
+        "$ref": "#/113"
       },
       {
-        "$ref": "#/108"
+        "$ref": "#/114"
       },
       {
-        "$ref": "#/109"
+        "$ref": "#/115"
       },
       {
-        "$ref": "#/110"
+        "$ref": "#/116"
       },
       {
-        "$ref": "#/111"
+        "$ref": "#/117"
       }
     ]
   },
@@ -1421,10 +1492,10 @@
     "resourceType": "Microsoft.Devices/IotHubs",
     "apiVersion": "2017-01-19",
     "output": {
-      "$ref": "#/94"
+      "$ref": "#/100"
     },
     "input": {
-      "$ref": "#/93"
+      "$ref": "#/99"
     }
   },
   {
@@ -1453,10 +1524,10 @@
     "resourceType": "Microsoft.Devices/IotHubs",
     "apiVersion": "2017-01-19",
     "output": {
-      "$ref": "#/94"
+      "$ref": "#/100"
     },
     "input": {
-      "$ref": "#/114"
+      "$ref": "#/120"
     }
   },
   {

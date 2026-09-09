@@ -1889,5 +1889,75 @@
     "output": {
       "$ref": "#/125"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Cluster name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 1,
+        "description": "Resource type used for verification."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforPostgreSQL/serverGroupsv2"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Error message."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Indicates whether the cluster name is available."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the cluster."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of the cluster."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "apiVersion": "2022-11-08",
+    "output": {
+      "$ref": "#/132"
+    },
+    "input": {
+      "$ref": "#/130"
+    }
   }
 ]

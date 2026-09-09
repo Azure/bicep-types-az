@@ -3553,5 +3553,90 @@
     "input": {
       "$ref": "#/256"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanPurchaseValidateRequest",
+    "properties": {
+      "benefits": {
+        "type": {
+          "$ref": "#/269"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SavingsPlanOrderAliasModel",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 0,
+        "description": "Savings plan order alias properties"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 1,
+        "description": "Savings plan SKU"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource provider kind"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/268"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validate",
+    "resourceType": "Microsoft.BillingBenefits",
+    "apiVersion": "2024-11-01-preview",
+    "output": {
+      "$ref": "#/263"
+    },
+    "input": {
+      "$ref": "#/267"
+    }
   }
 ]
