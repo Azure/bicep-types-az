@@ -1444,6 +1444,117 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "Query",
+    "resourceType": "Microsoft.CostManagement",
+    "apiVersion": "2019-03-01-preview",
+    "output": {
+      "$ref": "#/98"
+    },
+    "input": {
+      "$ref": "#/57"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "Forecast",
+    "resourceType": "Microsoft.CostManagement",
+    "apiVersion": "2019-03-01-preview",
+    "output": {
+      "$ref": "#/98"
+    },
+    "input": {
+      "$ref": "#/57"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckEligibilityDefinition",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Connector kind (eg aws)"
+      },
+      "credentialsKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Credentials authentication key (eg AWS ARN)"
+      },
+      "credentialsSecret": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Credentials secret (eg AWS ExternalId)"
+      },
+      "reportId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectorDefinition",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Connector kind (eg aws)"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Connector id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Connector name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Connector type"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Connector properties"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkConnectorEligibility",
+    "resourceType": "Microsoft.CostManagement",
+    "apiVersion": "2019-03-01-preview",
+    "output": {
+      "$ref": "#/111"
+    },
+    "input": {
+      "$ref": "#/110"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "Forecast",
     "resourceType": "Microsoft.CostManagement/externalBillingAccounts",
     "apiVersion": "2019-03-01-preview",

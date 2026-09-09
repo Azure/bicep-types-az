@@ -11,6 +11,23 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Help/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Help@2023-06-01)
+* **Resource**: Microsoft.Help
+* **ApiVersion**: 2023-06-01
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Gets an error message explaining the 'reason' value with more details. This field is returned iif nameAvailable is false.
+* **nameAvailable**: bool: Returns true or false depending on the availability of the name
+* **reason**: string: Reason for why value is not available. This field is returned if nameAvailable is false.
+
 ## Diagnostic
 ### Properties
 * **error**: [Error](#error): Error definition.

@@ -26,6 +26,12 @@
 * **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): properties of a certificate
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkProvisioningServiceNameAvailability (Microsoft.Devices@2017-11-15)
+* **Resource**: Microsoft.Devices
+* **ApiVersion**: 2017-11-15
+* **Input**: [OperationInputs](#operationinputs)
+* **Output**: [NameAvailabilityInfo](#nameavailabilityinfo)
+
 ## Function generateVerificationCode (Microsoft.Devices/provisioningServices/certificates@2017-11-15)
 * **Resource**: Microsoft.Devices/provisioningServices/certificates
 * **ApiVersion**: 2017-11-15
@@ -88,6 +94,16 @@
 * **connectionString**: string (Required): Connection string of the IoT hub.
 * **location**: string (Required): ARM region of the IoT hub.
 * **name**: string (ReadOnly): Host name of the IoT hub.
+
+## NameAvailabilityInfo
+### Properties
+* **message**: string: message containing a detailed reason name is unavailable
+* **nameAvailable**: bool: specifies if a name is available or not
+* **reason**: 'AlreadyExists' | 'Invalid' | string: specifies the reason a name is unavailable
+
+## OperationInputs
+### Properties
+* **name**: string (Required): The name of the Provisioning Service to check.
 
 ## ResourceTags
 ### Properties

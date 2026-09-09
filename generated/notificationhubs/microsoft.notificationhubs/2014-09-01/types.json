@@ -818,97 +818,6 @@
   },
   {
     "$type": "ObjectType",
-    "name": "SharedAccessAuthorizationRuleListResult",
-    "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/48"
-        },
-        "flags": 0,
-        "description": "Gets or sets result of the List AuthorizationRules operation."
-      },
-      "nextLink": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Gets or sets link to the next set of results. Not empty if Value contains incomplete list of AuthorizationRules"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SharedAccessAuthorizationRuleResource",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Gets or sets the id of the created Namespace AuthorizationRules."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Gets or sets datacenter location of the Namespace AuthorizationRules."
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Gets or sets name of the Namespace AuthorizationRules."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Gets or sets resource type of the Namespace AuthorizationRules."
-      },
-      "tags": {
-        "type": {
-          "$ref": "#/47"
-        },
-        "flags": 0,
-        "description": "Gets or sets tags of the Namespace AuthorizationRules."
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/14"
-        },
-        "flags": 0,
-        "description": "Gets or sets properties of the Namespace."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SharedAccessAuthorizationRuleResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/46"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "AuthorizationRules",
-    "resourceType": "Microsoft.NotificationHubs/namespaces",
-    "apiVersion": "2014-09-01",
-    "output": {
-      "$ref": "#/45"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "CheckAvailabilityParameters",
     "properties": {
       "name": {
@@ -927,7 +836,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/51"
+          "$ref": "#/46"
         },
         "flags": 0,
         "description": "Gets or sets tags."
@@ -983,7 +892,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/48"
         },
         "flags": 0,
         "description": "Gets or sets tags"
@@ -1007,14 +916,117 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "checkNamespaceAvailability",
+    "resourceType": "Microsoft.NotificationHubs",
+    "apiVersion": "2014-09-01",
+    "output": {
+      "$ref": "#/47"
+    },
+    "input": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedAccessAuthorizationRuleListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Gets or sets result of the List AuthorizationRules operation."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets link to the next set of results. Not empty if Value contains incomplete list of AuthorizationRules"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedAccessAuthorizationRuleResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the id of the created Namespace AuthorizationRules."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets datacenter location of the Namespace AuthorizationRules."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets name of the Namespace AuthorizationRules."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets resource type of the Namespace AuthorizationRules."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Gets or sets tags of the Namespace AuthorizationRules."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Gets or sets properties of the Namespace."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SharedAccessAuthorizationRuleResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "AuthorizationRules",
+    "resourceType": "Microsoft.NotificationHubs/namespaces",
+    "apiVersion": "2014-09-01",
+    "output": {
+      "$ref": "#/50"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "checkNotificationHubAvailability",
     "resourceType": "Microsoft.NotificationHubs/namespaces",
     "apiVersion": "2014-09-01",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/47"
     },
     "input": {
-      "$ref": "#/50"
+      "$ref": "#/45"
     }
   },
   {
@@ -1043,7 +1055,7 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/AuthorizationRules",
     "apiVersion": "2014-09-01",
     "output": {
-      "$ref": "#/55"
+      "$ref": "#/56"
     }
   },
   {
@@ -1052,7 +1064,7 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs",
     "apiVersion": "2014-09-01",
     "output": {
-      "$ref": "#/45"
+      "$ref": "#/50"
     }
   },
   {
@@ -1089,7 +1101,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/59"
+          "$ref": "#/60"
         },
         "flags": 0,
         "description": "Gets or sets tags of the NotificationHub."
@@ -1117,7 +1129,7 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs",
     "apiVersion": "2014-09-01",
     "output": {
-      "$ref": "#/58"
+      "$ref": "#/59"
     }
   },
   {
@@ -1126,7 +1138,7 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules",
     "apiVersion": "2014-09-01",
     "output": {
-      "$ref": "#/55"
+      "$ref": "#/56"
     }
   }
 ]

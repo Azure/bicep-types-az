@@ -1011,5 +1011,79 @@
     "input": {
       "$ref": "#/75"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name to check for availability."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 1,
+        "description": "The resource type to check for name availability."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AppConfiguration/configurationStores"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityStatus",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "The value indicating whether the resource name is available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If any, the error message that provides more detail for the reason that the name is not available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If any, the reason that the name is not available."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.AppConfiguration",
+    "apiVersion": "2021-03-01-preview",
+    "output": {
+      "$ref": "#/80"
+    },
+    "input": {
+      "$ref": "#/77"
+    }
   }
 ]

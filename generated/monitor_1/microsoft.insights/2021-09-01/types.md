@@ -56,6 +56,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data
 * **type**: 'Microsoft.Insights/privateLinkScopes/scopedResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createNotifications (Microsoft.Insights@2021-09-01)
+* **Resource**: Microsoft.Insights
+* **ApiVersion**: 2021-09-01
+* **Input**: [NotificationRequestBody](#notificationrequestbody)
+* **Output**: [TestNotificationDetailsResponse](#testnotificationdetailsresponse)
+
 ## Function createNotifications (Microsoft.Insights/actionGroups@2021-09-01)
 * **Resource**: Microsoft.Insights/actionGroups
 * **ApiVersion**: 2021-09-01

@@ -3968,6 +3968,268 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ProductSerialNumberRequestStatus",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "allocation status of the product serial number"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createProductSerialNumber",
+    "resourceType": "PaloAltoNetworks.Cloudngfw",
+    "apiVersion": "2025-05-23",
+    "output": {
+      "$ref": "#/304"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudManagerTenantList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/307"
+        },
+        "flags": 1,
+        "description": "List of Cloud Manager Tenants"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listCloudManagerTenants",
+    "resourceType": "PaloAltoNetworks.Cloudngfw",
+    "apiVersion": "2025-05-23",
+    "output": {
+      "$ref": "#/306"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProductSerialNumberStatus",
+    "properties": {
+      "serialNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "product Serial associated with given resource"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/312"
+        },
+        "flags": 1,
+        "description": "allocation status of the product serial number"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allocated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/310"
+      },
+      {
+        "$ref": "#/311"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listProductSerialNumberStatus",
+    "resourceType": "PaloAltoNetworks.Cloudngfw",
+    "apiVersion": "2025-05-23",
+    "output": {
+      "$ref": "#/309"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SupportInfoModel",
+    "properties": {
+      "productSku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "product SKU associated with given resource"
+      },
+      "productSerial": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "product Serial associated with given resource"
+      },
+      "accountRegistrationStatus": {
+        "type": {
+          "$ref": "#/317"
+        },
+        "flags": 0,
+        "description": "account registered in Customer Support Portal"
+      },
+      "accountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Support account associated with given resource"
+      },
+      "freeTrial": {
+        "type": {
+          "$ref": "#/320"
+        },
+        "flags": 0,
+        "description": "Product usage is in free trial period"
+      },
+      "freeTrialDaysLeft": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Free trial days remaining"
+      },
+      "freeTrialCreditLeft": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Free trial credit remaining"
+      },
+      "helpURL": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL for paloaltonetworks live community"
+      },
+      "supportURL": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL for paloaltonetworks Customer Service Portal"
+      },
+      "registerURL": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL for registering product in paloaltonetworks Customer Service Portal"
+      },
+      "hubUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL for Strata Cloud Manager"
+      },
+      "credits": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "credits purchased, unit per hour"
+      },
+      "monthlyCreditLeft": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "monthly credit is computed as credits * days in calendar month"
+      },
+      "startDateForCredits": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "date in format yyyy-mm-dd"
+      },
+      "endDateForCredits": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "date in format yyyy-mm-dd"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Registered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Not Registered"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/315"
+      },
+      {
+        "$ref": "#/316"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/318"
+      },
+      {
+        "$ref": "#/319"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listSupportInfo",
+    "resourceType": "PaloAltoNetworks.Cloudngfw",
+    "apiVersion": "2025-05-23",
+    "output": {
+      "$ref": "#/314"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "GlobalRulestackInfo",
     "properties": {
       "azureId": {
@@ -3985,7 +4247,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/firewalls",
     "apiVersion": "2025-05-23",
     "output": {
-      "$ref": "#/304"
+      "$ref": "#/322"
     }
   },
   {
@@ -3994,49 +4256,49 @@
     "properties": {
       "logType": {
         "type": {
-          "$ref": "#/313"
+          "$ref": "#/331"
         },
         "flags": 0,
         "description": "One of possible log type"
       },
       "logOption": {
         "type": {
-          "$ref": "#/316"
+          "$ref": "#/334"
         },
         "flags": 0,
         "description": "Log option SAME/INDIVIDUAL"
       },
       "applicationInsights": {
         "type": {
-          "$ref": "#/317"
+          "$ref": "#/335"
         },
         "flags": 0,
         "description": "Application Insight details"
       },
       "commonDestination": {
         "type": {
-          "$ref": "#/318"
+          "$ref": "#/336"
         },
         "flags": 0,
         "description": "Common destination configurations"
       },
       "trafficLogDestination": {
         "type": {
-          "$ref": "#/318"
+          "$ref": "#/336"
         },
         "flags": 0,
         "description": "Traffic destination configurations"
       },
       "threatLogDestination": {
         "type": {
-          "$ref": "#/318"
+          "$ref": "#/336"
         },
         "flags": 0,
         "description": "Threat destination configurations"
       },
       "decryptLogDestination": {
         "type": {
-          "$ref": "#/318"
+          "$ref": "#/336"
         },
         "flags": 0,
         "description": "Decrypt destination configurations"
@@ -4071,22 +4333,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/307"
+        "$ref": "#/325"
       },
       {
-        "$ref": "#/308"
+        "$ref": "#/326"
       },
       {
-        "$ref": "#/309"
+        "$ref": "#/327"
       },
       {
-        "$ref": "#/310"
+        "$ref": "#/328"
       },
       {
-        "$ref": "#/311"
+        "$ref": "#/329"
       },
       {
-        "$ref": "#/312"
+        "$ref": "#/330"
       },
       {
         "$ref": "#/0"
@@ -4105,10 +4367,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/314"
+        "$ref": "#/332"
       },
       {
-        "$ref": "#/315"
+        "$ref": "#/333"
       },
       {
         "$ref": "#/0"
@@ -4141,21 +4403,21 @@
     "properties": {
       "storageConfigurations": {
         "type": {
-          "$ref": "#/319"
+          "$ref": "#/337"
         },
         "flags": 0,
         "description": "Storage account configurations"
       },
       "eventHubConfigurations": {
         "type": {
-          "$ref": "#/320"
+          "$ref": "#/338"
         },
         "flags": 0,
         "description": "Event Hub configurations"
       },
       "monitorConfigurations": {
         "type": {
-          "$ref": "#/321"
+          "$ref": "#/339"
         },
         "flags": 0,
         "description": "Monitor Log configurations"
@@ -4277,7 +4539,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/firewalls",
     "apiVersion": "2025-05-23",
     "output": {
-      "$ref": "#/306"
+      "$ref": "#/324"
     }
   },
   {
@@ -4300,7 +4562,7 @@
       },
       "accountRegistered": {
         "type": {
-          "$ref": "#/326"
+          "$ref": "#/344"
         },
         "flags": 0,
         "description": "account registered in Customer Support Portal"
@@ -4314,21 +4576,21 @@
       },
       "userDomainSupported": {
         "type": {
-          "$ref": "#/329"
+          "$ref": "#/347"
         },
         "flags": 0,
         "description": "user domain is supported in Customer Support Portal"
       },
       "userRegistered": {
         "type": {
-          "$ref": "#/332"
+          "$ref": "#/350"
         },
         "flags": 0,
         "description": "user registered in Customer Support Portal"
       },
       "freeTrial": {
         "type": {
-          "$ref": "#/335"
+          "$ref": "#/353"
         },
         "flags": 0,
         "description": "Product usage is in free trial period"
@@ -4382,32 +4644,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/324"
+        "$ref": "#/342"
       },
       {
-        "$ref": "#/325"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "TRUE"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "FALSE"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/327"
-      },
-      {
-        "$ref": "#/328"
+        "$ref": "#/343"
       },
       {
         "$ref": "#/0"
@@ -4426,10 +4666,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/330"
+        "$ref": "#/345"
       },
       {
-        "$ref": "#/331"
+        "$ref": "#/346"
       },
       {
         "$ref": "#/0"
@@ -4448,10 +4688,32 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/333"
+        "$ref": "#/348"
       },
       {
-        "$ref": "#/334"
+        "$ref": "#/349"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TRUE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FALSE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/351"
+      },
+      {
+        "$ref": "#/352"
       },
       {
         "$ref": "#/0"
@@ -4464,7 +4726,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/firewalls",
     "apiVersion": "2025-05-23",
     "output": {
-      "$ref": "#/323"
+      "$ref": "#/341"
     }
   },
   {
@@ -4476,7 +4738,7 @@
       "$ref": "#/273"
     },
     "input": {
-      "$ref": "#/306"
+      "$ref": "#/324"
     }
   },
   {
@@ -4503,7 +4765,7 @@
     "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
     "apiVersion": "2025-05-23",
     "output": {
-      "$ref": "#/323"
+      "$ref": "#/341"
     }
   },
   {

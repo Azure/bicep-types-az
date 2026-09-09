@@ -49,6 +49,12 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Cdn@2016-10-02)
+* **Resource**: Microsoft.Cdn
+* **ApiVersion**: 2016-10-02
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
 ## Function checkResourceUsage (Microsoft.Cdn/profiles@2016-10-02)
 * **Resource**: Microsoft.Cdn/profiles
 * **ApiVersion**: 2016-10-02
@@ -56,6 +62,11 @@
 
 ## Function checkResourceUsage (Microsoft.Cdn/profiles/endpoints@2016-10-02)
 * **Resource**: Microsoft.Cdn/profiles/endpoints
+* **ApiVersion**: 2016-10-02
+* **Output**: [ResourceUsageListResult](#resourceusagelistresult)
+
+## Function checkResourceUsage (Microsoft.Cdn@2016-10-02)
+* **Resource**: Microsoft.Cdn
 * **ApiVersion**: 2016-10-02
 * **Output**: [ResourceUsageListResult](#resourceusagelistresult)
 
@@ -106,6 +117,17 @@
 * **ApiVersion**: 2016-10-02
 * **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
 * **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
+## CheckNameAvailabilityInput
+### Properties
+* **name**: string (Required): The resource name to validate.
+* **type**: 'Microsoft.Cdn/Profiles/Endpoints' (Required): The type of the resource whose name is to be validated.
+
+## CheckNameAvailabilityOutput
+### Properties
+* **message**: string: The detailed error message describing why the name is not available.
+* **nameAvailable**: bool: Indicates whether the name is available.
+* **reason**: string: The reason why the name is not available.
 
 ## CustomDomain
 ### Properties

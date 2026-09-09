@@ -63,6 +63,12 @@
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): Authorization rule properties.
 * **type**: 'Microsoft.Relay/namespaces/wcfRelays/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Relay@2017-04-01)
+* **Resource**: Microsoft.Relay
+* **ApiVersion**: 2017-04-01
+* **Input**: [CheckNameAvailability](#checknameavailability)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function listKeys (Microsoft.Relay/namespaces/authorizationRules@2017-04-01)
 * **Resource**: Microsoft.Relay/namespaces/authorizationRules
 * **ApiVersion**: 2017-04-01
@@ -107,6 +113,16 @@
 ## AuthorizationRuleProperties
 ### Properties
 * **rights**: ('Listen' | 'Manage' | 'Send')[] (Required): The rights associated with the rule.
+
+## CheckNameAvailability
+### Properties
+* **name**: string (Required): The namespace name to check for availability. The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the namespace.
+* **nameAvailable**: bool: Value indicating namespace is available. Returns true if the namespace is available; otherwise, false.
+* **reason**: 'InvalidName' | 'NameInLockdown' | 'NameInUse' | 'None' | 'SubscriptionIsDisabled' | 'TooManyNamespaceInCurrentSubscription': The reason for unavailability of a namespace.
 
 ## HybridConnectionProperties
 ### Properties

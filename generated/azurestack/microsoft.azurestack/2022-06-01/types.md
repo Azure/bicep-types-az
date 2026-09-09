@@ -51,6 +51,12 @@
 * **ApiVersion**: 2022-06-01
 * **Output**: any
 
+## Function generateDeploymentLicense (Microsoft.AzureStack@2022-06-01)
+* **Resource**: Microsoft.AzureStack
+* **ApiVersion**: 2022-06-01
+* **Input**: [DeploymentLicenseRequest](#deploymentlicenserequest)
+* **Output**: [DeploymentLicenseResponse](#deploymentlicenseresponse)
+
 ## Function getactivationkey (Microsoft.AzureStack/registrations@2022-06-01)
 * **Resource**: Microsoft.AzureStack/registrations
 * **ApiVersion**: 2022-06-01
@@ -120,6 +126,15 @@
 ### Properties
 * **lun**: int (ReadOnly): The LUN.
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
+
+## DeploymentLicenseRequest
+### Properties
+* **verificationVersion**: string: Signing verification public key version.
+
+## DeploymentLicenseResponse
+### Properties
+* **signature**: string: Signature of the license chain.
+* **temporaryLicenseChain**: string[]: A license chain that can be used to temporarily activate an Azure Stack device.
 
 ## DeviceConfiguration
 ### Properties

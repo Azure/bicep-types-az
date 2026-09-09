@@ -934,6 +934,75 @@
   },
   {
     "$type": "ObjectType",
+    "name": "NameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource type used for verification."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Error Message."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Indicates whether the resource name is available."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "name of the PostgreSQL server."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "type of the server"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBForPostgreSql",
+    "apiVersion": "2020-02-14-preview",
+    "output": {
+      "$ref": "#/72"
+    },
+    "input": {
+      "$ref": "#/71"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "VirtualNetworkSubnetUsageParameter",
     "properties": {
       "virtualNetworkArmResourceId": {
@@ -951,7 +1020,7 @@
     "properties": {
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/78"
         },
         "flags": 2
       }
@@ -980,7 +1049,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/73"
+      "$ref": "#/77"
     }
   },
   {
@@ -989,10 +1058,10 @@
     "resourceType": "Microsoft.DBForPostgreSql/locations",
     "apiVersion": "2020-02-14-preview",
     "output": {
-      "$ref": "#/72"
+      "$ref": "#/76"
     },
     "input": {
-      "$ref": "#/71"
+      "$ref": "#/75"
     }
   }
 ]

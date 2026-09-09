@@ -93,6 +93,17 @@
 * **ApiVersion**: 2024-11-18-preview
 * **Output**: any
 
+## Function generateRecommendations (Microsoft.Advisor@2024-11-18-preview)
+* **Resource**: Microsoft.Advisor
+* **ApiVersion**: 2024-11-18-preview
+* **Output**: any
+
+## Function predict (Microsoft.Advisor@2024-11-18-preview)
+* **Resource**: Microsoft.Advisor
+* **ApiVersion**: 2024-11-18-preview
+* **Input**: [PredictionRequest](#predictionrequest)
+* **Output**: [PredictionResponse](#predictionresponse)
+
 ## Function reject (Microsoft.Advisor/triageRecommendations@2024-11-18-preview)
 * **Resource**: Microsoft.Advisor/triageRecommendations
 * **ApiVersion**: 2024-11-18-preview
@@ -137,6 +148,29 @@
 * **language**: string: Language for digest content body. Value must be ISO 639-1 code for one of Azure portal supported languages. Otherwise, it will be converted into one. Default value is English (en).
 * **name**: string: Name of digest configuration. Value is case-insensitive and must be unique within a subscription.
 * **state**: 'Active' | 'Disabled' | string: State of digest configuration.
+
+## PredictionRequest
+### Properties
+* **properties**: [PredictionRequestProperties](#predictionrequestproperties): Request properties for prediction recommendation.
+
+## PredictionRequestProperties
+### Properties
+* **extendedProperties**: any: Extended properties are arguments specific for each prediction type.
+* **predictionType**: 'PredictiveRightsizing' | string: Type of the prediction.
+
+## PredictionResponse
+### Properties
+* **properties**: [PredictionResponseProperties](#predictionresponseproperties): The properties of the prediction.
+
+## PredictionResponseProperties
+### Properties
+* **category**: 'Cost' | 'HighAvailability' | 'OperationalExcellence' | 'Performance' | 'Security' | string: The category of the recommendation.
+* **extendedProperties**: any: Extended properties
+* **impact**: 'High' | 'Low' | 'Medium' | string: The business impact of the recommendation.
+* **impactedField**: string: The resource type identified by Advisor.
+* **lastUpdated**: string: The most recent time that Advisor checked the validity of the recommendation.
+* **predictionType**: 'PredictiveRightsizing' | string: Type of the prediction.
+* **shortDescription**: [ShortDescription](#shortdescription): A summary of the recommendation.
 
 ## RecommendationProperties
 ### Properties

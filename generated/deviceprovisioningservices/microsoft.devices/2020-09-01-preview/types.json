@@ -1221,11 +1221,85 @@
   },
   {
     "$type": "ObjectType",
+    "name": "OperationInputs",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the Provisioning Service to check."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityInfo",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "specifies if a name is available or not"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "specifies the reason a name is unavailable"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "message containing a detailed reason name is unavailable"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkProvisioningServiceNameAvailability",
+    "resourceType": "Microsoft.Devices",
+    "apiVersion": "2020-09-01-preview",
+    "output": {
+      "$ref": "#/87"
+    },
+    "input": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SharedAccessSignatureAuthorizationRuleListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/87"
+          "$ref": "#/93"
         },
         "flags": 0,
         "description": "The list of shared access policies."
@@ -1251,7 +1325,7 @@
     "resourceType": "Microsoft.Devices/provisioningServices",
     "apiVersion": "2020-09-01-preview",
     "output": {
-      "$ref": "#/86"
+      "$ref": "#/92"
     }
   },
   {

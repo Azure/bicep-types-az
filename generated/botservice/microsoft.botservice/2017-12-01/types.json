@@ -1699,6 +1699,156 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ServiceProviderResponseList",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link used to get the next page of bot service providers."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 2,
+        "description": "Gets the list of bot service providers and their properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceProvider",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The Properties of a Service Provider Object"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceProviderProperties",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Id for Service Provider"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name of the Service Provider"
+      },
+      "serviceProviderName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name of the Service Provider"
+      },
+      "devPortalUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name of the Service Provider"
+      },
+      "iconUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name of the Service Provider"
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "The list of parameters for the Service Provider"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceProviderParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the Service Provider"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Type of the Service Provider"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name of the Service Provider"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Description of the Service Provider"
+      },
+      "helpUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Help Url for the  Service Provider"
+      },
+      "default": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Default Name for the Service Provider"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/104"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listAuthServiceProviders",
+    "resourceType": "Microsoft.BotService",
+    "apiVersion": "2017-12-01",
+    "output": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ConnectionSetting",
     "properties": {
       "properties": {
@@ -1738,7 +1888,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/104"
+          "$ref": "#/111"
         },
         "flags": 0,
         "description": "Contains resource tags defined as key/value pairs."
@@ -1752,7 +1902,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/109"
+          "$ref": "#/116"
         },
         "flags": 0,
         "description": "Required. Gets or sets the Kind of the resource."
@@ -1794,16 +1944,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/105"
+        "$ref": "#/112"
       },
       {
-        "$ref": "#/106"
+        "$ref": "#/113"
       },
       {
-        "$ref": "#/107"
+        "$ref": "#/114"
       },
       {
-        "$ref": "#/108"
+        "$ref": "#/115"
       },
       {
         "$ref": "#/2"
@@ -1816,7 +1966,7 @@
     "resourceType": "Microsoft.BotService/botServices/Connections",
     "apiVersion": "2017-12-01",
     "output": {
-      "$ref": "#/103"
+      "$ref": "#/110"
     }
   }
 ]

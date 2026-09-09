@@ -1,5 +1,5 @@
 Generating types for 'specification/purview/resource-manager/Microsoft.Purview/Purview/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v22.23.2]
+AutoRest code generation utility [cli version: 3.8.0; node: v24.20.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
@@ -23,8 +23,6 @@ warning | Skipping DefaultAccounts_Get due to required query parameter "scopeTen
 warning | Skipping DefaultAccounts_Get due to required query parameter "scopeType"
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeTenantId"
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeType"
-warning | Skipping resource POST action path '/providers/Microsoft.Purview/setDefaultAccount': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Purview/checkNameAvailability': Unable to find type segments
 warning | Resource action addRootCollectionAdmin under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}/addRootCollectionAdmin' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -55,8 +53,6 @@ warning | Skipping DefaultAccounts_Get due to required query parameter "scopeTen
 warning | Skipping DefaultAccounts_Get due to required query parameter "scopeType"
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeTenantId"
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeType"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Purview/checkNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Purview/setDefaultAccount': Unable to find type segments
 warning | Resource action addRootCollectionAdmin under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}/addRootCollectionAdmin' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -79,8 +75,6 @@ warning | Skipping DefaultAccounts_Get due to required query parameter "scopeTen
 warning | Skipping DefaultAccounts_Get due to required query parameter "scopeType"
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeTenantId"
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeType"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Purview/checkNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Purview/setDefaultAccount': Unable to find type segments
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -102,8 +96,6 @@ warning | Skipping DefaultAccounts_Get due to required query parameter "scopeTen
 warning | Skipping DefaultAccounts_Get due to required query parameter "scopeType"
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeTenantId"
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeType"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Purview/checkNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Purview/setDefaultAccount': Unable to find type segments
 warning | Resource action addRootCollectionAdmin under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}/addRootCollectionAdmin' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -134,6 +126,4 @@ warning | Skipping DefaultAccounts_Get due to required query parameter "scopeTen
 warning | Skipping DefaultAccounts_Get due to required query parameter "scopeType"
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeTenantId"
 warning | Skipping DefaultAccounts_Remove due to required query parameter "scopeType"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Purview/checkNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Purview/setDefaultAccount': Unable to find type segments
 warning | Resource action addRootCollectionAdmin under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Purview/accounts/{accountName}/addRootCollectionAdmin' has no response schema. Returning 'any'.

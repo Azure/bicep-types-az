@@ -1414,11 +1414,136 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 1,
+        "description": "The type of resource that is used as the scope of the availability check."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevOpsInfrastructure/pools"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "available": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 1,
+        "description": "Availability status of the name."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "A message explaining why the name is unavailable. Will be null if the name is available."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name whose availability was checked."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 1,
+        "description": "The reason code explaining why the name is unavailable. Will be null if the name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/123"
+      },
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DevOpsInfrastructure",
+    "apiVersion": "2026-06-02",
+    "output": {
+      "$ref": "#/119"
+    },
+    "input": {
+      "$ref": "#/116"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DeleteResourcesDetails",
     "properties": {
       "resourceIds": {
         "type": {
-          "$ref": "#/117"
+          "$ref": "#/128"
         },
         "flags": 1,
         "description": "List of resource IDs to delete."
@@ -1440,7 +1565,7 @@
       "$ref": "#/36"
     },
     "input": {
-      "$ref": "#/116"
+      "$ref": "#/127"
     }
   }
 ]

@@ -15,6 +15,17 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.HealthcareApis@2018-08-20-preview)
+* **Resource**: Microsoft.HealthcareApis
+* **ApiVersion**: 2018-08-20-preview
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [ServicesNameAvailabilityInfo](#servicesnameavailabilityinfo)
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name of the service instance to check.
+* **type**: string (Required): The fully qualified resource type which includes provider namespace.
+
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the resource identity.
@@ -47,6 +58,12 @@
 ## ServiceCosmosDbConfigurationInfo
 ### Properties
 * **offerThroughput**: int {minValue: 400, maxValue: 10000}: The provisioned throughput for the backing database.
+
+## ServicesNameAvailabilityInfo
+### Properties
+* **message**: string: The detailed reason message.
+* **nameAvailable**: bool (ReadOnly): The value which indicates whether the provided name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason for unavailability.
 
 ## ServicesProperties
 ### Properties

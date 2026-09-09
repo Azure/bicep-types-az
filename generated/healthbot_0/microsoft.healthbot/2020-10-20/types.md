@@ -14,6 +14,23 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HealthBot/healthBots' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.HealthBot@2020-10-20)
+* **Resource**: Microsoft.HealthBot
+* **ApiVersion**: 2020-10-20
+* **Input**: [CheckNameAvailabilityRequestBody](#checknameavailabilityrequestbody)
+* **Output**: [CheckNameAvailabilityResponseBody](#checknameavailabilityresponsebody)
+
+## CheckNameAvailabilityRequestBody
+### Properties
+* **name**: string (Required): the name of the bot for which availability needs to be checked.
+* **type**: string (Required): the type of the bot for which availability needs to be checked
+
+## CheckNameAvailabilityResponseBody
+### Properties
+* **message**: string: additional message from server
+* **nameAvailable**: bool: indicates if the bot name is valid and available.
+* **reason**: string: Reason for the result
+
 ## HealthBotProperties
 ### Properties
 * **botManagementPortalLink**: string (ReadOnly): The link.

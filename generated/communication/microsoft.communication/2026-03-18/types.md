@@ -90,6 +90,12 @@
 * **Input**: [VerificationParameter](#verificationparameter)
 * **Output**: any
 
+## Function checkNameAvailability (Microsoft.Communication@2026-03-18)
+* **Resource**: Microsoft.Communication
+* **ApiVersion**: 2026-03-18
+* **Input**: [NameAvailabilityParameters](#nameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function initiateVerification (Microsoft.Communication/emailServices/domains@2026-03-18)
 * **Resource**: Microsoft.Communication/emailServices/domains
 * **ApiVersion**: 2026-03-18
@@ -107,11 +113,22 @@
 * **ApiVersion**: 2026-03-18
 * **Output**: [CommunicationServiceKeys](#communicationservicekeys)
 
+## Function listVerifiedExchangeOnlineDomains (Microsoft.Communication@2026-03-18)
+* **Resource**: Microsoft.Communication
+* **ApiVersion**: 2026-03-18
+* **Output**: string[]
+
 ## Function regenerateKey (Microsoft.Communication/communicationServices@2026-03-18)
 * **Resource**: Microsoft.Communication/communicationServices
 * **ApiVersion**: 2026-03-18
 * **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
 * **Output**: [CommunicationServiceKeys](#communicationservicekeys)
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
 
 ## CommunicationServiceKeys
 ### Properties
@@ -191,6 +208,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## NameAvailabilityParameters
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
 
 ## RegenerateKeyParameters
 ### Properties

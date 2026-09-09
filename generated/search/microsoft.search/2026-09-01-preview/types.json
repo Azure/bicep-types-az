@@ -2265,6 +2265,253 @@
   },
   {
     "$type": "ObjectType",
+    "name": "OfferingsResult",
+    "properties": {
+      "defaultRegion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The recommended default region for creating new Azure AI Search services."
+      },
+      "regions": {
+        "type": {
+          "$ref": "#/203"
+        },
+        "flags": 2,
+        "description": "The list of Azure AI Search offerings by region."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OfferingsByRegion",
+    "properties": {
+      "regionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the region."
+      },
+      "features": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 0,
+        "description": "The list of features offered in this region."
+      },
+      "skus": {
+        "type": {
+          "$ref": "#/202"
+        },
+        "flags": 0,
+        "description": "The list of SKUs offered in this region."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FeatureOffering",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the feature offered in this region."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/198"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuOffering",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 0,
+        "description": "The SKU definition."
+      },
+      "limits": {
+        "type": {
+          "$ref": "#/201"
+        },
+        "flags": 0,
+        "description": "The limits associated with this SKU offered in this region."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuLimits",
+    "properties": {
+      "indexes": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "The maximum number of indexes available for this SKU."
+      },
+      "indexers": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "The maximum number of indexers available for this SKU."
+      },
+      "partitionStorageInGigabytes": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "The maximum storage size in Gigabytes available for this SKU per partition."
+      },
+      "partitionVectorStorageInGigabytes": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "The maximum vector storage size in Gigabytes available for this SKU per partition."
+      },
+      "searchUnits": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "The maximum number of search units available for this SKU."
+      },
+      "replicas": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "The maximum number of replicas available for this SKU."
+      },
+      "partitions": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "The maximum number of partitions available for this SKU."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/200"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/197"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "fetchOfferings",
+    "resourceType": "Microsoft.Search",
+    "apiVersion": "2026-09-01-preview",
+    "output": {
+      "$ref": "#/196"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityInput",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The search service name to validate. Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 1,
+        "description": "The type of the resource whose name is to be validated. This value must always be 'searchServices'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "searchServices"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityOutput",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 2,
+        "description": "A value indicating whether the name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/210"
+        },
+        "flags": 2,
+        "description": "The reason why the name is not available. 'Invalid' indicates the name provided does not match the naming requirements (incorrect length, unsupported characters, etc.). 'AlreadyExists' indicates that the name is already in use and is therefore unavailable."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "A message that explains why the name is invalid and provides resource naming requirements. Available only if 'Invalid' is returned in the 'reason' property."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/208"
+      },
+      {
+        "$ref": "#/209"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Search",
+    "apiVersion": "2026-09-01-preview",
+    "output": {
+      "$ref": "#/207"
+    },
+    "input": {
+      "$ref": "#/205"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SearchService",
     "properties": {
       "properties": {
@@ -2290,7 +2537,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/197"
+          "$ref": "#/213"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2346,7 +2593,7 @@
     "resourceType": "Microsoft.Search/searchServices",
     "apiVersion": "2026-09-01-preview",
     "output": {
-      "$ref": "#/196"
+      "$ref": "#/212"
     }
   },
   {
@@ -2355,7 +2602,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/201"
+          "$ref": "#/217"
         },
         "flags": 2,
         "description": "The query keys for the Azure AI Search service."
@@ -2392,7 +2639,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/200"
+      "$ref": "#/216"
     }
   },
   {
@@ -2401,7 +2648,7 @@
     "resourceType": "Microsoft.Search/searchServices",
     "apiVersion": "2026-09-01-preview",
     "output": {
-      "$ref": "#/199"
+      "$ref": "#/215"
     }
   },
   {
@@ -2430,7 +2677,7 @@
     "resourceType": "Microsoft.Search/searchServices",
     "apiVersion": "2026-09-01-preview",
     "output": {
-      "$ref": "#/203"
+      "$ref": "#/219"
     }
   },
   {

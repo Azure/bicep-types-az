@@ -1,0 +1,196 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "SmartDetectionMigrationRequest",
+    "properties": {
+      "scope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The list of resource IDs that the requested migration should be performed on."
+      },
+      "actionGroupCreationPolicy": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The policy for migrating the email settings in the Smart Detection Rules into action groups. If not specified, 'Auto' policy is used."
+      },
+      "customActionGroupName": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "A custom name of an existing action group to attach to the created alert rules. Required only when actionGroupCreationPolicy is set to 'Custom'."
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Custom"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Auto"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/3"
+      },
+      {
+        "$ref": "#/4"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationStatusResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "The migration resource identifier."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "The migration process name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Type of resource. \"Microsoft.AlertsManagement/migrateFromSmartDetection\""
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The details of the migration response"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationStatusResponseProperties",
+    "properties": {
+      "migrationId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The migration process unique id."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 1,
+        "description": "The current status of the migration process"
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "The list of resource IDs that the requested migration should be performed on."
+      },
+      "armDeploymentName": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The name of the ARM deployment associated with the migration process."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Starting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProcess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deploying"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrateFromSmartDetection",
+    "resourceType": "Microsoft.AlertsManagement",
+    "apiVersion": "2021-01-01-preview",
+    "output": {
+      "$ref": "#/6"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  }
+]

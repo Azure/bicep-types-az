@@ -59,6 +59,12 @@
 * **Input**: [TestRouteInput](#testrouteinput)
 * **Output**: [TestRouteResult](#testrouteresult)
 
+## Function checkNameAvailability (Microsoft.Devices@2020-04-01)
+* **Resource**: Microsoft.Devices
+* **ApiVersion**: 2020-04-01
+* **Input**: [OperationInputs](#operationinputs)
+* **Output**: [IotHubNameAvailabilityInfo](#iothubnameavailabilityinfo)
+
 ## Function exportDevices (Microsoft.Devices/IotHubs@2020-04-01)
 * **Resource**: Microsoft.Devices/IotHubs
 * **ApiVersion**: 2020-04-01
@@ -202,6 +208,12 @@
 * **location**: string: The name of the Azure region
 * **role**: 'primary' | 'secondary' | string: The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.
 
+## IotHubNameAvailabilityInfo
+### Properties
+* **message**: string: The detailed reason message.
+* **nameAvailable**: bool (ReadOnly): The value which indicates whether the provided name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason for unavailability.
+
 ## IotHubProperties
 ### Properties
 * **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]: The shared access policies you can use to secure a connection to the IoT hub.
@@ -269,6 +281,10 @@
 * **lockDurationAsIso8601**: string: The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
 * **maxDeliveryCount**: int {minValue: 1, maxValue: 100}: The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
 * **ttlAsIso8601**: string: The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
+
+## OperationInputs
+### Properties
+* **name**: string (Required): The name of the IoT hub to check.
 
 ## PrivateEndpoint
 ### Properties

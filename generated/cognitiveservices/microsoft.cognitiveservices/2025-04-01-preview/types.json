@@ -6708,6 +6708,215 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckDomainAvailabilityParameter",
+    "properties": {
+      "subdomainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The subdomain name to use."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Type of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Kind of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DomainAvailability",
+    "properties": {
+      "isSubdomainAvailable": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Indicates the given SKU is available or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason why the SKU is not available."
+      },
+      "subdomainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The subdomain name to use."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Type of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Kind of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkDomainAvailability",
+    "resourceType": "Microsoft.CognitiveServices",
+    "apiVersion": "2025-04-01-preview",
+    "output": {
+      "$ref": "#/530"
+    },
+    "input": {
+      "$ref": "#/529"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateModelCapacityParameter",
+    "properties": {
+      "model": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 0,
+        "description": "Properties of Cognitive Services account deployment model."
+      },
+      "skuName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of SKU."
+      },
+      "workloads": {
+        "type": {
+          "$ref": "#/535"
+        },
+        "flags": 0,
+        "description": "List of Model Capacity Calculator Workload."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ModelCapacityCalculatorWorkload",
+    "properties": {
+      "requestPerMinute": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Request per minute."
+      },
+      "requestParameters": {
+        "type": {
+          "$ref": "#/534"
+        },
+        "flags": 0,
+        "description": "Dictionary, Model Capacity Calculator Workload Parameters."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ModelCapacityCalculatorWorkloadRequestParam",
+    "properties": {
+      "avgPromptTokens": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Average prompt tokens."
+      },
+      "avgGeneratedTokens": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Average generated tokens."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/533"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateModelCapacityResult",
+    "properties": {
+      "model": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 0,
+        "description": "Properties of Cognitive Services account deployment model."
+      },
+      "skuName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "estimatedCapacity": {
+        "type": {
+          "$ref": "#/537"
+        },
+        "flags": 0,
+        "description": "Model Estimated Capacity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateModelCapacityResultEstimatedCapacity",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0
+      },
+      "deployableValue": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "calculateModelCapacity",
+    "resourceType": "Microsoft.CognitiveServices",
+    "apiVersion": "2025-04-01-preview",
+    "output": {
+      "$ref": "#/536"
+    },
+    "input": {
+      "$ref": "#/532"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "RaiBlocklistItemBulkRequest",
     "properties": {
       "name": {
@@ -6728,7 +6937,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/529"
+      "$ref": "#/539"
     }
   },
   {
@@ -6751,7 +6960,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/532"
+          "$ref": "#/542"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -6800,10 +7009,10 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/raiBlocklists",
     "apiVersion": "2025-04-01-preview",
     "output": {
-      "$ref": "#/531"
+      "$ref": "#/541"
     },
     "input": {
-      "$ref": "#/530"
+      "$ref": "#/540"
     }
   },
   {
@@ -6858,7 +7067,7 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations",
     "apiVersion": "2025-04-01-preview",
     "output": {
-      "$ref": "#/535"
+      "$ref": "#/545"
     }
   }
 ]

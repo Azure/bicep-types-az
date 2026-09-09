@@ -5343,5 +5343,129 @@
     "input": {
       "$ref": "#/430"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityInput",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource name to validate."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/522"
+        },
+        "flags": 1,
+        "description": "The type of the resource whose name is to be validated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Cdn/Profiles/Endpoints"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityOutput",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Indicates whether the name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The reason why the name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The detailed error message describing why the name is not available."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Cdn",
+    "apiVersion": "2019-04-15",
+    "output": {
+      "$ref": "#/523"
+    },
+    "input": {
+      "$ref": "#/521"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateProbeInput",
+    "properties": {
+      "probeURL": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The probe URL to validate."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateProbeOutput",
+    "properties": {
+      "isValid": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Indicates whether the probe URL is accepted or not."
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the error code when the probe url is not accepted."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The detailed error message describing why the probe URL is not accepted."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateProbe",
+    "resourceType": "Microsoft.Cdn",
+    "apiVersion": "2019-04-15",
+    "output": {
+      "$ref": "#/526"
+    },
+    "input": {
+      "$ref": "#/525"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkResourceUsage",
+    "resourceType": "Microsoft.Cdn",
+    "apiVersion": "2019-04-15",
+    "output": {
+      "$ref": "#/477"
+    }
   }
 ]

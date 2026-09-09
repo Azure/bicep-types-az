@@ -3718,6 +3718,106 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityInput",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource name to validate."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/349"
+        },
+        "flags": 1,
+        "description": "The type of the resource whose name is to be validated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/frontDoors"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network/frontDoors/frontendEndpoints"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/347"
+      },
+      {
+        "$ref": "#/348"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityOutput",
+    "properties": {
+      "nameAvailability": {
+        "type": {
+          "$ref": "#/353"
+        },
+        "flags": 2,
+        "description": "Indicates whether the name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The reason why the name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The detailed error message describing why the name is not available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/351"
+      },
+      {
+        "$ref": "#/352"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkFrontDoorNameAvailability",
+    "resourceType": "Microsoft.Network",
+    "apiVersion": "2020-04-01",
+    "output": {
+      "$ref": "#/350"
+    },
+    "input": {
+      "$ref": "#/346"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ValidateCustomDomainInput",
     "properties": {
       "hostName": {
@@ -3762,10 +3862,10 @@
     "resourceType": "Microsoft.Network/frontDoors",
     "apiVersion": "2020-04-01",
     "output": {
-      "$ref": "#/347"
+      "$ref": "#/356"
     },
     "input": {
-      "$ref": "#/346"
+      "$ref": "#/355"
     }
   },
   {
@@ -3774,7 +3874,7 @@
     "properties": {
       "contentPaths": {
         "type": {
-          "$ref": "#/350"
+          "$ref": "#/359"
         },
         "flags": 1,
         "description": "The path to the content to be purged. Can describe a file path or a wild card directory."
@@ -3796,10 +3896,10 @@
     "resourceType": "Microsoft.Network/frontDoors",
     "apiVersion": "2020-04-01",
     "output": {
-      "$ref": "#/351"
+      "$ref": "#/360"
     },
     "input": {
-      "$ref": "#/349"
+      "$ref": "#/358"
     }
   },
   {
@@ -3808,7 +3908,7 @@
     "resourceType": "Microsoft.Network/frontDoors/frontendEndpoints",
     "apiVersion": "2020-04-01",
     "output": {
-      "$ref": "#/351"
+      "$ref": "#/360"
     },
     "input": {
       "$ref": "#/307"
@@ -3820,7 +3920,7 @@
     "resourceType": "Microsoft.Network/frontDoors/frontendEndpoints",
     "apiVersion": "2020-04-01",
     "output": {
-      "$ref": "#/351"
+      "$ref": "#/360"
     }
   }
 ]

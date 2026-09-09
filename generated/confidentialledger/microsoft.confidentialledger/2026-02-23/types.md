@@ -13,6 +13,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ConfidentialLedger/ledgers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.ConfidentialLedger@2026-02-23)
+* **Resource**: Microsoft.ConfidentialLedger
+* **ApiVersion**: 2026-02-23
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function filesExport (Microsoft.ConfidentialLedger/ledgers@2026-02-23)
 * **Resource**: Microsoft.ConfidentialLedger/ledgers
 * **ApiVersion**: 2026-02-23
@@ -29,6 +35,17 @@
 ### Properties
 * **cert**: string: Public key of the user cert (.pem or .cer)
 * **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader' | string: LedgerRole associated with the Security Principal of Ledger
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
 
 ## ConfidentialLedgerFilesExport
 ### Properties

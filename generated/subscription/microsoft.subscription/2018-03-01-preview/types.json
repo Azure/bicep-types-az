@@ -1,0 +1,116 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionCreationParameters",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The display name of the subscription."
+      },
+      "owners": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "The list of principals that should be granted Owner access on the subscription. Principals should be of type User, Service Principal or Security Group."
+      },
+      "offerType": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The offer type of the subscription. For example, MS-AZR-0017P (EnterpriseAgreement) and MS-AZR-0148P (EnterpriseAgreement devTest) are available. Only valid when creating a subscription in a enrollment account scope."
+      },
+      "additionalParameters": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Additional, untyped parameters to support custom subscription creation scenarios."
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdPrincipal",
+    "properties": {
+      "objectId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Object id of the Principal"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MS-AZR-0017P"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MS-AZR-0148P"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/4"
+      },
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionCreationParametersAdditionalParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/7"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionCreationResult",
+    "properties": {
+      "subscriptionLink": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The link to the new subscription. Use this link to check the status of subscription creation operation."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createSubscription",
+    "resourceType": "Microsoft.Subscription",
+    "apiVersion": "2018-03-01-preview",
+    "output": {
+      "$ref": "#/9"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  }
+]

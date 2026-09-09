@@ -79,6 +79,12 @@
 * **properties**: [SubscriptionProperties](#subscriptionproperties): Description of Subscription Resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function CheckNameAvailability (Microsoft.ServiceBus@2015-08-01)
+* **Resource**: Microsoft.ServiceBus
+* **ApiVersion**: 2015-08-01
+* **Input**: [CheckNameAvailability](#checknameavailability)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2015-08-01)
 * **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
 * **ApiVersion**: 2015-08-01
@@ -111,6 +117,16 @@
 * **ApiVersion**: 2015-08-01
 * **Input**: [RegenerateKeysParameters](#regeneratekeysparameters)
 * **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## CheckNameAvailability
+### Properties
+* **name**: string (Required): The Name to check the namespace name availability and The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the namespace.
+* **nameAvailable**: bool: Value indicating namespace is availability, true if the namespace is available; otherwise, false.
+* **reason**: 'InvalidName' | 'NameInLockdown' | 'NameInUse' | 'None' | 'SubscriptionIsDisabled' | 'TooManyNamespaceInCurrentSubscription' | string: The reason for unavailability of a namespace.
 
 ## MessageCountDetails
 ### Properties

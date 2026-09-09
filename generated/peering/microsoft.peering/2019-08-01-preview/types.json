@@ -1474,5 +1474,59 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckServiceProviderAvailabilityInput",
+    "properties": {
+      "peeringServiceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the PeeringServiceLocation"
+      },
+      "peeringServiceProvider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the PeeringServiceProvider"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnAvailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "CheckServiceProviderAvailability",
+    "resourceType": "Microsoft.Peering",
+    "apiVersion": "2019-08-01-preview",
+    "output": {
+      "$ref": "#/141"
+    },
+    "input": {
+      "$ref": "#/138"
+    }
   }
 ]

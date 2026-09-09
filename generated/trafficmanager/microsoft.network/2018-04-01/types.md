@@ -42,6 +42,17 @@
 * **properties**: [UserMetricsProperties](#usermetricsproperties) (ReadOnly): The properties of the Traffic Manager User Metrics.
 * **type**: 'Microsoft.Network/trafficManagerUserMetricsKeys' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkTrafficManagerNameAvailability (Microsoft.Network@2018-04-01)
+* **Resource**: Microsoft.Network
+* **ApiVersion**: 2018-04-01
+* **Input**: [CheckTrafficManagerRelativeDnsNameAvailabilityParameters](#checktrafficmanagerrelativednsnameavailabilityparameters)
+* **Output**: [TrafficManagerNameAvailability](#trafficmanagernameavailability)
+
+## CheckTrafficManagerRelativeDnsNameAvailabilityParameters
+### Properties
+* **name**: string: The name of the resource.
+* **type**: string: The type of the resource.
+
 ## DnsConfig
 ### Properties
 * **fqdn**: string (ReadOnly): The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.
@@ -151,6 +162,14 @@
 * **longitude**: int: The approximate longitude that these queries originated from.
 * **queryExperiences**: [QueryExperience](#queryexperience)[]: The query experiences produced in this HeatMap calculation.
 * **sourceIp**: string: The IP address that this query experience originated from.
+
+## TrafficManagerNameAvailability
+### Properties
+* **message**: string: Descriptive message that explains why the name is not available, when applicable.
+* **name**: string: The relative name.
+* **nameAvailable**: bool: Describes whether the relative name is available or not.
+* **reason**: string: The reason why the name is not available, when applicable.
+* **type**: string: Traffic Manager profile resource type.
 
 ## UserMetricsProperties
 ### Properties

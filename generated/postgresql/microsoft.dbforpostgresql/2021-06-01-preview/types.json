@@ -1388,6 +1388,101 @@
   },
   {
     "$type": "ObjectType",
+    "name": "NameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource type used for verification."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error Message."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 2,
+        "description": "Indicates whether the resource name is available."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "name of the PostgreSQL server."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "type of the server"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 2,
+        "description": "The name availability reason."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/110"
+    },
+    "input": {
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "VirtualNetworkSubnetUsageParameter",
     "properties": {
       "virtualNetworkArmResourceId": {
@@ -1405,7 +1500,7 @@
     "properties": {
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/112"
+          "$ref": "#/118"
         },
         "flags": 2
       }
@@ -1434,7 +1529,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/111"
+      "$ref": "#/117"
     }
   },
   {
@@ -1443,10 +1538,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2021-06-01-preview",
     "output": {
-      "$ref": "#/110"
+      "$ref": "#/116"
     },
     "input": {
-      "$ref": "#/109"
+      "$ref": "#/115"
     }
   }
 ]

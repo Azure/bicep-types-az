@@ -78,6 +78,12 @@
 * **ApiVersion**: 2016-07-01
 * **Output**: [AuthorizationRuleListResult](#authorizationrulelistresult)
 
+## Function CheckNameAvailability (Microsoft.Relay@2016-07-01)
+* **Resource**: Microsoft.Relay
+* **ApiVersion**: 2016-07-01
+* **Input**: [CheckNameAvailability](#checknameavailability)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function listKeys (Microsoft.Relay/namespaces/AuthorizationRules@2016-07-01)
 * **Resource**: Microsoft.Relay/namespaces/AuthorizationRules
 * **ApiVersion**: 2016-07-01
@@ -134,6 +140,16 @@
 ## AuthorizationRuleProperties
 ### Properties
 * **rights**: ('Listen' | 'Manage' | 'Send' | string)[] (Required): The rights associated with the rule.
+
+## CheckNameAvailability
+### Properties
+* **name**: string (Required): The Name to check the namespce name availability and The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the namespace.
+* **nameAvailable**: bool: Value indicating namespace is availability, true if the namespace is available; otherwise, false.
+* **reason**: 'InvalidName' | 'NameInLockdown' | 'NameInUse' | 'None' | 'SubscriptionIsDisabled' | 'TooManyNamespaceInCurrentSubscription': The reason for unavailability of a namespace.
 
 ## HybridConnectionProperties
 ### Properties

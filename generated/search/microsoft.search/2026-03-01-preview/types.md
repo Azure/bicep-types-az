@@ -48,6 +48,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Search/searchServices/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Search@2026-03-01-preview)
+* **Resource**: Microsoft.Search
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
 ## Function listAdminKeys (Microsoft.Search/searchServices@2026-03-01-preview)
 * **Resource**: Microsoft.Search/searchServices
 * **ApiVersion**: 2026-03-01-preview
@@ -96,6 +102,17 @@
 ### Properties
 * **applicationId**: string: The application (client) ID of an App Registration in the tenant.
 * **applicationSecret**: string {sensitive}: An AAD client secret that was generated for the App Registration used to authenticate with Azure Key Vault.
+
+## CheckNameAvailabilityInput
+### Properties
+* **name**: string (Required): The search service name to validate. Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.
+* **type**: 'searchServices' (Required): The type of the resource whose name is to be validated. This value must always be 'searchServices'.
+
+## CheckNameAvailabilityOutput
+### Properties
+* **message**: string (ReadOnly): A message that explains why the name is invalid and provides resource naming requirements. Available only if 'Invalid' is returned in the 'reason' property.
+* **nameAvailable**: bool (ReadOnly): A value indicating whether the name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string (ReadOnly): The reason why the name is not available. 'Invalid' indicates the name provided does not match the naming requirements (incorrect length, unsupported characters, etc.). 'AlreadyExists' indicates that the name is already in use and is therefore unavailable.
 
 ## DataIdentity
 * **Discriminator**: @odata.type

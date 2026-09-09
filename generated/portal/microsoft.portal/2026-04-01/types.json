@@ -599,5 +599,67 @@
     },
     "readableScopes": 1,
     "writableScopes": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ViolationsList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 1,
+        "description": "The Violation items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Violation",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Id of the item that violates tenant configuration."
+      },
+      "userId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Id of the user who owns violated item."
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Error message."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listTenantConfigurationViolations",
+    "resourceType": "Microsoft.Portal",
+    "apiVersion": "2026-04-01",
+    "output": {
+      "$ref": "#/47"
+    }
   }
 ]

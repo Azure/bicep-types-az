@@ -19,6 +19,12 @@
 * **Input**: [DataPartitionAddOrRemoveRequest](#datapartitionaddorremoverequest)
 * **Output**: [DataPartitionAddOrRemoveRequest](#datapartitionaddorremoverequest)
 
+## Function checkNameAvailability (Microsoft.OpenEnergyPlatform@2022-04-04-preview)
+* **Resource**: Microsoft.OpenEnergyPlatform
+* **ApiVersion**: 2022-04-04-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function listPartitions (Microsoft.OpenEnergyPlatform/energyServices@2022-04-04-preview)
 * **Resource**: Microsoft.OpenEnergyPlatform/energyServices
 * **ApiVersion**: 2022-04-04-preview
@@ -29,6 +35,17 @@
 * **ApiVersion**: 2022-04-04-preview
 * **Input**: [DataPartitionAddOrRemoveRequest](#datapartitionaddorremoverequest)
 * **Output**: [DataPartitionAddOrRemoveRequest](#datapartitionaddorremoverequest)
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
 
 ## DataPartitionAddOrRemoveRequest
 ### Properties

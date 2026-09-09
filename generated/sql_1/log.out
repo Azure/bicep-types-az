@@ -1,5 +1,5 @@
 Generating types for 'specification/sql/resource-manager/Microsoft.Sql/SQL/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v22.23.2]
+AutoRest code generation utility [cli version: 3.8.0; node: v24.20.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
@@ -33,7 +33,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revert' has no response schema. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
@@ -92,7 +91,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revert' has no response schema. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
@@ -151,7 +149,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revert' has no response schema. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
@@ -221,7 +218,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revert' has no response schema. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
@@ -285,7 +281,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revert' has no response schema. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
@@ -353,7 +348,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revert' has no response schema. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
@@ -409,7 +403,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revert' has no response schema. Returning 'any'.
@@ -474,7 +467,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revert' has no response schema. Returning 'any'.
@@ -531,7 +523,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revert' has no response schema. Returning 'any'.
@@ -595,7 +586,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revert' has no response schema. Returning 'any'.
@@ -668,7 +658,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revert' has no response schema. Returning 'any'.
@@ -732,7 +721,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
 warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/failover' has no response schema. Returning 'any'.
@@ -786,7 +774,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
 warning | Resource action initiateScan under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/sqlVulnerabilityAssessments/{vulnerabilityAssessmentName}/initiateScan' has no response schema. Returning 'any'.
@@ -841,7 +828,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
 warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/failover' has no response schema. Returning 'any'.
@@ -885,7 +871,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
 warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/failover' has no response schema. Returning 'any'.
@@ -924,7 +909,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action initiateScan under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/vulnerabilityAssessments/{vulnerabilityAssessmentName}/scans/{scanId}/initiateScan' has no response schema. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
@@ -963,7 +947,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
 warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/failover' has no response schema. Returning 'any'.
@@ -1003,7 +986,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
 warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/failover' has no response schema. Returning 'any'.
@@ -1120,7 +1102,6 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping SyncGroups_ListLogs due to required query parameter "startTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
 warning | Resource action refreshHubSchema under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/syncGroups/{syncGroupName}/refreshHubSchema' has no response schema. Returning 'any'.
 warning | Resource action cancelSync under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/syncGroups/{syncGroupName}/cancelSync' has no response schema. Returning 'any'.
@@ -1145,7 +1126,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}/failover' has no response schema. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
@@ -1185,7 +1165,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/failover' has no response schema. Returning 'any'.
 warning | Resource action upgradeDataWarehouse under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/upgradeDataWarehouse' has no response schema. Returning 'any'.
@@ -1231,7 +1210,6 @@ warning | Skipping SyncGroups_ListLogs due to required query parameter "startTim
 warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
 warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Sql/checkNameAvailability': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
 warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/failover' has no response schema. Returning 'any'.

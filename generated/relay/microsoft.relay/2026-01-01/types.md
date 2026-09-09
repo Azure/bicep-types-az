@@ -108,6 +108,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Relay/namespaces/wcfRelays/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Relay@2026-01-01)
+* **Resource**: Microsoft.Relay
+* **ApiVersion**: 2026-01-01
+* **Input**: [CheckNameAvailability](#checknameavailability)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function listKeys (Microsoft.Relay/namespaces/authorizationRules@2026-01-01)
 * **Resource**: Microsoft.Relay/namespaces/authorizationRules
 * **ApiVersion**: 2026-01-01
@@ -152,6 +158,16 @@
 ## AuthorizationRuleProperties
 ### Properties
 * **rights**: ('Listen' | 'Manage' | 'Send' | string)[] (Required): The rights associated with the rule.
+
+## CheckNameAvailability
+### Properties
+* **name**: string (Required): The namespace name to check for availability. The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the namespace.
+* **nameAvailable**: bool: Value indicating namespace is available. Returns true if the namespace is available; otherwise, false.
+* **reason**: 'InvalidName' | 'NameInLockdown' | 'NameInUse' | 'None' | 'SubscriptionIsDisabled' | 'TooManyNamespaceInCurrentSubscription' | string: The reason for unavailability of a namespace.
 
 ## ConnectionState
 ### Properties

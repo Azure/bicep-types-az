@@ -71,6 +71,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles/Experiments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkFrontDoorNameAvailability (Microsoft.Network@2025-10-01)
+* **Resource**: Microsoft.Network
+* **ApiVersion**: 2025-10-01
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
 ## Function disableHttps (Microsoft.Network/frontDoors/frontendEndpoints@2025-10-01)
 * **Resource**: Microsoft.Network/frontDoors/frontendEndpoints
 * **ApiVersion**: 2025-10-01
@@ -134,6 +140,17 @@
 * **dynamicCompression**: 'Disabled' | 'Enabled' | string: Whether to use dynamic compression for cached content
 * **queryParameters**: string: query parameters to include or exclude (comma separated).
 * **queryParameterStripDirective**: 'StripAll' | 'StripAllExcept' | 'StripNone' | 'StripOnly' | string: Treatment of URL query terms when forming the cache key.
+
+## CheckNameAvailabilityInput
+### Properties
+* **name**: string (Required): The resource name to validate.
+* **type**: 'Microsoft.Network/frontDoors' | 'Microsoft.Network/frontDoors/frontendEndpoints' (Required): The type of the resource whose name is to be validated.
+
+## CheckNameAvailabilityOutput
+### Properties
+* **message**: string (ReadOnly): The detailed error message describing why the name is not available.
+* **nameAvailability**: 'Available' | 'Unavailable' | string (ReadOnly): Indicates whether the name is available.
+* **reason**: string (ReadOnly): The reason why the name is not available.
 
 ## CustomHttpsConfiguration
 ### Properties

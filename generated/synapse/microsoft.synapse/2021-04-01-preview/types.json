@@ -9489,11 +9489,77 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Workspace name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Type: workspace"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Validation message"
+      },
+      "available": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Whether the workspace name is available"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Reason the workspace name is or is not available"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Workspace name"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Synapse",
+    "apiVersion": "2021-04-01-preview",
+    "output": {
+      "$ref": "#/734"
+    },
+    "input": {
+      "$ref": "#/733"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ReplaceAllIpFirewallRulesRequest",
     "properties": {
       "ipFirewallRules": {
         "type": {
-          "$ref": "#/734"
+          "$ref": "#/737"
         },
         "flags": 0,
         "description": "IP firewall rule properties"
@@ -9527,10 +9593,10 @@
     "resourceType": "Microsoft.Synapse/workspaces",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/735"
+      "$ref": "#/738"
     },
     "input": {
-      "$ref": "#/733"
+      "$ref": "#/736"
     }
   },
   {
@@ -9555,7 +9621,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/739"
+          "$ref": "#/742"
         },
         "flags": 1,
         "description": "Integration runtime properties."
@@ -9576,7 +9642,7 @@
       },
       "state": {
         "type": {
-          "$ref": "#/750"
+          "$ref": "#/753"
         },
         "flags": 2,
         "description": "The state of integration runtime."
@@ -9584,10 +9650,10 @@
     },
     "elements": {
       "Managed": {
-        "$ref": "#/751"
+        "$ref": "#/754"
       },
       "SelfHosted": {
-        "$ref": "#/767"
+        "$ref": "#/770"
       }
     }
   },
@@ -9635,15 +9701,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/740"
-      },
-      {
-        "$ref": "#/741"
-      },
-      {
-        "$ref": "#/742"
-      },
-      {
         "$ref": "#/743"
       },
       {
@@ -9665,6 +9722,15 @@
         "$ref": "#/749"
       },
       {
+        "$ref": "#/750"
+      },
+      {
+        "$ref": "#/751"
+      },
+      {
+        "$ref": "#/752"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -9675,14 +9741,14 @@
     "properties": {
       "typeProperties": {
         "type": {
-          "$ref": "#/752"
+          "$ref": "#/755"
         },
         "flags": 1,
         "description": "Managed integration runtime status type properties."
       },
       "type": {
         "type": {
-          "$ref": "#/766"
+          "$ref": "#/769"
         },
         "flags": 1,
         "description": "Type of integration runtime."
@@ -9702,21 +9768,21 @@
       },
       "nodes": {
         "type": {
-          "$ref": "#/762"
+          "$ref": "#/765"
         },
         "flags": 2,
         "description": "The list of nodes for managed integration runtime."
       },
       "otherErrors": {
         "type": {
-          "$ref": "#/763"
+          "$ref": "#/766"
         },
         "flags": 2,
         "description": "The errors that occurred on this integration runtime."
       },
       "lastOperation": {
         "type": {
-          "$ref": "#/764"
+          "$ref": "#/767"
         },
         "flags": 2,
         "description": "The last operation result that occurred on this integration runtime."
@@ -9736,14 +9802,14 @@
       },
       "status": {
         "type": {
-          "$ref": "#/758"
+          "$ref": "#/761"
         },
         "flags": 2,
         "description": "The managed integration runtime node status."
       },
       "errors": {
         "type": {
-          "$ref": "#/761"
+          "$ref": "#/764"
         },
         "flags": 0,
         "description": "The errors that occurred on this integration runtime node."
@@ -9773,16 +9839,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/754"
-      },
-      {
-        "$ref": "#/755"
-      },
-      {
-        "$ref": "#/756"
-      },
-      {
         "$ref": "#/757"
+      },
+      {
+        "$ref": "#/758"
+      },
+      {
+        "$ref": "#/759"
+      },
+      {
+        "$ref": "#/760"
       },
       {
         "$ref": "#/0"
@@ -9809,7 +9875,7 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/760"
+          "$ref": "#/763"
         },
         "flags": 2,
         "description": "Managed integration runtime error parameters."
@@ -9835,19 +9901,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/759"
+      "$ref": "#/762"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/753"
+      "$ref": "#/756"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/759"
+      "$ref": "#/762"
     }
   },
   {
@@ -9884,7 +9950,7 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/765"
+          "$ref": "#/768"
         },
         "flags": 2,
         "description": "Managed integration runtime error parameters."
@@ -9917,14 +9983,14 @@
     "properties": {
       "typeProperties": {
         "type": {
-          "$ref": "#/768"
+          "$ref": "#/771"
         },
         "flags": 1,
         "description": "Self-hosted integration runtime status type properties."
       },
       "type": {
         "type": {
-          "$ref": "#/795"
+          "$ref": "#/798"
         },
         "flags": 1,
         "description": "Type of integration runtime."
@@ -9958,7 +10024,7 @@
       },
       "internalChannelEncryption": {
         "type": {
-          "$ref": "#/772"
+          "$ref": "#/775"
         },
         "flags": 2,
         "description": "It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist)."
@@ -9972,7 +10038,7 @@
       },
       "nodes": {
         "type": {
-          "$ref": "#/787"
+          "$ref": "#/790"
         },
         "flags": 0,
         "description": "The list of nodes for this integration runtime."
@@ -10000,21 +10066,21 @@
       },
       "capabilities": {
         "type": {
-          "$ref": "#/788"
+          "$ref": "#/791"
         },
         "flags": 2,
         "description": "Object with additional information about integration runtime capabilities."
       },
       "serviceUrls": {
         "type": {
-          "$ref": "#/789"
+          "$ref": "#/792"
         },
         "flags": 2,
         "description": "The URLs for the services used in integration runtime backend service."
       },
       "autoUpdate": {
         "type": {
-          "$ref": "#/792"
+          "$ref": "#/795"
         },
         "flags": 2,
         "description": "Whether Self-hosted integration runtime auto update has been turned on."
@@ -10028,7 +10094,7 @@
       },
       "links": {
         "type": {
-          "$ref": "#/794"
+          "$ref": "#/797"
         },
         "flags": 0,
         "description": "The list of linked integration runtimes that are created to share with this integration runtime."
@@ -10072,13 +10138,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/769"
+        "$ref": "#/772"
       },
       {
-        "$ref": "#/770"
+        "$ref": "#/773"
       },
       {
-        "$ref": "#/771"
+        "$ref": "#/774"
       },
       {
         "$ref": "#/0"
@@ -10112,14 +10178,14 @@
       },
       "status": {
         "type": {
-          "$ref": "#/781"
+          "$ref": "#/784"
         },
         "flags": 2,
         "description": "Status of the integration runtime node."
       },
       "capabilities": {
         "type": {
-          "$ref": "#/782"
+          "$ref": "#/785"
         },
         "flags": 2,
         "description": "The integration runtime capabilities dictionary"
@@ -10175,7 +10241,7 @@
       },
       "lastUpdateResult": {
         "type": {
-          "$ref": "#/786"
+          "$ref": "#/789"
         },
         "flags": 2,
         "description": "The result of the last integration runtime node update."
@@ -10252,15 +10318,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/774"
-      },
-      {
-        "$ref": "#/775"
-      },
-      {
-        "$ref": "#/776"
-      },
-      {
         "$ref": "#/777"
       },
       {
@@ -10271,6 +10328,15 @@
       },
       {
         "$ref": "#/780"
+      },
+      {
+        "$ref": "#/781"
+      },
+      {
+        "$ref": "#/782"
+      },
+      {
+        "$ref": "#/783"
       },
       {
         "$ref": "#/0"
@@ -10301,13 +10367,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/783"
+        "$ref": "#/786"
       },
       {
-        "$ref": "#/784"
+        "$ref": "#/787"
       },
       {
-        "$ref": "#/785"
+        "$ref": "#/788"
       },
       {
         "$ref": "#/0"
@@ -10317,7 +10383,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/773"
+      "$ref": "#/776"
     }
   },
   {
@@ -10346,10 +10412,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/790"
+        "$ref": "#/793"
       },
       {
-        "$ref": "#/791"
+        "$ref": "#/794"
       },
       {
         "$ref": "#/0"
@@ -10400,7 +10466,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/793"
+      "$ref": "#/796"
     }
   },
   {
@@ -10413,7 +10479,7 @@
     "resourceType": "Microsoft.Synapse/workspaces/integrationRuntimes",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/738"
+      "$ref": "#/741"
     }
   },
   {
@@ -10462,7 +10528,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/818"
+          "$ref": "#/821"
         },
         "flags": 0,
         "description": "List of SSIS object metadata."
@@ -10505,16 +10571,16 @@
     },
     "elements": {
       "Environment": {
-        "$ref": "#/803"
+        "$ref": "#/806"
       },
       "Folder": {
-        "$ref": "#/807"
+        "$ref": "#/810"
       },
       "Package": {
-        "$ref": "#/809"
+        "$ref": "#/812"
       },
       "Project": {
-        "$ref": "#/813"
+        "$ref": "#/816"
       }
     }
   },
@@ -10531,14 +10597,14 @@
       },
       "variables": {
         "type": {
-          "$ref": "#/805"
+          "$ref": "#/808"
         },
         "flags": 0,
         "description": "Variable in environment"
       },
       "type": {
         "type": {
-          "$ref": "#/806"
+          "$ref": "#/809"
         },
         "flags": 1,
         "description": "Type of metadata."
@@ -10603,7 +10669,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/804"
+      "$ref": "#/807"
     }
   },
   {
@@ -10616,7 +10682,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/808"
+          "$ref": "#/811"
         },
         "flags": 1,
         "description": "Type of metadata."
@@ -10654,14 +10720,14 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/811"
+          "$ref": "#/814"
         },
         "flags": 0,
         "description": "Parameters in package"
       },
       "type": {
         "type": {
-          "$ref": "#/812"
+          "$ref": "#/815"
         },
         "flags": 1,
         "description": "Type of metadata."
@@ -10761,7 +10827,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/810"
+      "$ref": "#/813"
     }
   },
   {
@@ -10788,21 +10854,21 @@
       },
       "environmentRefs": {
         "type": {
-          "$ref": "#/815"
+          "$ref": "#/818"
         },
         "flags": 0,
         "description": "Environment reference in project"
       },
       "parameters": {
         "type": {
-          "$ref": "#/816"
+          "$ref": "#/819"
         },
         "flags": 0,
         "description": "Parameters in project"
       },
       "type": {
         "type": {
-          "$ref": "#/817"
+          "$ref": "#/820"
         },
         "flags": 1,
         "description": "Type of metadata."
@@ -10846,13 +10912,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/814"
+      "$ref": "#/817"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/810"
+      "$ref": "#/813"
     }
   },
   {
@@ -10862,7 +10928,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/802"
+      "$ref": "#/805"
     }
   },
   {
@@ -10871,10 +10937,10 @@
     "resourceType": "Microsoft.Synapse/workspaces/integrationRuntimes",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/801"
+      "$ref": "#/804"
     },
     "input": {
-      "$ref": "#/800"
+      "$ref": "#/803"
     }
   },
   {
@@ -10917,7 +10983,7 @@
     "resourceType": "Microsoft.Synapse/workspaces/integrationRuntimes",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/820"
+      "$ref": "#/823"
     }
   },
   {
@@ -10986,7 +11052,7 @@
     "resourceType": "Microsoft.Synapse/workspaces/integrationRuntimes",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/823"
+      "$ref": "#/826"
     }
   },
   {
@@ -10995,7 +11061,7 @@
     "properties": {
       "keyName": {
         "type": {
-          "$ref": "#/828"
+          "$ref": "#/831"
         },
         "flags": 0,
         "description": "The name of the authentication key to regenerate."
@@ -11014,10 +11080,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/826"
+        "$ref": "#/829"
       },
       {
-        "$ref": "#/827"
+        "$ref": "#/830"
       },
       {
         "$ref": "#/0"
@@ -11050,10 +11116,10 @@
     "resourceType": "Microsoft.Synapse/workspaces/integrationRuntimes",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/829"
+      "$ref": "#/832"
     },
     "input": {
-      "$ref": "#/825"
+      "$ref": "#/828"
     }
   },
   {
@@ -11062,7 +11128,7 @@
     "resourceType": "Microsoft.Synapse/workspaces/integrationRuntimes",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/829"
+      "$ref": "#/832"
     }
   },
   {
@@ -11078,7 +11144,7 @@
       },
       "nodes": {
         "type": {
-          "$ref": "#/834"
+          "$ref": "#/837"
         },
         "flags": 0,
         "description": "Integration runtime node monitoring data."
@@ -11153,7 +11219,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/833"
+      "$ref": "#/836"
     }
   },
   {
@@ -11162,7 +11228,7 @@
     "resourceType": "Microsoft.Synapse/workspaces/integrationRuntimes",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/832"
+      "$ref": "#/835"
     }
   },
   {
@@ -11171,7 +11237,7 @@
     "resourceType": "Microsoft.Synapse/workspaces/integrationRuntimes",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/738"
+      "$ref": "#/741"
     }
   },
   {
@@ -11193,7 +11259,7 @@
     "resourceType": "Microsoft.Synapse/workspaces/integrationRuntimes/nodes",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/837"
+      "$ref": "#/840"
     }
   },
   {
@@ -11274,10 +11340,10 @@
     "resourceType": "Microsoft.Synapse/workspaces/sqlPools",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/842"
+      "$ref": "#/845"
     },
     "input": {
-      "$ref": "#/841"
+      "$ref": "#/844"
     }
   },
   {
@@ -11313,7 +11379,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/848"
+          "$ref": "#/851"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -11360,7 +11426,7 @@
     "resourceType": "Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/847"
+      "$ref": "#/850"
     }
   },
   {
@@ -11385,7 +11451,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/852"
+          "$ref": "#/855"
         },
         "flags": 1,
         "description": "The type of resource, Microsoft.Synapse/workspaces/kustoPools."
@@ -11423,7 +11489,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/856"
+          "$ref": "#/859"
         },
         "flags": 0,
         "description": "Message providing the reason why the given name is invalid."
@@ -11442,10 +11508,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/854"
+        "$ref": "#/857"
       },
       {
-        "$ref": "#/855"
+        "$ref": "#/858"
       },
       {
         "$ref": "#/0"
@@ -11458,10 +11524,10 @@
     "resourceType": "Microsoft.Synapse/locations",
     "apiVersion": "2021-04-01-preview",
     "output": {
-      "$ref": "#/853"
+      "$ref": "#/856"
     },
     "input": {
-      "$ref": "#/851"
+      "$ref": "#/854"
     }
   }
 ]

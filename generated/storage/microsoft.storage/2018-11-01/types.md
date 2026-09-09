@@ -57,6 +57,12 @@
 * **properties**: [ManagementPolicyProperties](#managementpolicyproperties) (ReadOnly): Returns the Storage Account Data Policies Rules.
 * **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Storage@2018-11-01)
+* **Resource**: Microsoft.Storage
+* **ApiVersion**: 2018-11-01
+* **Input**: [StorageAccountCheckNameAvailabilityParameters](#storageaccountchecknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function clearLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2018-11-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2018-11-01
@@ -135,6 +141,12 @@
 * **cors**: [CorsRules](#corsrules): Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
 * **defaultServiceVersion**: string: DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
 * **deleteRetentionPolicy**: [DeleteRetentionPolicy](#deleteretentionpolicy): The blob service properties for soft delete.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): Gets an error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used.
+* **reason**: 'AccountNameInvalid' | 'AlreadyExists' (ReadOnly): Gets the reason that a storage account name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## ContainerProperties
 ### Properties
@@ -373,6 +385,11 @@
 ### Properties
 * **name**: string (ReadOnly): The name of capability, The capability information in the specified SKU, including file encryption, network ACLs, change notification, etc.
 * **value**: string (ReadOnly): A string value to indicate states of given capability. Possibly 'true' or 'false'.
+
+## StorageAccountCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The storage account name.
+* **type**: 'Microsoft.Storage/storageAccounts' (Required): The type of resource, Microsoft.Storage/storageAccounts
 
 ## StorageAccountCreateParametersTags
 ### Properties

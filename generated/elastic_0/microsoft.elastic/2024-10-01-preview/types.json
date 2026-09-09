@@ -2395,5 +2395,111 @@
     "output": {
       "$ref": "#/170"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserEmailId",
+    "properties": {
+      "emailId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The User email Id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserApiKeyResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserApiKeyResponseProperties",
+    "properties": {
+      "apiKey": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "The User Api Key Generated based on GenerateApiKey flag. This is applicable for non-Portal clients only."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getOrganizationApiKey",
+    "resourceType": "Microsoft.Elastic",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/174"
+    },
+    "input": {
+      "$ref": "#/173"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElasticOrganizationToAzureSubscriptionMappingResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/178"
+        },
+        "flags": 0,
+        "description": "The properties of Azure Subscription ID to which the Organization of the logged in user belongs and gets billed into."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElasticOrganizationToAzureSubscriptionMappingResponseProperties",
+    "properties": {
+      "billedAzureSubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Azure Subscription ID to which the Organization belongs and gets billed into. This is empty for a new user OR a user without an Elastic Organization."
+      },
+      "marketplaceSaasInfo": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 2,
+        "description": "Marketplace SaaS Info of the resource."
+      },
+      "elasticOrganizationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Elastic Organization Id."
+      },
+      "elasticOrganizationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Elastic Organization Name."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getElasticOrganizationToAzureSubscriptionMapping",
+    "resourceType": "Microsoft.Elastic",
+    "apiVersion": "2024-10-01-preview",
+    "output": {
+      "$ref": "#/177"
+    }
   }
 ]

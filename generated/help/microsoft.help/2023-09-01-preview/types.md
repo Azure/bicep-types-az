@@ -33,6 +33,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Help/troubleshooters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Help@2023-09-01-preview)
+* **Resource**: Microsoft.Help
+* **ApiVersion**: 2023-09-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function continue (Microsoft.Help/troubleshooters@2023-09-01-preview)
 * **Resource**: Microsoft.Help/troubleshooters
 * **ApiVersion**: 2023-09-01-preview
@@ -53,6 +59,17 @@
 ### Properties
 * **result**: string: Insight Article Content
 * **type**: 'Error' | 'Information' | 'Success' | 'Warning' | string: Type of Result.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Gets an error message explaining the 'reason' value with more details. This field is returned iif nameAvailable is false.
+* **nameAvailable**: bool: Returns true or false depending on the availability of the name
+* **reason**: string: Reason for why value is not available. This field is returned if nameAvailable is false.
 
 ## ContinueRequestBody
 ### Properties

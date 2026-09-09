@@ -11,6 +11,12 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function query (Microsoft.CostManagement@2019-10-01)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2019-10-01
+* **Input**: [QueryDefinition](#querydefinition)
+* **Output**: [QueryResult](#queryresult)
+
 ## Function run (Microsoft.CostManagement/exports@2019-10-01)
 * **Resource**: Microsoft.CostManagement/exports
 * **ApiVersion**: 2019-10-01
@@ -48,6 +54,11 @@
 ### Properties
 * **function**: 'Sum' | string (Required): The name of the aggregation function to use.
 * **name**: string (Required): The name of the column to aggregate.
+
+## QueryColumn
+### Properties
+* **name**: string: The name of column.
+* **type**: string: The type of column.
 
 ## QueryComparisonExpression
 ### Properties
@@ -93,6 +104,20 @@
 * **name**: string (Required): The name of the column to group.
 * **type**: 'Dimension' | 'Tag' | string (Required): Has type of the column to group.
 
+## QueryProperties
+### Properties
+* **columns**: [QueryColumn](#querycolumn)[]: Array of columns
+* **nextLink**: string: The link (url) to the next page of results.
+* **rows**: any[][]: Array of rows
+
+## QueryResult
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [QueryProperties](#queryproperties)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
 ## QuerySortingConfiguration
 ### Properties
 * **name**: string: The name of the column to use in sorting.
@@ -102,6 +127,11 @@
 ### Properties
 * **from**: string (Required): The start date to pull data from.
 * **to**: string (Required): The end date to pull data to.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

@@ -35,6 +35,12 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The properties of a private endpoint.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppConfiguration@2022-05-01)
+* **Resource**: Microsoft.AppConfiguration
+* **ApiVersion**: 2022-05-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [NameAvailabilityStatus](#nameavailabilitystatus)
+
 ## Function checkNameAvailability (Microsoft.AppConfiguration/locations@2022-05-01)
 * **Resource**: Microsoft.AppConfiguration/locations
 * **ApiVersion**: 2022-05-01

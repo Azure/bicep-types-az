@@ -37,6 +37,12 @@
 * **properties**: [ImmutabilityPolicyProperty](#immutabilitypolicyproperty) (Required): The properties of an ImmutabilityPolicy of a blob container.
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Storage@2018-02-01)
+* **Resource**: Microsoft.Storage
+* **ApiVersion**: 2018-02-01
+* **Input**: [StorageAccountCheckNameAvailabilityParameters](#storageaccountchecknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function clearLegalHold (Microsoft.Storage/storageAccounts/blobServices/containers@2018-02-01)
 * **Resource**: Microsoft.Storage/storageAccounts/blobServices/containers
 * **ApiVersion**: 2018-02-01
@@ -99,6 +105,12 @@
 * **signedResourceTypes**: 'c' | 'o' | 's' | string (Required): The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.
 * **signedServices**: 'b' | 'f' | 'q' | 't' | string (Required): The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).
 * **signedStart**: string: The time at which the SAS becomes valid.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): Gets an error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used.
+* **reason**: 'AccountNameInvalid' | 'AlreadyExists' (ReadOnly): Gets the reason that a storage account name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## ContainerProperties
 ### Properties
@@ -265,6 +277,11 @@
 ### Properties
 * **name**: string (ReadOnly): The name of capability, The capability information in the specified sku, including file encryption, network acls, change notification, etc.
 * **value**: string (ReadOnly): A string value to indicate states of given capability. Possibly 'true' or 'false'.
+
+## StorageAccountCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The storage account name.
+* **type**: 'Microsoft.Storage/storageAccounts' (Required): The type of resource, Microsoft.Storage/storageAccounts
 
 ## StorageAccountCreateParametersTags
 ### Properties

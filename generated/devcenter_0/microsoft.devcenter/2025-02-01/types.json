@@ -7400,6 +7400,126 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/465"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/676"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/674"
+      },
+      {
+        "$ref": "#/675"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DevCenter",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/673"
+    },
+    "input": {
+      "$ref": "#/672"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckScopedNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id to scope the name check."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkScopedNameAvailability",
+    "resourceType": "Microsoft.DevCenter",
+    "apiVersion": "2025-02-01",
+    "output": {
+      "$ref": "#/673"
+    },
+    "input": {
+      "$ref": "#/678"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "getErrorDetails",
     "resourceType": "Microsoft.DevCenter/devcenters/catalogs/tasks",
@@ -7448,7 +7568,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/683"
+          "$ref": "#/691"
         },
         "flags": 2,
         "description": "The status of the build."
@@ -7476,7 +7596,7 @@
       },
       "taskGroups": {
         "type": {
-          "$ref": "#/703"
+          "$ref": "#/711"
         },
         "flags": 2,
         "description": "The list of task groups executed during the image definition build."
@@ -7539,22 +7659,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/677"
+        "$ref": "#/685"
       },
       {
-        "$ref": "#/678"
+        "$ref": "#/686"
       },
       {
-        "$ref": "#/679"
+        "$ref": "#/687"
       },
       {
-        "$ref": "#/680"
+        "$ref": "#/688"
       },
       {
-        "$ref": "#/681"
+        "$ref": "#/689"
       },
       {
-        "$ref": "#/682"
+        "$ref": "#/690"
       },
       {
         "$ref": "#/2"
@@ -7574,7 +7694,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/691"
+          "$ref": "#/699"
         },
         "flags": 2,
         "description": "The status of the task group."
@@ -7595,7 +7715,7 @@
       },
       "tasks": {
         "type": {
-          "$ref": "#/702"
+          "$ref": "#/710"
         },
         "flags": 2,
         "description": "The list of tasks executed during the task group."
@@ -7630,22 +7750,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/685"
+        "$ref": "#/693"
       },
       {
-        "$ref": "#/686"
+        "$ref": "#/694"
       },
       {
-        "$ref": "#/687"
+        "$ref": "#/695"
       },
       {
-        "$ref": "#/688"
+        "$ref": "#/696"
       },
       {
-        "$ref": "#/689"
+        "$ref": "#/697"
       },
       {
-        "$ref": "#/690"
+        "$ref": "#/698"
       },
       {
         "$ref": "#/2"
@@ -7665,7 +7785,7 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/694"
+          "$ref": "#/702"
         },
         "flags": 0,
         "description": "Parameters for the task."
@@ -7700,7 +7820,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/701"
+          "$ref": "#/709"
         },
         "flags": 2,
         "description": "The status of the task."
@@ -7735,7 +7855,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/693"
+      "$ref": "#/701"
     }
   },
   {
@@ -7766,22 +7886,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/695"
+        "$ref": "#/703"
       },
       {
-        "$ref": "#/696"
+        "$ref": "#/704"
       },
       {
-        "$ref": "#/697"
+        "$ref": "#/705"
       },
       {
-        "$ref": "#/698"
+        "$ref": "#/706"
       },
       {
-        "$ref": "#/699"
+        "$ref": "#/707"
       },
       {
-        "$ref": "#/700"
+        "$ref": "#/708"
       },
       {
         "$ref": "#/2"
@@ -7791,13 +7911,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/692"
+      "$ref": "#/700"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/684"
+      "$ref": "#/692"
     }
   },
   {
@@ -7806,7 +7926,7 @@
     "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds",
     "apiVersion": "2025-02-01",
     "output": {
-      "$ref": "#/676"
+      "$ref": "#/684"
     }
   },
   {

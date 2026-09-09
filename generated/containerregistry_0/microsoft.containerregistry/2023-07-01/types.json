@@ -3052,6 +3052,69 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RegistryNameCheckRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 1,
+        "description": "The name of the container registry."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/258"
+        },
+        "flags": 1,
+        "description": "The resource type of the container registry. This field must be set to 'Microsoft.ContainerRegistry/registries'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ContainerRegistry/registries"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistryNameStatus",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 0,
+        "description": "The value that indicates whether the name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "If any, the reason that the name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "If any, the error message that provides more detail for the reason that the name is not available."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.ContainerRegistry",
+    "apiVersion": "2023-07-01",
+    "output": {
+      "$ref": "#/259"
+    },
+    "input": {
+      "$ref": "#/257"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "EventInfo",
     "properties": {
       "id": {
@@ -3069,7 +3132,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/webhooks",
     "apiVersion": "2023-07-01",
     "output": {
-      "$ref": "#/257"
+      "$ref": "#/261"
     }
   },
   {
@@ -3078,7 +3141,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/270"
+          "$ref": "#/274"
         },
         "flags": 0,
         "description": "The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events."
@@ -3098,14 +3161,14 @@
     "properties": {
       "eventRequestMessage": {
         "type": {
-          "$ref": "#/261"
+          "$ref": "#/265"
         },
         "flags": 0,
         "description": "The event request message sent to the service URI."
       },
       "eventResponseMessage": {
         "type": {
-          "$ref": "#/268"
+          "$ref": "#/272"
         },
         "flags": 0,
         "description": "The event response message received from the service URI."
@@ -3125,14 +3188,14 @@
     "properties": {
       "content": {
         "type": {
-          "$ref": "#/262"
+          "$ref": "#/266"
         },
         "flags": 0,
         "description": "The content of the event request message."
       },
       "headers": {
         "type": {
-          "$ref": "#/267"
+          "$ref": "#/271"
         },
         "flags": 0,
         "description": "The headers of the event request message."
@@ -3187,28 +3250,28 @@
       },
       "target": {
         "type": {
-          "$ref": "#/263"
+          "$ref": "#/267"
         },
         "flags": 0,
         "description": "The target of the event."
       },
       "request": {
         "type": {
-          "$ref": "#/264"
+          "$ref": "#/268"
         },
         "flags": 0,
         "description": "The request that generated the event."
       },
       "actor": {
         "type": {
-          "$ref": "#/265"
+          "$ref": "#/269"
         },
         "flags": 0,
         "description": "The agent that initiated the event. For most situations, this could be from the authorization context of the request."
       },
       "source": {
         "type": {
-          "$ref": "#/266"
+          "$ref": "#/270"
         },
         "flags": 0,
         "description": "The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it."
@@ -3379,7 +3442,7 @@
       },
       "headers": {
         "type": {
-          "$ref": "#/269"
+          "$ref": "#/273"
         },
         "flags": 0,
         "description": "The headers of the event response message."
@@ -3418,7 +3481,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/260"
+      "$ref": "#/264"
     }
   },
   {
@@ -3427,7 +3490,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/webhooks",
     "apiVersion": "2023-07-01",
     "output": {
-      "$ref": "#/259"
+      "$ref": "#/263"
     }
   },
   {
@@ -3443,7 +3506,7 @@
       },
       "customHeaders": {
         "type": {
-          "$ref": "#/273"
+          "$ref": "#/277"
         },
         "flags": 0,
         "description": "Custom headers that will be added to the webhook notifications."
@@ -3464,7 +3527,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries/webhooks",
     "apiVersion": "2023-07-01",
     "output": {
-      "$ref": "#/272"
+      "$ref": "#/276"
     }
   }
 ]

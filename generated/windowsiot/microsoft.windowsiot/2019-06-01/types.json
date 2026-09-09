@@ -132,5 +132,79 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceServiceCheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the Windows IoT Device Service to check."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceServiceNameAvailabilityInfo",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "The value which indicates whether the provided name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The reason for unavailability."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The detailed reason message."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkDeviceServiceNameAvailability",
+    "resourceType": "Microsoft.WindowsIoT",
+    "apiVersion": "2019-06-01",
+    "output": {
+      "$ref": "#/9"
+    },
+    "input": {
+      "$ref": "#/8"
+    }
   }
 ]

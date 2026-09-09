@@ -45,6 +45,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Impact/workloadImpacts/insights' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getUploadToken (Microsoft.Impact@2026-01-01-preview)
+* **Resource**: Microsoft.Impact
+* **ApiVersion**: 2026-01-01-preview
+* **Output**: [UploadTokenResult](#uploadtokenresult)
+
 ## ClientIncidentDetails
 ### Properties
 * **clientIncidentId**: string: Client incident id. ex : id of the incident created to investigate and address the impact if any.
@@ -155,6 +160,10 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## UploadTokenResult
+### Properties
+* **uploadUrl**: string {sensitive} (Required): The SAS token URL for uploading
 
 ## UserAssignedIdentity
 ### Properties

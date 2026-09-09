@@ -267,6 +267,12 @@
 * **Input**: [ApiManagementServiceBackupRestoreParameters](#apimanagementservicebackuprestoreparameters)
 * **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
 
+## Function checkNameAvailability (Microsoft.ApiManagement@2016-10-10)
+* **Resource**: Microsoft.ApiManagement
+* **ApiVersion**: 2016-10-10
+* **Input**: [ApiManagementServiceCheckNameAvailabilityParameters](#apimanagementservicechecknameavailabilityparameters)
+* **Output**: [ApiManagementServiceNameAvailabilityResult](#apimanagementservicenameavailabilityresult)
+
 ## Function deploy (Microsoft.ApiManagement/service/tenant@2016-10-10)
 * **Resource**: Microsoft.ApiManagement/service/tenant
 * **ApiVersion**: 2016-10-10
@@ -360,6 +366,10 @@
 * **containerName**: string (Required): Azure Cloud Storage blob container name used to place/retrieve the backup.
 * **storageAccount**: string (Required): Azure Cloud Storage account (used to place/retrieve the backup) name.
 
+## ApiManagementServiceCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name to check for availability.
+
 ## ApiManagementServiceGetSsoTokenResult
 ### Properties
 * **redirect_uri**: string: Redirect URL containing the SSO token.
@@ -372,6 +382,12 @@
 * **skuUnitCount**: int: SKU Unit count of the API Management service. Default value is 1.
 * **vpnConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network configuration.
 * **vpnType**: 'External' | 'Internal' | 'None': The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that the API Management service deployment is set up inside a Virtual Network having an Intranet Facing Endpoint only. When vpnConfiguration is specified, vpnType must be specified.
+
+## ApiManagementServiceNameAvailabilityResult
+### Properties
+* **message**: string: If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that <resourceName> is already in use, and direct them to select a different name.
+* **nameAvailable**: bool (Required): True if the name is available and can be used to create a new API Management service; otherwise false.
+* **reason**: 'AlreadyExists' | 'Invalid' | 'Valid': Invalid indicates the name provided does not match the resource provider’s naming requirements (incorrect length, unsupported characters, etc.)  AlreadyExists indicates that the name is already in use and is therefore unavailable.
 
 ## ApiManagementServiceProperties
 ### Properties

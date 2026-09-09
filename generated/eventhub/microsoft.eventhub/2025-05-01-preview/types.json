@@ -3583,6 +3583,105 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Name to check the namespace name availability"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the Namespace."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Value indicating Namespace is availability, true if the Namespace is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/278"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a Namespace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionIsDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInLockdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TooManyNamespaceInCurrentSubscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/272"
+      },
+      {
+        "$ref": "#/273"
+      },
+      {
+        "$ref": "#/274"
+      },
+      {
+        "$ref": "#/275"
+      },
+      {
+        "$ref": "#/276"
+      },
+      {
+        "$ref": "#/277"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.EventHub",
+    "apiVersion": "2025-05-01-preview",
+    "output": {
+      "$ref": "#/271"
+    },
+    "input": {
+      "$ref": "#/270"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AccessKeys",
     "properties": {
       "primaryConnectionString": {
@@ -3642,7 +3741,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/authorizationRules",
     "apiVersion": "2025-05-01-preview",
     "output": {
-      "$ref": "#/270"
+      "$ref": "#/280"
     }
   },
   {
@@ -3651,7 +3750,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/275"
+          "$ref": "#/285"
         },
         "flags": 1,
         "description": "The access key to regenerate."
@@ -3677,10 +3776,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/273"
+        "$ref": "#/283"
       },
       {
-        "$ref": "#/274"
+        "$ref": "#/284"
       },
       {
         "$ref": "#/2"
@@ -3693,10 +3792,10 @@
     "resourceType": "Microsoft.EventHub/namespaces/authorizationRules",
     "apiVersion": "2025-05-01-preview",
     "output": {
-      "$ref": "#/270"
+      "$ref": "#/280"
     },
     "input": {
-      "$ref": "#/272"
+      "$ref": "#/282"
     }
   },
   {
@@ -3705,7 +3804,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/278"
+          "$ref": "#/288"
         },
         "flags": 0
       }
@@ -3737,10 +3836,10 @@
     "resourceType": "Microsoft.EventHub/namespaces",
     "apiVersion": "2025-05-01-preview",
     "output": {
-      "$ref": "#/277"
+      "$ref": "#/287"
     },
     "input": {
-      "$ref": "#/277"
+      "$ref": "#/287"
     }
   },
   {
@@ -3749,7 +3848,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules",
     "apiVersion": "2025-05-01-preview",
     "output": {
-      "$ref": "#/270"
+      "$ref": "#/280"
     }
   },
   {
@@ -3761,7 +3860,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs",
     "apiVersion": "2025-05-01-preview",
     "output": {
-      "$ref": "#/281"
+      "$ref": "#/291"
     }
   },
   {
@@ -3770,7 +3869,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs",
     "apiVersion": "2025-05-01-preview",
     "output": {
-      "$ref": "#/281"
+      "$ref": "#/291"
     }
   },
   {
@@ -3779,7 +3878,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules",
     "apiVersion": "2025-05-01-preview",
     "output": {
-      "$ref": "#/270"
+      "$ref": "#/280"
     }
   },
   {
@@ -3788,10 +3887,10 @@
     "resourceType": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules",
     "apiVersion": "2025-05-01-preview",
     "output": {
-      "$ref": "#/270"
+      "$ref": "#/280"
     },
     "input": {
-      "$ref": "#/272"
+      "$ref": "#/282"
     }
   },
   {
@@ -3800,7 +3899,7 @@
     "resourceType": "Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations",
     "apiVersion": "2025-05-01-preview",
     "output": {
-      "$ref": "#/281"
+      "$ref": "#/291"
     }
   }
 ]

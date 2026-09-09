@@ -1,5 +1,5 @@
 Generating types for 'specification/paloaltonetworks/resource-manager/PaloAltoNetworks.Cloudngfw/Cloudngfw/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v22.23.2]
+AutoRest code generation utility [cli version: 3.8.0; node: v24.20.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
@@ -9,10 +9,6 @@ warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required q
 warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
 warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
 warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/createProductSerialNumber': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listCloudManagerTenants': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listProductSerialNumberStatus': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listSupportInfo': Unable to find type segments
 warning | Resource action commit under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/commit' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/revert' has no response schema. Returning 'any'.
 warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/postRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
@@ -27,10 +23,6 @@ warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required q
 warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
 warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
 warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/createProductSerialNumber': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listCloudManagerTenants': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listProductSerialNumberStatus': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listSupportInfo': Unable to find type segments
 warning | Resource action commit under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/commit' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/revert' has no response schema. Returning 'any'.
 warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/postRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
@@ -45,10 +37,6 @@ warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required q
 warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
 warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
 warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/createProductSerialNumber': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listCloudManagerTenants': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listProductSerialNumberStatus': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listSupportInfo': Unable to find type segments
 warning | Resource action commit under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/commit' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/revert' has no response schema. Returning 'any'.
 warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/postRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
@@ -63,10 +51,6 @@ warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required q
 warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
 warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
 warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/createProductSerialNumber': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listCloudManagerTenants': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listProductSerialNumberStatus': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listSupportInfo': Unable to find type segments
 warning | Resource action commit under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/commit' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/revert' has no response schema. Returning 'any'.
 warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/postRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
@@ -95,10 +79,6 @@ warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required q
 warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
 warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
 warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/createProductSerialNumber': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listCloudManagerTenants': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listProductSerialNumberStatus': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listSupportInfo': Unable to find type segments
 warning | Resource action commit under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/commit' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/revert' has no response schema. Returning 'any'.
 warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/postRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
@@ -126,10 +106,6 @@ warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required q
 warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
 warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
 warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/createProductSerialNumber': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listCloudManagerTenants': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listProductSerialNumberStatus': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listSupportInfo': Unable to find type segments
 warning | Resource action commit under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/commit' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/revert' has no response schema. Returning 'any'.
 warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/postRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
@@ -157,10 +133,6 @@ warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required q
 warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
 warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
 warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/createProductSerialNumber': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listCloudManagerTenants': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listProductSerialNumberStatus': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listSupportInfo': Unable to find type segments
 warning | Resource action commit under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/commit' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/revert' has no response schema. Returning 'any'.
 warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/postRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
@@ -188,10 +160,6 @@ warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required q
 warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
 warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
 warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/createProductSerialNumber': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listCloudManagerTenants': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listProductSerialNumberStatus': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listSupportInfo': Unable to find type segments
 warning | Resource action commit under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/commit' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/revert' has no response schema. Returning 'any'.
 warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/postRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
@@ -219,7 +187,6 @@ warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required q
 warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
 warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
 warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/PaloAltoNetworks.Cloudngfw/listSupportInfo': Unable to find type segments
 warning | Resource action commit under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/commit' has no response schema. Returning 'any'.
 warning | Resource action revert under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/revert' has no response schema. Returning 'any'.
 warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/postRules/{priority}/refreshCounters' has no response schema. Returning 'any'.

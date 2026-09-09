@@ -56,6 +56,12 @@
 * **tags**: [DataCollectionRuleResourceTags](#datacollectionruleresourcetags): Resource tags.
 * **type**: 'Microsoft.Insights/dataCollectionRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function createNotifications (Microsoft.Insights@2022-06-01)
+* **Resource**: Microsoft.Insights
+* **ApiVersion**: 2022-06-01
+* **Input**: [NotificationRequestBody](#notificationrequestbody)
+* **Output**: [TestNotificationDetailsResponse](#testnotificationdetailsresponse)
+
 ## Function createNotifications (Microsoft.Insights/actionGroups@2022-06-01)
 * **Resource**: Microsoft.Insights/actionGroups
 * **ApiVersion**: 2022-06-01

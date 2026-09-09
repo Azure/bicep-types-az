@@ -678,6 +678,79 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ActivateSaaSParameterRequest",
+    "properties": {
+      "saasGuid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "SaaS guid for Activate and Validate SaaS Resource"
+      },
+      "publisherId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Publisher Id for Napster resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SaaSResourceDetailsResponse",
+    "properties": {
+      "saasId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the Marketplace SaaS Resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activateSaaS",
+    "resourceType": "Napster.CompanionAPI",
+    "apiVersion": "2026-08-11",
+    "output": {
+      "$ref": "#/53"
+    },
+    "input": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "LatestLinkedSaaSResponse",
     "properties": {
       "saaSResourceId": {
@@ -689,7 +762,7 @@
       },
       "isHiddenSaaS": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/56"
         },
         "flags": 0,
         "description": "Flag indicating if the SaaS resource is hidden"
@@ -705,7 +778,7 @@
     "resourceType": "Napster.CompanionAPI/organizations",
     "apiVersion": "2026-08-11",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/55"
     }
   },
   {
@@ -741,7 +814,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/57"
+          "$ref": "#/60"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -797,10 +870,10 @@
     "resourceType": "Napster.CompanionAPI/organizations",
     "apiVersion": "2026-08-11",
     "output": {
-      "$ref": "#/56"
+      "$ref": "#/59"
     },
     "input": {
-      "$ref": "#/55"
+      "$ref": "#/58"
     }
   }
 ]

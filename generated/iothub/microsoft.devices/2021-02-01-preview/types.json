@@ -2295,25 +2295,96 @@
   },
   {
     "$type": "ObjectType",
+    "name": "OperationInputs",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the IoT hub to check."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IotHubNameAvailabilityInfo",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "The value which indicates whether the provided name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 2,
+        "description": "The reason for unavailability."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The detailed reason message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Devices",
+    "apiVersion": "2021-02-01-preview",
+    "output": {
+      "$ref": "#/170"
+    },
+    "input": {
+      "$ref": "#/169"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "TestAllRoutesInput",
     "properties": {
       "routingSource": {
         "type": {
-          "$ref": "#/177"
+          "$ref": "#/183"
         },
         "flags": 0,
         "description": "Routing source"
       },
       "message": {
         "type": {
-          "$ref": "#/178"
+          "$ref": "#/184"
         },
         "flags": 0,
         "description": "Routing message"
       },
       "twin": {
         "type": {
-          "$ref": "#/181"
+          "$ref": "#/187"
         },
         "flags": 0,
         "description": "Routing Twin Reference"
@@ -2352,25 +2423,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/170"
-      },
-      {
-        "$ref": "#/171"
-      },
-      {
-        "$ref": "#/172"
-      },
-      {
-        "$ref": "#/173"
-      },
-      {
-        "$ref": "#/174"
-      },
-      {
-        "$ref": "#/175"
-      },
-      {
         "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/182"
       },
       {
         "$ref": "#/0"
@@ -2390,14 +2461,14 @@
       },
       "appProperties": {
         "type": {
-          "$ref": "#/179"
+          "$ref": "#/185"
         },
         "flags": 0,
         "description": "App properties"
       },
       "systemProperties": {
         "type": {
-          "$ref": "#/180"
+          "$ref": "#/186"
         },
         "flags": 0,
         "description": "System properties"
@@ -2426,14 +2497,14 @@
     "properties": {
       "tags": {
         "type": {
-          "$ref": "#/182"
+          "$ref": "#/188"
         },
         "flags": 0,
         "description": "Twin Tags"
       },
       "properties": {
         "type": {
-          "$ref": "#/183"
+          "$ref": "#/189"
         },
         "flags": 0
       }
@@ -2448,14 +2519,14 @@
     "properties": {
       "desired": {
         "type": {
-          "$ref": "#/182"
+          "$ref": "#/188"
         },
         "flags": 0,
         "description": "Twin desired properties"
       },
       "reported": {
         "type": {
-          "$ref": "#/182"
+          "$ref": "#/188"
         },
         "flags": 0,
         "description": "Twin desired properties"
@@ -2468,7 +2539,7 @@
     "properties": {
       "routes": {
         "type": {
-          "$ref": "#/186"
+          "$ref": "#/192"
         },
         "flags": 0,
         "description": "JSON-serialized array of matched routes"
@@ -2491,7 +2562,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/185"
+      "$ref": "#/191"
     }
   },
   {
@@ -2500,10 +2571,10 @@
     "resourceType": "Microsoft.Devices/IotHubs/routing",
     "apiVersion": "2021-02-01-preview",
     "output": {
-      "$ref": "#/184"
+      "$ref": "#/190"
     },
     "input": {
-      "$ref": "#/169"
+      "$ref": "#/175"
     }
   },
   {
@@ -2512,7 +2583,7 @@
     "properties": {
       "message": {
         "type": {
-          "$ref": "#/178"
+          "$ref": "#/184"
         },
         "flags": 0,
         "description": "Routing message"
@@ -2526,7 +2597,7 @@
       },
       "twin": {
         "type": {
-          "$ref": "#/181"
+          "$ref": "#/187"
         },
         "flags": 0,
         "description": "Routing Twin Reference"
@@ -2539,14 +2610,14 @@
     "properties": {
       "result": {
         "type": {
-          "$ref": "#/193"
+          "$ref": "#/199"
         },
         "flags": 0,
         "description": "Result of testing route"
       },
       "details": {
         "type": {
-          "$ref": "#/194"
+          "$ref": "#/200"
         },
         "flags": 0,
         "description": "Detailed result of testing route"
@@ -2569,13 +2640,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/190"
+        "$ref": "#/196"
       },
       {
-        "$ref": "#/191"
+        "$ref": "#/197"
       },
       {
-        "$ref": "#/192"
+        "$ref": "#/198"
       },
       {
         "$ref": "#/0"
@@ -2588,7 +2659,7 @@
     "properties": {
       "compilationErrors": {
         "type": {
-          "$ref": "#/201"
+          "$ref": "#/207"
         },
         "flags": 0,
         "description": "JSON-serialized list of route compilation errors"
@@ -2608,14 +2679,14 @@
       },
       "severity": {
         "type": {
-          "$ref": "#/198"
+          "$ref": "#/204"
         },
         "flags": 0,
         "description": "Severity of the route error"
       },
       "location": {
         "type": {
-          "$ref": "#/199"
+          "$ref": "#/205"
         },
         "flags": 0,
         "description": "Location where the route error happened"
@@ -2634,10 +2705,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/196"
+        "$ref": "#/202"
       },
       {
-        "$ref": "#/197"
+        "$ref": "#/203"
       },
       {
         "$ref": "#/0"
@@ -2650,14 +2721,14 @@
     "properties": {
       "start": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/206"
         },
         "flags": 0,
         "description": "Start where the route error happened"
       },
       "end": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/206"
         },
         "flags": 0,
         "description": "End where the route error happened"
@@ -2687,7 +2758,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/195"
+      "$ref": "#/201"
     }
   },
   {
@@ -2696,10 +2767,10 @@
     "resourceType": "Microsoft.Devices/IotHubs/routing",
     "apiVersion": "2021-02-01-preview",
     "output": {
-      "$ref": "#/189"
+      "$ref": "#/195"
     },
     "input": {
-      "$ref": "#/188"
+      "$ref": "#/194"
     }
   },
   {
@@ -2708,7 +2779,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/204"
+          "$ref": "#/210"
         },
         "flags": 0,
         "description": "The list of shared access policies."
@@ -2734,7 +2805,7 @@
     "resourceType": "Microsoft.Devices/IotHubs",
     "apiVersion": "2021-02-01-preview",
     "output": {
-      "$ref": "#/203"
+      "$ref": "#/209"
     }
   },
   {
@@ -2764,7 +2835,7 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/209"
+          "$ref": "#/215"
         },
         "flags": 0,
         "description": "Specifies authentication type being used for connecting to the storage account."
@@ -2783,10 +2854,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/207"
+        "$ref": "#/213"
       },
       {
-        "$ref": "#/208"
+        "$ref": "#/214"
       },
       {
         "$ref": "#/0"
@@ -2820,14 +2891,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/221"
+          "$ref": "#/227"
         },
         "flags": 2,
         "description": "The type of the job."
       },
       "status": {
         "type": {
-          "$ref": "#/228"
+          "$ref": "#/234"
         },
         "flags": 2,
         "description": "The status of the job."
@@ -2899,24 +2970,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/211"
-      },
-      {
-        "$ref": "#/212"
-      },
-      {
-        "$ref": "#/213"
-      },
-      {
-        "$ref": "#/214"
-      },
-      {
-        "$ref": "#/215"
-      },
-      {
-        "$ref": "#/216"
-      },
-      {
         "$ref": "#/217"
       },
       {
@@ -2927,6 +2980,24 @@
       },
       {
         "$ref": "#/220"
+      },
+      {
+        "$ref": "#/221"
+      },
+      {
+        "$ref": "#/222"
+      },
+      {
+        "$ref": "#/223"
+      },
+      {
+        "$ref": "#/224"
+      },
+      {
+        "$ref": "#/225"
+      },
+      {
+        "$ref": "#/226"
       },
       {
         "$ref": "#/0"
@@ -2961,22 +3032,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/222"
+        "$ref": "#/228"
       },
       {
-        "$ref": "#/223"
+        "$ref": "#/229"
       },
       {
-        "$ref": "#/224"
+        "$ref": "#/230"
       },
       {
-        "$ref": "#/225"
+        "$ref": "#/231"
       },
       {
-        "$ref": "#/226"
+        "$ref": "#/232"
       },
       {
-        "$ref": "#/227"
+        "$ref": "#/233"
       }
     ]
   },
@@ -2986,10 +3057,10 @@
     "resourceType": "Microsoft.Devices/IotHubs",
     "apiVersion": "2021-02-01-preview",
     "output": {
-      "$ref": "#/210"
+      "$ref": "#/216"
     },
     "input": {
-      "$ref": "#/206"
+      "$ref": "#/212"
     }
   },
   {
@@ -3026,7 +3097,7 @@
       },
       "authenticationType": {
         "type": {
-          "$ref": "#/233"
+          "$ref": "#/239"
         },
         "flags": 0,
         "description": "Specifies authentication type being used for connecting to the storage account."
@@ -3045,10 +3116,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/231"
+        "$ref": "#/237"
       },
       {
-        "$ref": "#/232"
+        "$ref": "#/238"
       },
       {
         "$ref": "#/0"
@@ -3061,10 +3132,10 @@
     "resourceType": "Microsoft.Devices/IotHubs",
     "apiVersion": "2021-02-01-preview",
     "output": {
-      "$ref": "#/210"
+      "$ref": "#/216"
     },
     "input": {
-      "$ref": "#/230"
+      "$ref": "#/236"
     }
   },
   {
@@ -3086,10 +3157,10 @@
     "resourceType": "Microsoft.Devices/IotHubs",
     "apiVersion": "2021-02-01-preview",
     "output": {
-      "$ref": "#/182"
+      "$ref": "#/188"
     },
     "input": {
-      "$ref": "#/235"
+      "$ref": "#/241"
     }
   },
   {
@@ -3107,7 +3178,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/239"
+          "$ref": "#/245"
         },
         "flags": 0,
         "description": "The description of an X509 CA Certificate including the challenge nonce issued for the Proof-Of-Possession flow."
@@ -3210,7 +3281,7 @@
     "resourceType": "Microsoft.Devices/IotHubs/certificates",
     "apiVersion": "2021-02-01-preview",
     "output": {
-      "$ref": "#/238"
+      "$ref": "#/244"
     }
   },
   {
@@ -3273,10 +3344,10 @@
     "resourceType": "Microsoft.Devices/IotHubs/certificates",
     "apiVersion": "2021-02-01-preview",
     "output": {
-      "$ref": "#/242"
+      "$ref": "#/248"
     },
     "input": {
-      "$ref": "#/241"
+      "$ref": "#/247"
     }
   }
 ]

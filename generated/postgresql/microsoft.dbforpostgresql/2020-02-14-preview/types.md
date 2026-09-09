@@ -34,6 +34,12 @@
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
 * **type**: 'Microsoft.DBForPostgreSql/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DBForPostgreSql@2020-02-14-preview)
+* **Resource**: Microsoft.DBForPostgreSql
+* **ApiVersion**: 2020-02-14-preview
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function checkVirtualNetworkSubnetUsage (Microsoft.DBForPostgreSql/locations@2020-02-14-preview)
 * **Resource**: Microsoft.DBForPostgreSql/locations
 * **ApiVersion**: 2020-02-14-preview
@@ -86,6 +92,18 @@
 * **dayOfWeek**: int: day of week for maintenance window
 * **startHour**: int: start hour for maintenance window
 * **startMinute**: int: start minute for maintenance window
+
+## NameAvailability
+### Properties
+* **message**: string: Error Message.
+* **name**: string: name of the PostgreSQL server.
+* **nameAvailable**: bool: Indicates whether the resource name is available.
+* **type**: string: type of the server
+
+## NameAvailabilityRequest
+### Properties
+* **name**: string (Required): Resource name to verify.
+* **type**: string: Resource type used for verification.
 
 ## ServerProperties
 ### Properties

@@ -55,11 +55,23 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Help/troubleshooters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Help@2024-03-01-preview)
+* **Resource**: Microsoft.Help
+* **ApiVersion**: 2024-03-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function continue (Microsoft.Help/troubleshooters@2024-03-01-preview)
 * **Resource**: Microsoft.Help/troubleshooters
 * **ApiVersion**: 2024-03-01-preview
 * **Input**: [ContinueRequestBody](#continuerequestbody)
 * **Output**: any
+
+## Function discoverSolutions (Microsoft.Help@2024-03-01-preview)
+* **Resource**: Microsoft.Help
+* **ApiVersion**: 2024-03-01-preview
+* **Input**: [DiscoveryNlpRequest](#discoverynlprequest)
+* **Output**: [DiscoveryNlpResponse](#discoverynlpresponse)
 
 ## Function end (Microsoft.Help/troubleshooters@2024-03-01-preview)
 * **Resource**: Microsoft.Help/troubleshooters
@@ -83,6 +95,23 @@
 * **status**: string: Status for automated check result
 * **type**: 'Error' | 'Information' | 'Success' | 'Warning' | string: Type of Result.
 * **version**: string: Version for automated check result
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Gets an error message explaining the 'reason' value with more details. This field is returned iif nameAvailable is false.
+* **nameAvailable**: bool: Returns true or false depending on the availability of the name
+* **reason**: string: Reason for why value is not available. This field is returned if nameAvailable is false.
+
+## ClassificationService
+### Properties
+* **displayName**: string (ReadOnly): Localized name of the azure service.
+* **resourceTypes**: string[]: List of applicable ARM resource types for this service.
+* **serviceId**: string (ReadOnly): Azure resource Id of the service.
 
 ## ContinueRequestBody
 ### Properties
@@ -118,6 +147,17 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DiscoveryNlpRequest
+### Properties
+* **additionalContext**: string: Additional information in the form of a string.
+* **issueSummary**: string (Required): Natural language description of the issue.
+* **resourceId**: string: ARM resource Id of the resource that is having the issue. Only applicable for Discovery Solution NLP Subscription Scope.
+* **serviceId**: string: ARM service Id of the service that is having the issue. For more information on service Id see https://learn.microsoft.com/rest/api/support/services/list?tabs=HTTP.
+
+## DiscoveryNlpResponse
+### Properties
+* **value**: [SolutionNlpMetadataResource](#solutionnlpmetadataresource)[]: The list of solution metadata.
 
 ## Error
 ### Properties
@@ -164,6 +204,15 @@
 * **replacementKey**: string: Place holder used in HTML Content replace control with the content
 * **timeSpanDuration**: string: Time span duration
 * **title**: string: Chart title
+
+## NlpSolutions
+### Properties
+* **problemClassificationId**: string: Id of the ProblemClassification (https://learn.microsoft.com/en-us/rest/api/support/problem-classifications?view=rest-support-2020-04-01) that may be used to create a support ticket.
+* **problemDescription**: string: Description of the problem classification.
+* **problemTitle**: string: Title of the problem classification.
+* **relatedServices**: [ClassificationService](#classificationservice)[]: The set of services that are most likely related to the request. If relatedServices is included in the response then solutions may not be discovered until the client calls a second time specifying one of the service Ids in the relatedServices object.
+* **serviceId**: string: Id of the service (https://learn.microsoft.com/en-us/rest/api/support/services?view=rest-support-2020-04-01) that may be used to create a support ticket.
+* **solutions**: [SolutionMetadataProperties](#solutionmetadataproperties)[]: The list of solution metadata.
 
 ## ReplacementMaps
 ### Properties
@@ -238,6 +287,21 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SolutionMetadataProperties
+### Properties
+* **description**: string (ReadOnly): A detailed description of solution.
+* **requiredInputs**: string[] (ReadOnly): Required parameters for invoking this particular solution.
+* **solutionId**: string: Solution Id.
+* **solutionType**: 'Diagnostics' | 'SelfHelp' | 'Solutions' | 'Troubleshooters' | string (ReadOnly): Solution Type.
+
+## SolutionNlpMetadataResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [NlpSolutions](#nlpsolutions): Solution metadata Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## SolutionResourceProperties
 ### Properties

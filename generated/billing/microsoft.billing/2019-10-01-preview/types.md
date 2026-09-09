@@ -393,6 +393,12 @@
 * **Input**: [UpdateAutoRenewRequest](#updateautorenewrequest)
 * **Output**: [UpdateAutoRenewOperation](#updateautorenewoperation)
 
+## Function validateAddress (Microsoft.Billing@2019-10-01-preview)
+* **Resource**: Microsoft.Billing
+* **ApiVersion**: 2019-10-01-preview
+* **Input**: [AddressDetails](#addressdetails)
+* **Output**: [ValidateAddressResponse](#validateaddressresponse)
+
 ## Function validateTransfer (Microsoft.Billing/transfers@2019-10-01-preview)
 * **Resource**: Microsoft.Billing/transfers
 * **ApiVersion**: 2019-10-01-preview
@@ -866,6 +872,12 @@
 ## UpdateAutoRenewRequest
 ### Properties
 * **autoRenew**: 'false' | 'true' | string: The flag that determines the auto-renew settings for a product.
+
+## ValidateAddressResponse
+### Properties
+* **status**: 'Invalid' | 'Valid' | string: status of the address validation.
+* **suggestedAddresses**: [AddressDetails](#addressdetails)[]: The list of suggested addresses.
+* **validationMessage**: string: Validation error message.
 
 ## ValidateProductTransferEligibilityError
 ### Properties

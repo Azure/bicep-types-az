@@ -59,6 +59,12 @@
 * **Input**: [TestRouteInput](#testrouteinput)
 * **Output**: [TestRouteResult](#testrouteresult)
 
+## Function checkNameAvailability (Microsoft.Devices@2021-03-31)
+* **Resource**: Microsoft.Devices
+* **ApiVersion**: 2021-03-31
+* **Input**: [OperationInputs](#operationinputs)
+* **Output**: [IotHubNameAvailabilityInfo](#iothubnameavailabilityinfo)
+
 ## Function exportDevices (Microsoft.Devices/IotHubs@2021-03-31)
 * **Resource**: Microsoft.Devices/IotHubs
 * **ApiVersion**: 2021-03-31
@@ -224,6 +230,12 @@
 * **location**: string: The name of the Azure region
 * **role**: 'primary' | 'secondary' | string: The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.
 
+## IotHubNameAvailabilityInfo
+### Properties
+* **message**: string: The detailed reason message.
+* **nameAvailable**: bool (ReadOnly): The value which indicates whether the provided name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason for unavailability.
+
 ## IotHubProperties
 ### Properties
 * **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]: The shared access policies you can use to secure a connection to the IoT hub.
@@ -308,6 +320,10 @@
 * **applyToBuiltInEventHubEndpoint**: bool (Required): If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
 * **defaultAction**: 'Allow' | 'Deny' | string: Default Action for Network Rule Set
 * **ipRules**: [NetworkRuleSetIpRule](#networkrulesetiprule)[] (Required): List of IP Rules
+
+## OperationInputs
+### Properties
+* **name**: string (Required): The name of the IoT hub to check.
 
 ## PrivateEndpoint
 ### Properties

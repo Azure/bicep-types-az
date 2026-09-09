@@ -45,6 +45,12 @@
 * **properties**: [OriginPropertiesParametersOrOriginProperties](#originpropertiesparametersororiginproperties)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Cdn@2016-04-02)
+* **Resource**: Microsoft.Cdn
+* **ApiVersion**: 2016-04-02
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
 ## Function generateSsoUri (Microsoft.Cdn/profiles@2016-04-02)
 * **Resource**: Microsoft.Cdn/profiles
 * **ApiVersion**: 2016-04-02
@@ -77,6 +83,17 @@
 * **ApiVersion**: 2016-04-02
 * **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
 * **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
+## CheckNameAvailabilityInput
+### Properties
+* **name**: string (Required): The resource name to validate.
+* **type**: 'Microsoft.Cdn/Profiles/Endpoints' (Required, ReadOnly): The type of the resource whose name is to be validated.
+
+## CheckNameAvailabilityOutput
+### Properties
+* **Message**: string: The detailed error message describing why the name is not available.
+* **NameAvailable**: bool: Indicates whether the name is available.
+* **Reason**: string: The reason why the name is not available.
 
 ## CustomDomainPropertiesParametersOrCustomDomainProperties
 ### Properties

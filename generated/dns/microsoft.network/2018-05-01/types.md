@@ -123,6 +123,12 @@
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
 * **type**: 'Microsoft.Network/dnsZones/TXT' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getDnsResourceReference (Microsoft.Network@2018-05-01)
+* **Resource**: Microsoft.Network
+* **ApiVersion**: 2018-05-01
+* **Input**: [DnsResourceReferenceRequest](#dnsresourcereferencerequest)
+* **Output**: [DnsResourceReferenceResult](#dnsresourcereferenceresult)
+
 ## AaaaRecord
 ### Properties
 * **ipv6Address**: string: The IPv6 address of this AAAA record.
@@ -140,6 +146,27 @@
 ## CnameRecord
 ### Properties
 * **cname**: string: The canonical name for this CNAME record.
+
+## DnsResourceReference
+### Properties
+* **dnsResources**: [SubResource](#subresource)[]: A list of dns Records
+* **targetResource**: [SubResource](#subresource): A reference to an azure resource from where the dns resource value is taken.
+
+## DnsResourceReferenceRequest
+### Properties
+* **properties**: [DnsResourceReferenceRequestProperties](#dnsresourcereferencerequestproperties): The properties of the Resource Reference Request.
+
+## DnsResourceReferenceRequestProperties
+### Properties
+* **targetResources**: [SubResource](#subresource)[]: A list of references to azure resources for which referencing dns records need to be queried.
+
+## DnsResourceReferenceResult
+### Properties
+* **properties**: [DnsResourceReferenceResultProperties](#dnsresourcereferenceresultproperties): The result of dns resource reference request. Returns a list of dns resource references for each of the azure resource in the request.
+
+## DnsResourceReferenceResultProperties
+### Properties
+* **dnsResourceReferences**: [DnsResourceReference](#dnsresourcereference)[]: The result of dns resource reference request. A list of dns resource references for each of the azure resource in the request
 
 ## MxRecord
 ### Properties

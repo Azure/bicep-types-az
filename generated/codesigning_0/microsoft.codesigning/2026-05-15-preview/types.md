@@ -24,6 +24,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CodeSigning/codeSigningAccounts/certificateProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.CodeSigning@2026-05-15-preview)
+* **Resource**: Microsoft.CodeSigning
+* **ApiVersion**: 2026-05-15-preview
+* **Input**: [CheckNameAvailability](#checknameavailability)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function revokeCertificates (Microsoft.CodeSigning/codeSigningAccounts/certificateProfiles@2026-05-15-preview)
 * **Resource**: Microsoft.CodeSigning/codeSigningAccounts/certificateProfiles
 * **ApiVersion**: 2026-05-15-preview
@@ -58,6 +64,17 @@
 * **programType**: string: Indicates whether the resource is intended for a specific usage scenario.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Status of the current operation on certificate profile.
 * **status**: 'Active' | 'Disabled' | 'Suspended' | string (ReadOnly): Status of the certificate profile.
+
+## CheckNameAvailability
+### Properties
+* **name**: string (Required): Artifact signing account name.
+* **type**: string (Required): The type of the resource, "Microsoft.CodeSigning/codeSigningAccounts".
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): An error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): A boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used.
+* **reason**: 'AccountNameInvalid' | 'AlreadyExists' | string (ReadOnly): The reason that an artifact signing account name could not be used. The Reason element is only returned if nameAvailable is false.
 
 ## CodeSigningAccountProperties
 ### Properties

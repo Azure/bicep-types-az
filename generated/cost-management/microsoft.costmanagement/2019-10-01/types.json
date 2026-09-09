@@ -729,7 +729,132 @@
     "writableScopes": 31
   },
   {
+    "$type": "ObjectType",
+    "name": "QueryResult",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryProperties",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The link (url) to the next page of results."
+      },
+      "columns": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Array of columns"
+      },
+      "rows": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "Array of rows"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryColumn",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of column."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of column."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/62"
+    }
+  },
+  {
     "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/64"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/65"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "query",
+    "resourceType": "Microsoft.CostManagement",
+    "apiVersion": "2019-10-01",
+    "output": {
+      "$ref": "#/60"
+    },
+    "input": {
+      "$ref": "#/19"
+    }
   },
   {
     "$type": "ResourceFunctionType",
@@ -737,7 +862,7 @@
     "resourceType": "Microsoft.CostManagement/exports",
     "apiVersion": "2019-10-01",
     "output": {
-      "$ref": "#/60"
+      "$ref": "#/64"
     }
   }
 ]

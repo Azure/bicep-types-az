@@ -1475,6 +1475,12 @@ az sql elastic-pool list-editions -l <location> -o table
 * **Input**: [ChangeLongTermRetentionBackupAccessTierParameters](#changelongtermretentionbackupaccesstierparameters)
 * **Output**: [LongTermRetentionBackup](#longtermretentionbackup)
 
+## Function checkNameAvailability (Microsoft.Sql@2025-01-01)
+* **Resource**: Microsoft.Sql
+* **ApiVersion**: 2025-01-01
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function completeMove (Microsoft.Sql/managedInstances/databases@2025-01-01)
 * **Resource**: Microsoft.Sql/managedInstances/databases
 * **ApiVersion**: 2025-01-01
@@ -1887,6 +1893,18 @@ az sql elastic-pool list-editions -l <location> -o table
 ### Properties
 * **backupStorageAccessTier**: string (Required): The long term retention backup storage access tier
 * **operationMode**: string (Required): The operation mode when updating ltr backup storage access tier
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string (Required)
+* **type**: 'Microsoft.Sql/servers' (Required)
+
+## CheckNameAvailabilityResponse
+### Properties
+* **available**: bool (ReadOnly): True if the name is available, otherwise false.
+* **message**: string (ReadOnly): A message explaining why the name is unavailable. Will be undefined if the name is available.
+* **name**: string (ReadOnly): The name whose availability was checked.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason code explaining why the name is unavailable. Will be undefined if the name is available.
 
 ## CompleteDatabaseRestoreDefinition
 ### Properties

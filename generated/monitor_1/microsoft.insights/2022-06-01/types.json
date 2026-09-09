@@ -3990,6 +3990,18 @@
   {
     "$type": "ResourceFunctionType",
     "name": "createNotifications",
+    "resourceType": "Microsoft.Insights",
+    "apiVersion": "2022-06-01",
+    "output": {
+      "$ref": "#/313"
+    },
+    "input": {
+      "$ref": "#/300"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createNotifications",
     "resourceType": "Microsoft.Insights/actionGroups",
     "apiVersion": "2022-06-01",
     "output": {
@@ -4021,7 +4033,7 @@
       "$ref": "#/168"
     },
     "input": {
-      "$ref": "#/318"
+      "$ref": "#/319"
     }
   }
 ]

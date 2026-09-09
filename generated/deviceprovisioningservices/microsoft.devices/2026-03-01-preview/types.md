@@ -52,6 +52,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Devices/provisioningServices/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkProvisioningServiceNameAvailability (Microsoft.Devices@2026-03-01-preview)
+* **Resource**: Microsoft.Devices
+* **ApiVersion**: 2026-03-01-preview
+* **Input**: [OperationInputs](#operationinputs)
+* **Output**: [NameAvailabilityInfo](#nameavailabilityinfo)
+
 ## Function generateVerificationCode (Microsoft.Devices/provisioningServices/certificates@2026-03-01-preview)
 * **Resource**: Microsoft.Devices/provisioningServices/certificates
 * **ApiVersion**: 2026-03-01-preview
@@ -152,6 +158,16 @@ Indicates if the DPS instance has Data Residency enabled, removing the cross geo
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+
+## NameAvailabilityInfo
+### Properties
+* **message**: string: message containing a detailed reason name is unavailable
+* **nameAvailable**: bool: specifies if a name is available or not
+* **reason**: 'AlreadyExists' | 'Invalid' | string: specifies the reason a name is unavailable
+
+## OperationInputs
+### Properties
+* **name**: string (Required): The name of the Provisioning Service to check.
 
 ## PrivateEndpoint
 ### Properties

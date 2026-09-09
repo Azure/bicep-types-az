@@ -343,6 +343,18 @@
 * **ApiVersion**: 2024-07-01-preview
 * **Output**: any
 
+## Function checkNameAvailability (Microsoft.DevCenter@2024-07-01-preview)
+* **Resource**: Microsoft.DevCenter
+* **ApiVersion**: 2024-07-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
+## Function checkScopedNameAvailability (Microsoft.DevCenter@2024-07-01-preview)
+* **Resource**: Microsoft.DevCenter
+* **ApiVersion**: 2024-07-01-preview
+* **Input**: [CheckScopedNameAvailabilityRequest](#checkscopednameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function connect (Microsoft.DevCenter/projects/catalogs@2024-07-01-preview)
 * **Resource**: Microsoft.DevCenter/projects/catalogs
 * **ApiVersion**: 2024-07-01-preview
@@ -467,6 +479,23 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
+
+## CheckScopedNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **scope**: string: The resource id to scope the name check.
+* **type**: string: The resource type.
 
 ## CustomerManagedKeyEncryption
 ### Properties

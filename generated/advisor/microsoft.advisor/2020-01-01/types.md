@@ -30,6 +30,11 @@
 * **properties**: [SuppressionProperties](#suppressionproperties): The properties of the suppression.
 * **type**: 'Microsoft.Advisor/recommendations/suppressions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateRecommendations (Microsoft.Advisor@2020-01-01)
+* **Resource**: Microsoft.Advisor
+* **ApiVersion**: 2020-01-01
+* **Output**: any
+
 ## ConfigDataProperties
 ### Properties
 * **digests**: [DigestConfig](#digestconfig)[]: Advisor digest configuration. Valid only for subscriptions

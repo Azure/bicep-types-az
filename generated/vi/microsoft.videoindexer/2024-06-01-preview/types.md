@@ -36,6 +36,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.VideoIndexer/accounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.VideoIndexer@2024-06-01-preview)
+* **Resource**: Microsoft.VideoIndexer
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [AccountCheckNameAvailabilityParameters](#accountchecknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function generateAccessToken (Microsoft.VideoIndexer/accounts@2024-06-01-preview)
 * **Resource**: Microsoft.VideoIndexer/accounts
 * **ApiVersion**: 2024-06-01-preview
@@ -52,6 +58,11 @@
 ### Properties
 * **accessToken**: string {sensitive} (ReadOnly): The access token.
 
+## AccountCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The VideoIndexer account name.
+* **type**: 'Microsoft.VideoIndexer/accounts' | string (Required): The type of resource, Microsoft.VideoIndexer/accounts
+
 ## AccountPropertiesForPutRequest
 ### Properties
 * **accountId**: string: The account's data-plane ID. This can be set only when connecting an existing classic account
@@ -63,6 +74,12 @@
 * **storageServices**: [StorageServicesForPutRequest](#storageservicesforputrequest): The storage services details
 * **tenantId**: string (ReadOnly): The account's tenant id
 * **totalSecondsIndexed**: int (ReadOnly): An integer representing the total seconds that have been indexed on the account
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): Gets an error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken.
+* **reason**: 'AlreadyExists' | string (ReadOnly): Gets the reason that a Video Indexer account name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## GenerateAccessTokenParameters
 ### Properties

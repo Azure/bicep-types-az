@@ -108,6 +108,12 @@
 * **ApiVersion**: 2021-01-01-preview
 * **Output**: any
 
+## Function checkNameAvailability (Microsoft.EventHub@2021-01-01-preview)
+* **Resource**: Microsoft.EventHub
+* **ApiVersion**: 2021-01-01-preview
+* **Input**: [CheckNameAvailabilityParameter](#checknameavailabilityparameter)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function failover (Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2021-01-01-preview)
 * **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs
 * **ApiVersion**: 2021-01-01-preview
@@ -170,6 +176,16 @@
 * **intervalInSeconds**: int {minValue: 60, maxValue: 900}: The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
 * **sizeLimitInBytes**: int {minValue: 10485760, maxValue: 524288000}: The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
 * **skipEmptyArchives**: bool: A value that indicates whether to Skip Empty Archives
+
+## CheckNameAvailabilityParameter
+### Properties
+* **name**: string (Required): Name to check the namespace name availability
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the Namespace.
+* **nameAvailable**: bool: Value indicating Namespace is availability, true if the Namespace is available; otherwise, false.
+* **reason**: 'InvalidName' | 'NameInLockdown' | 'NameInUse' | 'None' | 'SubscriptionIsDisabled' | 'TooManyNamespaceInCurrentSubscription': The reason for unavailability of a Namespace.
 
 ## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties

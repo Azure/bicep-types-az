@@ -92,6 +92,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Confluent/organizations/environments/networkGateways/accessPoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activateSaaS (Microsoft.Confluent@2026-06-02-preview)
+* **Resource**: Microsoft.Confluent
+* **ApiVersion**: 2026-06-02-preview
+* **Input**: [ActivateSaaSParameterRequest](#activatesaasparameterrequest)
+* **Output**: [ProxyResource](#proxyresource)
+
 ## Function createAPIKey (Microsoft.Confluent/organizations/environments/clusters@2026-06-02-preview)
 * **Resource**: Microsoft.Confluent/organizations/environments/clusters
 * **ApiVersion**: 2026-06-02-preview
@@ -250,6 +256,11 @@
 * **data**: string[]: List of role binding names
 * **kind**: string: Type of response
 * **metadata**: [ConfluentListMetadata](#confluentlistmetadata): Metadata of the list
+
+## ActivateSaaSParameterRequest
+### Properties
+* **publisherId**: string: Publisher Id for Confluent resource
+* **saasGuid**: string (Required): SaaS guid for Activate and Validate SaaS Resource
 
 ## APIKeyOwnerEntity
 ### Properties
@@ -615,6 +626,13 @@
 * **topics**: string[]: Kafka topics list
 * **topicsDir**: string: Kafka topics directory
 
+
+## ProxyResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## RegionProperties
 ### Properties

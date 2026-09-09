@@ -2247,5 +2247,79 @@
     "input": {
       "$ref": "#/196"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceSaaSResourceDetailsRequest",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Tenant Id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceSaaSResourceDetailsResponse",
+    "properties": {
+      "marketplaceSaaSResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Id of the Marketplace SaaS Resource"
+      },
+      "planId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Id of the plan"
+      },
+      "marketplaceSubscriptionStatus": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 0,
+        "description": "Marketplace subscription status"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspended"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getMarketplaceSaaSResourceDetails",
+    "resourceType": "Dynatrace.Observability",
+    "apiVersion": "2023-04-27",
+    "output": {
+      "$ref": "#/202"
+    },
+    "input": {
+      "$ref": "#/201"
+    }
   }
 ]

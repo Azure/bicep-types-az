@@ -754,11 +754,95 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.RecommendationsService",
+    "apiVersion": "2022-02-01",
+    "output": {
+      "$ref": "#/59"
+    },
+    "input": {
+      "$ref": "#/58"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AccountStatus",
     "properties": {
       "scopesStatuses": {
         "type": {
-          "$ref": "#/62"
+          "$ref": "#/69"
         },
         "flags": 0,
         "description": "The list of scopes statuses."
@@ -778,7 +862,7 @@
       },
       "statuses": {
         "type": {
-          "$ref": "#/61"
+          "$ref": "#/68"
         },
         "flags": 0,
         "description": "Scope stage statuses."
@@ -815,13 +899,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/60"
+      "$ref": "#/67"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/59"
+      "$ref": "#/66"
     }
   },
   {
@@ -830,7 +914,7 @@
     "resourceType": "Microsoft.RecommendationsService/accounts",
     "apiVersion": "2022-02-01",
     "output": {
-      "$ref": "#/58"
+      "$ref": "#/65"
     }
   }
 ]

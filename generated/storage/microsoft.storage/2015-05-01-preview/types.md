@@ -12,6 +12,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Storage@2015-05-01-preview)
+* **Resource**: Microsoft.Storage
+* **ApiVersion**: 2015-05-01-preview
+* **Input**: [StorageAccountCheckNameAvailabilityParameters](#storageaccountchecknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function listKeys (Microsoft.Storage/storageAccounts@2015-05-01-preview)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2015-05-01-preview
@@ -22,6 +28,12 @@
 * **ApiVersion**: 2015-05-01-preview
 * **Input**: [StorageAccountRegenerateKeyParameters](#storageaccountregeneratekeyparameters)
 * **Output**: [StorageAccountKeys](#storageaccountkeys)
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string: Gets an error message explaining the Reason value in more detail.
+* **nameAvailable**: bool: Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or invalid and cannot be used.
+* **reason**: 'AccountNameInvalid' | 'AlreadyExists': Gets the reason that a storage account name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## CustomDomain
 ### Properties
@@ -38,6 +50,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## StorageAccountCheckNameAvailabilityParameters
+### Properties
+* **name**: string
+* **type**: string
 
 ## StorageAccountKeys
 ### Properties

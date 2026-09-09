@@ -503,5 +503,67 @@
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Returns true or false depending on the availability of the name"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason for why value is not available. This field is returned if nameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets an error message explaining the 'reason' value with more details. This field is returned iif nameAvailable is false."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Help",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/44"
+    },
+    "input": {
+      "$ref": "#/43"
+    }
   }
 ]

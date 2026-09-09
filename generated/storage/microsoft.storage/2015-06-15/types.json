@@ -333,6 +333,82 @@
   },
   {
     "$type": "ObjectType",
+    "name": "StorageAccountCheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The reason that a storage account name could not be used. The Reason element is only returned if NameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The error message explaining the Reason value in more detail."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AccountNameInvalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Storage",
+    "apiVersion": "2015-06-15",
+    "output": {
+      "$ref": "#/28"
+    },
+    "input": {
+      "$ref": "#/27"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "StorageAccountKeys",
     "properties": {
       "key1": {
@@ -357,7 +433,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2015-06-15",
     "output": {
-      "$ref": "#/27"
+      "$ref": "#/33"
     }
   },
   {
@@ -378,10 +454,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2015-06-15",
     "output": {
-      "$ref": "#/27"
+      "$ref": "#/33"
     },
     "input": {
-      "$ref": "#/29"
+      "$ref": "#/35"
     }
   }
 ]

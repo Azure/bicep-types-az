@@ -14,6 +14,12 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppConfiguration@2019-10-01)
+* **Resource**: Microsoft.AppConfiguration
+* **ApiVersion**: 2019-10-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [NameAvailabilityStatus](#nameavailabilitystatus)
+
 ## Function listKeys (Microsoft.AppConfiguration/configurationStores@2019-10-01)
 * **Resource**: Microsoft.AppConfiguration/configurationStores
 * **ApiVersion**: 2019-10-01
@@ -45,6 +51,11 @@
 * **nextLink**: string: The URI that can be used to request the next set of paged results.
 * **value**: [ApiKey](#apikey)[]: The collection value.
 
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name to check for availability.
+* **type**: 'Microsoft.AppConfiguration/configurationStores' | string (Required): The resource type to check for name availability.
+
 ## ConfigurationStoreProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The creation date of configuration store.
@@ -75,6 +86,12 @@ A locked key-value may not be modified until it is unlocked.
 ### Properties
 * **key**: string (Required): The key to retrieve.
 * **label**: string: The label of the key.
+
+## NameAvailabilityStatus
+### Properties
+* **message**: string (ReadOnly): If any, the error message that provides more detail for the reason that the name is not available.
+* **nameAvailable**: bool (ReadOnly): The value indicating whether the resource name is available.
+* **reason**: string (ReadOnly): If any, the reason that the name is not available.
 
 ## RegenerateKeyParameters
 ### Properties

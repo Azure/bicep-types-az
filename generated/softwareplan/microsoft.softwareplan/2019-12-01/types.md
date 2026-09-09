@@ -12,6 +12,11 @@
 * **sku**: [Sku](#sku) (Required): Hybrid use benefit SKU
 * **type**: 'Microsoft.SoftwarePlan/hybridUseBenefits' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function register (Microsoft.SoftwarePlan@2019-12-01)
+* **Resource**: Microsoft.SoftwarePlan
+* **ApiVersion**: 2019-12-01
+* **Output**: any
+
 ## HybridUseBenefitProperties
 ### Properties
 * **createdDate**: string (ReadOnly): Created date

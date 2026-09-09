@@ -55,6 +55,12 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.Cache/redis/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function CheckNameAvailability (Microsoft.Cache@2023-04-01)
+* **Resource**: Microsoft.Cache
+* **ApiVersion**: 2023-04-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: any
+
 ## Function export (Microsoft.Cache/redis@2023-04-01)
 * **Resource**: Microsoft.Cache/redis
 * **ApiVersion**: 2023-04-01
@@ -83,6 +89,11 @@
 * **ApiVersion**: 2023-04-01
 * **Input**: [RedisRegenerateKeyParameters](#redisregeneratekeyparameters)
 * **Output**: [RedisAccessKeys](#redisaccesskeys)
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): Resource name.
+* **type**: string (Required): Resource type. The only legal value of this property for checking redis cache name availability is 'Microsoft.Cache/redis'.
 
 ## ExportRDBParameters
 ### Properties

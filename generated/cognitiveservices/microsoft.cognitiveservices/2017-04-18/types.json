@@ -1193,5 +1193,71 @@
     "input": {
       "$ref": "#/77"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckDomainAvailabilityParameter",
+    "properties": {
+      "subdomainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The subdomain name to use."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Type of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckDomainAvailabilityResult",
+    "properties": {
+      "isSubdomainAvailable": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Indicates the given SKU is available or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason why the SKU is not available."
+      },
+      "subdomainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The subdomain name to use."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Type of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkDomainAvailability",
+    "resourceType": "Microsoft.CognitiveServices",
+    "apiVersion": "2017-04-18",
+    "output": {
+      "$ref": "#/84"
+    },
+    "input": {
+      "$ref": "#/83"
+    }
   }
 ]

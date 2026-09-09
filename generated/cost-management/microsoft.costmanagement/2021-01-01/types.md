@@ -11,6 +11,12 @@
 * **properties**: [ExportProperties](#exportproperties): The properties of the export.
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateDetailedCostReport (Microsoft.CostManagement@2021-01-01)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2021-01-01
+* **Input**: [GenerateDetailedCostReportDefinition](#generatedetailedcostreportdefinition)
+* **Output**: [GenerateDetailedCostReportOperationResult](#generatedetailedcostreportoperationresult)
+
 ## Function run (Microsoft.CostManagement/exports@2021-01-01)
 * **Resource**: Microsoft.CostManagement/exports
 * **ApiVersion**: 2021-01-01
@@ -24,6 +30,11 @@
 * **nextRunTimeEstimate**: string (ReadOnly): If the export has an active schedule, provides an estimate of the next execution time.
 * **partitionData**: bool: If set to true, exported data will be partitioned by size and placed in a blob directory together with a manifest file. Note: this option is currently available only for modern commerce scopes.
 * **runHistory**: [ExportExecutionListResult](#exportexecutionlistresult): If requested, has the most recent execution history for the export.
+
+## DownloadURL
+### Properties
+* **downloadUrl**: string: The URL to download the generated report.
+* **validTill**: string: The time at which report URL becomes invalid/expires in UTC e.g. 2020-12-08T05:55:59.4394737Z.
 
 ## ErrorDetails
 ### Properties
@@ -107,4 +118,24 @@
 ### Properties
 * **from**: string (Required): The start date for export data.
 * **to**: string (Required): The end date for export data.
+
+## GenerateDetailedCostReportDefinition
+### Properties
+* **billingPeriod**: string: Billing Period in YearMonth(e.g. 202008) format. Only for legacy enterprise customers can use this. Can only have one of either timePeriod or invoiceId or billingPeriod parameters. If none provided current month cost is provided.
+* **customerId**: string: Customer Id for Modern (Invoice Id and billing profile is also required for this).
+* **invoiceId**: string: Invoice Id for PayAsYouGo customers and Modern billing profile scope. Can only have one of either timePeriod or invoiceId or billingPeriod parameters. If none provided current month cost is provided.
+* **metric**: 'ActualCost' | 'AmortizedCost' | string: The type of the detailed report. By default ActualCost is provided
+* **timePeriod**: [GenerateDetailedCostReportTimePeriod](#generatedetailedcostreporttimeperiod): Has time period for pulling data for the cost detailed report. Can only have one of either timePeriod or invoiceId or billingPeriod parameters. If none provided current month cost is provided.
+
+## GenerateDetailedCostReportOperationResult
+### Properties
+* **id**: string: The id of the long running operation.
+* **name**: string: The name of the long running operation.
+* **properties**: [DownloadURL](#downloadurl): The properties of the resource generated.
+* **type**: string: The type of the long running operation.
+
+## GenerateDetailedCostReportTimePeriod
+### Properties
+* **end**: string (Required): The end date to pull data to. example format 2020-03-15
+* **start**: string (Required): The start date to pull data from. example format 2020-03-15
 

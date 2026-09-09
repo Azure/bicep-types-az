@@ -22,6 +22,12 @@
 * **properties**: [ChannelProperties](#channelproperties): The properties of the channel
 * **type**: 'Microsoft.EngagementFabric/Accounts/Channels' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.EngagementFabric@2018-09-01-preview)
+* **Resource**: Microsoft.EngagementFabric
+* **ApiVersion**: 2018-09-01-preview
+* **Input**: [CheckNameAvailabilityParameter](#checknameavailabilityparameter)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function listChannelTypes (Microsoft.EngagementFabric/Accounts@2018-09-01-preview)
 * **Resource**: Microsoft.EngagementFabric/Accounts
 * **ApiVersion**: 2018-09-01-preview
@@ -58,6 +64,17 @@
 ## ChannelTypeDescriptionList
 ### Properties
 * **value**: [ChannelTypeDescription](#channeltypedescription)[]: Channel descriptions
+
+## CheckNameAvailabilityParameter
+### Properties
+* **name**: string (Required): The name to be checked
+* **type**: string (Required): The fully qualified resource type for the name to be checked
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The message if name is unavailable
+* **nameAvailable**: bool (ReadOnly): The name to be checked
+* **reason**: 'AlreadyExists' | 'Invalid' | string (ReadOnly): The reason if name is unavailable
 
 ## KeyDescription
 ### Properties

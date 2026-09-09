@@ -45,6 +45,11 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAuthServiceProviders (Microsoft.BotService@2017-12-01)
+* **Resource**: Microsoft.BotService
+* **ApiVersion**: 2017-12-01
+* **Output**: [ServiceProviderResponseList](#serviceproviderresponselist)
+
 ## Function listChannelWithKeys (Microsoft.BotService/botServices/channels@2017-12-01)
 * **Resource**: Microsoft.BotService/botServices/channels
 * **ApiVersion**: 2017-12-01
@@ -240,6 +245,33 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ServiceProvider
+### Properties
+* **properties**: [ServiceProviderProperties](#serviceproviderproperties): The Properties of a Service Provider Object
+
+## ServiceProviderParameter
+### Properties
+* **default**: string (ReadOnly): Default Name for the Service Provider
+* **description**: string (ReadOnly): Description of the Service Provider
+* **displayName**: string (ReadOnly): Display Name of the Service Provider
+* **helpUrl**: string (ReadOnly): Help Url for the  Service Provider
+* **name**: string (ReadOnly): Name of the Service Provider
+* **type**: string (ReadOnly): Type of the Service Provider
+
+## ServiceProviderProperties
+### Properties
+* **devPortalUrl**: string (ReadOnly): Display Name of the Service Provider
+* **displayName**: string (ReadOnly): Display Name of the Service Provider
+* **iconUrl**: string (ReadOnly): Display Name of the Service Provider
+* **id**: string (ReadOnly): Id for Service Provider
+* **parameters**: [ServiceProviderParameter](#serviceproviderparameter)[]: The list of parameters for the Service Provider
+* **serviceProviderName**: string (ReadOnly): Display Name of the Service Provider
+
+## ServiceProviderResponseList
+### Properties
+* **nextLink**: string: The link used to get the next page of bot service providers.
+* **value**: [ServiceProvider](#serviceprovider)[] (ReadOnly): Gets the list of bot service providers and their properties.
 
 ## Sku
 ### Properties

@@ -1624,6 +1624,72 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "GenerateAwsTemplateRequest",
+    "properties": {
+      "connectorId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of public cloud connector"
+      },
+      "solutionTypes": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 0,
+        "description": "The list of solution types and their settings"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SolutionTypeSettings",
+    "properties": {
+      "solutionType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The type of the solution"
+      },
+      "solutionSettings": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0,
+        "description": "Solution settings"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SolutionSettings",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/124"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateAwsTemplate",
+    "resourceType": "Microsoft.HybridConnectivity",
+    "apiVersion": "2024-12-01",
+    "output": {
+      "$ref": "#/120"
+    },
+    "input": {
+      "$ref": "#/123"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "testPermissions",
     "resourceType": "Microsoft.HybridConnectivity/publicCloudConnectors",

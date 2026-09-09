@@ -1605,5 +1605,31 @@
     },
     "readableScopes": 4,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UploadTokenResult",
+    "properties": {
+      "uploadUrl": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 1,
+        "description": "The SAS token URL for uploading"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getUploadToken",
+    "resourceType": "Microsoft.Impact",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/132"
+    }
   }
 ]

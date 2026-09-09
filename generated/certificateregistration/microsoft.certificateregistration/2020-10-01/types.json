@@ -817,11 +817,96 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AppServiceCertificateOrder",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "AppServiceCertificateOrder resource specific properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource Location."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateCertificateRegistrationInformation",
+    "resourceType": "Microsoft.CertificateRegistration",
+    "apiVersion": "2020-10-01",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ReissueCertificateOrderRequest",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/71"
         },
         "flags": 0,
         "description": "ReissueCertificateOrderRequest resource specific properties"
@@ -898,9 +983,6 @@
     }
   },
   {
-    "$type": "AnyType"
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "reissue",
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
@@ -909,7 +991,7 @@
       "$ref": "#/68"
     },
     "input": {
-      "$ref": "#/66"
+      "$ref": "#/70"
     }
   },
   {
@@ -918,7 +1000,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/71"
+          "$ref": "#/74"
         },
         "flags": 0,
         "description": "RenewCertificateOrderRequest resource specific properties"
@@ -996,7 +1078,7 @@
       "$ref": "#/68"
     },
     "input": {
-      "$ref": "#/70"
+      "$ref": "#/73"
     }
   },
   {
@@ -1030,7 +1112,7 @@
       "$ref": "#/68"
     },
     "input": {
-      "$ref": "#/74"
+      "$ref": "#/77"
     }
   },
   {
@@ -1072,10 +1154,10 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2020-10-01",
     "output": {
-      "$ref": "#/77"
+      "$ref": "#/80"
     },
     "input": {
-      "$ref": "#/76"
+      "$ref": "#/79"
     }
   },
   {
@@ -1093,7 +1175,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/81"
+          "$ref": "#/84"
         },
         "flags": 0,
         "description": "CertificateOrderAction resource specific properties"
@@ -1141,7 +1223,7 @@
     "properties": {
       "actionType": {
         "type": {
-          "$ref": "#/96"
+          "$ref": "#/99"
         },
         "flags": 2,
         "description": "Action type."
@@ -1215,15 +1297,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/82"
-      },
-      {
-        "$ref": "#/83"
-      },
-      {
-        "$ref": "#/84"
-      },
-      {
         "$ref": "#/85"
       },
       {
@@ -1255,13 +1328,22 @@
       },
       {
         "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/80"
+      "$ref": "#/83"
     }
   },
   {
@@ -1270,7 +1352,7 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2020-10-01",
     "output": {
-      "$ref": "#/97"
+      "$ref": "#/100"
     }
   },
   {
@@ -1279,7 +1361,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/100"
+          "$ref": "#/103"
         },
         "flags": 0,
         "description": "CertificateEmail resource specific properties"
@@ -1344,7 +1426,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/99"
+      "$ref": "#/102"
     }
   },
   {
@@ -1353,7 +1435,7 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2020-10-01",
     "output": {
-      "$ref": "#/101"
+      "$ref": "#/104"
     }
   }
 ]

@@ -148,6 +148,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HealthcareApis/workspaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.HealthcareApis@2022-10-01-preview)
+* **Resource**: Microsoft.HealthcareApis
+* **ApiVersion**: 2022-10-01-preview
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [ServicesNameAvailabilityInfo](#servicesnameavailabilityinfo)
+
 ## AnalyticsConnectorDataDestination
 * **Discriminator**: type
 
@@ -190,6 +196,11 @@
 * **dataMappingConfiguration**: [AnalyticsConnectorMapping](#analyticsconnectormapping) (Required): Data mapping configuration for Analytics Connector.
 * **dataSourceConfiguration**: [AnalyticsConnectorDataSource](#analyticsconnectordatasource) (Required): Data source for Analytics Connector.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string (ReadOnly): The provisioning state.
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name of the service instance to check.
+* **type**: string (Required): The fully qualified resource type which includes provider namespace.
 
 ## CorsConfiguration
 ### Properties
@@ -397,6 +408,12 @@
 * **digest**: string: The artifact digest.
 * **imageName**: string: The artifact name.
 * **loginServer**: string: The Azure Container Registry login server.
+
+## ServicesNameAvailabilityInfo
+### Properties
+* **message**: string: The detailed reason message.
+* **nameAvailable**: bool (ReadOnly): The value which indicates whether the provided name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason for unavailability.
 
 ## ServicesProperties
 ### Properties

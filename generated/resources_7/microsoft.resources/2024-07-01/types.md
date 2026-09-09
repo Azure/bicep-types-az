@@ -12,6 +12,12 @@
 * **tags**: [DeploymentTags](#deploymenttags): Deployment tags
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function calculateTemplateHash (Microsoft.Resources@2024-07-01)
+* **Resource**: Microsoft.Resources
+* **ApiVersion**: 2024-07-01
+* **Input**: any
+* **Output**: [TemplateHashResult](#templatehashresult)
+
 ## Function cancel (Microsoft.Resources/deployments@2024-07-01)
 * **Resource**: Microsoft.Resources/deployments
 * **ApiVersion**: 2024-07-01
@@ -300,6 +306,11 @@
 ### Properties
 * **location**: string (Required): The location to store the deployment data.
 * **properties**: [DeploymentWhatIfProperties](#deploymentwhatifproperties) (Required): The deployment properties.
+
+## TemplateHashResult
+### Properties
+* **minifiedTemplate**: string: The minified template string.
+* **templateHash**: string: The template hash.
 
 ## TemplateLink
 ### Properties

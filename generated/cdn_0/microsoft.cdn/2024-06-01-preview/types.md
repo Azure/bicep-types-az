@@ -227,6 +227,12 @@
 * **ApiVersion**: 2024-06-01-preview
 * **Output**: any
 
+## Function canMigrate (Microsoft.Cdn@2024-06-01-preview)
+* **Resource**: Microsoft.Cdn
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [CanMigrateParameters](#canmigrateparameters)
+* **Output**: [CanMigrateResult](#canmigrateresult)
+
 ## Function cdnCanMigrateToAfd (Microsoft.Cdn/profiles@2024-06-01-preview)
 * **Resource**: Microsoft.Cdn/profiles
 * **ApiVersion**: 2024-06-01-preview
@@ -237,6 +243,12 @@
 * **ApiVersion**: 2024-06-01-preview
 * **Input**: [CdnMigrationToAfdParameters](#cdnmigrationtoafdparameters)
 * **Output**: [MigrateResult](#migrateresult)
+
+## Function checkEndpointNameAvailability (Microsoft.Cdn@2024-06-01-preview)
+* **Resource**: Microsoft.Cdn
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [CheckEndpointNameAvailabilityInput](#checkendpointnameavailabilityinput)
+* **Output**: [CheckEndpointNameAvailabilityOutput](#checkendpointnameavailabilityoutput)
 
 ## Function checkEndpointNameAvailability (Microsoft.Cdn/profiles@2024-06-01-preview)
 * **Resource**: Microsoft.Cdn/profiles
@@ -249,6 +261,17 @@
 * **ApiVersion**: 2024-06-01-preview
 * **Input**: [CheckHostNameAvailabilityInput](#checkhostnameavailabilityinput)
 * **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
+## Function checkNameAvailability (Microsoft.Cdn@2024-06-01-preview)
+* **Resource**: Microsoft.Cdn
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
+## Function checkResourceUsage (Microsoft.Cdn@2024-06-01-preview)
+* **Resource**: Microsoft.Cdn
+* **ApiVersion**: 2024-06-01-preview
+* **Output**: [ResourceUsageListResult](#resourceusagelistresult)
 
 ## Function checkResourceUsage (Microsoft.Cdn/profiles@2024-06-01-preview)
 * **Resource**: Microsoft.Cdn/profiles
@@ -292,6 +315,12 @@
 * **ApiVersion**: 2024-06-01-preview
 * **Input**: [LoadParameters](#loadparameters)
 * **Output**: any
+
+## Function migrate (Microsoft.Cdn@2024-06-01-preview)
+* **Resource**: Microsoft.Cdn
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [MigrationParameters](#migrationparameters)
+* **Output**: [MigrateResult](#migrateresult)
 
 ## Function migrationAbort (Microsoft.Cdn/profiles@2024-06-01-preview)
 * **Resource**: Microsoft.Cdn/profiles
@@ -367,6 +396,12 @@
 * **ApiVersion**: 2024-06-01-preview
 * **Input**: [ValidateCustomDomainInput](#validatecustomdomaininput)
 * **Output**: [ValidateCustomDomainOutput](#validatecustomdomainoutput)
+
+## Function validateProbe (Microsoft.Cdn@2024-06-01-preview)
+* **Resource**: Microsoft.Cdn
+* **ApiVersion**: 2024-06-01-preview
+* **Input**: [ValidateProbeInput](#validateprobeinput)
+* **Output**: [ValidateProbeOutput](#validateprobeoutput)
 
 ## Function validateSecret (Microsoft.Cdn/profiles@2024-06-01-preview)
 * **Resource**: Microsoft.Cdn/profiles
@@ -506,6 +541,10 @@
 * **queryStringBehavior**: 'Exclude' | 'ExcludeAll' | 'Include' | 'IncludeAll' | string (Required): Caching behavior for the requests
 * **typeName**: 'DeliveryRuleCacheExpirationActionParameters' | 'DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' | 'DeliveryRuleHeaderActionParameters' | 'DeliveryRuleOriginGroupOverrideActionParameters' | 'DeliveryRuleRouteConfigurationOverrideActionParameters' | 'DeliveryRuleUrlRedirectActionParameters' | 'DeliveryRuleUrlRewriteActionParameters' | 'DeliveryRuleUrlSigningActionParameters' | string (Required)
 
+## CanMigrateParameters
+### Properties
+* **classicResourceReference**: [ResourceReference](#resourcereference) (Required): Resource reference of the classic cdn profile or classic frontdoor that need to be migrated.
+
 ## CanMigrateProperties
 ### Properties
 * **canMigrate**: bool (ReadOnly): Flag that says if the profile can be migrated
@@ -564,6 +603,11 @@
 ## CheckHostNameAvailabilityInput
 ### Properties
 * **hostName**: string (Required): The host name to validate.
+
+## CheckNameAvailabilityInput
+### Properties
+* **name**: string (Required): The resource name to validate.
+* **type**: 'Microsoft.Cdn/Profiles/AfdEndpoints' | 'Microsoft.Cdn/Profiles/Endpoints' | string (Required): The type of the resource whose name is to be validated.
 
 ## CheckNameAvailabilityOutput
 ### Properties
@@ -1120,6 +1164,18 @@
 * **nextSteps**: string (ReadOnly): Describes what needs to be done to fix the problem
 * **resourceName**: string (ReadOnly): Resource which has the problem.
 
+## MigrationParameters
+### Properties
+* **classicResourceReference**: [ResourceReference](#resourcereference) (Required): Resource reference of the classic cdn profile or classic frontdoor that need to be migrated.
+* **migrationWebApplicationFirewallMappings**: [MigrationWebApplicationFirewallMapping](#migrationwebapplicationfirewallmapping)[]: Waf mapping for the migrated profile
+* **profileName**: string (Required): Name of the new profile that need to be created.
+* **sku**: [Sku](#sku) (Required): Sku for the migration
+
+## MigrationWebApplicationFirewallMapping
+### Properties
+* **migratedFrom**: [ResourceReference](#resourcereference): Migration From Waf policy
+* **migratedTo**: [ResourceReference](#resourcereference): Migration to Waf policy
+
 ## OriginGroupOverride
 ### Properties
 * **forwardingProtocol**: 'HttpOnly' | 'HttpsOnly' | 'MatchRequest' | string: Protocol this rule will use when forwarding traffic to backends.
@@ -1627,6 +1683,16 @@
 * **customDomainValidated**: bool (ReadOnly): Indicates whether the custom domain is valid or not.
 * **message**: string (ReadOnly): Error message describing why the custom domain is not valid.
 * **reason**: string (ReadOnly): The reason why the custom domain is not valid.
+
+## ValidateProbeInput
+### Properties
+* **probeURL**: string (Required): The probe URL to validate.
+
+## ValidateProbeOutput
+### Properties
+* **errorCode**: string (ReadOnly): Specifies the error code when the probe url is not accepted.
+* **isValid**: bool (ReadOnly): Indicates whether the probe URL is accepted or not.
+* **message**: string (ReadOnly): The detailed error message describing why the probe URL is not accepted.
 
 ## ValidateSecretInput
 ### Properties

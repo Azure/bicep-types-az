@@ -204,6 +204,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevCenter/projects/pools/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DevCenter@2023-01-01-preview)
+* **Resource**: Microsoft.DevCenter
+* **ApiVersion**: 2023-01-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function runHealthChecks (Microsoft.DevCenter/projects/pools@2023-01-01-preview)
 * **Resource**: Microsoft.DevCenter/projects/pools
 * **ApiVersion**: 2023-01-01-preview
@@ -238,6 +244,17 @@
 * **lastSyncTime**: string (ReadOnly): When the catalog was last synced.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'StorageProvisioningFailed' | 'Succeeded' | 'TransientFailure' | 'Updated' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 * **syncState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The synchronization state of the catalog.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
 
 ## DevBoxDefinitionProperties
 ### Properties

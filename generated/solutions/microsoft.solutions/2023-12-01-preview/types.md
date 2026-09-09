@@ -57,6 +57,12 @@
 * **Input**: [ListTokenRequest](#listtokenrequest)
 * **Output**: [ManagedIdentityTokenResult](#managedidentitytokenresult)
 
+## Function portalRegistryPackage (Microsoft.Solutions@2023-12-01-preview)
+* **Resource**: Microsoft.Solutions
+* **ApiVersion**: 2023-12-01-preview
+* **Input**: [RegistryPackagePlan](#registrypackageplan)
+* **Output**: [RegistryPackage](#registrypackage)
+
 ## Function refreshPermissions (Microsoft.Solutions/applications@2023-12-01-preview)
 * **Resource**: Microsoft.Solutions/applications
 * **ApiVersion**: 2023-12-01-preview
@@ -253,6 +259,26 @@
 * **promotionCode**: string: The promotion code.
 * **publisher**: string (Required): The publisher ID.
 * **version**: string (Required): The plan's version.
+
+## RegistryPackage
+### Properties
+* **offer**: string (Required): The offer Id
+* **packageLinks**: [RegistryPackageLinks](#registrypackagelinks) (Required): The registry package links.
+* **plan**: string (Required): The plan Id
+* **publisher**: string (Required): The publisher
+* **version**: string (Required): The version of the plan
+
+## RegistryPackageLinks
+### Properties
+* **createUiDefinitionLink**: string: The create ui definition link.
+* **deploymentTemplateLink**: string: The deployment template link.
+
+## RegistryPackagePlan
+### Properties
+* **offer**: string (Required): The offer Id.
+* **plan**: string (Required): The plan Id.
+* **publisher**: string (Required): The publisher ID.
+* **version**: string: The plan's version.
 
 ## ResourceTags
 ### Properties

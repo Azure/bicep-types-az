@@ -37,6 +37,29 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.IoTCentral/iotApps/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function appTemplates (Microsoft.IoTCentral@2021-11-01-preview)
+* **Resource**: Microsoft.IoTCentral
+* **ApiVersion**: 2021-11-01-preview
+* **Output**: [AppTemplatesResult](#apptemplatesresult)
+
+## Function checkNameAvailability (Microsoft.IoTCentral@2021-11-01-preview)
+* **Resource**: Microsoft.IoTCentral
+* **ApiVersion**: 2021-11-01-preview
+* **Input**: [OperationInputs](#operationinputs)
+* **Output**: [AppAvailabilityInfo](#appavailabilityinfo)
+
+## Function checkSubdomainAvailability (Microsoft.IoTCentral@2021-11-01-preview)
+* **Resource**: Microsoft.IoTCentral
+* **ApiVersion**: 2021-11-01-preview
+* **Input**: [OperationInputs](#operationinputs)
+* **Output**: [AppAvailabilityInfo](#appavailabilityinfo)
+
+## AppAvailabilityInfo
+### Properties
+* **message**: string (ReadOnly): The detailed reason message.
+* **nameAvailable**: bool (ReadOnly): The value which indicates whether the provided name is available.
+* **reason**: string (ReadOnly): The reason for unavailability.
+
 ## AppProperties
 ### Properties
 * **applicationId**: string (ReadOnly): The ID of the application.
@@ -53,6 +76,27 @@
 ### Properties
 * **name**: 'ST0' | 'ST1' | 'ST2' | string (Required): The name of the SKU.
 
+## AppTemplate
+### Properties
+* **description**: string (ReadOnly): The description of the template.
+* **industry**: string (ReadOnly): The industry of the template.
+* **locations**: [AppTemplateLocations](#apptemplatelocations)[] (ReadOnly): A list of locations that support the template.
+* **manifestId**: string (ReadOnly): The ID of the template.
+* **manifestVersion**: string (ReadOnly): The version of the template.
+* **name**: string (ReadOnly): The name of the template.
+* **order**: int (ReadOnly): The order of the template in the templates list.
+* **title**: string (ReadOnly): The title of the template.
+
+## AppTemplateLocations
+### Properties
+* **displayName**: string (ReadOnly): The display name of the location.
+* **id**: string (ReadOnly): The ID of the location.
+
+## AppTemplatesResult
+### Properties
+* **nextLink**: string: The link used to get the next page of IoT Central application templates.
+* **value**: [AppTemplate](#apptemplate)[] (ReadOnly): A list of IoT Central Application Templates.
+
 ## NetworkRuleSetIpRule
 ### Properties
 * **action**: 'Allow' | string (ReadOnly): The network action for the IP mask.
@@ -65,6 +109,11 @@
 * **applyToIoTCentral**: bool: Whether these rules apply for connectivity via IoT Central web portal and APIs.
 * **defaultAction**: 'Allow' | 'Deny' | string: The default network action to apply.
 * **ipRules**: [NetworkRuleSetIpRule](#networkrulesetiprule)[]: List of IP rules.
+
+## OperationInputs
+### Properties
+* **name**: string (Required): The name of the IoT Central application instance to check.
+* **type**: string: The type of the IoT Central resource to query.
 
 ## PrivateEndpoint
 ### Properties

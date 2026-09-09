@@ -401,6 +401,12 @@
 * **ApiVersion**: 2025-09-01
 * **Output**: [IncidentEntitiesResponse](#incidententitiesresponse)
 
+## Function listRepositories (Microsoft.SecurityInsights@2025-09-01)
+* **Resource**: Microsoft.SecurityInsights
+* **ApiVersion**: 2025-09-01
+* **Input**: [RepositoryAccessProperties](#repositoryaccessproperties)
+* **Output**: [RepoList](#repolist)
+
 ## Function queryIndicators (Microsoft.SecurityInsights/threatIntelligence@2025-09-01)
 * **Resource**: Microsoft.SecurityInsights/threatIntelligence
 * **ApiVersion**: 2025-09-01
@@ -1774,6 +1780,18 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 * **relatedResourceKind**: string (ReadOnly): The resource kind of the related resource
 * **relatedResourceName**: string (ReadOnly): The name of the related resource
 * **relatedResourceType**: string (ReadOnly): The resource type of the related resource
+
+## Repo
+### Properties
+* **branches**: string[]: Array of branches.
+* **fullName**: string: The name of the repository.
+* **installationId**: int: The installation id of the repository.
+* **url**: string: The url to access the repository.
+
+## RepoList
+### Properties
+* **nextLink**: string (ReadOnly): The link to the next page of items
+* **value**: [Repo](#repo)[] (Required): The Repo items on this page
 
 ## Repository
 ### Properties

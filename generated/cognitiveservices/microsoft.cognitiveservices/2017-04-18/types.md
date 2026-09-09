@@ -28,6 +28,12 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkDomainAvailability (Microsoft.CognitiveServices@2017-04-18)
+* **Resource**: Microsoft.CognitiveServices
+* **ApiVersion**: 2017-04-18
+* **Input**: [CheckDomainAvailabilityParameter](#checkdomainavailabilityparameter)
+* **Output**: [CheckDomainAvailabilityResult](#checkdomainavailabilityresult)
+
 ## Function checkSkuAvailability (Microsoft.CognitiveServices/locations@2017-04-18)
 * **Resource**: Microsoft.CognitiveServices/locations
 * **ApiVersion**: 2017-04-18
@@ -44,6 +50,18 @@
 * **ApiVersion**: 2017-04-18
 * **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
 * **Output**: [CognitiveServicesAccountKeys](#cognitiveservicesaccountkeys)
+
+## CheckDomainAvailabilityParameter
+### Properties
+* **subdomainName**: string (Required): The subdomain name to use.
+* **type**: string (Required): The Type of the resource.
+
+## CheckDomainAvailabilityResult
+### Properties
+* **isSubdomainAvailable**: bool: Indicates the given SKU is available or not.
+* **reason**: string: Reason why the SKU is not available.
+* **subdomainName**: string: The subdomain name to use.
+* **type**: string: The Type of the resource.
 
 ## CheckSkuAvailabilityParameter
 ### Properties

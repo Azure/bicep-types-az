@@ -96,6 +96,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AgFoodPlatform/farmBeatsSolutionDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AgFoodPlatform@2023-06-01-preview)
+* **Resource**: Microsoft.AgFoodPlatform
+* **ApiVersion**: 2023-06-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## ApiProperties
 ### Properties
 * **apiFreshnessTimeInMinutes**: int {minValue: 0, maxValue: 10080}: Interval in minutes for which the weather data for the api needs to be refreshed.
@@ -116,6 +122,17 @@
 * **clientSecret**: [KeyVaultProperties](#keyvaultproperties) (Required): Properties of the key vault.
 * **kind**: 'OAuthClientCredentials' (Required): Enum for different types of AuthCredentials supported.
 
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
 
 ## DataConnectorProperties
 ### Properties

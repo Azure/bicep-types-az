@@ -1,0 +1,1565 @@
+[
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "QueryFilter",
+    "discriminator": "reportType",
+    "baseProperties": {
+      "dateRange": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The start and end dates for carbon emissions data. Required. For ItemDetailsReport and TopItemsSummaryReport, only one month of data is supported at a time, so start and end dates should be equal within DateRange (e.g., start: 2024-06-01 and end: 2024-06-01)."
+      },
+      "subscriptionList": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 1,
+        "description": "List of subscription IDs for which carbon emissions data is requested. Required. Each subscription ID should be in lowercase format. The max length of list is 100."
+      },
+      "resourceGroupUrlList": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "List of resource group URLs for carbon emissions data. Optional. Each URL must follow the format '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}', and should be in all lowercase."
+      },
+      "resourceTypeList": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "List of resource types for carbon emissions data. Optional. Each resource type should be specified in lowercase, following the format 'microsoft.{service}/{resourceType}', e.g., 'microsoft.storage/storageaccounts'."
+      },
+      "locationList": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "List of locations(Azure Region Display Name) for carbon emissions data, with each location specified in lowercase (e.g., 'east us'). Optional. You can use the command 'az account list-locations -o table' to find Azure Region Display Names."
+      },
+      "carbonScopeList": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 1,
+        "description": "List of carbon emission scopes. Required. Accepts one or more values from EmissionScopeEnum (e.g., Scope1, Scope2, Scope3) in list form. The output will include the total emissions for the specified scopes."
+      }
+    },
+    "elements": {
+      "ItemDetailsReport": {
+        "$ref": "#/12"
+      },
+      "MonthlySummaryReport": {
+        "$ref": "#/31"
+      },
+      "OverallSummaryReport": {
+        "$ref": "#/33"
+      },
+      "TopItemsMonthlySummaryReport": {
+        "$ref": "#/35"
+      },
+      "TopItemsSummaryReport": {
+        "$ref": "#/44"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DateRange",
+    "properties": {
+      "start": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Start date parameter in yyyy-MM-01 format. Only the first day of each month is accepted."
+      },
+      "end": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "End date parameter in yyyy-MM-01 format. Only the first day of each month is accepted."
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scope1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scope2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scope3"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/10"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ItemDetailsQueryFilter",
+    "properties": {
+      "categoryType": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 1,
+        "description": "Specifies the category type for detailed emissions data, such as Resource, ResourceGroup, ResourceType, Location, or Subscription. See supported types in CategoryTypeEnum."
+      },
+      "orderBy": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 1,
+        "description": "The column name to order the results by. See supported values in OrderByColumnEnum."
+      },
+      "sortDirection": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 1,
+        "description": "Direction for sorting results. See supported values in SortDirectionEnum."
+      },
+      "pageSize": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 1,
+        "description": "Number of items to return in one request, max value is 5000."
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Pagination token for fetching the next page of data. This token is nullable and will be returned in the previous response if additional data pages are available."
+      },
+      "reportType": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1,
+        "description": "The ReportType requested for carbon emissions data. Required. Specifies how data is aggregated and displayed in the output, as explained in the ReportTypeEnum."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Location"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ItemName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LatestMonthEmissions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PreviousMonthEmissions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MonthOverMonthEmissionsChangeRatio"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MonthlyEmissionsChangeValue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Desc"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Asc"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 5000
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ItemDetailsReport"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonthlySummaryReportQueryFilter",
+    "properties": {
+      "reportType": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 1,
+        "description": "The ReportType requested for carbon emissions data. Required. Specifies how data is aggregated and displayed in the output, as explained in the ReportTypeEnum."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MonthlySummaryReport"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OverallSummaryReportQueryFilter",
+    "properties": {
+      "reportType": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "The ReportType requested for carbon emissions data. Required. Specifies how data is aggregated and displayed in the output, as explained in the ReportTypeEnum."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OverallSummaryReport"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TopItemsMonthlySummaryReportQueryFilter",
+    "properties": {
+      "categoryType": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "Specifies the category type to retrieve top-emitting items, aggregated by month. See supported types in CategoryTypeEnum."
+      },
+      "topItems": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The number of top items to return, based on emissions. Must be between 1 and 10."
+      },
+      "reportType": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "The ReportType requested for carbon emissions data. Required. Specifies how data is aggregated and displayed in the output, as explained in the ReportTypeEnum."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Location"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 10
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TopItemsMonthlySummaryReport"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TopItemsSummaryReportQueryFilter",
+    "properties": {
+      "categoryType": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 1,
+        "description": "Specifies the category type for which to retrieve top-emitting items. See supported values defined in CategoryTypeEnum."
+      },
+      "topItems": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The number of top items to return, based on emissions. This value must be between 1 and 10."
+      },
+      "reportType": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 1,
+        "description": "The ReportType requested for carbon emissions data. Required. Specifies how data is aggregated and displayed in the output, as explained in the ReportTypeEnum."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Location"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TopItemsSummaryReport"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CarbonEmissionDataListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 1,
+        "description": "The CarbonEmissionData items on this page"
+      },
+      "skipToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The pagination token to fetch next page data, it's null or empty if it doesn't have next page data"
+      },
+      "subscriptionAccessDecisionList": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 0,
+        "description": "The access decision list for each input subscription"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "CarbonEmissionData",
+    "discriminator": "dataType",
+    "baseProperties": {
+      "latestMonthEmissions": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 1,
+        "description": "Total carbon emissions for the specified query parameters, measured in kgCO2E. This value represents total emissions over the specified date range (e.g., March-June)."
+      },
+      "previousMonthEmissions": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 1,
+        "description": "Total carbon emissions for the previous month’s date range, which is the same period as the specified date range but shifted left by one month (e.g., if the specified range is March - June, the previous month’s range will be Feb - May). The value is measured in kgCO2E."
+      },
+      "monthOverMonthEmissionsChangeRatio": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "The percentage change in carbon emissions between the current and previous DateRange. This is calculated as: (latestMonthEmissions - previousMonthEmissions) / previousMonthEmissions."
+      },
+      "monthlyEmissionsChangeValue": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "The change in carbon emissions between the current and previous period, calculated as: latestMonthEmissions - previousMonthEmissions."
+      }
+    },
+    "elements": {
+      "ItemDetailsData": {
+        "$ref": "#/55"
+      },
+      "MonthlySummaryData": {
+        "$ref": "#/63"
+      },
+      "OverallSummaryData": {
+        "$ref": "#/65"
+      },
+      "ResourceGroupItemDetailsData": {
+        "$ref": "#/67"
+      },
+      "ResourceGroupTopItemsMonthlySummaryData": {
+        "$ref": "#/75"
+      },
+      "ResourceGroupTopItemsSummaryData": {
+        "$ref": "#/83"
+      },
+      "ResourceItemDetailsData": {
+        "$ref": "#/91"
+      },
+      "ResourceTopItemsMonthlySummaryData": {
+        "$ref": "#/99"
+      },
+      "ResourceTopItemsSummaryData": {
+        "$ref": "#/107"
+      },
+      "TopItemsMonthlySummaryData": {
+        "$ref": "#/115"
+      },
+      "TopItemsSummaryData": {
+        "$ref": "#/123"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CarbonEmissionItemDetailData",
+    "properties": {
+      "itemName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Item name, it can be resource name, resource type name, location, resource group name or subscriptionId. It depends on category type."
+      },
+      "categoryType": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "Item category, see supported type value defined in CategoryTypeEnum"
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 1,
+        "description": "The data type of the query result, indicating the format of the returned response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Location"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ItemDetailsData"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CarbonEmissionMonthlySummaryData",
+    "properties": {
+      "date": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The date, representing the month, for which the emissions data is reported, formatted as yyyy-MM-dd (e.g., 2024-03-01)"
+      },
+      "carbonIntensity": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 1,
+        "description": "Carbon intensity for the specified month, typically in units of kgCO2E per unit of normalized usage"
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 1,
+        "description": "The data type of the query result, indicating the format of the returned response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MonthlySummaryData"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CarbonEmissionOverallSummaryData",
+    "properties": {
+      "dataType": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 1,
+        "description": "The data type of the query result, indicating the format of the returned response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OverallSummaryData"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceGroupCarbonEmissionItemDetailData",
+    "properties": {
+      "itemName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "It's resource group name"
+      },
+      "categoryType": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 1,
+        "description": "ResourceGroup Item category"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Subscription Id"
+      },
+      "resourceGroupUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource Group url, value format is '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}'"
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 1,
+        "description": "The data type of the query result, indicating the format of the returned response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Location"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroupItemDetailsData"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceGroupCarbonEmissionTopItemMonthlySummaryData",
+    "properties": {
+      "itemName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "It's resource group name for ResourceGroup category"
+      },
+      "categoryType": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 1,
+        "description": "ResourceGroup Item category"
+      },
+      "date": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Monthly date string, format is yyyy-MM-dd"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Subscription Id"
+      },
+      "resourceGroupUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource Group url, the format is '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}'"
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 1,
+        "description": "The data type of the query result, indicating the format of the returned response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Location"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroupTopItemsMonthlySummaryData"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceGroupCarbonEmissionTopItemsSummaryData",
+    "properties": {
+      "itemName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resourceGroup name of the resource for ResourceGroup Category"
+      },
+      "categoryType": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 1,
+        "description": "ResourceGroup Item category"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Subscription Id"
+      },
+      "resourceGroupUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource Group url, value format is '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}'"
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 1,
+        "description": "The data type of the query result, indicating the format of the returned response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Location"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/87"
+      },
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroupTopItemsSummaryData"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceCarbonEmissionItemDetailData",
+    "properties": {
+      "itemName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "It's resource name."
+      },
+      "categoryType": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 1,
+        "description": "Resource Item category, see supported value defined in CategoryTypeEnum"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Subscription Id"
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource Group"
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource Location (e.g., 'east us')."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The type of resource, for example: microsoft.storage/storageaccounts"
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 1,
+        "description": "The data type of the query result, indicating the format of the returned response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Location"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceItemDetailsData"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceCarbonEmissionTopItemMonthlySummaryData",
+    "properties": {
+      "itemName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource name of resource for Resource Category"
+      },
+      "categoryType": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 1,
+        "description": "Resource Item category"
+      },
+      "date": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Monthly date string, format is yyyy-MM-dd"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Subscription Id"
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource Group"
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 1,
+        "description": "The data type of the query result, indicating the format of the returned response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Location"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceTopItemsMonthlySummaryData"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceCarbonEmissionTopItemsSummaryData",
+    "properties": {
+      "itemName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource name of the resource for the Resource Category."
+      },
+      "categoryType": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 1,
+        "description": "The category type of the item. This defines which dimension the emissions are aggregated by, and the supported values are defined in CategoryTypeEnum (e.g., Subscription, ResourceGroup, Resource, etc.)."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Subscription Id"
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource group name"
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource Id, The URI of the resource for the Resource Category. This identifies the resource being reported."
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 1,
+        "description": "The data type of the query result, indicating the format of the returned response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Location"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceTopItemsSummaryData"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CarbonEmissionTopItemMonthlySummaryData",
+    "properties": {
+      "itemName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Item name, it can be resource name, resource type name, location, resource group name or subscriptionId. It depends on category type."
+      },
+      "categoryType": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 1,
+        "description": "Item category, see supported type value defined in CategoryTypeEnum"
+      },
+      "date": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The date, representing the month, for which the emissions data is reported, formatted as yyyy-MM-dd (e.g., 2024-03-01)"
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 1,
+        "description": "The data type of the query result, indicating the format of the returned response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Location"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TopItemsMonthlySummaryData"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CarbonEmissionTopItemsSummaryData",
+    "properties": {
+      "itemName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The identifier of the item being reported on, which could refer to the resource name, resource type name, location, resource group name, or subscription ID, depending on the specified category type."
+      },
+      "categoryType": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 1,
+        "description": "The category type of the item. This defines which dimension the emissions are aggregated by, and the supported values are defined in CategoryTypeEnum (e.g., Subscription, ResourceGroup, Resource, etc.)."
+      },
+      "dataType": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 1,
+        "description": "The data type of the query result, indicating the format of the returned response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscription"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Location"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TopItemsSummaryData"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/53"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionAccessDecision",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Id of Subscription"
+      },
+      "decision": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 1,
+        "description": "Access decision to subscription"
+      },
+      "denialReason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The reason why access request got denied"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Denied"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/133"
+      },
+      {
+        "$ref": "#/134"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/132"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "carbonEmissionReports",
+    "resourceType": "Microsoft.Carbon",
+    "apiVersion": "2025-04-01",
+    "output": {
+      "$ref": "#/52"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CarbonEmissionDataAvailableDateRange",
+    "properties": {
+      "startDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Start date parameter, format is yyyy-MM-dd"
+      },
+      "endDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "End date parameter, format is yyyy-MM-dd"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "queryCarbonEmissionDataAvailableDateRange",
+    "resourceType": "Microsoft.Carbon",
+    "apiVersion": "2025-04-01",
+    "output": {
+      "$ref": "#/138"
+    }
+  }
+]

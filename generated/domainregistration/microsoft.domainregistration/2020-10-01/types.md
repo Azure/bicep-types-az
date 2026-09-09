@@ -38,11 +38,28 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DomainRegistration/topLevelDomains' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkDomainAvailability (Microsoft.DomainRegistration@2020-10-01)
+* **Resource**: Microsoft.DomainRegistration
+* **ApiVersion**: 2020-10-01
+* **Input**: [NameIdentifier](#nameidentifier)
+* **Output**: [DomainAvailabilityCheckResult](#domainavailabilitycheckresult)
+
+## Function generateSsoRequest (Microsoft.DomainRegistration@2020-10-01)
+* **Resource**: Microsoft.DomainRegistration
+* **ApiVersion**: 2020-10-01
+* **Output**: [DomainControlCenterSsoRequest](#domaincontrolcenterssorequest)
+
 ## Function listAgreements (Microsoft.DomainRegistration/topLevelDomains@2020-10-01)
 * **Resource**: Microsoft.DomainRegistration/topLevelDomains
 * **ApiVersion**: 2020-10-01
 * **Input**: [TopLevelDomainAgreementOption](#topleveldomainagreementoption)
 * **Output**: [TldLegalAgreementCollection](#tldlegalagreementcollection)
+
+## Function listDomainRecommendations (Microsoft.DomainRegistration@2020-10-01)
+* **Resource**: Microsoft.DomainRegistration
+* **ApiVersion**: 2020-10-01
+* **Input**: [DomainRecommendationSearchParameters](#domainrecommendationsearchparameters)
+* **Output**: [NameIdentifierCollection](#nameidentifiercollection)
 
 ## Function renew (Microsoft.DomainRegistration/domains@2020-10-01)
 * **Resource**: Microsoft.DomainRegistration/domains
@@ -69,6 +86,18 @@
 * **nameMiddle**: string: Middle name.
 * **organization**: string: Organization contact belongs to.
 * **phone**: string (Required): Phone number.
+
+## DomainAvailabilityCheckResult
+### Properties
+* **available**: bool: <code>true</code> if domain can be purchased using CreateDomain API; otherwise, <code>false</code>.
+* **domainType**: 'Regular' | 'SoftDeleted': Valid values are Regular domain: Azure will charge the full price of domain registration, SoftDeleted: Purchasing this domain will simply restore it and this operation will not cost anything.
+* **name**: string: Name of the domain.
+
+## DomainControlCenterSsoRequest
+### Properties
+* **postParameterKey**: string (ReadOnly): Post parameter key.
+* **postParameterValue**: string (ReadOnly): Post parameter value. Client should use 'application/x-www-form-urlencoded' encoding for this value.
+* **url**: string (ReadOnly): URL where the single sign-on request is to be made.
 
 ## DomainOwnershipIdentifierProperties
 ### Properties
@@ -104,6 +133,11 @@
 * **agreedBy**: string: Client IP address.
 * **agreementKeys**: string[]: List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.
 
+## DomainRecommendationSearchParameters
+### Properties
+* **keywords**: string: Keywords to be used for generating domain recommendations.
+* **maxDomainRecommendations**: int: Maximum number of recommendations.
+
 ## HostName
 ### Properties
 * **azureResourceName**: string: Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
@@ -112,6 +146,15 @@
 * **hostNameType**: 'Managed' | 'Verified': Type of the hostname.
 * **name**: string: Name of the hostname.
 * **siteNames**: string[]: List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
+
+## NameIdentifier
+### Properties
+* **name**: string: Name of the object.
+
+## NameIdentifierCollection
+### Properties
+* **nextLink**: string (ReadOnly): Link to next page of resources.
+* **value**: [NameIdentifier](#nameidentifier)[] (Required): Collection of resources.
 
 ## ResourceTags
 ### Properties

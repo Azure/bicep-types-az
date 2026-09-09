@@ -13,6 +13,12 @@
 * **tags**: [RegistryCreateParametersTags](#registrycreateparameterstags): The tags for the container registry.
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.ContainerRegistry@2017-03-01)
+* **Resource**: Microsoft.ContainerRegistry
+* **ApiVersion**: 2017-03-01
+* **Input**: [RegistryNameCheckRequest](#registrynamecheckrequest)
+* **Output**: [RegistryNameStatus](#registrynamestatus)
+
 ## Function listCredentials (Microsoft.ContainerRegistry/registries@2017-03-01)
 * **Resource**: Microsoft.ContainerRegistry/registries
 * **ApiVersion**: 2017-03-01
@@ -37,6 +43,17 @@
 ### Properties
 * **passwords**: [RegistryPassword](#registrypassword)[]: The list of passwords for a container registry.
 * **username**: string: The username for a container registry.
+
+## RegistryNameCheckRequest
+### Properties
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required): The name of the container registry.
+* **type**: 'Microsoft.ContainerRegistry/registries' (Required): The resource type of the container registry. This field must be set to 'Microsoft.ContainerRegistry/registries'.
+
+## RegistryNameStatus
+### Properties
+* **message**: string: If any, the error message that provides more detail for the reason that the name is not available.
+* **nameAvailable**: bool: The value that indicates whether the name is available.
+* **reason**: string: If any, the reason that the name is not available.
 
 ## RegistryPassword
 ### Properties

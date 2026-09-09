@@ -1077,6 +1077,174 @@
     "writableScopes": 0
   },
   {
+    "$type": "ObjectType",
+    "name": "NameIdentifier",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the object."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DomainAvailabilityCheckResult",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the domain."
+      },
+      "available": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "<code>true</code> if domain can be purchased using CreateDomain API; otherwise, <code>false</code>."
+      },
+      "domainType": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "Valid values are Regular domain: Azure will charge the full price of domain registration, SoftDeleted: Purchasing this domain will simply restore it and this operation will not cost anything."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Regular"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SoftDeleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkDomainAvailability",
+    "resourceType": "Microsoft.DomainRegistration",
+    "apiVersion": "2020-10-01",
+    "output": {
+      "$ref": "#/87"
+    },
+    "input": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DomainControlCenterSsoRequest",
+    "properties": {
+      "url": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "URL where the single sign-on request is to be made."
+      },
+      "postParameterKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Post parameter key."
+      },
+      "postParameterValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Post parameter value. Client should use 'application/x-www-form-urlencoded' encoding for this value."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateSsoRequest",
+    "resourceType": "Microsoft.DomainRegistration",
+    "apiVersion": "2020-10-01",
+    "output": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DomainRecommendationSearchParameters",
+    "properties": {
+      "keywords": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Keywords to be used for generating domain recommendations."
+      },
+      "maxDomainRecommendations": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0,
+        "description": "Maximum number of recommendations."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameIdentifierCollection",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 1,
+        "description": "Collection of resources."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Link to next page of resources."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listDomainRecommendations",
+    "resourceType": "Microsoft.DomainRegistration",
+    "apiVersion": "2020-10-01",
+    "output": {
+      "$ref": "#/96"
+    },
+    "input": {
+      "$ref": "#/94"
+    }
+  },
+  {
     "$type": "AnyType"
   },
   {
@@ -1085,7 +1253,7 @@
     "resourceType": "Microsoft.DomainRegistration/domains",
     "apiVersion": "2020-10-01",
     "output": {
-      "$ref": "#/86"
+      "$ref": "#/99"
     }
   },
   {
@@ -1114,7 +1282,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/104"
         },
         "flags": 1,
         "description": "Collection of resources."
@@ -1165,7 +1333,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/90"
+      "$ref": "#/103"
     }
   },
   {
@@ -1174,10 +1342,10 @@
     "resourceType": "Microsoft.DomainRegistration/topLevelDomains",
     "apiVersion": "2020-10-01",
     "output": {
-      "$ref": "#/89"
+      "$ref": "#/102"
     },
     "input": {
-      "$ref": "#/88"
+      "$ref": "#/101"
     }
   }
 ]

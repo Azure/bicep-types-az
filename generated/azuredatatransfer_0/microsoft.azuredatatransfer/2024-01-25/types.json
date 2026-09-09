@@ -1666,6 +1666,133 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ValidateSchemaResult",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 0,
+        "description": "Validation status of the schema"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Message describing the schema validation"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/133"
+      },
+      {
+        "$ref": "#/134"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateSchema",
+    "resourceType": "Microsoft.AzureDataTransfer",
+    "apiVersion": "2024-01-25",
+    "output": {
+      "$ref": "#/132"
+    },
+    "input": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListApprovedSchemasRequest",
+    "properties": {
+      "pipeline": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the pipeline to filter approved schemas."
+      },
+      "direction": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 0,
+        "description": "The direction pipeline to filter approved schemas."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Send"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Receive"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/138"
+      },
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SchemasListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 0,
+        "description": "Schemas array."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listApprovedSchemas",
+    "resourceType": "Microsoft.AzureDataTransfer",
+    "apiVersion": "2024-01-25",
+    "output": {
+      "$ref": "#/141"
+    },
+    "input": {
+      "$ref": "#/137"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "Flow",
     "properties": {
       "properties": {
@@ -1691,7 +1818,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/133"
+          "$ref": "#/145"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1747,7 +1874,7 @@
     "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
     "apiVersion": "2024-01-25",
     "output": {
-      "$ref": "#/132"
+      "$ref": "#/144"
     }
   },
   {
@@ -1756,7 +1883,7 @@
     "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
     "apiVersion": "2024-01-25",
     "output": {
-      "$ref": "#/132"
+      "$ref": "#/144"
     }
   },
   {
@@ -1785,10 +1912,10 @@
     "resourceType": "Microsoft.AzureDataTransfer/connections/flows",
     "apiVersion": "2024-01-25",
     "output": {
-      "$ref": "#/132"
+      "$ref": "#/144"
     },
     "input": {
-      "$ref": "#/136"
+      "$ref": "#/148"
     }
   },
   {
@@ -1804,7 +1931,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/139"
+          "$ref": "#/151"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1860,10 +1987,10 @@
     "resourceType": "Microsoft.AzureDataTransfer/connections",
     "apiVersion": "2024-01-25",
     "output": {
-      "$ref": "#/138"
+      "$ref": "#/150"
     },
     "input": {
-      "$ref": "#/136"
+      "$ref": "#/148"
     }
   },
   {
@@ -1872,7 +1999,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/173"
+          "$ref": "#/185"
         },
         "flags": 0,
         "description": "Connections array."
@@ -1906,7 +2033,7 @@
       },
       "direction": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/157"
         },
         "flags": 0,
         "description": "Direction of data movement"
@@ -1920,7 +2047,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/162"
         },
         "flags": 2,
         "description": "Status of the connection"
@@ -1934,7 +2061,7 @@
       },
       "linkStatus": {
         "type": {
-          "$ref": "#/153"
+          "$ref": "#/165"
         },
         "flags": 2,
         "description": "Link status of the current connection"
@@ -1948,7 +2075,7 @@
       },
       "flowTypes": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/175"
         },
         "flags": 0,
         "description": "The flow types being requested for this connection"
@@ -1997,35 +2124,35 @@
       },
       "secondaryContacts": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/176"
         },
         "flags": 0,
         "description": "The secondary contacts for this connection request"
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/169"
+          "$ref": "#/181"
         },
         "flags": 2,
         "description": "Provisioning state of the connection"
       },
       "policies": {
         "type": {
-          "$ref": "#/170"
+          "$ref": "#/182"
         },
         "flags": 0,
         "description": "The policies for this connection"
       },
       "schemas": {
         "type": {
-          "$ref": "#/171"
+          "$ref": "#/183"
         },
         "flags": 0,
         "description": "The schemas for this connection"
       },
       "tags": {
         "type": {
-          "$ref": "#/172"
+          "$ref": "#/184"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2079,10 +2206,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/143"
+        "$ref": "#/155"
       },
       {
-        "$ref": "#/144"
+        "$ref": "#/156"
       },
       {
         "$ref": "#/2"
@@ -2109,16 +2236,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/146"
+        "$ref": "#/158"
       },
       {
-        "$ref": "#/147"
+        "$ref": "#/159"
       },
       {
-        "$ref": "#/148"
+        "$ref": "#/160"
       },
       {
-        "$ref": "#/149"
+        "$ref": "#/161"
       },
       {
         "$ref": "#/2"
@@ -2137,10 +2264,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/151"
+        "$ref": "#/163"
       },
       {
-        "$ref": "#/152"
+        "$ref": "#/164"
       },
       {
         "$ref": "#/2"
@@ -2183,28 +2310,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/154"
+        "$ref": "#/166"
       },
       {
-        "$ref": "#/155"
+        "$ref": "#/167"
       },
       {
-        "$ref": "#/156"
+        "$ref": "#/168"
       },
       {
-        "$ref": "#/157"
+        "$ref": "#/169"
       },
       {
-        "$ref": "#/158"
+        "$ref": "#/170"
       },
       {
-        "$ref": "#/159"
+        "$ref": "#/171"
       },
       {
-        "$ref": "#/160"
+        "$ref": "#/172"
       },
       {
-        "$ref": "#/161"
+        "$ref": "#/173"
       },
       {
         "$ref": "#/2"
@@ -2214,7 +2341,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/162"
+      "$ref": "#/174"
     }
   },
   {
@@ -2243,16 +2370,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/165"
+        "$ref": "#/177"
       },
       {
-        "$ref": "#/166"
+        "$ref": "#/178"
       },
       {
-        "$ref": "#/167"
+        "$ref": "#/179"
       },
       {
-        "$ref": "#/168"
+        "$ref": "#/180"
       },
       {
         "$ref": "#/2"
@@ -2282,7 +2409,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/142"
+      "$ref": "#/154"
     }
   },
   {
@@ -2291,7 +2418,7 @@
     "resourceType": "Microsoft.AzureDataTransfer/connections",
     "apiVersion": "2024-01-25",
     "output": {
-      "$ref": "#/141"
+      "$ref": "#/153"
     }
   },
   {
@@ -2300,7 +2427,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/202"
+          "$ref": "#/214"
         },
         "flags": 0,
         "description": "flows array."
@@ -2355,7 +2482,7 @@
       },
       "linkStatus": {
         "type": {
-          "$ref": "#/179"
+          "$ref": "#/191"
         },
         "flags": 2,
         "description": "Link status of the current flow"
@@ -2369,7 +2496,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/182"
+          "$ref": "#/194"
         },
         "flags": 0,
         "description": "Status of the current flow"
@@ -2404,28 +2531,28 @@
       },
       "flowType": {
         "type": {
-          "$ref": "#/191"
+          "$ref": "#/203"
         },
         "flags": 0,
         "description": "The flow type for this flow"
       },
       "dataType": {
         "type": {
-          "$ref": "#/194"
+          "$ref": "#/206"
         },
         "flags": 0,
         "description": "Transfer Storage Blobs or Tables"
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/199"
+          "$ref": "#/211"
         },
         "flags": 2,
         "description": "Provisioning state of the flow"
       },
       "policies": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/212"
         },
         "flags": 0,
         "description": "The policies for this flow"
@@ -2446,7 +2573,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/201"
+          "$ref": "#/213"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2500,10 +2627,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/177"
+        "$ref": "#/189"
       },
       {
-        "$ref": "#/178"
+        "$ref": "#/190"
       },
       {
         "$ref": "#/2"
@@ -2522,10 +2649,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/180"
+        "$ref": "#/192"
       },
       {
-        "$ref": "#/181"
+        "$ref": "#/193"
       },
       {
         "$ref": "#/2"
@@ -2568,28 +2695,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/183"
+        "$ref": "#/195"
       },
       {
-        "$ref": "#/184"
+        "$ref": "#/196"
       },
       {
-        "$ref": "#/185"
+        "$ref": "#/197"
       },
       {
-        "$ref": "#/186"
+        "$ref": "#/198"
       },
       {
-        "$ref": "#/187"
+        "$ref": "#/199"
       },
       {
-        "$ref": "#/188"
+        "$ref": "#/200"
       },
       {
-        "$ref": "#/189"
+        "$ref": "#/201"
       },
       {
-        "$ref": "#/190"
+        "$ref": "#/202"
       },
       {
         "$ref": "#/2"
@@ -2608,10 +2735,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/192"
+        "$ref": "#/204"
       },
       {
-        "$ref": "#/193"
+        "$ref": "#/205"
       },
       {
         "$ref": "#/2"
@@ -2638,16 +2765,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/195"
+        "$ref": "#/207"
       },
       {
-        "$ref": "#/196"
+        "$ref": "#/208"
       },
       {
-        "$ref": "#/197"
+        "$ref": "#/209"
       },
       {
-        "$ref": "#/198"
+        "$ref": "#/210"
       },
       {
         "$ref": "#/2"
@@ -2671,7 +2798,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/176"
+      "$ref": "#/188"
     }
   },
   {
@@ -2680,7 +2807,7 @@
     "resourceType": "Microsoft.AzureDataTransfer/connections",
     "apiVersion": "2024-01-25",
     "output": {
-      "$ref": "#/175"
+      "$ref": "#/187"
     }
   },
   {
@@ -2689,10 +2816,10 @@
     "resourceType": "Microsoft.AzureDataTransfer/pipelines",
     "apiVersion": "2024-01-25",
     "output": {
-      "$ref": "#/138"
+      "$ref": "#/150"
     },
     "input": {
-      "$ref": "#/136"
+      "$ref": "#/148"
     }
   },
   {
@@ -2701,29 +2828,10 @@
     "resourceType": "Microsoft.AzureDataTransfer/pipelines",
     "apiVersion": "2024-01-25",
     "output": {
-      "$ref": "#/138"
+      "$ref": "#/150"
     },
     "input": {
-      "$ref": "#/136"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SchemasListResult",
-    "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/207"
-        },
-        "flags": 0,
-        "description": "Schemas array."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/31"
+      "$ref": "#/148"
     }
   },
   {
@@ -2732,7 +2840,7 @@
     "resourceType": "Microsoft.AzureDataTransfer/pipelines",
     "apiVersion": "2024-01-25",
     "output": {
-      "$ref": "#/206"
+      "$ref": "#/141"
     },
     "input": {
       "$ref": "#/31"

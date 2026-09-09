@@ -1868,5 +1868,812 @@
     "input": {
       "$ref": "#/158"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculatePriceResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculatePriceResponseProperties",
+    "properties": {
+      "billingCurrencyTotal": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 0,
+        "description": "Currency and amount that customer will be charged in customer's local currency. Tax is not included."
+      },
+      "isBillingPartnerManaged": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "True if billing is managed by Microsoft Partner. Used only for CSP accounts."
+      },
+      "reservationOrderId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "GUID that represents reservation order that can be placed after calculating price."
+      },
+      "skuTitle": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Title of SKU that is being purchased."
+      },
+      "skuDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of SKU that is being purchased."
+      },
+      "pricingCurrencyTotal": {
+        "type": {
+          "$ref": "#/166"
+        },
+        "flags": 0,
+        "description": "Amount that Microsoft uses for record. Used during refund for calculating refund limit. Tax is not included."
+      },
+      "paymentSchedule": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculatePriceResponsePropertiesBillingCurrencyTotal",
+    "properties": {
+      "currencyCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "amount": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculatePriceResponsePropertiesPricingCurrencyTotal",
+    "properties": {
+      "currencyCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "amount": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "calculatePrice",
+    "resourceType": "Microsoft.Capacity",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/163"
+    },
+    "input": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateExchangeRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/170"
+        },
+        "flags": 0,
+        "description": "Calculate exchange request properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateExchangeRequestProperties",
+    "properties": {
+      "reservationsToPurchase": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 0,
+        "description": "List of reservations that are being purchased in this exchange."
+      },
+      "reservationsToExchange": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 0,
+        "description": "List of reservations that are being returned in this exchange."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReservationToReturn",
+    "properties": {
+      "reservationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified identifier of the Reservation being returned"
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Quantity to be returned. Must be greater than zero."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/172"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateExchangeOperationResultResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "It should match what is used to GET the operation result."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "It must match the last segment of the id field, and will typically be a GUID / system generated value."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/179"
+        },
+        "flags": 0,
+        "description": "Status of the operation."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 0,
+        "description": "CalculateExchange response properties"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 0,
+        "description": "Required if status == failed or status == canceled."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateExchangeResponseProperties",
+    "properties": {
+      "sessionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Exchange session identifier"
+      },
+      "netPayable": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "refundsTotal": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "purchasesTotal": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "reservationsToPurchase": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 0,
+        "description": "Details of the reservations being purchased"
+      },
+      "reservationsToExchange": {
+        "type": {
+          "$ref": "#/185"
+        },
+        "flags": 0,
+        "description": "Details of the reservations being returned"
+      },
+      "policyResult": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 0,
+        "description": "Exchange policy errors"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReservationToPurchaseCalculateExchange",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0
+      },
+      "billingCurrencyTotal": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/181"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReservationToExchange",
+    "properties": {
+      "reservationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified id of the Reservation being returned."
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Quantity to be returned"
+      },
+      "billingRefundAmount": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "billingInformation": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 0,
+        "description": "billing information"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingInformation",
+    "properties": {
+      "billingCurrencyTotalPaidAmount": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "billingCurrencyProratedAmount": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "billingCurrencyRemainingCommitmentAmount": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/183"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangePolicyErrors",
+    "properties": {
+      "policyErrors": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 0,
+        "description": "Exchange Policy errors"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangePolicyError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/187"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationResultError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Required if status == failed or status == cancelled. If status == failed, provide an invariant error code used for error troubleshooting, aggregation, and analysis."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Required if status == failed. Localized. If status == failed, provide an actionable error message indicating what error occurred, and what the user can do to address the issue."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "calculateExchange",
+    "resourceType": "Microsoft.Capacity",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/174"
+    },
+    "input": {
+      "$ref": "#/169"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangeRequest",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "Exchange request properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangeRequestProperties",
+    "properties": {
+      "sessionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "SessionId that was returned by CalculateExchange API."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangeOperationResultResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "It should match what is used to GET the operation result."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "It must match the last segment of the id field, and will typically be a GUID / system generated value."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 0,
+        "description": "Status of the operation."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 0,
+        "description": "Exchange response properties"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 0,
+        "description": "Required if status == failed or status == canceled."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingRefunds"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingPurchases"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/195"
+      },
+      {
+        "$ref": "#/196"
+      },
+      {
+        "$ref": "#/197"
+      },
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExchangeResponseProperties",
+    "properties": {
+      "sessionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Exchange session identifier"
+      },
+      "netPayable": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "refundsTotal": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "purchasesTotal": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "reservationsToPurchase": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 0,
+        "description": "Details of the reservations being purchased"
+      },
+      "reservationsToExchange": {
+        "type": {
+          "$ref": "#/214"
+        },
+        "flags": 0,
+        "description": "Details of the reservations being returned"
+      },
+      "policyResult": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 0,
+        "description": "Exchange policy errors"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReservationToPurchaseExchange",
+    "properties": {
+      "reservationOrderId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified id of the ReservationOrder being purchased"
+      },
+      "reservationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified id of the Reservation being purchased. This value is only guaranteed to be non-null if the purchase is successful."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0
+      },
+      "billingCurrencyTotal": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "status": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 0,
+        "description": "Status of the individual operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/201"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReservationToReturnForExchange",
+    "properties": {
+      "reservationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Fully qualified id of the Reservation being returned."
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Quantity to be returned"
+      },
+      "billingRefundAmount": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "billingInformation": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 0,
+        "description": "billing information"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/213"
+        },
+        "flags": 0,
+        "description": "Status of the individual operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/209"
+      },
+      {
+        "$ref": "#/210"
+      },
+      {
+        "$ref": "#/211"
+      },
+      {
+        "$ref": "#/212"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/208"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exchange",
+    "resourceType": "Microsoft.Capacity",
+    "apiVersion": "2020-10-01-preview",
+    "output": {
+      "$ref": "#/193"
+    },
+    "input": {
+      "$ref": "#/191"
+    }
   }
 ]

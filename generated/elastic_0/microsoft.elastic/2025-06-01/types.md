@@ -90,6 +90,17 @@
 * **ApiVersion**: 2025-06-01
 * **Output**: [BillingInfoResponse](#billinginforesponse)
 
+## Function getElasticOrganizationToAzureSubscriptionMapping (Microsoft.Elastic@2025-06-01)
+* **Resource**: Microsoft.Elastic
+* **ApiVersion**: 2025-06-01
+* **Output**: [ElasticOrganizationToAzureSubscriptionMappingResponse](#elasticorganizationtoazuresubscriptionmappingresponse)
+
+## Function getOrganizationApiKey (Microsoft.Elastic@2025-06-01)
+* **Resource**: Microsoft.Elastic
+* **ApiVersion**: 2025-06-01
+* **Input**: [UserEmailId](#useremailid)
+* **Output**: [UserApiKeyResponse](#userapikeyresponse)
+
 ## Function getStatus (Microsoft.Elastic/monitors/openAIIntegrations@2025-06-01)
 * **Resource**: Microsoft.Elastic/monitors/openAIIntegrations
 * **ApiVersion**: 2025-06-01
@@ -227,6 +238,17 @@
 ## ElasticMonitorUpgrade
 ### Properties
 * **version**: string: Version to which the elastic monitor should be upgraded to
+
+## ElasticOrganizationToAzureSubscriptionMappingResponse
+### Properties
+* **properties**: [ElasticOrganizationToAzureSubscriptionMappingResponseProperties](#elasticorganizationtoazuresubscriptionmappingresponseproperties): The properties of Azure Subscription ID to which the Organization of the logged in user belongs and gets billed into.
+
+## ElasticOrganizationToAzureSubscriptionMappingResponseProperties
+### Properties
+* **billedAzureSubscriptionId**: string: The Azure Subscription ID to which the Organization belongs and gets billed into. This is empty for a new user OR a user without an Elastic Organization.
+* **elasticOrganizationId**: string: The Elastic Organization Id.
+* **elasticOrganizationName**: string: The Elastic Organization Name.
+* **marketplaceSaasInfo**: [MarketplaceSaaSInfo](#marketplacesaasinfo) (ReadOnly): Marketplace SaaS Info of the resource.
 
 ## ElasticProperties
 ### Properties
@@ -418,6 +440,18 @@
 ### Properties
 * **currentVersion**: string: Current version of the elastic monitor
 * **upgradableVersions**: string[]: Stack Versions that this version can upgrade to
+
+## UserApiKeyResponse
+### Properties
+* **properties**: [UserApiKeyResponseProperties](#userapikeyresponseproperties)
+
+## UserApiKeyResponseProperties
+### Properties
+* **apiKey**: string {sensitive}: The User Api Key Generated based on GenerateApiKey flag. This is applicable for non-Portal clients only.
+
+## UserEmailId
+### Properties
+* **emailId**: string: The User email Id
 
 ## UserInfo
 ### Properties

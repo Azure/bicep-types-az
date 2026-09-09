@@ -133,6 +133,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HealthcareApis/workspaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.HealthcareApis@2023-02-28)
+* **Resource**: Microsoft.HealthcareApis
+* **ApiVersion**: 2023-02-28
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [ServicesNameAvailabilityInfo](#servicesnameavailabilityinfo)
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name of the service instance to check.
+* **type**: string (Required): The fully qualified resource type which includes provider namespace.
+
 ## CorsConfiguration
 ### Properties
 * **allowCredentials**: bool: If credentials are allowed via CORS.
@@ -341,6 +352,12 @@
 * **digest**: string: The artifact digest.
 * **imageName**: string: The artifact name.
 * **loginServer**: string: The Azure Container Registry login server.
+
+## ServicesNameAvailabilityInfo
+### Properties
+* **message**: string: The detailed reason message.
+* **nameAvailable**: bool (ReadOnly): The value which indicates whether the provided name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason for unavailability.
 
 ## ServicesProperties
 ### Properties

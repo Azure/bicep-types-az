@@ -57,6 +57,31 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Authorization/policySetDefinitions/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function acquirePolicyToken (Microsoft.Authorization@2025-03-01)
+* **Resource**: Microsoft.Authorization
+* **ApiVersion**: 2025-03-01
+* **Input**: [PolicyTokenRequest](#policytokenrequest)
+* **Output**: [PolicyTokenResponse](#policytokenresponse)
+
+## Function listPolicyDefinitionVersions (Microsoft.Authorization@2025-03-01)
+* **Resource**: Microsoft.Authorization
+* **ApiVersion**: 2025-03-01
+* **Output**: [PolicyDefinitionVersionListResult](#policydefinitionversionlistresult)
+
+## Function listPolicySetDefinitionVersions (Microsoft.Authorization@2025-03-01)
+* **Resource**: Microsoft.Authorization
+* **ApiVersion**: 2025-03-01
+* **Output**: [PolicySetDefinitionVersionListResult](#policysetdefinitionversionlistresult)
+
+## ExternalEvaluationEndpointInvocationResult
+### Properties
+* **claims**: any: The set of claims that will be attached to the policy token as an attestation for the result of the endpoint invocation.
+* **expiration**: string: The expiration of the results.
+* **message**: string: The status message with additional details about the invocation result.
+* **policyInfo**: [PolicyLogInfo](#policyloginfo): The details of the policy requiring the external endpoint invocation.
+* **result**: 'Failed' | 'Succeeded' | string: The result of the external endpoint. Possible values are Succeeded and Failed.
+* **retryAfter**: string: The date and time after which a failed endpoint invocation can be retried.
+
 ## ExternalEvaluationEndpointSettings
 ### Properties
 * **details**: any: The details of the endpoint.
@@ -178,6 +203,19 @@
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
 
+## PolicyDefinitionVersion
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PolicyDefinitionVersionProperties](#policydefinitionversionproperties): The policy definition version properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## PolicyDefinitionVersionListResult
+### Properties
+* **nextLink**: string: The link to the next page of items
+* **value**: [PolicyDefinitionVersion](#policydefinitionversion)[] (Required): The PolicyDefinitionVersion items on this page
+
 ## PolicyDefinitionVersionProperties
 ### Properties
 * **description**: string: The policy definition description.
@@ -194,6 +232,21 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
+
+## PolicyLogInfo
+### Properties
+* **policyAssignmentId**: string: The policy assignment Id.
+* **policyAssignmentName**: string: The policy assignment name.
+* **policyAssignmentScope**: string: The policy assignment scope.
+* **policyAssignmentVersion**: string: The policy assignment version.
+* **policyDefinitionEffect**: string: The policy definition action.
+* **policyDefinitionId**: string: The policy definition Id.
+* **policyDefinitionName**: string: The policy definition name.
+* **policyDefinitionReferenceId**: string: The policy definition instance Id inside a policy set.
+* **policyDefinitionVersion**: string: The policy definition version.
+* **policySetDefinitionId**: string: The policy set definition Id.
+* **policySetDefinitionName**: string: The policy set definition name.
+* **policySetDefinitionVersion**: string: The policy set definition version.
 
 ## PolicySetDefinitionProperties
 ### Properties
@@ -212,6 +265,19 @@
 ### Additional Properties
 * **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
 
+## PolicySetDefinitionVersion
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PolicySetDefinitionVersionProperties](#policysetdefinitionversionproperties): The policy set definition version properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## PolicySetDefinitionVersionListResult
+### Properties
+* **nextLink**: string: The link to the next page of items
+* **value**: [PolicySetDefinitionVersion](#policysetdefinitionversion)[] (Required): The PolicySetDefinitionVersion items on this page
+
 ## PolicySetDefinitionVersionProperties
 ### Properties
 * **description**: string: The policy set definition description.
@@ -227,6 +293,28 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
+
+## PolicyTokenOperation
+### Properties
+* **content**: any: The payload of the resource operation.
+* **httpMethod**: string (Required): The http method of the resource operation.
+* **uri**: string (Required): The request URI of the resource operation.
+
+## PolicyTokenRequest
+### Properties
+* **changeReference**: string: The change reference.
+* **operation**: [PolicyTokenOperation](#policytokenoperation) (Required): The resource operation to acquire a token for.
+
+## PolicyTokenResponse
+### Properties
+* **changeReference**: string: The change reference associated with the operation for which the token is acquired.
+* **expiration**: string: The expiration of the policy token.
+* **message**: string: Status message with additional details about the token acquisition operation result.
+* **result**: 'Failed' | 'Succeeded' | string: The result of the completed token acquisition operation. Possible values are Succeeded and Failed.
+* **results**: [ExternalEvaluationEndpointInvocationResult](#externalevaluationendpointinvocationresult)[]: An array of external evaluation endpoint invocation results.
+* **retryAfter**: string: The date and time after which the client can try to acquire a token again in the case of retry-able failures.
+* **token**: string: The issued policy token.
+* **tokenId**: string: The unique Id assigned to the policy token.
 
 ## ResourceSelector
 ### Properties

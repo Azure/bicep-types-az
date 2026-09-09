@@ -262,6 +262,12 @@
 * **Input**: [ThreatIntelligenceIndicatorModelForRequestBody](#threatintelligenceindicatormodelforrequestbody)
 * **Output**: [ThreatIntelligenceInformation](#threatintelligenceinformation)
 
+## Function dataConnectorsCheckRequirements (Microsoft.SecurityInsights@2019-01-01-preview)
+* **Resource**: Microsoft.SecurityInsights
+* **ApiVersion**: 2019-01-01-preview
+* **Input**: [DataConnectorsCheckRequirements](#dataconnectorscheckrequirements)
+* **Output**: [DataConnectorRequirementsState](#dataconnectorrequirementsstate)
+
 ## Function entities (Microsoft.SecurityInsights/incidents@2019-01-01-preview)
 * **Resource**: Microsoft.SecurityInsights/incidents
 * **ApiVersion**: 2019-01-01-preview
@@ -303,11 +309,23 @@
 * **Input**: [ThreatIntelligenceIndicatorModelForRequestBody](#threatintelligenceindicatormodelforrequestbody)
 * **Output**: [ThreatIntelligenceInformation](#threatintelligenceinformation)
 
+## AADCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
+## AatpCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
 ## ActionRequestPropertiesOrActionResponseProperties
 ### Properties
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
 * **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
 * **workflowId**: string (ReadOnly): The name of the logic app's workflow.
+
+## ASCCheckRequirementsProperties
+### Properties
+* **subscriptionId**: string: The subscription id to connect to, and get the data from.
 
 ## AutomationRuleAction
 * **Discriminator**: actionType
@@ -453,6 +471,80 @@
 ### Properties
 * **additionalData**: any: key-value pairs for a connected entity mapping
 * **targetEntityId**: string: Entity Id of the connected entity
+
+## DataConnectorRequirementsState
+### Properties
+* **authorizationState**: 'Invalid' | 'Valid' | string: Authorization state for this connector
+* **licenseState**: 'Invalid' | 'Unknown' | 'Valid' | string: License state for this connector
+
+## DataConnectorsCheckRequirements
+* **Discriminator**: kind
+
+### Base Properties
+
+### AwsCloudTrailCheckRequirements
+#### Properties
+* **kind**: 'AmazonWebServicesCloudTrail' (Required): Describes the kind of connector to be checked.
+
+### AADCheckRequirements
+#### Properties
+* **kind**: 'AzureActiveDirectory' (Required): Describes the kind of connector to be checked.
+* **properties**: [AADCheckRequirementsProperties](#aadcheckrequirementsproperties): AAD (Azure Active Directory) requirements check properties.
+
+### AatpCheckRequirements
+#### Properties
+* **kind**: 'AzureAdvancedThreatProtection' (Required): Describes the kind of connector to be checked.
+* **properties**: [AatpCheckRequirementsProperties](#aatpcheckrequirementsproperties): AATP (Azure Advanced Threat Protection) requirements check properties.
+
+### ASCCheckRequirements
+#### Properties
+* **kind**: 'AzureSecurityCenter' (Required): Describes the kind of connector to be checked.
+* **properties**: [ASCCheckRequirementsProperties](#asccheckrequirementsproperties): ASC (Azure Security Center) requirements check properties.
+
+### Dynamics365CheckRequirements
+#### Properties
+* **kind**: 'Dynamics365' (Required): Describes the kind of connector to be checked.
+* **properties**: [Dynamics365CheckRequirementsProperties](#dynamics365checkrequirementsproperties): Dynamics365 requirements check properties.
+
+### McasCheckRequirements
+#### Properties
+* **kind**: 'MicrosoftCloudAppSecurity' (Required): Describes the kind of connector to be checked.
+* **properties**: [McasCheckRequirementsProperties](#mcascheckrequirementsproperties): MCAS (Microsoft Cloud App Security) requirements check properties.
+
+### MdatpCheckRequirements
+#### Properties
+* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required): Describes the kind of connector to be checked.
+* **properties**: [MdatpCheckRequirementsProperties](#mdatpcheckrequirementsproperties): MDATP (Microsoft Defender Advanced Threat Protection) requirements check properties.
+
+### MstiCheckRequirements
+#### Properties
+* **kind**: 'MicrosoftThreatIntelligence' (Required): Describes the kind of connector to be checked.
+* **properties**: [MstiCheckRequirementsProperties](#msticheckrequirementsproperties): Microsoft Threat Intelligence requirements check properties.
+
+### MtpCheckRequirements
+#### Properties
+* **kind**: 'MicrosoftThreatProtection' (Required): Describes the kind of connector to be checked.
+* **properties**: [MTPCheckRequirementsProperties](#mtpcheckrequirementsproperties): MTP (Microsoft Threat Protection) requirements check properties.
+
+### OfficeATPCheckRequirements
+#### Properties
+* **kind**: 'OfficeATP' (Required): Describes the kind of connector to be checked.
+* **properties**: [OfficeATPCheckRequirementsProperties](#officeatpcheckrequirementsproperties): OfficeATP (Office 365 Advanced Threat Protection) requirements check properties.
+
+### TICheckRequirements
+#### Properties
+* **kind**: 'ThreatIntelligence' (Required): Describes the kind of connector to be checked.
+* **properties**: [TICheckRequirementsProperties](#ticheckrequirementsproperties): Threat Intelligence Platforms data connector check required properties
+
+### TiTaxiiCheckRequirements
+#### Properties
+* **kind**: 'ThreatIntelligenceTaxii' (Required): Describes the kind of connector to be checked.
+* **properties**: [TiTaxiiCheckRequirementsProperties](#titaxiicheckrequirementsproperties): Threat Intelligence TAXII check required properties.
+
+
+## Dynamics365CheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## Entity
 ### Properties
@@ -710,6 +802,26 @@
 * **name**: string: the name of the column
 * **type**: string: the type of the column
 
+## McasCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
+## MdatpCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
+## MstiCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
+## MTPCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
+## OfficeATPCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
 ## OfficeConsentProperties
 ### Properties
 * **consentId**: string: Help to easily cascade among the data layers.
@@ -911,6 +1023,10 @@
 * **itemKey**: string: Column name
 * **sortOrder**: 'ascending' | 'descending' | 'unsorted' | string: Sorting order (ascending/descending/unsorted).
 
+## TICheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
 ## TimelineAggregation
 ### Properties
 * **count**: int (Required): the total items found for a kind
@@ -927,6 +1043,10 @@
 * **aggregations**: [TimelineAggregation](#timelineaggregation)[] (Required): timeline aggregation per kind
 * **errors**: [TimelineError](#timelineerror)[]: information about the failure queries
 * **totalCount**: int (Required): the total items found for the timeline request
+
+## TiTaxiiCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## UserInfo
 ### Properties

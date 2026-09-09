@@ -1,5 +1,5 @@
 Generating types for 'specification/app/resource-manager/Microsoft.App/ContainerApps/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v22.23.2]
+AutoRest code generation utility [cli version: 3.8.0; node: v24.20.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
@@ -89,7 +89,6 @@ warning | Modeler/MissingType | The schema 'WorkflowEnvelopeProperties-files' ha
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/app/resource-manager/Microsoft.App/ContainerApps/preview/2025-10-02-preview/openapi.json#/components/schemas/WorkflowEnvelopeProperties-files
 warning | Skipping LogicApps_Invoke due to required header parameter "xMsLogicAppsProxyPath"
 warning | Skipping LogicApps_Invoke due to required header parameter "xMsLogicAppsProxyMethod"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.App/getCustomDomainVerificationId': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/jobs/{jobName}/executions/{jobExecutionName}/stop' has no response schema. Returning 'any'.
 warning | Resource action skipConfig under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/patches/{patchName}/skipConfig' has no response schema. Returning 'any'.
@@ -140,7 +139,6 @@ warning | Modeler/MissingType | The schema 'DiagnosticDataTableResponseObject-ro
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/app/resource-manager/Microsoft.App/ContainerApps/stable/2026-01-01/openapi.json#/components/schemas/DiagnosticDataTableResponseObject-rowsItem
 warning | Modeler/MissingType | The schema 'WorkflowEnvelopeProperties-files' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/app/resource-manager/Microsoft.App/ContainerApps/stable/2026-01-01/openapi.json#/components/schemas/WorkflowEnvelopeProperties-files
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.App/getCustomDomainVerificationId': Unable to find type segments
 warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/jobs/{jobName}/executions/{jobExecutionName}/stop' has no response schema. Returning 'any'.
 warning | Resource action activate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/revisions/{revisionName}/activate' has no response schema. Returning 'any'.
 warning | Resource action deactivate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/revisions/{revisionName}/deactivate' has no response schema. Returning 'any'.
@@ -182,7 +180,6 @@ warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.App/getCustomDomainVerificationId': Unable to find type segments
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -229,7 +226,6 @@ warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.App/getCustomDomainVerificationId': Unable to find type segments
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -277,7 +273,6 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping LogicApps_Invoke due to required header parameter "xMsLogicAppsProxyPath"
 warning | Skipping LogicApps_Invoke due to required header parameter "xMsLogicAppsProxyMethod"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.App/getCustomDomainVerificationId': Unable to find type segments
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -331,7 +326,6 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping LogicApps_Invoke due to required header parameter "xMsLogicAppsProxyPath"
 warning | Skipping LogicApps_Invoke due to required header parameter "xMsLogicAppsProxyMethod"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.App/getCustomDomainVerificationId': Unable to find type segments
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -385,7 +379,6 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping LogicApps_Invoke due to required header parameter "xMsLogicAppsProxyPath"
 warning | Skipping LogicApps_Invoke due to required header parameter "xMsLogicAppsProxyMethod"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.App/getCustomDomainVerificationId': Unable to find type segments
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -439,7 +432,6 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping LogicApps_Invoke due to required header parameter "xMsLogicAppsProxyPath"
 warning | Skipping LogicApps_Invoke due to required header parameter "xMsLogicAppsProxyMethod"
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.App/getCustomDomainVerificationId': Unable to find type segments
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -491,7 +483,6 @@ warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.App/getCustomDomainVerificationId': Unable to find type segments
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -537,7 +528,6 @@ warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.App/getCustomDomainVerificationId': Unable to find type segments
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -583,7 +573,6 @@ warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.App/getCustomDomainVerificationId': Unable to find type segments
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -629,7 +618,6 @@ warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.App/getCustomDomainVerificationId': Unable to find type segments
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.

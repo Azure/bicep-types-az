@@ -1029,6 +1029,90 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.ConfidentialLedger",
+    "apiVersion": "2024-09-19-preview",
+    "output": {
+      "$ref": "#/92"
+    },
+    "input": {
+      "$ref": "#/91"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ConfidentialLedgerBackup",
     "properties": {
       "restoreRegion": {
@@ -1040,7 +1124,7 @@
       },
       "uri": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/99"
         },
         "flags": 1,
         "description": "SAS URI used to access the backup Fileshare."
@@ -1070,10 +1154,10 @@
     "resourceType": "Microsoft.ConfidentialLedger/ledgers",
     "apiVersion": "2024-09-19-preview",
     "output": {
-      "$ref": "#/93"
+      "$ref": "#/100"
     },
     "input": {
-      "$ref": "#/91"
+      "$ref": "#/98"
     }
   },
   {
@@ -1096,7 +1180,7 @@
       },
       "uri": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/99"
         },
         "flags": 1,
         "description": "SAS URI used to access the backup fileshare."
@@ -1122,10 +1206,10 @@
     "resourceType": "Microsoft.ConfidentialLedger/ledgers",
     "apiVersion": "2024-09-19-preview",
     "output": {
-      "$ref": "#/96"
+      "$ref": "#/103"
     },
     "input": {
-      "$ref": "#/95"
+      "$ref": "#/102"
     }
   },
   {
@@ -1141,7 +1225,7 @@
       },
       "uri": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/99"
         },
         "flags": 1,
         "description": "SAS URI used to access the backup Fileshare."
@@ -1167,10 +1251,10 @@
     "resourceType": "Microsoft.ConfidentialLedger/managedCCFs",
     "apiVersion": "2024-09-19-preview",
     "output": {
-      "$ref": "#/99"
+      "$ref": "#/106"
     },
     "input": {
-      "$ref": "#/98"
+      "$ref": "#/105"
     }
   },
   {
@@ -1193,7 +1277,7 @@
       },
       "uri": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/99"
         },
         "flags": 1,
         "description": "SAS URI used to access the backup Fileshare."
@@ -1219,10 +1303,10 @@
     "resourceType": "Microsoft.ConfidentialLedger/managedCCFs",
     "apiVersion": "2024-09-19-preview",
     "output": {
-      "$ref": "#/102"
+      "$ref": "#/109"
     },
     "input": {
-      "$ref": "#/101"
+      "$ref": "#/108"
     }
   }
 ]

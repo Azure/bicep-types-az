@@ -13,6 +13,12 @@
 * **tags**: [Tags](#tags): Additional tags for Confidential Ledger
 * **type**: 'Microsoft.ConfidentialLedger/ledgers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.ConfidentialLedger@2022-05-13)
+* **Resource**: Microsoft.ConfidentialLedger
+* **ApiVersion**: 2022-05-13
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## AADBasedSecurityPrincipal
 ### Properties
 * **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader' | string: LedgerRole associated with the Security Principal of Ledger
@@ -23,6 +29,17 @@
 ### Properties
 * **cert**: string: Public key of the user cert (.pem or .cer)
 * **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader' | string: LedgerRole associated with the Security Principal of Ledger
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
 
 ## LedgerProperties
 ### Properties

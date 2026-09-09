@@ -17252,11 +17252,89 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RepoList",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "URL to fetch the next set of repositories."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/1316"
+        },
+        "flags": 1,
+        "description": "Array of repositories."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Repo",
+    "properties": {
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The url to access the repository."
+      },
+      "fullName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the repository."
+      },
+      "installationId": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "The installation id of the repository."
+      },
+      "branches": {
+        "type": {
+          "$ref": "#/1315"
+        },
+        "flags": 0,
+        "description": "Array of branches."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1314"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listRepositories",
+    "resourceType": "Microsoft.SecurityInsights",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/1313"
+    },
+    "input": {
+      "$ref": "#/1311"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "Warning",
     "properties": {
       "warning": {
         "type": {
-          "$ref": "#/1314"
+          "$ref": "#/1319"
         },
         "flags": 2,
         "description": "Warning data."
@@ -17269,7 +17347,7 @@
     "properties": {
       "code": {
         "type": {
-          "$ref": "#/1320"
+          "$ref": "#/1325"
         },
         "flags": 2,
         "description": "An identifier for the warning. Codes are invariant and are intended to be consumed programmatically."
@@ -17283,7 +17361,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/1321"
+          "$ref": "#/1326"
         },
         "flags": 2
       }
@@ -17313,19 +17391,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1315"
+        "$ref": "#/1320"
       },
       {
-        "$ref": "#/1316"
+        "$ref": "#/1321"
       },
       {
-        "$ref": "#/1317"
+        "$ref": "#/1322"
       },
       {
-        "$ref": "#/1318"
+        "$ref": "#/1323"
       },
       {
-        "$ref": "#/1319"
+        "$ref": "#/1324"
       },
       {
         "$ref": "#/0"
@@ -17335,7 +17413,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1314"
+      "$ref": "#/1319"
     }
   },
   {
@@ -17344,7 +17422,7 @@
     "resourceType": "Microsoft.SecurityInsights/sourcecontrols",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/1313"
+      "$ref": "#/1318"
     },
     "input": {
       "$ref": "#/1311"
@@ -17363,7 +17441,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1325"
+          "$ref": "#/1330"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -17413,7 +17491,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1324"
+        "$ref": "#/1329"
       },
       {
         "$ref": "#/0"
@@ -17463,7 +17541,7 @@
     },
     "elements": {
       "indicator": {
-        "$ref": "#/1327"
+        "$ref": "#/1332"
       }
     }
   },
@@ -17480,7 +17558,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/1328"
+          "$ref": "#/1333"
         },
         "flags": 1,
         "description": "The kind of the entity."
@@ -17497,10 +17575,10 @@
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/1326"
+      "$ref": "#/1331"
     },
     "input": {
-      "$ref": "#/1323"
+      "$ref": "#/1328"
     }
   },
   {
@@ -17551,42 +17629,42 @@
       },
       "sortBy": {
         "type": {
-          "$ref": "#/1336"
+          "$ref": "#/1341"
         },
         "flags": 0,
         "description": "Columns to sort by and sorting order"
       },
       "sources": {
         "type": {
-          "$ref": "#/1337"
+          "$ref": "#/1342"
         },
         "flags": 0,
         "description": "Sources of threat intelligence indicators"
       },
       "patternTypes": {
         "type": {
-          "$ref": "#/1338"
+          "$ref": "#/1343"
         },
         "flags": 0,
         "description": "Pattern types"
       },
       "threatTypes": {
         "type": {
-          "$ref": "#/1339"
+          "$ref": "#/1344"
         },
         "flags": 0,
         "description": "Threat types of threat intelligence indicators"
       },
       "ids": {
         "type": {
-          "$ref": "#/1340"
+          "$ref": "#/1345"
         },
         "flags": 0,
         "description": "Ids of threat intelligence indicators"
       },
       "keywords": {
         "type": {
-          "$ref": "#/1341"
+          "$ref": "#/1346"
         },
         "flags": 0,
         "description": "Keywords for searching threat intelligence indicators"
@@ -17613,7 +17691,7 @@
       },
       "sortOrder": {
         "type": {
-          "$ref": "#/1335"
+          "$ref": "#/1340"
         },
         "flags": 0,
         "description": "Sorting order (ascending/descending/unsorted)."
@@ -17636,13 +17714,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1332"
+        "$ref": "#/1337"
       },
       {
-        "$ref": "#/1333"
+        "$ref": "#/1338"
       },
       {
-        "$ref": "#/1334"
+        "$ref": "#/1339"
       },
       {
         "$ref": "#/0"
@@ -17652,7 +17730,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1331"
+      "$ref": "#/1336"
     }
   },
   {
@@ -17698,7 +17776,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/1343"
+          "$ref": "#/1348"
         },
         "flags": 1,
         "description": "Array of threat intelligence information objects."
@@ -17708,7 +17786,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1326"
+      "$ref": "#/1331"
     }
   },
   {
@@ -17717,10 +17795,10 @@
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/1342"
+      "$ref": "#/1347"
     },
     "input": {
-      "$ref": "#/1330"
+      "$ref": "#/1335"
     }
   },
   {
@@ -17729,7 +17807,7 @@
     "properties": {
       "threatIntelligenceTags": {
         "type": {
-          "$ref": "#/1346"
+          "$ref": "#/1351"
         },
         "flags": 0,
         "description": "List of tags to be appended."
@@ -17751,7 +17829,7 @@
       "$ref": "#/512"
     },
     "input": {
-      "$ref": "#/1345"
+      "$ref": "#/1350"
     }
   },
   {
@@ -17760,10 +17838,10 @@
     "resourceType": "Microsoft.SecurityInsights/threatIntelligence/indicators",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/1326"
+      "$ref": "#/1331"
     },
     "input": {
-      "$ref": "#/1323"
+      "$ref": "#/1328"
     }
   }
 ]

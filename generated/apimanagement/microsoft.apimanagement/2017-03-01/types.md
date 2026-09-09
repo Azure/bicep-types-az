@@ -442,6 +442,12 @@
 * **Input**: [ApiManagementServiceBackupRestoreParameters](#apimanagementservicebackuprestoreparameters)
 * **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
 
+## Function checkNameAvailability (Microsoft.ApiManagement@2017-03-01)
+* **Resource**: Microsoft.ApiManagement
+* **ApiVersion**: 2017-03-01
+* **Input**: [ApiManagementServiceCheckNameAvailabilityParameters](#apimanagementservicechecknameavailabilityparameters)
+* **Output**: [ApiManagementServiceNameAvailabilityResult](#apimanagementservicenameavailabilityresult)
+
 ## Function deploy (Microsoft.ApiManagement/service/tenant@2017-03-01)
 * **Resource**: Microsoft.ApiManagement/service/tenant
 * **ApiVersion**: 2017-03-01
@@ -569,6 +575,10 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ApiManagementServiceCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name to check for availability.
+
 ## ApiManagementServiceGetSsoTokenResult
 ### Properties
 * **redirectUri**: string: Redirect URL to the Publisher Portal containing the SSO token.
@@ -578,6 +588,12 @@
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal id of the identity.
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client tenant id of the identity.
 * **type**: 'SystemAssigned' | string (Required): The identity type. Currently the only supported type is 'SystemAssigned'.
+
+## ApiManagementServiceNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that <resourceName> is already in use, and direct them to select a different name.
+* **nameAvailable**: bool (ReadOnly): True if the name is available and can be used to create a new API Management service; otherwise false.
+* **reason**: 'AlreadyExists' | 'Invalid' | 'Valid': Invalid indicates the name provided does not match the resource provider’s naming requirements (incorrect length, unsupported characters, etc.)  AlreadyExists indicates that the name is already in use and is therefore unavailable.
 
 ## ApiManagementServiceProperties
 ### Properties

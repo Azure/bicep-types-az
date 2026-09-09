@@ -2241,11 +2241,93 @@
   },
   {
     "$type": "ObjectType",
+    "name": "StorageAccountCheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The storage account name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 1,
+        "description": "The type of resource, Microsoft.Storage/storageAccounts"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 2,
+        "description": "Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 2,
+        "description": "Gets the reason that a storage account name could not be used. The Reason element is only returned if NameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets an error message explaining the Reason value in more detail."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AccountNameInvalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/185"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Storage",
+    "apiVersion": "2018-11-01",
+    "output": {
+      "$ref": "#/183"
+    },
+    "input": {
+      "$ref": "#/181"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "StorageAccountListKeysResult",
     "properties": {
       "keys": {
         "type": {
-          "$ref": "#/186"
+          "$ref": "#/193"
         },
         "flags": 2,
         "description": "Gets the list of storage account keys and their properties for the specified storage account."
@@ -2272,7 +2354,7 @@
       },
       "permissions": {
         "type": {
-          "$ref": "#/185"
+          "$ref": "#/192"
         },
         "flags": 2,
         "description": "Permissions for the key -- read-only or full permissions."
@@ -2291,17 +2373,17 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/183"
+        "$ref": "#/190"
       },
       {
-        "$ref": "#/184"
+        "$ref": "#/191"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/182"
+      "$ref": "#/189"
     }
   },
   {
@@ -2310,7 +2392,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2018-11-01",
     "output": {
-      "$ref": "#/181"
+      "$ref": "#/188"
     }
   },
   {
@@ -2332,10 +2414,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2018-11-01",
     "output": {
-      "$ref": "#/181"
+      "$ref": "#/188"
     },
     "input": {
-      "$ref": "#/188"
+      "$ref": "#/195"
     }
   },
   {
@@ -2344,21 +2426,21 @@
     "properties": {
       "signedServices": {
         "type": {
-          "$ref": "#/195"
+          "$ref": "#/202"
         },
         "flags": 1,
         "description": "The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f)."
       },
       "signedResourceTypes": {
         "type": {
-          "$ref": "#/199"
+          "$ref": "#/206"
         },
         "flags": 1,
         "description": "The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files."
       },
       "signedPermission": {
         "type": {
-          "$ref": "#/208"
+          "$ref": "#/215"
         },
         "flags": 1,
         "description": "The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p)."
@@ -2372,7 +2454,7 @@
       },
       "signedProtocol": {
         "type": {
-          "$ref": "#/211"
+          "$ref": "#/218"
         },
         "flags": 0,
         "description": "The protocol permitted for a request made with the account SAS."
@@ -2420,16 +2502,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/191"
+        "$ref": "#/198"
       },
       {
-        "$ref": "#/192"
+        "$ref": "#/199"
       },
       {
-        "$ref": "#/193"
+        "$ref": "#/200"
       },
       {
-        "$ref": "#/194"
+        "$ref": "#/201"
       },
       {
         "$ref": "#/2"
@@ -2452,13 +2534,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/196"
+        "$ref": "#/203"
       },
       {
-        "$ref": "#/197"
+        "$ref": "#/204"
       },
       {
-        "$ref": "#/198"
+        "$ref": "#/205"
       },
       {
         "$ref": "#/2"
@@ -2501,28 +2583,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/200"
-      },
-      {
-        "$ref": "#/201"
-      },
-      {
-        "$ref": "#/202"
-      },
-      {
-        "$ref": "#/203"
-      },
-      {
-        "$ref": "#/204"
-      },
-      {
-        "$ref": "#/205"
-      },
-      {
-        "$ref": "#/206"
-      },
-      {
         "$ref": "#/207"
+      },
+      {
+        "$ref": "#/208"
+      },
+      {
+        "$ref": "#/209"
+      },
+      {
+        "$ref": "#/210"
+      },
+      {
+        "$ref": "#/211"
+      },
+      {
+        "$ref": "#/212"
+      },
+      {
+        "$ref": "#/213"
+      },
+      {
+        "$ref": "#/214"
       },
       {
         "$ref": "#/2"
@@ -2541,10 +2623,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/209"
+        "$ref": "#/216"
       },
       {
-        "$ref": "#/210"
+        "$ref": "#/217"
       }
     ]
   },
@@ -2567,10 +2649,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2018-11-01",
     "output": {
-      "$ref": "#/212"
+      "$ref": "#/219"
     },
     "input": {
-      "$ref": "#/190"
+      "$ref": "#/197"
     }
   },
   {
@@ -2586,14 +2668,14 @@
       },
       "signedResource": {
         "type": {
-          "$ref": "#/219"
+          "$ref": "#/226"
         },
         "flags": 0,
         "description": "The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s)."
       },
       "signedPermission": {
         "type": {
-          "$ref": "#/228"
+          "$ref": "#/235"
         },
         "flags": 0,
         "description": "The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p)."
@@ -2607,7 +2689,7 @@
       },
       "signedProtocol": {
         "type": {
-          "$ref": "#/231"
+          "$ref": "#/238"
         },
         "flags": 0,
         "description": "The protocol permitted for a request made with the account SAS."
@@ -2628,7 +2710,7 @@
       },
       "signedIdentifier": {
         "type": {
-          "$ref": "#/232"
+          "$ref": "#/239"
         },
         "flags": 0,
         "description": "A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table."
@@ -2725,16 +2807,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/215"
+        "$ref": "#/222"
       },
       {
-        "$ref": "#/216"
+        "$ref": "#/223"
       },
       {
-        "$ref": "#/217"
+        "$ref": "#/224"
       },
       {
-        "$ref": "#/218"
+        "$ref": "#/225"
       },
       {
         "$ref": "#/2"
@@ -2777,28 +2859,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/220"
-      },
-      {
-        "$ref": "#/221"
-      },
-      {
-        "$ref": "#/222"
-      },
-      {
-        "$ref": "#/223"
-      },
-      {
-        "$ref": "#/224"
-      },
-      {
-        "$ref": "#/225"
-      },
-      {
-        "$ref": "#/226"
-      },
-      {
         "$ref": "#/227"
+      },
+      {
+        "$ref": "#/228"
+      },
+      {
+        "$ref": "#/229"
+      },
+      {
+        "$ref": "#/230"
+      },
+      {
+        "$ref": "#/231"
+      },
+      {
+        "$ref": "#/232"
+      },
+      {
+        "$ref": "#/233"
+      },
+      {
+        "$ref": "#/234"
       },
       {
         "$ref": "#/2"
@@ -2817,10 +2899,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/229"
+        "$ref": "#/236"
       },
       {
-        "$ref": "#/230"
+        "$ref": "#/237"
       }
     ]
   },
@@ -2847,10 +2929,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2018-11-01",
     "output": {
-      "$ref": "#/233"
+      "$ref": "#/240"
     },
     "input": {
-      "$ref": "#/214"
+      "$ref": "#/221"
     }
   },
   {
@@ -2862,7 +2944,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2018-11-01",
     "output": {
-      "$ref": "#/235"
+      "$ref": "#/242"
     }
   },
   {
@@ -2871,7 +2953,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2018-11-01",
     "output": {
-      "$ref": "#/235"
+      "$ref": "#/242"
     }
   },
   {
@@ -2887,7 +2969,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/240"
+          "$ref": "#/247"
         },
         "flags": 1,
         "description": "Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP."
@@ -2902,7 +2984,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/239"
+      "$ref": "#/246"
     }
   },
   {
@@ -2911,10 +2993,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2018-11-01",
     "output": {
-      "$ref": "#/238"
+      "$ref": "#/245"
     },
     "input": {
-      "$ref": "#/238"
+      "$ref": "#/245"
     }
   },
   {
@@ -2923,10 +3005,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2018-11-01",
     "output": {
-      "$ref": "#/238"
+      "$ref": "#/245"
     },
     "input": {
-      "$ref": "#/238"
+      "$ref": "#/245"
     }
   },
   {
@@ -2935,7 +3017,7 @@
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/249"
+          "$ref": "#/256"
         },
         "flags": 1,
         "description": "Specifies the lease action. Can be one of the available actions."
@@ -2994,19 +3076,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/244"
+        "$ref": "#/251"
       },
       {
-        "$ref": "#/245"
+        "$ref": "#/252"
       },
       {
-        "$ref": "#/246"
+        "$ref": "#/253"
       },
       {
-        "$ref": "#/247"
+        "$ref": "#/254"
       },
       {
-        "$ref": "#/248"
+        "$ref": "#/255"
       },
       {
         "$ref": "#/2"
@@ -3039,10 +3121,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers",
     "apiVersion": "2018-11-01",
     "output": {
-      "$ref": "#/250"
+      "$ref": "#/257"
     },
     "input": {
-      "$ref": "#/243"
+      "$ref": "#/250"
     }
   },
   {
@@ -3092,7 +3174,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
     "apiVersion": "2018-11-01",
     "output": {
-      "$ref": "#/252"
+      "$ref": "#/259"
     }
   },
   {
@@ -3101,10 +3183,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
     "apiVersion": "2018-11-01",
     "output": {
-      "$ref": "#/252"
+      "$ref": "#/259"
     },
     "input": {
-      "$ref": "#/252"
+      "$ref": "#/259"
     }
   }
 ]

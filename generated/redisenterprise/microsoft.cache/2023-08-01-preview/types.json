@@ -1589,6 +1589,41 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource type. The only legal value of this property for checking redis enterprise cache name availability is 'Microsoft.Cache/redisenterprise'."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Cache",
+    "apiVersion": "2023-08-01-preview",
+    "output": {
+      "$ref": "#/151"
+    },
+    "input": {
+      "$ref": "#/150"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AccessKeys",
     "properties": {
       "primaryKey": {
@@ -1613,7 +1648,7 @@
     "resourceType": "Microsoft.Cache/redisEnterprise/databases",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/150"
+      "$ref": "#/153"
     }
   },
   {
@@ -1622,7 +1657,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/155"
+          "$ref": "#/158"
         },
         "flags": 1,
         "description": "Which access key to regenerate."
@@ -1641,10 +1676,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/153"
+        "$ref": "#/156"
       },
       {
-        "$ref": "#/154"
+        "$ref": "#/157"
       }
     ]
   },
@@ -1654,10 +1689,10 @@
     "resourceType": "Microsoft.Cache/redisEnterprise/databases",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/150"
+      "$ref": "#/153"
     },
     "input": {
-      "$ref": "#/152"
+      "$ref": "#/155"
     }
   },
   {
@@ -1666,7 +1701,7 @@
     "properties": {
       "sasUris": {
         "type": {
-          "$ref": "#/158"
+          "$ref": "#/161"
         },
         "flags": 1,
         "description": "SAS URIs for the target blobs to import from"
@@ -1680,18 +1715,15 @@
     }
   },
   {
-    "$type": "AnyType"
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "import",
     "resourceType": "Microsoft.Cache/redisEnterprise/databases",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/159"
+      "$ref": "#/151"
     },
     "input": {
-      "$ref": "#/157"
+      "$ref": "#/160"
     }
   },
   {
@@ -1700,7 +1732,7 @@
     "properties": {
       "sasUri": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/164"
         },
         "flags": 1,
         "description": "SAS URI for the target directory to export to"
@@ -1717,10 +1749,10 @@
     "resourceType": "Microsoft.Cache/redisEnterprise/databases",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/159"
+      "$ref": "#/151"
     },
     "input": {
-      "$ref": "#/161"
+      "$ref": "#/163"
     }
   },
   {
@@ -1729,7 +1761,7 @@
     "properties": {
       "ids": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/167"
         },
         "flags": 1,
         "description": "The resource IDs of the database resources to be unlinked."
@@ -1748,10 +1780,10 @@
     "resourceType": "Microsoft.Cache/redisEnterprise/databases",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/159"
+      "$ref": "#/151"
     },
     "input": {
-      "$ref": "#/164"
+      "$ref": "#/166"
     }
   },
   {
@@ -1760,7 +1792,7 @@
     "properties": {
       "ids": {
         "type": {
-          "$ref": "#/168"
+          "$ref": "#/170"
         },
         "flags": 0,
         "description": "The identifiers of all the other database resources in the georeplication group to be flushed."
@@ -1779,10 +1811,10 @@
     "resourceType": "Microsoft.Cache/redisEnterprise/databases",
     "apiVersion": "2023-08-01-preview",
     "output": {
-      "$ref": "#/159"
+      "$ref": "#/151"
     },
     "input": {
-      "$ref": "#/167"
+      "$ref": "#/169"
     }
   }
 ]

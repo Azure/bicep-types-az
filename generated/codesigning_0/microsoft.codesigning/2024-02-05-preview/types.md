@@ -24,6 +24,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CodeSigning/codeSigningAccounts/certificateProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.CodeSigning@2024-02-05-preview)
+* **Resource**: Microsoft.CodeSigning
+* **ApiVersion**: 2024-02-05-preview
+* **Input**: [CheckNameAvailability](#checknameavailability)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function revokeCertificate (Microsoft.CodeSigning/codeSigningAccounts/certificateProfiles@2024-02-05-preview)
 * **Resource**: Microsoft.CodeSigning/codeSigningAccounts/certificateProfiles
 * **ApiVersion**: 2024-02-05-preview
@@ -65,6 +71,17 @@
 * **state**: string (ReadOnly): Used as S in the certificate subject name.
 * **status**: 'Active' | 'Disabled' | 'Suspended' | string (ReadOnly): Status of the certificate profile.
 * **streetAddress**: string (ReadOnly): Used as STREET in the certificate subject name.
+
+## CheckNameAvailability
+### Properties
+* **name**: string (Required): Artifact signing account name.
+* **type**: string (Required): The type of the resource, "Microsoft.CodeSigning/codeSigningAccounts".
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): An error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): A boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used.
+* **reason**: 'AccountNameInvalid' | 'AlreadyExists' | string (ReadOnly): The reason that an artifact signing account name could not be used. The Reason element is only returned if nameAvailable is false.
 
 ## CodeSigningAccountProperties
 ### Properties

@@ -141,5 +141,390 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryRequest",
+    "properties": {
+      "subscriptions": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 1,
+        "description": "Azure subscriptions against which to execute the query."
+      },
+      "query": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resources query."
+      },
+      "options": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The query evaluation options"
+      },
+      "facets": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "An array of facet requests to be computed against the query result."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryRequestOptions",
+    "properties": {
+      "$skipToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Continuation token for pagination, capturing the next page size and offset, as well as the context of the query."
+      },
+      "$top": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The maximum number of rows that the query should return. Overrides the page size when ```$skipToken``` property is present."
+      },
+      "$skip": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The number of rows to skip from the beginning of the results. Overrides the next page offset when ```$skipToken``` property is present."
+      },
+      "resultFormat": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Defines in which format query result returned."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 1000
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "table"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "objectArray"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FacetRequest",
+    "properties": {
+      "expression": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The column or list of columns to summarize by"
+      },
+      "options": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The options for facet evaluation"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FacetRequestOptions",
+    "properties": {
+      "sortBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The column name or query expression to sort on. Defaults to count if not present."
+      },
+      "sortOrder": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "The sorting order by the selected column (count by default)."
+      },
+      "filter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the filter condition for the 'where' clause which will be run on main query's result, just before the actual faceting."
+      },
+      "$top": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The maximum number of facet rows that should be returned."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "asc"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "desc"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/18"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QueryResponse",
+    "properties": {
+      "totalRecords": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 1,
+        "description": "Number of total records matching the query."
+      },
+      "count": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 1,
+        "description": "Number of records returned in the current response. In the case of paging, this is the number of records in the current page."
+      },
+      "resultTruncated": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 1,
+        "description": "Indicates whether the query results are truncated."
+      },
+      "$skipToken": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "When present, the value can be passed to a subsequent query call (together with the same query and subscriptions used in the current request) to retrieve the next page of data."
+      },
+      "data": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 1,
+        "description": "Query output in tabular format."
+      },
+      "facets": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Query facets."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "true"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "false"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Facet",
+    "discriminator": "resultType",
+    "baseProperties": {
+      "expression": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Facet expression, same as in the corresponding facet request."
+      }
+    },
+    "elements": {
+      "FacetError": {
+        "$ref": "#/31"
+      },
+      "FacetResult": {
+        "$ref": "#/35"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FacetError",
+    "properties": {
+      "errors": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 1,
+        "description": "An array containing detected facet errors with details."
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Result type"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetails",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Error code identifying the specific error."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "A human readable error message."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FacetError"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FacetResult",
+    "properties": {
+      "totalRecords": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 1,
+        "description": "Number of total records in the facet results."
+      },
+      "count": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 1,
+        "description": "Number of records returned in the facet response."
+      },
+      "data": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 1,
+        "description": "A table containing the desired facets. Only present if the facet is valid."
+      },
+      "resultType": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 1,
+        "description": "Result type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FacetResult"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/30"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resources",
+    "resourceType": "Microsoft.ResourceGraph",
+    "apiVersion": "2019-04-01",
+    "output": {
+      "$ref": "#/24"
+    },
+    "input": {
+      "$ref": "#/10"
+    }
   }
 ]

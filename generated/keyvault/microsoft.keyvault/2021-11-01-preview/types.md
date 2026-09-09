@@ -102,6 +102,12 @@
 * **tags**: [SecretCreateOrUpdateParametersTags](#secretcreateorupdateparameterstags): The tags that will be assigned to the secret.
 * **type**: 'Microsoft.KeyVault/vaults/secrets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.KeyVault@2021-11-01-preview)
+* **Resource**: Microsoft.KeyVault
+* **ApiVersion**: 2021-11-01-preview
+* **Input**: [VaultCheckNameAvailabilityParameters](#vaultchecknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function purge (Microsoft.KeyVault/locations/deletedVaults@2021-11-01-preview)
 * **Resource**: Microsoft.KeyVault/locations/deletedVaults
 * **ApiVersion**: 2021-11-01-preview
@@ -122,6 +128,12 @@
 ## Action
 ### Properties
 * **type**: 'Notify' | 'Rotate': The type of the action. The value should be compared case-insensitively.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): An error message explaining the Reason value in more detail.
+* **nameAvailable**: bool (ReadOnly): A boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used.
+* **reason**: 'AccountNameInvalid' | 'AlreadyExists' (ReadOnly): The reason that a vault name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## IPRule
 ### Properties
@@ -332,6 +344,11 @@
 ## VaultAccessPolicyProperties
 ### Properties
 * **accessPolicies**: [AccessPolicyEntry](#accesspolicyentry)[] (Required): An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
+
+## VaultCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The vault name.
+* **type**: 'Microsoft.KeyVault/vaults' (Required): The type of resource, Microsoft.KeyVault/vaults
 
 ## VaultCreateOrUpdateParametersTags
 ### Properties

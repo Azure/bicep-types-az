@@ -35,6 +35,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Relay/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Relay@2018-01-01-preview)
+* **Resource**: Microsoft.Relay
+* **ApiVersion**: 2018-01-01-preview
+* **Input**: [CheckNameAvailability](#checknameavailability)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
+## CheckNameAvailability
+### Properties
+* **name**: string (Required): The namespace name to check for availability. The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the namespace.
+* **nameAvailable**: bool: Value indicating namespace is available. Returns true if the namespace is available; otherwise, false.
+* **reason**: 'InvalidName' | 'NameInLockdown' | 'NameInUse' | 'None' | 'SubscriptionIsDisabled' | 'TooManyNamespaceInCurrentSubscription' | string: The reason for unavailability of a namespace.
+
 ## NetworkRuleSetProperties
 ### Properties
 * **defaultAction**: 'Allow' | 'Deny' | string: Default Action for Network Rule Set

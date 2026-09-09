@@ -88,5 +88,17 @@
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateRecommendations",
+    "resourceType": "Microsoft.Advisor",
+    "apiVersion": "2016-07-12-preview",
+    "output": {
+      "$ref": "#/6"
+    }
   }
 ]

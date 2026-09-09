@@ -14,6 +14,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DevOpsInfrastructure/pools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DevOpsInfrastructure@2026-07-03-preview)
+* **Resource**: Microsoft.DevOpsInfrastructure
+* **ApiVersion**: 2026-07-03-preview
+* **Input**: [CheckNameAvailability](#checknameavailability)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function resources (Microsoft.DevOpsInfrastructure/pools@2026-07-03-preview)
 * **Resource**: Microsoft.DevOpsInfrastructure/pools
 * **ApiVersion**: 2026-07-03-preview
@@ -43,6 +49,18 @@
 * **groups**: string[]: Group email addresses
 * **kind**: 'CreatorOnly' | 'Inherit' | 'SpecificAccounts' | string (Required): Determines who has admin permissions to the Azure DevOps pool.
 * **users**: string[]: User email addresses
+
+## CheckNameAvailability
+### Properties
+* **name**: string (Required): The name of the resource.
+* **type**: 'Microsoft.DevOpsInfrastructure/pools' | string (Required): The type of resource that is used as the scope of the availability check.
+
+## CheckNameAvailabilityResult
+### Properties
+* **available**: 'Available' | 'Unavailable' | string (Required): Availability status of the name.
+* **message**: string (Required): A message explaining why the name is unavailable. Will be null if the name is available.
+* **name**: string (Required): The name whose availability was checked.
+* **reason**: 'AlreadyExists' | 'Invalid' | string (Required): The reason code explaining why the name is unavailable. Will be null if the name is available.
 
 ## DataDisk
 ### Properties

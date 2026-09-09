@@ -847,6 +847,25 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ScheduledEventsIdList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 1,
+        "description": "The list of ScheduledEvents Id."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ScheduledEventsApproveResponse",
     "properties": {
       "value": {
@@ -860,11 +879,23 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "scheduledevents",
+    "resourceType": "Microsoft.Maintenance",
+    "apiVersion": "2025-10-01-preview",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "acknowledge",
     "resourceType": "Microsoft.Maintenance/scheduledevents",
     "apiVersion": "2025-10-01-preview",
     "output": {
-      "$ref": "#/66"
+      "$ref": "#/68"
     }
   }
 ]

@@ -44,6 +44,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Advisor/recommendations/suppressions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateRecommendations (Microsoft.Advisor@2025-01-01)
+* **Resource**: Microsoft.Advisor
+* **ApiVersion**: 2025-01-01
+* **Output**: any
+
+## Function predict (Microsoft.Advisor@2025-01-01)
+* **Resource**: Microsoft.Advisor
+* **ApiVersion**: 2025-01-01
+* **Input**: [PredictionRequest](#predictionrequest)
+* **Output**: [PredictionResponse](#predictionresponse)
+
 ## AdvisorScoreEntityProperties
 ### Properties
 * **lastRefreshedScore**: [ScoreEntity](#scoreentity): The details of latest available score.
@@ -64,6 +75,29 @@
 * **language**: string: Language for digest content body. Value must be ISO 639-1 code for one of Azure portal supported languages. Otherwise, it will be converted into one. Default value is English (en).
 * **name**: string: Name of digest configuration. Value is case-insensitive and must be unique within a subscription.
 * **state**: 'Active' | 'Disabled' | string: State of digest configuration.
+
+## PredictionRequest
+### Properties
+* **properties**: [PredictionRequestProperties](#predictionrequestproperties): Request properties for prediction recommendation.
+
+## PredictionRequestProperties
+### Properties
+* **extendedProperties**: any: Extended properties are arguments specific for each prediction type.
+* **predictionType**: 'PredictiveRightsizing' | string: Type of the prediction.
+
+## PredictionResponse
+### Properties
+* **properties**: [PredictionResponseProperties](#predictionresponseproperties): The properties of the prediction.
+
+## PredictionResponseProperties
+### Properties
+* **category**: 'Cost' | 'HighAvailability' | 'OperationalExcellence' | 'Performance' | 'Security' | string: The category of the recommendation.
+* **extendedProperties**: any: Extended properties
+* **impact**: 'High' | 'Low' | 'Medium' | string: The business impact of the recommendation.
+* **impactedField**: string: The resource type identified by Advisor.
+* **lastUpdated**: string: The most recent time that Advisor checked the validity of the recommendation.
+* **predictionType**: 'PredictiveRightsizing' | string: Type of the prediction.
+* **shortDescription**: [ShortDescription](#shortdescription): A summary of the recommendation.
 
 ## RecommendationProperties
 ### Properties

@@ -1,0 +1,428 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "BatchRequests",
+    "properties": {
+      "requests": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 1,
+        "description": "The requests that will be invoked."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BatchRequest",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The identifier for the request. Must be unique within a batch."
+      },
+      "method": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 1,
+        "description": "The HTTP method associated with the request."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The request's absolute path."
+      },
+      "headers": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Headers that are specific to the request."
+      },
+      "body": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The body of the request. Not allowed for requests with an method of GET or DELETE."
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GET"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PUT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PATCH"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DELETE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "POST"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/3"
+      },
+      {
+        "$ref": "#/4"
+      },
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BatchResponseStatus",
+    "properties": {
+      "result": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "The final result of the batch operation."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If present, a GET on this URL will return the next page of results."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BatchResponseStatusResult",
+    "properties": {
+      "responses": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Responses for all requests contained in the batch."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BatchResponse",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The identifier of the request that generated the response."
+      },
+      "httpStatusCode": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "The HTTP status code of the response."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The status of the batch request. The request is complete when the status is set to Succeeded, Failed, or Canceled."
+      },
+      "headers": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "Headers that are specific to this response."
+      },
+      "body": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "The body of the response."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/13"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 100
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationStatusResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Fully qualified ID for the async operation."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified ID of the resource against which the original async operation was started."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the async operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Operation status."
+      },
+      "percentComplete": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Percent of the operation that is complete."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time of the operation."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The end time of the operation."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The operations list."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "If present, details of the operation error."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/21"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "batch",
+    "resourceType": "Microsoft.Resources",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/11"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  }
+]

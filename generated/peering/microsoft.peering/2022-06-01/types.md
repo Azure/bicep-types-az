@@ -77,6 +77,17 @@
 * **properties**: [PeeringServicePrefixProperties](#peeringserviceprefixproperties): Gets or sets the peering prefix properties.
 * **type**: 'Microsoft.Peering/peeringServices/prefixes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkServiceProviderAvailability (Microsoft.Peering@2022-06-01)
+* **Resource**: Microsoft.Peering
+* **ApiVersion**: 2022-06-01
+* **Input**: [CheckServiceProviderAvailabilityInput](#checkserviceprovideravailabilityinput)
+* **Output**: 'Available' | 'Unavailable' | string
+
+## Function initializeConnectionMonitor (Microsoft.Peering@2022-06-01)
+* **Resource**: Microsoft.Peering
+* **ApiVersion**: 2022-06-01
+* **Output**: any
+
 ## Function validate (Microsoft.Peering/peerings/registeredPrefixes@2022-06-01)
 * **Resource**: Microsoft.Peering/peerings/registeredPrefixes
 * **ApiVersion**: 2022-06-01
@@ -95,6 +106,11 @@
 * **sessionPrefixV6**: string: The IPv6 prefix that contains both ends' IPv6 addresses.
 * **sessionStateV4**: 'Active' | 'Connect' | 'Established' | 'Idle' | 'None' | 'OpenConfirm' | 'OpenReceived' | 'OpenSent' | 'PendingAdd' | 'PendingRemove' | 'PendingUpdate' | string (ReadOnly): The state of the IPv4 session.
 * **sessionStateV6**: 'Active' | 'Connect' | 'Established' | 'Idle' | 'None' | 'OpenConfirm' | 'OpenReceived' | 'OpenSent' | 'PendingAdd' | 'PendingRemove' | 'PendingUpdate' | string (ReadOnly): The state of the IPv6 session.
+
+## CheckServiceProviderAvailabilityInput
+### Properties
+* **peeringServiceLocation**: string: Gets or sets the peering service location.
+* **peeringServiceProvider**: string: Gets or sets the peering service provider.
 
 ## ConnectionMonitorTestProperties
 ### Properties

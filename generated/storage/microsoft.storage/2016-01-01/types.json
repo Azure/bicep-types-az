@@ -498,11 +498,102 @@
   },
   {
     "$type": "ObjectType",
+    "name": "StorageAccountCheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "type": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "Gets the reason that a storage account name could not be used. The Reason element is only returned if NameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets an error message explaining the Reason value in more detail."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AccountNameInvalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Storage",
+    "apiVersion": "2016-01-01",
+    "output": {
+      "$ref": "#/45"
+    },
+    "input": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "StorageAccountListKeysResult",
     "properties": {
       "keys": {
         "type": {
-          "$ref": "#/47"
+          "$ref": "#/55"
         },
         "flags": 2,
         "description": "Gets the list of storage account keys and their properties for the specified storage account."
@@ -529,7 +620,7 @@
       },
       "permissions": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Permissions for the key -- read-only or full permissions."
@@ -548,17 +639,17 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/44"
+        "$ref": "#/52"
       },
       {
-        "$ref": "#/45"
+        "$ref": "#/53"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/43"
+      "$ref": "#/51"
     }
   },
   {
@@ -567,7 +658,7 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2016-01-01",
     "output": {
-      "$ref": "#/42"
+      "$ref": "#/50"
     }
   },
   {
@@ -588,10 +679,10 @@
     "resourceType": "Microsoft.Storage/storageAccounts",
     "apiVersion": "2016-01-01",
     "output": {
-      "$ref": "#/42"
+      "$ref": "#/50"
     },
     "input": {
-      "$ref": "#/49"
+      "$ref": "#/57"
     }
   }
 ]

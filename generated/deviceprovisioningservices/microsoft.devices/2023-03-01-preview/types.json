@@ -1390,11 +1390,85 @@
   },
   {
     "$type": "ObjectType",
+    "name": "OperationInputs",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the Provisioning Service to check."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityInfo",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "specifies if a name is available or not"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 0,
+        "description": "specifies the reason a name is unavailable"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "message containing a detailed reason name is unavailable"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkProvisioningServiceNameAvailability",
+    "resourceType": "Microsoft.Devices",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/101"
+    },
+    "input": {
+      "$ref": "#/100"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SharedAccessSignatureAuthorizationRuleListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/101"
+          "$ref": "#/107"
         },
         "flags": 0,
         "description": "The list of shared access policies."
@@ -1420,7 +1494,7 @@
     "resourceType": "Microsoft.Devices/provisioningServices",
     "apiVersion": "2023-03-01-preview",
     "output": {
-      "$ref": "#/100"
+      "$ref": "#/106"
     }
   },
   {

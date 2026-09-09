@@ -62,6 +62,28 @@
 * **ApiVersion**: 2014-09-01
 * **Output**: [SharedAccessAuthorizationRuleListResult](#sharedaccessauthorizationrulelistresult)
 
+## Function CheckNameAvailability (Microsoft.EventHub@2014-09-01)
+* **Resource**: Microsoft.EventHub
+* **ApiVersion**: 2014-09-01
+* **Input**: [CheckNameAvailabilityParameter](#checknameavailabilityparameter)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
+## Function CheckNamespaceAvailability (Microsoft.EventHub@2014-09-01)
+* **Resource**: Microsoft.EventHub
+* **ApiVersion**: 2014-09-01
+* **Input**: [CheckNameAvailabilityParameter](#checknameavailabilityparameter)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
+## CheckNameAvailabilityParameter
+### Properties
+* **name**: string (Required): Name to check the namespace name availability
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the Namespace.
+* **nameAvailable**: bool: Value indicating Namespace is availability, true if the Namespace is available; otherwise, false.
+* **reason**: 'InvalidName' | 'NameInLockdown' | 'NameInUse' | 'None' | 'SubscriptionIsDisabled' | 'TooManyNamespaceInCurrentSubscription': The reason for unavailability of a Namespace.
+
 ## ConsumerGroupProperties
 ### Properties
 * **createdAt**: string (ReadOnly): Exact time the message was created.

@@ -101,6 +101,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/servers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DBforPostgreSQL@2022-11-08)
+* **Resource**: Microsoft.DBforPostgreSQL
+* **ApiVersion**: 2022-11-08
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function promote (Microsoft.DBforPostgreSQL/serverGroupsv2@2022-11-08)
 * **Resource**: Microsoft.DBforPostgreSQL/serverGroupsv2
 * **ApiVersion**: 2022-11-08
@@ -188,6 +194,18 @@
 * **dayOfWeek**: int: Preferred day of the week for maintenance window.
 * **startHour**: int: Start hour within preferred day of the week for maintenance window.
 * **startMinute**: int: Start minute within the start hour for maintenance window.
+
+## NameAvailability
+### Properties
+* **message**: string: Error message.
+* **name**: string: Name of the cluster.
+* **nameAvailable**: bool: Indicates whether the cluster name is available.
+* **type**: string: Type of the cluster.
+
+## NameAvailabilityRequest
+### Properties
+* **name**: string (Required): Cluster name to verify.
+* **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2' (Required): Resource type used for verification.
 
 ## PrivateEndpoint
 ### Properties

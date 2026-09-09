@@ -11314,6 +11314,106 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ApiManagementServiceCheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name to check for availability."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 2,
+        "description": "True if the name is available and can be used to create a new API Management service; otherwise false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that <resourceName> is already in use, and direct them to select a different name."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/819"
+        },
+        "flags": 0,
+        "description": "Invalid indicates the name provided does not match the resource provider’s naming requirements (incorrect length, unsupported characters, etc.)  AlreadyExists indicates that the name is already in use and is therefore unavailable."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Valid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/816"
+      },
+      {
+        "$ref": "#/817"
+      },
+      {
+        "$ref": "#/818"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.ApiManagement",
+    "apiVersion": "2022-04-01-preview",
+    "output": {
+      "$ref": "#/815"
+    },
+    "input": {
+      "$ref": "#/814"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceGetDomainOwnershipIdentifierResult",
+    "properties": {
+      "domainOwnershipIdentifier": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The domain ownership identifier value."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getDomainOwnershipIdentifier",
+    "resourceType": "Microsoft.ApiManagement",
+    "apiVersion": "2022-04-01-preview",
+    "output": {
+      "$ref": "#/821"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "GatewayKeysContract",
     "properties": {
       "primary": {
@@ -11338,7 +11438,7 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/814"
+      "$ref": "#/823"
     }
   },
   {
@@ -11347,7 +11447,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/819"
+          "$ref": "#/828"
         },
         "flags": 1,
         "description": "The Key being regenerated."
@@ -11366,10 +11466,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/817"
+        "$ref": "#/826"
       },
       {
-        "$ref": "#/818"
+        "$ref": "#/827"
       }
     ]
   },
@@ -11382,7 +11482,7 @@
       "$ref": "#/78"
     },
     "input": {
-      "$ref": "#/816"
+      "$ref": "#/825"
     }
   },
   {
@@ -11391,7 +11491,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/824"
+          "$ref": "#/833"
         },
         "flags": 1,
         "description": "The Key to be used to generate gateway token."
@@ -11417,10 +11517,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/822"
+        "$ref": "#/831"
       },
       {
-        "$ref": "#/823"
+        "$ref": "#/832"
       }
     ]
   },
@@ -11443,10 +11543,10 @@
     "resourceType": "Microsoft.ApiManagement/service/gateways",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/825"
+      "$ref": "#/834"
     },
     "input": {
-      "$ref": "#/821"
+      "$ref": "#/830"
     }
   },
   {
@@ -11468,7 +11568,7 @@
     "resourceType": "Microsoft.ApiManagement/service/identityProviders",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/827"
+      "$ref": "#/836"
     }
   },
   {
@@ -11490,7 +11590,7 @@
     "resourceType": "Microsoft.ApiManagement/service/namedValues",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/829"
+      "$ref": "#/838"
     }
   },
   {
@@ -11499,7 +11599,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/832"
+          "$ref": "#/841"
         },
         "flags": 0,
         "description": "NamedValue entity contract properties."
@@ -11554,7 +11654,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/842"
         },
         "flags": 0,
         "description": "Optional tags that when provided can be used to filter the NamedValue list."
@@ -11581,7 +11681,7 @@
     "resourceType": "Microsoft.ApiManagement/service/namedValues",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/831"
+      "$ref": "#/840"
     }
   },
   {
@@ -11590,7 +11690,7 @@
     "resourceType": "Microsoft.ApiManagement/service/openidConnectProviders",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/827"
+      "$ref": "#/836"
     }
   },
   {
@@ -11599,7 +11699,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/838"
+          "$ref": "#/847"
         },
         "flags": 0,
         "description": "A collection of resources."
@@ -11650,7 +11750,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/837"
+      "$ref": "#/846"
     }
   },
   {
@@ -11659,7 +11759,7 @@
     "resourceType": "Microsoft.ApiManagement/service/policyFragments",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/836"
+      "$ref": "#/845"
     }
   },
   {
@@ -11681,7 +11781,7 @@
     "resourceType": "Microsoft.ApiManagement/service/portalsettings",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/840"
+      "$ref": "#/849"
     }
   },
   {
@@ -11728,7 +11828,7 @@
     "resourceType": "Microsoft.ApiManagement/service/subscriptions",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/844"
+      "$ref": "#/853"
     }
   },
   {
@@ -11796,7 +11896,7 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/848"
+      "$ref": "#/857"
     }
   },
   {
@@ -11805,7 +11905,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/851"
+          "$ref": "#/860"
         },
         "flags": 0,
         "description": "Deploy Configuration Parameter contract properties."
@@ -11838,7 +11938,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/853"
+          "$ref": "#/862"
         },
         "flags": 0,
         "description": "Properties of the Operation Contract."
@@ -11879,7 +11979,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/858"
+          "$ref": "#/867"
         },
         "flags": 0,
         "description": "Status of an async operation."
@@ -11907,14 +12007,14 @@
       },
       "error": {
         "type": {
-          "$ref": "#/859"
+          "$ref": "#/868"
         },
         "flags": 0,
         "description": "Error Body Contract"
       },
       "actionLog": {
         "type": {
-          "$ref": "#/863"
+          "$ref": "#/872"
         },
         "flags": 2,
         "description": "This property if only provided as part of the TenantConfiguration_Validate operation. It contains the log the entities which will be updated/created/deleted as part of the TenantConfiguration_Deploy operation."
@@ -11941,16 +12041,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/854"
+        "$ref": "#/863"
       },
       {
-        "$ref": "#/855"
+        "$ref": "#/864"
       },
       {
-        "$ref": "#/856"
+        "$ref": "#/865"
       },
       {
-        "$ref": "#/857"
+        "$ref": "#/866"
       }
     ]
   },
@@ -11974,7 +12074,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/861"
+          "$ref": "#/870"
         },
         "flags": 0,
         "description": "The list of invalid fields send in request, in case of validation error."
@@ -12011,7 +12111,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/860"
+      "$ref": "#/869"
     }
   },
   {
@@ -12044,7 +12144,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/862"
+      "$ref": "#/871"
     }
   },
   {
@@ -12053,10 +12153,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/852"
+      "$ref": "#/861"
     },
     "input": {
-      "$ref": "#/850"
+      "$ref": "#/859"
     }
   },
   {
@@ -12065,7 +12165,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/866"
+          "$ref": "#/875"
         },
         "flags": 0,
         "description": "Properties of the Save Configuration Parameters."
@@ -12098,10 +12198,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/852"
+      "$ref": "#/861"
     },
     "input": {
-      "$ref": "#/865"
+      "$ref": "#/874"
     }
   },
   {
@@ -12110,10 +12210,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/852"
+      "$ref": "#/861"
     },
     "input": {
-      "$ref": "#/850"
+      "$ref": "#/859"
     }
   },
   {
@@ -12135,7 +12235,7 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/869"
+      "$ref": "#/878"
     }
   },
   {
@@ -12144,7 +12244,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/872"
+          "$ref": "#/881"
         },
         "flags": 0,
         "description": "User Token Parameter contract properties."
@@ -12157,7 +12257,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/875"
+          "$ref": "#/884"
         },
         "flags": 1,
         "description": "The Key to be used to generate token for user."
@@ -12183,10 +12283,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/873"
+        "$ref": "#/882"
       },
       {
-        "$ref": "#/874"
+        "$ref": "#/883"
       }
     ]
   },
@@ -12209,10 +12309,10 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2022-04-01-preview",
     "output": {
-      "$ref": "#/876"
+      "$ref": "#/885"
     },
     "input": {
-      "$ref": "#/871"
+      "$ref": "#/880"
     }
   },
   {

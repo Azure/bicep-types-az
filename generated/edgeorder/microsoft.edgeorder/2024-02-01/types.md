@@ -44,6 +44,23 @@
 * **Input**: [CancellationReason](#cancellationreason)
 * **Output**: any
 
+## Function listConfigurations (Microsoft.EdgeOrder@2024-02-01)
+* **Resource**: Microsoft.EdgeOrder
+* **ApiVersion**: 2024-02-01
+* **Input**: [ConfigurationsRequest](#configurationsrequest)
+* **Output**: [Configurations](#configurations)
+
+## Function listProductFamilies (Microsoft.EdgeOrder@2024-02-01)
+* **Resource**: Microsoft.EdgeOrder
+* **ApiVersion**: 2024-02-01
+* **Input**: [ProductFamiliesRequest](#productfamiliesrequest)
+* **Output**: [ProductFamilies](#productfamilies)
+
+## Function productFamiliesMetadata (Microsoft.EdgeOrder@2024-02-01)
+* **Resource**: Microsoft.EdgeOrder
+* **ApiVersion**: 2024-02-01
+* **Output**: [ProductFamiliesMetadata](#productfamiliesmetadata)
+
 ## Function return (Microsoft.EdgeOrder/orderItems@2024-02-01)
 * **Resource**: Microsoft.EdgeOrder/orderItems
 * **ApiVersion**: 2024-02-01
@@ -69,9 +86,64 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state
 * **shippingAddress**: [ShippingAddress](#shippingaddress): Shipping details for the address.
 
+## AvailabilityInformation
+### Properties
+* **availabilityStage**: 'Available' | 'ComingSoon' | 'Deprecated' | 'Discoverable' | 'Preview' | 'Signup' | 'Unavailable' | string (ReadOnly): Current availability stage of the product.
+* **disabledReason**: 'Country' | 'Feature' | 'NoSubscriptionInfo' | 'None' | 'NotAvailable' | 'OfferType' | 'OutOfStock' | 'Region' | string (ReadOnly): Reason why the product is disabled.
+* **disabledReasonMessage**: string (ReadOnly): Message for why the product is disabled.
+
+## BillingMeterDetails
+### Properties
+* **frequency**: string (ReadOnly): Frequency of recurrence.
+* **meterDetails**: [MeterDetails](#meterdetails) (ReadOnly): Represents MeterDetails.
+* **meteringType**: 'Adhoc' | 'OneTime' | 'Recurring' | string (ReadOnly): Represents Metering type (eg one-time or recurrent).
+* **name**: string (ReadOnly): Represents Billing type name.
+* **termTypeDetails**: [TermTypeDetails](#termtypedetails) (ReadOnly): Represent Term Type details.
+
 ## CancellationReason
 ### Properties
 * **reason**: string (Required): Reason for cancellation.
+
+## CategoryInformation
+### Properties
+* **categoryDisplayName**: string: Category display name of the child configuration.
+* **categoryName**: string: Category name of the child configuration.
+* **description**: string: Description text for the category.
+* **links**: [Link](#link)[]: Links for the category.
+
+## ChildConfiguration
+### Properties
+* **properties**: [ChildConfigurationProperties](#childconfigurationproperties) (ReadOnly): Properties of child configuration.
+
+## ChildConfigurationFilter
+### Properties
+* **childConfigurationTypes**: ('AdditionalConfiguration' | 'DeviceConfiguration' | string)[]: Filter to fetch all child configurations belonging to the given list of configuration types.
+* **hierarchyInformations**: [HierarchyInformation](#hierarchyinformation)[]: The list of child configuration hierarchy customer wants to filter for the given configuration.
+
+## ChildConfigurationProperties
+### Properties
+* **availabilityInformation**: [AvailabilityInformation](#availabilityinformation) (ReadOnly): Availability information of the product system.
+* **childConfigurationType**: 'AdditionalConfiguration' | 'DeviceConfiguration' | string (ReadOnly): Child configuration type.
+* **childConfigurationTypes**: ('AdditionalConfiguration' | 'DeviceConfiguration' | string)[] (ReadOnly): Different types of child configurations which exist for this configuration, these can be used to populate the child configuration filter.
+* **costInformation**: [CostInformation](#costinformation) (ReadOnly): Cost information for the product system.
+* **description**: [Description](#description) (ReadOnly): Description related to the product system.
+* **dimensions**: [Dimensions](#dimensions) (ReadOnly): Dimensions of the configuration.
+* **displayName**: string (ReadOnly): Display Name for the product system.
+* **filterableProperties**: [FilterableProperty](#filterableproperty)[] (ReadOnly): List of filters supported for a product.
+* **fulfilledBy**: 'External' | 'Microsoft' | string (ReadOnly): The entity responsible for fulfillment of the item at the given hierarchy level.
+* **groupedChildConfigurations**: [GroupedChildConfigurations](#groupedchildconfigurations)[] (ReadOnly): Child configurations present for the configuration after applying child configuration filter, grouped by the category name of the child configuration.
+* **hierarchyInformation**: [HierarchyInformation](#hierarchyinformation) (ReadOnly): Hierarchy information of a product.
+* **imageInformation**: [ImageInformation](#imageinformation)[] (ReadOnly): Image information for the product system.
+* **isPartOfBaseConfiguration**: bool (ReadOnly): Flag to indicate if the child configuration is part of the base configuration, which means the customer need not pass this configuration in OptInAdditionalConfigurations while placing an order, it will be shipped by default.
+* **maximumQuantity**: int (ReadOnly): Maximum quantity a customer can order while choosing this configuration.
+* **minimumQuantity**: int (ReadOnly): Minimum quantity a customer can order while choosing this configuration.
+* **provisioningSupport**: 'CloudBased' | 'Manual' | string (ReadOnly): Determining nature of provisioning that the configuration supports.
+* **specifications**: [Specification](#specification)[] (ReadOnly): Specifications of the configuration.
+* **supportedTermCommitmentDurations**: string[] (ReadOnly): The Term Commitment Durations that are supported for a configuration.
+
+## Configuration
+### Properties
+* **properties**: [ConfigurationProperties](#configurationproperties) (ReadOnly): Properties of configuration.
 
 ## ConfigurationDeviceDetails
 ### Properties
@@ -82,6 +154,39 @@
 * **quantity**: int (ReadOnly): Quantity of the product.
 * **termCommitmentInformation**: [TermCommitmentInformation](#termcommitmentinformation) (ReadOnly): Term Commitment Information of the Device.
 
+## ConfigurationFilter
+### Properties
+* **childConfigurationFilter**: [ChildConfigurationFilter](#childconfigurationfilter): Filter to fetch specific child configurations that exist in the configuration. This must be passed to either fetch a list of specific child configurations, or all child configurations of specific types of child configurations.
+* **filterableProperty**: [FilterableProperty](#filterableproperty)[]: Filters specific to product.
+* **hierarchyInformation**: [HierarchyInformation](#hierarchyinformation) (Required): Product hierarchy information.
+
+## ConfigurationProperties
+### Properties
+* **availabilityInformation**: [AvailabilityInformation](#availabilityinformation) (ReadOnly): Availability information of the product system.
+* **childConfigurationTypes**: ('AdditionalConfiguration' | 'DeviceConfiguration' | string)[] (ReadOnly): Different types of child configurations which exist for this configuration, these can be used to populate the child configuration filter.
+* **costInformation**: [CostInformation](#costinformation) (ReadOnly): Cost information for the product system.
+* **description**: [Description](#description) (ReadOnly): Description related to the product system.
+* **dimensions**: [Dimensions](#dimensions) (ReadOnly): Dimensions of the configuration.
+* **displayName**: string (ReadOnly): Display Name for the product system.
+* **filterableProperties**: [FilterableProperty](#filterableproperty)[] (ReadOnly): List of filters supported for a product.
+* **fulfilledBy**: 'External' | 'Microsoft' | string (ReadOnly): The entity responsible for fulfillment of the item at the given hierarchy level.
+* **groupedChildConfigurations**: [GroupedChildConfigurations](#groupedchildconfigurations)[] (ReadOnly): Child configurations present for the configuration after applying child configuration filter, grouped by the category name of the child configuration.
+* **hierarchyInformation**: [HierarchyInformation](#hierarchyinformation) (ReadOnly): Hierarchy information of a product.
+* **imageInformation**: [ImageInformation](#imageinformation)[] (ReadOnly): Image information for the product system.
+* **provisioningSupport**: 'CloudBased' | 'Manual' | string (ReadOnly): Determining nature of provisioning that the configuration supports.
+* **specifications**: [Specification](#specification)[] (ReadOnly): Specifications of the configuration.
+* **supportedTermCommitmentDurations**: string[] (ReadOnly): The Term Commitment Durations that are supported for a configuration.
+
+## Configurations
+### Properties
+* **nextLink**: string: The link to the next page of items
+* **value**: [Configuration](#configuration)[] (Required, ReadOnly): The Configuration items on this page
+
+## ConfigurationsRequest
+### Properties
+* **configurationFilter**: [ConfigurationFilter](#configurationfilter): Holds details about product hierarchy information and filterable property.
+* **customerSubscriptionDetails**: [CustomerSubscriptionDetails](#customersubscriptiondetails): Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details.
+
 ## ContactDetails
 ### Properties
 * **contactName**: string: Contact name of the person.
@@ -89,6 +194,31 @@
 * **mobile**: string: Mobile number of the contact person.
 * **phone**: string: Phone number of the contact person.
 * **phoneExtension**: string: Phone extension number of the contact person.
+
+## CostInformation
+### Properties
+* **billingInfoUrl**: string (ReadOnly): Default url to display billing information.
+* **billingMeterDetails**: [BillingMeterDetails](#billingmeterdetails)[] (ReadOnly): Details on the various billing aspects for the product system.
+
+## CustomerSubscriptionDetails
+### Properties
+* **locationPlacementId**: string: Location placement Id of a subscription.
+* **quotaId**: string (Required): Quota ID of a subscription.
+* **registeredFeatures**: [CustomerSubscriptionRegisteredFeatures](#customersubscriptionregisteredfeatures)[]: List of registered feature flags for subscription.
+
+## CustomerSubscriptionRegisteredFeatures
+### Properties
+* **name**: string: Name of subscription registered feature.
+* **state**: string: State of subscription registered feature.
+
+## Description
+### Properties
+* **attributes**: string[] (ReadOnly): Attributes for the product system.
+* **descriptionType**: 'Base' | string (ReadOnly): Type of description.
+* **keywords**: string[] (ReadOnly): Keywords for the product system.
+* **links**: [Link](#link)[] (ReadOnly): Links for the product system.
+* **longDescription**: string (ReadOnly): Long description of the product system.
+* **shortDescription**: string (ReadOnly): Short description of the product system.
 
 ## DeviceDetails
 ### Properties
@@ -103,6 +233,16 @@
 ### Properties
 * **message**: string (ReadOnly): Insights on current status.
 * **status**: 'Completed' | 'NotInitiated' | string (ReadOnly): Proof of possession status.
+
+## Dimensions
+### Properties
+* **depth**: int (ReadOnly): Depth of the device.
+* **height**: int (ReadOnly): Height of the device.
+* **length**: int (ReadOnly): Length of the device.
+* **lengthHeightUnit**: 'CM' | 'IN' | string (ReadOnly): Unit for the dimensions of length, height and width.
+* **weight**: int (ReadOnly): Weight of the device.
+* **weightUnit**: 'KGS' | 'LBS' | string (ReadOnly): Unit for the dimensions of weight.
+* **width**: int (ReadOnly): Width of the device.
 
 ## DisplayInfo
 ### Properties
@@ -126,12 +266,22 @@
 * **message**: string (ReadOnly): The error message.
 * **target**: string (ReadOnly): The error target.
 
+## FilterableProperty
+### Properties
+* **supportedValues**: string[] (Required): Values to be filtered.
+* **type**: 'DoubleEncryptionStatus' | 'ShipToCountries' | string (Required): Type of product filter.
+
 ## ForwardShippingDetails
 ### Properties
 * **carrierDisplayName**: string (ReadOnly): Carrier Name for display purpose. Not to be used for any processing.
 * **carrierName**: string (ReadOnly): Name of the carrier.
 * **trackingId**: string (ReadOnly): TrackingId of the package.
 * **trackingUrl**: string (ReadOnly): TrackingUrl of the package.
+
+## GroupedChildConfigurations
+### Properties
+* **categoryInformation**: [CategoryInformation](#categoryinformation) (ReadOnly): Category information.
+* **childConfigurations**: [ChildConfiguration](#childconfiguration)[] (ReadOnly): List of child configurations.
 
 ## HierarchyInformation
 ### Properties
@@ -141,9 +291,39 @@
 * **productLineName**: string: Represents product line name that uniquely identifies product line.
 * **productName**: string: Represents product name that uniquely identifies product.
 
+## ImageInformation
+### Properties
+* **imageType**: 'BulletImage' | 'GenericImage' | 'MainImage' | string (ReadOnly): Type of the image.
+* **imageUrl**: string (ReadOnly): Url of the image.
+
+## Link
+### Properties
+* **linkType**: 'Discoverable' | 'Documentation' | 'Generic' | 'KnowMore' | 'SignUp' | 'Specification' | 'TermsAndConditions' | string (ReadOnly): Type of link.
+* **linkUrl**: string (ReadOnly): Url of the link.
+
 ## ManagementResourcePreferences
 ### Properties
 * **preferredManagementResourceId**: string: Customer preferred Management resource ARM ID.
+
+## MeterDetails
+* **Discriminator**: billingType
+
+### Base Properties
+* **chargingType**: 'PerDevice' | 'PerOrder' | string (ReadOnly): Charging type.
+* **multiplier**: int (ReadOnly): Billing unit applicable for Pav2 billing.
+
+### Pav2MeterDetails
+#### Properties
+* **billingType**: 'Pav2' (Required): Represents billing type.
+* **meterGuid**: string (ReadOnly): Validation status of requested data center and transport.
+
+### PurchaseMeterDetails
+#### Properties
+* **billingType**: 'Purchase' (Required): Represents billing type.
+* **productId**: string (ReadOnly): Product Id.
+* **skuId**: string (ReadOnly): Sku Id.
+* **termId**: string (ReadOnly): Term Id.
+
 
 ## NotificationPreference
 ### Properties
@@ -193,6 +373,10 @@
 * **termCommitmentPreferences**: [TermCommitmentPreferences](#termcommitmentpreferences): Preferences related to the Term commitment.
 * **transportPreferences**: [TransportPreferences](#transportpreferences): Preferences related to the shipment logistics of the order.
 
+## Product
+### Properties
+* **properties**: [ProductProperties](#productproperties) (ReadOnly): Properties of product.
+
 ## ProductDetails
 ### Properties
 * **childConfigurationDeviceDetails**: [ConfigurationDeviceDetails](#configurationdevicedetails)[] (ReadOnly): Details of all child configurations that are part of the order item.
@@ -204,6 +388,75 @@
 * **parentProvisioningDetails**: [ProvisioningDetails](#provisioningdetails): Device Provisioning Details for Parent.
 * **productDoubleEncryptionStatus**: 'Disabled' | 'Enabled' | string (ReadOnly): Double encryption status of the configuration. Read-only field.
 * **termCommitmentInformation**: [TermCommitmentInformation](#termcommitmentinformation) (ReadOnly): Term Commitment Information of the Device.
+
+## ProductFamilies
+### Properties
+* **nextLink**: string: The link to the next page of items
+* **value**: [ProductFamily](#productfamily)[] (Required, ReadOnly): The ProductFamily items on this page
+
+## ProductFamiliesMetadata
+### Properties
+* **nextLink**: string: The link to the next page of items
+* **value**: [ProductFamiliesMetadataDetails](#productfamiliesmetadatadetails)[] (Required, ReadOnly): The ProductFamiliesMetadataDetails items on this page
+
+## ProductFamiliesMetadataDetails
+### Properties
+* **properties**: [ProductFamilyProperties](#productfamilyproperties) (ReadOnly): Product family properties.
+
+## ProductFamiliesRequest
+### Properties
+* **customerSubscriptionDetails**: [CustomerSubscriptionDetails](#customersubscriptiondetails): Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details.
+* **filterableProperties**: [ProductFamiliesRequestFilterableProperties](#productfamiliesrequestfilterableproperties) (Required): Dictionary of filterable properties on product family.
+
+## ProductFamiliesRequestFilterableProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [FilterableProperty](#filterableproperty)[]
+
+## ProductFamily
+### Properties
+* **properties**: [ProductFamilyProperties](#productfamilyproperties) (ReadOnly): Properties of product family.
+
+## ProductFamilyProperties
+### Properties
+* **availabilityInformation**: [AvailabilityInformation](#availabilityinformation) (ReadOnly): Availability information of the product system.
+* **costInformation**: [CostInformation](#costinformation) (ReadOnly): Cost information for the product system.
+* **description**: [Description](#description) (ReadOnly): Description related to the product system.
+* **displayName**: string (ReadOnly): Display Name for the product system.
+* **filterableProperties**: [FilterableProperty](#filterableproperty)[] (ReadOnly): List of filters supported for a product.
+* **fulfilledBy**: 'External' | 'Microsoft' | string (ReadOnly): The entity responsible for fulfillment of the item at the given hierarchy level.
+* **hierarchyInformation**: [HierarchyInformation](#hierarchyinformation) (ReadOnly): Hierarchy information of a product.
+* **imageInformation**: [ImageInformation](#imageinformation)[] (ReadOnly): Image information for the product system.
+* **productLines**: [ProductLine](#productline)[] (ReadOnly): List of product lines supported in the product family.
+* **resourceProviderDetails**: [ResourceProviderDetails](#resourceproviderdetails)[]: Contains details related to resource provider.
+
+## ProductLine
+### Properties
+* **properties**: [ProductLineProperties](#productlineproperties) (ReadOnly): Properties of product line.
+
+## ProductLineProperties
+### Properties
+* **availabilityInformation**: [AvailabilityInformation](#availabilityinformation) (ReadOnly): Availability information of the product system.
+* **costInformation**: [CostInformation](#costinformation) (ReadOnly): Cost information for the product system.
+* **description**: [Description](#description) (ReadOnly): Description related to the product system.
+* **displayName**: string (ReadOnly): Display Name for the product system.
+* **filterableProperties**: [FilterableProperty](#filterableproperty)[] (ReadOnly): List of filters supported for a product.
+* **fulfilledBy**: 'External' | 'Microsoft' | string (ReadOnly): The entity responsible for fulfillment of the item at the given hierarchy level.
+* **hierarchyInformation**: [HierarchyInformation](#hierarchyinformation) (ReadOnly): Hierarchy information of a product.
+* **imageInformation**: [ImageInformation](#imageinformation)[] (ReadOnly): Image information for the product system.
+* **products**: [Product](#product)[] (ReadOnly): List of products in the product line.
+
+## ProductProperties
+### Properties
+* **availabilityInformation**: [AvailabilityInformation](#availabilityinformation) (ReadOnly): Availability information of the product system.
+* **configurations**: [Configuration](#configuration)[] (ReadOnly): List of configurations for the product.
+* **costInformation**: [CostInformation](#costinformation) (ReadOnly): Cost information for the product system.
+* **description**: [Description](#description) (ReadOnly): Description related to the product system.
+* **displayName**: string (ReadOnly): Display Name for the product system.
+* **filterableProperties**: [FilterableProperty](#filterableproperty)[] (ReadOnly): List of filters supported for a product.
+* **fulfilledBy**: 'External' | 'Microsoft' | string (ReadOnly): The entity responsible for fulfillment of the item at the given hierarchy level.
+* **hierarchyInformation**: [HierarchyInformation](#hierarchyinformation) (ReadOnly): Hierarchy information of a product.
+* **imageInformation**: [ImageInformation](#imageinformation)[] (ReadOnly): Image information for the product system.
 
 ## ProvisioningDetails
 ### Properties
@@ -266,6 +519,11 @@
 ### Properties
 * **siteId**: string (Required): Unique Id, Identifying A Site.
 
+## Specification
+### Properties
+* **name**: string (ReadOnly): Name of the specification.
+* **value**: string (ReadOnly): Value of the specification.
+
 ## StageDetails
 ### Properties
 * **displayName**: string (ReadOnly): Display name of the resource stage.
@@ -292,6 +550,11 @@
 ### Properties
 * **preferredTermCommitmentDuration**: string: Customer preferred Term Duration.
 * **preferredTermCommitmentType**: 'None' | 'Timed' | 'Trial' | string (Required): Term Commitment Type
+
+## TermTypeDetails
+### Properties
+* **termType**: 'None' | 'Timed' | 'Trial' | string (Required): Term Commitment Type
+* **termTypeDuration**: string (Required): Duration for the term type.
 
 ## TrackedResourceTags
 ### Properties

@@ -1273,6 +1273,18 @@
   {
     "$type": "ResourceFunctionType",
     "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Support",
+    "apiVersion": "2022-09-01-preview",
+    "output": {
+      "$ref": "#/82"
+    },
+    "input": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
     "resourceType": "Microsoft.Support/supportTickets",
     "apiVersion": "2022-09-01-preview",
     "output": {
@@ -1311,10 +1323,10 @@
     "resourceType": "Microsoft.Support/fileWorkspaces/files",
     "apiVersion": "2022-09-01-preview",
     "output": {
-      "$ref": "#/85"
+      "$ref": "#/86"
     },
     "input": {
-      "$ref": "#/84"
+      "$ref": "#/85"
     }
   }
 ]

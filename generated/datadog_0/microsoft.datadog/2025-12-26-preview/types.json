@@ -1549,6 +1549,86 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ActivateSaaSParameterRequest",
+    "properties": {
+      "saaSResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "SaaS resource id of marketplace saas subscription to be activated."
+      },
+      "userInfo": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "User information of the person activating the SaaS resource."
+      },
+      "datadogOrganizationProperties": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Datadog organization properties to link the Saas resource to."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SaaSResourceDetailsResponse",
+    "properties": {
+      "saaSId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the Marketplace SaaS Resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activateSaaS",
+    "resourceType": "Microsoft.Datadog",
+    "apiVersion": "2025-12-26-preview",
+    "output": {
+      "$ref": "#/127"
+    },
+    "input": {
+      "$ref": "#/126"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DatadogApplicationKey",
     "properties": {
       "createdBy": {
@@ -1580,7 +1660,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/126"
+      "$ref": "#/129"
     }
   },
   {
@@ -1623,7 +1703,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/128"
+      "$ref": "#/131"
     }
   },
   {
@@ -1632,7 +1712,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/134"
         },
         "flags": 1,
         "description": "The DatadogApiKey items on this page"
@@ -1649,7 +1729,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/128"
+      "$ref": "#/131"
     }
   },
   {
@@ -1658,7 +1738,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/130"
+      "$ref": "#/133"
     }
   },
   {
@@ -1667,7 +1747,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/140"
+          "$ref": "#/143"
         },
         "flags": 1,
         "description": "The DatadogHost items on this page"
@@ -1694,21 +1774,21 @@
       },
       "aliases": {
         "type": {
-          "$ref": "#/135"
+          "$ref": "#/138"
         },
         "flags": 0,
         "description": "The aliases for the host installed via the Datadog agent."
       },
       "apps": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/139"
         },
         "flags": 0,
         "description": "The Datadog integrations reporting metrics for the host."
       },
       "meta": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/140"
         },
         "flags": 0
       }
@@ -1739,13 +1819,13 @@
       },
       "installMethod": {
         "type": {
-          "$ref": "#/138"
+          "$ref": "#/141"
         },
         "flags": 0
       },
       "logsAgent": {
         "type": {
-          "$ref": "#/139"
+          "$ref": "#/142"
         },
         "flags": 0
       }
@@ -1794,7 +1874,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/134"
+      "$ref": "#/137"
     }
   },
   {
@@ -1803,7 +1883,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/133"
+      "$ref": "#/136"
     }
   },
   {
@@ -1812,7 +1892,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/144"
+          "$ref": "#/147"
         },
         "flags": 1,
         "description": "The LinkedResource items on this page"
@@ -1849,7 +1929,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/143"
+      "$ref": "#/146"
     }
   },
   {
@@ -1858,7 +1938,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/142"
+      "$ref": "#/145"
     }
   },
   {
@@ -1867,7 +1947,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/151"
         },
         "flags": 1,
         "description": "The MonitoredResource items on this page"
@@ -1925,7 +2005,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/147"
+      "$ref": "#/150"
     }
   },
   {
@@ -1934,7 +2014,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/146"
+      "$ref": "#/149"
     }
   },
   {
@@ -1943,14 +2023,14 @@
     "properties": {
       "mcpConnectorResourceIdList": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/154"
         },
         "flags": 1,
         "description": "The list of ARM resource ID of the MCP connector integrated with SRE Agent resource."
       },
       "action": {
         "type": {
-          "$ref": "#/154"
+          "$ref": "#/157"
         },
         "flags": 1,
         "description": "Add/Remove action."
@@ -1975,10 +2055,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/152"
+        "$ref": "#/155"
       },
       {
-        "$ref": "#/153"
+        "$ref": "#/156"
       },
       {
         "$ref": "#/2"
@@ -1991,7 +2071,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/159"
         },
         "flags": 1,
         "description": "The SreAgentConfiguration items on this page"
@@ -2017,10 +2097,10 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/155"
+      "$ref": "#/158"
     },
     "input": {
-      "$ref": "#/150"
+      "$ref": "#/153"
     }
   },
   {
@@ -2041,7 +2121,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/158"
+      "$ref": "#/161"
     }
   },
   {
@@ -2053,10 +2133,10 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/160"
+      "$ref": "#/163"
     },
     "input": {
-      "$ref": "#/128"
+      "$ref": "#/131"
     }
   },
   {
@@ -2065,14 +2145,14 @@
     "properties": {
       "marketplaceSaasInfo": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/166"
         },
         "flags": 0,
         "description": "Marketplace Subscription details"
       },
       "partnerBillingEntity": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "Partner Billing Entity details: Organization Info"
@@ -2160,7 +2240,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/162"
+      "$ref": "#/165"
     }
   },
   {
@@ -2189,7 +2269,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/166"
+      "$ref": "#/169"
     }
   },
   {
@@ -2217,7 +2297,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/169"
+          "$ref": "#/172"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2273,7 +2353,7 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/168"
+      "$ref": "#/171"
     },
     "input": {
       "$ref": "#/52"
@@ -2311,10 +2391,10 @@
     "resourceType": "Microsoft.Datadog/monitors",
     "apiVersion": "2025-12-26-preview",
     "output": {
-      "$ref": "#/168"
+      "$ref": "#/171"
     },
     "input": {
-      "$ref": "#/171"
+      "$ref": "#/174"
     }
   }
 ]

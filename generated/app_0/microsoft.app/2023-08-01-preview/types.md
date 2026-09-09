@@ -365,6 +365,11 @@
 * **ApiVersion**: 2023-08-01-preview
 * **Output**: [EnvironmentAuthToken](#environmentauthtoken)
 
+## Function getCustomDomainVerificationId (Microsoft.App@2023-08-01-preview)
+* **Resource**: Microsoft.App
+* **ApiVersion**: 2023-08-01-preview
+* **Output**: string
+
 ## Function listAuthToken (Microsoft.App/builders/builds@2023-08-01-preview)
 * **Resource**: Microsoft.App/builders/builds
 * **ApiVersion**: 2023-08-01-preview

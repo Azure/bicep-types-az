@@ -336,6 +336,68 @@
   },
   {
     "$type": "ObjectType",
+    "name": "NameAvailabilityParameters",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resource type. Should be always \"Microsoft.Communication/CommunicationServices\"."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The CommunicationService name to validate. e.g.\"my-CommunicationService-name-here\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Indicates whether the name is available or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The reason of the availability. Required if name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The message of the operation."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Communication",
+    "apiVersion": "2020-08-20",
+    "output": {
+      "$ref": "#/30"
+    },
+    "input": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "LinkNotificationHubParameters",
     "properties": {
       "resourceId": {
@@ -373,10 +435,10 @@
     "resourceType": "Microsoft.Communication/communicationServices",
     "apiVersion": "2020-08-20",
     "output": {
-      "$ref": "#/30"
+      "$ref": "#/34"
     },
     "input": {
-      "$ref": "#/29"
+      "$ref": "#/33"
     }
   },
   {
@@ -419,7 +481,7 @@
     "resourceType": "Microsoft.Communication/communicationServices",
     "apiVersion": "2020-08-20",
     "output": {
-      "$ref": "#/32"
+      "$ref": "#/36"
     }
   },
   {
@@ -428,7 +490,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/41"
         },
         "flags": 0,
         "description": "The keyType to regenerate. Must be either 'primary' or 'secondary'(case-insensitive)."
@@ -447,10 +509,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/35"
+        "$ref": "#/39"
       },
       {
-        "$ref": "#/36"
+        "$ref": "#/40"
       }
     ]
   },
@@ -460,10 +522,10 @@
     "resourceType": "Microsoft.Communication/communicationServices",
     "apiVersion": "2020-08-20",
     "output": {
-      "$ref": "#/32"
+      "$ref": "#/36"
     },
     "input": {
-      "$ref": "#/34"
+      "$ref": "#/38"
     }
   }
 ]

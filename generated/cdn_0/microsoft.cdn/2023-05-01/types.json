@@ -11851,7 +11851,7 @@
   {
     "$type": "ResourceFunctionType",
     "name": "checkEndpointNameAvailability",
-    "resourceType": "Microsoft.Cdn/profiles",
+    "resourceType": "Microsoft.Cdn",
     "apiVersion": "2023-05-01",
     "output": {
       "$ref": "#/1125"
@@ -11862,72 +11862,38 @@
   },
   {
     "$type": "ObjectType",
-    "name": "UsagesListResult",
+    "name": "CheckNameAvailabilityInput",
     "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/1132"
-        },
-        "flags": 0,
-        "description": "The list of resource usages."
-      },
-      "nextLink": {
+      "name": {
         "type": {
           "$ref": "#/0"
         },
-        "flags": 0,
-        "description": "URL to get the next set of results."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Usage",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Resource identifier."
+        "flags": 1,
+        "description": "The resource name to validate."
       },
-      "unit": {
+      "type": {
         "type": {
           "$ref": "#/1130"
         },
         "flags": 1,
-        "description": "An enum describing the unit of measurement."
-      },
-      "currentValue": {
-        "type": {
-          "$ref": "#/79"
-        },
-        "flags": 1,
-        "description": "The current value of the usage."
-      },
-      "limit": {
-        "type": {
-          "$ref": "#/79"
-        },
-        "flags": 1,
-        "description": "The limit of usage."
-      },
-      "name": {
-        "type": {
-          "$ref": "#/1131"
-        },
-        "flags": 1,
-        "description": "The name of the type of usage."
+        "description": "The type of the resource whose name is to be validated."
       }
     }
   },
   {
     "$type": "StringLiteralType",
-    "value": "Count"
+    "value": "Microsoft.Cdn/Profiles/Endpoints"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Cdn/Profiles/AfdEndpoints"
   },
   {
     "$type": "UnionType",
     "elements": [
+      {
+        "$ref": "#/1128"
+      },
       {
         "$ref": "#/1129"
       },
@@ -11935,54 +11901,6 @@
         "$ref": "#/0"
       }
     ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UsageName",
-    "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "A string describing the resource name."
-      },
-      "localizedValue": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "A localized string describing the resource name."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/1128"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "usages",
-    "resourceType": "Microsoft.Cdn/profiles",
-    "apiVersion": "2023-05-01",
-    "output": {
-      "$ref": "#/1127"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "CheckHostNameAvailabilityInput",
-    "properties": {
-      "hostName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The host name to validate."
-      }
-    }
   },
   {
     "$type": "ObjectType",
@@ -12013,14 +11931,548 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Cdn",
+    "apiVersion": "2023-05-01",
+    "output": {
+      "$ref": "#/1131"
+    },
+    "input": {
+      "$ref": "#/1127"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateProbeInput",
+    "properties": {
+      "probeURL": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The probe URL to validate."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidateProbeOutput",
+    "properties": {
+      "isValid": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 2,
+        "description": "Indicates whether the probe URL is accepted or not."
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the error code when the probe url is not accepted."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The detailed error message describing why the probe URL is not accepted."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateProbe",
+    "resourceType": "Microsoft.Cdn",
+    "apiVersion": "2023-05-01",
+    "output": {
+      "$ref": "#/1134"
+    },
+    "input": {
+      "$ref": "#/1133"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CanMigrateParameters",
+    "properties": {
+      "classicResourceReference": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 1,
+        "description": "Resource reference of the classic cdn profile or classic frontdoor that need to be migrated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CanMigrateResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1138"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CanMigrateProperties",
+    "properties": {
+      "canMigrate": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 2,
+        "description": "Flag that says if the profile can be migrated"
+      },
+      "defaultSku": {
+        "type": {
+          "$ref": "#/1141"
+        },
+        "flags": 2,
+        "description": "Recommended sku for the migration"
+      },
+      "errors": {
+        "type": {
+          "$ref": "#/1143"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_AzureFrontDoor"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium_AzureFrontDoor"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1139"
+      },
+      {
+        "$ref": "#/1140"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationErrorType",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error code."
+      },
+      "resourceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource which has the problem."
+      },
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Error message indicating why the operation failed."
+      },
+      "nextSteps": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Describes what needs to be done to fix the problem"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1142"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "canMigrate",
+    "resourceType": "Microsoft.Cdn",
+    "apiVersion": "2023-05-01",
+    "output": {
+      "$ref": "#/1137"
+    },
+    "input": {
+      "$ref": "#/1136"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationParameters",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/799"
+        },
+        "flags": 1,
+        "description": "Sku for the migration"
+      },
+      "classicResourceReference": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 1,
+        "description": "Resource reference of the classic cdn profile or classic frontdoor that need to be migrated."
+      },
+      "profileName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the new profile that need to be created."
+      },
+      "migrationWebApplicationFirewallMappings": {
+        "type": {
+          "$ref": "#/1147"
+        },
+        "flags": 0,
+        "description": "Waf mapping for the migrated profile"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrationWebApplicationFirewallMapping",
+    "properties": {
+      "migratedFrom": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Migration From Waf policy"
+      },
+      "migratedTo": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Migration to Waf policy"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1146"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource ID."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/1149"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MigrateResultProperties",
+    "properties": {
+      "migratedProfileResourceId": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "Arm resource id of the migrated profile"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "migrate",
+    "resourceType": "Microsoft.Cdn",
+    "apiVersion": "2023-05-01",
+    "output": {
+      "$ref": "#/1148"
+    },
+    "input": {
+      "$ref": "#/1145"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceUsageListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/1155"
+        },
+        "flags": 2,
+        "description": "List of resource usages."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL to get the next set of custom domain objects if there are any."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceUsage",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type for which the usage is provided."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/1154"
+        },
+        "flags": 2,
+        "description": "Unit of the usage. e.g. count."
+      },
+      "currentValue": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 2,
+        "description": "Actual value of usage on the specified resource type."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 2,
+        "description": "Quota of the specified resource type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "count"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1153"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1152"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkResourceUsage",
+    "resourceType": "Microsoft.Cdn",
+    "apiVersion": "2023-05-01",
+    "output": {
+      "$ref": "#/1151"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkEndpointNameAvailability",
+    "resourceType": "Microsoft.Cdn/profiles",
+    "apiVersion": "2023-05-01",
+    "output": {
+      "$ref": "#/1125"
+    },
+    "input": {
+      "$ref": "#/1116"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UsagesListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/1163"
+        },
+        "flags": 0,
+        "description": "The list of resource usages."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL to get the next set of results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Usage",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource identifier."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/1161"
+        },
+        "flags": 1,
+        "description": "An enum describing the unit of measurement."
+      },
+      "currentValue": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 1,
+        "description": "The current value of the usage."
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 1,
+        "description": "The limit of usage."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/1162"
+        },
+        "flags": 1,
+        "description": "The name of the type of usage."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1160"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UsageName",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A string describing the resource name."
+      },
+      "localizedValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A localized string describing the resource name."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1159"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "usages",
+    "resourceType": "Microsoft.Cdn/profiles",
+    "apiVersion": "2023-05-01",
+    "output": {
+      "$ref": "#/1158"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckHostNameAvailabilityInput",
+    "properties": {
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The host name to validate."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "checkHostNameAvailability",
     "resourceType": "Microsoft.Cdn/profiles",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1131"
     },
     "input": {
-      "$ref": "#/1134"
+      "$ref": "#/1165"
     }
   },
   {
@@ -12029,7 +12481,7 @@
     "properties": {
       "secretType": {
         "type": {
-          "$ref": "#/1142"
+          "$ref": "#/1172"
         },
         "flags": 1,
         "description": "The secret type."
@@ -12070,16 +12522,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1138"
+        "$ref": "#/1168"
       },
       {
-        "$ref": "#/1139"
+        "$ref": "#/1169"
       },
       {
-        "$ref": "#/1140"
+        "$ref": "#/1170"
       },
       {
-        "$ref": "#/1141"
+        "$ref": "#/1171"
       },
       {
         "$ref": "#/0"
@@ -12092,7 +12544,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/1148"
+          "$ref": "#/1178"
         },
         "flags": 0,
         "description": "The validation status."
@@ -12126,16 +12578,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1144"
+        "$ref": "#/1174"
       },
       {
-        "$ref": "#/1145"
+        "$ref": "#/1175"
       },
       {
-        "$ref": "#/1146"
+        "$ref": "#/1176"
       },
       {
-        "$ref": "#/1147"
+        "$ref": "#/1177"
       },
       {
         "$ref": "#/0"
@@ -12148,10 +12600,10 @@
     "resourceType": "Microsoft.Cdn/profiles",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1143"
+      "$ref": "#/1173"
     },
     "input": {
-      "$ref": "#/1137"
+      "$ref": "#/1167"
     }
   },
   {
@@ -12160,7 +12612,7 @@
     "properties": {
       "wafMappingList": {
         "type": {
-          "$ref": "#/1152"
+          "$ref": "#/1182"
         },
         "flags": 1,
         "description": "Web Application Firewall (WAF) and security policy mapping for the profile upgrade"
@@ -12190,7 +12642,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1151"
+      "$ref": "#/1181"
     }
   },
   {
@@ -12234,7 +12686,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1154"
+          "$ref": "#/1184"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -12283,10 +12735,10 @@
     "resourceType": "Microsoft.Cdn/profiles",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1153"
+      "$ref": "#/1183"
     },
     "input": {
-      "$ref": "#/1150"
+      "$ref": "#/1180"
     }
   },
   {
@@ -12298,7 +12750,7 @@
     "resourceType": "Microsoft.Cdn/profiles",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1156"
+      "$ref": "#/1186"
     }
   },
   {
@@ -12320,7 +12772,7 @@
     "resourceType": "Microsoft.Cdn/profiles",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1158"
+      "$ref": "#/1188"
     }
   },
   {
@@ -12329,7 +12781,7 @@
     "properties": {
       "supportedOptimizationTypes": {
         "type": {
-          "$ref": "#/1167"
+          "$ref": "#/1197"
         },
         "flags": 2,
         "description": "Supported optimization types for a profile."
@@ -12360,19 +12812,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1161"
+        "$ref": "#/1191"
       },
       {
-        "$ref": "#/1162"
+        "$ref": "#/1192"
       },
       {
-        "$ref": "#/1163"
+        "$ref": "#/1193"
       },
       {
-        "$ref": "#/1164"
+        "$ref": "#/1194"
       },
       {
-        "$ref": "#/1165"
+        "$ref": "#/1195"
       },
       {
         "$ref": "#/0"
@@ -12382,7 +12834,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1166"
+      "$ref": "#/1196"
     }
   },
   {
@@ -12391,82 +12843,7 @@
     "resourceType": "Microsoft.Cdn/profiles",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1160"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ResourceUsageListResult",
-    "properties": {
-      "value": {
-        "type": {
-          "$ref": "#/1173"
-        },
-        "flags": 2,
-        "description": "List of resource usages."
-      },
-      "nextLink": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "URL to get the next set of custom domain objects if there are any."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ResourceUsage",
-    "properties": {
-      "resourceType": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Resource type for which the usage is provided."
-      },
-      "unit": {
-        "type": {
-          "$ref": "#/1172"
-        },
-        "flags": 2,
-        "description": "Unit of the usage. e.g. count."
-      },
-      "currentValue": {
-        "type": {
-          "$ref": "#/79"
-        },
-        "flags": 2,
-        "description": "Actual value of usage on the specified resource type."
-      },
-      "limit": {
-        "type": {
-          "$ref": "#/79"
-        },
-        "flags": 2,
-        "description": "Quota of the specified resource type."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "count"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/1171"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/1170"
+      "$ref": "#/1190"
     }
   },
   {
@@ -12475,7 +12852,7 @@
     "resourceType": "Microsoft.Cdn/profiles",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1169"
+      "$ref": "#/1151"
     }
   },
   {
@@ -12484,7 +12861,7 @@
     "resourceType": "Microsoft.Cdn/profiles/customDomains",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1156"
+      "$ref": "#/1186"
     }
   },
   {
@@ -12493,14 +12870,14 @@
     "properties": {
       "contentPaths": {
         "type": {
-          "$ref": "#/1177"
+          "$ref": "#/1202"
         },
         "flags": 1,
         "description": "The path to the content to be purged. Can describe a file path or a wild card directory."
       },
       "domains": {
         "type": {
-          "$ref": "#/1178"
+          "$ref": "#/1203"
         },
         "flags": 0,
         "description": "List of domains."
@@ -12525,10 +12902,10 @@
     "resourceType": "Microsoft.Cdn/profiles/afdEndpoints",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1156"
+      "$ref": "#/1186"
     },
     "input": {
-      "$ref": "#/1176"
+      "$ref": "#/1201"
     }
   },
   {
@@ -12537,7 +12914,7 @@
     "resourceType": "Microsoft.Cdn/profiles/afdEndpoints",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1127"
+      "$ref": "#/1158"
     }
   },
   {
@@ -12586,10 +12963,10 @@
     "resourceType": "Microsoft.Cdn/profiles/afdEndpoints",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1182"
+      "$ref": "#/1207"
     },
     "input": {
-      "$ref": "#/1181"
+      "$ref": "#/1206"
     }
   },
   {
@@ -12598,7 +12975,7 @@
     "resourceType": "Microsoft.Cdn/profiles/originGroups",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1127"
+      "$ref": "#/1158"
     }
   },
   {
@@ -12607,7 +12984,7 @@
     "resourceType": "Microsoft.Cdn/profiles/ruleSets",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1127"
+      "$ref": "#/1158"
     }
   },
   {
@@ -12630,7 +13007,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1187"
+          "$ref": "#/1212"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -12679,7 +13056,7 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1186"
+      "$ref": "#/1211"
     }
   },
   {
@@ -12688,7 +13065,7 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1186"
+      "$ref": "#/1211"
     }
   },
   {
@@ -12697,7 +13074,7 @@
     "properties": {
       "contentPaths": {
         "type": {
-          "$ref": "#/1191"
+          "$ref": "#/1216"
         },
         "flags": 1,
         "description": "The path to the content to be purged. Can describe a file path or a wild card directory."
@@ -12716,10 +13093,10 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1156"
+      "$ref": "#/1186"
     },
     "input": {
-      "$ref": "#/1190"
+      "$ref": "#/1215"
     }
   },
   {
@@ -12728,7 +13105,7 @@
     "properties": {
       "contentPaths": {
         "type": {
-          "$ref": "#/1194"
+          "$ref": "#/1219"
         },
         "flags": 1,
         "description": "The path to the content to be loaded. Path should be a relative file URL of the origin."
@@ -12747,10 +13124,10 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1156"
+      "$ref": "#/1186"
     },
     "input": {
-      "$ref": "#/1193"
+      "$ref": "#/1218"
     }
   },
   {
@@ -12759,10 +13136,10 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1182"
+      "$ref": "#/1207"
     },
     "input": {
-      "$ref": "#/1181"
+      "$ref": "#/1206"
     }
   },
   {
@@ -12771,7 +13148,7 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1169"
+      "$ref": "#/1151"
     }
   },
   {
@@ -12780,7 +13157,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1199"
+          "$ref": "#/1224"
         },
         "flags": 0,
         "description": "The JSON object that contains the properties of the custom domain to create."
@@ -12828,21 +13205,21 @@
       },
       "resourceState": {
         "type": {
-          "$ref": "#/1203"
+          "$ref": "#/1228"
         },
         "flags": 2,
         "description": "Resource status of the custom domain."
       },
       "customHttpsProvisioningState": {
         "type": {
-          "$ref": "#/1209"
+          "$ref": "#/1234"
         },
         "flags": 2,
         "description": "Provisioning status of the custom domain."
       },
       "customHttpsProvisioningSubstate": {
         "type": {
-          "$ref": "#/1220"
+          "$ref": "#/1245"
         },
         "flags": 2,
         "description": "Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step."
@@ -12863,7 +13240,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/1226"
+          "$ref": "#/1251"
         },
         "flags": 2,
         "description": "Provisioning status of Custom Https of the custom domain."
@@ -12886,13 +13263,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1200"
+        "$ref": "#/1225"
       },
       {
-        "$ref": "#/1201"
+        "$ref": "#/1226"
       },
       {
-        "$ref": "#/1202"
+        "$ref": "#/1227"
       },
       {
         "$ref": "#/0"
@@ -12923,19 +13300,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1204"
+        "$ref": "#/1229"
       },
       {
-        "$ref": "#/1205"
+        "$ref": "#/1230"
       },
       {
-        "$ref": "#/1206"
+        "$ref": "#/1231"
       },
       {
-        "$ref": "#/1207"
+        "$ref": "#/1232"
       },
       {
-        "$ref": "#/1208"
+        "$ref": "#/1233"
       },
       {
         "$ref": "#/0"
@@ -12986,34 +13363,34 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1210"
+        "$ref": "#/1235"
       },
       {
-        "$ref": "#/1211"
+        "$ref": "#/1236"
       },
       {
-        "$ref": "#/1212"
+        "$ref": "#/1237"
       },
       {
-        "$ref": "#/1213"
+        "$ref": "#/1238"
       },
       {
-        "$ref": "#/1214"
+        "$ref": "#/1239"
       },
       {
-        "$ref": "#/1215"
+        "$ref": "#/1240"
       },
       {
-        "$ref": "#/1216"
+        "$ref": "#/1241"
       },
       {
-        "$ref": "#/1217"
+        "$ref": "#/1242"
       },
       {
-        "$ref": "#/1218"
+        "$ref": "#/1243"
       },
       {
-        "$ref": "#/1219"
+        "$ref": "#/1244"
       },
       {
         "$ref": "#/0"
@@ -13044,19 +13421,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1221"
+        "$ref": "#/1246"
       },
       {
-        "$ref": "#/1222"
+        "$ref": "#/1247"
       },
       {
-        "$ref": "#/1223"
+        "$ref": "#/1248"
       },
       {
-        "$ref": "#/1224"
+        "$ref": "#/1249"
       },
       {
-        "$ref": "#/1225"
+        "$ref": "#/1250"
       },
       {
         "$ref": "#/0"
@@ -13069,7 +13446,7 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints/customDomains",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1198"
+      "$ref": "#/1223"
     }
   },
   {
@@ -13078,7 +13455,7 @@
     "resourceType": "Microsoft.Cdn/profiles/endpoints/customDomains",
     "apiVersion": "2023-05-01",
     "output": {
-      "$ref": "#/1198"
+      "$ref": "#/1223"
     },
     "input": {
       "$ref": "#/979"

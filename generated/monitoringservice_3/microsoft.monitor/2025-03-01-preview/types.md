@@ -12,6 +12,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Monitor/slis' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function sliSignalPreview (Microsoft.Monitor@2025-03-01-preview)
+* **Resource**: Microsoft.Monitor
+* **ApiVersion**: 2025-03-01-preview
+* **Input**: [SignalPreviewSliProperties](#signalpreviewsliproperties)
+* **Output**: [KqlmQueryResult](#kqlmqueryresult)
+
 ## AmwAccount
 ### Properties
 * **identity**: string (Required): The ARM resource ID of the managed identity with access to the source account.
@@ -35,10 +41,24 @@
 * **scalarFunction**: 'avg' | 'max' | 'min' | 'sum' | string: Scalar function applied for filtering.
 * **value**: string (Required): Value used in filtering. For most operators (eq, ne, lt, lte, gt, gte, startswith, notstartswith, contains, notcontains) this is a single value (for example "GetContosoUsers"). For the `in` and `notin` operators, multiple values must be joined by the delimiter `^^` (for example "east^^west^^north").
 
+## ExecutionMessage
+### Properties
+* **documentationLink**: string (Required): The message documentation link.
+* **severity**: 'Error' | 'Info' | 'Warning' | string (Required): The message severity.
+* **statementContext**: [StatementContextInformation](#statementcontextinformation) (Required): The message statement context.
+* **text**: string (Required): The message text.
+
 ## ExecutionState
 ### Properties
 * **message**: string: A descriptive message related to the execution state.
 * **state**: string (Required): The execution state value.
+
+## KqlmQueryResult
+### Properties
+* **executionMessages**: [ExecutionMessage](#executionmessage)[] (Required): The list of KQL-M query execution messages.
+* **requestId**: string: The request ID.
+* **state**: 'Failed' | 'Success' | string (Required): The query state.
+* **timeSeriesSets**: [TimeSeriesSet](#timeseriesset)[] (Required): The list of time series sets, where each set represents results for a query statement.
 
 ## ManagedServiceIdentity
 ### Properties
@@ -52,10 +72,38 @@
 * **metricName**: string (Required): The name of the metric.
 * **metricNamespace**: string (Required): The namespace of the metric.
 
+## ResultsMetadata
+### Properties
+* **datapointsCount**: int (Required): The number of datapoints in the KQL-M query result.
+* **dataResolution**: string {pattern: "^[0-9]{2}:[0-9]{2}:[0-9]{2}$"} (Required): The data resolution of the KQL-M query result in HH:MM:SS format.
+* **endTimeUtc**: string (Required): The end time for the KQL-M query result.
+* **resultantDimensions**: string[] (Required): The list of output dimensions of the KQL-M query result.
+* **resultantSamplingTypes**: ('Burnrate' | 'Downtime' | 'Good' | 'Total' | 'Uptime' | 'Value' | string)[] (Required): The list of output sampling types of the KQL-M query result.
+* **startTimeUtc**: string (Required): The start time for the KQL-M query result.
+
+## SamplingTypesDataDictionary
+### Properties
+* **Burnrate**: int[]: Error budget burn rate values.
+* **Downtime**: int[]: Downtime measurement values.
+* **Good**: int[]: Count of good requests or events values.
+* **Total**: int[]: Total count of requests or events values.
+* **Uptime**: int[]: Uptime measurement values.
+* **Value**: int[]: The calculated SLI value.
+
 ## Signal
 ### Properties
 * **signalFormula**: string (Required): Mathematical formula used to combine multiple metrics.
 * **signalSources**: [SignalSource](#signalsource)[] (Required): Sources of metrics used for SLIs.
+
+## SignalPreviewSliProperties
+### Properties
+* **baselineProperties**: [BaselineProperties](#baselineproperties): Defines the SLO baseline associated with the SLI.
+* **evaluationType**: 'RequestBased' | 'WindowBased' | string (Required): Determines how the SLI is evaluated—either based on request counts or time windows.
+* **goodSignals**: [Signal](#signal): Represents good signals used in request-based SLI calculations.
+* **previewType**: 'GoodSignal' | 'Signal' | 'Slo' | 'TotalSignal' | string (Required): The preview type for the signal preview operation.
+* **signals**: [Signal](#signal): Signals used for window-based SLI calculations.
+* **totalSignals**: [Signal](#signal): Represents total signals used in request-based SLI calculations.
+* **windowUptimeCriteria**: [WindowUptimeCriteria](#windowuptimecriteria): Defines the uptime criteria for window-based SLIs.
 
 ## SignalSource
 ### Properties
@@ -95,6 +143,13 @@
 * **dimensions**: string[] (Required): Dimensions considered for spatial aggregation.
 * **type**: 'Average' | 'Count' | 'Max' | 'Min' | 'Sum' | string (Required): Type of spatial aggregation.
 
+## StatementContextInformation
+### Properties
+* **charPositionAbsolute**: int (Required): The character position within the entire statement text where the error occurred.
+* **charPositionInLine**: int (Required): The character position within that line where the error occurred.
+* **errorSectionLength**: int (Required): Length of text section which caused an error.
+* **lineNumber**: int (Required): The line number in the input where the error occurred.
+
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -108,6 +163,21 @@
 ### Properties
 * **type**: 'Average' | 'Delta' | 'IDelta' | 'IRate' | 'Increase' | 'Max' | 'Min' | 'Rate' | 'Sum' | string (Required): Type of temporal aggregation.
 * **windowSizeMinutes**: int: Time window size for aggregation, in minutes.
+
+## TimeSeriesData
+### Properties
+* **dimensionValues**: [TimeSeriesDataDimensionValues](#timeseriesdatadimensionvalues) (Required): The dictionary of dimension names to dimension values.
+* **samplingTypesData**: [SamplingTypesDataDictionary](#samplingtypesdatadictionary) (Required): The dictionary of sampling types to metric values (as list of doubles).
+
+## TimeSeriesDataDimensionValues
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TimeSeriesSet
+### Properties
+* **resultsMetadata**: [ResultsMetadata](#resultsmetadata) (Required): The KQL-M query result metadata.
+* **timeSeriesData**: [TimeSeriesData](#timeseriesdata)[] (Required): The list of time series data.
 
 ## UserAssignedIdentities
 ### Properties

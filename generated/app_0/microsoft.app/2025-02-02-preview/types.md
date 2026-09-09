@@ -493,6 +493,11 @@
 * **ApiVersion**: 2025-02-02-preview
 * **Output**: [EnvironmentAuthToken](#environmentauthtoken)
 
+## Function getCustomDomainVerificationId (Microsoft.App@2025-02-02-preview)
+* **Resource**: Microsoft.App
+* **ApiVersion**: 2025-02-02-preview
+* **Output**: string
+
 ## Function invoke (Microsoft.App/functions@2025-02-02-preview)
 * **Resource**: Microsoft.App/functions
 * **ApiVersion**: 2025-02-02-preview

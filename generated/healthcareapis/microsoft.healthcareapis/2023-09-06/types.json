@@ -3107,5 +3107,83 @@
     },
     "readableScopes": 8,
     "writableScopes": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the service instance to check."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The fully qualified resource type which includes provider namespace."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServicesNameAvailabilityInfo",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "The value which indicates whether the provided name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/264"
+        },
+        "flags": 2,
+        "description": "The reason for unavailability."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The detailed reason message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/262"
+      },
+      {
+        "$ref": "#/263"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.HealthcareApis",
+    "apiVersion": "2023-09-06",
+    "output": {
+      "$ref": "#/261"
+    },
+    "input": {
+      "$ref": "#/260"
+    }
   }
 ]
