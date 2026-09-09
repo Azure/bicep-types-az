@@ -113,6 +113,11 @@ export async function runTypeSpecEmitter(logger: ILogger, tspMainFile: string, o
     noEmit: false,
     emit: [emitterPath],
     outputDir,
+    options: {
+      "@azure-tools/typespec-bicep": {
+        "emitter-output-dir": outputDir,
+      },
+    },
   });
 
   if (program.hasError()) {

@@ -171,7 +171,7 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
   // --- Main generation loop ---
 
   function generate(): BicepType[] {
-    const { resourcesByType, resourceActions } = definition;
+    const { resourcesByType, resourceActions, providerOperations } = definition;
 
     for (const fullyQualifiedType in resourcesByType) {
       const definitions = resourcesByType[fullyQualifiedType];
@@ -204,6 +204,27 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
       }
 
       factory.addResourceFunctionType(action.actionName, getFullyQualifiedType(action.descriptor), action.descriptor.apiVersion, response, request);
+    }
+
+    // Process provider-level operations
+    for (const operation of providerOperations) {
+      let request: TypeReference | undefined;
+      if (operation.requestModel) {
+        request = parseType(operation.requestModel);
+        if (request === undefined) {
+          logWarning(`Skipping provider operation '${operation.operationName}': unable to parse its request body type.`);
+          continue;
+        }
+      }
+
+      const unwrappedResponse = operation.responseModel ? unwrapArmResponseEnvelope(operation.responseModel) : undefined;
+      const response = unwrappedResponse ? parseType(unwrappedResponse) : factory.addAnyType();
+      if (response === undefined) {
+        logWarning(`Skipping provider operation '${operation.operationName}': unable to parse its response body type.`);
+        continue;
+      }
+
+      factory.addResourceFunctionType(operation.operationName, operation.namespace, operation.apiVersion, response, request);
     }
 
     return factory.types;

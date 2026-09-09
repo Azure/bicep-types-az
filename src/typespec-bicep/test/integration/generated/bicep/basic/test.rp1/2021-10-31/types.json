@@ -1144,5 +1144,29 @@
     "input": {
       "$ref": "#/67"
     }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "restart",
+    "resourceType": "Test.Rp1/testType1",
+    "apiVersion": "2021-10-31",
+    "output": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Test.Rp1",
+    "apiVersion": "2021-10-31",
+    "output": {
+      "$ref": "#/68"
+    },
+    "input": {
+      "$ref": "#/67"
+    }
   }
 ]

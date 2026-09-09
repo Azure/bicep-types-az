@@ -49,7 +49,7 @@ describe("integration tests (bicep types)", () => {
 describe("scope validation tests", () => {
   it("should generate modern scope properties (readableScopes/writableScopes)", async () => {
     // Find the generated types.json for Test.Rp1
-    const typesJsonPath = path.join(outputBaseDir, "bicep/basic/@azure-tools/typespec-bicep/test.rp1/2021-10-31/types.json");
+    const typesJsonPath = path.join(outputBaseDir, "bicep/basic/test.rp1/2021-10-31/types.json");
 
     let typesContent: string;
     try {
@@ -91,7 +91,7 @@ describe("scope validation tests", () => {
   });
 
   it("should handle specific scope scenarios correctly", async () => {
-    const typesJsonPath = path.join(outputBaseDir, "bicep/basic/@azure-tools/typespec-bicep/test.rp1/2021-10-31/types.json");
+    const typesJsonPath = path.join(outputBaseDir, "bicep/basic/test.rp1/2021-10-31/types.json");
 
     let typesContent: string;
     try {
@@ -157,7 +157,7 @@ describe("scope validation tests", () => {
   });
 
   it("should validate types.md contains modern scope documentation", async () => {
-    const typesMdPath = path.join(outputBaseDir, "bicep/basic/@azure-tools/typespec-bicep/test.rp1/2021-10-31/types.md");
+    const typesMdPath = path.join(outputBaseDir, "bicep/basic/test.rp1/2021-10-31/types.md");
 
     let typesContent: string;
     try {
@@ -181,7 +181,7 @@ describe("scope validation tests", () => {
 
 describe("output structure tests", () => {
   it("should generate expected basic output files", async () => {
-    const baseDir = path.join(outputBaseDir, "bicep/basic/@azure-tools/typespec-bicep/test.rp1/2021-10-31");
+    const baseDir = path.join(outputBaseDir, "bicep/basic/test.rp1/2021-10-31");
 
     let exists = true;
     try {
@@ -208,7 +208,7 @@ describe("output structure tests", () => {
   });
 
   it("should generate expected firewalls output files", async () => {
-    const baseDir = path.join(outputBaseDir, "bicep/firewalls/@azure-tools/typespec-bicep/microsoft.network/2021-08-01");
+    const baseDir = path.join(outputBaseDir, "bicep/firewalls/microsoft.network/2021-08-01");
 
     let exists = true;
     try {
@@ -242,7 +242,7 @@ describe("output structure tests", () => {
   });
 
   it("should preserve TypeSpec metadata and custom resource routes", async () => {
-    const typesMdPath = path.join(outputBaseDir, "bicep/edge-cases/@azure-tools/typespec-bicep/test.edgecases/2024-01-01/types.md");
+    const typesMdPath = path.join(outputBaseDir, "bicep/edge-cases/test.edgecases/2024-01-01/types.md");
     const typesMd = await readFile(typesMdPath, "utf-8");
 
     expect(typesMd).toContain("## Resource Test.EdgeCases/parents/customRouteResources@2024-01-01");

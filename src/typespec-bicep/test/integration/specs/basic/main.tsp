@@ -303,6 +303,10 @@ interface TestType1Operations {
   get is ArmResourceRead<TestType1>;
   createOrUpdate is ArmResourceCreateOrReplaceAsync<TestType1>;
   listFoos is ArmResourceActionSync<TestType1, FoosRequest, FoosResponse>;
+  /**
+   * Restarts PostgreSQL database engine in a server.
+   */
+  restart is ArmResourceActionNoResponseContentAsync<TestType1, void>;
 }
 
 @armResourceOperations
@@ -331,4 +335,16 @@ interface SubscriptionScopeTypeOperations {
 interface DiscriminatedUnionTestTypeOperations {
   get is ArmResourceRead<DiscriminatedUnionTestType>;
   createOrUpdate is ArmResourceCreateOrReplaceAsync<DiscriminatedUnionTestType>;
+}
+
+interface NameAvailabilityOperationGroup {
+  /**
+   * Checks whether a resource name is available
+   */
+  checkNameAvailability is ArmProviderActionSync<
+    Request = FoosRequest,
+    Response = FoosResponse,
+    Scope = SubscriptionActionScope,
+    Parameters = {}
+  >;
 }

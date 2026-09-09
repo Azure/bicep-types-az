@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { EmitContext, Enum, Model, ModelProperty, Namespace, Operation, Program, Type } from "@typespec/compiler";
+import { EmitContext, Enum, getNamespaceFullName, Model, ModelProperty, Namespace, Operation, Program, Type } from "@typespec/compiler";
 import { ScopeType } from "bicep-types";
 import {
   getArmResources,
@@ -51,6 +51,17 @@ export interface ResourceActionDefinition {
 }
 
 /**
+ * A top-level provider operation (e.g. checkNameAvailability).
+ */
+export interface ProviderOperationDefinition {
+  operationName: string;
+  namespace: string;
+  apiVersion: string;
+  requestModel?: Model;
+  responseModel?: Model;
+}
+
+/**
  * All resource definitions grouped by provider namespace and API version.
  */
 export interface ProviderDefinition {
@@ -58,6 +69,7 @@ export interface ProviderDefinition {
   apiVersion: string;
   resourcesByType: Record<string, ResourceDefinition[]>;
   resourceActions: ResourceActionDefinition[];
+  providerOperations: ProviderOperationDefinition[];
 }
 
 /**
@@ -96,7 +108,7 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
     }
 
     const model = armResource.typespecType;
-    const apiVersion = getApiVersion(program, model);
+    const apiVersion = getApiVersion(model.namespace);
     if (!apiVersion) {
       $lib.reportDiagnostic(program, {
         code: "missing-api-version",
@@ -113,6 +125,7 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
         apiVersion,
         resourcesByType: {},
         resourceActions: [],
+        providerOperations: [],
       });
     }
 
@@ -143,27 +156,17 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
     const isSingleton = isSingletonResource(program, model);
     const singletonKey = isSingleton ? getSingletonResourceKey(program, model) : undefined;
 
-    const resourcePaths: ResourceRoute[] =
-      resolvedMatches.length > 0
-        ? resolvedMatches.map((resolved) => ({
-            typeSegments: getResolvedTypeSegments(resolved.resourceType.types, armResource.collectionName),
-            readableScopes,
-            writableScopes,
-            resolved,
-          }))
-        : routeMatches.length > 0
-          ? routeMatches.map((route) => ({
-              ...route,
-              readableScopes: route.readableScopes | readableScopes,
-              writableScopes: route.writableScopes | writableScopes,
-            }))
-          : [
-              {
-                typeSegments: armResource.collectionName ? [armResource.collectionName] : [],
-                readableScopes,
-                writableScopes,
-              },
-            ];
+    // Build resource paths with fallback priority:
+    // 1. Use resolved matches from ARM library
+    // 2. Fall back to custom HTTP routes
+    // 3. Fall back to collection name or empty
+    const resourcePaths = buildResourcePaths(
+      resolvedMatches,
+      routeMatches,
+      armResource,
+      readableScopes,
+      writableScopes
+    );
     const seenResourcePaths = new Set<string>();
 
     for (const resourcePath of resourcePaths) {
@@ -211,6 +214,54 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
     }
   }
 
+  // Process provider-level operations
+  const providerOperations = resolvedProvider.providerOperations ?? [];
+  for (const operation of providerOperations) {
+    const operationNs = operation.operation.namespace;
+    if (!operationNs) {
+      continue;
+    }
+    const operationNamespace = getNamespaceFullName(operationNs);
+
+    const apiVersion = getApiVersion(operationNs);
+    if (!apiVersion) {
+      continue;
+    }
+
+    const key = `${operationNamespace.toLowerCase()}/${apiVersion}`;
+    if (!providers.has(key)) {
+      // Create a provider entry if it doesn't exist
+      const newProvider: ProviderDefinition = {
+        namespace: operationNamespace,
+        apiVersion,
+        resourcesByType: {},
+        resourceActions: [],
+        providerOperations: [],
+      };
+      providers.set(key, newProvider);
+    }
+
+    const provider = providers.get(key)!;
+    const operationName = operation.name;
+
+    // Extract request and response models from the HTTP operation
+    const requestModel = getOperationRequestModel(operation);
+    const responseModel = getOperationResponseModel(operation);
+
+    // Avoid duplicates
+    if (provider.providerOperations.some((op) => op.operationName.toLowerCase() === operationName.toLowerCase())) {
+      continue;
+    }
+
+    provider.providerOperations.push({
+      operationName,
+      namespace: operationNamespace,
+      apiVersion,
+      requestModel,
+      responseModel,
+    });
+  }
+
   return [...providers.values()];
 }
 
@@ -247,6 +298,46 @@ function getResolvedTypeSegments(resolvedTypes: string[], collectionName: string
   }
 
   return typeSegments;
+}
+
+/**
+ * Build the list of resource paths with fallback priority:
+ * 1. If resolved matches exist from ARM library, use those
+ * 2. Else if custom HTTP routes exist, use those
+ * 3. Else create a default route from collection name
+ */
+function buildResourcePaths(
+  resolvedMatches: ResolvedResource[],
+  routeMatches: ResourceRoute[],
+  armResource: ArmResourceDetails,
+  readableScopes: ScopeType,
+  writableScopes: ScopeType
+): ResourceRoute[] {
+  if (resolvedMatches.length > 0) {
+    return resolvedMatches.map((resolved) => ({
+      typeSegments: getResolvedTypeSegments(resolved.resourceType.types, armResource.collectionName),
+      readableScopes,
+      writableScopes,
+      resolved,
+    }));
+  }
+
+  if (routeMatches.length > 0) {
+    return routeMatches.map((route) => ({
+      ...route,
+      readableScopes: route.readableScopes | readableScopes,
+      writableScopes: route.writableScopes | writableScopes,
+    }));
+  }
+
+  // Default: use collection name as a single type segment
+  return [
+    {
+      typeSegments: armResource.collectionName ? [armResource.collectionName] : [],
+      readableScopes,
+      writableScopes,
+    },
+  ];
 }
 
 /**
@@ -583,10 +674,9 @@ function discoverResourceActions(resolved: ResolvedResource, provider: ProviderD
 }
 
 /**
- * Get the API version for a resource model.
+ * Get the API version from a provider namespace object.
  */
-function getApiVersion(_program: Program, model: Model): string | undefined {
-  const ns = model.namespace;
+function getApiVersion(ns: Namespace | undefined): string | undefined {
   if (!ns) return undefined;
 
   // Look for a "Versions" enum in the namespace or parent namespaces
