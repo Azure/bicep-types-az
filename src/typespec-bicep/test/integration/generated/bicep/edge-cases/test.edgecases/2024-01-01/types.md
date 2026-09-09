@@ -103,16 +103,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Test.EdgeCases/parents/customRouteResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function get (Test.EdgeCases@2024-01-01)
-* **Resource**: Test.EdgeCases
-* **ApiVersion**: 2024-01-01
-* **Output**: [CustomRouteResource](#customrouteresource)
-
-## Function getAlternate (Test.EdgeCases@2024-01-01)
-* **Resource**: Test.EdgeCases
-* **ApiVersion**: 2024-01-01
-* **Output**: [CustomRouteResource](#customrouteresource)
-
 ## Function listKeys (Test.EdgeCases/Namespaces@2024-01-01)
 * **Resource**: Test.EdgeCases/Namespaces
 * **ApiVersion**: 2024-01-01
@@ -147,14 +137,6 @@
 ## CustomRouteProperties
 ### Properties
 * **value**: string
-
-## CustomRouteResource
-### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-* **name**: string (Required, ReadOnly)
-* **properties**: [CustomRouteProperties](#customrouteproperties): The resource-specific properties for this resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ExtensionProperties
 ### Properties

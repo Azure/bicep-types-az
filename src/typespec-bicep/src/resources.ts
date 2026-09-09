@@ -47,7 +47,7 @@ export interface ResourceActionDefinition {
   actionName: string;
   descriptor: ResourceDescriptor;
   requestModel?: Model;
-  responseModel?: Model;
+  responseType?: Type;
 }
 
 /**
@@ -58,7 +58,7 @@ export interface ProviderOperationDefinition {
   namespace: string;
   apiVersion: string;
   requestModel?: Model;
-  responseModel?: Model;
+  responseType?: Type;
 }
 
 /**
@@ -217,6 +217,10 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
   // Process provider-level operations
   const providerOperations = resolvedProvider.providerOperations ?? [];
   for (const operation of providerOperations) {
+    if (operation.httpOperation.verb !== "post") {
+      continue;
+    }
+
     const operationNs = operation.operation.namespace;
     if (!operationNs) {
       continue;
@@ -246,7 +250,7 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
 
     // Extract request and response models from the HTTP operation
     const requestModel = getOperationRequestModel(operation);
-    const responseModel = getOperationResponseModel(operation);
+    const responseType = getOperationResponseType(operation);
 
     // Avoid duplicates
     if (provider.providerOperations.some((op) => op.operationName.toLowerCase() === operationName.toLowerCase())) {
@@ -258,7 +262,7 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
       namespace: operationNamespace,
       apiVersion,
       requestModel,
-      responseModel,
+      responseType,
     });
   }
 
@@ -649,7 +653,7 @@ function discoverResourceActions(resolved: ResolvedResource, provider: ProviderD
     const actionName = action.path.split("/").filter(Boolean).at(-1);
     if (!actionName || actionName.startsWith("{")) continue;
 
-    const responseModel = getOperationResponseModel(action);
+    const responseType = getOperationResponseType(action);
     const requestModel = getOperationRequestModel(action);
 
     const descriptor: ResourceDescriptor = {
@@ -668,7 +672,7 @@ function discoverResourceActions(resolved: ResolvedResource, provider: ProviderD
       actionName,
       descriptor,
       requestModel,
-      responseModel,
+      responseType,
     });
   }
 }
@@ -705,12 +709,23 @@ function getResourceNameProperty(model: Model): ModelProperty | undefined {
 }
 
 /**
- * Get the response model from an ARM resource operation.
+ * Get the response body type from the first successful ARM operation response.
  */
-function getOperationResponseModel(action: { httpOperation: { responses: readonly { type?: Type }[] } }): Model | undefined {
+function getOperationResponseType(action: { httpOperation: HttpOperation }): Type | undefined {
   for (const response of action.httpOperation.responses) {
-    if (response.type && response.type.kind === "Model") {
-      return response.type;
+    const statusCodes = response.statusCodes;
+    const isSuccess =
+      typeof statusCodes === "number"
+        ? statusCodes >= 200 && statusCodes < 300
+        : statusCodes !== "*" && statusCodes.start < 300 && statusCodes.end >= 200;
+    if (!isSuccess) {
+      continue;
+    }
+
+    for (const content of response.responses) {
+      if (content.body) {
+        return content.body.type;
+      }
     }
   }
   return undefined;

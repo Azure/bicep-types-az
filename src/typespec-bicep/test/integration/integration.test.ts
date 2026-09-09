@@ -51,16 +51,7 @@ describe("scope validation tests", () => {
     // Find the generated types.json for Test.Rp1
     const typesJsonPath = path.join(outputBaseDir, "bicep/basic/test.rp1/2021-10-31/types.json");
 
-    let typesContent: string;
-    try {
-      typesContent = await readFile(typesJsonPath, "utf8");
-    } catch (error) {
-      if ((error as NodeJS.ErrnoException).code === "ENOENT") {
-        console.warn("Generated types.json not found. Run tests with BASELINE_RECORD=true first.");
-        return;
-      }
-      throw error;
-    }
+    const typesContent = await readFile(typesJsonPath, "utf8");
 
     const typesData = JSON.parse(typesContent);
     const resourceTypes = typesData.filter(
@@ -93,16 +84,7 @@ describe("scope validation tests", () => {
   it("should handle specific scope scenarios correctly", async () => {
     const typesJsonPath = path.join(outputBaseDir, "bicep/basic/test.rp1/2021-10-31/types.json");
 
-    let typesContent: string;
-    try {
-      typesContent = await readFile(typesJsonPath, "utf8");
-    } catch (error) {
-      if ((error as NodeJS.ErrnoException).code === "ENOENT") {
-        console.warn("Generated types.json not found. Run tests with BASELINE_RECORD=true first.");
-        return;
-      }
-      throw error;
-    }
+    const typesContent = await readFile(typesJsonPath, "utf8");
 
     const typesData = JSON.parse(typesContent);
     const resourceTypes = typesData.filter(
@@ -159,16 +141,7 @@ describe("scope validation tests", () => {
   it("should validate types.md contains modern scope documentation", async () => {
     const typesMdPath = path.join(outputBaseDir, "bicep/basic/test.rp1/2021-10-31/types.md");
 
-    let typesContent: string;
-    try {
-      typesContent = await readFile(typesMdPath, "utf8");
-    } catch (error) {
-      if ((error as NodeJS.ErrnoException).code === "ENOENT") {
-        console.warn("Generated types.md not found. Run tests with BASELINE_RECORD=true first.");
-        return;
-      }
-      throw error;
-    }
+    const typesContent = await readFile(typesMdPath, "utf8");
 
     // Verify modern scope format is used
     expect(typesContent).toMatch(/\* \*\*Readable Scope\(s\)\*\*:/);
@@ -182,18 +155,6 @@ describe("scope validation tests", () => {
 describe("output structure tests", () => {
   it("should generate expected basic output files", async () => {
     const baseDir = path.join(outputBaseDir, "bicep/basic/test.rp1/2021-10-31");
-
-    let exists = true;
-    try {
-      await readFile(path.join(baseDir, "types.json"), "utf-8");
-    } catch {
-      exists = false;
-    }
-
-    if (!exists) {
-      console.warn("Generated files not found. Run tests with BASELINE_RECORD=true first.");
-      return;
-    }
 
     // types.json should exist and be valid JSON
     const typesJson = await readFile(path.join(baseDir, "types.json"), "utf-8");
@@ -209,18 +170,6 @@ describe("output structure tests", () => {
 
   it("should generate expected firewalls output files", async () => {
     const baseDir = path.join(outputBaseDir, "bicep/firewalls/microsoft.network/2021-08-01");
-
-    let exists = true;
-    try {
-      await readFile(path.join(baseDir, "types.json"), "utf-8");
-    } catch {
-      exists = false;
-    }
-
-    if (!exists) {
-      console.warn("Generated firewalls files not found. Run tests with BASELINE_RECORD=true first.");
-      return;
-    }
 
     // types.json should exist and be valid JSON
     const typesJson = await readFile(path.join(baseDir, "types.json"), "utf-8");

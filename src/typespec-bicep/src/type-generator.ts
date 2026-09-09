@@ -196,8 +196,7 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
         }
       }
 
-      const unwrappedResponse = action.responseModel ? unwrapArmResponseEnvelope(action.responseModel) : undefined;
-      const response = unwrappedResponse ? parseType(unwrappedResponse) : factory.addAnyType();
+      const response = action.responseType ? parseType(action.responseType) : factory.addAnyType();
       if (response === undefined) {
         logWarning(`Skipping resource action '${action.actionName}' on '${actionType}': unable to parse its response body type.`);
         continue;
@@ -217,8 +216,7 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
         }
       }
 
-      const unwrappedResponse = operation.responseModel ? unwrapArmResponseEnvelope(operation.responseModel) : undefined;
-      const response = unwrappedResponse ? parseType(unwrappedResponse) : factory.addAnyType();
+      const response = operation.responseType ? parseType(operation.responseType) : factory.addAnyType();
       if (response === undefined) {
         logWarning(`Skipping provider operation '${operation.operationName}': unable to parse its response body type.`);
         continue;
@@ -615,60 +613,6 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
     for (const [name, prop] of model.properties) {
       yield [name, prop];
     }
-  }
-
-  // --- Utility ---
-
-  /**
-   * Unwrap ARM response envelope types.
-   * ARM response types like ArmResponse<T> are wrapper models whose
-   * template argument is the actual payload type. We detect these by:
-   * 1. Checking if the model's templateMapper has arguments (template instantiation)
-   * 2. Checking if the model name contains "Response" (ARM convention)
-   * If so, we return the first template argument as the unwrapped type.
-   * If the inner type is void/never, we return undefined (no output).
-   */
-  function unwrapArmResponseEnvelope(model: Model): Model | undefined {
-    // Check if this is a template instantiation with a template argument
-    if (model.templateMapper?.args && model.templateMapper.args.length > 0) {
-      // Check if the source template looks like an ARM response wrapper
-      const isArmResponse =
-        model.name === "" || // Anonymous template instantiation
-        (model.sourceModel && /Response|Accepted|NoContent/.test(model.sourceModel.name ?? ""));
-
-      if (isArmResponse) {
-        const innerArg = model.templateMapper.args[0];
-        if (innerArg.entityKind === "Type") {
-          if (innerArg.kind === "Model") {
-            return innerArg;
-          }
-          if (innerArg.kind === "Intrinsic" && (innerArg.name === "void" || innerArg.name === "never")) {
-            return undefined;
-          }
-        }
-      }
-    }
-
-    // Check for a "body" property that wraps the actual content
-    // This handles cases like { @statusCode code: 200; @body body: T; }
-    const bodyProp = model.properties.get("body");
-    if (bodyProp && bodyProp.type.kind === "Model") {
-      // Only unwrap if this looks like a response envelope (has statusCode or similar)
-      const hasStatusCode = model.properties.has("statusCode");
-      if (hasStatusCode) {
-        return bodyProp.type;
-      }
-    }
-
-    // Check for void response types (only statusCode, no body) — these represent
-    // operations with no response payload (e.g. purgeDeleted, accepted LRO responses)
-    const hasStatusCode = model.properties.has("statusCode");
-    if (hasStatusCode && !model.properties.has("body")) {
-      return undefined; // No meaningful output
-    }
-
-    // Not an envelope — return as-is
-    return model;
   }
 
   function createObjectTypeProperty(type: TypeReference, flags: ObjectTypePropertyFlags, description?: string): ObjectTypeProperty {
