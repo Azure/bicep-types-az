@@ -79,6 +79,12 @@
 * **Input**: [VerificationParameter](#verificationparameter)
 * **Output**: any
 
+## Function checkNameAvailability (Microsoft.Communication@2023-06-01-preview)
+* **Resource**: Microsoft.Communication
+* **ApiVersion**: 2023-06-01-preview
+* **Input**: [NameAvailabilityParameters](#nameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function initiateVerification (Microsoft.Communication/emailServices/domains@2023-06-01-preview)
 * **Resource**: Microsoft.Communication/emailServices/domains
 * **ApiVersion**: 2023-06-01-preview
@@ -96,11 +102,22 @@
 * **ApiVersion**: 2023-06-01-preview
 * **Output**: [CommunicationServiceKeys](#communicationservicekeys)
 
+## Function listVerifiedExchangeOnlineDomains (Microsoft.Communication@2023-06-01-preview)
+* **Resource**: Microsoft.Communication
+* **ApiVersion**: 2023-06-01-preview
+* **Output**: string[]
+
 ## Function regenerateKey (Microsoft.Communication/communicationServices@2023-06-01-preview)
 * **Resource**: Microsoft.Communication/communicationServices
 * **ApiVersion**: 2023-06-01-preview
 * **Input**: [RegenerateKeyParameters](#regeneratekeyparameters)
 * **Output**: [CommunicationServiceKeys](#communicationservicekeys)
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
 
 ## CommunicationServiceKeys
 ### Properties
@@ -173,6 +190,11 @@
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+
+## NameAvailabilityParameters
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
 
 ## RegenerateKeyParameters
 ### Properties

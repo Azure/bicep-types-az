@@ -3170,11 +3170,95 @@
   },
   {
     "$type": "ObjectType",
+    "name": "GetPrivateDnsZoneSuffixResponse",
+    "properties": {
+      "privateDnsZoneSuffix": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Represents the private DNS zone suffix."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getPrivateDnsZoneSuffix",
+    "resourceType": "Microsoft.DBforMySQL",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/240"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource name to verify."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource type used for verification."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailability",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Error Message."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/244"
+        },
+        "flags": 0,
+        "description": "Indicates whether the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason for name being unavailable."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforMySQL",
+    "apiVersion": "2024-12-01-preview",
+    "output": {
+      "$ref": "#/243"
+    },
+    "input": {
+      "$ref": "#/242"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ServerDetachVNetParameter",
     "properties": {
       "publicNetworkAccess": {
         "type": {
-          "$ref": "#/243"
+          "$ref": "#/249"
         },
         "flags": 0,
         "description": "Whether or not public network access is allowed for this server. Value is 'Disabled' when server has VNet integration."
@@ -3193,10 +3277,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/241"
+        "$ref": "#/247"
       },
       {
-        "$ref": "#/242"
+        "$ref": "#/248"
       },
       {
         "$ref": "#/2"
@@ -3230,7 +3314,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/245"
+          "$ref": "#/251"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -3286,10 +3370,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/244"
+      "$ref": "#/250"
     },
     "input": {
-      "$ref": "#/240"
+      "$ref": "#/246"
     }
   },
   {
@@ -3301,7 +3385,7 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/247"
+      "$ref": "#/253"
     }
   },
   {
@@ -3323,10 +3407,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/247"
+      "$ref": "#/253"
     },
     "input": {
-      "$ref": "#/249"
+      "$ref": "#/255"
     }
   },
   {
@@ -3335,7 +3419,7 @@
     "properties": {
       "restartWithFailover": {
         "type": {
-          "$ref": "#/254"
+          "$ref": "#/260"
         },
         "flags": 0,
         "description": "Whether or not failover to standby server when restarting a server with high availability enabled."
@@ -3361,10 +3445,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/252"
+        "$ref": "#/258"
       },
       {
-        "$ref": "#/253"
+        "$ref": "#/259"
       },
       {
         "$ref": "#/2"
@@ -3377,10 +3461,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/247"
+      "$ref": "#/253"
     },
     "input": {
-      "$ref": "#/251"
+      "$ref": "#/257"
     }
   },
   {
@@ -3389,7 +3473,7 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/247"
+      "$ref": "#/253"
     }
   },
   {
@@ -3398,7 +3482,7 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/247"
+      "$ref": "#/253"
     }
   },
   {
@@ -3434,10 +3518,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/258"
+      "$ref": "#/264"
     },
     "input": {
-      "$ref": "#/258"
+      "$ref": "#/264"
     }
   },
   {
@@ -3446,14 +3530,14 @@
     "properties": {
       "targetDetails": {
         "type": {
-          "$ref": "#/261"
+          "$ref": "#/267"
         },
         "flags": 1,
         "description": "Backup Target Store Details"
       },
       "backupSettings": {
         "type": {
-          "$ref": "#/265"
+          "$ref": "#/271"
         },
         "flags": 1,
         "description": "Backup Settings"
@@ -3467,7 +3551,7 @@
     "baseProperties": {},
     "elements": {
       "FullBackupStoreDetails": {
-        "$ref": "#/262"
+        "$ref": "#/268"
       }
     }
   },
@@ -3477,14 +3561,14 @@
     "properties": {
       "sasUriList": {
         "type": {
-          "$ref": "#/263"
+          "$ref": "#/269"
         },
         "flags": 1,
         "description": "SASUriList of storage containers where backup data is to be streamed/copied."
       },
       "objectType": {
         "type": {
-          "$ref": "#/264"
+          "$ref": "#/270"
         },
         "flags": 1,
         "description": "Type of the specific object - used for deserializing"
@@ -3507,14 +3591,14 @@
     "properties": {
       "backupName": {
         "type": {
-          "$ref": "#/266"
+          "$ref": "#/272"
         },
         "flags": 1,
         "description": "The name of the backup."
       },
       "backupFormat": {
         "type": {
-          "$ref": "#/269"
+          "$ref": "#/275"
         },
         "flags": 0,
         "description": "Backup Format for the current backup. (CollatedFormat is INTERNAL – DO NOT USE)"
@@ -3537,10 +3621,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/267"
+        "$ref": "#/273"
       },
       {
-        "$ref": "#/268"
+        "$ref": "#/274"
       },
       {
         "$ref": "#/2"
@@ -3553,21 +3637,21 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/271"
+          "$ref": "#/277"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
       },
       "error": {
         "type": {
-          "$ref": "#/272"
+          "$ref": "#/278"
         },
         "flags": 0,
         "description": "The error object."
       },
       "status": {
         "type": {
-          "$ref": "#/282"
+          "$ref": "#/288"
         },
         "flags": 0,
         "description": "The operation status"
@@ -3588,7 +3672,7 @@
       },
       "percentComplete": {
         "type": {
-          "$ref": "#/283"
+          "$ref": "#/289"
         },
         "flags": 0,
         "description": "Operation progress (0-100)."
@@ -3677,14 +3761,14 @@
       },
       "details": {
         "type": {
-          "$ref": "#/273"
+          "$ref": "#/279"
         },
         "flags": 2,
         "description": "The error details."
       },
       "additionalInfo": {
         "type": {
-          "$ref": "#/275"
+          "$ref": "#/281"
         },
         "flags": 2,
         "description": "The error additional info."
@@ -3694,7 +3778,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/272"
+      "$ref": "#/278"
     }
   },
   {
@@ -3710,7 +3794,7 @@
       },
       "info": {
         "type": {
-          "$ref": "#/247"
+          "$ref": "#/253"
         },
         "flags": 2,
         "description": "The additional info."
@@ -3720,7 +3804,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/274"
+      "$ref": "#/280"
     }
   },
   {
@@ -3751,22 +3835,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/276"
+        "$ref": "#/282"
       },
       {
-        "$ref": "#/277"
+        "$ref": "#/283"
       },
       {
-        "$ref": "#/278"
+        "$ref": "#/284"
       },
       {
-        "$ref": "#/279"
+        "$ref": "#/285"
       },
       {
-        "$ref": "#/280"
+        "$ref": "#/286"
       },
       {
-        "$ref": "#/281"
+        "$ref": "#/287"
       }
     ]
   },
@@ -3781,10 +3865,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/270"
+      "$ref": "#/276"
     },
     "input": {
-      "$ref": "#/260"
+      "$ref": "#/266"
     }
   },
   {
@@ -3793,7 +3877,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/286"
+          "$ref": "#/292"
         },
         "flags": 0,
         "description": "The response properties of a pre backup operation."
@@ -3819,7 +3903,7 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/285"
+      "$ref": "#/291"
     }
   },
   {
@@ -3828,14 +3912,14 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/291"
+          "$ref": "#/297"
         },
         "flags": 0,
         "description": "The list of server configurations."
       },
       "resetAllToDefault": {
         "type": {
-          "$ref": "#/294"
+          "$ref": "#/300"
         },
         "flags": 0,
         "description": "Whether to reset all server parameters to default."
@@ -3855,7 +3939,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/290"
+          "$ref": "#/296"
         },
         "flags": 0,
         "description": "The properties can be updated for a configuration."
@@ -3885,7 +3969,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/289"
+      "$ref": "#/295"
     }
   },
   {
@@ -3900,10 +3984,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/292"
+        "$ref": "#/298"
       },
       {
-        "$ref": "#/293"
+        "$ref": "#/299"
       },
       {
         "$ref": "#/2"
@@ -3916,7 +4000,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/297"
+          "$ref": "#/303"
         },
         "flags": 0,
         "description": "The Configuration items on this page"
@@ -3974,7 +4058,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/296"
+      "$ref": "#/302"
     }
   },
   {
@@ -3983,10 +4067,10 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/295"
+      "$ref": "#/301"
     },
     "input": {
-      "$ref": "#/288"
+      "$ref": "#/294"
     }
   },
   {
@@ -3995,58 +4079,8 @@
     "resourceType": "Microsoft.DBforMySQL/flexibleServers",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/244"
+      "$ref": "#/250"
     }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "NameAvailabilityRequest",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "Resource name to verify."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Resource type used for verification."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "NameAvailability",
-    "properties": {
-      "message": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Error Message."
-      },
-      "nameAvailable": {
-        "type": {
-          "$ref": "#/302"
-        },
-        "flags": 0,
-        "description": "Indicates whether the resource name is available."
-      },
-      "reason": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Reason for name being unavailable."
-      }
-    }
-  },
-  {
-    "$type": "BooleanType"
   },
   {
     "$type": "ResourceFunctionType",
@@ -4054,10 +4088,10 @@
     "resourceType": "Microsoft.DBforMySQL/locations",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/301"
+      "$ref": "#/243"
     },
     "input": {
-      "$ref": "#/300"
+      "$ref": "#/242"
     }
   },
   {
@@ -4093,7 +4127,7 @@
       },
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/307"
+          "$ref": "#/310"
         },
         "flags": 2,
         "description": "A list of delegated subnet usage"
@@ -4123,7 +4157,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/306"
+      "$ref": "#/309"
     }
   },
   {
@@ -4132,10 +4166,10 @@
     "resourceType": "Microsoft.DBforMySQL/locations",
     "apiVersion": "2024-12-01-preview",
     "output": {
-      "$ref": "#/305"
+      "$ref": "#/308"
     },
     "input": {
-      "$ref": "#/304"
+      "$ref": "#/307"
     }
   }
 ]

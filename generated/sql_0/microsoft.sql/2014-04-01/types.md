@@ -313,6 +313,12 @@
 * **properties**: [ServiceObjectiveProperties](#serviceobjectiveproperties) (ReadOnly): Represents the properties of the resource.
 * **type**: 'Microsoft.Sql/servers/serviceObjectives' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Sql@2014-04-01)
+* **Resource**: Microsoft.Sql
+* **ApiVersion**: 2014-04-01
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function export (Microsoft.Sql/servers/databases@2014-04-01)
 * **Resource**: Microsoft.Sql/servers/databases
 * **ApiVersion**: 2014-04-01
@@ -367,6 +373,18 @@
 * **autoExecuteValue**: 'Default' | 'Disabled' | 'Enabled' (Required): Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
 * **lastChecked**: string (ReadOnly): Gets the time when the current resource was analyzed for recommendations by this advisor.
 * **recommendationsStatus**: string (ReadOnly): Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available), LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string (Required): The name whose availability is to be checked.
+* **type**: 'Microsoft.Sql/servers' (Required): The type of resource that is used as the scope of the availability check.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **available**: bool (ReadOnly): True if the name is available, otherwise false.
+* **message**: string (ReadOnly): A message explaining why the name is unavailable. Will be null if the name is available.
+* **name**: string (ReadOnly): The name whose availability was checked.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason code explaining why the name is unavailable. Will be null if the name is available.
 
 ## DatabaseConnectionPolicyProperties
 ### Properties

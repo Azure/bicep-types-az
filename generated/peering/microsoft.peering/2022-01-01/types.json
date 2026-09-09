@@ -2148,5 +2148,71 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckServiceProviderAvailabilityInput",
+    "properties": {
+      "peeringServiceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the peering service location."
+      },
+      "peeringServiceProvider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the peering service provider."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkServiceProviderAvailability",
+    "resourceType": "Microsoft.Peering",
+    "apiVersion": "2022-01-01",
+    "output": {
+      "$ref": "#/189"
+    },
+    "input": {
+      "$ref": "#/186"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "initializeConnectionMonitor",
+    "resourceType": "Microsoft.Peering",
+    "apiVersion": "2022-01-01",
+    "output": {
+      "$ref": "#/191"
+    }
   }
 ]

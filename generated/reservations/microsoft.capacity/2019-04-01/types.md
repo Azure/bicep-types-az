@@ -37,6 +37,12 @@
 * **Input**: [AvailableScopeRequest](#availablescoperequest)
 * **Output**: [Properties](#properties)
 
+## Function calculatePrice (Microsoft.Capacity@2019-04-01)
+* **Resource**: Microsoft.Capacity
+* **ApiVersion**: 2019-04-01
+* **Input**: [PurchaseRequest](#purchaserequest)
+* **Output**: [CalculatePriceResponse](#calculatepriceresponse)
+
 ## Function merge (Microsoft.Capacity/reservationOrders@2019-04-01)
 * **Resource**: Microsoft.Capacity/reservationOrders
 * **ApiVersion**: 2019-04-01
@@ -67,6 +73,33 @@
 ## AvailableScopeRequestProperties
 ### Properties
 * **scopes**: string[]: Scopes to be checked for availability
+
+## CalculatePriceResponse
+### Properties
+* **properties**: [CalculatePriceResponseProperties](#calculatepriceresponseproperties)
+
+## CalculatePriceResponseProperties
+### Properties
+* **billingCurrencyTotal**: [CalculatePriceResponsePropertiesBillingCurrencyTotal](#calculatepriceresponsepropertiesbillingcurrencytotal): Currency and amount that customer will be charged in customer's local currency. Tax is not included.
+* **grandTotal**: int: Grand Total
+* **isBillingPartnerManaged**: bool: True if billing is managed by Microsoft Partner. Used only for CSP accounts.
+* **netTotal**: int: Net total
+* **paymentSchedule**: [PaymentDetail](#paymentdetail)[]
+* **pricingCurrencyTotal**: [CalculatePriceResponsePropertiesPricingCurrencyTotal](#calculatepriceresponsepropertiespricingcurrencytotal): Amount that Microsoft uses for record. Used during refund for calculating refund limit. Tax is not included.
+* **reservationOrderId**: string: GUID that represents reservation order that can be placed after calculating price.
+* **skuDescription**: string: Description of SKU that is being purchased.
+* **skuTitle**: string: Title of SKU that is being purchased.
+* **taxTotal**: int: Tax total
+
+## CalculatePriceResponsePropertiesBillingCurrencyTotal
+### Properties
+* **amount**: int
+* **currencyCode**: string
+
+## CalculatePriceResponsePropertiesPricingCurrencyTotal
+### Properties
+* **amount**: int
+* **currencyCode**: string
 
 ## ExtendedStatusInfo
 ### Properties

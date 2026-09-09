@@ -4649,6 +4649,73 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "ValidateAddressResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/315"
+        },
+        "flags": 0,
+        "description": "status of the address validation."
+      },
+      "suggestedAddresses": {
+        "type": {
+          "$ref": "#/316"
+        },
+        "flags": 0,
+        "description": "The list of suggested addresses."
+      },
+      "validationMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Validation error message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Valid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/313"
+      },
+      {
+        "$ref": "#/314"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/10"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateAddress",
+    "resourceType": "Microsoft.Billing",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/312"
+    },
+    "input": {
+      "$ref": "#/10"
+    }
+  },
+  {
     "$type": "AnyType"
   },
   {
@@ -4657,7 +4724,7 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
     "apiVersion": "2019-10-01-preview",
     "output": {
-      "$ref": "#/312"
+      "$ref": "#/318"
     }
   },
   {
@@ -4666,7 +4733,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/315"
+          "$ref": "#/321"
         },
         "flags": 0,
         "description": "Request parameters to initiate transfer."
@@ -4699,7 +4766,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/317"
+          "$ref": "#/323"
         },
         "flags": 0,
         "description": "Details of the transfer."
@@ -4768,7 +4835,7 @@
       },
       "transferStatus": {
         "type": {
-          "$ref": "#/325"
+          "$ref": "#/331"
         },
         "flags": 2,
         "description": "Overall transfer status."
@@ -4803,7 +4870,7 @@
       },
       "detailedTransferStatus": {
         "type": {
-          "$ref": "#/336"
+          "$ref": "#/342"
         },
         "flags": 2,
         "description": "Detailed transfer status."
@@ -4842,25 +4909,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/318"
-      },
-      {
-        "$ref": "#/319"
-      },
-      {
-        "$ref": "#/320"
-      },
-      {
-        "$ref": "#/321"
-      },
-      {
-        "$ref": "#/322"
-      },
-      {
-        "$ref": "#/323"
-      },
-      {
         "$ref": "#/324"
+      },
+      {
+        "$ref": "#/325"
+      },
+      {
+        "$ref": "#/326"
+      },
+      {
+        "$ref": "#/327"
+      },
+      {
+        "$ref": "#/328"
+      },
+      {
+        "$ref": "#/329"
+      },
+      {
+        "$ref": "#/330"
       },
       {
         "$ref": "#/0"
@@ -4873,7 +4940,7 @@
     "properties": {
       "productType": {
         "type": {
-          "$ref": "#/329"
+          "$ref": "#/335"
         },
         "flags": 2,
         "description": "Type of product that is transferred."
@@ -4887,14 +4954,14 @@
       },
       "transferStatus": {
         "type": {
-          "$ref": "#/334"
+          "$ref": "#/340"
         },
         "flags": 2,
         "description": "Transfer status."
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/335"
+          "$ref": "#/341"
         },
         "flags": 0,
         "description": "Error details for transfer execution."
@@ -4913,10 +4980,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/327"
+        "$ref": "#/333"
       },
       {
-        "$ref": "#/328"
+        "$ref": "#/334"
       },
       {
         "$ref": "#/0"
@@ -4943,16 +5010,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/330"
+        "$ref": "#/336"
       },
       {
-        "$ref": "#/331"
+        "$ref": "#/337"
       },
       {
-        "$ref": "#/332"
+        "$ref": "#/338"
       },
       {
-        "$ref": "#/333"
+        "$ref": "#/339"
       },
       {
         "$ref": "#/0"
@@ -4982,7 +5049,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/326"
+      "$ref": "#/332"
     }
   },
   {
@@ -4991,10 +5058,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
     "apiVersion": "2019-10-01-preview",
     "output": {
-      "$ref": "#/316"
+      "$ref": "#/322"
     },
     "input": {
-      "$ref": "#/314"
+      "$ref": "#/320"
     }
   },
   {
@@ -5035,7 +5102,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/341"
+          "$ref": "#/347"
         },
         "flags": 0,
         "description": "Properties of the transfer billing subscription operation result."
@@ -5061,10 +5128,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions",
     "apiVersion": "2019-10-01-preview",
     "output": {
-      "$ref": "#/340"
+      "$ref": "#/346"
     },
     "input": {
-      "$ref": "#/339"
+      "$ref": "#/345"
     }
   },
   {
@@ -5080,7 +5147,7 @@
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/344"
+          "$ref": "#/350"
         },
         "flags": 0,
         "description": "Validation error details."
@@ -5093,7 +5160,7 @@
     "properties": {
       "code": {
         "type": {
-          "$ref": "#/365"
+          "$ref": "#/371"
         },
         "flags": 0,
         "description": "Error code for the product transfer validation."
@@ -5198,24 +5265,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/345"
-      },
-      {
-        "$ref": "#/346"
-      },
-      {
-        "$ref": "#/347"
-      },
-      {
-        "$ref": "#/348"
-      },
-      {
-        "$ref": "#/349"
-      },
-      {
-        "$ref": "#/350"
-      },
-      {
         "$ref": "#/351"
       },
       {
@@ -5258,6 +5307,24 @@
         "$ref": "#/364"
       },
       {
+        "$ref": "#/365"
+      },
+      {
+        "$ref": "#/366"
+      },
+      {
+        "$ref": "#/367"
+      },
+      {
+        "$ref": "#/368"
+      },
+      {
+        "$ref": "#/369"
+      },
+      {
+        "$ref": "#/370"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -5268,10 +5335,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingSubscriptions",
     "apiVersion": "2019-10-01-preview",
     "output": {
-      "$ref": "#/343"
+      "$ref": "#/349"
     },
     "input": {
-      "$ref": "#/339"
+      "$ref": "#/345"
     }
   },
   {
@@ -5334,10 +5401,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products",
     "apiVersion": "2019-10-01-preview",
     "output": {
-      "$ref": "#/368"
+      "$ref": "#/374"
     },
     "input": {
-      "$ref": "#/367"
+      "$ref": "#/373"
     }
   },
   {
@@ -5353,7 +5420,7 @@
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/371"
+          "$ref": "#/377"
         },
         "flags": 0,
         "description": "Validation error details."
@@ -5366,7 +5433,7 @@
     "properties": {
       "code": {
         "type": {
-          "$ref": "#/381"
+          "$ref": "#/387"
         },
         "flags": 0,
         "description": "Error code for the product transfer validation."
@@ -5427,24 +5494,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/372"
-      },
-      {
-        "$ref": "#/373"
-      },
-      {
-        "$ref": "#/374"
-      },
-      {
-        "$ref": "#/375"
-      },
-      {
-        "$ref": "#/376"
-      },
-      {
-        "$ref": "#/377"
-      },
-      {
         "$ref": "#/378"
       },
       {
@@ -5452,6 +5501,24 @@
       },
       {
         "$ref": "#/380"
+      },
+      {
+        "$ref": "#/381"
+      },
+      {
+        "$ref": "#/382"
+      },
+      {
+        "$ref": "#/383"
+      },
+      {
+        "$ref": "#/384"
+      },
+      {
+        "$ref": "#/385"
+      },
+      {
+        "$ref": "#/386"
       },
       {
         "$ref": "#/0"
@@ -5464,10 +5531,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products",
     "apiVersion": "2019-10-01-preview",
     "output": {
-      "$ref": "#/370"
+      "$ref": "#/376"
     },
     "input": {
-      "$ref": "#/367"
+      "$ref": "#/373"
     }
   },
   {
@@ -5476,7 +5543,7 @@
     "properties": {
       "autoRenew": {
         "type": {
-          "$ref": "#/386"
+          "$ref": "#/392"
         },
         "flags": 0,
         "description": "The flag that determines the auto-renew settings for a product."
@@ -5495,10 +5562,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/384"
+        "$ref": "#/390"
       },
       {
-        "$ref": "#/385"
+        "$ref": "#/391"
       },
       {
         "$ref": "#/0"
@@ -5511,7 +5578,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/388"
+          "$ref": "#/394"
         },
         "flags": 0,
         "description": "Summary of update auto renew operation properties"
@@ -5537,10 +5604,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/products",
     "apiVersion": "2019-10-01-preview",
     "output": {
-      "$ref": "#/387"
+      "$ref": "#/393"
     },
     "input": {
-      "$ref": "#/383"
+      "$ref": "#/389"
     }
   },
   {
@@ -5558,7 +5625,7 @@
       "$ref": "#/305"
     },
     "input": {
-      "$ref": "#/390"
+      "$ref": "#/396"
     }
   },
   {
@@ -5576,7 +5643,7 @@
       "$ref": "#/305"
     },
     "input": {
-      "$ref": "#/392"
+      "$ref": "#/398"
     }
   },
   {
@@ -5615,10 +5682,10 @@
     "resourceType": "Microsoft.Billing/billingAccounts/billingProfiles/customers",
     "apiVersion": "2019-10-01-preview",
     "output": {
-      "$ref": "#/316"
+      "$ref": "#/322"
     },
     "input": {
-      "$ref": "#/314"
+      "$ref": "#/320"
     }
   },
   {
@@ -5627,7 +5694,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/399"
+          "$ref": "#/405"
         },
         "flags": 0,
         "description": "Request parameters to accept transfer."
@@ -5640,7 +5707,7 @@
     "properties": {
       "productDetails": {
         "type": {
-          "$ref": "#/404"
+          "$ref": "#/410"
         },
         "flags": 0,
         "description": "Request parameters to accept transfer."
@@ -5653,7 +5720,7 @@
     "properties": {
       "productType": {
         "type": {
-          "$ref": "#/403"
+          "$ref": "#/409"
         },
         "flags": 0,
         "description": "Type of the product that is transferred."
@@ -5679,10 +5746,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/401"
+        "$ref": "#/407"
       },
       {
-        "$ref": "#/402"
+        "$ref": "#/408"
       },
       {
         "$ref": "#/0"
@@ -5692,7 +5759,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/400"
+      "$ref": "#/406"
     }
   },
   {
@@ -5701,7 +5768,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/406"
+          "$ref": "#/412"
         },
         "flags": 0,
         "description": "Details of the transfer."
@@ -5728,14 +5795,14 @@
       },
       "allowedProductType": {
         "type": {
-          "$ref": "#/411"
+          "$ref": "#/417"
         },
         "flags": 2,
         "description": "Type of subscriptions that can be transferred."
       },
       "transferStatus": {
         "type": {
-          "$ref": "#/419"
+          "$ref": "#/425"
         },
         "flags": 2,
         "description": "Overall transfer status."
@@ -5791,7 +5858,7 @@
       },
       "detailedTransferStatus": {
         "type": {
-          "$ref": "#/420"
+          "$ref": "#/426"
         },
         "flags": 2,
         "description": "Detailed transfer status."
@@ -5814,13 +5881,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/407"
+        "$ref": "#/413"
       },
       {
-        "$ref": "#/408"
+        "$ref": "#/414"
       },
       {
-        "$ref": "#/409"
+        "$ref": "#/415"
       },
       {
         "$ref": "#/0"
@@ -5830,7 +5897,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/410"
+      "$ref": "#/416"
     }
   },
   {
@@ -5865,25 +5932,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/412"
-      },
-      {
-        "$ref": "#/413"
-      },
-      {
-        "$ref": "#/414"
-      },
-      {
-        "$ref": "#/415"
-      },
-      {
-        "$ref": "#/416"
-      },
-      {
-        "$ref": "#/417"
-      },
-      {
         "$ref": "#/418"
+      },
+      {
+        "$ref": "#/419"
+      },
+      {
+        "$ref": "#/420"
+      },
+      {
+        "$ref": "#/421"
+      },
+      {
+        "$ref": "#/422"
+      },
+      {
+        "$ref": "#/423"
+      },
+      {
+        "$ref": "#/424"
       },
       {
         "$ref": "#/0"
@@ -5893,7 +5960,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/326"
+      "$ref": "#/332"
     }
   },
   {
@@ -5902,10 +5969,10 @@
     "resourceType": "Microsoft.Billing/transfers",
     "apiVersion": "2019-10-01-preview",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/411"
     },
     "input": {
-      "$ref": "#/398"
+      "$ref": "#/404"
     }
   },
   {
@@ -5914,7 +5981,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/427"
+          "$ref": "#/433"
         },
         "flags": 2,
         "description": "The list of transfer validation results."
@@ -5927,7 +5994,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/424"
+          "$ref": "#/430"
         },
         "flags": 0,
         "description": "The properties of transfer validation response."
@@ -5954,7 +6021,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/426"
+          "$ref": "#/432"
         },
         "flags": 0,
         "description": "The array of validation results."
@@ -5991,13 +6058,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/425"
+      "$ref": "#/431"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/423"
+      "$ref": "#/429"
     }
   },
   {
@@ -6006,10 +6073,10 @@
     "resourceType": "Microsoft.Billing/transfers",
     "apiVersion": "2019-10-01-preview",
     "output": {
-      "$ref": "#/422"
+      "$ref": "#/428"
     },
     "input": {
-      "$ref": "#/398"
+      "$ref": "#/404"
     }
   },
   {
@@ -6018,7 +6085,7 @@
     "resourceType": "Microsoft.Billing/transfers",
     "apiVersion": "2019-10-01-preview",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/411"
     }
   }
 ]

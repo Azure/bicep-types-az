@@ -851,6 +851,41 @@
     "writableScopes": 8
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource type. The only legal value of this property for checking redis cache name availability is 'Microsoft.Cache/redis'."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "CheckNameAvailability",
+    "resourceType": "Microsoft.Cache",
+    "apiVersion": "2018-03-01",
+    "output": {
+      "$ref": "#/75"
+    },
+    "input": {
+      "$ref": "#/74"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.Cache/Redis",
@@ -865,7 +900,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/78"
+          "$ref": "#/81"
         },
         "flags": 1,
         "description": "The Redis access key to regenerate."
@@ -884,10 +919,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/76"
+        "$ref": "#/79"
       },
       {
-        "$ref": "#/77"
+        "$ref": "#/80"
       }
     ]
   },
@@ -900,7 +935,7 @@
       "$ref": "#/36"
     },
     "input": {
-      "$ref": "#/75"
+      "$ref": "#/78"
     }
   },
   {
@@ -909,7 +944,7 @@
     "properties": {
       "rebootType": {
         "type": {
-          "$ref": "#/84"
+          "$ref": "#/87"
         },
         "flags": 1,
         "description": "Which Redis node(s) to reboot. Depending on this value data loss is possible."
@@ -939,13 +974,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/81"
+        "$ref": "#/84"
       },
       {
-        "$ref": "#/82"
+        "$ref": "#/85"
       },
       {
-        "$ref": "#/83"
+        "$ref": "#/86"
       },
       {
         "$ref": "#/0"
@@ -971,10 +1006,10 @@
     "resourceType": "Microsoft.Cache/Redis",
     "apiVersion": "2018-03-01",
     "output": {
-      "$ref": "#/85"
+      "$ref": "#/88"
     },
     "input": {
-      "$ref": "#/80"
+      "$ref": "#/83"
     }
   },
   {
@@ -990,7 +1025,7 @@
       },
       "files": {
         "type": {
-          "$ref": "#/88"
+          "$ref": "#/91"
         },
         "flags": 1,
         "description": "files to import."
@@ -1004,18 +1039,15 @@
     }
   },
   {
-    "$type": "AnyType"
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "import",
     "resourceType": "Microsoft.Cache/Redis",
     "apiVersion": "2018-03-01",
     "output": {
-      "$ref": "#/89"
+      "$ref": "#/75"
     },
     "input": {
-      "$ref": "#/87"
+      "$ref": "#/90"
     }
   },
   {
@@ -1051,10 +1083,10 @@
     "resourceType": "Microsoft.Cache/Redis",
     "apiVersion": "2018-03-01",
     "output": {
-      "$ref": "#/89"
+      "$ref": "#/75"
     },
     "input": {
-      "$ref": "#/91"
+      "$ref": "#/93"
     }
   }
 ]

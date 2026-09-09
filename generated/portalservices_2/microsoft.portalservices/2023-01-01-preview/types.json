@@ -1,0 +1,52 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "PortalTenantCompileFile",
+    "properties": {
+      "contents": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The contents of the file."
+      },
+      "stringSource": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The contents of the string source."
+      },
+      "files": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The contents of referenced files. The property name is the relative file path and the value is its contents."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PortalTenantCompileFileResult",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "compilefile",
+    "resourceType": "Microsoft.PortalServices",
+    "apiVersion": "2023-01-01-preview",
+    "output": {
+      "$ref": "#/2"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  }
+]

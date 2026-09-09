@@ -20,6 +20,11 @@
 * **properties**: [SuppressionProperties](#suppressionproperties): The properties of the suppression.
 * **type**: 'Microsoft.Advisor/recommendations/suppressions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function generateRecommendations (Microsoft.Advisor@2017-03-31)
+* **Resource**: Microsoft.Advisor
+* **ApiVersion**: 2017-03-31
+* **Output**: any
+
 ## RecommendationProperties
 ### Properties
 * **category**: 'Cost' | 'HighAvailability' | 'OperationalExcellence' | 'Performance' | 'Security' | string: The category of the recommendation.

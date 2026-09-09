@@ -12,6 +12,12 @@
 * **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags): A list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Storage@2015-06-15)
+* **Resource**: Microsoft.Storage
+* **ApiVersion**: 2015-06-15
+* **Input**: [StorageAccountCheckNameAvailabilityParameters](#storageaccountchecknameavailabilityparameters)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function listKeys (Microsoft.Storage/storageAccounts@2015-06-15)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2015-06-15
@@ -22,6 +28,12 @@
 * **ApiVersion**: 2015-06-15
 * **Input**: [StorageAccountRegenerateKeyParameters](#storageaccountregeneratekeyparameters)
 * **Output**: [StorageAccountKeys](#storageaccountkeys)
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string: The error message explaining the Reason value in more detail.
+* **nameAvailable**: bool: Boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used.
+* **reason**: 'AccountNameInvalid' | 'AlreadyExists': The reason that a storage account name could not be used. The Reason element is only returned if NameAvailable is false.
 
 ## CustomDomain
 ### Properties
@@ -34,6 +46,11 @@
 * **file**: string: The file endpoint.
 * **queue**: string: The queue endpoint.
 * **table**: string: The table endpoint.
+
+## StorageAccountCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required)
+* **type**: string
 
 ## StorageAccountCreateParametersTags
 ### Properties

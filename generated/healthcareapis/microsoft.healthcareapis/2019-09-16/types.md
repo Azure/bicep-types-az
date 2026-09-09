@@ -15,6 +15,17 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.HealthcareApis@2019-09-16)
+* **Resource**: Microsoft.HealthcareApis
+* **ApiVersion**: 2019-09-16
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: [ServicesNameAvailabilityInfo](#servicesnameavailabilityinfo)
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name of the service instance to check.
+* **type**: string (Required): The fully qualified resource type which includes provider namespace.
+
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the resource identity.
@@ -51,6 +62,12 @@
 ## ServiceExportConfigurationInfo
 ### Properties
 * **storageAccountName**: string: The name of the default export storage account.
+
+## ServicesNameAvailabilityInfo
+### Properties
+* **message**: string: The detailed reason message.
+* **nameAvailable**: bool (ReadOnly): The value which indicates whether the provided name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason for unavailability.
 
 ## ServicesProperties
 ### Properties

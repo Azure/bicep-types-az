@@ -1625,6 +1625,79 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ActivateSaaSParameterRequest",
+    "properties": {
+      "saasGuid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "SaaS guid for Activate and Validate SaaS Resource"
+      },
+      "publisherId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Publisher Id for NewRelic resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SaaSResourceDetailsResponse",
+    "properties": {
+      "saasId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the Marketplace SaaS Resource"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "activateSaaS",
+    "resourceType": "NewRelic.Observability",
+    "apiVersion": "2026-06-01",
+    "output": {
+      "$ref": "#/149"
+    },
+    "input": {
+      "$ref": "#/148"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "MetricsRequest",
     "properties": {
       "userEmail": {
@@ -1645,7 +1718,7 @@
       "$ref": "#/127"
     },
     "input": {
-      "$ref": "#/148"
+      "$ref": "#/151"
     }
   },
   {
@@ -1654,7 +1727,7 @@
     "properties": {
       "azureResourceIds": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/154"
         },
         "flags": 0,
         "description": "Azure resource IDs"
@@ -1680,7 +1753,7 @@
     "properties": {
       "azureResourceIds": {
         "type": {
-          "$ref": "#/153"
+          "$ref": "#/156"
         },
         "flags": 0,
         "description": "Azure resource IDs"
@@ -1699,10 +1772,10 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/152"
+      "$ref": "#/155"
     },
     "input": {
-      "$ref": "#/150"
+      "$ref": "#/153"
     }
   },
   {
@@ -1718,7 +1791,7 @@
       },
       "isHiddenSaaS": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/159"
         },
         "flags": 0,
         "description": "Flag indicating if the SaaS resource is hidden"
@@ -1734,7 +1807,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/155"
+      "$ref": "#/158"
     }
   },
   {
@@ -1757,7 +1830,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/159"
+          "$ref": "#/162"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1813,7 +1886,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/158"
+      "$ref": "#/161"
     },
     "input": {
       "$ref": "#/50"
@@ -1825,7 +1898,7 @@
     "properties": {
       "azureResourceIds": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/165"
         },
         "flags": 0,
         "description": "Azure resource IDs"
@@ -1851,7 +1924,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/168"
         },
         "flags": 1,
         "description": "The AppServiceInfo items on this page"
@@ -1895,7 +1968,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/164"
+      "$ref": "#/167"
     }
   },
   {
@@ -1904,10 +1977,10 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/163"
+      "$ref": "#/166"
     },
     "input": {
-      "$ref": "#/161"
+      "$ref": "#/164"
     }
   },
   {
@@ -1916,7 +1989,7 @@
     "properties": {
       "vmIds": {
         "type": {
-          "$ref": "#/168"
+          "$ref": "#/171"
         },
         "flags": 0,
         "description": "VM resource IDs"
@@ -1942,7 +2015,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/171"
+          "$ref": "#/174"
         },
         "flags": 1,
         "description": "The VMInfo items on this page"
@@ -1986,7 +2059,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/170"
+      "$ref": "#/173"
     }
   },
   {
@@ -1995,10 +2068,10 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/169"
+      "$ref": "#/172"
     },
     "input": {
-      "$ref": "#/167"
+      "$ref": "#/170"
     }
   },
   {
@@ -2007,7 +2080,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/175"
+          "$ref": "#/178"
         },
         "flags": 1,
         "description": "The LinkedResource items on this page"
@@ -2037,7 +2110,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/174"
+      "$ref": "#/177"
     }
   },
   {
@@ -2046,7 +2119,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/173"
+      "$ref": "#/176"
     }
   },
   {
@@ -2055,7 +2128,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/185"
+          "$ref": "#/188"
         },
         "flags": 1,
         "description": "The MonitoredResource items on this page"
@@ -2082,7 +2155,7 @@
       },
       "sendingMetrics": {
         "type": {
-          "$ref": "#/181"
+          "$ref": "#/184"
         },
         "flags": 0,
         "description": "Flag indicating if resource is sending metrics to NewRelic."
@@ -2096,7 +2169,7 @@
       },
       "sendingLogs": {
         "type": {
-          "$ref": "#/184"
+          "$ref": "#/187"
         },
         "flags": 0,
         "description": "Flag indicating if resource is sending logs to NewRelic."
@@ -2122,10 +2195,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/179"
+        "$ref": "#/182"
       },
       {
-        "$ref": "#/180"
+        "$ref": "#/183"
       },
       {
         "$ref": "#/2"
@@ -2144,10 +2217,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/182"
+        "$ref": "#/185"
       },
       {
-        "$ref": "#/183"
+        "$ref": "#/186"
       },
       {
         "$ref": "#/2"
@@ -2157,7 +2230,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/178"
+      "$ref": "#/181"
     }
   },
   {
@@ -2166,7 +2239,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/177"
+      "$ref": "#/180"
     }
   },
   {
@@ -2178,7 +2251,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/187"
+      "$ref": "#/190"
     }
   },
   {
@@ -2242,10 +2315,10 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/158"
+      "$ref": "#/161"
     },
     "input": {
-      "$ref": "#/189"
+      "$ref": "#/192"
     }
   },
   {
@@ -2288,10 +2361,10 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/158"
+      "$ref": "#/161"
     },
     "input": {
-      "$ref": "#/191"
+      "$ref": "#/194"
     }
   },
   {
@@ -2313,7 +2386,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/193"
+      "$ref": "#/196"
     }
   },
   {
@@ -2322,14 +2395,14 @@
     "properties": {
       "marketplaceSaasInfo": {
         "type": {
-          "$ref": "#/196"
+          "$ref": "#/199"
         },
         "flags": 0,
         "description": "Marketplace Subscription details"
       },
       "partnerBillingEntity": {
         "type": {
-          "$ref": "#/197"
+          "$ref": "#/200"
         },
         "flags": 0,
         "description": "Partner Billing Entity details: Organization Info"
@@ -2417,7 +2490,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/195"
+      "$ref": "#/198"
     }
   },
   {
@@ -2426,7 +2499,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/202"
+          "$ref": "#/205"
         },
         "flags": 1,
         "description": "The ConnectedPartnerResourcesListFormat items on this page"
@@ -2446,7 +2519,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/201"
+          "$ref": "#/204"
         },
         "flags": 0,
         "description": "Connected Partner Resource Properties"
@@ -2490,7 +2563,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/200"
+      "$ref": "#/203"
     }
   },
   {
@@ -2499,7 +2572,7 @@
     "resourceType": "NewRelic.Observability/monitors",
     "apiVersion": "2026-06-01",
     "output": {
-      "$ref": "#/199"
+      "$ref": "#/202"
     },
     "input": {
       "$ref": "#/44"

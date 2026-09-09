@@ -1111,6 +1111,12 @@
 * **Input**: [ApiManagementServiceBackupRestoreParameters](#apimanagementservicebackuprestoreparameters)
 * **Output**: [ApiManagementServiceResource](#apimanagementserviceresource)
 
+## Function checkNameAvailability (Microsoft.ApiManagement@2024-10-01-preview)
+* **Resource**: Microsoft.ApiManagement
+* **ApiVersion**: 2024-10-01-preview
+* **Input**: [ApiManagementServiceCheckNameAvailabilityParameters](#apimanagementservicechecknameavailabilityparameters)
+* **Output**: [ApiManagementServiceNameAvailabilityResult](#apimanagementservicenameavailabilityresult)
+
 ## Function confirmConsentCode (Microsoft.ApiManagement/service/authorizationProviders/authorizations@2024-10-01-preview)
 * **Resource**: Microsoft.ApiManagement/service/authorizationProviders/authorizations
 * **ApiVersion**: 2024-10-01-preview
@@ -1139,6 +1145,11 @@
 * **ApiVersion**: 2024-10-01-preview
 * **Input**: [GatewayTokenRequestContract](#gatewaytokenrequestcontract)
 * **Output**: [GatewayTokenContract](#gatewaytokencontract)
+
+## Function getDomainOwnershipIdentifier (Microsoft.ApiManagement@2024-10-01-preview)
+* **Resource**: Microsoft.ApiManagement
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: [ApiManagementServiceGetDomainOwnershipIdentifierResult](#apimanagementservicegetdomainownershipidentifierresult)
 
 ## Function getLoginLinks (Microsoft.ApiManagement/service/authorizationProviders/authorizations@2024-10-01-preview)
 * **Resource**: Microsoft.ApiManagement/service/authorizationProviders/authorizations
@@ -1450,6 +1461,14 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ApiManagementServiceCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name to check for availability.
+
+## ApiManagementServiceGetDomainOwnershipIdentifierResult
+### Properties
+* **domainOwnershipIdentifier**: string (ReadOnly): The domain ownership identifier value.
+
 ## ApiManagementServiceGetSsoTokenResult
 ### Properties
 * **redirectUri**: string: Redirect URL to the Publisher Portal containing the SSO token.
@@ -1468,6 +1487,12 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
+
+## ApiManagementServiceNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that <resourceName> is already in use, and direct them to select a different name.
+* **nameAvailable**: bool (ReadOnly): True if the name is available and can be used to create a new API Management service; otherwise false.
+* **reason**: 'AlreadyExists' | 'Invalid' | 'Valid': Invalid indicates the name provided does not match the resource provider’s naming requirements (incorrect length, unsupported characters, etc.)  AlreadyExists indicates that the name is already in use and is therefore unavailable.
 
 ## ApiManagementServiceProperties
 ### Properties

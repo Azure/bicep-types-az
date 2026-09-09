@@ -36,6 +36,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'NewRelic.Observability/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activateSaaS (NewRelic.Observability@2026-06-01)
+* **Resource**: NewRelic.Observability
+* **ApiVersion**: 2026-06-01
+* **Input**: [ActivateSaaSParameterRequest](#activatesaasparameterrequest)
+* **Output**: [SaaSResourceDetailsResponse](#saasresourcedetailsresponse)
+
 ## Function getBillingInfo (NewRelic.Observability/monitors@2026-06-01)
 * **Resource**: NewRelic.Observability/monitors
 * **ApiVersion**: 2026-06-01
@@ -119,6 +125,11 @@
 * **accountId**: string: Account id
 * **ingestionKey**: string {sensitive}: Credential string.
 * **region**: string: Region where New Relic account is present
+
+## ActivateSaaSParameterRequest
+### Properties
+* **publisherId**: string (Required): Publisher Id for NewRelic resource
+* **saasGuid**: string (Required): SaaS guid for Activate and Validate SaaS Resource
 
 ## AppServiceInfo
 ### Properties
@@ -323,6 +334,14 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 ## SaaSData
 ### Properties
 * **saaSResourceId**: string: SaaS resource id
+
+## SaaSResourceDetailsResponse
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **saasId**: string: Id of the Marketplace SaaS Resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## SubscriptionList
 ### Properties

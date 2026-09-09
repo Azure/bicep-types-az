@@ -2922,12 +2922,811 @@
     "writableScopes": 0
   },
   {
+    "$type": "ObjectType",
+    "name": "BenefitUtilizationSummariesRequest",
+    "properties": {
+      "billingAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Billing account the benefit utilization summaries report is for. Required for billing account and billing profile scopes. Not supported for any benefit scopes."
+      },
+      "billingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Billing profile id the benefit utilization summaries report is for. Required for billing profile scope. Not supported for billing account or any benefit scopes."
+      },
+      "benefitOrderId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Benefit order id the benefit utilization summaries report is for. Required for benefit order and benefit id scopes. Not supported for any billing scopes."
+      },
+      "benefitId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Benefit id the benefit utilization summaries report is for. Required for benefit id scope. Not supported for benefit order or any billing scopes."
+      },
+      "grain": {
+        "type": {
+          "$ref": "#/246"
+        },
+        "flags": 1,
+        "description": "The grain the summaries data is served at in the report. Accepted values are 'Daily' or 'Monthly'."
+      },
+      "startDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The start date of the summaries data that will be served in the report."
+      },
+      "endDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The end date of the summaries data that will be served in the report."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/250"
+        },
+        "flags": 0,
+        "description": "The type of benefit data requested. Required for billing account and billing profile scopes. Implied and not to be passed at benefit scopes. Supported values are Reservation and SavingsPlan"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hourly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Daily"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Monthly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/243"
+      },
+      {
+        "$ref": "#/244"
+      },
+      {
+        "$ref": "#/245"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IncludedQuantity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reservation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SavingsPlan"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/248"
+      },
+      {
+        "$ref": "#/249"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BenefitUtilizationSummariesOperationStatus",
+    "properties": {
+      "input": {
+        "type": {
+          "$ref": "#/242"
+        },
+        "flags": 0,
+        "description": "Input given to create the benefit utilization summaries report."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/256"
+        },
+        "flags": 0,
+        "description": "The status of the creation of the benefit utilization summaries report."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 0,
+        "description": "Contains sas url to the async benefit utilization summaries report and a date that the url is valid until. These values will be empty if the report is in a Running or Failed state"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/252"
+      },
+      {
+        "$ref": "#/253"
+      },
+      {
+        "$ref": "#/254"
+      },
+      {
+        "$ref": "#/255"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AsyncOperationStatusProperties",
+    "properties": {
+      "reportUrl": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 0,
+        "description": "Sas url to the async benefit utilization summaries report. Will be empty if the report is in Running or Failed state."
+      },
+      "secondaryReportUrl": {
+        "type": {
+          "$ref": "#/277"
+        },
+        "flags": 0,
+        "description": "Sas url to async benefit utilization summaries report in secondary storage in case of primary outage. Will be empty if the report is in Running or Failed state."
+      },
+      "validUntil": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The date that the sas url provided in reportUrl expires."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Kind"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AvgUtilizationPercentage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BenefitOrderId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BenefitId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BenefitType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MaxUtilizationPercentage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MinUtilizationPercentage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UsageDate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UtilizedPercentage"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/258"
+      },
+      {
+        "$ref": "#/259"
+      },
+      {
+        "$ref": "#/260"
+      },
+      {
+        "$ref": "#/261"
+      },
+      {
+        "$ref": "#/262"
+      },
+      {
+        "$ref": "#/263"
+      },
+      {
+        "$ref": "#/264"
+      },
+      {
+        "$ref": "#/265"
+      },
+      {
+        "$ref": "#/266"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Kind"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AvgUtilizationPercentage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BenefitOrderId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BenefitId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BenefitType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MaxUtilizationPercentage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MinUtilizationPercentage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UsageDate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UtilizedPercentage"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/268"
+      },
+      {
+        "$ref": "#/269"
+      },
+      {
+        "$ref": "#/270"
+      },
+      {
+        "$ref": "#/271"
+      },
+      {
+        "$ref": "#/272"
+      },
+      {
+        "$ref": "#/273"
+      },
+      {
+        "$ref": "#/274"
+      },
+      {
+        "$ref": "#/275"
+      },
+      {
+        "$ref": "#/276"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
     "$type": "ResourceFunctionType",
-    "name": "run",
-    "resourceType": "Microsoft.CostManagement/exports",
+    "name": "generateBenefitUtilizationSummariesReport",
+    "resourceType": "Microsoft.CostManagement",
     "apiVersion": "2023-03-01",
     "output": {
-      "$ref": "#/221"
+      "$ref": "#/251"
+    },
+    "input": {
+      "$ref": "#/242"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateCostDetailsReportRequestDefinition",
+    "properties": {
+      "metric": {
+        "type": {
+          "$ref": "#/282"
+        },
+        "flags": 0,
+        "description": "The type of the detailed report. By default ActualCost is provided"
+      },
+      "timePeriod": {
+        "type": {
+          "$ref": "#/283"
+        },
+        "flags": 0,
+        "description": "The specific date range of cost details requested for the report. This parameter cannot be used alongside either the invoiceId or billingPeriod parameters. If a timePeriod, invoiceId or billingPeriod parameter is not provided in the request body the API will return the current month's cost. API only allows data to be pulled for 1 month or less and no older than 13 months. If no timePeriod or billingPeriod or invoiceId is provided the API defaults to the open month time period"
+      },
+      "billingPeriod": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This parameter can be used only by Enterprise Agreement customers. Use the YearMonth(e.g. 202008) format. This parameter cannot be used alongside either the invoiceId or timePeriod parameters. If a timePeriod, invoiceId or billingPeriod parameter is not provided in the request body the API will return the current month's cost."
+      },
+      "invoiceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This parameter can only be used by Microsoft Customer Agreement customers. Additionally, it can only be used at the Billing Profile or Customer scope. This parameter cannot be used alongside either the billingPeriod or timePeriod parameters. If a timePeriod, invoiceId or billingPeriod parameter is not provided in the request body the API will return the current month's cost."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActualCost"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AmortizedCost"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/280"
+      },
+      {
+        "$ref": "#/281"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CostDetailsTimePeriod",
+    "properties": {
+      "start": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The start date to pull data from. example format 2020-03-15"
+      },
+      "end": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The end date to pull data to. example format 2020-03-15"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CostDetailsOperationResults",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id of the long running operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the long running operation."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of the long running operation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/288"
+        },
+        "flags": 0,
+        "description": "The status of the cost details operation"
+      },
+      "manifest": {
+        "type": {
+          "$ref": "#/289"
+        },
+        "flags": 0,
+        "description": "The manifest of the report generated by the operation."
+      },
+      "validTill": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time at which report URL becomes invalid/expires in UTC e.g. 2020-12-08T05:55:59.4394737Z."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The details of the error."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoDataFound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/285"
+      },
+      {
+        "$ref": "#/286"
+      },
+      {
+        "$ref": "#/287"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ReportManifest",
+    "properties": {
+      "manifestVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Manifest version."
+      },
+      "dataFormat": {
+        "type": {
+          "$ref": "#/291"
+        },
+        "flags": 0,
+        "description": "The data format of the report"
+      },
+      "byteCount": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 0,
+        "description": "The total number of bytes in all blobs."
+      },
+      "blobCount": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 0,
+        "description": "The total number of blobs."
+      },
+      "compressData": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Is the data in compressed format."
+      },
+      "requestContext": {
+        "type": {
+          "$ref": "#/292"
+        },
+        "flags": 0,
+        "description": "The context of the Cost Details request."
+      },
+      "blobs": {
+        "type": {
+          "$ref": "#/294"
+        },
+        "flags": 0,
+        "description": "List of blob information generated by this operation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Csv"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/290"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestContext",
+    "properties": {
+      "requestScope": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The request scope of the request."
+      },
+      "requestBody": {
+        "type": {
+          "$ref": "#/279"
+        },
+        "flags": 0,
+        "description": "The request payload body provided in Cost Details call"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BlobInfo",
+    "properties": {
+      "blobLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Link to the blob to download file."
+      },
+      "byteCount": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 0,
+        "description": "Bytes in the blob."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/293"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateCostDetailsReport",
+    "resourceType": "Microsoft.CostManagement",
+    "apiVersion": "2023-03-01",
+    "output": {
+      "$ref": "#/284"
+    },
+    "input": {
+      "$ref": "#/279"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateDetailedCostReportDefinition",
+    "properties": {
+      "metric": {
+        "type": {
+          "$ref": "#/299"
+        },
+        "flags": 0,
+        "description": "The type of the detailed report. By default ActualCost is provided"
+      },
+      "timePeriod": {
+        "type": {
+          "$ref": "#/300"
+        },
+        "flags": 0,
+        "description": "Has time period for pulling data for the cost detailed report. Can only have one of either timePeriod or invoiceId or billingPeriod parameters. If none provided current month cost is provided."
+      },
+      "billingPeriod": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Billing period in YearMonth(e.g. 202008) format. Only for legacy enterprise customers can use this. Can only have one of either timePeriod or invoiceId or billingPeriod parameters. If none provided current month cost is provided."
+      },
+      "invoiceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Invoice ID for Pay-as-you-go and Microsoft Customer Agreement scopes. Can only have one of either timePeriod or invoiceId or billingPeriod parameters. If none provided current month cost is provided."
+      },
+      "customerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Customer ID for Microsoft Customer Agreement scopes (Invoice Id is also required for this)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActualCost"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AmortizedCost"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/297"
+      },
+      {
+        "$ref": "#/298"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateDetailedCostReportTimePeriod",
+    "properties": {
+      "start": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The start date to pull data from. example format 2020-03-15"
+      },
+      "end": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The end date to pull data to. example format 2020-03-15"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateDetailedCostReportOperationResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ARM resource id of the long running operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the long running operation."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of the long running operation."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/302"
+        },
+        "flags": 0,
+        "description": "The properties of the resource generated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadURL",
+    "properties": {
+      "expiryTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time at which report URL becomes invalid/expires in UTC e.g. 2020-12-08T05:55:59.4394737Z."
+      },
+      "validTill": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time at which report URL becomes invalid/expires in UTC e.g. 2020-12-08T05:55:59.4394737Z."
+      },
+      "downloadUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The URL to download the generated report."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateDetailedCostReport",
+    "resourceType": "Microsoft.CostManagement",
+    "apiVersion": "2023-03-01",
+    "output": {
+      "$ref": "#/301"
+    },
+    "input": {
+      "$ref": "#/296"
     }
   },
   {
@@ -2936,28 +3735,28 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/247"
+          "$ref": "#/308"
         },
         "flags": 1,
         "description": "The type of the forecast."
       },
       "timeframe": {
         "type": {
-          "$ref": "#/249"
+          "$ref": "#/310"
         },
         "flags": 1,
         "description": "The time frame for pulling data for the forecast. If custom, then a specific time period must be provided."
       },
       "timePeriod": {
         "type": {
-          "$ref": "#/250"
+          "$ref": "#/311"
         },
         "flags": 0,
         "description": "Has time period for pulling data for the forecast."
       },
       "dataset": {
         "type": {
-          "$ref": "#/251"
+          "$ref": "#/312"
         },
         "flags": 1,
         "description": "Has definition for data in this forecast."
@@ -2994,13 +3793,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/244"
+        "$ref": "#/305"
       },
       {
-        "$ref": "#/245"
+        "$ref": "#/306"
       },
       {
-        "$ref": "#/246"
+        "$ref": "#/307"
       },
       {
         "$ref": "#/0"
@@ -3015,7 +3814,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/248"
+        "$ref": "#/309"
       },
       {
         "$ref": "#/0"
@@ -3048,28 +3847,28 @@
     "properties": {
       "granularity": {
         "type": {
-          "$ref": "#/253"
+          "$ref": "#/314"
         },
         "flags": 0,
         "description": "The granularity of rows in the forecast."
       },
       "configuration": {
         "type": {
-          "$ref": "#/254"
+          "$ref": "#/315"
         },
         "flags": 0,
         "description": "Has configuration information for the data in the export. The configuration will be ignored if aggregation and grouping are provided."
       },
       "aggregation": {
         "type": {
-          "$ref": "#/264"
+          "$ref": "#/325"
         },
         "flags": 1,
         "description": "Dictionary of aggregation expression to use in the forecast. The key of each item in the dictionary is the alias for the aggregated column. forecast can have up to 2 aggregation clauses."
       },
       "filter": {
         "type": {
-          "$ref": "#/265"
+          "$ref": "#/326"
         },
         "flags": 0,
         "description": "Has filter expression to use in the forecast."
@@ -3084,7 +3883,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/252"
+        "$ref": "#/313"
       },
       {
         "$ref": "#/0"
@@ -3097,7 +3896,7 @@
     "properties": {
       "columns": {
         "type": {
-          "$ref": "#/255"
+          "$ref": "#/316"
         },
         "flags": 0,
         "description": "Array of column names to be included in the forecast. Any valid forecast column name is allowed. If not provided, then forecast includes all columns."
@@ -3116,14 +3915,14 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/261"
+          "$ref": "#/322"
         },
         "flags": 1,
         "description": "The name of the column to aggregate."
       },
       "function": {
         "type": {
-          "$ref": "#/263"
+          "$ref": "#/324"
         },
         "flags": 1,
         "description": "The name of the aggregation function to use."
@@ -3150,16 +3949,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/257"
+        "$ref": "#/318"
       },
       {
-        "$ref": "#/258"
+        "$ref": "#/319"
       },
       {
-        "$ref": "#/259"
+        "$ref": "#/320"
       },
       {
-        "$ref": "#/260"
+        "$ref": "#/321"
       },
       {
         "$ref": "#/0"
@@ -3174,7 +3973,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/262"
+        "$ref": "#/323"
       },
       {
         "$ref": "#/0"
@@ -3186,7 +3985,7 @@
     "name": "ForecastDatasetAggregation",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/256"
+      "$ref": "#/317"
     }
   },
   {
@@ -3195,28 +3994,28 @@
     "properties": {
       "and": {
         "type": {
-          "$ref": "#/266"
+          "$ref": "#/327"
         },
         "flags": 0,
         "description": "The logical \"AND\" expression. Must have at least 2 items."
       },
       "or": {
         "type": {
-          "$ref": "#/267"
+          "$ref": "#/328"
         },
         "flags": 0,
         "description": "The logical \"OR\" expression. Must have at least 2 items."
       },
       "dimensions": {
         "type": {
-          "$ref": "#/268"
+          "$ref": "#/329"
         },
         "flags": 0,
         "description": "Has comparison expression for a dimension"
       },
       "tags": {
         "type": {
-          "$ref": "#/268"
+          "$ref": "#/329"
         },
         "flags": 0,
         "description": "Has comparison expression for a tag"
@@ -3226,14 +4025,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/265"
+      "$ref": "#/326"
     },
     "minLength": 2
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/265"
+      "$ref": "#/326"
     },
     "minLength": 2
   },
@@ -3250,14 +4049,14 @@
       },
       "operator": {
         "type": {
-          "$ref": "#/270"
+          "$ref": "#/331"
         },
         "flags": 1,
         "description": "The operator to use for comparison."
       },
       "values": {
         "type": {
-          "$ref": "#/271"
+          "$ref": "#/332"
         },
         "flags": 1,
         "description": "Array of values to use for comparison"
@@ -3272,7 +4071,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/269"
+        "$ref": "#/330"
       },
       {
         "$ref": "#/0"
@@ -3292,7 +4091,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/273"
+          "$ref": "#/334"
         },
         "flags": 0,
         "description": "Forecast properties"
@@ -3341,7 +4140,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/278"
+          "$ref": "#/339"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -3361,14 +4160,14 @@
       },
       "columns": {
         "type": {
-          "$ref": "#/275"
+          "$ref": "#/336"
         },
         "flags": 0,
         "description": "Array of columns"
       },
       "rows": {
         "type": {
-          "$ref": "#/277"
+          "$ref": "#/338"
         },
         "flags": 0,
         "description": "Array of rows"
@@ -3398,7 +4197,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/274"
+      "$ref": "#/335"
     }
   },
   {
@@ -3410,7 +4209,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/276"
+      "$ref": "#/337"
     }
   },
   {
@@ -3424,13 +4223,13 @@
   {
     "$type": "ResourceFunctionType",
     "name": "forecast",
-    "resourceType": "Microsoft.CostManagement/externalSubscriptions",
+    "resourceType": "Microsoft.CostManagement",
     "apiVersion": "2023-03-01",
     "output": {
-      "$ref": "#/272"
+      "$ref": "#/333"
     },
     "input": {
-      "$ref": "#/243"
+      "$ref": "#/304"
     }
   },
   {
@@ -3439,28 +4238,28 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/284"
+          "$ref": "#/345"
         },
         "flags": 1,
         "description": "The type of the query."
       },
       "timeframe": {
         "type": {
-          "$ref": "#/291"
+          "$ref": "#/352"
         },
         "flags": 1,
         "description": "The time frame for pulling data for the query. If custom, then a specific time period must be provided."
       },
       "timePeriod": {
         "type": {
-          "$ref": "#/292"
+          "$ref": "#/353"
         },
         "flags": 0,
         "description": "Has time period for pulling data for the query."
       },
       "dataset": {
         "type": {
-          "$ref": "#/293"
+          "$ref": "#/354"
         },
         "flags": 1,
         "description": "Has definition for data in this query."
@@ -3483,13 +4282,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/281"
+        "$ref": "#/342"
       },
       {
-        "$ref": "#/282"
+        "$ref": "#/343"
       },
       {
-        "$ref": "#/283"
+        "$ref": "#/344"
       },
       {
         "$ref": "#/0"
@@ -3524,22 +4323,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/285"
+        "$ref": "#/346"
       },
       {
-        "$ref": "#/286"
+        "$ref": "#/347"
       },
       {
-        "$ref": "#/287"
+        "$ref": "#/348"
       },
       {
-        "$ref": "#/288"
+        "$ref": "#/349"
       },
       {
-        "$ref": "#/289"
+        "$ref": "#/350"
       },
       {
-        "$ref": "#/290"
+        "$ref": "#/351"
       },
       {
         "$ref": "#/0"
@@ -3572,35 +4371,35 @@
     "properties": {
       "granularity": {
         "type": {
-          "$ref": "#/295"
+          "$ref": "#/356"
         },
         "flags": 0,
         "description": "The granularity of rows in the query."
       },
       "configuration": {
         "type": {
-          "$ref": "#/296"
+          "$ref": "#/357"
         },
         "flags": 0,
         "description": "Has configuration information for the data in the export. The configuration will be ignored if aggregation and grouping are provided."
       },
       "aggregation": {
         "type": {
-          "$ref": "#/301"
+          "$ref": "#/362"
         },
         "flags": 0,
         "description": "Dictionary of aggregation expression to use in the query. The key of each item in the dictionary is the alias for the aggregated column. Query can have up to 2 aggregation clauses."
       },
       "grouping": {
         "type": {
-          "$ref": "#/306"
+          "$ref": "#/367"
         },
         "flags": 0,
         "description": "Array of group by expression to use in the query. Query can have up to 2 group by clauses."
       },
       "filter": {
         "type": {
-          "$ref": "#/307"
+          "$ref": "#/368"
         },
         "flags": 0,
         "description": "The filter expression to use in the query. Please reference our Query API REST documentation for how to properly format the filter."
@@ -3615,7 +4414,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/294"
+        "$ref": "#/355"
       },
       {
         "$ref": "#/0"
@@ -3628,7 +4427,7 @@
     "properties": {
       "columns": {
         "type": {
-          "$ref": "#/297"
+          "$ref": "#/358"
         },
         "flags": 0,
         "description": "Array of column names to be included in the query. Any valid query column name is allowed. If not provided, then query includes all columns."
@@ -3654,7 +4453,7 @@
       },
       "function": {
         "type": {
-          "$ref": "#/300"
+          "$ref": "#/361"
         },
         "flags": 1,
         "description": "The name of the aggregation function to use."
@@ -3669,7 +4468,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/299"
+        "$ref": "#/360"
       },
       {
         "$ref": "#/0"
@@ -3681,7 +4480,7 @@
     "name": "QueryDatasetAggregation",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/298"
+      "$ref": "#/359"
     }
   },
   {
@@ -3690,7 +4489,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/305"
+          "$ref": "#/366"
         },
         "flags": 1,
         "description": "Has type of the column to group."
@@ -3716,10 +4515,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/303"
+        "$ref": "#/364"
       },
       {
-        "$ref": "#/304"
+        "$ref": "#/365"
       },
       {
         "$ref": "#/0"
@@ -3729,7 +4528,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/302"
+      "$ref": "#/363"
     },
     "maxLength": 2
   },
@@ -3739,28 +4538,28 @@
     "properties": {
       "and": {
         "type": {
-          "$ref": "#/308"
+          "$ref": "#/369"
         },
         "flags": 0,
         "description": "The logical \"AND\" expression. Must have at least 2 items."
       },
       "or": {
         "type": {
-          "$ref": "#/309"
+          "$ref": "#/370"
         },
         "flags": 0,
         "description": "The logical \"OR\" expression. Must have at least 2 items."
       },
       "dimensions": {
         "type": {
-          "$ref": "#/310"
+          "$ref": "#/371"
         },
         "flags": 0,
         "description": "Has comparison expression for a dimension"
       },
       "tags": {
         "type": {
-          "$ref": "#/310"
+          "$ref": "#/371"
         },
         "flags": 0,
         "description": "Has comparison expression for a tag"
@@ -3770,14 +4569,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/307"
+      "$ref": "#/368"
     },
     "minLength": 2
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/307"
+      "$ref": "#/368"
     },
     "minLength": 2
   },
@@ -3794,14 +4593,14 @@
       },
       "operator": {
         "type": {
-          "$ref": "#/312"
+          "$ref": "#/373"
         },
         "flags": 1,
         "description": "The operator to use for comparison."
       },
       "values": {
         "type": {
-          "$ref": "#/313"
+          "$ref": "#/374"
         },
         "flags": 1,
         "description": "Array of values to use for comparison"
@@ -3816,7 +4615,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/311"
+        "$ref": "#/372"
       },
       {
         "$ref": "#/0"
@@ -3836,7 +4635,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/315"
+          "$ref": "#/376"
         },
         "flags": 0,
         "description": "Query properties"
@@ -3885,7 +4684,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/320"
+          "$ref": "#/381"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -3905,14 +4704,14 @@
       },
       "columns": {
         "type": {
-          "$ref": "#/317"
+          "$ref": "#/378"
         },
         "flags": 0,
         "description": "Array of columns"
       },
       "rows": {
         "type": {
-          "$ref": "#/319"
+          "$ref": "#/380"
         },
         "flags": 0,
         "description": "Array of rows"
@@ -3942,7 +4741,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/316"
+      "$ref": "#/377"
     }
   },
   {
@@ -3954,7 +4753,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/318"
+      "$ref": "#/379"
     }
   },
   {
@@ -3968,13 +4767,127 @@
   {
     "$type": "ResourceFunctionType",
     "name": "query",
+    "resourceType": "Microsoft.CostManagement",
+    "apiVersion": "2023-03-01",
+    "output": {
+      "$ref": "#/375"
+    },
+    "input": {
+      "$ref": "#/341"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/387"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/385"
+      },
+      {
+        "$ref": "#/386"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.CostManagement",
+    "apiVersion": "2023-03-01",
+    "output": {
+      "$ref": "#/384"
+    },
+    "input": {
+      "$ref": "#/383"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "run",
+    "resourceType": "Microsoft.CostManagement/exports",
+    "apiVersion": "2023-03-01",
+    "output": {
+      "$ref": "#/221"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forecast",
     "resourceType": "Microsoft.CostManagement/externalSubscriptions",
     "apiVersion": "2023-03-01",
     "output": {
-      "$ref": "#/314"
+      "$ref": "#/333"
     },
     "input": {
-      "$ref": "#/280"
+      "$ref": "#/304"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "query",
+    "resourceType": "Microsoft.CostManagement/externalSubscriptions",
+    "apiVersion": "2023-03-01",
+    "output": {
+      "$ref": "#/375"
+    },
+    "input": {
+      "$ref": "#/341"
     }
   },
   {
@@ -3983,10 +4896,10 @@
     "resourceType": "Microsoft.CostManagement/externalBillingAccounts",
     "apiVersion": "2023-03-01",
     "output": {
-      "$ref": "#/272"
+      "$ref": "#/333"
     },
     "input": {
-      "$ref": "#/243"
+      "$ref": "#/304"
     }
   },
   {
@@ -3995,37 +4908,10 @@
     "resourceType": "Microsoft.CostManagement/externalBillingAccounts",
     "apiVersion": "2023-03-01",
     "output": {
-      "$ref": "#/314"
+      "$ref": "#/375"
     },
     "input": {
-      "$ref": "#/280"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DownloadURL",
-    "properties": {
-      "expiryTime": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The time at which report URL becomes invalid/expires in UTC e.g. 2020-12-08T05:55:59.4394737Z."
-      },
-      "validTill": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The time at which report URL becomes invalid/expires in UTC e.g. 2020-12-08T05:55:59.4394737Z."
-      },
-      "downloadUrl": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The URL to download the generated report."
-      }
+      "$ref": "#/341"
     }
   },
   {
@@ -4034,7 +4920,7 @@
     "resourceType": "Microsoft.CostManagement/pricesheets",
     "apiVersion": "2023-03-01",
     "output": {
-      "$ref": "#/324"
+      "$ref": "#/302"
     }
   },
   {

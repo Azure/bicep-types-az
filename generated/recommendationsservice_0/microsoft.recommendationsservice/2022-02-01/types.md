@@ -39,6 +39,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.RecommendationsService/accounts/serviceEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.RecommendationsService@2022-02-01)
+* **Resource**: Microsoft.RecommendationsService
+* **ApiVersion**: 2022-02-01
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function status (Microsoft.RecommendationsService/accounts@2022-02-01)
 * **Resource**: Microsoft.RecommendationsService/accounts
 * **ApiVersion**: 2022-02-01
@@ -55,6 +61,17 @@
 ## AccountStatus
 ### Properties
 * **scopesStatuses**: [ScopeStatuses](#scopestatuses)[]: The list of scopes statuses.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the resource for which availability needs to be checked.
+* **type**: string: The resource type.
+
+## CheckNameAvailabilityResponse
+### Properties
+* **message**: string: Detailed reason why the given name is available.
+* **nameAvailable**: bool: Indicates if the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: The reason why the given name is not available.
 
 ## CorsRule
 ### Properties

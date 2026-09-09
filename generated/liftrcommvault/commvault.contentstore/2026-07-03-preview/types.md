@@ -69,6 +69,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Commvault.ContentStore/cloudAccounts/storages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activateSaaS (Commvault.ContentStore@2026-07-03-preview)
+* **Resource**: Commvault.ContentStore
+* **ApiVersion**: 2026-07-03-preview
+* **Input**: [ActivateSaaSParameterRequest](#activatesaasparameterrequest)
+* **Output**: [SaaSResourceDetailsResponse](#saasresourcedetailsresponse)
+
 ## Function backup (Commvault.ContentStore/cloudAccounts/protectionGroups@2026-07-03-preview)
 * **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
 * **ApiVersion**: 2026-07-03-preview
@@ -90,6 +96,12 @@
 * **ApiVersion**: 2026-07-03-preview
 * **Input**: [SaaSData](#saasdata)
 * **Output**: [CloudAccount](#cloudaccount)
+
+## Function protectedItemCount (Commvault.ContentStore@2026-07-03-preview)
+* **Resource**: Commvault.ContentStore
+* **ApiVersion**: 2026-07-03-preview
+* **Input**: [CountProtectedItemsRequest](#countprotecteditemsrequest)
+* **Output**: [CountProtectedItemsResponse](#countprotecteditemsresponse)
 
 ## Function restore (Commvault.ContentStore/cloudAccounts/protectionGroups@2026-07-03-preview)
 * **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
@@ -113,6 +125,10 @@
 * **ApiVersion**: 2026-07-03-preview
 * **Input**: [StopBackupProtectionGroupRequest](#stopbackupprotectiongrouprequest)
 * **Output**: any
+
+## ActivateSaaSParameterRequest
+### Properties
+* **saaSGuid**: string (Required): SaaS guid for Activate and Validate SaaS Resource
 
 ## BackupOptions
 ### Properties
@@ -151,6 +167,14 @@
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
 * **ssoUrl**: string (ReadOnly): SSO URL for the Commvault Cloud Account
 * **user**: [LiftrBaseUserDetails](#liftrbaseuserdetails) (Required): Details of the user.
+
+## CountProtectedItemsRequest
+### Properties
+* **resourceIds**: string[] {minLength: 1} (Required): The list of CCA resource IDs.
+
+## CountProtectedItemsResponse
+### Properties
+* **count**: string (Required): The count of protected items.
 
 ## EntityInfo
 ### Properties
@@ -276,6 +300,14 @@
 ## SaaSData
 ### Properties
 * **saaSResourceId**: string: SaaS resource id
+
+## SaaSResourceDetailsResponse
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **saaSResourceId**: string: Id of the Marketplace SaaS Resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## Schedule
 ### Properties

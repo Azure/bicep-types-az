@@ -2774,5 +2774,96 @@
     "output": {
       "$ref": "#/195"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AmlFilesystemSubnetInfo",
+    "properties": {
+      "filesystemSubnet": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Subnet used for managing the AML file system and for client-facing operations. This subnet should have at least a /24 subnet mask within the VNET's address space."
+      },
+      "storageCapacityTiB": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The size of the AML file system, in TiB."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 0,
+        "description": "SKU for the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Region that the AML file system will be created in."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkAmlFSSubnets",
+    "resourceType": "Microsoft.StorageCache",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/195"
+    },
+    "input": {
+      "$ref": "#/217"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequiredAmlFilesystemSubnetsSizeInfo",
+    "properties": {
+      "storageCapacityTiB": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The size of the AML file system, in TiB."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 0,
+        "description": "SKU for the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequiredAmlFilesystemSubnetsSize",
+    "properties": {
+      "filesystemSubnetSize": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The number of available IP addresses that are required for the AML file system."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getRequiredAmlFSSubnetsSize",
+    "resourceType": "Microsoft.StorageCache",
+    "apiVersion": "2023-03-01-preview",
+    "output": {
+      "$ref": "#/220"
+    },
+    "input": {
+      "$ref": "#/219"
+    }
   }
 ]

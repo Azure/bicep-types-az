@@ -59,6 +59,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activateSaaS (Microsoft.Datadog@2025-12-26-preview)
+* **Resource**: Microsoft.Datadog
+* **ApiVersion**: 2025-12-26-preview
+* **Input**: [ActivateSaaSParameterRequest](#activatesaasparameterrequest)
+* **Output**: [SaaSResourceDetailsResponse](#saasresourcedetailsresponse)
+
 ## Function getBillingInfo (Microsoft.Datadog/monitors@2025-12-26-preview)
 * **Resource**: Microsoft.Datadog/monitors
 * **ApiVersion**: 2025-12-26-preview
@@ -127,6 +133,12 @@
 * **ApiVersion**: 2025-12-26-preview
 * **Input**: [DatadogApiKey](#datadogapikey)
 * **Output**: any
+
+## ActivateSaaSParameterRequest
+### Properties
+* **datadogOrganizationProperties**: [DatadogOrganizationProperties](#datadogorganizationproperties): Datadog organization properties to link the Saas resource to.
+* **saaSResourceId**: string (Required): SaaS resource id of marketplace saas subscription to be activated.
+* **userInfo**: [UserInfo](#userinfo): User information of the person activating the SaaS resource.
 
 ## AgentRules
 ### Properties
@@ -346,6 +358,14 @@ For earlier API versions, defaults to the legacy offer.
 ## SaaSData
 ### Properties
 * **saaSResourceId**: string: SaaS resource id
+
+## SaaSResourceDetailsResponse
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **saaSId**: string: Id of the Marketplace SaaS Resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## SreAgentConfiguration
 ### Properties

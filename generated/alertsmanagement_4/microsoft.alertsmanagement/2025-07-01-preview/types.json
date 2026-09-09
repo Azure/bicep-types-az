@@ -1,0 +1,721 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "PreviewAlertRuleRequest",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The location of the rule resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PreviewAlertRuleRequestProperties",
+    "properties": {
+      "timespan": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Specifies the timespan of the preview in ISO 8601 duration format."
+      },
+      "scheduledQueryRuleProperties": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "The properties of the alert rule to preview."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAlertRuleResource",
+    "properties": {
+      "tags": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Indicates the type of scheduled query rule. The default is LogAlert."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 1,
+        "description": "The rule properties of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAlertRuleResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LogAlert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EventLogAlert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LogToMetric"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAlertRuleProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The description of the scheduled query rule."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The display name of the alert rule"
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Severity of the alert. Should be an integer between [0-4]. Value of 0 is severest. Relevant and required only for rules of the kind LogAlert."
+      },
+      "enabled": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "The flag which indicates whether this scheduled query rule is enabled. Value should be true or false"
+      },
+      "scopes": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The list of resource id's that this scheduled query rule is scoped to."
+      },
+      "evaluationFrequency": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "How often the scheduled query rule is evaluated represented in ISO 8601 duration format. Relevant and required only for rules of the kind LogAlert."
+      },
+      "windowSize": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The period of time (in ISO 8601 duration format) on which the Alert query will be executed (bin size). Relevant and required only for rules of the kind LogAlert."
+      },
+      "overrideQueryTimeRange": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "If specified then overrides the query time range (default is WindowSize*NumberOfEvaluationPeriods). Relevant only for rules of the kind LogAlert."
+      },
+      "targetResourceTypes": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "List of resource type of the target resource(s) on which the alert is created/updated. For example if the scope is a resource group and targetResourceTypes is Microsoft.Compute/virtualMachines, then a different alert will be fired for each virtual machine in the resource group which meet the alert criteria. Relevant only for rules of the kind LogAlert"
+      },
+      "criteria": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The rule criteria that defines the conditions of the scheduled query rule."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAlertRuleCriteria",
+    "properties": {
+      "allOf": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "A list of conditions to evaluate against the specified scopes"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAlertRuleCondition",
+    "properties": {
+      "criterionType": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Specifies the type of threshold criteria"
+      },
+      "query": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "KQL log query alert"
+      },
+      "timeAggregation": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Aggregation type. Relevant and required only for rules of the kind LogAlert."
+      },
+      "metricMeasureColumn": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The column containing the metric measure number. Relevant only for rules of the kind LogAlert."
+      },
+      "resourceIdColumn": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The column containing the resource id. The content of the column must be a uri formatted as resource id. Relevant only for rules of the kind LogAlert."
+      },
+      "dimensions": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "List of Dimensions conditions"
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "The criteria operator. Relevant and required only for rules of the kind LogAlert."
+      },
+      "threshold": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "the criteria threshold value that activates the alert. Relevant and required only for static threshold rules of the kind LogAlert."
+      },
+      "alertSensitivity": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The extent of deviation required to trigger an alert. Allowed values are 'Low', 'Medium' and 'High'. This will affect how tight the threshold is to the metric series pattern. Relevant and required only for dynamic threshold rules of the kind LogAlert."
+      },
+      "ignoreDataBefore": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format). Relevant only for dynamic threshold rules of the kind LogAlert."
+      },
+      "failingPeriods": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "The minimum number of violations required within the selected lookback time window required to raise an alert. Relevant only for rules of the kind LogAlert."
+      },
+      "metricName": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The name of the metric to be sent. Relevant and required only for rules of the kind LogToMetric."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StaticThresholdCriterion"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DynamicThresholdCriterion"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Count"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Average"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Minimum"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Maximum"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Total"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAlertRuleDimension",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Name of the dimension"
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 1,
+        "description": "Operator for dimension values"
+      },
+      "values": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 1,
+        "description": "List of dimension values"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Include"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exclude"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Equals"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GreaterThan"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GreaterThanOrEqual"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LessThan"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LessThanOrEqual"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GreaterOrLessThan"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogAlertRuleConditionFailingPeriods",
+    "properties": {
+      "numberOfEvaluationPeriods": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points. Default value is 1"
+      },
+      "minFailingPeriodsToAlert": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods. Default value is 1"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/15"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PreviewAlertRuleResponse",
+    "properties": {
+      "rulePreviewResults": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "An array of rule preview results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RulePreviewResult",
+    "properties": {
+      "dimensionCombination": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "The list of dimensions for the evaluation."
+      },
+      "evaluations": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "An array of evaluations."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DimensionNameAndValue",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Name of the dimension"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Value of the dimension"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Evaluation",
+    "properties": {
+      "evaluationTime": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The time when the evaluation was performed."
+      },
+      "alertState": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "The state of the alert after the evaluation."
+      },
+      "evaluatedPeriods": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "An array of evaluated periods."
+      },
+      "thresholdMet": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Indicates whether the threshold was met for this evaluation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoAlert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Fired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Firing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resolving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Resolved"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EvaluatedPeriod",
+    "properties": {
+      "timestamp": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The timestamp of the evaluated period."
+      },
+      "highThreshold": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The high threshold value for the evaluation period."
+      },
+      "lowThreshold": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The low threshold value for the evaluation period."
+      },
+      "metricValue": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The metric value for the evaluation period."
+      },
+      "thresholdMet": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Indicates whether the threshold was met during the evaluation period."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/44"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/41"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "previewAlertRule",
+    "resourceType": "Microsoft.AlertsManagement",
+    "apiVersion": "2025-07-01-preview",
+    "output": {
+      "$ref": "#/40"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  }
+]

@@ -1,5 +1,5 @@
 Generating types for 'specification/frontdoor/resource-manager/Microsoft.Network/FrontDoor/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v22.23.2]
+AutoRest code generation utility [cli version: 3.8.0; node: v24.20.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
@@ -58,8 +58,6 @@ warning | Skipping Reports_GetTimeseries due to required query parameter "startD
 warning | Skipping Reports_GetTimeseries due to required query parameter "endDateTimeUTC"
 warning | Skipping Reports_GetTimeseries due to required query parameter "aggregationInterval"
 warning | Skipping Reports_GetTimeseries due to required query parameter "timeseriesType"
-warning | Skipping resource POST action path '/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
 warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/purge' has no response schema. Returning 'any'.
 warning | Resource action disableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/disableHttps' has no response schema. Returning 'any'.
 warning | Resource action enableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/enableHttps' has no response schema. Returning 'any'.
@@ -94,8 +92,6 @@ warning | Skipping Reports_GetTimeseries due to required query parameter "startD
 warning | Skipping Reports_GetTimeseries due to required query parameter "endDateTimeUTC"
 warning | Skipping Reports_GetTimeseries due to required query parameter "aggregationInterval"
 warning | Skipping Reports_GetTimeseries due to required query parameter "timeseriesType"
-warning | Skipping resource POST action path '/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
 warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/purge' has no response schema. Returning 'any'.
 warning | Resource action disableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/disableHttps' has no response schema. Returning 'any'.
 warning | Resource action enableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/enableHttps' has no response schema. Returning 'any'.
@@ -297,8 +293,6 @@ warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/FrontDoor/stable/2021-06-01/network.json:138:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
 warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/purge' has no response schema. Returning 'any'.
 warning | Resource action enableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/enableHttps' has no response schema. Returning 'any'.
 warning | Resource action disableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/disableHttps' has no response schema. Returning 'any'.
@@ -670,8 +664,6 @@ warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/FrontDoor/stable/2020-05-01/network.json:138:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
 warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/purge' has no response schema. Returning 'any'.
 warning | Resource action enableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/enableHttps' has no response schema. Returning 'any'.
 warning | Resource action disableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/disableHttps' has no response schema. Returning 'any'.
@@ -803,8 +795,6 @@ warning | PreCheck/SchemaMissingType | The schema 'RulesEngineProperties' with a
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/FrontDoor/stable/2020-04-01/frontdoor.json:2073:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
 warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/purge' has no response schema. Returning 'any'.
 warning | Resource action enableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/enableHttps' has no response schema. Returning 'any'.
 warning | Resource action disableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/disableHttps' has no response schema. Returning 'any'.
@@ -904,8 +894,6 @@ warning | PreCheck/SchemaMissingType | The schema 'RulesEngineProperties' with a
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/FrontDoor/stable/2020-01-01/frontdoor.json:2063:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
 warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/purge' has no response schema. Returning 'any'.
 warning | Resource action enableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/enableHttps' has no response schema. Returning 'any'.
 warning | Resource action disableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/disableHttps' has no response schema. Returning 'any'.
@@ -1050,8 +1038,6 @@ warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/FrontDoor/stable/2019-05-01/network.json:138:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
 warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/purge' has no response schema. Returning 'any'.
 warning | Resource action enableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/enableHttps' has no response schema. Returning 'any'.
 warning | Resource action disableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/disableHttps' has no response schema. Returning 'any'.
@@ -1194,8 +1180,6 @@ warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/FrontDoor/stable/2019-04-01/network.json:138:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
 warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/purge' has no response schema. Returning 'any'.
 warning | Resource action enableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/enableHttps' has no response schema. Returning 'any'.
 warning | Resource action disableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/disableHttps' has no response schema. Returning 'any'.
@@ -1309,8 +1293,6 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'MatchCondition' (5 
   - x-ms-enum: <none> => {"name":"MatchCondition","modelAsString":true}
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'MatchCondition' -> 'MatchConditionAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'WebApplicationFirewallPolicy' -> 'WebApplicationFirewallPolicyAutoGenerated'
-warning | Skipping resource POST action path '/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/checkFrontDoorNameAvailability': Unable to find type segments
 warning | Resource action purge under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/purge' has no response schema. Returning 'any'.
 warning | Resource action enableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/enableHttps' has no response schema. Returning 'any'.
 warning | Resource action disableHttps under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}/frontendEndpoints/{frontendEndpointName}/disableHttps' has no response schema. Returning 'any'.

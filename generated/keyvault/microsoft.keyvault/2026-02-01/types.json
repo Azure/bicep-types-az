@@ -4272,6 +4272,165 @@
     "writableScopes": 0
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckMhsmNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The managed hsm name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckMhsmNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "A boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/362"
+        },
+        "flags": 2,
+        "description": "The reason that a managed hsm name could not be used. The reason element is only returned if NameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "An error message explaining the Reason value in more detail."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AccountNameInvalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/360"
+      },
+      {
+        "$ref": "#/361"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkMhsmNameAvailability",
+    "resourceType": "Microsoft.KeyVault",
+    "apiVersion": "2026-02-01",
+    "output": {
+      "$ref": "#/359"
+    },
+    "input": {
+      "$ref": "#/358"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VaultCheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The vault name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/365"
+        },
+        "flags": 1,
+        "description": "The type of resource, Microsoft.KeyVault/vaults"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.KeyVault/vaults"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "A boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/369"
+        },
+        "flags": 2,
+        "description": "The reason that a vault name could not be used. The Reason element is only returned if NameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "An error message explaining the Reason value in more detail."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AccountNameInvalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/367"
+      },
+      {
+        "$ref": "#/368"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.KeyVault",
+    "apiVersion": "2026-02-01",
+    "output": {
+      "$ref": "#/366"
+    },
+    "input": {
+      "$ref": "#/364"
+    }
+  },
+  {
     "$type": "AnyType"
   },
   {
@@ -4280,7 +4439,7 @@
     "resourceType": "Microsoft.KeyVault/locations/deletedManagedHSMs",
     "apiVersion": "2026-02-01",
     "output": {
-      "$ref": "#/358"
+      "$ref": "#/371"
     }
   },
   {
@@ -4289,7 +4448,7 @@
     "resourceType": "Microsoft.KeyVault/locations/deletedVaults",
     "apiVersion": "2026-02-01",
     "output": {
-      "$ref": "#/358"
+      "$ref": "#/371"
     }
   }
 ]

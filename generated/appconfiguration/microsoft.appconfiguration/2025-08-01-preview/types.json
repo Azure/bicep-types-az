@@ -2436,6 +2436,18 @@
   {
     "$type": "ResourceFunctionType",
     "name": "checkNameAvailability",
+    "resourceType": "Microsoft.AppConfiguration",
+    "apiVersion": "2025-08-01-preview",
+    "output": {
+      "$ref": "#/189"
+    },
+    "input": {
+      "$ref": "#/186"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
     "resourceType": "Microsoft.AppConfiguration/locations",
     "apiVersion": "2025-08-01-preview",
     "output": {
@@ -2454,7 +2466,7 @@
     "resourceType": "Microsoft.AppConfiguration/locations/deletedConfigurationStores",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/191"
+      "$ref": "#/192"
     }
   },
   {
@@ -2463,7 +2475,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/195"
+          "$ref": "#/196"
         },
         "flags": 1,
         "description": "The ApiKey items on this page"
@@ -2528,7 +2540,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/194"
+      "$ref": "#/195"
     }
   },
   {
@@ -2537,7 +2549,7 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/193"
+      "$ref": "#/194"
     }
   },
   {
@@ -2559,10 +2571,10 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/194"
+      "$ref": "#/195"
     },
     "input": {
-      "$ref": "#/197"
+      "$ref": "#/198"
     }
   },
   {
@@ -2612,7 +2624,7 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores/networkSecurityPerimeterConfigurations",
     "apiVersion": "2025-08-01-preview",
     "output": {
-      "$ref": "#/199"
+      "$ref": "#/200"
     }
   }
 ]

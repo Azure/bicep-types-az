@@ -20,6 +20,11 @@
 * **properties**: [RoleDefinitionProperties](#roledefinitionproperties): Role definition properties.
 * **type**: 'Microsoft.Authorization/roleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function elevateAccess (Microsoft.Authorization@2015-07-01)
+* **Resource**: Microsoft.Authorization
+* **ApiVersion**: 2015-07-01
+* **Output**: any
+
 ## Permission
 ### Properties
 * **actions**: string[]: Allowed actions.

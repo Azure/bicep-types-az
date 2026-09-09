@@ -1,0 +1,187 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionCreationParameters",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The display name of the subscription."
+      },
+      "managementGroupId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The Management Group Id."
+      },
+      "owners": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "The list of principals that should be granted Owner access on the subscription. Principals should be of type User, Service Principal or Security Group."
+      },
+      "offerType": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The offer type of the subscription. For example, MS-AZR-0017P (EnterpriseAgreement) and MS-AZR-0148P (EnterpriseAgreement devTest) are available. Only valid when creating a subscription in a enrollment account scope."
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdPrincipal",
+    "properties": {
+      "objectId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Object id of the Principal"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MS-AZR-0017P"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MS-AZR-0148P"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/4"
+      },
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionCreationResult",
+    "properties": {
+      "subscriptionLink": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The link to the new subscription. Use this link to check the status of subscription creation operation."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createSubscription",
+    "resourceType": "Microsoft.Subscription",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/7"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CanceledSubscriptionId",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "The ID of the canceled subscription"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "cancel",
+    "resourceType": "Microsoft.Subscription",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/9"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionName",
+    "properties": {
+      "subscriptionName": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "New subscription name"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RenamedSubscriptionId",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "The ID of the subscriptions that is being renamed"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "rename",
+    "resourceType": "Microsoft.Subscription",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/12"
+    },
+    "input": {
+      "$ref": "#/11"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnabledSubscriptionId",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "The ID of the subscriptions that is being enabled"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "enable",
+    "resourceType": "Microsoft.Subscription",
+    "apiVersion": "2020-01-01",
+    "output": {
+      "$ref": "#/14"
+    }
+  }
+]

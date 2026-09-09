@@ -2143,11 +2143,110 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Name to check the namespace name availability and The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the namespace."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "Value indicating namespace is availability, true if the namespace is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a namespace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionIsDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInLockdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TooManyNamespaceInCurrentSubscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "CheckNameAvailability",
+    "resourceType": "Microsoft.ServiceBus",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/145"
+    },
+    "input": {
+      "$ref": "#/144"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SBNamespaceMigrate",
     "properties": {
       "targetNamespaceType": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/160"
         },
         "flags": 1,
         "description": "Type of namespaces"
@@ -2178,19 +2277,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/145"
+        "$ref": "#/155"
       },
       {
-        "$ref": "#/146"
+        "$ref": "#/156"
       },
       {
-        "$ref": "#/147"
+        "$ref": "#/157"
       },
       {
-        "$ref": "#/148"
+        "$ref": "#/158"
       },
       {
-        "$ref": "#/149"
+        "$ref": "#/159"
       }
     ]
   },
@@ -2203,10 +2302,10 @@
     "resourceType": "Microsoft.ServiceBus/namespaces",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/151"
+      "$ref": "#/161"
     },
     "input": {
-      "$ref": "#/144"
+      "$ref": "#/154"
     }
   },
   {
@@ -2257,7 +2356,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/151"
+      "$ref": "#/161"
     }
   },
   {
@@ -2266,7 +2365,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/151"
+      "$ref": "#/161"
     }
   },
   {
@@ -2284,7 +2383,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/151"
+      "$ref": "#/161"
     }
   },
   {
@@ -2293,7 +2392,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/151"
+      "$ref": "#/161"
     }
   }
 ]

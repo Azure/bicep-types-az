@@ -31,6 +31,22 @@
 * **Input**: [AcceptOwnershipRequest](#acceptownershiprequest)
 * **Output**: any
 
+## Function cancel (Microsoft.Subscription@2021-10-01)
+* **Resource**: Microsoft.Subscription
+* **ApiVersion**: 2021-10-01
+* **Output**: [CanceledSubscriptionId](#canceledsubscriptionid)
+
+## Function enable (Microsoft.Subscription@2021-10-01)
+* **Resource**: Microsoft.Subscription
+* **ApiVersion**: 2021-10-01
+* **Output**: [EnabledSubscriptionId](#enabledsubscriptionid)
+
+## Function rename (Microsoft.Subscription@2021-10-01)
+* **Resource**: Microsoft.Subscription
+* **ApiVersion**: 2021-10-01
+* **Input**: [SubscriptionName](#subscriptionname)
+* **Output**: [RenamedSubscriptionId](#renamedsubscriptionid)
+
 ## AcceptOwnershipRequest
 ### Properties
 * **properties**: [AcceptOwnershipRequestProperties](#acceptownershiprequestproperties): Accept subscription ownership request properties.
@@ -45,6 +61,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CanceledSubscriptionId
+### Properties
+* **subscriptionId**: string (ReadOnly): The ID of the canceled subscription
+
+## EnabledSubscriptionId
+### Properties
+* **subscriptionId**: string (ReadOnly): The ID of the subscriptions that is being enabled
 
 ## PutAliasRequestAdditionalProperties
 ### Properties
@@ -77,10 +101,18 @@ For Legacy EA - /billingAccounts/{billingAccountName}/enrollmentAccounts/{enroll
 * **tags**: [SubscriptionAliasResponsePropertiesTags](#subscriptionaliasresponsepropertiestags) (ReadOnly): Tags for the subscription
 * **workload**: 'DevTest' | 'Production' | string: The workload type of the subscription. It can be either Production or DevTest.
 
+## RenamedSubscriptionId
+### Properties
+* **subscriptionId**: string (ReadOnly): The ID of the subscriptions that is being renamed
+
 ## SubscriptionAliasResponsePropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SubscriptionName
+### Properties
+* **subscriptionName**: string: New subscription name
 
 ## SystemData
 ### Properties

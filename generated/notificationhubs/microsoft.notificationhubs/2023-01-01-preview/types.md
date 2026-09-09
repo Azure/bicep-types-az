@@ -76,6 +76,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NotificationHubs/namespaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNamespaceAvailability (Microsoft.NotificationHubs@2023-01-01-preview)
+* **Resource**: Microsoft.NotificationHubs
+* **ApiVersion**: 2023-01-01-preview
+* **Input**: [CheckAvailabilityParameters](#checkavailabilityparameters)
+* **Output**: [CheckAvailabilityResult](#checkavailabilityresult)
+
 ## Function checkNotificationHubAvailability (Microsoft.NotificationHubs/namespaces@2023-01-01-preview)
 * **Resource**: Microsoft.NotificationHubs/namespaces
 * **ApiVersion**: 2023-01-01-preview

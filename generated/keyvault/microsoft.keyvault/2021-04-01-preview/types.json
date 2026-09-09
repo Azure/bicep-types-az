@@ -3003,6 +3003,88 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "VaultCheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The vault name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/266"
+        },
+        "flags": 1,
+        "description": "The type of resource, Microsoft.KeyVault/vaults"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.KeyVault/vaults"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 2,
+        "description": "A boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or is invalid and cannot be used."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/270"
+        },
+        "flags": 2,
+        "description": "The reason that a vault name could not be used. The Reason element is only returned if NameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "An error message explaining the Reason value in more detail."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AccountNameInvalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/268"
+      },
+      {
+        "$ref": "#/269"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.KeyVault",
+    "apiVersion": "2021-04-01-preview",
+    "output": {
+      "$ref": "#/267"
+    },
+    "input": {
+      "$ref": "#/265"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "purge",
     "resourceType": "Microsoft.KeyVault/locations/deletedManagedHSMs",

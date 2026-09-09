@@ -67,6 +67,12 @@
 * **properties**: [QueryTextProperties](#querytextproperties) (ReadOnly): The properties of a query text.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/queryTexts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DBforPostgreSQL@2021-06-01-preview)
+* **Resource**: Microsoft.DBforPostgreSQL
+* **ApiVersion**: 2021-06-01-preview
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function checkVirtualNetworkSubnetUsage (Microsoft.DBforPostgreSQL/locations@2021-06-01-preview)
 * **Resource**: Microsoft.DBforPostgreSQL/locations
 * **ApiVersion**: 2021-06-01-preview
@@ -141,6 +147,19 @@
 * **dayOfWeek**: int: day of week for maintenance window
 * **startHour**: int: start hour for maintenance window
 * **startMinute**: int: start minute for maintenance window
+
+## NameAvailability
+### Properties
+* **message**: string (ReadOnly): Error Message.
+* **name**: string (ReadOnly): name of the PostgreSQL server.
+* **nameAvailable**: bool (ReadOnly): Indicates whether the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string (ReadOnly): The name availability reason.
+* **type**: string (ReadOnly): type of the server
+
+## NameAvailabilityRequest
+### Properties
+* **name**: string (Required): Resource name to verify.
+* **type**: string: Resource type used for verification.
 
 ## Network
 ### Properties

@@ -1,0 +1,412 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangeDetailsRequestParameters",
+    "properties": {
+      "resourceIds": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Specifies the list of resources for a change details request."
+      },
+      "changeIds": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 1,
+        "description": "Specifies the list of change IDs for a change details request."
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangeData",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The resource for a change."
+      },
+      "changeId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The change ID. Valid and unique within the specified resource only."
+      },
+      "beforeSnapshot": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "The snapshot before the change."
+      },
+      "afterSnapshot": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "The snapshot after the change."
+      },
+      "changeType": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "The change type for snapshot. PropertyChanges will be provided in case of Update change type"
+      },
+      "propertyChanges": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "An array of resource property change"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangeDataBeforeSnapshot",
+    "properties": {
+      "snapshotId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The ID of the snapshot."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The time when the snapshot was created.\nThe snapshot timestamp provides an approximation as to when a modification to a resource was detected.  There can be a difference between the actual modification time and the detection time.  This is due to differences in how operations that modify a resource are processed, versus how operation that record resource snapshots are processed."
+      },
+      "content": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The resource snapshot content (in resourceChangeDetails response only)."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangeDataAfterSnapshot",
+    "properties": {
+      "snapshotId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The ID of the snapshot."
+      },
+      "timestamp": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The time when the snapshot was created.\nThe snapshot timestamp provides an approximation as to when a modification to a resource was detected.  There can be a difference between the actual modification time and the detection time.  This is due to differences in how operations that modify a resource are processed, versus how operation that record resource snapshots are processed."
+      },
+      "content": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The resource snapshot content (in resourceChangeDetails response only)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Create"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Update"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourcePropertyChange",
+    "properties": {
+      "propertyName": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The property name"
+      },
+      "beforeValue": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The property value in before snapshot"
+      },
+      "afterValue": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The property value in after snapshot"
+      },
+      "changeCategory": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "The change category."
+      },
+      "propertyChangeType": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 1,
+        "description": "The property change Type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Insert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Update"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Remove"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/4"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resourceChangeDetails",
+    "resourceType": "Microsoft.ResourceGraph",
+    "apiVersion": "2020-09-01-preview",
+    "output": {
+      "$ref": "#/21"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangesRequestParameters",
+    "properties": {
+      "resourceIds": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Specifies the list of resources for a changes request."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The subscription id of resources to query the changes from."
+      },
+      "interval": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 1,
+        "description": "Specifies the date and time interval for a changes request."
+      },
+      "$skipToken": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "Acts as the continuation token for paged responses."
+      },
+      "$top": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The maximum number of changes the client can accept in a paged response."
+      },
+      "table": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The table name to query resources from."
+      },
+      "fetchPropertyChanges": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The flag if set to true will fetch property changes"
+      },
+      "fetchSnapshots": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The flag if set to true will fetch change snapshots"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangesRequestParametersInterval",
+    "properties": {
+      "start": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "A datetime indicating the inclusive/closed start of the time interval, i.e. `[`**`start`**`, end)`. Specifying a `start` that occurs chronologically after `end` will result in an error."
+      },
+      "end": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "A datetime indicating the exclusive/open end of the time interval, i.e. `[start, `**`end`**`)`. Specifying an `end` that occurs chronologically before `start` will result in an error."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 1000
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceChangeList",
+    "properties": {
+      "changes": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "The pageable value returned by the operation, i.e. a list of changes to the resource.\n\n- The list is ordered from the most recent changes to the least recent changes.\n- This list will be empty if there were no changes during the requested interval.\n- The `Before` snapshot timestamp value of the oldest change can be outside of the specified time interval."
+      },
+      "$skipToken": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Skip token that encodes the skip information while executing the current request"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/4"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "resourceChanges",
+    "resourceType": "Microsoft.ResourceGraph",
+    "apiVersion": "2020-09-01-preview",
+    "output": {
+      "$ref": "#/28"
+    },
+    "input": {
+      "$ref": "#/23"
+    }
+  }
+]

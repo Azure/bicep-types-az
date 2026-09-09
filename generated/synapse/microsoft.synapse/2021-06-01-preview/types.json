@@ -13017,11 +13017,77 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Workspace name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Type: workspace"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Validation message"
+      },
+      "available": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Whether the workspace name is available"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Reason the workspace name is or is not available"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Workspace name"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Synapse",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/953"
+    },
+    "input": {
+      "$ref": "#/952"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ReplaceAllIpFirewallRulesRequest",
     "properties": {
       "ipFirewallRules": {
         "type": {
-          "$ref": "#/953"
+          "$ref": "#/956"
         },
         "flags": 0,
         "description": "IP firewall rule properties"
@@ -13055,10 +13121,10 @@
     "resourceType": "Microsoft.Synapse/workspaces",
     "apiVersion": "2021-06-01-preview",
     "output": {
-      "$ref": "#/954"
+      "$ref": "#/957"
     },
     "input": {
-      "$ref": "#/952"
+      "$ref": "#/955"
     }
   },
   {
@@ -13074,7 +13140,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/957"
+          "$ref": "#/960"
         },
         "flags": 0,
         "description": "Workspace Check Default Storage Account Status Properties."
@@ -13125,7 +13191,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/956"
+      "$ref": "#/959"
     }
   },
   {
@@ -13134,7 +13200,7 @@
     "resourceType": "Microsoft.Synapse/workspaces",
     "apiVersion": "2021-06-01-preview",
     "output": {
-      "$ref": "#/958"
+      "$ref": "#/961"
     },
     "input": {
       "$ref": "#/35"
@@ -13160,7 +13226,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/961"
+          "$ref": "#/964"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -13209,7 +13275,7 @@
     "resourceType": "Microsoft.Synapse/workspaces/sqlPools",
     "apiVersion": "2021-06-01-preview",
     "output": {
-      "$ref": "#/960"
+      "$ref": "#/963"
     }
   },
   {
@@ -13218,7 +13284,7 @@
     "resourceType": "Microsoft.Synapse/workspaces/sqlPools",
     "apiVersion": "2021-06-01-preview",
     "output": {
-      "$ref": "#/960"
+      "$ref": "#/963"
     }
   },
   {
@@ -13281,10 +13347,10 @@
     "resourceType": "Microsoft.Synapse/workspaces/sqlPools",
     "apiVersion": "2021-06-01-preview",
     "output": {
-      "$ref": "#/965"
+      "$ref": "#/968"
     },
     "input": {
-      "$ref": "#/964"
+      "$ref": "#/967"
     }
   },
   {
@@ -13320,7 +13386,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/971"
+          "$ref": "#/974"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -13367,7 +13433,7 @@
     "resourceType": "Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans",
     "apiVersion": "2021-06-01-preview",
     "output": {
-      "$ref": "#/970"
+      "$ref": "#/973"
     }
   },
   {

@@ -2007,6 +2007,65 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Returns true or false depending on the availability of the name"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason for why value is not available. This field is returned if nameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets an error message explaining the 'reason' value with more details. This field is returned iif nameAvailable is false."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Help",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/159"
+    },
+    "input": {
+      "$ref": "#/158"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ContinueRequestBody",
     "properties": {
       "stepId": {
@@ -2018,7 +2077,7 @@
       },
       "responses": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/168"
         },
         "flags": 0
       }
@@ -2037,7 +2096,7 @@
       },
       "questionType": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "Type of Question"
@@ -2071,16 +2130,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/160"
-      },
-      {
-        "$ref": "#/161"
-      },
-      {
-        "$ref": "#/162"
-      },
-      {
         "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
       },
       {
         "$ref": "#/2"
@@ -2090,7 +2149,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/159"
+      "$ref": "#/162"
     }
   },
   {
@@ -2102,7 +2161,7 @@
       "$ref": "#/154"
     },
     "input": {
-      "$ref": "#/158"
+      "$ref": "#/161"
     }
   },
   {
@@ -2133,7 +2192,7 @@
     "resourceType": "Microsoft.Help/troubleshooters",
     "apiVersion": "2023-09-01-preview",
     "output": {
-      "$ref": "#/168"
+      "$ref": "#/171"
     }
   }
 ]

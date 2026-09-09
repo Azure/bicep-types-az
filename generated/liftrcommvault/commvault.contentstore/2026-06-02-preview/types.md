@@ -58,6 +58,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Commvault.ContentStore/cloudAccounts/storages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activateSaaS (Commvault.ContentStore@2026-06-02-preview)
+* **Resource**: Commvault.ContentStore
+* **ApiVersion**: 2026-06-02-preview
+* **Input**: [ActivateSaaSParameterRequest](#activatesaasparameterrequest)
+* **Output**: [SaaSResourceDetailsResponse](#saasresourcedetailsresponse)
+
 ## Function backup (Commvault.ContentStore/cloudAccounts/protectionGroups@2026-06-02-preview)
 * **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
 * **ApiVersion**: 2026-06-02-preview
@@ -102,6 +108,10 @@
 * **ApiVersion**: 2026-06-02-preview
 * **Input**: [StopBackupProtectionGroupRequest](#stopbackupprotectiongrouprequest)
 * **Output**: any
+
+## ActivateSaaSParameterRequest
+### Properties
+* **saaSGuid**: string (Required): SaaS guid for Activate and Validate SaaS Resource
 
 ## BackupOptions
 ### Properties
@@ -247,6 +257,14 @@
 ## SaaSData
 ### Properties
 * **saaSResourceId**: string: SaaS resource id
+
+## SaaSResourceDetailsResponse
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **saaSResourceId**: string: Id of the Marketplace SaaS Resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## Schedule
 ### Properties

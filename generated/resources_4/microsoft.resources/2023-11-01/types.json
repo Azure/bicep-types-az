@@ -1,0 +1,76 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "DecompileOperationRequest",
+    "properties": {
+      "template": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The ARM json template to be decompiled into a Bicep file"
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DecompileOperationSuccessResponse",
+    "properties": {
+      "files": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "An array of key-value pairs containing the entryPoint string as the key for the Bicep file decompiled from the ARM json template"
+      },
+      "entryPoint": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The file path to the main Bicep file generated from the decompiled ARM json template."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileDefinition",
+    "properties": {
+      "path": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The file path of the Bicep file."
+      },
+      "contents": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The contents of the Bicep file."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/3"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "decompileBicep",
+    "resourceType": "Microsoft.Resources",
+    "apiVersion": "2023-11-01",
+    "output": {
+      "$ref": "#/2"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  }
+]

@@ -131,6 +131,12 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **ApiVersion**: 2019-06-01-preview
 * **Output**: any
 
+## Function checkNameAvailability (Microsoft.Sql@2019-06-01-preview)
+* **Resource**: Microsoft.Sql
+* **ApiVersion**: 2019-06-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function completeRestore (Microsoft.Sql/managedInstances/databases@2019-06-01-preview)
 * **Resource**: Microsoft.Sql/managedInstances/databases
 * **ApiVersion**: 2019-06-01-preview
@@ -190,6 +196,18 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **login**: string (Required): Login name of the server administrator.
 * **sid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): SID (object ID) of the server administrator.
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Tenant ID of the administrator.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string (Required)
+* **type**: 'Microsoft.Sql/servers' (Required)
+
+## CheckNameAvailabilityResponse
+### Properties
+* **available**: bool (ReadOnly): True if the name is available, otherwise false.
+* **message**: string (ReadOnly): A message explaining why the name is unavailable. Will be undefined if the name is available.
+* **name**: string (ReadOnly): The name whose availability was checked.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason code explaining why the name is unavailable. Will be undefined if the name is available.
 
 ## CompleteDatabaseRestoreDefinition
 ### Properties

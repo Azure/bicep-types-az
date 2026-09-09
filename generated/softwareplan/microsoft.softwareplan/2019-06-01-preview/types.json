@@ -145,5 +145,17 @@
     },
     "readableScopes": 31,
     "writableScopes": 31
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "register",
+    "resourceType": "Microsoft.SoftwarePlan",
+    "apiVersion": "2019-06-01-preview",
+    "output": {
+      "$ref": "#/12"
+    }
   }
 ]

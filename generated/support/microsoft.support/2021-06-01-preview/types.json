@@ -1,0 +1,54 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "LookUpResourceIdRequest",
+    "properties": {
+      "identifier": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The System generated Id that is unique. Use supportTicketId property for Microsoft.Support/supportTickets resource type."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The type of resource."
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Support/supportTickets"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LookUpResourceIdResponse",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The resource Id of support resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "lookUpResourceId",
+    "resourceType": "Microsoft.Support",
+    "apiVersion": "2021-06-01-preview",
+    "output": {
+      "$ref": "#/3"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  }
+]

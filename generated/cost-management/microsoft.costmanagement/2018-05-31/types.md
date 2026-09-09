@@ -11,6 +11,35 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.CostManagement/reportconfigs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function Query (Microsoft.CostManagement@2018-05-31)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2018-05-31
+* **Input**: [ReportConfigDefinition](#reportconfigdefinition)
+* **Output**: [QueryResult](#queryresult)
+
+## Query
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [QueryProperties](#queryproperties)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
+## QueryColumn
+### Properties
+* **name**: string
+* **type**: string
+
+## QueryProperties
+### Properties
+* **columns**: [QueryColumn](#querycolumn)[]: Array of columns
+* **nextLink**: string
+* **rows**: any[][]
+
+## QueryResult
+### Properties
+* **value**: [Query](#query)[] (ReadOnly): The list of usage data.
+
 ## ReportConfigAggregation
 ### Properties
 * **function**: 'Sum' | string (Required): The name of the aggregation function to use.
@@ -91,6 +120,11 @@
 ### Properties
 * **from**: string (Required): The start date to pull data from.
 * **to**: string (Required): The end date to pull data to.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

@@ -13,6 +13,22 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.WindowsIoT/deviceServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkDeviceServiceNameAvailability (Microsoft.WindowsIoT@2019-06-01)
+* **Resource**: Microsoft.WindowsIoT
+* **ApiVersion**: 2019-06-01
+* **Input**: [DeviceServiceCheckNameAvailabilityParameters](#deviceservicechecknameavailabilityparameters)
+* **Output**: [DeviceServiceNameAvailabilityInfo](#deviceservicenameavailabilityinfo)
+
+## DeviceServiceCheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): The name of the Windows IoT Device Service to check.
+
+## DeviceServiceNameAvailabilityInfo
+### Properties
+* **message**: string: The detailed reason message.
+* **nameAvailable**: bool (ReadOnly): The value which indicates whether the provided name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason for unavailability.
+
 ## DeviceServiceProperties
 ### Properties
 * **adminDomainName**: string: Windows IoT Device Service OEM AAD domain

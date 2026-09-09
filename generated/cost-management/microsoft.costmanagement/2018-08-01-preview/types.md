@@ -24,6 +24,12 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.CostManagement/reports' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function Query (Microsoft.CostManagement@2018-08-01-preview)
+* **Resource**: Microsoft.CostManagement
+* **ApiVersion**: 2018-08-01-preview
+* **Input**: [ReportDefinition](#reportdefinition)
+* **Output**: [QueryResult](#queryresult)
+
 ## Function run (Microsoft.CostManagement/reports@2018-08-01-preview)
 * **Resource**: Microsoft.CostManagement/reports
 * **ApiVersion**: 2018-08-01-preview
@@ -58,6 +64,29 @@
 * **providerAccountId**: string (ReadOnly): Connector providerAccountId (determined from credentials)
 * **reportId**: string: Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
 * **status**: 'active' | 'error' | 'suspended' | string: Connector status
+
+## Query
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [QueryProperties](#queryproperties)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
+## QueryColumn
+### Properties
+* **name**: string
+* **type**: string
+
+## QueryProperties
+### Properties
+* **columns**: [QueryColumn](#querycolumn)[]: Array of columns
+* **nextLink**: string
+* **rows**: any[][]
+
+## QueryResult
+### Properties
+* **value**: [Query](#query)[] (ReadOnly): The list of usage data.
 
 ## ReportAggregation
 ### Properties
@@ -139,6 +168,11 @@
 ### Properties
 * **from**: string (Required): The start date to pull data from.
 * **to**: string (Required): The end date to pull data to.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

@@ -2584,6 +2584,18 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "checkNamespaceAvailability",
+    "resourceType": "Microsoft.NotificationHubs",
+    "apiVersion": "2023-09-01",
+    "output": {
+      "$ref": "#/151"
+    },
+    "input": {
+      "$ref": "#/149"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.NotificationHubs/namespaces/authorizationRules",
     "apiVersion": "2023-09-01",

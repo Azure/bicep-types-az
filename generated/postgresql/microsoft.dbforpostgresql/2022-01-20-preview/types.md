@@ -58,11 +58,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.DBforPostgreSQL@2022-01-20-preview)
+* **Resource**: Microsoft.DBforPostgreSQL
+* **ApiVersion**: 2022-01-20-preview
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function checkVirtualNetworkSubnetUsage (Microsoft.DBforPostgreSQL/locations@2022-01-20-preview)
 * **Resource**: Microsoft.DBforPostgreSQL/locations
 * **ApiVersion**: 2022-01-20-preview
 * **Input**: [VirtualNetworkSubnetUsageParameter](#virtualnetworksubnetusageparameter)
 * **Output**: [VirtualNetworkSubnetUsageResult](#virtualnetworksubnetusageresult)
+
+## Function getPrivateDnsZoneSuffix (Microsoft.DBforPostgreSQL@2022-01-20-preview)
+* **Resource**: Microsoft.DBforPostgreSQL
+* **ApiVersion**: 2022-01-20-preview
+* **Output**: string
 
 ## Function restart (Microsoft.DBforPostgreSQL/flexibleServers@2022-01-20-preview)
 * **Resource**: Microsoft.DBforPostgreSQL/flexibleServers
@@ -127,6 +138,19 @@
 * **dayOfWeek**: int: day of week for maintenance window
 * **startHour**: int: start hour for maintenance window
 * **startMinute**: int: start minute for maintenance window
+
+## NameAvailability
+### Properties
+* **message**: string (ReadOnly): Error Message.
+* **name**: string (ReadOnly): name of the PostgreSQL server.
+* **nameAvailable**: bool (ReadOnly): Indicates whether the resource name is available.
+* **reason**: 'AlreadyExists' | 'Invalid' | string (ReadOnly): The name availability reason.
+* **type**: string (ReadOnly): type of the server
+
+## NameAvailabilityRequest
+### Properties
+* **name**: string (Required): Resource name to verify.
+* **type**: string: Resource type used for verification.
 
 ## Network
 ### Properties

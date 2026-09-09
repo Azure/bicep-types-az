@@ -1635,6 +1635,102 @@
   },
   {
     "$type": "ObjectType",
+    "name": "NameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Communication",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/129"
+    },
+    "input": {
+      "$ref": "#/128"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listVerifiedExchangeOnlineDomains",
+    "resourceType": "Microsoft.Communication",
+    "apiVersion": "2025-09-01",
+    "output": {
+      "$ref": "#/134"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "LinkNotificationHubParameters",
     "properties": {
       "resourceId": {
@@ -1672,10 +1768,10 @@
     "resourceType": "Microsoft.Communication/communicationServices",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/129"
+      "$ref": "#/137"
     },
     "input": {
-      "$ref": "#/128"
+      "$ref": "#/136"
     }
   },
   {
@@ -1718,7 +1814,7 @@
     "resourceType": "Microsoft.Communication/communicationServices",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/131"
+      "$ref": "#/139"
     }
   },
   {
@@ -1727,7 +1823,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/144"
         },
         "flags": 0,
         "description": "The keyType to regenerate. Must be either 'primary' or 'secondary'(case-insensitive)."
@@ -1746,10 +1842,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/134"
+        "$ref": "#/142"
       },
       {
-        "$ref": "#/135"
+        "$ref": "#/143"
       }
     ]
   },
@@ -1759,10 +1855,10 @@
     "resourceType": "Microsoft.Communication/communicationServices",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/131"
+      "$ref": "#/139"
     },
     "input": {
-      "$ref": "#/133"
+      "$ref": "#/141"
     }
   },
   {
@@ -1771,7 +1867,7 @@
     "properties": {
       "verificationType": {
         "type": {
-          "$ref": "#/144"
+          "$ref": "#/152"
         },
         "flags": 1,
         "description": "Type of verification."
@@ -1802,19 +1898,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/139"
+        "$ref": "#/147"
       },
       {
-        "$ref": "#/140"
+        "$ref": "#/148"
       },
       {
-        "$ref": "#/141"
+        "$ref": "#/149"
       },
       {
-        "$ref": "#/142"
+        "$ref": "#/150"
       },
       {
-        "$ref": "#/143"
+        "$ref": "#/151"
       },
       {
         "$ref": "#/2"
@@ -1830,10 +1926,10 @@
     "resourceType": "Microsoft.Communication/emailServices/domains",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/145"
+      "$ref": "#/153"
     },
     "input": {
-      "$ref": "#/138"
+      "$ref": "#/146"
     }
   },
   {
@@ -1842,10 +1938,10 @@
     "resourceType": "Microsoft.Communication/emailServices/domains",
     "apiVersion": "2025-09-01",
     "output": {
-      "$ref": "#/145"
+      "$ref": "#/153"
     },
     "input": {
-      "$ref": "#/138"
+      "$ref": "#/146"
     }
   }
 ]

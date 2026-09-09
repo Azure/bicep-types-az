@@ -1518,6 +1518,187 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ElasticOrganizationToAzureSubscriptionMappingResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "The properties of Azure Subscription ID to which the Organization of the logged in user belongs and gets billed into."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElasticOrganizationToAzureSubscriptionMappingResponseProperties",
+    "properties": {
+      "billedAzureSubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Azure Subscription ID to which the Organization belongs and gets billed into. This is empty for a new user OR a user without an Elastic Organization."
+      },
+      "marketplaceSaasInfo": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 2,
+        "description": "Marketplace SaaS Info of the resource."
+      },
+      "elasticOrganizationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Elastic Organization Id."
+      },
+      "elasticOrganizationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Elastic Organization Name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceSaaSInfo",
+    "properties": {
+      "marketplaceSubscription": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription"
+      },
+      "marketplaceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Details: SAAS Name"
+      },
+      "marketplaceResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Details: Resource URI"
+      },
+      "marketplaceStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Details: SaaS Subscription Status"
+      },
+      "billedAzureSubscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Azure Subscription ID to which the Marketplace Subscription belongs and gets billed into."
+      },
+      "subscribed": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Flag specifying if the Marketplace status is subscribed or not."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceSaaSInfoMarketplaceSubscription",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Id. This is a GUID-formatted string."
+      },
+      "publisherId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Publisher Id of the Marketplace offer."
+      },
+      "offerId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Offer Id of the Marketplace offer,"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getElasticOrganizationToAzureSubscriptionMapping",
+    "resourceType": "Microsoft.Elastic",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/121"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserEmailId",
+    "properties": {
+      "emailId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The User email Id"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserApiKeyResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserApiKeyResponseProperties",
+    "properties": {
+      "apiKey": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "The User Api Key Generated based on GenerateApiKey flag. This is applicable for non-Portal clients only."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getOrganizationApiKey",
+    "resourceType": "Microsoft.Elastic",
+    "apiVersion": "2025-06-01",
+    "output": {
+      "$ref": "#/127"
+    },
+    "input": {
+      "$ref": "#/126"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ResubscribeProperties",
     "properties": {
       "planId": {
@@ -1591,7 +1772,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/132"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1647,10 +1828,10 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/122"
+      "$ref": "#/131"
     },
     "input": {
-      "$ref": "#/121"
+      "$ref": "#/130"
     }
   },
   {
@@ -1662,7 +1843,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/125"
+      "$ref": "#/134"
     }
   },
   {
@@ -1671,7 +1852,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/125"
+      "$ref": "#/134"
     }
   },
   {
@@ -1680,7 +1861,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/125"
+      "$ref": "#/134"
     }
   },
   {
@@ -1717,7 +1898,7 @@
       },
       "roles": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/139"
         },
         "flags": 0,
         "description": "Roles to be assigned for  created or updated user"
@@ -1749,10 +1930,10 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/131"
+      "$ref": "#/140"
     },
     "input": {
-      "$ref": "#/129"
+      "$ref": "#/138"
     }
   },
   {
@@ -1761,7 +1942,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/125"
+      "$ref": "#/134"
     }
   },
   {
@@ -1770,7 +1951,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/125"
+      "$ref": "#/134"
     }
   },
   {
@@ -1779,7 +1960,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/125"
+      "$ref": "#/134"
     }
   },
   {
@@ -1788,92 +1969,17 @@
     "properties": {
       "marketplaceSaasInfo": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "Marketplace Subscription details"
       },
       "partnerBillingEntity": {
         "type": {
-          "$ref": "#/139"
+          "$ref": "#/146"
         },
         "flags": 0,
         "description": "Partner Billing Entity details: Organization Info"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "MarketplaceSaaSInfo",
-    "properties": {
-      "marketplaceSubscription": {
-        "type": {
-          "$ref": "#/138"
-        },
-        "flags": 0,
-        "description": "Marketplace Subscription"
-      },
-      "marketplaceName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Marketplace Subscription Details: SAAS Name"
-      },
-      "marketplaceResourceId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Marketplace Subscription Details: Resource URI"
-      },
-      "marketplaceStatus": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Marketplace Subscription Details: SaaS Subscription Status"
-      },
-      "billedAzureSubscriptionId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The Azure Subscription ID to which the Marketplace Subscription belongs and gets billed into."
-      },
-      "subscribed": {
-        "type": {
-          "$ref": "#/33"
-        },
-        "flags": 0,
-        "description": "Flag specifying if the Marketplace status is subscribed or not."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "MarketplaceSaaSInfoMarketplaceSubscription",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Marketplace Subscription Id. This is a GUID-formatted string."
-      },
-      "publisherId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Publisher Id of the Marketplace offer."
-      },
-      "offerId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Offer Id of the Marketplace offer,"
       }
     }
   },
@@ -1910,7 +2016,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/136"
+      "$ref": "#/145"
     }
   },
   {
@@ -1919,7 +2025,7 @@
     "properties": {
       "rulesets": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/155"
         },
         "flags": 0,
         "description": "List of elastic traffic filters in the account"
@@ -1960,7 +2066,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/152"
         },
         "flags": 0,
         "description": "Type of the elastic filter"
@@ -1974,7 +2080,7 @@
       },
       "rules": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/154"
         },
         "flags": 0,
         "description": "Rules in the elastic filter"
@@ -1993,10 +2099,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/143"
+        "$ref": "#/150"
       },
       {
-        "$ref": "#/144"
+        "$ref": "#/151"
       },
       {
         "$ref": "#/2"
@@ -2047,13 +2153,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/146"
+      "$ref": "#/153"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/142"
+      "$ref": "#/149"
     }
   },
   {
@@ -2062,7 +2168,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/141"
+      "$ref": "#/148"
     }
   },
   {
@@ -2071,7 +2177,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/141"
+      "$ref": "#/148"
     }
   },
   {
@@ -2080,7 +2186,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/154"
+          "$ref": "#/161"
         },
         "flags": 1,
         "description": "The ConnectedPartnerResourcesListFormat items on this page"
@@ -2100,7 +2206,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/153"
+          "$ref": "#/160"
         },
         "flags": 0,
         "description": "Connected Partner Resource Properties"
@@ -2151,7 +2257,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/152"
+      "$ref": "#/159"
     }
   },
   {
@@ -2160,7 +2266,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/151"
+      "$ref": "#/158"
     }
   },
   {
@@ -2169,7 +2275,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/159"
+          "$ref": "#/166"
         },
         "flags": 2,
         "description": "The Elastic deployment status."
@@ -2211,7 +2317,7 @@
       },
       "marketplaceSaasInfo": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/123"
         },
         "flags": 2,
         "description": "Marketplace SaaS Info of the resource."
@@ -2244,10 +2350,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/157"
+        "$ref": "#/164"
       },
       {
-        "$ref": "#/158"
+        "$ref": "#/165"
       },
       {
         "$ref": "#/2"
@@ -2260,7 +2366,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/156"
+      "$ref": "#/163"
     }
   },
   {
@@ -2269,7 +2375,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/173"
         },
         "flags": 1,
         "description": "The MonitoredResource items on this page"
@@ -2296,7 +2402,7 @@
       },
       "sendingLogs": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/172"
         },
         "flags": 0,
         "description": "Flag indicating the status of the resource for sending logs operation to Elastic."
@@ -2322,10 +2428,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/163"
+        "$ref": "#/170"
       },
       {
-        "$ref": "#/164"
+        "$ref": "#/171"
       },
       {
         "$ref": "#/2"
@@ -2335,7 +2441,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/162"
+      "$ref": "#/169"
     }
   },
   {
@@ -2344,7 +2450,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/161"
+      "$ref": "#/168"
     }
   },
   {
@@ -2360,7 +2466,7 @@
       },
       "upgradableVersions": {
         "type": {
-          "$ref": "#/169"
+          "$ref": "#/176"
         },
         "flags": 0,
         "description": "Stack Versions that this version can upgrade to"
@@ -2379,7 +2485,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/168"
+      "$ref": "#/175"
     }
   },
   {
@@ -2388,7 +2494,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/173"
+          "$ref": "#/180"
         },
         "flags": 1,
         "description": "The VMResources items on this page"
@@ -2418,7 +2524,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/172"
+      "$ref": "#/179"
     }
   },
   {
@@ -2427,7 +2533,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/171"
+      "$ref": "#/178"
     }
   },
   {
@@ -2449,10 +2555,10 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/125"
+      "$ref": "#/134"
     },
     "input": {
-      "$ref": "#/175"
+      "$ref": "#/182"
     }
   },
   {
@@ -2468,7 +2574,7 @@
       },
       "operationName": {
         "type": {
-          "$ref": "#/180"
+          "$ref": "#/187"
         },
         "flags": 0,
         "description": "Operation to be performed for given VM."
@@ -2487,10 +2593,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/178"
+        "$ref": "#/185"
       },
       {
-        "$ref": "#/179"
+        "$ref": "#/186"
       },
       {
         "$ref": "#/2"
@@ -2503,10 +2609,10 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/125"
+      "$ref": "#/134"
     },
     "input": {
-      "$ref": "#/177"
+      "$ref": "#/184"
     }
   },
   {
@@ -2535,7 +2641,7 @@
     "resourceType": "Microsoft.Elastic/monitors",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/182"
+      "$ref": "#/189"
     }
   },
   {
@@ -2544,7 +2650,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/185"
+          "$ref": "#/192"
         },
         "flags": 0,
         "description": "Status of the OpenAI Integration"
@@ -2570,7 +2676,7 @@
     "resourceType": "Microsoft.Elastic/monitors/openAIIntegrations",
     "apiVersion": "2025-06-01",
     "output": {
-      "$ref": "#/184"
+      "$ref": "#/191"
     }
   }
 ]

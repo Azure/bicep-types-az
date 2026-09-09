@@ -2975,6 +2975,93 @@
     "writableScopes": 0
   },
   {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "type": {
+        "type": {
+          "$ref": "#/219"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Sql/servers"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name whose availability was checked."
+      },
+      "available": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "True if the name is available, otherwise false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 2,
+        "description": "The reason code explaining why the name is unavailable. Will be undefined if the name is available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A message explaining why the name is unavailable. Will be undefined if the name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/221"
+      },
+      {
+        "$ref": "#/222"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Sql",
+    "apiVersion": "2019-06-01-preview",
+    "output": {
+      "$ref": "#/220"
+    },
+    "input": {
+      "$ref": "#/218"
+    }
+  },
+  {
     "$type": "AnyType"
   },
   {
@@ -2983,7 +3070,7 @@
     "resourceType": "Microsoft.Sql/managedInstances/operations",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/218"
+      "$ref": "#/225"
     }
   },
   {
@@ -2992,7 +3079,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/syncGroups",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/218"
+      "$ref": "#/225"
     }
   },
   {
@@ -3001,7 +3088,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/syncGroups",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/218"
+      "$ref": "#/225"
     }
   },
   {
@@ -3010,7 +3097,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/syncGroups",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/218"
+      "$ref": "#/225"
     }
   },
   {
@@ -3019,7 +3106,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/syncGroups/syncMembers",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/218"
+      "$ref": "#/225"
     }
   },
   {
@@ -3028,7 +3115,7 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/218"
+      "$ref": "#/225"
     }
   },
   {
@@ -3050,10 +3137,10 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/218"
+      "$ref": "#/225"
     },
     "input": {
-      "$ref": "#/225"
+      "$ref": "#/232"
     }
   },
   {
@@ -3097,7 +3184,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/228"
+          "$ref": "#/235"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -3139,7 +3226,7 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/227"
+      "$ref": "#/234"
     }
   },
   {
@@ -3148,7 +3235,7 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/227"
+      "$ref": "#/234"
     }
   },
   {
@@ -3157,7 +3244,7 @@
     "resourceType": "Microsoft.Sql/servers/databases",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/218"
+      "$ref": "#/225"
     }
   },
   {
@@ -3179,10 +3266,10 @@
     "resourceType": "Microsoft.Sql/managedInstances/databases",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/218"
+      "$ref": "#/225"
     },
     "input": {
-      "$ref": "#/232"
+      "$ref": "#/239"
     }
   },
   {
@@ -3191,7 +3278,7 @@
     "resourceType": "Microsoft.Sql/managedInstances",
     "apiVersion": "2019-06-01-preview",
     "output": {
-      "$ref": "#/218"
+      "$ref": "#/225"
     }
   }
 ]

@@ -821,11 +821,82 @@
   },
   {
     "$type": "ObjectType",
+    "name": "OperationInputs",
+    "properties": {
+      "Name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the IoT hub to check."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IotHubNameAvailabilityInfo",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "The value which indicates whether the provided name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 2,
+        "description": "The reason for unavailability."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The detailed reason message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Devices",
+    "apiVersion": "2016-02-03",
+    "output": {
+      "$ref": "#/67"
+    },
+    "input": {
+      "$ref": "#/66"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SharedAccessSignatureAuthorizationRuleListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/73"
         },
         "flags": 0,
         "description": "The list of shared access policies."
@@ -851,7 +922,7 @@
     "resourceType": "Microsoft.Devices/IotHubs",
     "apiVersion": "2016-02-03",
     "output": {
-      "$ref": "#/66"
+      "$ref": "#/72"
     }
   },
   {
@@ -901,14 +972,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/81"
+          "$ref": "#/87"
         },
         "flags": 2,
         "description": "The type of the job."
       },
       "status": {
         "type": {
-          "$ref": "#/88"
+          "$ref": "#/94"
         },
         "flags": 2,
         "description": "The status of the job."
@@ -980,24 +1051,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/71"
-      },
-      {
-        "$ref": "#/72"
-      },
-      {
-        "$ref": "#/73"
-      },
-      {
-        "$ref": "#/74"
-      },
-      {
-        "$ref": "#/75"
-      },
-      {
-        "$ref": "#/76"
-      },
-      {
         "$ref": "#/77"
       },
       {
@@ -1008,6 +1061,24 @@
       },
       {
         "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
       },
       {
         "$ref": "#/0"
@@ -1042,22 +1113,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/82"
+        "$ref": "#/88"
       },
       {
-        "$ref": "#/83"
+        "$ref": "#/89"
       },
       {
-        "$ref": "#/84"
+        "$ref": "#/90"
       },
       {
-        "$ref": "#/85"
+        "$ref": "#/91"
       },
       {
-        "$ref": "#/86"
+        "$ref": "#/92"
       },
       {
-        "$ref": "#/87"
+        "$ref": "#/93"
       }
     ]
   },
@@ -1067,10 +1138,10 @@
     "resourceType": "Microsoft.Devices/IotHubs",
     "apiVersion": "2016-02-03",
     "output": {
-      "$ref": "#/70"
+      "$ref": "#/76"
     },
     "input": {
-      "$ref": "#/69"
+      "$ref": "#/75"
     }
   },
   {
@@ -1099,10 +1170,10 @@
     "resourceType": "Microsoft.Devices/IotHubs",
     "apiVersion": "2016-02-03",
     "output": {
-      "$ref": "#/70"
+      "$ref": "#/76"
     },
     "input": {
-      "$ref": "#/90"
+      "$ref": "#/96"
     }
   },
   {

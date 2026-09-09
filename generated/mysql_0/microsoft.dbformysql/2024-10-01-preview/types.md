@@ -43,6 +43,12 @@
 * **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
 * **Output**: [NameAvailability](#nameavailability)
 
+## Function checkNameAvailability (Microsoft.DBforMySQL@2024-10-01-preview)
+* **Resource**: Microsoft.DBforMySQL
+* **ApiVersion**: 2024-10-01-preview
+* **Input**: [NameAvailabilityRequest](#nameavailabilityrequest)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function checkVirtualNetworkSubnetUsage (Microsoft.DBforMySQL/locations@2024-10-01-preview)
 * **Resource**: Microsoft.DBforMySQL/locations
 * **ApiVersion**: 2024-10-01-preview
@@ -64,6 +70,11 @@
 * **Resource**: Microsoft.DBforMySQL/flexibleServers
 * **ApiVersion**: 2024-10-01-preview
 * **Output**: any
+
+## Function getPrivateDnsZoneSuffix (Microsoft.DBforMySQL@2024-10-01-preview)
+* **Resource**: Microsoft.DBforMySQL
+* **ApiVersion**: 2024-10-01-preview
+* **Output**: [GetPrivateDnsZoneSuffixResponse](#getprivatednszonesuffixresponse)
 
 ## Function resetGtid (Microsoft.DBforMySQL/flexibleServers@2024-10-01-preview)
 * **Resource**: Microsoft.DBforMySQL/flexibleServers
@@ -130,6 +141,10 @@
 ### Properties
 * **featureName**: string (ReadOnly): feature name
 * **featureValue**: string (ReadOnly): feature value
+
+## GetPrivateDnsZoneSuffixResponse
+### Properties
+* **privateDnsZoneSuffix**: string: Represents the private DNS zone suffix.
 
 ## HighAvailability
 ### Properties

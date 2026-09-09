@@ -1765,5 +1765,466 @@
     },
     "readableScopes": 7,
     "writableScopes": 6
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyDefinitionVersionListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 1,
+        "description": "The PolicyDefinitionVersion items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyDefinitionVersion",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "The policy definition version properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/128"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listPolicyDefinitionVersions",
+    "resourceType": "Microsoft.Authorization",
+    "apiVersion": "2025-03-01",
+    "output": {
+      "$ref": "#/127"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicySetDefinitionVersionListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 1,
+        "description": "The PolicySetDefinitionVersion items on this page"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link to the next page of items"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicySetDefinitionVersion",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "The policy set definition version properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/132"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listPolicySetDefinitionVersions",
+    "resourceType": "Microsoft.Authorization",
+    "apiVersion": "2025-03-01",
+    "output": {
+      "$ref": "#/131"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyTokenRequest",
+    "properties": {
+      "operation": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 1,
+        "description": "The resource operation to acquire a token for."
+      },
+      "changeReference": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The change reference."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyTokenOperation",
+    "properties": {
+      "uri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The request URI of the resource operation."
+      },
+      "httpMethod": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The http method of the resource operation."
+      },
+      "content": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The payload of the resource operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyTokenResponse",
+    "properties": {
+      "result": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 0,
+        "description": "The result of the completed token acquisition operation. Possible values are Succeeded and Failed."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Status message with additional details about the token acquisition operation result."
+      },
+      "retryAfter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The date and time after which the client can try to acquire a token again in the case of retry-able failures."
+      },
+      "results": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 0,
+        "description": "An array of external evaluation endpoint invocation results."
+      },
+      "changeReference": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The change reference associated with the operation for which the token is acquired."
+      },
+      "token": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The issued policy token."
+      },
+      "tokenId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The unique Id assigned to the policy token."
+      },
+      "expiration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The expiration of the policy token."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/138"
+      },
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExternalEvaluationEndpointInvocationResult",
+    "properties": {
+      "policyInfo": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 0,
+        "description": "The details of the policy requiring the external endpoint invocation."
+      },
+      "result": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 0,
+        "description": "The result of the external endpoint. Possible values are Succeeded and Failed."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The status message with additional details about the invocation result."
+      },
+      "retryAfter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The date and time after which a failed endpoint invocation can be retried."
+      },
+      "claims": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The set of claims that will be attached to the policy token as an attestation for the result of the endpoint invocation."
+      },
+      "expiration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The expiration of the results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyLogInfo",
+    "properties": {
+      "policyDefinitionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy definition Id."
+      },
+      "policySetDefinitionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy set definition Id."
+      },
+      "policyDefinitionReferenceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy definition instance Id inside a policy set."
+      },
+      "policySetDefinitionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy set definition name."
+      },
+      "policySetDefinitionVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy set definition version."
+      },
+      "policyDefinitionName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy definition name."
+      },
+      "policyDefinitionVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy definition version."
+      },
+      "policyDefinitionEffect": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy definition action."
+      },
+      "policyAssignmentId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy assignment Id."
+      },
+      "policyAssignmentName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy assignment name."
+      },
+      "policyAssignmentVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy assignment version."
+      },
+      "policyAssignmentScope": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The policy assignment scope."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/141"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acquirePolicyToken",
+    "resourceType": "Microsoft.Authorization",
+    "apiVersion": "2025-03-01",
+    "output": {
+      "$ref": "#/137"
+    },
+    "input": {
+      "$ref": "#/135"
+    }
   }
 ]

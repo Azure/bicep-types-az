@@ -995,81 +995,6 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceListKeys",
-    "properties": {
-      "primaryConnectionString": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "PrimaryConnectionString of the AuthorizationRule."
-      },
-      "secondaryConnectionString": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "SecondaryConnectionString of the created AuthorizationRule"
-      },
-      "primaryKey": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "PrimaryKey of the created AuthorizationRule."
-      },
-      "secondaryKey": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "SecondaryKey of the created AuthorizationRule"
-      },
-      "keyName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "KeyName of the created AuthorizationRule"
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listKeys",
-    "resourceType": "Microsoft.NotificationHubs/namespaces/AuthorizationRules",
-    "apiVersion": "2017-04-01",
-    "output": {
-      "$ref": "#/52"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PolicykeyResource",
-    "properties": {
-      "policyKey": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Name of the key that has to be regenerated for the Namespace/Notification Hub Authorization Rule. The value can be Primary Key/Secondary Key."
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "regenerateKeys",
-    "resourceType": "Microsoft.NotificationHubs/namespaces/AuthorizationRules",
-    "apiVersion": "2017-04-01",
-    "output": {
-      "$ref": "#/52"
-    },
-    "input": {
-      "$ref": "#/54"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "CheckAvailabilityParameters",
     "properties": {
       "id": {
@@ -1102,7 +1027,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/57"
+          "$ref": "#/53"
         },
         "flags": 0,
         "description": "Resource tags"
@@ -1172,7 +1097,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/59"
+          "$ref": "#/55"
         },
         "flags": 0,
         "description": "Resource tags"
@@ -1196,14 +1121,101 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "checkNamespaceAvailability",
+    "resourceType": "Microsoft.NotificationHubs",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/54"
+    },
+    "input": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceListKeys",
+    "properties": {
+      "primaryConnectionString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "PrimaryConnectionString of the AuthorizationRule."
+      },
+      "secondaryConnectionString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "SecondaryConnectionString of the created AuthorizationRule"
+      },
+      "primaryKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "PrimaryKey of the created AuthorizationRule."
+      },
+      "secondaryKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "SecondaryKey of the created AuthorizationRule"
+      },
+      "keyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "KeyName of the created AuthorizationRule"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listKeys",
+    "resourceType": "Microsoft.NotificationHubs/namespaces/AuthorizationRules",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/57"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicykeyResource",
+    "properties": {
+      "policyKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the key that has to be regenerated for the Namespace/Notification Hub Authorization Rule. The value can be Primary Key/Secondary Key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.NotificationHubs/namespaces/AuthorizationRules",
+    "apiVersion": "2017-04-01",
+    "output": {
+      "$ref": "#/57"
+    },
+    "input": {
+      "$ref": "#/59"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "checkNotificationHubAvailability",
     "resourceType": "Microsoft.NotificationHubs/namespaces",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/58"
+      "$ref": "#/54"
     },
     "input": {
-      "$ref": "#/56"
+      "$ref": "#/52"
     }
   },
   {
@@ -1215,7 +1227,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/63"
+          "$ref": "#/64"
         },
         "flags": 0,
         "description": "Properties of the NotificationHub."
@@ -1250,7 +1262,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/65"
         },
         "flags": 0,
         "description": "Resource tags"
@@ -1284,7 +1296,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/61"
+          "$ref": "#/62"
         },
         "flags": 0,
         "description": "actual failure description"
@@ -1305,10 +1317,10 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/62"
+      "$ref": "#/63"
     },
     "input": {
-      "$ref": "#/61"
+      "$ref": "#/62"
     }
   },
   {
@@ -1317,7 +1329,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/68"
         },
         "flags": 0,
         "description": "NotificationHub PNS Credentials."
@@ -1352,7 +1364,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/68"
+          "$ref": "#/69"
         },
         "flags": 0,
         "description": "Resource tags"
@@ -1428,7 +1440,7 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/66"
+      "$ref": "#/67"
     }
   },
   {
@@ -1437,7 +1449,7 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/57"
     }
   },
   {
@@ -1446,10 +1458,10 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules",
     "apiVersion": "2017-04-01",
     "output": {
-      "$ref": "#/52"
+      "$ref": "#/57"
     },
     "input": {
-      "$ref": "#/54"
+      "$ref": "#/59"
     }
   }
 ]

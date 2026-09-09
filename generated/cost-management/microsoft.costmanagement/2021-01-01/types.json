@@ -792,5 +792,154 @@
     "output": {
       "$ref": "#/59"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateDetailedCostReportDefinition",
+    "properties": {
+      "metric": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "The type of the detailed report. By default ActualCost is provided"
+      },
+      "timePeriod": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "Has time period for pulling data for the cost detailed report. Can only have one of either timePeriod or invoiceId or billingPeriod parameters. If none provided current month cost is provided."
+      },
+      "billingPeriod": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Billing Period in YearMonth(e.g. 202008) format. Only for legacy enterprise customers can use this. Can only have one of either timePeriod or invoiceId or billingPeriod parameters. If none provided current month cost is provided."
+      },
+      "invoiceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Invoice Id for PayAsYouGo customers and Modern billing profile scope. Can only have one of either timePeriod or invoiceId or billingPeriod parameters. If none provided current month cost is provided."
+      },
+      "customerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Customer Id for Modern (Invoice Id and billing profile is also required for this)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActualCost"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AmortizedCost"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateDetailedCostReportTimePeriod",
+    "properties": {
+      "start": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The start date to pull data from. example format 2020-03-15"
+      },
+      "end": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The end date to pull data to. example format 2020-03-15"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateDetailedCostReportOperationResult",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id of the long running operation."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the long running operation."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of the long running operation."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "The properties of the resource generated."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DownloadURL",
+    "properties": {
+      "downloadUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The URL to download the generated report."
+      },
+      "validTill": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time at which report URL becomes invalid/expires in UTC e.g. 2020-12-08T05:55:59.4394737Z."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateDetailedCostReport",
+    "resourceType": "Microsoft.CostManagement",
+    "apiVersion": "2021-01-01",
+    "output": {
+      "$ref": "#/66"
+    },
+    "input": {
+      "$ref": "#/61"
+    }
   }
 ]

@@ -128,6 +128,12 @@
 * **ApiVersion**: 2017-04-01
 * **Output**: any
 
+## Function CheckNameAvailability (Microsoft.ServiceBus@2017-04-01)
+* **Resource**: Microsoft.ServiceBus
+* **ApiVersion**: 2017-04-01
+* **Input**: [CheckNameAvailability](#checknameavailability)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function failover (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2017-04-01)
 * **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs
 * **ApiVersion**: 2017-04-01
@@ -210,6 +216,16 @@
 * **pendingReplicationOperationsCount**: int (ReadOnly): Number of entities pending to be replicated.
 * **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
 * **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
+
+## CheckNameAvailability
+### Properties
+* **name**: string (Required): The Name to check the namespace name availability and The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number.
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the namespace.
+* **nameAvailable**: bool: Value indicating namespace is availability, true if the namespace is available; otherwise, false.
+* **reason**: 'InvalidName' | 'NameInLockdown' | 'NameInUse' | 'None' | 'SubscriptionIsDisabled' | 'TooManyNamespaceInCurrentSubscription': The reason for unavailability of a namespace.
 
 ## CorrelationFilter
 ### Properties

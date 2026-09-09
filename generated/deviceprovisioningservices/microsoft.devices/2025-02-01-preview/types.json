@@ -1357,6 +1357,80 @@
     "writableScopes": 0
   },
   {
+    "$type": "ObjectType",
+    "name": "OperationInputs",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the Provisioning Service to check."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityInfo",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "specifies if a name is available or not"
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "specifies the reason a name is unavailable"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "message containing a detailed reason name is unavailable"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkProvisioningServiceNameAvailability",
+    "resourceType": "Microsoft.Devices",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/104"
+    },
+    "input": {
+      "$ref": "#/103"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "listkeys",
     "resourceType": "Microsoft.Devices/provisioningServices/keys",
@@ -1371,7 +1445,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/105"
+          "$ref": "#/111"
         },
         "flags": 1,
         "description": "The SharedAccessSignatureAuthorizationRuleAccessRightsDescription items on this page"
@@ -1397,7 +1471,7 @@
     "resourceType": "Microsoft.Devices/provisioningServices",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/104"
+      "$ref": "#/110"
     }
   },
   {
@@ -1434,7 +1508,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/108"
+          "$ref": "#/114"
         },
         "flags": 0
       }
@@ -1508,7 +1582,7 @@
     "resourceType": "Microsoft.Devices/provisioningServices/certificates",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/107"
+      "$ref": "#/113"
     }
   },
   {
@@ -1578,10 +1652,10 @@
     "resourceType": "Microsoft.Devices/provisioningServices/certificates",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/111"
+      "$ref": "#/117"
     },
     "input": {
-      "$ref": "#/110"
+      "$ref": "#/116"
     }
   }
 ]

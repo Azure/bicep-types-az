@@ -55,6 +55,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppComplianceAutomation/reports/webhooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AppComplianceAutomation@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation
+* **ApiVersion**: 2024-06-27
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function checkNameAvailability (Microsoft.AppComplianceAutomation/reports@2024-06-27)
 * **Resource**: Microsoft.AppComplianceAutomation/reports
 * **ApiVersion**: 2024-06-27
@@ -78,16 +84,46 @@
 * **ApiVersion**: 2024-06-27
 * **Output**: [ReportFixResult](#reportfixresult)
 
+## Function getCollectionCount (Microsoft.AppComplianceAutomation@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation
+* **ApiVersion**: 2024-06-27
+* **Input**: [GetCollectionCountRequest](#getcollectioncountrequest)
+* **Output**: [GetCollectionCountResponse](#getcollectioncountresponse)
+
+## Function getOverviewStatus (Microsoft.AppComplianceAutomation@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation
+* **ApiVersion**: 2024-06-27
+* **Input**: [GetOverviewStatusRequest](#getoverviewstatusrequest)
+* **Output**: [GetOverviewStatusResponse](#getoverviewstatusresponse)
+
 ## Function getScopingQuestions (Microsoft.AppComplianceAutomation/reports@2024-06-27)
 * **Resource**: Microsoft.AppComplianceAutomation/reports
 * **ApiVersion**: 2024-06-27
 * **Output**: [ScopingQuestions](#scopingquestions)
+
+## Function listInUseStorageAccounts (Microsoft.AppComplianceAutomation@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation
+* **ApiVersion**: 2024-06-27
+* **Input**: [ListInUseStorageAccountsRequest](#listinusestorageaccountsrequest)
+* **Output**: [ListInUseStorageAccountsResponse](#listinusestorageaccountsresponse)
+
+## Function onboard (Microsoft.AppComplianceAutomation@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation
+* **ApiVersion**: 2024-06-27
+* **Input**: [OnboardRequest](#onboardrequest)
+* **Output**: [OnboardResponse](#onboardresponse)
 
 ## Function syncCertRecord (Microsoft.AppComplianceAutomation/reports@2024-06-27)
 * **Resource**: Microsoft.AppComplianceAutomation/reports
 * **ApiVersion**: 2024-06-27
 * **Input**: [SyncCertRecordRequest](#synccertrecordrequest)
 * **Output**: [SyncCertRecordResponse](#synccertrecordresponse)
+
+## Function triggerEvaluation (Microsoft.AppComplianceAutomation@2024-06-27)
+* **Resource**: Microsoft.AppComplianceAutomation
+* **ApiVersion**: 2024-06-27
+* **Input**: [TriggerEvaluationRequest](#triggerevaluationrequest)
+* **Output**: [TriggerEvaluationResponse](#triggerevaluationresponse)
 
 ## Function verify (Microsoft.AppComplianceAutomation/reports@2024-06-27)
 * **Resource**: Microsoft.AppComplianceAutomation/reports
@@ -196,6 +232,38 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Fixing' | 'Succeeded' | 'Updating' | 'Verifying' | string (ReadOnly): Azure lifecycle management
 * **responsibilityId**: string: Responsibility id.
 
+## GetCollectionCountRequest
+### Properties
+* **type**: string: The resource type.
+
+## GetCollectionCountResponse
+### Properties
+* **count**: int: The count of the specified resource.
+
+## GetOverviewStatusRequest
+### Properties
+* **type**: string: The resource type.
+
+## GetOverviewStatusResponse
+### Properties
+* **statusList**: [StatusItem](#statusitem)[]: List of different status items.
+
+## ListInUseStorageAccountsRequest
+### Properties
+* **subscriptionIds**: string[]: List of subscription ids to be query. If the list is null or empty, the API will query all the subscriptions of the user.
+
+## ListInUseStorageAccountsResponse
+### Properties
+* **storageAccountList**: [StorageInfo](#storageinfo)[]: The storage account list which in use in related reports.
+
+## OnboardRequest
+### Properties
+* **subscriptionIds**: string[] (Required): List of subscription ids to be onboarded
+
+## OnboardResponse
+### Properties
+* **subscriptionIds**: string[]: List of subscription ids that are onboarded
+
 ## OverviewStatus
 ### Properties
 * **failedCount**: int (ReadOnly): The count of all failed control.
@@ -203,6 +271,16 @@
 * **notApplicableCount**: int (ReadOnly): The count of all not applicable control.
 * **passedCount**: int (ReadOnly): The count of all passed control.
 * **pendingCount**: int (ReadOnly): The count of all pending for approval control.
+
+## QuickAssessment
+### Properties
+* **description**: string (ReadOnly): Quick assessment display name.
+* **displayName**: string (ReadOnly): Quick assessment display name.
+* **remediationLink**: string (ReadOnly): Link to remediation steps for this quick assessment.
+* **resourceId**: string (ReadOnly): Resource id.
+* **resourceStatus**: 'Healthy' | 'Unhealthy' | string (ReadOnly): Quick assessment status.
+* **responsibilityId**: string (ReadOnly): Responsibility id.
+* **timestamp**: string (ReadOnly): The timestamp of resource creation (UTC).
 
 ## Recommendation
 ### Properties
@@ -328,6 +406,11 @@ An example of valid timezone id is "Pacific Standard Time".
 * **reportSystemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **snapshotName**: string (ReadOnly): Snapshot name.
 
+## StatusItem
+### Properties
+* **statusName**: string: Status name - e.g. "Active", "Failed".
+* **statusValue**: string: Status value. e.g. "100", or "100%".
+
 ## StorageInfo
 ### Properties
 * **accountName**: string: 'bring your own storage' account name
@@ -351,6 +434,21 @@ An example of valid timezone id is "Pacific Standard Time".
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TriggerEvaluationProperty
+### Properties
+* **evaluationEndTime**: string (ReadOnly): The time when the evaluation is end.
+* **quickAssessments**: [QuickAssessment](#quickassessment)[]: List of quick assessments
+* **resourceIds**: string[]: List of resource ids to be evaluated
+* **triggerTime**: string (ReadOnly): The time when the evaluation is triggered.
+
+## TriggerEvaluationRequest
+### Properties
+* **resourceIds**: string[] (Required): List of resource ids to be evaluated
+
+## TriggerEvaluationResponse
+### Properties
+* **properties**: [TriggerEvaluationProperty](#triggerevaluationproperty): trigger evaluation property.
 
 ## WebhookProperties
 ### Properties

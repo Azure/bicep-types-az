@@ -631,6 +631,12 @@
 * **Input**: [TeamProperties](#teamproperties)
 * **Output**: [TeamInformation](#teaminformation)
 
+## Function dataConnectorsCheckRequirements (Microsoft.SecurityInsights@2022-11-01-preview)
+* **Resource**: Microsoft.SecurityInsights
+* **ApiVersion**: 2022-11-01-preview
+* **Input**: [DataConnectorsCheckRequirements](#dataconnectorscheckrequirements)
+* **Output**: [DataConnectorRequirementsState](#dataconnectorrequirementsstate)
+
 ## Function disconnect (Microsoft.SecurityInsights/dataConnectors@2022-11-01-preview)
 * **Resource**: Microsoft.SecurityInsights/dataConnectors
 * **ApiVersion**: 2022-11-01-preview
@@ -683,9 +689,17 @@
 * **Input**: [ManualTriggerRequestBody](#manualtriggerrequestbody)
 * **Output**: any
 
+## AADCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
 ## AADDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
+## AatpCheckRequirementsProperties
+### Properties
 * **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## AatpDataConnectorProperties
@@ -807,6 +821,10 @@
 ### Properties
 * **connectorUiConfig**: [CodelessUiConnectorConfigProperties](#codelessuiconnectorconfigproperties): Config to describe the instructions blade
 * **pollingConfig**: [CodelessConnectorPollingConfigProperties](#codelessconnectorpollingconfigproperties): Config to describe the polling instructions
+
+## ASCCheckRequirementsProperties
+### Properties
+* **subscriptionId**: string: The subscription id to connect to, and get the data from.
 
 ## ASCDataConnectorProperties
 ### Properties
@@ -1131,6 +1149,100 @@
 ### Properties
 * **state**: 'Disabled' | 'Enabled' | string (Required): Describe whether this data type connection is enabled or not.
 
+## DataConnectorRequirementsState
+### Properties
+* **authorizationState**: 'Invalid' | 'Valid' | string: Authorization state for this connector
+* **licenseState**: 'Invalid' | 'Unknown' | 'Valid' | string: License state for this connector
+
+## DataConnectorsCheckRequirements
+* **Discriminator**: kind
+
+### Base Properties
+
+### AwsCloudTrailCheckRequirements
+#### Properties
+* **kind**: 'AmazonWebServicesCloudTrail' (Required): Describes the kind of connector to be checked.
+
+### AwsS3CheckRequirements
+#### Properties
+* **kind**: 'AmazonWebServicesS3' (Required): Describes the kind of connector to be checked.
+
+### AADCheckRequirements
+#### Properties
+* **kind**: 'AzureActiveDirectory' (Required): Describes the kind of connector to be checked.
+* **properties**: [AADCheckRequirementsProperties](#aadcheckrequirementsproperties): AAD (Azure Active Directory) requirements check properties.
+
+### AatpCheckRequirements
+#### Properties
+* **kind**: 'AzureAdvancedThreatProtection' (Required): Describes the kind of connector to be checked.
+* **properties**: [AatpCheckRequirementsProperties](#aatpcheckrequirementsproperties): AATP (Azure Advanced Threat Protection) requirements check properties.
+
+### ASCCheckRequirements
+#### Properties
+* **kind**: 'AzureSecurityCenter' (Required): Describes the kind of connector to be checked.
+* **properties**: [ASCCheckRequirementsProperties](#asccheckrequirementsproperties): ASC (Azure Security Center) requirements check properties.
+
+### Dynamics365CheckRequirements
+#### Properties
+* **kind**: 'Dynamics365' (Required): Describes the kind of connector to be checked.
+* **properties**: [Dynamics365CheckRequirementsProperties](#dynamics365checkrequirementsproperties): Dynamics365 requirements check properties.
+
+### IoTCheckRequirements
+#### Properties
+* **kind**: 'IOT' (Required): Describes the kind of connector to be checked.
+* **properties**: [IoTCheckRequirementsProperties](#iotcheckrequirementsproperties): IoT requirements check properties.
+
+### McasCheckRequirements
+#### Properties
+* **kind**: 'MicrosoftCloudAppSecurity' (Required): Describes the kind of connector to be checked.
+* **properties**: [McasCheckRequirementsProperties](#mcascheckrequirementsproperties): MCAS (Microsoft Cloud App Security) requirements check properties.
+
+### MdatpCheckRequirements
+#### Properties
+* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required): Describes the kind of connector to be checked.
+* **properties**: [MdatpCheckRequirementsProperties](#mdatpcheckrequirementsproperties): MDATP (Microsoft Defender Advanced Threat Protection) requirements check properties.
+
+### MstiCheckRequirements
+#### Properties
+* **kind**: 'MicrosoftThreatIntelligence' (Required): Describes the kind of connector to be checked.
+* **properties**: [MstiCheckRequirementsProperties](#msticheckrequirementsproperties): Microsoft Threat Intelligence requirements check properties.
+
+### MtpCheckRequirements
+#### Properties
+* **kind**: 'MicrosoftThreatProtection' (Required): Describes the kind of connector to be checked.
+* **properties**: [MTPCheckRequirementsProperties](#mtpcheckrequirementsproperties): MTP (Microsoft Threat Protection) requirements check properties.
+
+### Office365ProjectCheckRequirements
+#### Properties
+* **kind**: 'Office365Project' (Required): Describes the kind of connector to be checked.
+* **properties**: [Office365ProjectCheckRequirementsProperties](#office365projectcheckrequirementsproperties): Office365 Project requirements check properties.
+
+### OfficeATPCheckRequirements
+#### Properties
+* **kind**: 'OfficeATP' (Required): Describes the kind of connector to be checked.
+* **properties**: [OfficeATPCheckRequirementsProperties](#officeatpcheckrequirementsproperties): OfficeATP (Office 365 Advanced Threat Protection) requirements check properties.
+
+### OfficeIRMCheckRequirements
+#### Properties
+* **kind**: 'OfficeIRM' (Required): Describes the kind of connector to be checked.
+* **properties**: [OfficeIRMCheckRequirementsProperties](#officeirmcheckrequirementsproperties): OfficeIRM (Microsoft Insider Risk Management) requirements check properties.
+
+### OfficePowerBICheckRequirements
+#### Properties
+* **kind**: 'OfficePowerBI' (Required): Describes the kind of connector to be checked.
+* **properties**: [OfficePowerBICheckRequirementsProperties](#officepowerbicheckrequirementsproperties): Office Power BI requirements check properties.
+
+### TICheckRequirements
+#### Properties
+* **kind**: 'ThreatIntelligence' (Required): Describes the kind of connector to be checked.
+* **properties**: [TICheckRequirementsProperties](#ticheckrequirementsproperties): Threat Intelligence Platforms data connector check required properties
+
+### TiTaxiiCheckRequirements
+#### Properties
+* **kind**: 'ThreatIntelligenceTaxii' (Required): Describes the kind of connector to be checked.
+* **properties**: [TiTaxiiCheckRequirementsProperties](#titaxiicheckrequirementsproperties): Threat Intelligence TAXII check required properties.
+
+
 ## DataTypeDefinitions
 ### Properties
 * **dataType**: string: The data type name
@@ -1143,6 +1255,10 @@
 * **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
 * **hostIpAddressEntityId**: string (ReadOnly): An ip entity id for the dns request client
 * **ipAddressEntityIds**: string[] (ReadOnly): Ip entity identifiers for the resolved ip address.
+
+## Dynamics365CheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## Dynamics365DataConnectorDataTypes
 ### Properties
@@ -1849,6 +1965,10 @@
 * **parameters**: any: The parameters for the setting
 * **type**: 'CopyableLabel' | 'InfoMessage' | 'InstructionStepsGroup' | string (Required): The kind of the setting
 
+## IoTCheckRequirementsProperties
+### Properties
+* **subscriptionId**: string: The subscription id to connect to, and get the data from.
+
 ## IoTDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
@@ -1968,6 +2088,10 @@
 * **logicAppsResourceId**: string (Required)
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}
 
+## McasCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
 ## McasDataConnectorDataTypes
 ### Properties
 * **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon) (Required): Alerts data type connection.
@@ -1976,6 +2100,10 @@
 ## McasDataConnectorProperties
 ### Properties
 * **dataTypes**: [McasDataConnectorDataTypes](#mcasdataconnectordatatypes) (Required): The available data types for the connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
+## MdatpCheckRequirementsProperties
+### Properties
 * **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## MdatpDataConnectorProperties
@@ -2088,6 +2216,10 @@
 * **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule
 * **techniques**: string[]: The techniques of the alert rule
 
+## MstiCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
 ## MstiDataConnectorDataTypes
 ### Properties
 * **bingSafetyPhishingURL**: [MstiDataConnectorDataTypesBingSafetyPhishingURL](#mstidataconnectordatatypesbingsafetyphishingurl) (Required): Data type for Microsoft Threat Intelligence Platforms data connector.
@@ -2106,6 +2238,10 @@
 ## MstiDataConnectorProperties
 ### Properties
 * **dataTypes**: [MstiDataConnectorDataTypes](#mstidataconnectordatatypes) (Required): The available data types for the connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
+## MTPCheckRequirementsProperties
+### Properties
 * **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## MTPDataConnectorDataTypes
@@ -2175,6 +2311,10 @@
 * **techniques**: string[]: The techniques of the alert rule
 * **version**: string: The version of this template - in format <a.b.c>, where all are numbers. For example <1.0.2>.
 
+## Office365ProjectCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
 ## Office365ProjectConnectorDataTypes
 ### Properties
 * **logs**: [Office365ProjectConnectorDataTypesLogs](#office365projectconnectordatatypeslogs) (Required): Logs data type.
@@ -2186,6 +2326,10 @@
 ## Office365ProjectDataConnectorProperties
 ### Properties
 * **dataTypes**: [Office365ProjectConnectorDataTypes](#office365projectconnectordatatypes) (Required): The available data types for the connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
+## OfficeATPCheckRequirementsProperties
+### Properties
 * **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## OfficeATPDataConnectorProperties
@@ -2221,9 +2365,17 @@
 * **dataTypes**: [OfficeDataConnectorDataTypes](#officedataconnectordatatypes) (Required): The available data types for the connector.
 * **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
+## OfficeIRMCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
 ## OfficeIRMDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): The available data types for the connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
+## OfficePowerBICheckRequirementsProperties
+### Properties
 * **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## OfficePowerBIConnectorDataTypes
@@ -2635,6 +2787,10 @@
 * **itemKey**: string: Column name
 * **sortOrder**: 'ascending' | 'descending' | 'unsorted' | string: Sorting order (ascending/descending/unsorted).
 
+## TICheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
+
 ## TIDataConnectorDataTypes
 ### Properties
 * **indicators**: [TIDataConnectorDataTypesIndicators](#tidataconnectordatatypesindicators) (Required): Data type for indicators connection.
@@ -2665,6 +2821,10 @@
 * **aggregations**: [TimelineAggregation](#timelineaggregation)[] (Required): timeline aggregation per kind
 * **errors**: [TimelineError](#timelineerror)[]: information about the failure queries
 * **totalCount**: int (Required): the total items found for the timeline request
+
+## TiTaxiiCheckRequirementsProperties
+### Properties
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## TiTaxiiDataConnectorDataTypes
 ### Properties

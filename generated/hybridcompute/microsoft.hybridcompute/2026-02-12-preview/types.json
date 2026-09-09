@@ -5040,12 +5040,24 @@
     "writableScopes": 0
   },
   {
+    "$type": "ResourceFunctionType",
+    "name": "validateLicense",
+    "resourceType": "Microsoft.HybridCompute",
+    "apiVersion": "2026-02-12-preview",
+    "output": {
+      "$ref": "#/156"
+    },
+    "input": {
+      "$ref": "#/156"
+    }
+  },
+  {
     "$type": "ObjectType",
     "name": "MachineAssessPatchesResult",
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/360"
+          "$ref": "#/361"
         },
         "flags": 2,
         "description": "The overall success or failure status of the operation. It remains \"InProgress\" until the operation completes. At that point it will become \"Unknown\", \"Failed\", \"Succeeded\", or \"CompletedWithWarnings.\""
@@ -5066,7 +5078,7 @@
       },
       "availablePatchCountByClassification": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/362"
         },
         "flags": 0,
         "description": "Summarization of patches available for installation on the machine by classification."
@@ -5087,21 +5099,21 @@
       },
       "startedBy": {
         "type": {
-          "$ref": "#/364"
+          "$ref": "#/365"
         },
         "flags": 2,
         "description": "Indicates if operation was triggered by user or by platform."
       },
       "patchServiceUsed": {
         "type": {
-          "$ref": "#/371"
+          "$ref": "#/372"
         },
         "flags": 2,
         "description": "Specifies the patch service used for the operation."
       },
       "osType": {
         "type": {
-          "$ref": "#/374"
+          "$ref": "#/375"
         },
         "flags": 2,
         "description": "The operating system type of the machine."
@@ -5139,9 +5151,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/355"
-      },
-      {
         "$ref": "#/356"
       },
       {
@@ -5152,6 +5161,9 @@
       },
       {
         "$ref": "#/359"
+      },
+      {
+        "$ref": "#/360"
       },
       {
         "$ref": "#/2"
@@ -5239,10 +5251,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/362"
+        "$ref": "#/363"
       },
       {
-        "$ref": "#/363"
+        "$ref": "#/364"
       },
       {
         "$ref": "#/2"
@@ -5277,9 +5289,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/365"
-      },
-      {
         "$ref": "#/366"
       },
       {
@@ -5293,6 +5302,9 @@
       },
       {
         "$ref": "#/370"
+      },
+      {
+        "$ref": "#/371"
       },
       {
         "$ref": "#/2"
@@ -5311,10 +5323,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/372"
+        "$ref": "#/373"
       },
       {
-        "$ref": "#/373"
+        "$ref": "#/374"
       },
       {
         "$ref": "#/2"
@@ -5327,7 +5339,7 @@
     "resourceType": "Microsoft.HybridCompute/machines",
     "apiVersion": "2026-02-12-preview",
     "output": {
-      "$ref": "#/354"
+      "$ref": "#/355"
     }
   },
   {
@@ -5343,21 +5355,21 @@
       },
       "rebootSetting": {
         "type": {
-          "$ref": "#/380"
+          "$ref": "#/381"
         },
         "flags": 1,
         "description": "Defines when it is acceptable to reboot a VM during a software update operation."
       },
       "windowsParameters": {
         "type": {
-          "$ref": "#/381"
+          "$ref": "#/382"
         },
         "flags": 0,
         "description": "Input for InstallPatches on a Windows VM, as directly received by the API"
       },
       "linuxParameters": {
         "type": {
-          "$ref": "#/396"
+          "$ref": "#/397"
         },
         "flags": 0,
         "description": "Input for InstallPatches on a Linux VM, as directly received by the API"
@@ -5380,13 +5392,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/377"
-      },
-      {
         "$ref": "#/378"
       },
       {
         "$ref": "#/379"
+      },
+      {
+        "$ref": "#/380"
       },
       {
         "$ref": "#/2"
@@ -5399,21 +5411,21 @@
     "properties": {
       "classificationsToInclude": {
         "type": {
-          "$ref": "#/391"
+          "$ref": "#/392"
         },
         "flags": 0,
         "description": "The update classifications to select when installing patches for Windows."
       },
       "kbNumbersToInclude": {
         "type": {
-          "$ref": "#/392"
+          "$ref": "#/393"
         },
         "flags": 0,
         "description": "Kbs to include in the patch operation"
       },
       "kbNumbersToExclude": {
         "type": {
-          "$ref": "#/393"
+          "$ref": "#/394"
         },
         "flags": 0,
         "description": "Kbs to exclude in the patch operation"
@@ -5434,14 +5446,14 @@
       },
       "patchNameMasksToInclude": {
         "type": {
-          "$ref": "#/394"
+          "$ref": "#/395"
         },
         "flags": 0,
         "description": "This is used to include patches that match the given patch name masks. Alphanumeric strings and wildcard expressions consisting of * and ? are only supported as input values in the list. Null, empty and only whitespaces strings as inputs values are not supported."
       },
       "patchNameMasksToExclude": {
         "type": {
-          "$ref": "#/395"
+          "$ref": "#/396"
         },
         "flags": 0,
         "description": "This is used to exclude patches that match the given patch name masks. Alphanumeric strings and wildcard expressions consisting of * and ? are only supported as input values in the list. Null, empty and only whitespaces strings as inputs values are not supported."
@@ -5484,9 +5496,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/382"
-      },
-      {
         "$ref": "#/383"
       },
       {
@@ -5508,6 +5517,9 @@
         "$ref": "#/389"
       },
       {
+        "$ref": "#/390"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -5515,7 +5527,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/390"
+      "$ref": "#/391"
     }
   },
   {
@@ -5548,21 +5560,21 @@
     "properties": {
       "classificationsToInclude": {
         "type": {
-          "$ref": "#/401"
+          "$ref": "#/402"
         },
         "flags": 0,
         "description": "The update classifications to select when installing patches for Linux."
       },
       "packageNameMasksToInclude": {
         "type": {
-          "$ref": "#/402"
+          "$ref": "#/403"
         },
         "flags": 0,
         "description": "packages to include in the patch operation. Format: packageName_packageVersion"
       },
       "packageNameMasksToExclude": {
         "type": {
-          "$ref": "#/403"
+          "$ref": "#/404"
         },
         "flags": 0,
         "description": "packages to exclude in the patch operation. Format: packageName_packageVersion"
@@ -5585,13 +5597,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/397"
-      },
-      {
         "$ref": "#/398"
       },
       {
         "$ref": "#/399"
+      },
+      {
+        "$ref": "#/400"
       },
       {
         "$ref": "#/2"
@@ -5601,7 +5613,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/400"
+      "$ref": "#/401"
     }
   },
   {
@@ -5622,7 +5634,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/410"
+          "$ref": "#/411"
         },
         "flags": 2,
         "description": "The overall success or failure status of the operation. It remains \"InProgress\" until the operation completes. At that point it will become \"Failed\", \"Succeeded\", \"Unknown\" or \"CompletedWithWarnings.\""
@@ -5636,7 +5648,7 @@
       },
       "rebootStatus": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/418"
         },
         "flags": 2,
         "description": "The reboot state of the VM following completion of the operation."
@@ -5699,21 +5711,21 @@
       },
       "startedBy": {
         "type": {
-          "$ref": "#/420"
+          "$ref": "#/421"
         },
         "flags": 2,
         "description": "Indicates if operation was triggered by user or by platform."
       },
       "patchServiceUsed": {
         "type": {
-          "$ref": "#/427"
+          "$ref": "#/428"
         },
         "flags": 2,
         "description": "Specifies the patch service used for the operation."
       },
       "osType": {
         "type": {
-          "$ref": "#/430"
+          "$ref": "#/431"
         },
         "flags": 2,
         "description": "The operating system type of the machine."
@@ -5751,9 +5763,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/405"
-      },
-      {
         "$ref": "#/406"
       },
       {
@@ -5764,6 +5773,9 @@
       },
       {
         "$ref": "#/409"
+      },
+      {
+        "$ref": "#/410"
       },
       {
         "$ref": "#/2"
@@ -5798,9 +5810,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/411"
-      },
-      {
         "$ref": "#/412"
       },
       {
@@ -5814,6 +5823,9 @@
       },
       {
         "$ref": "#/416"
+      },
+      {
+        "$ref": "#/417"
       },
       {
         "$ref": "#/2"
@@ -5832,10 +5844,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/418"
+        "$ref": "#/419"
       },
       {
-        "$ref": "#/419"
+        "$ref": "#/420"
       },
       {
         "$ref": "#/2"
@@ -5870,9 +5882,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/421"
-      },
-      {
         "$ref": "#/422"
       },
       {
@@ -5886,6 +5895,9 @@
       },
       {
         "$ref": "#/426"
+      },
+      {
+        "$ref": "#/427"
       },
       {
         "$ref": "#/2"
@@ -5904,10 +5916,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/428"
+        "$ref": "#/429"
       },
       {
-        "$ref": "#/429"
+        "$ref": "#/430"
       },
       {
         "$ref": "#/2"
@@ -5920,10 +5932,10 @@
     "resourceType": "Microsoft.HybridCompute/machines",
     "apiVersion": "2026-02-12-preview",
     "output": {
-      "$ref": "#/404"
+      "$ref": "#/405"
     },
     "input": {
-      "$ref": "#/376"
+      "$ref": "#/377"
     }
   },
   {
@@ -5932,7 +5944,7 @@
     "properties": {
       "extensions": {
         "type": {
-          "$ref": "#/433"
+          "$ref": "#/434"
         },
         "flags": 0,
         "description": "The list of extensions"
@@ -5951,10 +5963,10 @@
     "resourceType": "Microsoft.HybridCompute/machines",
     "apiVersion": "2026-02-12-preview",
     "output": {
-      "$ref": "#/432"
+      "$ref": "#/433"
     },
     "input": {
-      "$ref": "#/432"
+      "$ref": "#/433"
     }
   },
   {
@@ -5963,7 +5975,7 @@
     "properties": {
       "extensionTargets": {
         "type": {
-          "$ref": "#/437"
+          "$ref": "#/438"
         },
         "flags": 0,
         "description": "Describes the Extension Target Properties."
@@ -5988,7 +6000,7 @@
     "name": "MachineExtensionUpgradeExtensionTargets",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/436"
+      "$ref": "#/437"
     }
   },
   {
@@ -6000,7 +6012,7 @@
       "$ref": "#/142"
     },
     "input": {
-      "$ref": "#/435"
+      "$ref": "#/436"
     }
   },
   {
@@ -6022,7 +6034,7 @@
     "resourceType": "Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations",
     "apiVersion": "2026-02-12-preview",
     "output": {
-      "$ref": "#/439"
+      "$ref": "#/440"
     }
   }
 ]

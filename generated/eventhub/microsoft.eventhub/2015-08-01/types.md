@@ -57,6 +57,12 @@
 * **properties**: [ConsumerGroupProperties](#consumergroupproperties): Properties supplied to the Create Or Update Consumer Group operation.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function CheckNameAvailability (Microsoft.EventHub@2015-08-01)
+* **Resource**: Microsoft.EventHub
+* **ApiVersion**: 2015-08-01
+* **Input**: [CheckNameAvailabilityParameter](#checknameavailabilityparameter)
+* **Output**: [CheckNameAvailabilityResult](#checknameavailabilityresult)
+
 ## Function listKeys (Microsoft.EventHub/namespaces/AuthorizationRules@2015-08-01)
 * **Resource**: Microsoft.EventHub/namespaces/AuthorizationRules
 * **ApiVersion**: 2015-08-01
@@ -78,6 +84,16 @@
 * **ApiVersion**: 2015-08-01
 * **Input**: [RegenerateKeysParameters](#regeneratekeysparameters)
 * **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## CheckNameAvailabilityParameter
+### Properties
+* **name**: string (Required): Name to check the namespace name availability
+
+## CheckNameAvailabilityResult
+### Properties
+* **message**: string (ReadOnly): The detailed info regarding the reason associated with the Namespace.
+* **nameAvailable**: bool: Value indicating Namespace is availability, true if the Namespace is available; otherwise, false.
+* **reason**: 'InvalidName' | 'NameInLockdown' | 'NameInUse' | 'None' | 'SubscriptionIsDisabled' | 'TooManyNamespaceInCurrentSubscription': The reason for unavailability of a Namespace.
 
 ## ConsumerGroupProperties
 ### Properties

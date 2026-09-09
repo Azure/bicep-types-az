@@ -77,6 +77,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Support/supportTickets/communications' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Support@2024-04-01)
+* **Resource**: Microsoft.Support
+* **ApiVersion**: 2024-04-01
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
 ## Function checkNameAvailability (Microsoft.Support/supportTickets@2024-04-01)
 * **Resource**: Microsoft.Support/supportTickets
 * **ApiVersion**: 2024-04-01

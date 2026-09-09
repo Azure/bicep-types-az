@@ -772,6 +772,12 @@
 * **Input**: [AcceptTransferRequest](#accepttransferrequest)
 * **Output**: [ValidateTransferListResponse](#validatetransferlistresponse)
 
+## Function validateAddress (Microsoft.Billing@2024-04-01)
+* **Resource**: Microsoft.Billing
+* **ApiVersion**: 2024-04-01
+* **Input**: [AddressDetails](#addressdetails)
+* **Output**: [AddressValidationResponse](#addressvalidationresponse)
+
 ## Function validateDeleteEligibility (Microsoft.Billing/billingAccounts/billingProfiles@2024-04-01)
 * **Resource**: Microsoft.Billing/billingAccounts/billingProfiles
 * **ApiVersion**: 2024-04-01
@@ -807,6 +813,30 @@
 ## AcceptTransferRequest
 ### Properties
 * **properties**: [AcceptTransferProperties](#accepttransferproperties): Request parameters to accept transfer.
+
+## AddressDetails
+### Properties
+* **addressLine1**: string {minLength: 1} (Required): Address line 1.
+* **addressLine2**: string: Address line 2.
+* **addressLine3**: string: Address line 3.
+* **city**: string: Address city.
+* **companyName**: string: Company name. Optional for MCA Individual (Pay-as-you-go).
+* **country**: string {minLength: 1} (Required): Country code uses ISO 3166-1 Alpha-2 format.
+* **district**: string: Address district.
+* **email**: string: Email address.
+* **firstName**: string: First name. Optional for MCA Enterprise.
+* **isValidAddress**: bool: Indicates if the address is incomplete.
+* **lastName**: string: Last name. Optional for MCA Enterprise.
+* **middleName**: string: Middle name.
+* **phoneNumber**: string: Phone number.
+* **postalCode**: string: Postal code.
+* **region**: string: Address region.
+
+## AddressValidationResponse
+### Properties
+* **status**: 'Invalid' | 'Other' | 'Valid' | string (ReadOnly): Status of the address validation.
+* **suggestedAddresses**: [AddressDetails](#addressdetails)[] (ReadOnly): The list of suggested addresses.
+* **validationMessage**: string (ReadOnly): Validation error message.
 
 ## AgreementProperties
 ### Properties

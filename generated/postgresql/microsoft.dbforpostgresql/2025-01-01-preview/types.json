@@ -4611,6 +4611,27 @@
   {
     "$type": "ResourceFunctionType",
     "name": "checkNameAvailability",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/384"
+    },
+    "input": {
+      "$ref": "#/383"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "getPrivateDnsZoneSuffix",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "apiVersion": "2025-01-01-preview",
+    "output": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2025-01-01-preview",
     "output": {
@@ -4639,7 +4660,7 @@
     "properties": {
       "delegatedSubnetsUsage": {
         "type": {
-          "$ref": "#/392"
+          "$ref": "#/394"
         },
         "flags": 2
       },
@@ -4682,7 +4703,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/391"
+      "$ref": "#/393"
     }
   },
   {
@@ -4691,10 +4712,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/locations",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/390"
+      "$ref": "#/392"
     },
     "input": {
-      "$ref": "#/389"
+      "$ref": "#/391"
     }
   },
   {
@@ -4710,7 +4731,7 @@
       },
       "failoverMode": {
         "type": {
-          "$ref": "#/399"
+          "$ref": "#/401"
         },
         "flags": 0,
         "description": "Failover mode."
@@ -4737,16 +4758,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/395"
-      },
-      {
-        "$ref": "#/396"
-      },
-      {
         "$ref": "#/397"
       },
       {
         "$ref": "#/398"
+      },
+      {
+        "$ref": "#/399"
+      },
+      {
+        "$ref": "#/400"
       },
       {
         "$ref": "#/0"
@@ -4762,10 +4783,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/400"
+      "$ref": "#/402"
     },
     "input": {
-      "$ref": "#/394"
+      "$ref": "#/396"
     }
   },
   {
@@ -4774,7 +4795,7 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/400"
+      "$ref": "#/402"
     }
   },
   {
@@ -4783,7 +4804,7 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/400"
+      "$ref": "#/402"
     }
   },
   {
@@ -4792,7 +4813,7 @@
     "properties": {
       "backupSettings": {
         "type": {
-          "$ref": "#/405"
+          "$ref": "#/407"
         },
         "flags": 1,
         "description": "Backup Settings"
@@ -4818,7 +4839,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/407"
+          "$ref": "#/409"
         },
         "flags": 1,
         "description": "Additional Properties for the pre backup response"
@@ -4844,10 +4865,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/406"
+      "$ref": "#/408"
     },
     "input": {
-      "$ref": "#/404"
+      "$ref": "#/406"
     }
   },
   {
@@ -4856,14 +4877,14 @@
     "properties": {
       "targetDetails": {
         "type": {
-          "$ref": "#/410"
+          "$ref": "#/412"
         },
         "flags": 1,
         "description": "Backup store detail for target server"
       },
       "backupSettings": {
         "type": {
-          "$ref": "#/405"
+          "$ref": "#/407"
         },
         "flags": 1,
         "description": "Backup Settings"
@@ -4876,7 +4897,7 @@
     "properties": {
       "sasUriList": {
         "type": {
-          "$ref": "#/411"
+          "$ref": "#/413"
         },
         "flags": 1,
         "description": "List of SAS uri of storage containers where backup data is to be streamed/copied."
@@ -4908,10 +4929,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/412"
+      "$ref": "#/414"
     },
     "input": {
-      "$ref": "#/409"
+      "$ref": "#/411"
     }
   },
   {
@@ -4941,7 +4962,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/419"
         },
         "flags": 2,
         "description": "Migration name availability reason."
@@ -4967,10 +4988,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/415"
+        "$ref": "#/417"
       },
       {
-        "$ref": "#/416"
+        "$ref": "#/418"
       },
       {
         "$ref": "#/0"
@@ -4983,10 +5004,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/414"
+      "$ref": "#/416"
     },
     "input": {
-      "$ref": "#/414"
+      "$ref": "#/416"
     }
   },
   {
@@ -4995,7 +5016,7 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/400"
+      "$ref": "#/402"
     }
   },
   {
@@ -5004,7 +5025,7 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/400"
+      "$ref": "#/402"
     }
   },
   {
@@ -5047,10 +5068,10 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/400"
+      "$ref": "#/402"
     },
     "input": {
-      "$ref": "#/421"
+      "$ref": "#/423"
     }
   },
   {
@@ -5059,7 +5080,7 @@
     "resourceType": "Microsoft.DBforPostgreSQL/flexibleServers/tuningOptions",
     "apiVersion": "2025-01-01-preview",
     "output": {
-      "$ref": "#/400"
+      "$ref": "#/402"
     }
   }
 ]

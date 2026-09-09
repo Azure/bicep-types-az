@@ -617,6 +617,12 @@
 * **Input**: [DataConnectionCheckNameRequest](#dataconnectionchecknamerequest)
 * **Output**: [CheckNameResult](#checknameresult)
 
+## Function checkNameAvailability (Microsoft.Synapse@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse
+* **ApiVersion**: 2021-06-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function checkPrincipalAssignmentNameAvailability (Microsoft.Synapse/workspaces/kustoPools@2021-06-01-preview)
 * **Resource**: Microsoft.Synapse/workspaces/kustoPools
 * **ApiVersion**: 2021-06-01-preview
@@ -865,6 +871,18 @@
 ### Properties
 * **isPrivateLinked**: bool (ReadOnly): Is Storage Account Status Linked.
 * **privateEndpointResourceId**: string (ReadOnly): Endpoint ResourceId.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: Workspace name
+* **type**: string: Type: workspace
+
+## CheckNameAvailabilityResponse
+### Properties
+* **available**: bool: Whether the workspace name is available
+* **message**: string: Validation message
+* **name**: string: Workspace name
+* **reason**: string: Reason the workspace name is or is not available
 
 ## CheckNameResult
 ### Properties

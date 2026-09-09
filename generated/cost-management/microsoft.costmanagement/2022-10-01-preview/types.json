@@ -2159,7 +2159,7 @@
   {
     "$type": "ResourceFunctionType",
     "name": "forecast",
-    "resourceType": "Microsoft.CostManagement/externalSubscriptions",
+    "resourceType": "Microsoft.CostManagement",
     "apiVersion": "2022-10-01-preview",
     "output": {
       "$ref": "#/172"
@@ -2393,6 +2393,30 @@
       "$ref": "#/196"
     },
     "maxLength": 2
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "query",
+    "resourceType": "Microsoft.CostManagement",
+    "apiVersion": "2022-10-01-preview",
+    "output": {
+      "$ref": "#/172"
+    },
+    "input": {
+      "$ref": "#/180"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "forecast",
+    "resourceType": "Microsoft.CostManagement/externalSubscriptions",
+    "apiVersion": "2022-10-01-preview",
+    "output": {
+      "$ref": "#/172"
+    },
+    "input": {
+      "$ref": "#/143"
+    }
   },
   {
     "$type": "ResourceFunctionType",

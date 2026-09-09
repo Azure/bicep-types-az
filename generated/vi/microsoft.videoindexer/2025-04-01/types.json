@@ -880,18 +880,110 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AccountCheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The VideoIndexer account name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 1,
+        "description": "The type of resource, Microsoft.VideoIndexer/accounts"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.VideoIndexer/accounts"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 2,
+        "description": "Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 2,
+        "description": "Gets the reason that a Video Indexer account name could not be used. The Reason element is only returned if NameAvailable is false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets an error message explaining the Reason value in more detail."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.VideoIndexer",
+    "apiVersion": "2025-04-01",
+    "output": {
+      "$ref": "#/70"
+    },
+    "input": {
+      "$ref": "#/67"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "GenerateAccessTokenParameters",
     "properties": {
       "permissionType": {
         "type": {
-          "$ref": "#/70"
+          "$ref": "#/78"
         },
         "flags": 1,
         "description": "The requested permission"
       },
       "scope": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/82"
         },
         "flags": 1,
         "description": "The requested media type"
@@ -924,100 +1016,15 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/68"
+        "$ref": "#/76"
       },
       {
-        "$ref": "#/69"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Video"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Account"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Project"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/71"
-      },
-      {
-        "$ref": "#/72"
-      },
-      {
-        "$ref": "#/73"
+        "$ref": "#/77"
       },
       {
         "$ref": "#/2"
       }
     ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AccessToken",
-    "properties": {
-      "accessToken": {
-        "type": {
-          "$ref": "#/76"
-        },
-        "flags": 2,
-        "description": "The access token."
-      }
-    }
-  },
-  {
-    "$type": "StringType",
-    "sensitive": true
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "generateAccessToken",
-    "resourceType": "Microsoft.VideoIndexer/accounts",
-    "apiVersion": "2025-04-01",
-    "output": {
-      "$ref": "#/75"
-    },
-    "input": {
-      "$ref": "#/67"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GenerateRestrictedViewerAccessTokenParameters",
-    "properties": {
-      "scope": {
-        "type": {
-          "$ref": "#/82"
-        },
-        "flags": 1,
-        "description": "The requested media type"
-      },
-      "videoId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The video ID"
-      },
-      "projectId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The project ID"
-      }
-    }
   },
   {
     "$type": "StringLiteralType",
@@ -1049,15 +1056,100 @@
     ]
   },
   {
+    "$type": "ObjectType",
+    "name": "AccessToken",
+    "properties": {
+      "accessToken": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 2,
+        "description": "The access token."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateAccessToken",
+    "resourceType": "Microsoft.VideoIndexer/accounts",
+    "apiVersion": "2025-04-01",
+    "output": {
+      "$ref": "#/83"
+    },
+    "input": {
+      "$ref": "#/75"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenerateRestrictedViewerAccessTokenParameters",
+    "properties": {
+      "scope": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 1,
+        "description": "The requested media type"
+      },
+      "videoId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The video ID"
+      },
+      "projectId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The project ID"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Video"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Account"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Project"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/87"
+      },
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "generateRestrictedViewerAccessToken",
     "resourceType": "Microsoft.VideoIndexer/accounts",
     "apiVersion": "2025-04-01",
     "output": {
-      "$ref": "#/75"
+      "$ref": "#/83"
     },
     "input": {
-      "$ref": "#/78"
+      "$ref": "#/86"
     }
   },
   {
@@ -1066,14 +1158,14 @@
     "properties": {
       "permissionType": {
         "type": {
-          "$ref": "#/87"
+          "$ref": "#/95"
         },
         "flags": 1,
         "description": "The requested permission"
       },
       "scope": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/99"
         },
         "flags": 1,
         "description": "The requested media type"
@@ -1113,10 +1205,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/85"
+        "$ref": "#/93"
       },
       {
-        "$ref": "#/86"
+        "$ref": "#/94"
       },
       {
         "$ref": "#/2"
@@ -1139,13 +1231,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/88"
+        "$ref": "#/96"
       },
       {
-        "$ref": "#/89"
+        "$ref": "#/97"
       },
       {
-        "$ref": "#/90"
+        "$ref": "#/98"
       },
       {
         "$ref": "#/2"
@@ -1158,10 +1250,10 @@
     "resourceType": "Microsoft.VideoIndexer/accounts",
     "apiVersion": "2025-04-01",
     "output": {
-      "$ref": "#/75"
+      "$ref": "#/83"
     },
     "input": {
-      "$ref": "#/84"
+      "$ref": "#/92"
     }
   },
   {
@@ -1170,7 +1262,7 @@
     "properties": {
       "scope": {
         "type": {
-          "$ref": "#/97"
+          "$ref": "#/105"
         },
         "flags": 1,
         "description": "The requested media type"
@@ -1214,13 +1306,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/94"
+        "$ref": "#/102"
       },
       {
-        "$ref": "#/95"
+        "$ref": "#/103"
       },
       {
-        "$ref": "#/96"
+        "$ref": "#/104"
       },
       {
         "$ref": "#/2"
@@ -1233,10 +1325,10 @@
     "resourceType": "Microsoft.VideoIndexer/accounts",
     "apiVersion": "2025-04-01",
     "output": {
-      "$ref": "#/75"
+      "$ref": "#/83"
     },
     "input": {
-      "$ref": "#/93"
+      "$ref": "#/101"
     }
   }
 ]

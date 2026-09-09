@@ -60,6 +60,23 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/enterpriseChannels' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkEnterpriseChannelNameAvailability (Microsoft.BotService@2018-07-12)
+* **Resource**: Microsoft.BotService
+* **ApiVersion**: 2018-07-12
+* **Input**: [EnterpriseChannelCheckNameAvailabilityRequest](#enterprisechannelchecknameavailabilityrequest)
+* **Output**: [EnterpriseChannelCheckNameAvailabilityResponse](#enterprisechannelchecknameavailabilityresponse)
+
+## Function checkNameAvailability (Microsoft.BotService@2018-07-12)
+* **Resource**: Microsoft.BotService
+* **ApiVersion**: 2018-07-12
+* **Input**: [CheckNameAvailabilityRequestBody](#checknameavailabilityrequestbody)
+* **Output**: [CheckNameAvailabilityResponseBody](#checknameavailabilityresponsebody)
+
+## Function listAuthServiceProviders (Microsoft.BotService@2018-07-12)
+* **Resource**: Microsoft.BotService
+* **ApiVersion**: 2018-07-12
+* **Output**: [ServiceProviderResponseList](#serviceproviderresponselist)
+
 ## Function listChannelWithKeys (Microsoft.BotService/botServices/channels@2018-07-12)
 * **Resource**: Microsoft.BotService/botServices/channels
 * **ApiVersion**: 2018-07-12
@@ -154,6 +171,16 @@
 * **properties**: [WebChatChannelProperties](#webchatchannelproperties): The set of properties specific to Web Chat channel resource
 
 
+## CheckNameAvailabilityRequestBody
+### Properties
+* **name**: string: the name of the bot for which availability needs to be checked.
+* **type**: string: the type of the bot for which availability needs to be checked
+
+## CheckNameAvailabilityResponseBody
+### Properties
+* **message**: string: additional message from the bot management api showing why a bot name is not available
+* **valid**: bool: indicates if the bot name is valid.
+
 ## ConnectionSetting
 ### Properties
 * **etag**: string: Entity Tag
@@ -202,6 +229,15 @@
 * **emailAddress**: string (Required): The email address
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 * **password**: string (Required): The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
+
+## EnterpriseChannelCheckNameAvailabilityRequest
+### Properties
+* **name**: string: The name of the Enterprise Channel for which availability needs to be checked.
+
+## EnterpriseChannelCheckNameAvailabilityResponse
+### Properties
+* **message**: string: Additional information about why a bot name is not available.
+* **valid**: bool: Indicates if the Enterprise Channel name is valid.
 
 ## EnterpriseChannelNode
 ### Properties
@@ -272,6 +308,33 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ServiceProvider
+### Properties
+* **properties**: [ServiceProviderProperties](#serviceproviderproperties): The Properties of a Service Provider Object
+
+## ServiceProviderParameter
+### Properties
+* **default**: string (ReadOnly): Default Name for the Service Provider
+* **description**: string (ReadOnly): Description of the Service Provider
+* **displayName**: string (ReadOnly): Display Name of the Service Provider
+* **helpUrl**: string (ReadOnly): Help Url for the  Service Provider
+* **name**: string (ReadOnly): Name of the Service Provider
+* **type**: string (ReadOnly): Type of the Service Provider
+
+## ServiceProviderProperties
+### Properties
+* **devPortalUrl**: string (ReadOnly): Display Name of the Service Provider
+* **displayName**: string (ReadOnly): Display Name of the Service Provider
+* **iconUrl**: string (ReadOnly): Display Name of the Service Provider
+* **id**: string (ReadOnly): Id for Service Provider
+* **parameters**: [ServiceProviderParameter](#serviceproviderparameter)[]: The list of parameters for the Service Provider
+* **serviceProviderName**: string (ReadOnly): Display Name of the Service Provider
+
+## ServiceProviderResponseList
+### Properties
+* **nextLink**: string: The link used to get the next page of bot service providers.
+* **value**: [ServiceProvider](#serviceprovider)[] (ReadOnly): Gets the list of bot service providers and their properties.
 
 ## Sku
 ### Properties

@@ -438,6 +438,18 @@
 * **Input**: [ManagedNetworkSettingsBasicResource](#managednetworksettingsbasicresource)
 * **Output**: [OutboundRuleListResult](#outboundrulelistresult)
 
+## Function calculateModelCapacity (Microsoft.CognitiveServices@2026-05-15-preview)
+* **Resource**: Microsoft.CognitiveServices
+* **ApiVersion**: 2026-05-15-preview
+* **Input**: [CalculateModelCapacityParameter](#calculatemodelcapacityparameter)
+* **Output**: [CalculateModelCapacityResult](#calculatemodelcapacityresult)
+
+## Function checkDomainAvailability (Microsoft.CognitiveServices@2026-05-15-preview)
+* **Resource**: Microsoft.CognitiveServices
+* **ApiVersion**: 2026-05-15-preview
+* **Input**: [CheckDomainAvailabilityParameter](#checkdomainavailabilityparameter)
+* **Output**: [DomainAvailability](#domainavailability)
+
 ## Function checkSkuAvailability (Microsoft.CognitiveServices/locations@2026-05-15-preview)
 * **Resource**: Microsoft.CognitiveServices/locations
 * **ApiVersion**: 2026-05-15-preview
@@ -717,6 +729,23 @@
 * **tenantId**: string (Required): The tenant ID of the identity.
 * **type**: 'None' | 'System' | 'User' | string (Required): Enumeration of identity types, from the perspective of management.
 
+## CalculateModelCapacityParameter
+### Properties
+* **model**: [DeploymentModel](#deploymentmodel): Properties of Cognitive Services account deployment model.
+* **skuName**: string: The name of SKU.
+* **workloads**: [ModelCapacityCalculatorWorkload](#modelcapacitycalculatorworkload)[]: List of Model Capacity Calculator Workload.
+
+## CalculateModelCapacityResult
+### Properties
+* **estimatedCapacity**: [CalculateModelCapacityResultEstimatedCapacity](#calculatemodelcapacityresultestimatedcapacity): Model Estimated Capacity.
+* **model**: [DeploymentModel](#deploymentmodel): Properties of Cognitive Services account deployment model.
+* **skuName**: string
+
+## CalculateModelCapacityResultEstimatedCapacity
+### Properties
+* **deployableValue**: int
+* **value**: int
+
 ## CallRateLimit
 ### Properties
 * **count**: int: The count value of Call Rate Limit.
@@ -735,6 +764,12 @@
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
 * **threadStorageConnections**: string[]: List of connection names from those available in the account or project to be used for Thread storage.
 * **vectorStoreConnections**: string[]: List of connection names from those available in the account or project to be used for vector database (e.g. CosmosDB).
+
+## CheckDomainAvailabilityParameter
+### Properties
+* **kind**: string: The kind (type) of cognitive service account.
+* **subdomainName**: string (Required): The subdomain name to use.
+* **type**: string (Required): The Type of the resource.
 
 ## CheckSkuAvailabilityParameter
 ### Properties
@@ -1073,6 +1108,14 @@ depending on each OAuth2 provider's implementation.
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## DomainAvailability
+### Properties
+* **isSubdomainAvailable**: bool: Indicates the given SKU is available or not.
+* **kind**: string: The kind (type) of cognitive service account.
+* **reason**: string: Reason why the SKU is not available.
+* **subdomainName**: string: The subdomain name to use.
+* **type**: string: The Type of the resource.
+
 ## Encryption
 ### Properties
 * **keySource**: 'Microsoft.CognitiveServices' | 'Microsoft.KeyVault' | string: Enumerates the possible value of keySource for Encryption
@@ -1240,6 +1283,16 @@ Example: azureml://registries/{registry}/models/{model}/versions/{version}
 ### Properties
 * **managedNetwork**: [ManagedNetworkSettingsEx](#managednetworksettingsex): Managed Network settings for a cognitive services account.
 * **provisioningState**: 'Deferred' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current deployment state of the managed network resource. The provisioningState is to indicate states for resource provisioning.
+
+## ModelCapacityCalculatorWorkload
+### Properties
+* **requestParameters**: [ModelCapacityCalculatorWorkloadRequestParam](#modelcapacitycalculatorworkloadrequestparam): Dictionary, Model Capacity Calculator Workload Parameters.
+* **requestPerMinute**: int: Request per minute.
+
+## ModelCapacityCalculatorWorkloadRequestParam
+### Properties
+* **avgGeneratedTokens**: int: Average generated tokens.
+* **avgPromptTokens**: int: Average prompt tokens.
 
 ## MultiRegionSettings
 ### Properties

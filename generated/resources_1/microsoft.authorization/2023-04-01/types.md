@@ -57,6 +57,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Authorization/policySetDefinitions/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listPolicyDefinitionVersions (Microsoft.Authorization@2023-04-01)
+* **Resource**: Microsoft.Authorization
+* **ApiVersion**: 2023-04-01
+* **Output**: [PolicyDefinitionVersionListResult](#policydefinitionversionlistresult)
+
+## Function listPolicySetDefinitionVersions (Microsoft.Authorization@2023-04-01)
+* **Resource**: Microsoft.Authorization
+* **ApiVersion**: 2023-04-01
+* **Output**: [PolicySetDefinitionVersionListResult](#policysetdefinitionversionlistresult)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the resource identity.  This property will only be provided for a system assigned identity
@@ -178,6 +188,19 @@
 * **policyDefinitionId**: string (Required): The ID of the policy definition or policy set definition.
 * **policyDefinitionReferenceId**: string: A unique id (within the policy set definition) for this policy definition reference.
 
+## PolicyDefinitionVersion
+### Properties
+* **id**: string (ReadOnly): The ID of the policy definition version.
+* **name**: string (ReadOnly): The name of the policy definition version.
+* **properties**: [PolicyDefinitionVersionProperties](#policydefinitionversionproperties): The policy definition version properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
+* **type**: string (ReadOnly): The type of the resource (Microsoft.Authorization/policyDefinitions/versions).
+
+## PolicyDefinitionVersionListResult
+### Properties
+* **nextLink**: string: The URL to use for getting the next set of results.
+* **value**: [PolicyDefinitionVersion](#policydefinitionversion)[]: An array of policy definitions versions.
+
 ## PolicyDefinitionVersionProperties
 ### Properties
 * **description**: string: The policy definition description.
@@ -200,6 +223,19 @@
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static' | string: The type of policy set definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
 * **version**: string: The policy set definition version in #.#.# format.
 * **versions**: string[]: A list of available versions for this policy set definition.
+
+## PolicySetDefinitionVersion
+### Properties
+* **id**: string (ReadOnly): The ID of the policy set definition version.
+* **name**: string (ReadOnly): The name of the policy set definition version.
+* **properties**: [PolicySetDefinitionVersionProperties](#policysetdefinitionversionproperties): The policy set definition version properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
+* **type**: string (ReadOnly): The type of the resource (Microsoft.Authorization/policySetDefinitions/versions).
+
+## PolicySetDefinitionVersionListResult
+### Properties
+* **nextLink**: string: The URL to use for getting the next set of results.
+* **value**: [PolicySetDefinitionVersion](#policysetdefinitionversion)[]: An array of policy set definition versions.
 
 ## PolicySetDefinitionVersionProperties
 ### Properties

@@ -670,6 +670,18 @@
   {
     "$type": "ResourceFunctionType",
     "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Support",
+    "apiVersion": "2020-04-01",
+    "output": {
+      "$ref": "#/39"
+    },
+    "input": {
+      "$ref": "#/35"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
     "resourceType": "Microsoft.Support/supportTickets",
     "apiVersion": "2020-04-01",
     "output": {

@@ -1,0 +1,203 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "CheckZonePeersRequest",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The Microsoft location."
+      },
+      "subscriptionIds": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The peer Microsoft Azure subscription ID."
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckZonePeersResult",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "The subscription ID."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "the location of the subscription."
+      },
+      "availabilityZonePeers": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The Availability Zones shared by the subscriptions."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AvailabilityZonePeers",
+    "properties": {
+      "availabilityZone": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "The availabilityZone."
+      },
+      "peers": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Details of shared availability zone."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Peers",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "The subscription ID."
+      },
+      "availabilityZone": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "The availabilityZone."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/4"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkZonePeers",
+    "resourceType": "Microsoft.Resources",
+    "apiVersion": "2019-11-01",
+    "output": {
+      "$ref": "#/3"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceName",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The type of the resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckResourceNameResult",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "Name of Resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "Type of Resource"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Is the resource name Allowed or Reserved"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reserved"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkResourceName",
+    "resourceType": "Microsoft.Resources",
+    "apiVersion": "2019-11-01",
+    "output": {
+      "$ref": "#/10"
+    },
+    "input": {
+      "$ref": "#/9"
+    }
+  }
+]

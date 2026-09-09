@@ -7015,6 +7015,84 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceCheckNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name to check for availability."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApiManagementServiceNameAvailabilityResult",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "True if the name is available and can be used to create a new API Management service; otherwise false."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "If reason == invalid, provide the user with the reason why the given name is invalid, and provide the resource naming requirements so that the user can select a valid name. If reason == AlreadyExists, explain that <resourceName> is already in use, and direct them to select a different name."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/514"
+        },
+        "flags": 0,
+        "description": "Invalid indicates the name provided does not match the resource provider’s naming requirements (incorrect length, unsupported characters, etc.)  AlreadyExists indicates that the name is already in use and is therefore unavailable."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Valid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/511"
+      },
+      {
+        "$ref": "#/512"
+      },
+      {
+        "$ref": "#/513"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.ApiManagement",
+    "apiVersion": "2018-06-01-preview",
+    "output": {
+      "$ref": "#/510"
+    },
+    "input": {
+      "$ref": "#/509"
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "regeneratePrimaryKey",
     "resourceType": "Microsoft.ApiManagement/service/subscriptions",
@@ -7083,7 +7161,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/519"
+          "$ref": "#/526"
         },
         "flags": 0,
         "description": "Status of an async operation."
@@ -7111,14 +7189,14 @@
       },
       "error": {
         "type": {
-          "$ref": "#/520"
+          "$ref": "#/527"
         },
         "flags": 0,
         "description": "Error Body Contract"
       },
       "actionLog": {
         "type": {
-          "$ref": "#/524"
+          "$ref": "#/531"
         },
         "flags": 2,
         "description": "This property if only provided as part of the TenantConfiguration_Validate operation. It contains the log the entities which will be updated/created/deleted as part of the TenantConfiguration_Deploy operation."
@@ -7145,16 +7223,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/515"
+        "$ref": "#/522"
       },
       {
-        "$ref": "#/516"
+        "$ref": "#/523"
       },
       {
-        "$ref": "#/517"
+        "$ref": "#/524"
       },
       {
-        "$ref": "#/518"
+        "$ref": "#/525"
       }
     ]
   },
@@ -7178,7 +7256,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/522"
+          "$ref": "#/529"
         },
         "flags": 0,
         "description": "The list of invalid fields send in request, in case of validation error."
@@ -7215,7 +7293,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/521"
+      "$ref": "#/528"
     }
   },
   {
@@ -7248,7 +7326,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/523"
+      "$ref": "#/530"
     }
   },
   {
@@ -7257,10 +7335,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2018-06-01-preview",
     "output": {
-      "$ref": "#/514"
+      "$ref": "#/521"
     },
     "input": {
-      "$ref": "#/513"
+      "$ref": "#/520"
     }
   },
   {
@@ -7289,10 +7367,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2018-06-01-preview",
     "output": {
-      "$ref": "#/514"
+      "$ref": "#/521"
     },
     "input": {
-      "$ref": "#/526"
+      "$ref": "#/533"
     }
   },
   {
@@ -7301,10 +7379,10 @@
     "resourceType": "Microsoft.ApiManagement/service/tenant",
     "apiVersion": "2018-06-01-preview",
     "output": {
-      "$ref": "#/514"
+      "$ref": "#/521"
     },
     "input": {
-      "$ref": "#/513"
+      "$ref": "#/520"
     }
   },
   {
@@ -7326,7 +7404,7 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2018-06-01-preview",
     "output": {
-      "$ref": "#/529"
+      "$ref": "#/536"
     }
   },
   {
@@ -7335,7 +7413,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/534"
+          "$ref": "#/541"
         },
         "flags": 1,
         "description": "The Key to be used to generate token for user."
@@ -7361,10 +7439,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/532"
+        "$ref": "#/539"
       },
       {
-        "$ref": "#/533"
+        "$ref": "#/540"
       }
     ]
   },
@@ -7387,10 +7465,10 @@
     "resourceType": "Microsoft.ApiManagement/service/users",
     "apiVersion": "2018-06-01-preview",
     "output": {
-      "$ref": "#/535"
+      "$ref": "#/542"
     },
     "input": {
-      "$ref": "#/531"
+      "$ref": "#/538"
     }
   },
   {

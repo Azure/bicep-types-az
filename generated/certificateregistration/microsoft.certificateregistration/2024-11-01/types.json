@@ -1591,11 +1591,96 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AppServiceCertificateOrder",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "AppServiceCertificateOrder resource specific properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateCertificateRegistrationInformation",
+    "resourceType": "Microsoft.CertificateRegistration",
+    "apiVersion": "2024-11-01",
+    "output": {
+      "$ref": "#/132"
+    },
+    "input": {
+      "$ref": "#/130"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ReissueCertificateOrderRequest",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/135"
         },
         "flags": 0,
         "description": "ReissueCertificateOrderRequest resource specific properties"
@@ -1665,9 +1750,6 @@
     }
   },
   {
-    "$type": "AnyType"
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "reissue",
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
@@ -1676,7 +1758,7 @@
       "$ref": "#/132"
     },
     "input": {
-      "$ref": "#/130"
+      "$ref": "#/134"
     }
   },
   {
@@ -1685,7 +1767,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/135"
+          "$ref": "#/138"
         },
         "flags": 0,
         "description": "RenewCertificateOrderRequest resource specific properties"
@@ -1756,7 +1838,7 @@
       "$ref": "#/132"
     },
     "input": {
-      "$ref": "#/134"
+      "$ref": "#/137"
     }
   },
   {
@@ -1790,7 +1872,7 @@
       "$ref": "#/132"
     },
     "input": {
-      "$ref": "#/138"
+      "$ref": "#/141"
     }
   },
   {
@@ -1799,7 +1881,7 @@
     "properties": {
       "actionType": {
         "type": {
-          "$ref": "#/155"
+          "$ref": "#/158"
         },
         "flags": 2,
         "description": "Action type."
@@ -1873,15 +1955,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/141"
-      },
-      {
-        "$ref": "#/142"
-      },
-      {
-        "$ref": "#/143"
-      },
-      {
         "$ref": "#/144"
       },
       {
@@ -1913,13 +1986,22 @@
       },
       {
         "$ref": "#/154"
+      },
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/157"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/140"
+      "$ref": "#/143"
     }
   },
   {
@@ -1928,7 +2010,7 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2024-11-01",
     "output": {
-      "$ref": "#/156"
+      "$ref": "#/159"
     }
   },
   {
@@ -1954,7 +2036,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/158"
+      "$ref": "#/161"
     }
   },
   {
@@ -1963,7 +2045,7 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2024-11-01",
     "output": {
-      "$ref": "#/159"
+      "$ref": "#/162"
     }
   },
   {
@@ -2005,10 +2087,10 @@
     "resourceType": "Microsoft.CertificateRegistration/certificateOrders",
     "apiVersion": "2024-11-01",
     "output": {
-      "$ref": "#/162"
+      "$ref": "#/165"
     },
     "input": {
-      "$ref": "#/161"
+      "$ref": "#/164"
     }
   },
   {

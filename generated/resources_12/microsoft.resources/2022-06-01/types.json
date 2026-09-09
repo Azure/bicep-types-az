@@ -1,0 +1,161 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "ResourceValidationRequest",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The resource provider namespace of the resources being validated"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The type of the resources being validated"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "The optional location for the resources being validated"
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The scope of the resources being validated"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "The list of resources to validate. Each resource in the list must have the same namespace, type, and location.\nThe namespace and type on each resource must match the corresponding values in the top-level request.\nThe location on each resource must match the top-level location in the request if specified."
+      },
+      "validationType": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The type of resource validation to perform"
+      },
+      "performPreflightWithoutRbacWriteCheck": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "If true, the validation will be performed without checking RBAC write permissions."
+      }
+    }
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceValidationRequestResource",
+    "properties": {
+      "apiVersion": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "The API version to use with this resource."
+      },
+      "onlyIfNotExists": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Set this to true if this resource is meant to be provisioned only if it does not exist."
+      }
+    },
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/3"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArmFull"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArmPartial"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/1"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceValidationResponse",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 1,
+        "description": "Details about the results of the validation"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceValidationResponseProperties",
+    "properties": {
+      "validatedResources": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 1,
+        "description": "List of ARM resource IDs corresponding to the resources that were successfully validated"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "validateResources",
+    "resourceType": "Microsoft.Resources",
+    "apiVersion": "2022-06-01",
+    "output": {
+      "$ref": "#/9"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  }
+]

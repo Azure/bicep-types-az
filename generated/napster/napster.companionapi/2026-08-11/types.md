@@ -14,6 +14,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Napster.CompanionAPI/organizations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function activateSaaS (Napster.CompanionAPI@2026-08-11)
+* **Resource**: Napster.CompanionAPI
+* **ApiVersion**: 2026-08-11
+* **Input**: [ActivateSaaSParameterRequest](#activatesaasparameterrequest)
+* **Output**: [SaaSResourceDetailsResponse](#saasresourcedetailsresponse)
+
 ## Function latestLinkedSaaS (Napster.CompanionAPI/organizations@2026-08-11)
 * **Resource**: Napster.CompanionAPI/organizations
 * **ApiVersion**: 2026-08-11
@@ -24,6 +30,11 @@
 * **ApiVersion**: 2026-08-11
 * **Input**: [SaaSData](#saasdata)
 * **Output**: [OrganizationResource](#organizationresource)
+
+## ActivateSaaSParameterRequest
+### Properties
+* **publisherId**: string: Publisher Id for Napster resource
+* **saasGuid**: string (Required): SaaS guid for Activate and Validate SaaS Resource
 
 ## LatestLinkedSaaSResponse
 ### Properties
@@ -95,6 +106,14 @@
 ## SaaSData
 ### Properties
 * **saaSResourceId**: string: SaaS resource id
+
+## SaaSResourceDetailsResponse
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **saasId**: string: Id of the Marketplace SaaS Resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## SystemData
 ### Properties

@@ -693,5 +693,93 @@
     "output": {
       "$ref": "#/57"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityInput",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Search service name to validate. Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 1,
+        "description": "The type of the resource whose name is to be validated. This value must always be 'searchServices'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "searchServices"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityOutput",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 2,
+        "description": "A value indicating whether the name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 2,
+        "description": "The reason why the name is not available. 'Invalid' indicates the name provided does not match the naming requirements (incorrect length, unsupported characters, etc.). 'AlreadyExists' indicates that the name is already in use and is therefore unavailable."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A message that explains why the name is invalid and provides resource naming requirements. Available only if 'Invalid' is returned in the 'reason' property."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Search",
+    "apiVersion": "2019-10-01-preview",
+    "output": {
+      "$ref": "#/63"
+    },
+    "input": {
+      "$ref": "#/61"
+    }
   }
 ]

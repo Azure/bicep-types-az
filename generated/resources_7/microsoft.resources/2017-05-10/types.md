@@ -10,6 +10,12 @@
 * **properties**: [DeploymentPropertiesOrDeploymentPropertiesExtended](#deploymentpropertiesordeploymentpropertiesextended) (Required): The deployment properties.
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function calculateTemplateHash (Microsoft.Resources@2017-05-10)
+* **Resource**: Microsoft.Resources
+* **ApiVersion**: 2017-05-10
+* **Input**: any
+* **Output**: [TemplateHashResult](#templatehashresult)
+
 ## Function cancel (Microsoft.Resources/deployments@2017-05-10)
 * **Resource**: Microsoft.Resources/deployments
 * **ApiVersion**: 2017-05-10
@@ -152,6 +158,11 @@
 * **details**: [ResourceManagementErrorWithDetails](#resourcemanagementerrorwithdetails)[] (ReadOnly): Validation error.
 * **message**: string (ReadOnly): The error message describing the export error.
 * **target**: string (ReadOnly): The target of the error.
+
+## TemplateHashResult
+### Properties
+* **minifiedTemplate**: string: The minified template string.
+* **templateHash**: string: The template hash.
 
 ## TemplateLink
 ### Properties

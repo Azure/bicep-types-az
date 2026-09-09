@@ -315,6 +315,90 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the resource for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Indicates if the resource name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The reason why the given name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Detailed reason why the given name is available."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.OpenEnergyPlatform",
+    "apiVersion": "2022-04-04-preview",
+    "output": {
+      "$ref": "#/29"
+    },
+    "input": {
+      "$ref": "#/28"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "DataPartitionAddOrRemoveRequest",
     "properties": {
       "name": {
@@ -332,10 +416,10 @@
     "resourceType": "Microsoft.OpenEnergyPlatform/energyServices",
     "apiVersion": "2022-04-04-preview",
     "output": {
-      "$ref": "#/28"
+      "$ref": "#/35"
     },
     "input": {
-      "$ref": "#/28"
+      "$ref": "#/35"
     }
   },
   {
@@ -344,10 +428,10 @@
     "resourceType": "Microsoft.OpenEnergyPlatform/energyServices",
     "apiVersion": "2022-04-04-preview",
     "output": {
-      "$ref": "#/28"
+      "$ref": "#/35"
     },
     "input": {
-      "$ref": "#/28"
+      "$ref": "#/35"
     }
   },
   {
@@ -356,7 +440,7 @@
     "properties": {
       "dataPartitionInfo": {
         "type": {
-          "$ref": "#/33"
+          "$ref": "#/40"
         },
         "flags": 0,
         "description": "List of data partitions along with their properties in a given OEP resource."
@@ -386,7 +470,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/32"
+      "$ref": "#/39"
     }
   },
   {
@@ -395,7 +479,7 @@
     "resourceType": "Microsoft.OpenEnergyPlatform/energyServices",
     "apiVersion": "2022-04-04-preview",
     "output": {
-      "$ref": "#/31"
+      "$ref": "#/38"
     }
   }
 ]

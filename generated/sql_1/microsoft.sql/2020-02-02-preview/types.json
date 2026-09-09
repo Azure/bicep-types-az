@@ -15144,6 +15144,93 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1101"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Sql/servers"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name whose availability was checked."
+      },
+      "available": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 2,
+        "description": "True if the name is available, otherwise false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/1105"
+        },
+        "flags": 2,
+        "description": "The reason code explaining why the name is unavailable. Will be undefined if the name is available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A message explaining why the name is unavailable. Will be undefined if the name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1103"
+      },
+      {
+        "$ref": "#/1104"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Sql",
+    "apiVersion": "2020-02-02-preview",
+    "output": {
+      "$ref": "#/1102"
+    },
+    "input": {
+      "$ref": "#/1100"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "CompleteDatabaseRestoreDefinition",
     "properties": {
       "lastBackupName": {
@@ -15164,7 +15251,7 @@
       "$ref": "#/779"
     },
     "input": {
-      "$ref": "#/1100"
+      "$ref": "#/1107"
     }
   },
   {
@@ -15212,7 +15299,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1107"
+          "$ref": "#/1114"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -15259,7 +15346,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1106"
+      "$ref": "#/1113"
     }
   },
   {
@@ -15302,7 +15389,7 @@
     "resourceType": "Microsoft.Sql/locations/deletedServers",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1109"
+      "$ref": "#/1116"
     }
   },
   {
@@ -15345,7 +15432,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1115"
+          "$ref": "#/1122"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -15394,7 +15481,7 @@
     "resourceType": "Microsoft.Sql/servers/failoverGroups",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1114"
+      "$ref": "#/1121"
     }
   },
   {
@@ -15403,7 +15490,7 @@
     "resourceType": "Microsoft.Sql/servers/failoverGroups",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1114"
+      "$ref": "#/1121"
     }
   },
   {
@@ -15446,7 +15533,7 @@
     "resourceType": "Microsoft.Sql/locations/instanceFailoverGroups",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1118"
+      "$ref": "#/1125"
     }
   },
   {
@@ -15455,7 +15542,7 @@
     "resourceType": "Microsoft.Sql/locations/instanceFailoverGroups",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1118"
+      "$ref": "#/1125"
     }
   },
   {
@@ -15507,7 +15594,7 @@
     "resourceType": "Microsoft.Sql/servers/jobAgents/jobs",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1122"
+      "$ref": "#/1129"
     }
   },
   {
@@ -15543,7 +15630,7 @@
     "resourceType": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1106"
+      "$ref": "#/1113"
     }
   },
   {
@@ -15635,10 +15722,10 @@
     "resourceType": "Microsoft.Sql/servers/dnsAliases",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1133"
+      "$ref": "#/1140"
     },
     "input": {
-      "$ref": "#/1132"
+      "$ref": "#/1139"
     }
   },
   {
@@ -15660,7 +15747,7 @@
     "resourceType": "Microsoft.Sql/servers/syncAgents",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1135"
+      "$ref": "#/1142"
     }
   },
   {
@@ -15705,7 +15792,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1142"
+          "$ref": "#/1149"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -15739,7 +15826,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/1145"
+          "$ref": "#/1152"
         },
         "flags": 2,
         "description": "The status of the DNS refresh operation."
@@ -15758,10 +15845,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1143"
+        "$ref": "#/1150"
       },
       {
-        "$ref": "#/1144"
+        "$ref": "#/1151"
       },
       {
         "$ref": "#/0"
@@ -15774,7 +15861,7 @@
     "resourceType": "Microsoft.Sql/virtualClusters",
     "apiVersion": "2020-02-02-preview",
     "output": {
-      "$ref": "#/1141"
+      "$ref": "#/1148"
     }
   }
 ]

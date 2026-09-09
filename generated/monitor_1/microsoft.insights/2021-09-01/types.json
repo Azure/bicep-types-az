@@ -1828,6 +1828,18 @@
   {
     "$type": "ResourceFunctionType",
     "name": "createNotifications",
+    "resourceType": "Microsoft.Insights",
+    "apiVersion": "2021-09-01",
+    "output": {
+      "$ref": "#/119"
+    },
+    "input": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "createNotifications",
     "resourceType": "Microsoft.Insights/actionGroups",
     "apiVersion": "2021-09-01",
     "output": {
@@ -1859,10 +1871,10 @@
     "resourceType": "Microsoft.Insights/actionGroups",
     "apiVersion": "2021-09-01",
     "output": {
-      "$ref": "#/125"
+      "$ref": "#/126"
     },
     "input": {
-      "$ref": "#/124"
+      "$ref": "#/125"
     }
   }
 ]

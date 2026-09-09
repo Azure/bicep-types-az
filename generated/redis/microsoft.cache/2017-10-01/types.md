@@ -43,6 +43,12 @@
 * **properties**: [ScheduleEntries](#scheduleentries) (Required): List of patch schedules for a Redis cache.
 * **type**: 'Microsoft.Cache/Redis/patchSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function CheckNameAvailability (Microsoft.Cache@2017-10-01)
+* **Resource**: Microsoft.Cache
+* **ApiVersion**: 2017-10-01
+* **Input**: [CheckNameAvailabilityParameters](#checknameavailabilityparameters)
+* **Output**: any
+
 ## Function export (Microsoft.Cache/Redis@2017-10-01)
 * **Resource**: Microsoft.Cache/Redis
 * **ApiVersion**: 2017-10-01
@@ -71,6 +77,11 @@
 * **ApiVersion**: 2017-10-01
 * **Input**: [RedisRegenerateKeyParameters](#redisregeneratekeyparameters)
 * **Output**: [RedisAccessKeys](#redisaccesskeys)
+
+## CheckNameAvailabilityParameters
+### Properties
+* **name**: string (Required): Resource name.
+* **type**: string (Required): Resource type. The only legal value of this property for checking redis cache name availability is 'Microsoft.Cache/redis'.
 
 ## ExportRDBParameters
 ### Properties

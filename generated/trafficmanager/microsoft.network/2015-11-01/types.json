@@ -288,5 +288,81 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckTrafficManagerRelativeDnsNameAvailabilityParameters",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the type of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrafficManagerNameAvailability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The relative name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Traffic Manager profile resource type."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Describes whether the relative name is available or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The reason why the name is not available, when applicable."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Descriptive message that explains why the name is not available, when applicable."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkTrafficManagerNameAvailability",
+    "resourceType": "Microsoft.Network",
+    "apiVersion": "2015-11-01",
+    "output": {
+      "$ref": "#/14"
+    },
+    "input": {
+      "$ref": "#/13"
+    }
   }
 ]

@@ -1828,6 +1828,18 @@
   {
     "$type": "ResourceFunctionType",
     "name": "checkNameAvailability",
+    "resourceType": "Microsoft.AppConfiguration",
+    "apiVersion": "2025-02-01-preview",
+    "output": {
+      "$ref": "#/139"
+    },
+    "input": {
+      "$ref": "#/136"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
     "resourceType": "Microsoft.AppConfiguration/locations",
     "apiVersion": "2025-02-01-preview",
     "output": {
@@ -1846,7 +1858,7 @@
     "resourceType": "Microsoft.AppConfiguration/locations/deletedConfigurationStores",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/141"
+      "$ref": "#/142"
     }
   },
   {
@@ -1855,7 +1867,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/146"
         },
         "flags": 1,
         "description": "The ApiKey items on this page"
@@ -1920,7 +1932,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/144"
+      "$ref": "#/145"
     }
   },
   {
@@ -1929,7 +1941,7 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/143"
+      "$ref": "#/144"
     }
   },
   {
@@ -1951,10 +1963,10 @@
     "resourceType": "Microsoft.AppConfiguration/configurationStores",
     "apiVersion": "2025-02-01-preview",
     "output": {
-      "$ref": "#/144"
+      "$ref": "#/145"
     },
     "input": {
-      "$ref": "#/147"
+      "$ref": "#/148"
     }
   }
 ]

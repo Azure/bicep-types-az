@@ -1332,6 +1332,12 @@ az sql elastic-pool list-editions -l <location> -o table
 * **ApiVersion**: 2022-08-01-preview
 * **Output**: any
 
+## Function checkNameAvailability (Microsoft.Sql@2022-08-01-preview)
+* **Resource**: Microsoft.Sql
+* **ApiVersion**: 2022-08-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function completeMove (Microsoft.Sql/managedInstances/databases@2022-08-01-preview)
 * **Resource**: Microsoft.Sql/managedInstances/databases
 * **ApiVersion**: 2022-08-01-preview
@@ -1674,6 +1680,18 @@ az sql elastic-pool list-editions -l <location> -o table
 ### Properties
 * **benchmark**: string (ReadOnly): SQL Vulnerability Assessment benchmark name
 * **reference**: string (ReadOnly): SQL Vulnerability Assessment benchmark reference.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string (Required)
+* **type**: 'Microsoft.Sql/servers' (Required)
+
+## CheckNameAvailabilityResponse
+### Properties
+* **available**: bool (ReadOnly): True if the name is available, otherwise false.
+* **message**: string (ReadOnly): A message explaining why the name is unavailable. Will be undefined if the name is available.
+* **name**: string (ReadOnly): The name whose availability was checked.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason code explaining why the name is unavailable. Will be undefined if the name is available.
 
 ## CompleteDatabaseRestoreDefinition
 ### Properties

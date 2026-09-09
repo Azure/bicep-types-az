@@ -1632,6 +1632,18 @@
   {
     "$type": "ResourceFunctionType",
     "name": "checkNameAvailability",
+    "resourceType": "Microsoft.AppConfiguration",
+    "apiVersion": "2024-05-01",
+    "output": {
+      "$ref": "#/129"
+    },
+    "input": {
+      "$ref": "#/126"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
     "resourceType": "Microsoft.AppConfiguration/locations",
     "apiVersion": "2024-05-01",
     "output": {

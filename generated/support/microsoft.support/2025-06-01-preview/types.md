@@ -77,6 +77,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Support/supportTickets/communications' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Support@2025-06-01-preview)
+* **Resource**: Microsoft.Support
+* **ApiVersion**: 2025-06-01-preview
+* **Input**: [CheckNameAvailabilityInput](#checknameavailabilityinput)
+* **Output**: [CheckNameAvailabilityOutput](#checknameavailabilityoutput)
+
 ## Function checkNameAvailability (Microsoft.Support/supportTickets@2025-06-01-preview)
 * **Resource**: Microsoft.Support/supportTickets
 * **ApiVersion**: 2025-06-01-preview
@@ -88,6 +94,18 @@
 * **ApiVersion**: 2025-06-01-preview
 * **Input**: [ProblemClassificationsClassificationInput](#problemclassificationsclassificationinput)
 * **Output**: [ProblemClassificationsClassificationOutput](#problemclassificationsclassificationoutput)
+
+## Function classifyServices (Microsoft.Support@2025-06-01-preview)
+* **Resource**: Microsoft.Support
+* **ApiVersion**: 2025-06-01-preview
+* **Input**: [ServiceClassificationRequest](#serviceclassificationrequest)
+* **Output**: [ServiceClassificationOutput](#serviceclassificationoutput)
+
+## Function lookUpResourceId (Microsoft.Support@2025-06-01-preview)
+* **Resource**: Microsoft.Support
+* **ApiVersion**: 2025-06-01-preview
+* **Input**: [LookUpResourceIdRequest](#lookupresourceidrequest)
+* **Output**: [LookUpResourceIdResponse](#lookupresourceidresponse)
 
 ## Function upload (Microsoft.Support/fileWorkspaces/files@2025-06-01-preview)
 * **Resource**: Microsoft.Support/fileWorkspaces/files
@@ -156,6 +174,15 @@
 * **createdOn**: string (ReadOnly): Time in UTC (ISO 8601 format) when file workspace was created.
 * **expirationTime**: string (ReadOnly): Time in UTC (ISO 8601 format) when file workspace is going to expire.
 
+## LookUpResourceIdRequest
+### Properties
+* **identifier**: string: The System generated Id that is unique. Use supportTicketId property for Microsoft.Support/supportTickets resource type.
+* **type**: 'Microsoft.Support/supportTickets': The type of resource.
+
+## LookUpResourceIdResponse
+### Properties
+* **resourceId**: string: The resource Id of support resource type.
+
 ## MessageProperties
 ### Properties
 * **body**: string: Body of the communication.
@@ -207,6 +234,23 @@
 ### Properties
 * **description**: string: User consent description.
 * **type**: string: The Azure service for which secondary consent is needed for case creation.
+
+## ServiceClassificationAnswer
+### Properties
+* **childService**: [ClassificationService](#classificationservice): Child service.
+* **displayName**: string (ReadOnly): Localized name of the azure service.
+* **resourceTypes**: string[]: List of applicable ARM resource types for this service.
+* **serviceId**: string (ReadOnly): Azure resource Id of the service.
+
+## ServiceClassificationOutput
+### Properties
+* **serviceClassificationResults**: [ServiceClassificationAnswer](#serviceclassificationanswer)[]: Set of problem classification objects classified.
+
+## ServiceClassificationRequest
+### Properties
+* **additionalContext**: string: Additional information in the form of a string.
+* **issueSummary**: string: Natural language description of the customer’s issue.
+* **resourceId**: string: ARM resource Id of the resource that is having the issue.
 
 ## ServiceLevelAgreement
 ### Properties

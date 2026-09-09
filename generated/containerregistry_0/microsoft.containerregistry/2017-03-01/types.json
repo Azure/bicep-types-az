@@ -215,6 +215,69 @@
   },
   {
     "$type": "ObjectType",
+    "name": "RegistryNameCheckRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the container registry."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 1,
+        "description": "The resource type of the container registry. This field must be set to 'Microsoft.ContainerRegistry/registries'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ContainerRegistry/registries"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistryNameStatus",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The value that indicates whether the name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "If any, the reason that the name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "If any, the error message that provides more detail for the reason that the name is not available."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.ContainerRegistry",
+    "apiVersion": "2017-03-01",
+    "output": {
+      "$ref": "#/18"
+    },
+    "input": {
+      "$ref": "#/16"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "RegistryListCredentialsResult",
     "properties": {
       "username": {
@@ -226,7 +289,7 @@
       },
       "passwords": {
         "type": {
-          "$ref": "#/21"
+          "$ref": "#/25"
         },
         "flags": 0,
         "description": "The list of passwords for a container registry."
@@ -239,7 +302,7 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/20"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "The password name."
@@ -265,17 +328,17 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/18"
+        "$ref": "#/22"
       },
       {
-        "$ref": "#/19"
+        "$ref": "#/23"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/17"
+      "$ref": "#/21"
     }
   },
   {
@@ -284,7 +347,7 @@
     "resourceType": "Microsoft.ContainerRegistry/registries",
     "apiVersion": "2017-03-01",
     "output": {
-      "$ref": "#/16"
+      "$ref": "#/20"
     }
   },
   {
@@ -293,7 +356,7 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/30"
         },
         "flags": 1,
         "description": "Specifies name of the password which should be regenerated -- password or password2."
@@ -312,10 +375,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/24"
+        "$ref": "#/28"
       },
       {
-        "$ref": "#/25"
+        "$ref": "#/29"
       }
     ]
   },
@@ -325,10 +388,10 @@
     "resourceType": "Microsoft.ContainerRegistry/registries",
     "apiVersion": "2017-03-01",
     "output": {
-      "$ref": "#/16"
+      "$ref": "#/20"
     },
     "input": {
-      "$ref": "#/23"
+      "$ref": "#/27"
     }
   }
 ]

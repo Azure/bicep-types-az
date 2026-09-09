@@ -16585,11 +16585,98 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequest",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1207"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Sql/servers"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name whose availability was checked."
+      },
+      "available": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "True if the name is available, otherwise false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/1211"
+        },
+        "flags": 2,
+        "description": "The reason code explaining why the name is unavailable. Will be undefined if the name is available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A message explaining why the name is unavailable. Will be undefined if the name is available."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1209"
+      },
+      {
+        "$ref": "#/1210"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Sql",
+    "apiVersion": "2020-11-01-preview",
+    "output": {
+      "$ref": "#/1208"
+    },
+    "input": {
+      "$ref": "#/1206"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "UpdateManagedInstanceDnsServersOperation",
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1207"
+          "$ref": "#/1214"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -16623,7 +16710,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/1210"
+          "$ref": "#/1217"
         },
         "flags": 2,
         "description": "The status of the DNS refresh operation."
@@ -16642,10 +16729,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1208"
+        "$ref": "#/1215"
       },
       {
-        "$ref": "#/1209"
+        "$ref": "#/1216"
       },
       {
         "$ref": "#/0"
@@ -16658,7 +16745,7 @@
     "resourceType": "Microsoft.Sql/virtualClusters",
     "apiVersion": "2020-11-01-preview",
     "output": {
-      "$ref": "#/1206"
+      "$ref": "#/1213"
     }
   }
 ]

@@ -1099,5 +1099,44 @@
     "output": {
       "$ref": "#/75"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RedeemRequest",
+    "properties": {
+      "redeemCode": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "redeem code"
+      },
+      "firstName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "first name of requester"
+      },
+      "lastName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "last name of requester"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "redeemInvitationCode",
+    "resourceType": "Microsoft.Education",
+    "apiVersion": "2021-12-01-preview",
+    "output": {
+      "$ref": "#/75"
+    },
+    "input": {
+      "$ref": "#/78"
+    }
   }
 ]

@@ -1206,6 +1206,264 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ServiceClassificationRequest",
+    "properties": {
+      "issueSummary": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Natural language description of the customer’s issue."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM resource Id of the resource that is having the issue."
+      },
+      "additionalContext": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Additional information in the form of a string."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceClassificationOutput",
+    "properties": {
+      "serviceClassificationResults": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "Set of problem classification objects classified."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceClassificationAnswer",
+    "properties": {
+      "childService": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "Child service."
+      },
+      "serviceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource Id of the service."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Localized name of the azure service."
+      },
+      "resourceTypes": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "List of applicable ARM resource types for this service."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClassificationService",
+    "properties": {
+      "serviceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure resource Id of the service."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Localized name of the azure service."
+      },
+      "resourceTypes": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "List of applicable ARM resource types for this service."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/80"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "classifyServices",
+    "resourceType": "Microsoft.Support",
+    "apiVersion": "2023-06-01-preview",
+    "output": {
+      "$ref": "#/79"
+    },
+    "input": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityInput",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource name to validate."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 1,
+        "description": "The type of resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Support/supportTickets"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Support/communications"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/87"
+      },
+      {
+        "$ref": "#/88"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityOutput",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "Indicates whether the name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The reason why the name is not available."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The detailed error message describing why the name is not available."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.Support",
+    "apiVersion": "2023-06-01-preview",
+    "output": {
+      "$ref": "#/90"
+    },
+    "input": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LookUpResourceIdRequest",
+    "properties": {
+      "identifier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The System generated Id that is unique. Use supportTicketId property for Microsoft.Support/supportTickets resource type."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "The type of resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Support/supportTickets"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LookUpResourceIdResponse",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource Id of support resource type."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "lookUpResourceId",
+    "resourceType": "Microsoft.Support",
+    "apiVersion": "2023-06-01-preview",
+    "output": {
+      "$ref": "#/94"
+    },
+    "input": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ProblemClassificationsClassificationInput",
     "properties": {
       "issueSummary": {
@@ -1230,7 +1488,7 @@
     "properties": {
       "problemClassificationResults": {
         "type": {
-          "$ref": "#/83"
+          "$ref": "#/99"
         },
         "flags": 0,
         "description": "Set of problem classification objects classified."
@@ -1286,42 +1544,9 @@
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "ClassificationService",
-    "properties": {
-      "serviceId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Azure resource Id of the service."
-      },
-      "displayName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Localized name of the azure service."
-      },
-      "resourceTypes": {
-        "type": {
-          "$ref": "#/82"
-        },
-        "flags": 0,
-        "description": "List of applicable ARM resource types for this service."
-      }
-    }
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/80"
+      "$ref": "#/98"
     }
   },
   {
@@ -1330,76 +1555,10 @@
     "resourceType": "Microsoft.Support/services",
     "apiVersion": "2023-06-01-preview",
     "output": {
-      "$ref": "#/79"
+      "$ref": "#/97"
     },
     "input": {
-      "$ref": "#/78"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "CheckNameAvailabilityInput",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The resource name to validate."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/88"
-        },
-        "flags": 1,
-        "description": "The type of resource."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.Support/supportTickets"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.Support/communications"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/86"
-      },
-      {
-        "$ref": "#/87"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "CheckNameAvailabilityOutput",
-    "properties": {
-      "nameAvailable": {
-        "type": {
-          "$ref": "#/10"
-        },
-        "flags": 2,
-        "description": "Indicates whether the name is available."
-      },
-      "reason": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The reason why the name is not available."
-      },
-      "message": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The detailed error message describing why the name is not available."
-      }
+      "$ref": "#/96"
     }
   },
   {
@@ -1408,10 +1567,10 @@
     "resourceType": "Microsoft.Support/supportTickets",
     "apiVersion": "2023-06-01-preview",
     "output": {
-      "$ref": "#/89"
+      "$ref": "#/90"
     },
     "input": {
-      "$ref": "#/85"
+      "$ref": "#/86"
     }
   },
   {
@@ -1443,10 +1602,10 @@
     "resourceType": "Microsoft.Support/fileWorkspaces/files",
     "apiVersion": "2023-06-01-preview",
     "output": {
-      "$ref": "#/92"
+      "$ref": "#/103"
     },
     "input": {
-      "$ref": "#/91"
+      "$ref": "#/102"
     }
   }
 ]

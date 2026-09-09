@@ -1342,6 +1342,12 @@ az sql elastic-pool list-editions -l <location> -o table
 * **ApiVersion**: 2023-02-01-preview
 * **Output**: any
 
+## Function checkNameAvailability (Microsoft.Sql@2023-02-01-preview)
+* **Resource**: Microsoft.Sql
+* **ApiVersion**: 2023-02-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function completeMove (Microsoft.Sql/managedInstances/databases@2023-02-01-preview)
 * **Resource**: Microsoft.Sql/managedInstances/databases
 * **ApiVersion**: 2023-02-01-preview
@@ -1705,6 +1711,18 @@ az sql elastic-pool list-editions -l <location> -o table
 * **certificateId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The certificate ID
 * **certificateName**: string (ReadOnly): The certificate name
 * **expiryDate**: string (ReadOnly): The certificate expiry date
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string (Required)
+* **type**: 'Microsoft.Sql/servers' (Required)
+
+## CheckNameAvailabilityResponse
+### Properties
+* **available**: bool (ReadOnly): True if the name is available, otherwise false.
+* **message**: string (ReadOnly): A message explaining why the name is unavailable. Will be undefined if the name is available.
+* **name**: string (ReadOnly): The name whose availability was checked.
+* **reason**: 'AlreadyExists' | 'Invalid' (ReadOnly): The reason code explaining why the name is unavailable. Will be undefined if the name is available.
 
 ## CompleteDatabaseRestoreDefinition
 ### Properties

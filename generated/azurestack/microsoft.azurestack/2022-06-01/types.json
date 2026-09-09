@@ -751,6 +751,57 @@
   },
   {
     "$type": "ObjectType",
+    "name": "DeploymentLicenseRequest",
+    "properties": {
+      "verificationVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Signing verification public key version."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentLicenseResponse",
+    "properties": {
+      "temporaryLicenseChain": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "A license chain that can be used to temporarily activate an Azure Stack device."
+      },
+      "signature": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Signature of the license chain."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "generateDeploymentLicense",
+    "resourceType": "Microsoft.AzureStack",
+    "apiVersion": "2022-06-01",
+    "output": {
+      "$ref": "#/46"
+    },
+    "input": {
+      "$ref": "#/45"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ExtendedProduct",
     "properties": {
       "galleryPackageBlobSasUri": {
@@ -769,7 +820,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/50"
         },
         "flags": 2,
         "description": "Specifies additional properties describing the product."
@@ -782,7 +833,7 @@
     "properties": {
       "computeRole": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Specifies kind of compute role included in the package."
@@ -796,7 +847,7 @@
       },
       "sourceBlob": {
         "type": {
-          "$ref": "#/51"
+          "$ref": "#/55"
         },
         "flags": 2,
         "description": "Specifies a download location where content can be downloaded from."
@@ -817,7 +868,7 @@
       },
       "vmOsType": {
         "type": {
-          "$ref": "#/55"
+          "$ref": "#/59"
         },
         "flags": 2,
         "description": "Specifies operating system used by the product."
@@ -831,14 +882,14 @@
       },
       "osDiskImage": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/60"
         },
         "flags": 2,
         "description": "OS disk image used by product."
       },
       "dataDiskImages": {
         "type": {
-          "$ref": "#/62"
+          "$ref": "#/66"
         },
         "flags": 2,
         "description": "List of attached data disks."
@@ -861,13 +912,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/47"
+        "$ref": "#/51"
       },
       {
-        "$ref": "#/48"
+        "$ref": "#/52"
       },
       {
-        "$ref": "#/49"
+        "$ref": "#/53"
       },
       {
         "$ref": "#/0"
@@ -903,13 +954,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/52"
+        "$ref": "#/56"
       },
       {
-        "$ref": "#/53"
+        "$ref": "#/57"
       },
       {
-        "$ref": "#/54"
+        "$ref": "#/58"
       },
       {
         "$ref": "#/0"
@@ -922,7 +973,7 @@
     "properties": {
       "operatingSystem": {
         "type": {
-          "$ref": "#/60"
+          "$ref": "#/64"
         },
         "flags": 2,
         "description": "OS operating system type."
@@ -952,13 +1003,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/57"
+        "$ref": "#/61"
       },
       {
-        "$ref": "#/58"
+        "$ref": "#/62"
       },
       {
-        "$ref": "#/59"
+        "$ref": "#/63"
       },
       {
         "$ref": "#/0"
@@ -988,7 +1039,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/61"
+      "$ref": "#/65"
     }
   },
   {
@@ -997,7 +1048,7 @@
     "resourceType": "Microsoft.AzureStack/registrations/products",
     "apiVersion": "2022-06-01",
     "output": {
-      "$ref": "#/45"
+      "$ref": "#/49"
     }
   },
   {
@@ -1013,7 +1064,7 @@
       },
       "identitySystem": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/71"
         },
         "flags": 2,
         "description": "Identity system of the device."
@@ -1032,10 +1083,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/65"
+        "$ref": "#/69"
       },
       {
-        "$ref": "#/66"
+        "$ref": "#/70"
       },
       {
         "$ref": "#/0"
@@ -1055,7 +1106,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/70"
+          "$ref": "#/74"
         },
         "flags": 0,
         "description": "List of products."
@@ -1106,7 +1157,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/69"
+      "$ref": "#/73"
     }
   },
   {
@@ -1115,10 +1166,10 @@
     "resourceType": "Microsoft.AzureStack/registrations/products",
     "apiVersion": "2022-06-01",
     "output": {
-      "$ref": "#/68"
+      "$ref": "#/72"
     },
     "input": {
-      "$ref": "#/64"
+      "$ref": "#/68"
     }
   },
   {
@@ -1127,10 +1178,10 @@
     "resourceType": "Microsoft.AzureStack/registrations/products",
     "apiVersion": "2022-06-01",
     "output": {
-      "$ref": "#/68"
+      "$ref": "#/72"
     },
     "input": {
-      "$ref": "#/64"
+      "$ref": "#/68"
     }
   },
   {
@@ -1139,10 +1190,10 @@
     "resourceType": "Microsoft.AzureStack/registrations/products",
     "apiVersion": "2022-06-01",
     "output": {
-      "$ref": "#/69"
+      "$ref": "#/73"
     },
     "input": {
-      "$ref": "#/64"
+      "$ref": "#/68"
     }
   },
   {
@@ -1268,10 +1319,10 @@
     "resourceType": "Microsoft.AzureStack/registrations/products",
     "apiVersion": "2022-06-01",
     "output": {
-      "$ref": "#/75"
+      "$ref": "#/79"
     },
     "input": {
-      "$ref": "#/74"
+      "$ref": "#/78"
     }
   },
   {
@@ -1293,7 +1344,7 @@
     "resourceType": "Microsoft.AzureStack/registrations",
     "apiVersion": "2022-06-01",
     "output": {
-      "$ref": "#/77"
+      "$ref": "#/81"
     }
   },
   {
@@ -1305,7 +1356,7 @@
     "resourceType": "Microsoft.AzureStack/registrations",
     "apiVersion": "2022-06-01",
     "output": {
-      "$ref": "#/79"
+      "$ref": "#/83"
     }
   }
 ]

@@ -71,6 +71,12 @@
 * **Input**: [InviteCodeGenerateRequest](#invitecodegeneraterequest)
 * **Output**: [LabDetails](#labdetails)
 
+## Function redeemInvitationCode (Microsoft.Education@2021-12-01-preview)
+* **Resource**: Microsoft.Education
+* **ApiVersion**: 2021-12-01-preview
+* **Input**: [RedeemRequest](#redeemrequest)
+* **Output**: any
+
 ## Amount
 ### Properties
 * **currency**: string: The type of currency being used for the value.
@@ -116,6 +122,12 @@
 * **status**: 'Active' | 'Deleted' | 'Pending' | string (ReadOnly): The status of this lab
 * **totalAllocatedBudget**: [Amount](#amount) (ReadOnly): Total allocated budget
 * **totalBudget**: [Amount](#amount) (ReadOnly): Total budget
+
+## RedeemRequest
+### Properties
+* **firstName**: string (Required): first name of requester
+* **lastName**: string (Required): last name of requester
+* **redeemCode**: string (Required): redeem code
 
 ## StudentLabProperties
 ### Properties

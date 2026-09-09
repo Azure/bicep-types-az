@@ -1,0 +1,254 @@
+[
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "BaseExportModel",
+    "discriminator": "type",
+    "baseProperties": {
+      "targetProvider": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The target Azure Terraform provider. Defaults to `azurerm`."
+      },
+      "fullProperties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Whether to output all non-computed properties in the generated Terraform configuration. If set to `false` empty-valued properties will be omitted from the configuration. Defaults to `true`."
+      },
+      "maskSensitive": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Mask sensitive attributes in the Terraform configuration. Defaults to `true`."
+      }
+    },
+    "elements": {
+      "ExportQuery": {
+        "$ref": "#/6"
+      },
+      "ExportResource": {
+        "$ref": "#/13"
+      },
+      "ExportResourceGroup": {
+        "$ref": "#/16"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "azurerm"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "azapi"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/1"
+      },
+      {
+        "$ref": "#/2"
+      },
+      {
+        "$ref": "#/3"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportQuery",
+    "properties": {
+      "query": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 1,
+        "description": "The ARG where predicate. Multiple predicates can be combined using `and` operator. Example: `resourceGroup =~ \"my-rg\" and type =~ \"microsoft.network/virtualnetworks\"`. The default ARG table is `Resources`, use 'table' property to query a different table."
+      },
+      "namePattern": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "The id prefix for the exported Terraform resources. Defaults to `res-`."
+      },
+      "recursive": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Recursively includes child resources. Defaults to `false`."
+      },
+      "table": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "The ARG table name. Defaults to 'Resources'."
+      },
+      "authorizationScopeFilter": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "The ARG Scope Filter parameter."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 1,
+        "description": "The parameter type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AtScopeAndBelow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AtScopeAndAbove"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AtScopeAboveAndBelow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AtScopeExact"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/3"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ExportQuery"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportResource",
+    "properties": {
+      "resourceIds": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 1,
+        "description": "The id(s) of the resource to be exported. Example: `[\"/subscriptions/12345678-1234-1234-1234-1234567890ab/resourceGroups/my-rg\"]."
+      },
+      "resourceName": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "The Terraform id of the exported resource. Only effective when `resourceIds` contains only one item. Defaults to `res-0`."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "The Terraform resource type to map to. Only effective when `resourceIds` has one item. Example: `azurerm_virtual_network`. Automatic type mapping will be performed if not provided."
+      },
+      "namePattern": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "The id prefix for the exported Terraform resources. Defaults to `res-`."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "The parameter type"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/3"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ExportResource"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExportResourceGroup",
+    "properties": {
+      "resourceGroupName": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 1,
+        "description": "The name of the resource group to be exported."
+      },
+      "namePattern": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 0,
+        "description": "The id prefix for the exported Terraform resources. Defaults to `res-`."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 1,
+        "description": "The parameter type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ExportResourceGroup"
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "exportTerraform",
+    "resourceType": "Microsoft.AzureTerraform",
+    "apiVersion": "2023-07-01-preview",
+    "output": {
+      "$ref": "#/18"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  }
+]

@@ -1,5 +1,15 @@
 # Microsoft.CustomerLockbox @ 2018-02-28-preview
 
+## Function disableLockbox (Microsoft.CustomerLockbox@2018-02-28-preview)
+* **Resource**: Microsoft.CustomerLockbox
+* **ApiVersion**: 2018-02-28-preview
+* **Output**: any
+
+## Function enableLockbox (Microsoft.CustomerLockbox@2018-02-28-preview)
+* **Resource**: Microsoft.CustomerLockbox
+* **ApiVersion**: 2018-02-28-preview
+* **Output**: any
+
 ## Function updateApproval (Microsoft.CustomerLockbox/requests@2018-02-28-preview)
 * **Resource**: Microsoft.CustomerLockbox/requests
 * **ApiVersion**: 2018-02-28-preview

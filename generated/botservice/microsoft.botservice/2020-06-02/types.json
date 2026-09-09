@@ -1844,6 +1844,208 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailabilityRequestBody",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "the name of the bot for which availability needs to be checked."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "the type of the bot for which availability needs to be checked"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResponseBody",
+    "properties": {
+      "valid": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "indicates if the bot name is valid."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "additional message from the bot management api showing why a bot name is not available"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.BotService",
+    "apiVersion": "2020-06-02",
+    "output": {
+      "$ref": "#/113"
+    },
+    "input": {
+      "$ref": "#/112"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceProviderResponseList",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The link used to get the next page of bot service providers."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 2,
+        "description": "Gets the list of bot service providers and their properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceProvider",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "The Properties of a Service Provider Object"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceProviderProperties",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Id for Service Provider"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name of the Service Provider"
+      },
+      "serviceProviderName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name of the Service Provider"
+      },
+      "devPortalUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name of the Service Provider"
+      },
+      "iconUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name of the Service Provider"
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 0,
+        "description": "The list of parameters for the Service Provider"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceProviderParameter",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Name of the Service Provider"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Type of the Service Provider"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Display Name of the Service Provider"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Description of the Service Provider"
+      },
+      "helpUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Help Url for the  Service Provider"
+      },
+      "default": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Default Name for the Service Provider"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/118"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/116"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listAuthServiceProviders",
+    "resourceType": "Microsoft.BotService",
+    "apiVersion": "2020-06-02",
+    "output": {
+      "$ref": "#/115"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "BotChannel",
     "properties": {
       "properties": {
@@ -1883,7 +2085,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/113"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "Contains resource tags defined as key/value pairs."
@@ -1897,7 +2099,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/118"
+          "$ref": "#/128"
         },
         "flags": 0,
         "description": "Required. Gets or sets the Kind of the resource."
@@ -1939,16 +2141,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/114"
+        "$ref": "#/124"
       },
       {
-        "$ref": "#/115"
+        "$ref": "#/125"
       },
       {
-        "$ref": "#/116"
+        "$ref": "#/126"
       },
       {
-        "$ref": "#/117"
+        "$ref": "#/127"
       },
       {
         "$ref": "#/2"
@@ -1961,7 +2163,7 @@
     "resourceType": "Microsoft.BotService/botServices/channels",
     "apiVersion": "2020-06-02",
     "output": {
-      "$ref": "#/112"
+      "$ref": "#/122"
     }
   },
   {
@@ -1977,7 +2179,7 @@
       },
       "key": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/133"
         },
         "flags": 1,
         "description": "Determines which key is to be regenerated"
@@ -1996,10 +2198,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/121"
+        "$ref": "#/131"
       },
       {
-        "$ref": "#/122"
+        "$ref": "#/132"
       }
     ]
   },
@@ -2009,10 +2211,10 @@
     "resourceType": "Microsoft.BotService/botServices/channels",
     "apiVersion": "2020-06-02",
     "output": {
-      "$ref": "#/112"
+      "$ref": "#/122"
     },
     "input": {
-      "$ref": "#/120"
+      "$ref": "#/130"
     }
   },
   {
@@ -2056,7 +2258,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/126"
+          "$ref": "#/136"
         },
         "flags": 0,
         "description": "Contains resource tags defined as key/value pairs."
@@ -2070,7 +2272,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/141"
         },
         "flags": 0,
         "description": "Required. Gets or sets the Kind of the resource."
@@ -2112,16 +2314,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/127"
+        "$ref": "#/137"
       },
       {
-        "$ref": "#/128"
+        "$ref": "#/138"
       },
       {
-        "$ref": "#/129"
+        "$ref": "#/139"
       },
       {
-        "$ref": "#/130"
+        "$ref": "#/140"
       },
       {
         "$ref": "#/2"
@@ -2134,7 +2336,7 @@
     "resourceType": "Microsoft.BotService/botServices/connections",
     "apiVersion": "2020-06-02",
     "output": {
-      "$ref": "#/125"
+      "$ref": "#/135"
     }
   }
 ]

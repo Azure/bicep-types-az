@@ -1,5 +1,5 @@
 Generating types for 'specification/resources/resource-manager/Microsoft.Resources/resources/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v22.23.2]
+AutoRest code generation utility [cli version: 3.8.0; node: v24.20.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
@@ -221,9 +221,9 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -374,9 +374,9 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -527,9 +527,9 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -680,9 +680,9 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -833,9 +833,9 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -914,9 +914,9 @@ warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -989,8 +989,11 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'BatchResponseStatus-result' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/resources/preview/2025-08-01-preview/batch.json:240:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Resources/batch': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Resources/batch': Unable to find type segments
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1141,9 +1144,9 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1294,9 +1297,9 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1445,9 +1448,9 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1596,9 +1599,9 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1747,8 +1750,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -1893,9 +1896,9 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{groupId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2036,8 +2039,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2174,8 +2177,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2312,8 +2315,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2450,8 +2453,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2588,8 +2591,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2726,8 +2729,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2864,8 +2867,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2998,8 +3001,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3132,8 +3135,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3264,8 +3267,8 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3395,8 +3398,8 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3524,8 +3527,8 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -3654,6 +3657,6 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourc
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
 warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
 warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to find type segments
-warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/unregister': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/{resourceProviderNamespace}/register': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
 warning | Unrecognized property type: any-object. Returning 'any'.

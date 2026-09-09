@@ -728,11 +728,82 @@
   },
   {
     "$type": "ObjectType",
+    "name": "OperationInputs",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the Provisioning Service to check."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameAvailabilityInfo",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlreadyExists"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkProvisioningServiceNameAvailability",
+    "resourceType": "Microsoft.Devices",
+    "apiVersion": "2017-08-21-preview",
+    "output": {
+      "$ref": "#/52"
+    },
+    "input": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SharedAccessSignatureAuthorizationRuleListResult",
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/52"
+          "$ref": "#/58"
         },
         "flags": 0
       },
@@ -756,7 +827,7 @@
     "resourceType": "Microsoft.Devices/provisioningServices",
     "apiVersion": "2017-08-21-preview",
     "output": {
-      "$ref": "#/51"
+      "$ref": "#/57"
     }
   },
   {

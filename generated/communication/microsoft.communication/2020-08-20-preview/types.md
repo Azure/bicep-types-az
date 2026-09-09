@@ -12,6 +12,12 @@
 * **tags**: [TaggedResourceTags](#taggedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.Communication/communicationServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Communication@2020-08-20-preview)
+* **Resource**: Microsoft.Communication
+* **ApiVersion**: 2020-08-20-preview
+* **Input**: [NameAvailabilityParameters](#nameavailabilityparameters)
+* **Output**: [NameAvailability](#nameavailability)
+
 ## Function linkNotificationHub (Microsoft.Communication/communicationServices@2020-08-20-preview)
 * **Resource**: Microsoft.Communication/communicationServices
 * **ApiVersion**: 2020-08-20-preview
@@ -53,6 +59,17 @@
 ### Properties
 * **connectionString**: string (Required): Connection string for the notification hub
 * **resourceId**: string (Required): The resource ID of the notification hub
+
+## NameAvailability
+### Properties
+* **message**: string: The message of the operation.
+* **nameAvailable**: bool: Indicates whether the name is available or not.
+* **reason**: string: The reason of the availability. Required if name is not available.
+
+## NameAvailabilityParameters
+### Properties
+* **name**: string (Required): The CommunicationService name to validate. e.g."my-CommunicationService-name-here"
+* **type**: string (Required): The resource type. Should be always "Microsoft.Communication/CommunicationServices".
 
 ## RegenerateKeyParameters
 ### Properties

@@ -36,6 +36,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System metadata for this resource.
 * **type**: 'Dynatrace.Observability/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function getMarketplaceSaaSResourceDetails (Dynatrace.Observability@2023-04-27)
+* **Resource**: Dynatrace.Observability
+* **ApiVersion**: 2023-04-27
+* **Input**: [MarketplaceSaaSResourceDetailsRequest](#marketplacesaasresourcedetailsrequest)
+* **Output**: [MarketplaceSaaSResourceDetailsResponse](#marketplacesaasresourcedetailsresponse)
+
 ## Function getMetricStatus (Dynatrace.Observability/monitors@2023-04-27)
 * **Resource**: Dynatrace.Observability/monitors
 * **ApiVersion**: 2023-04-27
@@ -159,6 +165,16 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 * **sendAadLogs**: 'Disabled' | 'Enabled' | string: Flag specifying if AAD logs should be sent for the Monitor resource.
 * **sendActivityLogs**: 'Disabled' | 'Enabled' | string: Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
 * **sendSubscriptionLogs**: 'Disabled' | 'Enabled' | string: Flag specifying if subscription logs should be sent for the Monitor resource.
+
+## MarketplaceSaaSResourceDetailsRequest
+### Properties
+* **tenantId**: string (Required): Tenant Id
+
+## MarketplaceSaaSResourceDetailsResponse
+### Properties
+* **marketplaceSaaSResourceId**: string: Id of the Marketplace SaaS Resource
+* **marketplaceSubscriptionStatus**: 'Active' | 'Suspended' | string: Marketplace subscription status
+* **planId**: string: Id of the plan
 
 ## MetricRules
 ### Properties

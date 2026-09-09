@@ -414,6 +414,12 @@
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Resource properties.
 * **type**: 'Microsoft.Synapse/workspaces/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.Synapse@2019-06-01-preview)
+* **Resource**: Microsoft.Synapse
+* **ApiVersion**: 2019-06-01-preview
+* **Input**: [CheckNameAvailabilityRequest](#checknameavailabilityrequest)
+* **Output**: [CheckNameAvailabilityResponse](#checknameavailabilityresponse)
+
 ## Function disable (Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2019-06-01-preview)
 * **Resource**: Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels
 * **ApiVersion**: 2019-06-01-preview
@@ -566,6 +572,18 @@
 * **sparkConfigProperties**: [LibraryRequirements](#libraryrequirements): Spark configuration file to specify additional properties
 * **sparkEventsFolder**: string: The Spark events folder
 * **sparkVersion**: string: The Apache Spark version.
+
+## CheckNameAvailabilityRequest
+### Properties
+* **name**: string: Workspace name
+* **type**: string: Type: workspace
+
+## CheckNameAvailabilityResponse
+### Properties
+* **available**: bool: Whether the workspace name is available
+* **message**: string: Validation message
+* **name**: string: Workspace name
+* **reason**: string: Reason the workspace name is or is not available
 
 ## CmdkeySetupTypeProperties
 ### Properties

@@ -170,6 +170,12 @@
 * **Input**: [MachineExtensionUpgrade](#machineextensionupgrade)
 * **Output**: any
 
+## Function validateLicense (Microsoft.HybridCompute@2024-05-20-preview)
+* **Resource**: Microsoft.HybridCompute
+* **ApiVersion**: 2024-05-20-preview
+* **Input**: [License](#license)
+* **Output**: [License](#license)
+
 ## AccessRule
 ### Properties
 * **name**: string (ReadOnly): Name of the access rule.

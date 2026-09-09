@@ -9648,11 +9648,220 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CalculateModelCapacityParameter",
+    "properties": {
+      "model": {
+        "type": {
+          "$ref": "#/446"
+        },
+        "flags": 0,
+        "description": "Properties of Cognitive Services account deployment model."
+      },
+      "skuName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of SKU."
+      },
+      "workloads": {
+        "type": {
+          "$ref": "#/774"
+        },
+        "flags": 0,
+        "description": "List of Model Capacity Calculator Workload."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ModelCapacityCalculatorWorkload",
+    "properties": {
+      "requestPerMinute": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Request per minute."
+      },
+      "requestParameters": {
+        "type": {
+          "$ref": "#/773"
+        },
+        "flags": 0,
+        "description": "Dictionary, Model Capacity Calculator Workload Parameters."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ModelCapacityCalculatorWorkloadRequestParam",
+    "properties": {
+      "avgPromptTokens": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Average prompt tokens."
+      },
+      "avgGeneratedTokens": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Average generated tokens."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/772"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateModelCapacityResult",
+    "properties": {
+      "model": {
+        "type": {
+          "$ref": "#/446"
+        },
+        "flags": 0,
+        "description": "Properties of Cognitive Services account deployment model."
+      },
+      "skuName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "estimatedCapacity": {
+        "type": {
+          "$ref": "#/776"
+        },
+        "flags": 0,
+        "description": "Model Estimated Capacity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CalculateModelCapacityResultEstimatedCapacity",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0
+      },
+      "deployableValue": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "calculateModelCapacity",
+    "resourceType": "Microsoft.CognitiveServices",
+    "apiVersion": "2025-12-01",
+    "output": {
+      "$ref": "#/775"
+    },
+    "input": {
+      "$ref": "#/771"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckDomainAvailabilityParameter",
+    "properties": {
+      "subdomainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The subdomain name to use."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Type of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The kind (type) of cognitive service account."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DomainAvailability",
+    "properties": {
+      "isSubdomainAvailable": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Indicates the given SKU is available or not."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Reason why the SKU is not available."
+      },
+      "subdomainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The subdomain name to use."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Type of the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The kind (type) of cognitive service account."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkDomainAvailability",
+    "resourceType": "Microsoft.CognitiveServices",
+    "apiVersion": "2025-12-01",
+    "output": {
+      "$ref": "#/779"
+    },
+    "input": {
+      "$ref": "#/778"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "CheckSkuAvailabilityParameter",
     "properties": {
       "skus": {
         "type": {
-          "$ref": "#/772"
+          "$ref": "#/782"
         },
         "flags": 1,
         "description": "The SKU of the resource."
@@ -9685,7 +9894,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/775"
+          "$ref": "#/785"
         },
         "flags": 0,
         "description": "Check SKU availability result list."
@@ -9743,7 +9952,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/774"
+      "$ref": "#/784"
     }
   },
   {
@@ -9752,10 +9961,10 @@
     "resourceType": "Microsoft.CognitiveServices/locations",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/773"
+      "$ref": "#/783"
     },
     "input": {
-      "$ref": "#/771"
+      "$ref": "#/781"
     }
   },
   {
@@ -9785,7 +9994,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/778"
+          "$ref": "#/788"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -9834,7 +10043,7 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/deployments",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/777"
+      "$ref": "#/787"
     }
   },
   {
@@ -9843,7 +10052,7 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/deployments",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/777"
+      "$ref": "#/787"
     }
   },
   {
@@ -9852,7 +10061,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/782"
+          "$ref": "#/792"
         },
         "flags": 0,
         "description": "Managed Network settings for a cognitive services account."
@@ -9893,7 +10102,7 @@
     "properties": {
       "isolationMode": {
         "type": {
-          "$ref": "#/786"
+          "$ref": "#/796"
         },
         "flags": 0,
         "description": "Isolation mode for the managed network of a cognitive services account."
@@ -9906,7 +10115,7 @@
       },
       "outboundRules": {
         "type": {
-          "$ref": "#/787"
+          "$ref": "#/797"
         },
         "flags": 0,
         "description": "Dictionary of <OutboundRule>"
@@ -9920,14 +10129,14 @@
       },
       "firewallSku": {
         "type": {
-          "$ref": "#/790"
+          "$ref": "#/800"
         },
         "flags": 0,
         "description": "Firewall Sku used for FQDN Rules"
       },
       "managedNetworkKind": {
         "type": {
-          "$ref": "#/793"
+          "$ref": "#/803"
         },
         "flags": 0,
         "description": "The Kind of the managed network. Users can switch from V1 to V2 for granular access controls, but cannot switch back to V1 once V2 is enabled."
@@ -9941,7 +10150,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/800"
+          "$ref": "#/810"
         },
         "flags": 2,
         "description": "The provisioning state of the managed network settings."
@@ -9964,13 +10173,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/783"
+        "$ref": "#/793"
       },
       {
-        "$ref": "#/784"
+        "$ref": "#/794"
       },
       {
-        "$ref": "#/785"
+        "$ref": "#/795"
       },
       {
         "$ref": "#/2"
@@ -9997,10 +10206,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/788"
+        "$ref": "#/798"
       },
       {
-        "$ref": "#/789"
+        "$ref": "#/799"
       },
       {
         "$ref": "#/2"
@@ -10019,10 +10228,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/791"
+        "$ref": "#/801"
       },
       {
-        "$ref": "#/792"
+        "$ref": "#/802"
       },
       {
         "$ref": "#/2"
@@ -10057,22 +10266,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/794"
+        "$ref": "#/804"
       },
       {
-        "$ref": "#/795"
+        "$ref": "#/805"
       },
       {
-        "$ref": "#/796"
+        "$ref": "#/806"
       },
       {
-        "$ref": "#/797"
+        "$ref": "#/807"
       },
       {
-        "$ref": "#/798"
+        "$ref": "#/808"
       },
       {
-        "$ref": "#/799"
+        "$ref": "#/809"
       },
       {
         "$ref": "#/2"
@@ -10092,7 +10301,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/803"
+          "$ref": "#/813"
         },
         "flags": 0,
         "description": "The list of cognitive services accounts. Since this list may be incomplete, the nextLink field should be used to request the next list of cognitive services accounts."
@@ -10143,7 +10352,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/802"
+      "$ref": "#/812"
     }
   },
   {
@@ -10152,10 +10361,10 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/managedNetworks",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/801"
+      "$ref": "#/811"
     },
     "input": {
-      "$ref": "#/781"
+      "$ref": "#/791"
     }
   },
   {
@@ -10217,7 +10426,7 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/806"
+      "$ref": "#/816"
     }
   },
   {
@@ -10251,7 +10460,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/812"
+          "$ref": "#/822"
         },
         "flags": 0,
         "description": "An array of objects of type Agent Reference."
@@ -10302,7 +10511,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/811"
+      "$ref": "#/821"
     }
   },
   {
@@ -10311,7 +10520,7 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/projects/applications",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/810"
+      "$ref": "#/820"
     }
   },
   {
@@ -10354,7 +10563,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/816"
+      "$ref": "#/826"
     }
   },
   {
@@ -10377,7 +10586,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/819"
+          "$ref": "#/829"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -10426,10 +10635,10 @@
     "resourceType": "Microsoft.CognitiveServices/accounts/raiBlocklists",
     "apiVersion": "2025-12-01",
     "output": {
-      "$ref": "#/818"
+      "$ref": "#/828"
     },
     "input": {
-      "$ref": "#/817"
+      "$ref": "#/827"
     }
   },
   {
@@ -10447,7 +10656,7 @@
       "$ref": "#/68"
     },
     "input": {
-      "$ref": "#/821"
+      "$ref": "#/831"
     }
   }
 ]

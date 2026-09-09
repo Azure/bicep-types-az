@@ -56,6 +56,12 @@
 * **ApiVersion**: 2014-09-01
 * **Output**: [SharedAccessAuthorizationRuleListResult](#sharedaccessauthorizationrulelistresult)
 
+## Function checkNamespaceAvailability (Microsoft.NotificationHubs@2014-09-01)
+* **Resource**: Microsoft.NotificationHubs
+* **ApiVersion**: 2014-09-01
+* **Input**: [CheckAvailabilityParameters](#checkavailabilityparameters)
+* **Output**: [CheckAvailabilityResource](#checkavailabilityresource)
+
 ## Function checkNotificationHubAvailability (Microsoft.NotificationHubs/namespaces@2014-09-01)
 * **Resource**: Microsoft.NotificationHubs/namespaces
 * **ApiVersion**: 2014-09-01

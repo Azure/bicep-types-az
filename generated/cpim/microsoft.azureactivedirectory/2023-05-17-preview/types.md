@@ -41,6 +41,12 @@
 * **tags**: [GuestUsagesResourceTags](#guestusagesresourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.AzureActiveDirectory/guestUsages' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function checkNameAvailability (Microsoft.AzureActiveDirectory@2023-05-17-preview)
+* **Resource**: Microsoft.AzureActiveDirectory
+* **ApiVersion**: 2023-05-17-preview
+* **Input**: [CheckNameAvailabilityRequestBody](#checknameavailabilityrequestbody)
+* **Output**: [NameAvailabilityResponse](#nameavailabilityresponse)
+
 ## B2CResourceSKU
 ### Properties
 * **name**: 'PremiumP1' | 'PremiumP2' | 'Standard' | string: The name of the SKU for the tenant.
@@ -50,6 +56,11 @@
 ### Properties
 * **billingType**: 'Auths' | 'MAU' | string: The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
 * **effectiveStartDateUtc**: string (ReadOnly): The data from which the billing type took effect
+
+## CheckNameAvailabilityRequestBody
+### Properties
+* **countryCode**: string (Required): Country code of Azure tenant (e.g. 'US'). Refer to [aka.ms/B2CDataResidency](https://aka.ms/B2CDataResidency) to see valid country codes and corresponding data residency locations. If you do not see a country code in an valid data residency location, choose one from the list.
+* **name**: string (Required): The sub domain name to check for availability.
 
 ## CiamResourceSKU
 ### Properties
@@ -105,6 +116,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## NameAvailabilityResponse
+### Properties
+* **message**: string: Description of the reason if name is not available.
+* **nameAvailable**: bool: True if the name is available and can be used to create a new tenant. Otherwise false.
+* **reason**: 'AlreadyExists' | 'Invalid' | string: Describes the reason for the 'nameAvailable' value.
 
 ## SystemData
 ### Properties

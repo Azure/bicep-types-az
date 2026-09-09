@@ -332,6 +332,11 @@
 * **ApiVersion**: 2025-01-01
 * **Output**: [EnvironmentAuthToken](#environmentauthtoken)
 
+## Function getCustomDomainVerificationId (Microsoft.App@2025-01-01)
+* **Resource**: Microsoft.App
+* **ApiVersion**: 2025-01-01
+* **Output**: string
+
 ## Function listCustomHostNameAnalysis (Microsoft.App/containerApps@2025-01-01)
 * **Resource**: Microsoft.App/containerApps
 * **ApiVersion**: 2025-01-01

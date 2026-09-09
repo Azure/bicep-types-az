@@ -11,6 +11,12 @@
 * **properties**: [DeploymentPropertiesOrDeploymentPropertiesExtended](#deploymentpropertiesordeploymentpropertiesextended) (Required): The deployment properties.
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function calculateTemplateHash (Microsoft.Resources@2019-08-01)
+* **Resource**: Microsoft.Resources
+* **ApiVersion**: 2019-08-01
+* **Input**: any
+* **Output**: [TemplateHashResult](#templatehashresult)
+
 ## Function cancel (Microsoft.Resources/deployments@2019-08-01)
 * **Resource**: Microsoft.Resources/deployments
 * **ApiVersion**: 2019-08-01
@@ -197,6 +203,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TemplateHashResult
+### Properties
+* **minifiedTemplate**: string: The minified template string.
+* **templateHash**: string: The template hash.
 
 ## TemplateLink
 ### Properties

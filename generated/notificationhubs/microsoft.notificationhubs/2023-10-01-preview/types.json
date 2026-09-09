@@ -2165,175 +2165,6 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceListKeys",
-    "properties": {
-      "primaryConnectionString": {
-        "type": {
-          "$ref": "#/56"
-        },
-        "flags": 2,
-        "description": "Gets or sets primaryConnectionString of the AuthorizationRule."
-      },
-      "secondaryConnectionString": {
-        "type": {
-          "$ref": "#/56"
-        },
-        "flags": 2,
-        "description": "Gets or sets secondaryConnectionString of the created\nAuthorizationRule"
-      },
-      "primaryKey": {
-        "type": {
-          "$ref": "#/56"
-        },
-        "flags": 2,
-        "description": "Gets or sets primaryKey of the created AuthorizationRule."
-      },
-      "secondaryKey": {
-        "type": {
-          "$ref": "#/56"
-        },
-        "flags": 2,
-        "description": "Gets or sets secondaryKey of the created AuthorizationRule"
-      },
-      "keyName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Gets or sets keyName of the created AuthorizationRule"
-      }
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listKeys",
-    "resourceType": "Microsoft.NotificationHubs/namespaces/authorizationRules",
-    "apiVersion": "2023-10-01-preview",
-    "output": {
-      "$ref": "#/151"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PolicyKeyResource",
-    "properties": {
-      "policyKey": {
-        "type": {
-          "$ref": "#/156"
-        },
-        "flags": 1,
-        "description": "Type of Shared Access Policy Key (primary or secondary)."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "PrimaryKey"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "SecondaryKey"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/154"
-      },
-      {
-        "$ref": "#/155"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "regenerateKeys",
-    "resourceType": "Microsoft.NotificationHubs/namespaces/authorizationRules",
-    "apiVersion": "2023-10-01-preview",
-    "output": {
-      "$ref": "#/151"
-    },
-    "input": {
-      "$ref": "#/153"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PnsCredentialsResource",
-    "properties": {
-      "properties": {
-        "type": {
-          "$ref": "#/50"
-        },
-        "flags": 0,
-        "description": "Collection of Notification Hub or Notification Hub Namespace PNS credentials."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Deprecated - only for compatibility."
-      },
-      "tags": {
-        "type": {
-          "$ref": "#/159"
-        },
-        "flags": 0,
-        "description": "Deprecated - only for compatibility."
-      },
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-      },
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The name of the resource"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/90"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PnsCredentialsResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "pnsCredentials",
-    "resourceType": "Microsoft.NotificationHubs/namespaces",
-    "apiVersion": "2023-10-01-preview",
-    "output": {
-      "$ref": "#/158"
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "CheckAvailabilityParameters",
     "properties": {
       "id": {
@@ -2366,7 +2197,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/152"
         },
         "flags": 0,
         "description": "Gets or sets resource tags"
@@ -2415,7 +2246,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/154"
         },
         "flags": 0,
         "description": "Deprecated - only for compatibility."
@@ -2467,14 +2298,195 @@
   },
   {
     "$type": "ResourceFunctionType",
-    "name": "checkNotificationHubAvailability",
+    "name": "checkNamespaceAvailability",
+    "resourceType": "Microsoft.NotificationHubs",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/153"
+    },
+    "input": {
+      "$ref": "#/151"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceListKeys",
+    "properties": {
+      "primaryConnectionString": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 2,
+        "description": "Gets or sets primaryConnectionString of the AuthorizationRule."
+      },
+      "secondaryConnectionString": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 2,
+        "description": "Gets or sets secondaryConnectionString of the created\nAuthorizationRule"
+      },
+      "primaryKey": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 2,
+        "description": "Gets or sets primaryKey of the created AuthorizationRule."
+      },
+      "secondaryKey": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 2,
+        "description": "Gets or sets secondaryKey of the created AuthorizationRule"
+      },
+      "keyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets keyName of the created AuthorizationRule"
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listKeys",
+    "resourceType": "Microsoft.NotificationHubs/namespaces/authorizationRules",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/156"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyKeyResource",
+    "properties": {
+      "policyKey": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 1,
+        "description": "Type of Shared Access Policy Key (primary or secondary)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrimaryKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecondaryKey"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "regenerateKeys",
+    "resourceType": "Microsoft.NotificationHubs/namespaces/authorizationRules",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/156"
+    },
+    "input": {
+      "$ref": "#/158"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PnsCredentialsResource",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Collection of Notification Hub or Notification Hub Namespace PNS credentials."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Deprecated - only for compatibility."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 0,
+        "description": "Deprecated - only for compatibility."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PnsCredentialsResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "pnsCredentials",
     "resourceType": "Microsoft.NotificationHubs/namespaces",
     "apiVersion": "2023-10-01-preview",
     "output": {
       "$ref": "#/163"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNotificationHubAvailability",
+    "resourceType": "Microsoft.NotificationHubs/namespaces",
+    "apiVersion": "2023-10-01-preview",
+    "output": {
+      "$ref": "#/153"
     },
     "input": {
-      "$ref": "#/161"
+      "$ref": "#/151"
     }
   },
   {
@@ -2483,7 +2495,7 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules",
     "apiVersion": "2023-10-01-preview",
     "output": {
-      "$ref": "#/151"
+      "$ref": "#/156"
     }
   },
   {
@@ -2492,10 +2504,10 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules",
     "apiVersion": "2023-10-01-preview",
     "output": {
-      "$ref": "#/151"
+      "$ref": "#/156"
     },
     "input": {
-      "$ref": "#/153"
+      "$ref": "#/158"
     }
   },
   {
@@ -2504,7 +2516,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/169"
+          "$ref": "#/170"
         },
         "flags": 0,
         "description": "Result of DebugSend operations."
@@ -2518,7 +2530,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/172"
+          "$ref": "#/173"
         },
         "flags": 0,
         "description": "Deprecated - only for compatibility."
@@ -2573,7 +2585,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/171"
+          "$ref": "#/172"
         },
         "flags": 2,
         "description": "Gets or sets actual failure description"
@@ -2617,7 +2629,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/170"
+      "$ref": "#/171"
     }
   },
   {
@@ -2634,7 +2646,7 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs",
     "apiVersion": "2023-10-01-preview",
     "output": {
-      "$ref": "#/168"
+      "$ref": "#/169"
     }
   },
   {
@@ -2643,7 +2655,7 @@
     "resourceType": "Microsoft.NotificationHubs/namespaces/notificationHubs",
     "apiVersion": "2023-10-01-preview",
     "output": {
-      "$ref": "#/158"
+      "$ref": "#/163"
     }
   }
 ]

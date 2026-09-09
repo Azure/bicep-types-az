@@ -114,5 +114,670 @@
     "input": {
       "$ref": "#/5"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SearchInventoriesRequest",
+    "properties": {
+      "serialNumber": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Serial number of the inventory"
+      },
+      "familyIdentifier": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 1,
+        "description": "Family identifier for inventory"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PartnerInventoryList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "List of partner inventories"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 0,
+        "description": "Link for the next set of partner inventories."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PartnerInventory",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "Inventory properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InventoryProperties",
+    "properties": {
+      "serialNumber": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Serial number of the device."
+      },
+      "orderItem": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Represents basic order item data."
+      },
+      "configuration": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Represents basic configuration data."
+      },
+      "managementResource": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Represents management resource data associated with inventory."
+      },
+      "inventory": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Represents basic inventory data."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Location of inventory"
+      },
+      "details": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "Represents additional details of inventory"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OrderItemData",
+    "properties": {
+      "armId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Arm ID of order item"
+      },
+      "orderItemType": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Order item type - purchase or rental"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Purchase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rental"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationData",
+    "properties": {
+      "familyIdentifier": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Family identifier of inventory"
+      },
+      "productLineIdentifier": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Product Line identifier of inventory"
+      },
+      "productIdentifier": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Product identifier of inventory"
+      },
+      "configurationIdentifier": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Configuration identifier of inventory"
+      },
+      "configurationIdentifierOnDevice": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Configuration identifier on device - this is used in case of any mismatch\r\nbetween actual configuration on inventory and configuration stored in service"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagementResourceData",
+    "properties": {
+      "armId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Arm ID of management resource associated with inventory"
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Tenant ID of management resource associated with inventory"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InventoryData",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Inventory status"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Inventory location"
+      },
+      "registrationAllowed": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "Boolean flag to indicate if registration is allowed"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InventoryAdditionalDetails",
+    "properties": {
+      "orderItem": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Represents additional details about the order item"
+      },
+      "inventoryMetadata": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Contains inventory metadata"
+      },
+      "configuration": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 2,
+        "description": "Represents additional details about the configuration"
+      },
+      "inventory": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 2,
+        "description": "Represents additional data about the inventory"
+      },
+      "billing": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 2,
+        "description": "Represents additional details about billing for the inventory"
+      },
+      "inventorySecrets": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 2,
+        "description": "Represents secrets on the inventory"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdditionalOrderItemDetails",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "Order item status"
+      },
+      "subscription": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "Subscription details"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StageDetails",
+    "properties": {
+      "stageStatus": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Stage status."
+      },
+      "stageName": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Stage name"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Display name of the resource stage."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Stage start time"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelling"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeviceOrdered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DevicePrepared"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PickedUp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AtAzureDC"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DataCopy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithErrors"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Aborted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Current"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompletedWithWarnings"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadyToDispatchFromAzureDC"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadyToReceiveAtAzureDC"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Placed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InReview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Confirmed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadyForDispatch"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shipped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Delivered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InUse"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionDetails",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Subscription Id"
+      },
+      "state": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Subscription State"
+      },
+      "quotaId": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Subscription QuotaId"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationDetails",
+    "properties": {
+      "specifications": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 2,
+        "description": "Collection of specification details about the inventory"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SpecificationDetails",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Name of the specification property"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Value of the specification property"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdditionalInventoryDetails",
+    "properties": {
+      "additionalData": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "Additional Data"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdditionalInventoryDetailsAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingDetails",
+    "properties": {
+      "billingType": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Billing type for the inventory"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 2,
+        "description": "Billing status for the inventory"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InventoryAdditionalDetailsInventorySecrets",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/1"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/13"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "searchInventories",
+    "resourceType": "Microsoft.EdgeOrderPartner",
+    "apiVersion": "2020-12-01-preview",
+    "output": {
+      "$ref": "#/12"
+    },
+    "input": {
+      "$ref": "#/11"
+    }
   }
 ]

@@ -79,6 +79,12 @@
 * **Input**: [SiteSealRequest](#sitesealrequest)
 * **Output**: [SiteSeal](#siteseal)
 
+## Function validateCertificateRegistrationInformation (Microsoft.CertificateRegistration@2024-11-01)
+* **Resource**: Microsoft.CertificateRegistration
+* **ApiVersion**: 2024-11-01
+* **Input**: [AppServiceCertificateOrder](#appservicecertificateorder)
+* **Output**: any
+
 ## Function verifyDomainOwnership (Microsoft.CertificateRegistration/certificateOrders@2024-11-01)
 * **Resource**: Microsoft.CertificateRegistration/certificateOrders
 * **ApiVersion**: 2024-11-01
@@ -89,6 +95,17 @@
 * **keyVaultId**: string: Key Vault resource Id.
 * **keyVaultSecretName**: string: Key Vault secret name.
 * **provisioningState**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
+
+## AppServiceCertificateOrder
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **kind**: string: Kind of resource
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [AppServiceCertificateOrderProperties](#appservicecertificateorderproperties): AppServiceCertificateOrder resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## AppServiceCertificateOrderProperties
 ### Properties
@@ -281,6 +298,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

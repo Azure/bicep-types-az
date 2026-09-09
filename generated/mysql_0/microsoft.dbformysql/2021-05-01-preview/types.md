@@ -76,6 +76,11 @@
 * **ApiVersion**: 2021-05-01-preview
 * **Output**: any
 
+## Function getPrivateDnsZoneSuffix (Microsoft.DBforMySQL@2021-05-01-preview)
+* **Resource**: Microsoft.DBforMySQL
+* **ApiVersion**: 2021-05-01-preview
+* **Output**: [GetPrivateDnsZoneSuffixResponse](#getprivatednszonesuffixresponse)
+
 ## Function restart (Microsoft.DBforMySQL/flexibleServers@2021-05-01-preview)
 * **Resource**: Microsoft.DBforMySQL/flexibleServers
 * **ApiVersion**: 2021-05-01-preview
@@ -157,6 +162,10 @@
 ### Properties
 * **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the server firewall rule. Must be IPv4 format.
 * **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+
+## GetPrivateDnsZoneSuffixResponse
+### Properties
+* **privateDnsZoneSuffix**: string: Represents the private DNS zone suffix.
 
 ## HighAvailability
 ### Properties

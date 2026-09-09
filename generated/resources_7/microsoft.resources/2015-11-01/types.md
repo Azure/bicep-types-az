@@ -10,6 +10,12 @@
 * **properties**: [DeploymentPropertiesOrDeploymentPropertiesExtended](#deploymentpropertiesordeploymentpropertiesextended): Gets or sets the deployment properties.
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function calculateTemplateHash (Microsoft.Resources@2015-11-01)
+* **Resource**: Microsoft.Resources
+* **ApiVersion**: 2015-11-01
+* **Input**: any
+* **Output**: [TemplateHashResult](#templatehashresult)
+
 ## Function cancel (Microsoft.Resources/deployments@2015-11-01)
 * **Resource**: Microsoft.Resources/deployments
 * **ApiVersion**: 2015-11-01
@@ -130,6 +136,11 @@
 * **details**: [ResourceManagementError](#resourcemanagementerror)[]: Gets or sets validation error.
 * **message**: string (Required): Gets or sets the error message returned from the server.
 * **target**: string: Gets or sets the target of the error.
+
+## TemplateHashResult
+### Properties
+* **minifiedTemplate**: string: The minified template string.
+* **templateHash**: string: The template hash.
 
 ## TemplateLink
 ### Properties

@@ -228,5 +228,205 @@
     },
     "readableScopes": 8,
     "writableScopes": 8
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationInputs",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the IoT Central application instance to check."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of the IoT Central resource to query."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppAvailabilityInfo",
+    "properties": {
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "The value which indicates whether the provided name is available."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The reason for unavailability."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The detailed reason message."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.IoTCentral",
+    "apiVersion": "2018-09-01",
+    "output": {
+      "$ref": "#/18"
+    },
+    "input": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkSubdomainAvailability",
+    "resourceType": "Microsoft.IoTCentral",
+    "apiVersion": "2018-09-01",
+    "output": {
+      "$ref": "#/18"
+    },
+    "input": {
+      "$ref": "#/17"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppTemplatesResult",
+    "properties": {
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The link used to get the next page of IoT Central application templates."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "A list of IoT Central Application Templates."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppTemplate",
+    "properties": {
+      "manifestId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the template."
+      },
+      "manifestVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The version of the template."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the template."
+      },
+      "title": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The title of the template."
+      },
+      "order": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 2,
+        "description": "The order of the template in the templates list."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The description of the template."
+      },
+      "industry": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The industry of the template."
+      },
+      "locations": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "A list of locations that support the template."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppTemplateLocations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the location."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The display name of the location."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/23"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "appTemplates",
+    "resourceType": "Microsoft.IoTCentral",
+    "apiVersion": "2018-09-01",
+    "output": {
+      "$ref": "#/22"
+    }
   }
 ]

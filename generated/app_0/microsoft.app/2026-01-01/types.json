@@ -10912,6 +10912,15 @@
   },
   {
     "$type": "ResourceFunctionType",
+    "name": "getCustomDomainVerificationId",
+    "resourceType": "Microsoft.App",
+    "apiVersion": "2026-01-01",
+    "output": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
     "name": "stop",
     "resourceType": "Microsoft.App/jobs/executions",
     "apiVersion": "2026-01-01",
@@ -10925,7 +10934,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/720"
+          "$ref": "#/721"
         },
         "flags": 1,
         "description": "Collection of resources."
@@ -10944,7 +10953,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/719"
+      "$ref": "#/720"
     }
   },
   {
@@ -10973,7 +10982,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/722"
+      "$ref": "#/723"
     },
     "input": {
       "$ref": "#/558"
@@ -10985,7 +10994,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/726"
+          "$ref": "#/727"
         },
         "flags": 1,
         "description": "The JobExecution items on this page"
@@ -11043,7 +11052,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/725"
+      "$ref": "#/726"
     }
   },
   {
@@ -11052,7 +11061,7 @@
     "resourceType": "Microsoft.App/jobs",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/724"
+      "$ref": "#/725"
     }
   },
   {
@@ -11061,14 +11070,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/729"
+          "$ref": "#/730"
         },
         "flags": 0,
         "description": "Environment auth token resource specific properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/730"
+          "$ref": "#/731"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -11144,7 +11153,7 @@
     "resourceType": "Microsoft.App/managedEnvironments",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/728"
+      "$ref": "#/729"
     }
   },
   {
@@ -11165,7 +11174,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/735"
+          "$ref": "#/736"
         },
         "flags": 1,
         "description": "Collection of secrets used by a Dapr component"
@@ -11195,7 +11204,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/734"
+      "$ref": "#/735"
     }
   },
   {
@@ -11204,7 +11213,7 @@
     "resourceType": "Microsoft.App/connectedEnvironments/daprComponents",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/733"
+      "$ref": "#/734"
     }
   },
   {
@@ -11220,7 +11229,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/741"
+          "$ref": "#/742"
         },
         "flags": 0,
         "description": "Gets the logic app hybrid workflow kind."
@@ -11271,13 +11280,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/738"
-      },
-      {
         "$ref": "#/739"
       },
       {
         "$ref": "#/740"
+      },
+      {
+        "$ref": "#/741"
       },
       {
         "$ref": "#/0"
@@ -11290,7 +11299,7 @@
     "resourceType": "Microsoft.App/logicApps",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/737"
+      "$ref": "#/738"
     }
   },
   {
@@ -11326,7 +11335,7 @@
     "resourceType": "Microsoft.App/managedEnvironments/daprComponents",
     "apiVersion": "2026-01-01",
     "output": {
-      "$ref": "#/733"
+      "$ref": "#/734"
     }
   }
 ]

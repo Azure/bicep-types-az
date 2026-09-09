@@ -3698,6 +3698,105 @@
   },
   {
     "$type": "ObjectType",
+    "name": "CheckNameAvailability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Name to check the namespace name availability and The namespace name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CheckNameAvailabilityResult",
+    "properties": {
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The detailed info regarding the reason associated with the namespace."
+      },
+      "nameAvailable": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Value indicating namespace is availability, true if the namespace is available; otherwise, false."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/258"
+        },
+        "flags": 0,
+        "description": "The reason for unavailability of a namespace."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InvalidName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionIsDisabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInUse"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NameInLockdown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TooManyNamespaceInCurrentSubscription"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/252"
+      },
+      {
+        "$ref": "#/253"
+      },
+      {
+        "$ref": "#/254"
+      },
+      {
+        "$ref": "#/255"
+      },
+      {
+        "$ref": "#/256"
+      },
+      {
+        "$ref": "#/257"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "checkNameAvailability",
+    "resourceType": "Microsoft.ServiceBus",
+    "apiVersion": "2026-07-01-preview",
+    "output": {
+      "$ref": "#/251"
+    },
+    "input": {
+      "$ref": "#/250"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AccessKeys",
     "properties": {
       "primaryConnectionString": {
@@ -3757,7 +3856,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/250"
+      "$ref": "#/260"
     }
   },
   {
@@ -3766,7 +3865,7 @@
     "properties": {
       "keyType": {
         "type": {
-          "$ref": "#/255"
+          "$ref": "#/265"
         },
         "flags": 1,
         "description": "The access key to regenerate."
@@ -3792,10 +3891,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/253"
+        "$ref": "#/263"
       },
       {
-        "$ref": "#/254"
+        "$ref": "#/264"
       }
     ]
   },
@@ -3805,10 +3904,10 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/250"
+      "$ref": "#/260"
     },
     "input": {
-      "$ref": "#/252"
+      "$ref": "#/262"
     }
   },
   {
@@ -3817,7 +3916,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/258"
+          "$ref": "#/268"
         },
         "flags": 0
       }
@@ -3849,10 +3948,10 @@
     "resourceType": "Microsoft.ServiceBus/namespaces",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/257"
+      "$ref": "#/267"
     },
     "input": {
-      "$ref": "#/257"
+      "$ref": "#/267"
     }
   },
   {
@@ -3861,7 +3960,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/250"
+      "$ref": "#/260"
     }
   },
   {
@@ -3873,7 +3972,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/261"
+      "$ref": "#/271"
     }
   },
   {
@@ -3882,7 +3981,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/264"
+          "$ref": "#/274"
         },
         "flags": 0,
         "description": "Safe failover is to indicate the service should wait for pending replication to finish before switching to the secondary."
@@ -3908,10 +4007,10 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/261"
+      "$ref": "#/271"
     },
     "input": {
-      "$ref": "#/263"
+      "$ref": "#/273"
     }
   },
   {
@@ -3920,7 +4019,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/261"
+      "$ref": "#/271"
     }
   },
   {
@@ -3929,7 +4028,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/261"
+      "$ref": "#/271"
     }
   },
   {
@@ -3938,7 +4037,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/networkSecurityPerimeterConfigurations",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/261"
+      "$ref": "#/271"
     }
   },
   {
@@ -3947,7 +4046,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/250"
+      "$ref": "#/260"
     }
   },
   {
@@ -3956,10 +4055,10 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/250"
+      "$ref": "#/260"
     },
     "input": {
-      "$ref": "#/252"
+      "$ref": "#/262"
     }
   },
   {
@@ -3968,7 +4067,7 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/250"
+      "$ref": "#/260"
     }
   },
   {
@@ -3977,10 +4076,10 @@
     "resourceType": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
     "apiVersion": "2026-07-01-preview",
     "output": {
-      "$ref": "#/250"
+      "$ref": "#/260"
     },
     "input": {
-      "$ref": "#/252"
+      "$ref": "#/262"
     }
   }
 ]
