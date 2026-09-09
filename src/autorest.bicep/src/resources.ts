@@ -5,7 +5,7 @@ import { ChoiceSchema, CodeModel, ComplexSchema, HttpMethod, HttpParameter, Http
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { keys, Dictionary, values, groupBy, uniqBy, chain, flatten } from 'lodash';
 import { success, failure, Result } from './utils';
-import { ScopeType, All } from "bicep-types";
+import { ScopeType, All } from "@azure/bicep-types";
 
 export interface ResourceDescriptor {
   namespace: string;

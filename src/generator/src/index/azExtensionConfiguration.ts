@@ -8,7 +8,7 @@ import {
   TypeFactory,
   TypeFile,
   writeTypesJson,
-} from 'bicep-types';
+} from '@azure/bicep-types';
 
 export async function addAzExtensionConfigurationType(
   baseDir: string,

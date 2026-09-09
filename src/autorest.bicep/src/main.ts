@@ -5,7 +5,7 @@ import { AutoRestExtension, AutorestExtensionHost, startSession } from "@autores
 import { generateTypes } from "./type-generator";
 import { generateSchema } from "./schema-generator";
 import { CodeModel, codeModelSchema } from "@autorest/codemodel";
-import { writeTypesJson, writeMarkdown } from "bicep-types";
+import { writeTypesJson, writeMarkdown } from "@azure/bicep-types";
 import { getProviderDefinitions } from "./resources";
 
 export async function processRequest(host: AutorestExtensionHost) {
