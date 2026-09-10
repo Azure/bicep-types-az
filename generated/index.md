@@ -14178,7 +14178,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbcassandraclusters2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbcassandraclusters2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbcassandraclusters2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbcassandraclusters2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbcassandraclusters2026-04-01-preview)
 
 ### microsoft.documentdb/cassandraclusters/backups
 * **Link**: [2021-03-01-preview](cosmos-db/microsoft.documentdb/2021-03-01-preview/types.md#resource-microsoftdocumentdbcassandraclustersbackups2021-03-01-preview)
@@ -14227,7 +14227,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbcassandraclustersdatacenters2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbcassandraclustersdatacenters2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbcassandraclustersdatacenters2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbcassandraclustersdatacenters2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbcassandraclustersdatacenters2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts
 * **Link**: [2015-04-01](cosmos-db/microsoft.documentdb/2015-04-01/types.md#resource-microsoftdocumentdbdatabaseaccounts2015-04-01)
@@ -14279,7 +14279,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccounts2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccounts2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccounts2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccounts2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccounts2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/apis/databases
 * **Link**: [2015-04-01](cosmos-db/microsoft.documentdb/2015-04-01/types.md#resource-microsoftdocumentdbdatabaseaccountsapisdatabases2015-04-01)
@@ -14424,7 +14424,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspaces2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspaces2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspaces2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspaces2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspaces2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/cassandrakeyspaces/tables
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestables2019-08-01)
@@ -14471,7 +14471,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestables2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestables2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestables2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestables2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestables2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/cassandrakeyspaces/tables/throughputsettings
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestablesthroughputsettings2019-08-01)
@@ -14518,7 +14518,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestablesthroughputsettings2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestablesthroughputsettings2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestablesthroughputsettings2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestablesthroughputsettings2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestablesthroughputsettings2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/cassandrakeyspaces/throughputsettings
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesthroughputsettings2019-08-01)
@@ -14565,7 +14565,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesthroughputsettings2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesthroughputsettings2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesthroughputsettings2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesthroughputsettings2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesthroughputsettings2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/cassandrakeyspaces/views
 * **Link**: [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviews2021-07-01-preview)
@@ -14585,7 +14585,7 @@
 * **Link**: [2024-12-01-preview](cosmos-db/microsoft.documentdb/2024-12-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviews2024-12-01-preview)
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviews2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviews2025-11-01-preview)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviews2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviews2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/cassandrakeyspaces/views/throughputsettings
 * **Link**: [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviewsthroughputsettings2021-07-01-preview)
@@ -14605,31 +14605,31 @@
 * **Link**: [2024-12-01-preview](cosmos-db/microsoft.documentdb/2024-12-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviewsthroughputsettings2024-12-01-preview)
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviewsthroughputsettings2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviewsthroughputsettings2025-11-01-preview)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviewsthroughputsettings2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviewsthroughputsettings2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/cassandraroleassignments
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandraroleassignments2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandraroleassignments2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandraroleassignments2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandraroleassignments2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandraroleassignments2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/cassandraroledefinitions
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandraroledefinitions2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandraroledefinitions2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandraroledefinitions2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandraroledefinitions2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandraroledefinitions2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/chaosfaults
 * **Link**: [2024-09-01-preview](cosmos-db/microsoft.documentdb/2024-09-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountschaosfaults2024-09-01-preview)
 * **Link**: [2024-12-01-preview](cosmos-db/microsoft.documentdb/2024-12-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountschaosfaults2024-12-01-preview)
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountschaosfaults2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountschaosfaults2025-11-01-preview)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountschaosfaults2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountschaosfaults2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/copyjobs
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscopyjobs2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscopyjobs2025-11-01-preview)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscopyjobs2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscopyjobs2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/datatransferjobs
 * **Link**: [2021-10-15-preview](cosmos-db/microsoft.documentdb/2021-10-15-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsdatatransferjobs2021-10-15-preview)
@@ -14648,7 +14648,7 @@
 * **Link**: [2024-12-01-preview](cosmos-db/microsoft.documentdb/2024-12-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsdatatransferjobs2024-12-01-preview)
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsdatatransferjobs2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsdatatransferjobs2025-11-01-preview)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsdatatransferjobs2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsdatatransferjobs2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/graphs
 * **Link**: [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgraphs2021-07-01-preview)
@@ -14668,7 +14668,7 @@
 * **Link**: [2024-12-01-preview](cosmos-db/microsoft.documentdb/2024-12-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgraphs2024-12-01-preview)
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgraphs2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgraphs2025-11-01-preview)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgraphs2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgraphs2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/gremlindatabases
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabases2019-08-01)
@@ -14715,7 +14715,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabases2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabases2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabases2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabases2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabases2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/gremlindatabases/graphs
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphs2019-08-01)
@@ -14762,7 +14762,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphs2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphs2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphs2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphs2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphs2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/gremlindatabases/graphs/throughputsettings
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphsthroughputsettings2019-08-01)
@@ -14809,7 +14809,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphsthroughputsettings2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphsthroughputsettings2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphsthroughputsettings2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphsthroughputsettings2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphsthroughputsettings2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/gremlindatabases/throughputsettings
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesthroughputsettings2019-08-01)
@@ -14856,19 +14856,19 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesthroughputsettings2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesthroughputsettings2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesthroughputsettings2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesthroughputsettings2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesthroughputsettings2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/gremlinroleassignments
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlinroleassignments2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlinroleassignments2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlinroleassignments2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlinroleassignments2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlinroleassignments2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/gremlinroledefinitions
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlinroledefinitions2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlinroledefinitions2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlinroledefinitions2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlinroledefinitions2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlinroledefinitions2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/mongodbdatabases
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabases2019-08-01)
@@ -14915,7 +14915,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabases2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabases2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabases2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabases2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabases2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/mongodbdatabases/collections
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollections2019-08-01)
@@ -14962,7 +14962,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollections2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollections2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollections2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollections2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollections2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/mongodbdatabases/collections/throughputsettings
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollectionsthroughputsettings2019-08-01)
@@ -15009,7 +15009,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollectionsthroughputsettings2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollectionsthroughputsettings2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollectionsthroughputsettings2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollectionsthroughputsettings2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollectionsthroughputsettings2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/mongodbdatabases/throughputsettings
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasesthroughputsettings2019-08-01)
@@ -15056,7 +15056,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasesthroughputsettings2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasesthroughputsettings2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasesthroughputsettings2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasesthroughputsettings2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasesthroughputsettings2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/mongodbroledefinitions
 * **Link**: [2021-10-15-preview](cosmos-db/microsoft.documentdb/2021-10-15-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbroledefinitions2021-10-15-preview)
@@ -15087,7 +15087,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbroledefinitions2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbroledefinitions2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbroledefinitions2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbroledefinitions2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbroledefinitions2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/mongodbuserdefinitions
 * **Link**: [2021-10-15-preview](cosmos-db/microsoft.documentdb/2021-10-15-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbuserdefinitions2021-10-15-preview)
@@ -15118,19 +15118,19 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbuserdefinitions2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbuserdefinitions2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbuserdefinitions2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbuserdefinitions2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbuserdefinitions2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/mongomiroleassignments
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongomiroleassignments2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongomiroleassignments2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongomiroleassignments2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongomiroleassignments2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongomiroleassignments2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/mongomiroledefinitions
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongomiroledefinitions2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongomiroledefinitions2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongomiroledefinitions2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongomiroledefinitions2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongomiroledefinitions2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/networksecurityperimeterconfigurations
 * **Link**: [2024-05-15-preview](cosmos-db/microsoft.documentdb/2024-05-15-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsnetworksecurityperimeterconfigurations2024-05-15-preview)
@@ -15138,7 +15138,7 @@
 * **Link**: [2024-12-01-preview](cosmos-db/microsoft.documentdb/2024-12-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsnetworksecurityperimeterconfigurations2024-12-01-preview)
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsnetworksecurityperimeterconfigurations2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsnetworksecurityperimeterconfigurations2025-11-01-preview)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsnetworksecurityperimeterconfigurations2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsnetworksecurityperimeterconfigurations2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/notebookworkspaces
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsnotebookworkspaces2019-08-01)
@@ -15185,7 +15185,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsnotebookworkspaces2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsnotebookworkspaces2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsnotebookworkspaces2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsnotebookworkspaces2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsnotebookworkspaces2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/privateendpointconnections
 * **Link**: [2019-08-01-preview](cosmos-db/microsoft.documentdb/2019-08-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsprivateendpointconnections2019-08-01-preview)
@@ -15227,7 +15227,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsprivateendpointconnections2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsprivateendpointconnections2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsprivateendpointconnections2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsprivateendpointconnections2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsprivateendpointconnections2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/privatelinkresources
 * **Link**: [2019-08-01-preview](cosmos-db/microsoft.documentdb/2019-08-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsprivatelinkresources2019-08-01-preview)
@@ -15269,7 +15269,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsprivatelinkresources2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsprivatelinkresources2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsprivatelinkresources2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsprivatelinkresources2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsprivatelinkresources2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/services
 * **Link**: [2021-04-01-preview](cosmos-db/microsoft.documentdb/2021-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsservices2021-04-01-preview)
@@ -15303,7 +15303,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountsservices2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsservices2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountsservices2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsservices2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsservices2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabases2019-08-01)
@@ -15350,7 +15350,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabases2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabases2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabases2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabases2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabases2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/clientencryptionkeys
 * **Link**: [2021-10-15-preview](cosmos-db/microsoft.documentdb/2021-10-15-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesclientencryptionkeys2021-10-15-preview)
@@ -15380,7 +15380,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesclientencryptionkeys2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesclientencryptionkeys2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesclientencryptionkeys2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesclientencryptionkeys2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesclientencryptionkeys2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/containers
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainers2019-08-01)
@@ -15427,7 +15427,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainers2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainers2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainers2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainers2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainers2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/containers/storedprocedures
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersstoredprocedures2019-08-01)
@@ -15474,7 +15474,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersstoredprocedures2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersstoredprocedures2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersstoredprocedures2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersstoredprocedures2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersstoredprocedures2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/containers/throughputsettings
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersthroughputsettings2019-08-01)
@@ -15521,7 +15521,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersthroughputsettings2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersthroughputsettings2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersthroughputsettings2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersthroughputsettings2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersthroughputsettings2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/containers/triggers
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainerstriggers2019-08-01)
@@ -15568,7 +15568,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainerstriggers2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainerstriggers2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainerstriggers2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainerstriggers2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainerstriggers2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/containers/userdefinedfunctions
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersuserdefinedfunctions2019-08-01)
@@ -15615,7 +15615,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersuserdefinedfunctions2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersuserdefinedfunctions2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersuserdefinedfunctions2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersuserdefinedfunctions2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersuserdefinedfunctions2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/throughputsettings
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesthroughputsettings2019-08-01)
@@ -15662,7 +15662,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesthroughputsettings2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesthroughputsettings2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesthroughputsettings2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesthroughputsettings2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesthroughputsettings2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqlroleassignments
 * **Link**: [2020-06-01-preview](cosmos-db/microsoft.documentdb/2020-06-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroleassignments2020-06-01-preview)
@@ -15702,7 +15702,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroleassignments2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroleassignments2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroleassignments2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroleassignments2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroleassignments2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqlroledefinitions
 * **Link**: [2020-06-01-preview](cosmos-db/microsoft.documentdb/2020-06-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroledefinitions2020-06-01-preview)
@@ -15742,21 +15742,21 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroledefinitions2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroledefinitions2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroledefinitions2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroledefinitions2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroledefinitions2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/tableroleassignments
 * **Link**: [2024-12-01-preview](cosmos-db/microsoft.documentdb/2024-12-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstableroleassignments2024-12-01-preview)
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstableroleassignments2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstableroleassignments2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountstableroleassignments2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstableroleassignments2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstableroleassignments2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/tableroledefinitions
 * **Link**: [2024-12-01-preview](cosmos-db/microsoft.documentdb/2024-12-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstableroledefinitions2024-12-01-preview)
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstableroledefinitions2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstableroledefinitions2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountstableroledefinitions2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstableroledefinitions2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstableroledefinitions2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/tables
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountstables2019-08-01)
@@ -15803,7 +15803,7 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountstables2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstables2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountstables2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstables2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstables2026-04-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/tables/throughputsettings
 * **Link**: [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountstablesthroughputsettings2019-08-01)
@@ -15850,37 +15850,37 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbdatabaseaccountstablesthroughputsettings2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstablesthroughputsettings2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbdatabaseaccountstablesthroughputsettings2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstablesthroughputsettings2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstablesthroughputsettings2026-04-01-preview)
 
 ### microsoft.documentdb/fleets
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbfleets2025-05-01-preview)
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbfleets2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbfleets2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbfleets2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbfleets2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbfleets2026-04-01-preview)
 
 ### microsoft.documentdb/fleets/fleetanalytics
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbfleetsfleetanalytics2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbfleetsfleetanalytics2025-11-01-preview)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbfleetsfleetanalytics2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbfleetsfleetanalytics2026-04-01-preview)
 
 ### microsoft.documentdb/fleets/fleetspaces
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbfleetsfleetspaces2025-05-01-preview)
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbfleetsfleetspaces2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbfleetsfleetspaces2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbfleetsfleetspaces2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbfleetsfleetspaces2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbfleetsfleetspaces2026-04-01-preview)
 
 ### microsoft.documentdb/fleets/fleetspaces/fleetspaceaccounts
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbfleetsfleetspacesfleetspaceaccounts2025-05-01-preview)
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdbfleetsfleetspacesfleetspaceaccounts2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbfleetsfleetspacesfleetspaceaccounts2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdbfleetsfleetspacesfleetspaceaccounts2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbfleetsfleetspacesfleetspaceaccounts2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbfleetsfleetspacesfleetspaceaccounts2026-04-01-preview)
 
 ### microsoft.documentdb/garnetclusters
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbgarnetclusters2025-11-01-preview)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbgarnetclusters2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbgarnetclusters2026-04-01-preview)
 
 ### microsoft.documentdb/locations
 * **Link**: [2021-03-01-preview](cosmos-db/microsoft.documentdb/2021-03-01-preview/types.md#resource-microsoftdocumentdblocations2021-03-01-preview)
@@ -15916,21 +15916,21 @@
 * **Link**: [2025-10-15](cosmos-db/microsoft.documentdb/2025-10-15/types.md#resource-microsoftdocumentdblocations2025-10-15)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdblocations2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdblocations2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdblocations2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdblocations2026-04-01-preview)
 
 ### microsoft.documentdb/locations/restorabledatabaseaccounts
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdblocationsrestorabledatabaseaccounts2025-11-01-preview)
 * **Link**: [2026-03-15](cosmos-db/microsoft.documentdb/2026-03-15/types.md#resource-microsoftdocumentdblocationsrestorabledatabaseaccounts2026-03-15)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdblocationsrestorabledatabaseaccounts2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdblocationsrestorabledatabaseaccounts2026-04-01-preview)
 
 ### microsoft.documentdb/locations/softdeleteddatabaseaccounts
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdblocationssoftdeleteddatabaseaccounts2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdblocationssoftdeleteddatabaseaccounts2026-04-01-preview)
 
 ### microsoft.documentdb/locations/softdeleteddatabaseaccounts/softdeletedsqldatabases
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdblocationssoftdeleteddatabaseaccountssoftdeletedsqldatabases2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdblocationssoftdeleteddatabaseaccountssoftdeletedsqldatabases2026-04-01-preview)
 
 ### microsoft.documentdb/locations/softdeleteddatabaseaccounts/softdeletedsqldatabases/softdeletedsqlcontainers
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdblocationssoftdeleteddatabaseaccountssoftdeletedsqldatabasessoftdeletedsqlcontainers2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdblocationssoftdeleteddatabaseaccountssoftdeletedsqldatabasessoftdeletedsqlcontainers2026-04-01-preview)
 
 ### microsoft.documentdb/mongoclusters
 * **Link**: [2023-03-01-preview](cosmos-db/microsoft.documentdb/2023-03-01-preview/types.md#resource-microsoftdocumentdbmongoclusters2023-03-01-preview)
@@ -15998,7 +15998,7 @@
 * **Link**: [2024-12-01-preview](cosmos-db/microsoft.documentdb/2024-12-01-preview/types.md#resource-microsoftdocumentdbthroughputpools2024-12-01-preview)
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbthroughputpools2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbthroughputpools2025-11-01-preview)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbthroughputpools2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbthroughputpools2026-04-01-preview)
 
 ### microsoft.documentdb/throughputpools/throughputpoolaccounts
 * **Link**: [2023-11-15-preview](cosmos-db/microsoft.documentdb/2023-11-15-preview/types.md#resource-microsoftdocumentdbthroughputpoolsthroughputpoolaccounts2023-11-15-preview)
@@ -16008,7 +16008,7 @@
 * **Link**: [2024-12-01-preview](cosmos-db/microsoft.documentdb/2024-12-01-preview/types.md#resource-microsoftdocumentdbthroughputpoolsthroughputpoolaccounts2024-12-01-preview)
 * **Link**: [2025-05-01-preview](cosmos-db/microsoft.documentdb/2025-05-01-preview/types.md#resource-microsoftdocumentdbthroughputpoolsthroughputpoolaccounts2025-05-01-preview)
 * **Link**: [2025-11-01-preview](cosmos-db/microsoft.documentdb/2025-11-01-preview/types.md#resource-microsoftdocumentdbthroughputpoolsthroughputpoolaccounts2025-11-01-preview)
-* **Link**: [2026-04-01-preview](cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbthroughputpoolsthroughputpoolaccounts2026-04-01-preview)
+* **Link**: [2026-04-01-preview](_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.md#resource-microsoftdocumentdbthroughputpoolsthroughputpoolaccounts2026-04-01-preview)
 
 ## microsoft.domainregistration
 ### microsoft.domainregistration/domains
@@ -23430,7 +23430,7 @@
 * **Link**: [2017-10-01](dns/microsoft.network/2017-10-01/types.md#resource-microsoftnetworkdnszones2017-10-01)
 * **Link**: [2018-03-01-preview](dns/microsoft.network/2018-03-01-preview/types.md#resource-microsoftnetworkdnszones2018-03-01-preview)
 * **Link**: [2018-05-01](dns/microsoft.network/2018-05-01/types.md#resource-microsoftnetworkdnszones2018-05-01)
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszones2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszones2023-07-01-preview)
 
 ### microsoft.network/dnszones/a
 * **Link**: [2015-05-04-preview](dns/microsoft.network/2015-05-04-preview/types.md#resource-microsoftnetworkdnszonesa2015-05-04-preview)
@@ -23439,7 +23439,7 @@
 * **Link**: [2017-10-01](dns/microsoft.network/2017-10-01/types.md#resource-microsoftnetworkdnszonesa2017-10-01)
 * **Link**: [2018-03-01-preview](dns/microsoft.network/2018-03-01-preview/types.md#resource-microsoftnetworkdnszonesa2018-03-01-preview)
 * **Link**: [2018-05-01](dns/microsoft.network/2018-05-01/types.md#resource-microsoftnetworkdnszonesa2018-05-01)
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesa2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesa2023-07-01-preview)
 
 ### microsoft.network/dnszones/aaaa
 * **Link**: [2015-05-04-preview](dns/microsoft.network/2015-05-04-preview/types.md#resource-microsoftnetworkdnszonesaaaa2015-05-04-preview)
@@ -23448,14 +23448,14 @@
 * **Link**: [2017-10-01](dns/microsoft.network/2017-10-01/types.md#resource-microsoftnetworkdnszonesaaaa2017-10-01)
 * **Link**: [2018-03-01-preview](dns/microsoft.network/2018-03-01-preview/types.md#resource-microsoftnetworkdnszonesaaaa2018-03-01-preview)
 * **Link**: [2018-05-01](dns/microsoft.network/2018-05-01/types.md#resource-microsoftnetworkdnszonesaaaa2018-05-01)
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesaaaa2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesaaaa2023-07-01-preview)
 
 ### microsoft.network/dnszones/caa
 * **Link**: [2017-09-01](dns/microsoft.network/2017-09-01/types.md#resource-microsoftnetworkdnszonescaa2017-09-01)
 * **Link**: [2017-10-01](dns/microsoft.network/2017-10-01/types.md#resource-microsoftnetworkdnszonescaa2017-10-01)
 * **Link**: [2018-03-01-preview](dns/microsoft.network/2018-03-01-preview/types.md#resource-microsoftnetworkdnszonescaa2018-03-01-preview)
 * **Link**: [2018-05-01](dns/microsoft.network/2018-05-01/types.md#resource-microsoftnetworkdnszonescaa2018-05-01)
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonescaa2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonescaa2023-07-01-preview)
 
 ### microsoft.network/dnszones/cname
 * **Link**: [2015-05-04-preview](dns/microsoft.network/2015-05-04-preview/types.md#resource-microsoftnetworkdnszonescname2015-05-04-preview)
@@ -23464,13 +23464,13 @@
 * **Link**: [2017-10-01](dns/microsoft.network/2017-10-01/types.md#resource-microsoftnetworkdnszonescname2017-10-01)
 * **Link**: [2018-03-01-preview](dns/microsoft.network/2018-03-01-preview/types.md#resource-microsoftnetworkdnszonescname2018-03-01-preview)
 * **Link**: [2018-05-01](dns/microsoft.network/2018-05-01/types.md#resource-microsoftnetworkdnszonescname2018-05-01)
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonescname2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonescname2023-07-01-preview)
 
 ### microsoft.network/dnszones/dnssecconfigs
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesdnssecconfigs2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesdnssecconfigs2023-07-01-preview)
 
 ### microsoft.network/dnszones/ds
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesds2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesds2023-07-01-preview)
 
 ### microsoft.network/dnszones/mx
 * **Link**: [2015-05-04-preview](dns/microsoft.network/2015-05-04-preview/types.md#resource-microsoftnetworkdnszonesmx2015-05-04-preview)
@@ -23479,10 +23479,10 @@
 * **Link**: [2017-10-01](dns/microsoft.network/2017-10-01/types.md#resource-microsoftnetworkdnszonesmx2017-10-01)
 * **Link**: [2018-03-01-preview](dns/microsoft.network/2018-03-01-preview/types.md#resource-microsoftnetworkdnszonesmx2018-03-01-preview)
 * **Link**: [2018-05-01](dns/microsoft.network/2018-05-01/types.md#resource-microsoftnetworkdnszonesmx2018-05-01)
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesmx2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesmx2023-07-01-preview)
 
 ### microsoft.network/dnszones/naptr
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesnaptr2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesnaptr2023-07-01-preview)
 
 ### microsoft.network/dnszones/ns
 * **Link**: [2015-05-04-preview](dns/microsoft.network/2015-05-04-preview/types.md#resource-microsoftnetworkdnszonesns2015-05-04-preview)
@@ -23491,7 +23491,7 @@
 * **Link**: [2017-10-01](dns/microsoft.network/2017-10-01/types.md#resource-microsoftnetworkdnszonesns2017-10-01)
 * **Link**: [2018-03-01-preview](dns/microsoft.network/2018-03-01-preview/types.md#resource-microsoftnetworkdnszonesns2018-03-01-preview)
 * **Link**: [2018-05-01](dns/microsoft.network/2018-05-01/types.md#resource-microsoftnetworkdnszonesns2018-05-01)
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesns2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesns2023-07-01-preview)
 
 ### microsoft.network/dnszones/ptr
 * **Link**: [2015-05-04-preview](dns/microsoft.network/2015-05-04-preview/types.md#resource-microsoftnetworkdnszonesptr2015-05-04-preview)
@@ -23500,7 +23500,7 @@
 * **Link**: [2017-10-01](dns/microsoft.network/2017-10-01/types.md#resource-microsoftnetworkdnszonesptr2017-10-01)
 * **Link**: [2018-03-01-preview](dns/microsoft.network/2018-03-01-preview/types.md#resource-microsoftnetworkdnszonesptr2018-03-01-preview)
 * **Link**: [2018-05-01](dns/microsoft.network/2018-05-01/types.md#resource-microsoftnetworkdnszonesptr2018-05-01)
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesptr2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonesptr2023-07-01-preview)
 
 ### microsoft.network/dnszones/soa
 * **Link**: [2015-05-04-preview](dns/microsoft.network/2015-05-04-preview/types.md#resource-microsoftnetworkdnszonessoa2015-05-04-preview)
@@ -23509,7 +23509,7 @@
 * **Link**: [2017-10-01](dns/microsoft.network/2017-10-01/types.md#resource-microsoftnetworkdnszonessoa2017-10-01)
 * **Link**: [2018-03-01-preview](dns/microsoft.network/2018-03-01-preview/types.md#resource-microsoftnetworkdnszonessoa2018-03-01-preview)
 * **Link**: [2018-05-01](dns/microsoft.network/2018-05-01/types.md#resource-microsoftnetworkdnszonessoa2018-05-01)
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonessoa2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonessoa2023-07-01-preview)
 
 ### microsoft.network/dnszones/srv
 * **Link**: [2015-05-04-preview](dns/microsoft.network/2015-05-04-preview/types.md#resource-microsoftnetworkdnszonessrv2015-05-04-preview)
@@ -23518,10 +23518,10 @@
 * **Link**: [2017-10-01](dns/microsoft.network/2017-10-01/types.md#resource-microsoftnetworkdnszonessrv2017-10-01)
 * **Link**: [2018-03-01-preview](dns/microsoft.network/2018-03-01-preview/types.md#resource-microsoftnetworkdnszonessrv2018-03-01-preview)
 * **Link**: [2018-05-01](dns/microsoft.network/2018-05-01/types.md#resource-microsoftnetworkdnszonessrv2018-05-01)
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonessrv2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonessrv2023-07-01-preview)
 
 ### microsoft.network/dnszones/tlsa
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonestlsa2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonestlsa2023-07-01-preview)
 
 ### microsoft.network/dnszones/txt
 * **Link**: [2015-05-04-preview](dns/microsoft.network/2015-05-04-preview/types.md#resource-microsoftnetworkdnszonestxt2015-05-04-preview)
@@ -23530,7 +23530,7 @@
 * **Link**: [2017-10-01](dns/microsoft.network/2017-10-01/types.md#resource-microsoftnetworkdnszonestxt2017-10-01)
 * **Link**: [2018-03-01-preview](dns/microsoft.network/2018-03-01-preview/types.md#resource-microsoftnetworkdnszonestxt2018-03-01-preview)
 * **Link**: [2018-05-01](dns/microsoft.network/2018-05-01/types.md#resource-microsoftnetworkdnszonestxt2018-05-01)
-* **Link**: [2023-07-01-preview](dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonestxt2023-07-01-preview)
+* **Link**: [2023-07-01-preview](_tsp/dns/microsoft.network/2023-07-01-preview/types.md#resource-microsoftnetworkdnszonestxt2023-07-01-preview)
 
 ### microsoft.network/dscpconfigurations
 * **Link**: [2020-06-01](network/microsoft.network/2020-06-01/types.md#resource-microsoftnetworkdscpconfigurations2020-06-01)

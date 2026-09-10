@@ -37,6 +37,7 @@
     "@typescript-eslint/parser": "^6.7.5",
     "@azure/bicep-types": "^0.6.129",
     "async": "^3.2.6",
+    "@typespec/compiler": "^1.15.0",
     "autorest": "^3.8.0",
     "colors": "^1.4.0",
     "eslint": "^8.52.0",
