@@ -1,19 +1,14 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { EmitContext, Enum, getNamespaceFullName, Model, ModelProperty, Namespace, Operation, Program, Type } from "@typespec/compiler";
+import { EmitContext, getNamespaceFullName, Model, ModelProperty, Namespace, Operation, Program, Type } from "@typespec/compiler";
 import { ScopeType } from "@azure/bicep-types";
-import {
-  getArmResources,
-  resolveArmResources,
-  resolveResourceOperations,
-  ArmResourceDetails,
-  ResolvedResource,
-  isSingletonResource,
-  getSingletonResourceKey,
-} from "@azure-tools/typespec-azure-resource-manager";
+import { getArmResources, resolveArmResources, resolveResourceOperations, ArmResourceDetails, ResolvedResource,
+  isSingletonResource, getSingletonResourceKey } from "@azure-tools/typespec-azure-resource-manager";
 import { getAllHttpServices, getHttpOperation, HttpOperation } from "@typespec/http";
 import { BicepEmitterOptions, $lib } from "./lib.js";
+import { expandParameterizedSegments, getDefaultScopeFromKind, getFullyQualifiedType, getResolvedTypeSegments,
+  getScopeFromPath, getTypeSegmentsFromPath, isResourceInstancePath } from "./resource-helpers.js";
 
 /**
  * Describes the scope path segments for an ARM resource type.
@@ -70,13 +65,6 @@ export interface ProviderDefinition {
   resourcesByType: Record<string, ResourceDefinition[]>;
   resourceActions: ResourceActionDefinition[];
   providerOperations: ProviderOperationDefinition[];
-}
-
-/**
- * Get the fully qualified resource type string (e.g. "Microsoft.Storage/storageAccounts").
- */
-export function getFullyQualifiedType(descriptor: ResourceDescriptor): string {
-  return [descriptor.namespace, ...descriptor.typeSegments].join("/");
 }
 
 /**
@@ -283,15 +271,6 @@ function resolvedRepresentsModel(resolved: ResolvedResource, armResource: ArmRes
   return collectionName !== undefined && resolved.resourceType.types.at(-1)?.toLowerCase() === collectionName.toLowerCase();
 }
 
-function getResolvedTypeSegments(resolvedTypes: string[], collectionName: string | undefined): string[] {
-  const typeSegments = [...resolvedTypes];
-  if (collectionName && typeSegments.at(-1)?.toLowerCase() !== collectionName.toLowerCase()) {
-    typeSegments.push(collectionName);
-  }
-
-  return typeSegments;
-}
-
 /**
  * Build the list of resource paths with fallback priority:
  * 1. If resolved matches exist from ARM library, use those
@@ -385,22 +364,6 @@ function getHttpResourceMetadata(program: Program): {
   return { customResourceRoutes, httpResourceScopes };
 }
 
-function isResourceInstancePath(path: string): boolean {
-  return path.split("/").filter(Boolean).at(-1)?.startsWith("{") === true;
-}
-
-function getTypeSegmentsFromPath(path: string): string[] | undefined {
-  const segments = path.split("/").filter(Boolean);
-  const providerIndex = segments.findIndex((segment) => segment.toLowerCase() === "providers");
-  if (providerIndex < 0 || providerIndex + 2 >= segments.length) {
-    return undefined;
-  }
-
-  const resourcePath = segments.slice(providerIndex + 2);
-  const typeSegments = resourcePath.filter((_, index) => index % 2 === 0);
-  return typeSegments.length > 0 ? typeSegments : undefined;
-}
-
 function* getResponseBodyModels(operation: HttpOperation): IterableIterator<Model> {
   for (const response of operation.responses) {
     for (const content of response.responses) {
@@ -409,96 +372,6 @@ function* getResponseBodyModels(operation: HttpOperation): IterableIterator<Mode
       }
     }
   }
-}
-
-/**
- * Expand parameterized type segments into concrete values.
- *
- * When a segment is a path parameter reference like "{recordType}", this
- * finds the corresponding enum (or union of string literals) from the
- * resource's operations and expands it into separate segment arrays.
- *
- * For example, if typeSegments is ["dnsZones", "{recordType}"] and the
- * RecordType enum has values [A, AAAA, CAA, ...], this returns
- * [["dnsZones", "A"], ["dnsZones", "AAAA"], ["dnsZones", "CAA"], ...].
- *
- * If no parameterized segments exist, returns the original array wrapped
- * in a single-element array.
- */
-function expandParameterizedSegments(typeSegments: string[], armResource: ArmResourceDetails): string[][] {
-  let expandedSegments: string[][] = [[]];
-
-  for (const segment of typeSegments) {
-    const isParameter = segment.startsWith("{") && segment.endsWith("}");
-    const values = isParameter ? (resolvePathParameterEnum(segment.slice(1, -1), armResource) ?? [segment]) : [segment];
-
-    expandedSegments = expandedSegments.flatMap((prefix) => values.map((value) => [...prefix, value]));
-  }
-
-  return expandedSegments;
-}
-
-/**
- * Resolve the concrete string values for a path parameter enum.
- *
- * Searches the resource's lifecycle and action operations for a @path
- * parameter matching the given name, then extracts enum member values.
- */
-function resolvePathParameterEnum(paramName: string, armResource: ArmResourceDetails): string[] | undefined {
-  // Collect all operations to search through
-  const ops = armResource.operations;
-  const allOps: { httpOperation: { parameters: { parameters: { param: { name: string; type: Type } }[] } } }[] = [];
-
-  if (ops.lifecycle.read) allOps.push(ops.lifecycle.read);
-  if (ops.lifecycle.createOrUpdate) allOps.push(ops.lifecycle.createOrUpdate);
-  if (ops.lifecycle.update) allOps.push(ops.lifecycle.update);
-  if (ops.lifecycle.delete) allOps.push(ops.lifecycle.delete);
-  for (const action of Object.values(ops.actions)) {
-    allOps.push(action);
-  }
-  for (const list of Object.values(ops.lists)) {
-    allOps.push(list);
-  }
-
-  for (const op of allOps) {
-    for (const httpParam of op.httpOperation.parameters.parameters) {
-      if (httpParam.param.name === paramName) {
-        return extractEnumValues(httpParam.param.type);
-      }
-    }
-  }
-
-  return undefined;
-}
-
-/**
- * Extract string values from an Enum or Union type.
- */
-function extractEnumValues(type: Type): string[] | undefined {
-  if (type.kind === "Enum") {
-    const enumType = type as Enum;
-    const values: string[] = [];
-    for (const member of enumType.members.values()) {
-      const value = typeof member.value === "string" ? member.value : member.name;
-      values.push(value);
-    }
-    return values.length > 0 ? values : undefined;
-  }
-
-  if (type.kind === "Union") {
-    const values: string[] = [];
-    for (const variant of type.variants.values()) {
-      if (variant.type.kind === "String") {
-        values.push(variant.type.value);
-      } else if (variant.type.kind === "EnumMember") {
-        const value = typeof variant.type.value === "string" ? variant.type.value : variant.type.name;
-        values.push(value);
-      }
-    }
-    return values.length > 0 ? values : undefined;
-  }
-
-  return undefined;
 }
 
 /**
@@ -588,45 +461,6 @@ function getArmOperationScope(
   const [httpOperation, diagnostics] = getHttpOperation(program, operation.operation);
   program.reportDiagnostics(diagnostics);
   return httpOperation.path ? getScopeFromPath(httpOperation.path) : getDefaultScopeFromKind(operation.resourceKind ?? "Proxy");
-}
-
-/**
- * Determine scope from an HTTP path by analyzing the path prefix.
- */
-function getScopeFromPath(path: string): ScopeType {
-  // Management group: /providers/Microsoft.Management/managementGroups/{mgId}/providers/...
-  if (path.match(/\/providers\/Microsoft\.Management\/managementGroups\//i)) {
-    return ScopeType.ManagementGroup;
-  }
-
-  // Resource group: /subscriptions/{sub}/resourceGroups/{rg}/providers/...
-  if (path.match(/\/subscriptions\/[^/]+\/resourceGroups\//i)) {
-    return ScopeType.ResourceGroup;
-  }
-
-  // Subscription: /subscriptions/{sub}/providers/...
-  if (path.match(/\/subscriptions\/[^/]+\/providers\//i)) {
-    return ScopeType.Subscription;
-  }
-
-  // Tenant: /providers/... (no subscription or RG prefix)
-  if (path.match(/^\/providers\//i)) {
-    return ScopeType.Tenant;
-  }
-
-  // Extension scope: {resourceUri}/providers/...
-  if (path.match(/\{[^}]+\}\/providers\//i)) {
-    return ScopeType.Extension;
-  }
-
-  return ScopeType.ResourceGroup;
-}
-
-/**
- * Get default scope based on ARM resource kind.
- */
-function getDefaultScopeFromKind(kind: string): ScopeType {
-  return kind === "Extension" ? ScopeType.Extension : ScopeType.ResourceGroup;
 }
 
 /**

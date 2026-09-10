@@ -5,7 +5,8 @@ import { Enum, getDiscriminatedUnionFromInheritance, getDiscriminator, getDoc, g
   getMaxValue, getMinItems, getMinLength, getMinValue, getPattern, getVisibilityForClass, IntrinsicType, isSecret, Model, ModelProperty,
   NoTarget, Program, Scalar, Type, Union } from "@typespec/compiler";
 import { BicepType, DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, TypeBaseKind, TypeFactory, TypeReference } from "@azure/bicep-types";
-import { getFullyQualifiedType, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources.js";
+import { ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources.js";
+import { getFullyQualifiedType } from "./resource-helpers.js";
 import { $lib } from "./lib.js";
 
 const uuidLength = 36;
