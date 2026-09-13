@@ -1,6 +1,10 @@
 [
   {
     "$type": "StringLiteralType",
+    "value": "Anyscale.Platform"
+  },
+  {
+    "$type": "StringLiteralType",
     "value": "ArizeAi.ObservabilityEval"
   },
   {
@@ -462,6 +466,10 @@
   {
     "$type": "StringLiteralType",
     "value": "Microsoft.EdgeMarketplace"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.EdgeOperator"
   },
   {
     "$type": "StringLiteralType",
@@ -1975,13 +1983,19 @@
       },
       {
         "$ref": "#/281"
+      },
+      {
+        "$ref": "#/282"
+      },
+      {
+        "$ref": "#/283"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/282"
+      "$ref": "#/284"
     }
   },
   {
@@ -1990,7 +2004,7 @@
     "properties": {
       "providers": {
         "type": {
-          "$ref": "#/283"
+          "$ref": "#/285"
         },
         "flags": 0,
         "description": "The Azure provider namespaces to register for the az extension."

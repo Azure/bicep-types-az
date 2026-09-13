@@ -536,14 +536,14 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Query' (5 differenc
   - properties.maxPageSize: <none> => {"$ref":"#/components/schemas/schemas:1080","description":"Represents the maximum size of the page that will be returned from the query API."}
   - properties.minPageSize: <none> => {"$ref":"#/components/schemas/schemas:1081","description":"Represents the minimum size of the page that will be returned from the query API."}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'UserInfo' (10 differences):
-  - properties.objectId.$ref: "#/components/schemas/schemas:1089" => "#/components/schemas/schemas:1892"
+  - properties.objectId.$ref: "#/components/schemas/schemas:1089" => "#/components/schemas/schemas:1882"
   - properties.objectId.description: "The user's object ID." => "The object id of the user."
   - properties.objectId.readOnly: true => <none>
   - properties.objectId.nullable: <none> => true
-  - properties.email.$ref: "#/components/schemas/schemas:1090" => "#/components/schemas/schemas:1890"
+  - properties.email.$ref: "#/components/schemas/schemas:1090" => "#/components/schemas/schemas:1880"
   - properties.email.description: "The user's email address." => "The email of the user."
   - properties.email.readOnly: <none> => true
-  - properties.name.$ref: "#/components/schemas/schemas:1091" => "#/components/schemas/schemas:1891"
+  - properties.name.$ref: "#/components/schemas/schemas:1091" => "#/components/schemas/schemas:1881"
   - properties.name.description: "The user's name." => "The name of the user."
   - properties.name.readOnly: <none> => true
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
@@ -966,7 +966,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencie
   - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:777"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencies' (2 differences):
   - properties.criteria.x-ms-identifiers.0: <none> => "contentId"
-  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1493"
+  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1529"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateList' (1 differences):
   - properties.value.$ref: "#/components/schemas/schemas:348" => "#/components/schemas/schemas:355"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateModel' (1 differences):
@@ -1058,7 +1058,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencie
   - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:777"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencies' (2 differences):
   - properties.criteria.x-ms-identifiers.0: <none> => "contentId"
-  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1519"
+  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1529"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateList' (1 differences):
   - properties.value.$ref: "#/components/schemas/schemas:348" => "#/components/schemas/schemas:355"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateModel' (1 differences):
@@ -1360,7 +1360,7 @@ warning | PreCheck/SchemaMissingType | The schema 'InstructionSteps-instructions
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2022-12-01-preview/dataConnectors.json:2681:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:1251" => "#/components/schemas/schemas:1382"
+  - properties.id.$ref: "#/components/schemas/schemas:1251" => "#/components/schemas/schemas:1638"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
@@ -1683,7 +1683,7 @@ warning | PreCheck/SchemaMissingType | The schema 'InstructionSteps-instructions
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2022-08-01-preview/dataConnectors.json:2681:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:1183" => "#/components/schemas/schemas:1571"
+  - properties.id.$ref: "#/components/schemas/schemas:1193" => "#/components/schemas/schemas:1571"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
@@ -2101,7 +2101,7 @@ warning | PreCheck/SchemaMissingType | The schema 'InstructionSteps-instructions
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/preview/2022-01-01-preview/dataConnectors.json:2653:11
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:1132" => "#/components/schemas/schemas:1504"
+  - properties.id.$ref: "#/components/schemas/schemas:1132" => "#/components/schemas/schemas:1521"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:

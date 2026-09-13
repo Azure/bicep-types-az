@@ -8,6 +8,54 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'ExtensionParameters-settings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/stable/2026-10-01/hci.json#/components/schemas/ExtensionParameters-settings
+warning | Modeler/MissingType | The schema 'ExtensionParameters-protectedSettings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/stable/2026-10-01/hci.json#/components/schemas/ExtensionParameters-protectedSettings
+warning | Modeler/MissingType | The schema 'ExtensionPatchParameters-settings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/stable/2026-10-01/hci.json#/components/schemas/ExtensionPatchParameters-settings
+warning | Modeler/MissingType | The schema 'ExtensionPatchParameters-protectedSettings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/stable/2026-10-01/hci.json#/components/schemas/ExtensionPatchParameters-protectedSettings
+warning | Modeler/MissingType | The schema 'PrecheckResult-healthCheckTags' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/stable/2026-10-01/hci.json#/components/schemas/PrecheckResult-healthCheckTags
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action uploadCertificate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/uploadCertificate' has no response schema. Returning 'any'.
+warning | Resource action refreshApplicableUpdates under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/edgeMachines/{edgeMachineName}/refreshApplicableUpdates' has no response schema. Returning 'any'.
+warning | Resource action refreshSecuritySettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/edgeMachines/{edgeMachineName}/refreshSecuritySettings' has no response schema. Returning 'any'.
+warning | Resource action initializeDisableProcess under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/arcSettings/{arcSettingName}/initializeDisableProcess' has no response schema. Returning 'any'.
+warning | Resource action upgrade under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/arcSettings/{arcSettingName}/extensions/{extensionName}/upgrade' has no response schema. Returning 'any'.
+warning | Resource action checkHealth under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updateSummaries/default/checkHealth' has no response schema. Returning 'any'.
+warning | Resource action checkUpdates under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updateSummaries/default/checkUpdates' has no response schema. Returning 'any'.
+warning | Resource action apply under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updates/{updateName}/apply' has no response schema. Returning 'any'.
+warning | Resource action prepare under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updates/{updateName}/prepare' has no response schema. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'ExtensionParameters-settings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/preview/2026-10-15-preview/hci.json#/components/schemas/ExtensionParameters-settings
+warning | Modeler/MissingType | The schema 'ExtensionParameters-protectedSettings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/preview/2026-10-15-preview/hci.json#/components/schemas/ExtensionParameters-protectedSettings
+warning | Modeler/MissingType | The schema 'ExtensionPatchParameters-settings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/preview/2026-10-15-preview/hci.json#/components/schemas/ExtensionPatchParameters-settings
+warning | Modeler/MissingType | The schema 'ExtensionPatchParameters-protectedSettings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/preview/2026-10-15-preview/hci.json#/components/schemas/ExtensionPatchParameters-protectedSettings
+warning | Modeler/MissingType | The schema 'PrecheckResult-healthCheckTags' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/preview/2026-10-15-preview/hci.json#/components/schemas/PrecheckResult-healthCheckTags
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Resource action uploadCertificate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/uploadCertificate' has no response schema. Returning 'any'.
+warning | Resource action claimDevices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/devicePools/{devicePoolName}/claimDevices' has no response schema. Returning 'any'.
+warning | Resource action releaseDevices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/devicePools/{devicePoolName}/releaseDevices' has no response schema. Returning 'any'.
+warning | Resource action refreshApplicableUpdates under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/edgeMachines/{edgeMachineName}/refreshApplicableUpdates' has no response schema. Returning 'any'.
+warning | Resource action refreshSecuritySettings under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/edgeMachines/{edgeMachineName}/refreshSecuritySettings' has no response schema. Returning 'any'.
+warning | Resource action initializeDisableProcess under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/arcSettings/{arcSettingName}/initializeDisableProcess' has no response schema. Returning 'any'.
+warning | Resource action upgrade under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/arcSettings/{arcSettingName}/extensions/{extensionName}/upgrade' has no response schema. Returning 'any'.
+warning | Resource action checkHealth under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updateSummaries/default/checkHealth' has no response schema. Returning 'any'.
+warning | Resource action checkUpdates under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updateSummaries/default/checkUpdates' has no response schema. Returning 'any'.
+warning | Resource action apply under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updates/{updateName}/apply' has no response schema. Returning 'any'.
+warning | Resource action prepare under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updates/{updateName}/prepare' has no response schema. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'ExtensionParameters-settings' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/stable/2026-04-30/hci.json#/components/schemas/ExtensionParameters-settings
 warning | Modeler/MissingType | The schema 'ExtensionParameters-protectedSettings' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/stable/2026-04-30/hci.json#/components/schemas/ExtensionParameters-protectedSettings
@@ -195,13 +243,13 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:794" => "#/components/schemas/schemas:910"
+  - properties.details.$ref: "#/components/schemas/schemas:806" => "#/components/schemas/schemas:910"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:790" => "#/components/schemas/schemas:906"
+  - properties.error.$ref: "#/components/schemas/schemas:802" => "#/components/schemas/schemas:906"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:831" => "#/components/schemas/schemas:944"
+  - allOf.0.$ref: "#/components/schemas/schemas:843" => "#/components/schemas/schemas:944"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:832" => "#/components/schemas/schemas:945"
+  - properties.id.$ref: "#/components/schemas/schemas:844" => "#/components/schemas/schemas:945"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
@@ -220,17 +268,17 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:780" => "#/components/schemas/schemas:890"
+  - properties.details.$ref: "#/components/schemas/schemas:780" => "#/components/schemas/schemas:878"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:780" => "#/components/schemas/schemas:994"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:776" => "#/components/schemas/schemas:886"
+  - properties.error.$ref: "#/components/schemas/schemas:776" => "#/components/schemas/schemas:874"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:776" => "#/components/schemas/schemas:990"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:818" => "#/components/schemas/schemas:927"
+  - allOf.0.$ref: "#/components/schemas/schemas:818" => "#/components/schemas/schemas:915"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:819" => "#/components/schemas/schemas:928"
+  - properties.id.$ref: "#/components/schemas/schemas:819" => "#/components/schemas/schemas:916"
   - properties.id.description: "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\"" => "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
   - properties.systemData.type: <none> => "object"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
@@ -251,15 +299,15 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:725" => "#/components/schemas/schemas:823"
+  - properties.details.$ref: "#/components/schemas/schemas:737" => "#/components/schemas/schemas:829"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:721" => "#/components/schemas/schemas:819"
+  - properties.error.$ref: "#/components/schemas/schemas:733" => "#/components/schemas/schemas:825"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:763" => "#/components/schemas/schemas:860"
+  - allOf.0.$ref: "#/components/schemas/schemas:774" => "#/components/schemas/schemas:867"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:764" => "#/components/schemas/schemas:861"
-  - properties.id.description: "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\"" => "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-  - properties.systemData.type: <none> => "object"
+  - properties.id.$ref: "#/components/schemas/schemas:775" => "#/components/schemas/schemas:868"
+  - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+  - properties.systemData.type: "object" => <none>
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
@@ -276,13 +324,13 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:721" => "#/components/schemas/schemas:831"
+  - properties.details.$ref: "#/components/schemas/schemas:733" => "#/components/schemas/schemas:831"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:717" => "#/components/schemas/schemas:827"
+  - properties.error.$ref: "#/components/schemas/schemas:729" => "#/components/schemas/schemas:827"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:759" => "#/components/schemas/schemas:868"
+  - allOf.0.$ref: "#/components/schemas/schemas:771" => "#/components/schemas/schemas:868"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:760" => "#/components/schemas/schemas:869"
+  - properties.id.$ref: "#/components/schemas/schemas:772" => "#/components/schemas/schemas:869"
   - properties.id.description: "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\"" => "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
   - properties.systemData.type: <none> => "object"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'

@@ -720,7 +720,7 @@ eg: number of bytes transferred etc
 ## ClientScriptForConnect
 ### Properties
 * **osType**: string: OS type - Windows, Linux etc. for which this file / folder restore client script works.
-* **scriptContent**: string: File content of the client script for file / folder restore.
+* **scriptContent**: string {sensitive}: File content of the client script for file / folder restore.
 * **scriptExtension**: string: File extension of the client script for file / folder restore - .ps1 , .sh , etc.
 * **scriptNameSuffix**: string: Mandatory suffix that should be added to the name of script that is given for download to user.
 If its null or empty then , ignore it.

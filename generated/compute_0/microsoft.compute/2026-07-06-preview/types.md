@@ -237,8 +237,8 @@
 * **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
 * **enableAutomaticUpgrade**: bool: Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
 * **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
-* **protectedSettings**: [BulkActionVmExtensionPropertiesProtectedSettings](#bulkactionvmextensionpropertiesprotectedsettings): The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-* **protectedSettingsFromKeyVault**: [KeyVaultSecretReference](#keyvaultsecretreference): The extensions protected settings that are passed by reference, and consumed from key vault
+* **protectedSettings**: [BulkActionVmExtensionPropertiesProtectedSettings](#bulkactionvmextensionpropertiesprotectedsettings) (WriteOnly): The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+* **protectedSettingsFromKeyVault**: [KeyVaultSecretReference](#keyvaultsecretreference) (WriteOnly): The extensions protected settings that are passed by reference, and consumed from key vault
 * **provisionAfterExtensions**: string[]: Collection of extension names after which this extension needs to be provisioned.
 * **publisher**: string: The name of the extension handler publisher.
 * **settings**: [BulkActionVmExtensionPropertiesSettings](#bulkactionvmextensionpropertiessettings): JSON formatted public settings for the extension.
@@ -339,7 +339,7 @@
 
 ## CancelOccurrenceRequest
 ### Properties
-* **resourceIds**: string[] (Required): The resources the cancellation should act on. If no resource is passed in the list, Scheduled Action will cancel the occurrence for all resources.
+* **resourceIds**: string[] (Required): The resources for which operations should be canceled. An empty array cancels all operations for all resources for the occurrence.
 
 ## CancelOperationsRequest
 ### Properties
@@ -391,8 +391,8 @@
 
 ## DelayRequest
 ### Properties
-* **delay**: string (Required): The exact time to delay the operations to
-* **resourceIds**: string[] (Required): The resources that should be delayed. If empty, the delay will apply to the all resources in the occurrence.
+* **delay**: string (Required): The new date and time for the occurrence, including the UTC offset.
+* **resourceIds**: string[] (Required): The resources to delay. An empty array delays all resources in the occurrence.
 
 ## DeleteResourceOperationResponse
 ### Properties
@@ -615,10 +615,10 @@
 
 ## NotificationProperties
 ### Properties
-* **destination**: string (Required): Where the notification should be sent. For email, it should follow email format.
-* **disabled**: bool: Tells if the notification is enabled or not.
-* **language**: 'en-us' | string (Required): The language the notification should be sent on.
-* **type**: 'Email' | string (Required): Type of notification to be sent.
+* **destination**: string (Required): The notification destination. For email notifications, specify a valid email address.
+* **disabled**: bool: If true, notifications to this destination are disabled.
+* **language**: 'en-us' | string (Required): The language used for the notification.
+* **type**: 'Email' | string (Required): The notification delivery method.
 
 ## Occurrence
 ### Properties
@@ -630,14 +630,14 @@
 
 ## OccurrenceProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Cancelling' | 'Created' | 'Failed' | 'Rescheduling' | 'Scheduled' | 'Succeeded' | string (ReadOnly): The aggregated provisioning state of the occurrence
-* **resultSummary**: [OccurrenceResultSummary](#occurrenceresultsummary) (Required, ReadOnly): The result for occurrences that achieved a terminal state
-* **scheduledTime**: string (Required, ReadOnly): The time the occurrence is scheduled for. This value can be changed by calling the delay API
+* **provisioningState**: 'Canceled' | 'Cancelling' | 'Created' | 'Failed' | 'Rescheduling' | 'Scheduled' | 'Succeeded' | string (ReadOnly): Read-only. The current state of the occurrence.
+* **resultSummary**: [OccurrenceResultSummary](#occurrenceresultsummary) (Required, ReadOnly): Read-only. The result summary after the occurrence reaches a final state.
+* **scheduledTime**: string (Required, ReadOnly): Read-only. The UTC date and time when the occurrence is scheduled to run.
 
 ## OccurrenceResultSummary
 ### Properties
-* **statuses**: [ResourceResultSummary](#resourceresultsummary)[] (Required): The summarized status of the resources.
-* **total**: int (Required): The total number of resources that the occurrence was supposed to act on.
+* **statuses**: [ResourceResultSummary](#resourceresultsummary)[] (Required): Resource counts grouped by result code.
+* **total**: int (Required): The number of resources targeted by the occurrence.
 
 ## OSDisk
 ### Properties
@@ -661,7 +661,7 @@
 
 ## OSProfile
 ### Properties
-* **adminPassword**: string {sensitive}: Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
+* **adminPassword**: string {sensitive} (WriteOnly): Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
 * **adminUsername**: string: Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters.
 * **allowExtensionOperations**: bool: Specifies whether extension operations should be allowed on the virtual machine. This may only be set to False when no extensions are present on the virtual machine.
 * **computerName**: string: Specifies the host OS name of the virtual machine. This name cannot be updated after the VM is created. **Max-length (Windows):** 15 characters. **Max-length (Linux):** 64 characters. For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules).
@@ -714,14 +714,14 @@
 
 ## RecurringScheduledActionsExecutionParameters
 ### Properties
-* **optimizationPreference**: 'Availability' | 'Cost' | 'CostAvailabilityBalanced' | string: Details that could optimize the user's request
-* **retryPolicy**: [RecurringScheduledActionsRetryPolicy](#recurringscheduledactionsretrypolicy): Retry policy the user can pass
+* **optimizationPreference**: 'Availability' | 'Cost' | 'CostAvailabilityBalanced' | string: The preferred optimization goal.
+* **retryPolicy**: [RecurringScheduledActionsRetryPolicy](#recurringscheduledactionsretrypolicy): The retry settings for failed resource operations.
 
 ## RecurringScheduledActionsRetryPolicy
 ### Properties
-* **onFailureAction**: 'Create' | 'Deallocate' | 'Delete' | 'Hibernate' | 'Start' | 'Unknown' | string: Action to take on failure
-* **retryCount**: int: Retry count for the request
-* **retryWindowInMinutes**: int: Retry window in minutes for the request
+* **onFailureAction**: 'Create' | 'Deallocate' | 'Delete' | 'Hibernate' | 'Start' | 'Unknown' | string: The resource operation to retry after a failure.
+* **retryCount**: int: The maximum number of retry attempts.
+* **retryWindowInMinutes**: int: The time window, in minutes, during which retries can occur.
 
 ## ReimagePayload
 ### Properties
@@ -742,11 +742,11 @@
 
 ## ResourceAttachRequest
 ### Properties
-* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): List of resources to be attached/patched
+* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The list of resources to attach to the scheduled action.
 
 ## ResourceDetachRequest
 ### Properties
-* **resources**: string[] (Required): List of resources to be detached
+* **resources**: string[] (Required): The Azure resource IDs of the resources to remove.
 
 ## ResourceNotificationDetails
 ### Properties
@@ -783,12 +783,12 @@
 
 ## ResourceOperationResponse
 ### Properties
-* **resourcesStatuses**: [ResourceStatus](#resourcestatus)[] (Required): The resource status of for each resource
-* **totalResources**: int (Required): The total number of resources operated on
+* **resourcesStatuses**: [ResourceStatus](#resourcestatus)[] (Required): The operation result for each resource.
+* **totalResources**: int (Required): The number of resources included in the operation.
 
 ## ResourcePatchRequest
 ### Properties
-* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The list of resources we watch to patch
+* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The resources and notification settings to update.
 
 ## ResourceProvisionPayload
 ### Properties
@@ -827,9 +827,9 @@
 
 ## ResourceResultSummary
 ### Properties
-* **code**: string (Required): The error code for those resources. In case of success, code is populated with Success.
-* **count**: int (Required): The number of resources that the code applies to.
-* **errorDetails**: [AzureCoreFoundationsError](#azurecorefoundationserror): The error details for the resources. Not populated on success cases.
+* **code**: string (Required): The result code shared by the resources in this group. A successful result uses `Success`.
+* **count**: int (Required): The number of resources with this result code.
+* **errorDetails**: [AzureCoreFoundationsError](#azurecorefoundationserror): Error details for failed resources. This property is omitted for successful results.
 
 ## Resources
 ### Properties
@@ -837,9 +837,9 @@
 
 ## ResourceStatus
 ### Properties
-* **error**: [AzureCoreFoundationsError](#azurecorefoundationserror): Errors encountered while trying to perform
-* **resourceId**: string (Required): The arm identifier of the resource
-* **status**: 'Failed' | 'Succeeded' | string (Required, ReadOnly): The state the resource is currently on
+* **error**: [AzureCoreFoundationsError](#azurecorefoundationserror): Error details when the operation fails for the resource.
+* **resourceId**: string (Required): The Azure resource ID of the targeted resource.
+* **status**: 'Failed' | 'Succeeded' | string (Required, ReadOnly): The result of the operation for the resource.
 
 ## ResourcesWithContext
 ### Properties
@@ -858,30 +858,29 @@
 
 ## ScheduledActionProperties
 ### Properties
-* **actionType**: 'Deallocate' | 'Hibernate' | 'Start' | string (Required): The action the scheduled action should perform in the resources
-* **disabled**: bool: Tell if the scheduled action is disabled or not
-* **endTime**: string: The time when the scheduled action is supposed to stop scheduling
-* **notificationSettings**: [NotificationProperties](#notificationproperties)[] (Required): The notification settings for the scheduled action
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last provisioning operation performed on the resource.
-* **resourceType**: 'VirtualMachine' | 'VirtualMachineScaleSet' | string (Required): The type of resource the scheduled action is targeting
-* **schedule**: [ScheduledActionsSchedule](#scheduledactionsschedule) (Required): The schedule the scheduled action is supposed to follow
-* **startTime**: string (Required): The time which the scheduled action is supposed to start running
+* **actionType**: 'Deallocate' | 'Hibernate' | 'Start' | string (Required): The operation performed on the targeted resources.
+* **disabled**: bool: Indicates whether new occurrences are disabled.
+* **endTime**: string: The date and time, including UTC offset, after which no new occurrences are scheduled.
+* **notificationSettings**: [NotificationProperties](#notificationproperties)[] (Required): Notification settings that apply to the scheduled action.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): Read-only. The provisioning state of the scheduled action.
+* **resourceType**: 'VirtualMachine' | 'VirtualMachineScaleSet' | string (Required): The type of compute resource targeted by the action.
+* **schedule**: [ScheduledActionsSchedule](#scheduledactionsschedule) (Required): The recurring schedule.
+* **startTime**: string (Required): The date and time, including UTC offset, when the schedule becomes active.
 
 ## ScheduledActionResourceInput
 ### Properties
-* **notificationSettings**: [NotificationProperties](#notificationproperties)[]: The desired notification settings for the specified resource.
-* **resourceId**: string (Required): The ARM Id of the resource.
-"subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Compute/virtualMachines/{vmName}"
+* **notificationSettings**: [NotificationProperties](#notificationproperties)[]: Notification settings that apply only to this resource.
+* **resourceId**: string (Required): The Azure resource ID of the targeted virtual machine.
 
 ## ScheduledActionsSchedule
 ### Properties
-* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: The type of deadline the scheduled action is supposed to follow for the schedule. If no value is passed, it will default to InitiateAt.
-* **executionParameters**: [RecurringScheduledActionsExecutionParameters](#recurringscheduledactionsexecutionparameters): The execution parameters the scheduled action is supposed to follow
-* **requestedDaysOfTheMonth**: (int {minValue: 1, maxValue: 31})[]: The days of the month the scheduled action is supposed to run on. If empty, it means it will run on every day of the month.
-* **requestedMonths**: ('All' | 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string)[]: The months the scheduled action is supposed to run on. If empty, it means it will run on every month.
-* **requestedWeekDays**: ('All' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: The week days the scheduled action is supposed to run on. If empty, it means it will run on every week day.
-* **scheduledTime**: string (Required): The time the scheduled action is supposed to run on
-* **timeZone**: string (Required): The timezone the scheduled time is specified on
+* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: How the scheduled time is interpreted. The default is `InitiateAt`.
+* **executionParameters**: [RecurringScheduledActionsExecutionParameters](#recurringscheduledactionsexecutionparameters): Settings that control operation execution and retries.
+* **requestedDaysOfTheMonth**: (int {minValue: 1, maxValue: 31})[]: The calendar days when the action runs. An empty array means every day of the month.
+* **requestedMonths**: ('All' | 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string)[]: The months when the action runs. An empty array means every month.
+* **requestedWeekDays**: ('All' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: The days of the week when the action runs. An empty array means every day of the week.
+* **scheduledTime**: string (Required): The local time of day when the scheduled action runs.
+* **timeZone**: string (Required): The time zone used to interpret the scheduled time.
 
 ## ScheduledEventsAdditionalPublishingTargets
 ### Properties
@@ -1004,6 +1003,7 @@
 
 ## VirtualMachineInfo
 ### Properties
+* **name**: string (Required): The resolved Azure virtual machine name.
 * **vmSize**: string: The name of the VM size, eg Standard_D2ads_v5
 * **zone**: string: The zone identifier
 

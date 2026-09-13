@@ -373,8 +373,7 @@
 * **dataPlaneEndpoint**: string (ReadOnly): The regional Chaos Studio data-plane endpoint assigned to this connection.
 Clients and agents use this endpoint to reach the Chaos Studio data plane
 for the connection.
-* **dstsPrincipal**: string: The dSTS principal name used to authenticate the connection.
-* **kind**: 'AksExtension' | 'ChaosAgent' | 'Csfi' | string (Required): The kind of connection, indicating the actor type authorized to reach the Chaos Studio data plane for the workspace and target.
+* **kind**: 'AksExtension' | 'ChaosAgent' | string (Required): The kind of connection, indicating the actor type authorized to reach the Chaos Studio data plane for the workspace and target.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The Microsoft Entra principal (object) ID of the identity used by the connection.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): The most recent provisioning state for the connection resource.
 * **status**: 'Connected' | 'Disconnected' | 'Pending' | 'Revoked' | string (ReadOnly): The current status of the connection.
@@ -561,7 +560,7 @@ When set, `locations` must also be set on the same side (zone IDs are only meani
 ## RunAfter
 ### Properties
 * **behavior**: 'All' | 'Any' | 'AtLeastOne' | string: Defines how multiple dependencies are evaluated.
-* **items**: [ActionDependency](#actiondependency)[] {minLength: 1} (Required): Array of action dependencies.
+* **items**: [ActionDependency](#actiondependency)[] (Required): Array of action dependencies.
 
 ## ScenarioAction
 ### Properties
