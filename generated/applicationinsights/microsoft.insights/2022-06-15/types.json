@@ -363,7 +363,7 @@
           "$ref": "#/10"
         },
         "flags": 0,
-        "description": "Validate that the WebTest returns the http status code provided."
+        "description": "Validate that the WebTest returns the http status code provided. Set to 0 (zero) to expect any value lower than 400."
       },
       "IgnoreHttpStatusCode": {
         "type": {
