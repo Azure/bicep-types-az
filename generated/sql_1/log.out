@@ -14,6 +14,64 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'components·15yg3x7·schemas·operation·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/sql/resource-manager/Microsoft.Sql/SQL/preview/2026-08-01-preview/operations.json#/components/schemas/components·15yg3x7·schemas·operation·properties·properties·additionalproperties
+warning | Skipping MaintenanceWindowOptions_Get due to required query parameter "maintenanceWindowOptionsName"
+warning | Skipping MaintenanceWindows_Get due to required query parameter "maintenanceWindowName"
+warning | Skipping MaintenanceWindows_CreateOrUpdate due to required query parameter "maintenanceWindowName"
+warning | Skipping SqlVulnerabilityAssessmentBaseline_ListBySqlVulnerabilityAssessment due to required query parameter "systemDatabaseName"
+warning | Skipping SqlVulnerabilityAssessmentBaseline_Get due to required query parameter "systemDatabaseName"
+warning | Skipping SqlVulnerabilityAssessmentBaselines_CreateOrUpdate due to required query parameter "systemDatabaseName"
+warning | Skipping SqlVulnerabilityAssessmentExecuteScan_Execute due to required query parameter "systemDatabaseName"
+warning | Skipping SqlVulnerabilityAssessmentRuleBaseline_ListByBaseline due to required query parameter "systemDatabaseName"
+warning | Skipping SqlVulnerabilityAssessmentRuleBaseline_Get due to required query parameter "systemDatabaseName"
+warning | Skipping SqlVulnerabilityAssessmentRuleBaseline_CreateOrUpdate due to required query parameter "systemDatabaseName"
+warning | Skipping SqlVulnerabilityAssessmentScanResult_ListByScan due to required query parameter "systemDatabaseName"
+warning | Skipping SqlVulnerabilityAssessmentScanResult_Get due to required query parameter "systemDatabaseName"
+warning | Skipping SqlVulnerabilityAssessmentScans_ListBySqlVulnerabilityAssessments due to required query parameter "systemDatabaseName"
+warning | Skipping SqlVulnerabilityAssessmentScans_Get due to required query parameter "systemDatabaseName"
+warning | Skipping SyncGroups_ListLogs due to required query parameter "startTime"
+warning | Skipping SyncGroups_ListLogs due to required query parameter "endTime"
+warning | Skipping SyncGroups_ListLogs due to required query parameter "type"
+warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
+warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
+warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/encryptionProtector/{encryptionProtectorName}/revert' has no response schema. Returning 'any'.
+warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/failover' has no response schema. Returning 'any'.
+warning | Resource action move under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/move' has no response schema. Returning 'any'.
+warning | Resource action upgradeDataWarehouse under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/upgradeDataWarehouse' has no response schema. Returning 'any'.
+warning | Resource action initiateScan under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/sqlVulnerabilityAssessments/{vulnerabilityAssessmentName}/initiateScan' has no response schema. Returning 'any'.
+warning | Resource action initiateScan under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/vulnerabilityAssessments/{vulnerabilityAssessmentName}/scans/{scanId}/initiateScan' has no response schema. Returning 'any'.
+warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}/failover' has no response schema. Returning 'any'.
+warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
+warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/executions/{jobExecutionId}/cancel' has no response schema. Returning 'any'.
+warning | Resource action cancelMove under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/cancelMove' has no response schema. Returning 'any'.
+warning | Resource action completeMove under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/completeMove' has no response schema. Returning 'any'.
+warning | Resource action completeRestore under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/completeRestore' has no response schema. Returning 'any'.
+warning | Resource action startMove under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/startMove' has no response schema. Returning 'any'.
+warning | Resource action disable under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}/disable' has no response schema. Returning 'any'.
+warning | Resource action enable under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}/enable' has no response schema. Returning 'any'.
+warning | Resource action initiateScan under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/vulnerabilityAssessments/{vulnerabilityAssessmentName}/scans/{scanId}/initiateScan' has no response schema. Returning 'any'.
+warning | Resource action revalidate under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/encryptionProtector/{encryptionProtectorName}/revalidate' has no response schema. Returning 'any'.
+warning | Resource action cancel under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/operations/{operationId}/cancel' has no response schema. Returning 'any'.
+warning | Resource action failover under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/failover' has no response schema. Returning 'any'.
+warning | Resource action reevaluateInaccessibleDatabaseState under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/reevaluateInaccessibleDatabaseState' has no response schema. Returning 'any'.
+warning | Resource action validateAzureKeyVaultEncryptionKey under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/validateAzureKeyVaultEncryptionKey' has no response schema. Returning 'any'.
+warning | Resource action tdeCertificates under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/tdeCertificates' has no response schema. Returning 'any'.
+warning | Resource action disable under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}/disable' has no response schema. Returning 'any'.
+warning | Resource action enable under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}/enable' has no response schema. Returning 'any'.
+warning | Resource action tdeCertificates under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/tdeCertificates' has no response schema. Returning 'any'.
+warning | Resource action cancelSync under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/syncGroups/{syncGroupName}/cancelSync' has no response schema. Returning 'any'.
+warning | Resource action refreshHubSchema under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/syncGroups/{syncGroupName}/refreshHubSchema' has no response schema. Returning 'any'.
+warning | Resource action triggerSync under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/syncGroups/{syncGroupName}/triggerSync' has no response schema. Returning 'any'.
+warning | Resource action refreshSchema under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/syncGroups/{syncGroupName}/syncMembers/{syncMemberName}/refreshSchema' has no response schema. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·15yg3x7·schemas·operation·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/sql/resource-manager/Microsoft.Sql/SQL/preview/2025-08-01-preview/operations.json#/components/schemas/components·15yg3x7·schemas·operation·properties·properties·additionalproperties
 warning | Skipping MaintenanceWindowOptions_Get due to required query parameter "maintenanceWindowOptionsName"
 warning | Skipping MaintenanceWindows_Get due to required query parameter "maintenanceWindowName"
@@ -191,7 +249,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RecommendedAction' 
   - properties.id: {"$ref":"#/components/schemas/schemas:92","description":"Resource ID.","readOnly":true} => <none>
   - properties.name: {"$ref":"#/components/schemas/schemas:93","description":"Resource name.","readOnly":true} => <none>
   - properties.type: {"$ref":"#/components/schemas/schemas:94","description":"Resource type.","readOnly":true} => <none>
-  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:3810"}]
+  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:3802"}]
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'NetworkIsolationSettings' (4 differences):
   - properties.storageAccountResourceId.$ref: "#/components/schemas/schemas:213" => "#/components/schemas/schemas:3088"
   - properties.storageAccountResourceId.x-ms-arm-id-details: <none> => {"allowedResources":[{}]}
@@ -260,7 +318,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RecommendedAction' 
   - properties.id: {"$ref":"#/components/schemas/schemas:132","description":"Resource ID.","readOnly":true} => <none>
   - properties.name: {"$ref":"#/components/schemas/schemas:133","description":"Resource name.","readOnly":true} => <none>
   - properties.type: {"$ref":"#/components/schemas/schemas:134","description":"Resource type.","readOnly":true} => <none>
-  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:3711"}]
+  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:3703"}]
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'SecurityAlertPolicyName' -> 'SecurityAlertPolicyNameAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'RecommendedAction' -> 'RecommendedActionAutoGenerated'
 warning | Skipping MaintenanceWindowOptions_Get due to required query parameter "maintenanceWindowOptionsName"

@@ -610,8 +610,8 @@
 * **emptyDir**: any: The empty directory volume.
 * **gitRepo**: [GitRepoVolume](#gitrepovolume): The git repo volume.
 * **name**: string (Required): The name of the volume.
-* **secret**: [VolumeSecret](#volumesecret): The secret volume.
-* **secretReference**: [VolumeSecretReference](#volumesecretreference): The secret reference volume.
+* **secret**: [VolumeSecret](#volumesecret): Defines files for a secret volume. Dictionary keys are file names and values are Base64-encoded secret data used as file contents. The values are sensitive, and the service does not return the contents of this property in GET responses.
+* **secretReference**: [VolumeSecretReference](#volumesecretreference): Defines files for a secret reference volume. Dictionary keys are file names and values identify entries in the container group's secretReferences collection. This property contains reference names rather than secret values.
 
 ## VolumeMount
 ### Properties

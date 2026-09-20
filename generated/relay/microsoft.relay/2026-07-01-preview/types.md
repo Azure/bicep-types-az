@@ -254,6 +254,7 @@
 
 ## RelayNamespaceProperties
 ### Properties
+* **clusterArmId**: string: Cluster ARM ID of the Namespace.
 * **createdAt**: string (ReadOnly): The time the namespace was created.
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics.
 * **minimumTlsVersion**: '1.2' | '1.3' | string: The minimum TLS version for the namespace.

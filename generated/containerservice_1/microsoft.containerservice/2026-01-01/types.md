@@ -560,7 +560,7 @@
 * **enableAzureRBAC**: bool: Whether to enable Azure RBAC for Kubernetes authorization.
 * **managed**: bool: Whether to enable managed AAD.
 * **serverAppID**: string: (DEPRECATED) The server AAD application ID. Learn more at https://aka.ms/aks/aad-legacy.
-* **serverAppSecret**: string {sensitive}: (DEPRECATED) The server AAD application secret. Learn more at https://aka.ms/aks/aad-legacy.
+* **serverAppSecret**: string {sensitive} (WriteOnly): (DEPRECATED) The server AAD application secret. Learn more at https://aka.ms/aks/aad-legacy.
 * **tenantID**: string: The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
 
 ## ManagedClusterAccessProfile
@@ -1024,7 +1024,7 @@
 ## ManagedClusterServicePrincipalProfile
 ### Properties
 * **clientId**: string (Required): The ID for the service principal.
-* **secret**: string {sensitive}: The secret password associated with the service principal in plain text.
+* **secret**: string {sensitive} (WriteOnly): The secret password associated with the service principal in plain text.
 
 ## ManagedClusterSKU
 ### Properties
@@ -1069,7 +1069,7 @@
 
 ## ManagedClusterWindowsProfile
 ### Properties
-* **adminPassword**: string {sensitive}: Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
+* **adminPassword**: string {sensitive} (WriteOnly): Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
 * **adminUsername**: string (Required): Specifies the name of the administrator account. <br><br> **Restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters
 * **enableCSIProxy**: bool: Whether to enable CSI proxy. For more details on CSI proxy, see the [CSI proxy GitHub repo](https://github.com/kubernetes-csi/csi-proxy).
 * **gmsaProfile**: [WindowsGmsaProfile](#windowsgmsaprofile): The Windows gMSA Profile in the Managed Cluster.

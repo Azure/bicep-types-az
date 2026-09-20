@@ -5116,7 +5116,7 @@ string as JSON according to the corresponding diagnostic operation.
 * **allowRemoteVnetToUseHubVnetGateways**: bool: Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
 * **connectionPolicy**: [SubResource](#subresource): The resource id of the ConnectionPolicy associated with this HubVirtualNetworkConnection.
 * **enableInternetSecurity**: bool: Enable internet security.
-* **enableOnlyIpv6Peering**: 'Disabled' | 'Enabled' | string: Enable Only IPv6 Peering for this connection.
+* **enableOnlyIPv6Peering**: bool: Enable Only IPv6 Peering for this connection.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the hub virtual network connection resource.
 * **remoteVirtualNetwork**: [SubResource](#subresource): Reference to the remote virtual network.
 * **routingConfiguration**: [RoutingConfiguration](#routingconfiguration): The Routing Configuration indicating the associated and propagated route tables on this connection.

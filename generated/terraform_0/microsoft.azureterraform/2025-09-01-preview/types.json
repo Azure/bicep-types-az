@@ -30,7 +30,7 @@
           "$ref": "#/5"
         },
         "flags": 0,
-        "description": "Whether to include RBAC role assignments assigned to the resources exported. Only resource-scoped role assignments are supported. Defaults to `false`."
+        "description": "Whether to include role assignments assigned to the resources exported. Defaults to `false`. This is deprecated in favor of `includeExtensions` (with `role-assignments` specified)."
       },
       "includeManagedResource": {
         "type": {

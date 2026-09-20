@@ -1610,7 +1610,7 @@ Input expected is dictionary of key,value pairs in JSON format.
 ### DatabricksComputeSecrets
 #### Properties
 * **computeType**: 'Databricks' (Required): The type of compute
-* **databricksAccessToken**: string: access token for databricks account.
+* **databricksAccessToken**: string {sensitive}: access token for databricks account.
 
 ### VirtualMachineSecrets
 #### Properties
@@ -1708,7 +1708,7 @@ TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.c
 
 ## DatabricksProperties
 ### Properties
-* **databricksAccessToken**: string: Databricks access token
+* **databricksAccessToken**: string {sensitive}: Databricks access token
 * **workspaceUrl**: string: Workspace Url
 
 ## DataCollector
@@ -4989,7 +4989,7 @@ The expression should follow NCronTab format.
 
 ## VirtualMachineSshCredentials
 ### Properties
-* **password**: string: Password of admin account
+* **password**: string {sensitive}: Password of admin account
 * **privateKeyData**: string {sensitive}: Private key data
 * **publicKeyData**: string {sensitive}: Public key data
 * **username**: string: Username of admin account
@@ -5051,15 +5051,15 @@ The expression should follow NCronTab format.
 ## WorkspaceConnectionAccessKey
 ### Properties
 * **accessKeyId**: string
-* **secretAccessKey**: string
+* **secretAccessKey**: string {sensitive}
 
 ## WorkspaceConnectionAccountKey
 ### Properties
-* **key**: string
+* **key**: string {sensitive}
 
 ## WorkspaceConnectionApiKey
 ### Properties
-* **key**: string
+* **key**: string {sensitive}
 
 ## WorkspaceConnectionManagedIdentity
 ### Properties
@@ -5081,7 +5081,7 @@ which requires UsernamePassword
 
 ## WorkspaceConnectionPersonalAccessToken
 ### Properties
-* **pat**: string
+* **pat**: string {sensitive}
 
 ## WorkspaceConnectionPropertiesV2
 * **Discriminator**: authType
@@ -5181,7 +5181,7 @@ depending on each OAuth2 provider's implementation.
 
 ## WorkspaceConnectionSharedAccessSignature
 ### Properties
-* **sas**: string
+* **sas**: string {sensitive}
 
 ## WorkspaceConnectionUsernamePassword
 ### Properties

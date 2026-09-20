@@ -3765,7 +3765,7 @@
           "$ref": "#/0"
         },
         "flags": 0,
-        "description": "The URI for the key vault used as the secret archive."
+        "description": "The URI of the secret archive endpoint. The URI must use the `https://` scheme."
       }
     }
   },
@@ -7382,6 +7382,13 @@
     "$type": "ObjectType",
     "name": "StorageApplianceProperties",
     "properties": {
+      "administratorCredentials": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 1,
+        "description": "The credentials of the administrative interface on this storage appliance."
+      },
       "rackId": {
         "type": {
           "$ref": "#/0"
@@ -7409,13 +7416,6 @@
         },
         "flags": 1,
         "description": "The serial number for the storage appliance."
-      },
-      "administratorCredentials": {
-        "type": {
-          "$ref": "#/53"
-        },
-        "flags": 1,
-        "description": "The credentials of the administrative interface on this storage appliance."
       },
       "caCertificate": {
         "type": {

@@ -1168,8 +1168,8 @@ For a CloudServicesNetwork resource, this name will be ignored.
 ### Properties
 * **administratorCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): The credentials of the administrative interface on this storage appliance.
 * **capacity**: int (ReadOnly): The total capacity of the storage appliance. Measured in GiB.
-* **capacityUsed**: int (ReadOnly): The amount of storage consumed.
-* **clusterId**: string (ReadOnly): The resource ID of the cluster this storage appliance is associated with. Measured in GiB.
+* **capacityUsed**: int (ReadOnly): The amount of storage consumed. Measured in GiB.
+* **clusterId**: string (ReadOnly): The resource ID of the cluster this storage appliance is associated with.
 * **detailedStatus**: 'Available' | 'Degraded' | 'Error' | 'Provisioning' | string (ReadOnly): The detailed status of the storage appliance.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
 * **managementIpv4Address**: string (ReadOnly): The endpoint for the management interface of the storage appliance.

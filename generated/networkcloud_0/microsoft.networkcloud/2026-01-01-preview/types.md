@@ -1270,7 +1270,7 @@
 ## SecretArchiveSettings
 ### Properties
 * **associatedIdentity**: [IdentitySelector](#identityselector): The selection of the managed identity to use with this vault URI. The identity type must be either system assigned or user assigned.
-* **vaultUri**: string: The URI for the key vault used as the secret archive.
+* **vaultUri**: string: The URI of the secret archive endpoint. The URI must use the `https://` scheme.
 
 ## SecretRotationStatus
 ### Properties
