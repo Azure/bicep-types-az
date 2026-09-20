@@ -10,7 +10,7 @@
   <ItemGroup>
     <PackageVersion Include="Azure.Bicep.Types" Version="0.6.129" />
     <PackageVersion Include="FluentAssertions" Version="7.2.0" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.10.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.10.1" />
     <PackageVersion Include="MSTest.TestAdapter" Version="4.3.3" />
     <PackageVersion Include="MSTest.TestFramework" Version="4.4.0" />
   </ItemGroup>
