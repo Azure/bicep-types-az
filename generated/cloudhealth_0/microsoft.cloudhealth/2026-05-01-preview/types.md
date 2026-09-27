@@ -164,7 +164,7 @@
 ### Properties
 * **aggregationType**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'None' | 'Total' | string: Type of aggregation to apply to the metric
 * **dataUnit**: string {minLength: 1, maxLength: 100}: Unit of the signal result (e.g. Bytes, MilliSeconds, Percent, Count))
-* **dimensionFilter**: string {minLength: 1, maxLength: 256}: Optional: Dimension filter to apply to the dimension. Must only be set if also Dimension is set.
+* **dimensionFilter**: string {minLength: 1, maxLength: 2048}: Optional: Dimension filter to apply to the dimension. Must only be set if also Dimension is set.
 * **displayName**: string {minLength: 1, maxLength: 260}: Display name
 * **evaluationRules**: [EvaluationRule](#evaluationrule): Evaluation rules for the signal definition
 * **metricName**: string {minLength: 1, maxLength: 256}: Name of the metric
@@ -406,7 +406,7 @@
 ## SignalConfiguration
 ### Properties
 * **aggregationType**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'None' | 'Total' | string: Type of aggregation to apply to the metric.
-* **dimensionFilter**: string {minLength: 1, maxLength: 256}: Optional dimension filter to apply to the metric.
+* **dimensionFilter**: string {minLength: 1, maxLength: 2048}: Optional dimension filter to apply to the metric.
 * **evaluationRules**: [EvaluationRule](#evaluationrule): Evaluation rules with recommended thresholds.
 * **metricName**: string {minLength: 1, maxLength: 256}: Name of the metric (e.g. 'Percentage CPU').
 * **metricNamespace**: string {minLength: 1, maxLength: 256}: Metric namespace (e.g. 'microsoft.compute/virtualmachines').
@@ -428,7 +428,7 @@
 ### ResourceMetricSignalDefinitionProperties
 #### Properties
 * **aggregationType**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'None' | 'Total' | string (Required): Type of aggregation to apply to the metric
-* **dimensionFilter**: string {minLength: 1, maxLength: 256}: Optional: Dimension filter to apply to the dimension. Must only be set if also Dimension is set.
+* **dimensionFilter**: string {minLength: 1, maxLength: 2048}: Optional: Dimension filter to apply to the dimension. Must only be set if also Dimension is set.
 * **metricName**: string {minLength: 1, maxLength: 256} (Required): Name of the metric
 * **metricNamespace**: string {minLength: 1, maxLength: 256} (Required): Metric namespace
 * **signalKind**: 'AzureResourceMetric' (Required): Kind of the signal definition

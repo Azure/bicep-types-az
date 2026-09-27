@@ -363,7 +363,7 @@ RBAC and cap at submit time and drives the transfer to terminal Completed within
 same LRO, with no recipient approve required. The outcome is reflected by
 `transferStatus`: `Completed` means the auto path committed; `Pending` means it did
 not (e.g. cross-tenant, missing RBAC, cap exceeded) and the recipient must approve.
-* **billingAccountId**: string (Required): Billing account id both donor and recipient subscriptions must roll up to.
+* **billingAccountId**: string (ReadOnly): Billing account id both donor and recipient subscriptions must roll up to.
 * **cancellation**: [CancellationRecord](#cancellationrecord) (ReadOnly): Cancellation record. Populated when `transferStatus` is `Cancelled`.
 Mutually exclusive with `approval`.
 * **comment**: string {maxLength: 500}: Donor-supplied free-text rationale captured at submit time.

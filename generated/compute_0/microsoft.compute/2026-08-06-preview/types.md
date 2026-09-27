@@ -178,17 +178,17 @@
 ## Function virtualMachinesGetOperationStatus (Microsoft.Compute/locations/bulkCreateCustom@2026-08-06-preview)
 * **Resource**: Microsoft.Compute/locations/bulkCreateCustom
 * **ApiVersion**: 2026-08-06-preview
-* **Output**: [GetOperationStatusResponse](#getoperationstatusresponse)
+* **Output**: [BulkCreateCustomOperationStatusListResult](#bulkcreatecustomoperationstatuslistresult)
 
 ## AcknowledgeBulkOperationErrorsRequest
 ### Properties
-* **operationIds**: string[] (Required): The set of operation ids to acknowledge.
+* **operationIds**: string[] (Required): The Bulk Action Operation Ids that identify operations for which errors should be acknowledged.
 
 ## AcknowledgeBulkOperationErrorsResponse
 ### Properties
-* **acknowledged**: string[] (Required): The set of operation ids that were newly acknowledged
-* **notFound**: string[] (Required): The set of operation ids that were not found in the completed operations store
-* **skipped**: string[] (Required): The set of operation ids that were skipped because they were already acknowledged, not failed, or belong to a different scope
+* **acknowledged**: string[] (Required): The Bulk Action Operation Ids that identify operations with acknowledged errors.
+* **notFound**: string[] (Required): The Bulk Action Operation Ids that were not found or are no longer available.
+* **skipped**: string[] (Required): The Bulk Action Operation Ids that identify operations with errors that could not be acknowledged.
 
 ## AdditionalCapabilities
 ### Properties
@@ -242,8 +242,8 @@
 * **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
 * **enableAutomaticUpgrade**: bool: Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
 * **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
-* **protectedSettings**: [BulkActionVmExtensionPropertiesProtectedSettings](#bulkactionvmextensionpropertiesprotectedsettings): The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-* **protectedSettingsFromKeyVault**: [KeyVaultSecretReference](#keyvaultsecretreference): The extensions protected settings that are passed by reference, and consumed from key vault
+* **protectedSettings**: [BulkActionVmExtensionPropertiesProtectedSettings](#bulkactionvmextensionpropertiesprotectedsettings) (WriteOnly): The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+* **protectedSettingsFromKeyVault**: [KeyVaultSecretReference](#keyvaultsecretreference) (WriteOnly): The extensions protected settings that are passed by reference, and consumed from key vault
 * **provisionAfterExtensions**: string[]: Collection of extension names after which this extension needs to be provisioned.
 * **publisher**: string: The name of the extension handler publisher.
 * **settings**: [BulkActionVmExtensionPropertiesSettings](#bulkactionvmextensionpropertiessettings): JSON formatted public settings for the extension.
@@ -278,6 +278,11 @@
 * **storageProfile**: [StorageProfile](#storageprofile): Specifies the storage settings for the virtual machine disks.
 * **userData**: string: UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. Minimum compute api-version: 2021-03-01.
 * **vmExtensions**: [BulkactionVMExtension](#bulkactionvmextension)[]: Virtual Machine Extensions Array to be applied to the Virtual Machines.
+
+## BulkCreateCustomOperationStatusListResult
+### Properties
+* **nextLink**: string: The link to the next page of operation statuses.
+* **results**: [ResourceOperation](#resourceoperation)[] (Required): The virtual machine operation statuses on this page.
 
 ## BulkCreateCustomOverride
 ### Properties
@@ -346,9 +351,9 @@
 
 ## BulkCreateCustomVmSizeProfile
 ### Properties
-* **name**: string {minLength: 1} (Required): The name of the VM size, eg Standard_D2ads_v5
+* **name**: string {minLength: 1} (Required): The virtual machine SKU, for example `Standard_D2ads_v5`.
 * **override**: [BulkCreateCustomOverrideBase](#bulkcreatecustomoverridebase): Optional per-VM-size profile override applied to every VM the service assigns to this size. A size maps to many VMs, so virtualMachineName is not part of this shape. virtualMachineProfile is layered beneath any per-VM override; tags, identity, and plan are merged with the per-VM override, with the per-VM value winning.
-* **rank**: int (Required): The rank of this VM size in the priority order
+* **rank**: int (Required): The customer-defined priority rank for this virtual machine size.
 
 ## BulkCreateCustomZoneAllocationPolicy
 ### Properties
@@ -357,15 +362,15 @@
 
 ## CancelOccurrenceRequest
 ### Properties
-* **resourceIds**: string[] (Required): The resources the cancellation should act on. If no resource is passed in the list, Scheduled Action will cancel the occurrence for all resources.
+* **resourceIds**: string[] (Required): The resources for which operations should be canceled. An empty array cancels all operations for all resources for the occurrence.
 
 ## CancelOperationsRequest
 ### Properties
-* **operationIds**: string[] (Required): The list of operation ids to cancel operations on
+* **operationIds**: string[] (Required): The Bulk Action Operation Ids that identify the operations to cancel.
 
 ## CancelOperationsResponse
 ### Properties
-* **results**: [ResourceOperation](#resourceoperation)[] (Required): An array of resource operations that were successfully cancelled
+* **results**: [ResourceOperation](#resourceoperation)[] (Required): The current result for each operation submitted for cancellation.
 
 ## CapacityRecommendation
 ### Properties
@@ -412,10 +417,10 @@
 
 ## CreateResourceOperationResponse
 ### Properties
-* **description**: string (Required): The description of the operation response
-* **location**: string (Required): The location of the create request eg westus
-* **results**: [ResourceOperation](#resourceoperation)[]: The results from the create request if no errors exist
-* **type**: string (Required): The type of resources used in the create request eg virtual machines
+* **description**: string (Required): A description of the bulk action result.
+* **location**: string (Required): The Azure region where Bulk Actions processes the request.
+* **results**: [ResourceOperation](#resourceoperation)[]: The result for each virtual machine.
+* **type**: string (Required): The type of resources targeted by the bulk action.
 
 ## DataDisk
 ### Properties
@@ -435,22 +440,22 @@
 
 ## DeallocateResourceOperationResponse
 ### Properties
-* **description**: string (Required): The description of the operation response
-* **location**: string (Required): The location of the deallocate request eg westus
-* **results**: [ResourceOperation](#resourceoperation)[]: The results from the deallocate request if no errors exist
-* **type**: string (Required): The type of resources used in the deallocate request eg virtual machines
+* **description**: string (Required): A description of the bulk action result.
+* **location**: string (Required): The Azure region where Bulk Actions processes the request.
+* **results**: [ResourceOperation](#resourceoperation)[]: The result for each virtual machine.
+* **type**: string (Required): The type of resources targeted by the bulk action.
 
 ## DelayRequest
 ### Properties
-* **delay**: string (Required): The exact time to delay the operations to
-* **resourceIds**: string[] (Required): The resources that should be delayed. If empty, the delay will apply to the all resources in the occurrence.
+* **delay**: string (Required): The new date and time for the occurrence, including the UTC offset.
+* **resourceIds**: string[] (Required): The resources to delay. An empty array delays all resources in the occurrence.
 
 ## DeleteResourceOperationResponse
 ### Properties
-* **description**: string (Required): The description of the operation response
-* **location**: string (Required): The location of the delete request eg westus
-* **results**: [ResourceOperation](#resourceoperation)[]: The results from the delete request if no errors exist
-* **type**: string (Required): The type of resources used in the delete request eg virtual machines
+* **description**: string (Required): A description of the bulk action result.
+* **location**: string (Required): The Azure region where Bulk Actions processes the request.
+* **results**: [ResourceOperation](#resourceoperation)[]: The result for each virtual machine.
+* **type**: string (Required): The type of resources targeted by the bulk action.
 
 ## DiagnosticsProfile
 ### Properties
@@ -463,7 +468,7 @@
 
 ## DiskEncryptionSetParameters
 ### Properties
-* **id**: string: The ID of the sub-resource.
+* **id**: string: The Azure resource ID.
 
 ## DiskEncryptionSettings
 ### Properties
@@ -482,74 +487,74 @@
 
 ## ExecuteCreateRequest
 ### Properties
-* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
-* **resourceConfigParameters**: [ResourceProvisionPayload](#resourceprovisionpayload) (Required): resource creation payload
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution settings for the bulk action.
+* **resourceConfigParameters**: [ResourceProvisionPayload](#resourceprovisionpayload) (Required): The shared and per-virtual-machine creation configuration.
 
 ## ExecuteDeallocateRequest
 ### Properties
-* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
-* **resources**: [Resources](#resources): The resources for the request
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution settings for the bulk action.
+* **resources**: [Resources](#resources): The target virtual machines.
 * **resourcesWithContext**: [ResourcesWithContext](#resourceswithcontext): The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified.
 
 ## ExecuteDeleteRequest
 ### Properties
-* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
-* **forceDeletion**: bool: Forced delete resource item
-* **resources**: [Resources](#resources): The resources for the request
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution settings for the bulk action.
+* **forceDeletion**: bool: Indicates whether Bulk Actions uses forced deletion for the target virtual machines.
+* **resources**: [Resources](#resources): The target virtual machines.
 * **resourcesWithContext**: [ResourcesWithContext](#resourceswithcontext): The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified.
 
 ## ExecuteHibernateRequest
 ### Properties
-* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
-* **resources**: [Resources](#resources): The resources for the request
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution settings for the bulk action.
+* **resources**: [Resources](#resources): The target virtual machines.
 * **resourcesWithContext**: [ResourcesWithContext](#resourceswithcontext): The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified.
 
 ## ExecuteReimageRequest
 ### Properties
-* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
-* **reimageParameters**: [ReimagePayload](#reimagepayload): Reimage parameters including base profile and per-resource overrides
-* **resources**: [Resources](#resources): The resources for the request
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution settings for the bulk action.
+* **reimageParameters**: [ReimagePayload](#reimagepayload): The shared and per-virtual-machine reimage configuration.
+* **resources**: [Resources](#resources): The target virtual machines.
 * **resourcesWithContext**: [ResourcesWithContext](#resourceswithcontext): The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified.
 
 ## ExecuteStartRequest
 ### Properties
-* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
-* **resources**: [Resources](#resources): The resources for the request
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution settings for the bulk action.
+* **resources**: [Resources](#resources): The target virtual machines.
 * **resourcesWithContext**: [ResourcesWithContext](#resourceswithcontext): The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified.
 
 ## ExecuteVdiCreateRequest
 ### Properties
-* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution parameters for the request
-* **resourceConfigParameters**: [ResourceProvisionVdiPayload](#resourceprovisionvdipayload) (Required): resource creation payload
+* **executionParameters**: [ExecutionParameters](#executionparameters) (Required): The execution settings for the bulk action.
+* **resourceConfigParameters**: [ResourceProvisionVdiPayload](#resourceprovisionvdipayload) (Required): The creation configuration and flexible allocation preferences.
 
 ## ExecutionParameters
 ### Properties
 * **capacityRecommendationParameters**: [CapacityRecommendationParameters](#capacityrecommendationparameters): Capacity recommendation parameters for the request. When provided on an executeStart request, the service computes placement recommendations only if the VM fails to start due to an allocation failure; the recommendations for the desired sizes and locations are then surfaced in the operation's capacityRecommendation response.
-* **optimizationPreference**: 'Availability' | 'Cost' | 'CostAvailabilityBalanced' | string: Details that could optimize the user's request
-* **retryPolicy**: [RetryPolicy](#retrypolicy): Retry policy the user can pass
-* **verifyVmAgentHealth**: bool: When true on an executeStart request, run a post-Start VM agent health check and engage the fallback chain if the guest agent does not report Ready. Ignored for non-Start operations.
+* **optimizationPreference**: 'Availability' | 'Cost' | 'CostAvailabilityBalanced' | string: The preference used to optimize execution of the bulk action.
+* **retryPolicy**: [RetryPolicy](#retrypolicy): The retry settings for the bulk action.
+* **verifyVmAgentHealth**: bool: If true, Bulk Actions verifies the virtual machine guest agent health after a start operation. Setting this property to true for any other operation causes the request to fail.
 
 ## FallbackOperationInfo
 ### Properties
-* **error**: [ResourceOperationError](#resourceoperationerror): The error code if the fallback operation failed
-* **lastOpType**: 'Create' | 'Deallocate' | 'Delete' | 'GetInstanceView' | 'Hibernate' | 'Start' | 'Unknown' | string (Required): The last operation type that was performed as a fallback
-* **status**: string (Required): The status of the fallback operation
+* **error**: [ResourceOperationError](#resourceoperationerror): The error returned when the additional operation did not succeed.
+* **lastOpType**: 'Create' | 'Deallocate' | 'Delete' | 'GetInstanceView' | 'Hibernate' | 'Start' | 'Unknown' | string (Required): The type of the additional operation.
+* **status**: string (Required): The status of the additional operation.
 
 ## FlexProperties
 ### Properties
-* **minCapacity**: int: The minimum number of VMs that must be successfully created for the request to proceed. If fewer than this number can be allocated, the entire request is automatically rejected.
-* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type for the VMs
-* **priorityProfile**: [PriorityProfile](#priorityprofile) (Required): The priority profile for VM allocation
-* **vmSizeProfiles**: [VmSizeProfile](#vmsizeprofile)[] {minLength: 1, maxLength: 5} (Required): The list of VM size profiles to use for flex creation
-* **zoneAllocationPolicy**: [ZoneAllocationPolicy](#zoneallocationpolicy): The zone allocation policy for distributing VMs across availability zones
+* **minCapacity**: int: The minimum number of virtual machines that must be created. Bulk Actions rejects the request when it cannot allocate this number.
+* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type for the virtual machines.
+* **priorityProfile**: [PriorityProfile](#priorityprofile) (Required): The priority and allocation preferences for the virtual machines.
+* **vmSizeProfiles**: [VmSizeProfile](#vmsizeprofile)[] {minLength: 1, maxLength: 5} (Required): The virtual machine sizes that Bulk Actions can use, in customer-defined priority order.
+* **zoneAllocationPolicy**: [ZoneAllocationPolicy](#zoneallocationpolicy): The preferences for distributing virtual machines across availability zones.
 
 ## GetOperationStatusRequest
 ### Properties
-* **operationIds**: string[] (Required): The list of operation ids to get the status of
+* **operationIds**: string[] (Required): The Bulk Action Operation Ids that identify the operations for which current status should be returned.
 
 ## GetOperationStatusResponse
 ### Properties
-* **results**: [ResourceOperation](#resourceoperation)[] (Required): An array of resource operations based on their operation ids
+* **results**: [ResourceOperation](#resourceoperation)[] (Required): The current result for each requested operation.
 
 ## HardwareProfile
 ### Properties
@@ -558,10 +563,10 @@
 
 ## HibernateResourceOperationResponse
 ### Properties
-* **description**: string (Required): The description of the operation response
-* **location**: string (Required): The location of the Hibernate request eg westus
-* **results**: [ResourceOperation](#resourceoperation)[]: The results from the Hibernate request if no errors exist
-* **type**: string (Required): The type of resources used in the Hibernate request eg virtual machines
+* **description**: string (Required): A description of the bulk action result.
+* **location**: string (Required): The Azure region where Bulk Actions processes the request.
+* **results**: [ResourceOperation](#resourceoperation)[]: The result for each virtual machine.
+* **type**: string (Required): The type of resources targeted by the bulk action.
 
 ## HostEndpointSettings
 ### Properties
@@ -571,7 +576,7 @@
 ## ImageReference
 ### Properties
 * **communityGalleryImageId**: string: Specified the community gallery image unique id for vm deployment. This can be fetched from community gallery image GET call.
-* **id**: string: The ID of the sub-resource.
+* **id**: string: The Azure resource ID.
 * **offer**: string: Specifies the offer of the platform image or marketplace image used to create the virtual machine.
 * **publisher**: string: The image publisher.
 * **sharedGalleryImageId**: string: Specified the shared gallery image unique id for vm deployment. This can be fetched from shared gallery image GET call.
@@ -585,8 +590,8 @@
 
 ## KeyVaultSecretReference
 ### Properties
-* **secretUrl**: string (Required): The URL referencing a secret in a Key Vault.
-* **sourceVault**: [SubResource](#subresource) (Required): The relative URL of the Key Vault containing the secret.
+* **secretUrl**: string (Required): The URL of the secret in Azure Key Vault.
+* **sourceVault**: [SubResource](#subresource) (Required): The Azure resource ID of the Key Vault that contains the secret.
 
 ## LaunchBulkInstancesOperationProperties
 ### Properties
@@ -633,7 +638,7 @@
 ## ManagedDiskParameters
 ### Properties
 * **diskEncryptionSet**: [DiskEncryptionSetParameters](#diskencryptionsetparameters): Specifies the customer managed disk encryption set resource id for the managed disk.
-* **id**: string: The ID of the sub-resource.
+* **id**: string: The Azure resource ID.
 * **securityProfile**: [VMDiskSecurityProfile](#vmdisksecurityprofile): Specifies the security profile for the managed disk.
 * **storageAccountType**: 'PremiumV2_LRS' | 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS' | string: Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
 
@@ -651,7 +656,7 @@
 
 ## NetworkInterfaceReference
 ### Properties
-* **id**: string: The ID of the sub-resource.
+* **id**: string: The Azure resource ID.
 * **properties**: [NetworkInterfaceReferenceProperties](#networkinterfacereferenceproperties): Describes a network interface reference properties.
 
 ## NetworkInterfaceReferenceProperties
@@ -667,10 +672,10 @@
 
 ## NotificationProperties
 ### Properties
-* **destination**: string (Required): Where the notification should be sent. For email, it should follow email format.
-* **disabled**: bool: Tells if the notification is enabled or not.
-* **language**: 'en-us' | string (Required): The language the notification should be sent on.
-* **type**: 'Email' | string (Required): Type of notification to be sent.
+* **destination**: string (Required): The notification destination. For email notifications, specify a valid email address.
+* **disabled**: bool: If true, notifications to this destination are disabled.
+* **language**: 'en-us' | string (Required): The language used for the notification.
+* **type**: 'Email' | string (Required): The notification delivery method.
 
 ## Occurrence
 ### Properties
@@ -682,14 +687,14 @@
 
 ## OccurrenceProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Cancelling' | 'Created' | 'Failed' | 'Rescheduling' | 'Scheduled' | 'Succeeded' | string (ReadOnly): The aggregated provisioning state of the occurrence
-* **resultSummary**: [OccurrenceResultSummary](#occurrenceresultsummary) (Required, ReadOnly): The result for occurrences that achieved a terminal state
-* **scheduledTime**: string (Required, ReadOnly): The time the occurrence is scheduled for. This value can be changed by calling the delay API
+* **provisioningState**: 'Canceled' | 'Cancelling' | 'Created' | 'Failed' | 'Rescheduling' | 'Scheduled' | 'Succeeded' | string (ReadOnly): Read-only. The current state of the occurrence.
+* **resultSummary**: [OccurrenceResultSummary](#occurrenceresultsummary) (Required, ReadOnly): Read-only. The result summary after the occurrence reaches a final state.
+* **scheduledTime**: string (Required, ReadOnly): Read-only. The UTC date and time when the occurrence is scheduled to run.
 
 ## OccurrenceResultSummary
 ### Properties
-* **statuses**: [ResourceResultSummary](#resourceresultsummary)[] (Required): The summarized status of the resources.
-* **total**: int (Required): The total number of resources that the occurrence was supposed to act on.
+* **statuses**: [ResourceResultSummary](#resourceresultsummary)[] (Required): Resource counts grouped by result code.
+* **total**: int (Required): The number of resources targeted by the occurrence.
 
 ## OSDisk
 ### Properties
@@ -713,7 +718,7 @@
 
 ## OSProfile
 ### Properties
-* **adminPassword**: string {sensitive}: Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
+* **adminPassword**: string {sensitive} (WriteOnly): Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
 * **adminUsername**: string: Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters.
 * **allowExtensionOperations**: bool: Specifies whether extension operations should be allowed on the virtual machine. This may only be set to False when no extensions are present on the virtual machine.
 * **computerName**: string: Specifies the host OS name of the virtual machine. This name cannot be updated after the VM is created. **Max-length (Windows):** 15 characters. **Max-length (Linux):** 64 characters. For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules).
@@ -725,8 +730,8 @@
 
 ## OSProfileProvisioningData
 ### Properties
-* **adminPassword**: string {sensitive}: Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
-* **customData**: string: Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. **Note: Do not pass any secrets or passwords in customData property.** This property cannot be updated after the VM is created. The property customData is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/blog/custom-data-and-cloud-init-on-windows-azure/). If using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init).
+* **adminPassword**: string {sensitive}: The password for the virtual machine administrator account. The password must be 8 to 123 characters long for Windows virtual machines or 6 to 72 characters long for Linux virtual machines. It must contain characters from at least three of these categories: lowercase letters, uppercase letters, digits, and special characters. The following values are not allowed: `abc@123`, `P@$$w0rd`, `P@ssw0rd`, `P@ssword123`, `Pa$$word`, `pass@word1`, `Password!`, `Password1`, `Password22`, and `iloveyou!`. This secret is accepted only in the request and is not returned in responses.
+* **customData**: string: Base64-encoded custom data provided to the virtual machine. The decoded data can contain up to 65,535 bytes. Do not include secrets or passwords.
 
 ## PartialFulfillmentPolicy
 ### Properties
@@ -751,10 +756,10 @@
 
 ## PriorityProfile
 ### Properties
-* **allocationStrategy**: 'CapacityOptimized' | 'LowestPrice' | 'Prioritized' | string: The allocation strategy for VM size selection
-* **evictionPolicy**: 'Deallocate' | 'Delete' | string: Eviction Policy to follow when evicting Spot VMs. Available from 2026-04-06-preview.
-* **maxPricePerVM**: int: Price per hour of each Spot VM will never exceed this. Available from 2026-04-06-preview.
-* **type**: 'Regular' | 'Spot' | string: The priority type for VM allocation
+* **allocationStrategy**: 'CapacityOptimized' | 'LowestPrice' | 'Prioritized' | string: The strategy used to select a virtual machine size.
+* **evictionPolicy**: 'Deallocate' | 'Delete' | string: The action applied to a Spot virtual machine when Azure evicts it.
+* **maxPricePerVM**: int: The maximum hourly price, in US dollars, for each Spot virtual machine.
+* **type**: 'Regular' | 'Spot' | string: The priority type for virtual machine allocation.
 
 ## ProxyAgentSettings
 ### Properties
@@ -772,78 +777,78 @@
 
 ## ReimagePayload
 ### Properties
-* **baseProfile**: [VirtualMachineReimageParameters](#virtualmachinereimageparameters): Common reimage profile applied to all resources unless overridden
-* **resourceOverrides**: [ReimageResourceOverride](#reimageresourceoverride)[]: Per-resource reimage overrides
+* **baseProfile**: [VirtualMachineReimageParameters](#virtualmachinereimageparameters): The reimage configuration applied to every virtual machine unless a per-virtual-machine override is provided.
+* **resourceOverrides**: [ReimageResourceOverride](#reimageresourceoverride)[]: The reimage configuration overrides for individual virtual machines.
 
 ## ReimageResourceOperationResponse
 ### Properties
-* **description**: string (Required): The description of the operation response
-* **location**: string (Required): The location of the reimage request eg westus
-* **results**: [ResourceOperation](#resourceoperation)[]: The results from the reimage request if no errors exist
-* **type**: string (Required): The type of resources used in the reimage request eg virtual machines
+* **description**: string (Required): A description of the bulk action result.
+* **location**: string (Required): The Azure region where Bulk Actions processes the request.
+* **results**: [ResourceOperation](#resourceoperation)[]: The result for each virtual machine.
+* **type**: string (Required): The type of resources targeted by the bulk action.
 
 ## ReimageResourceOverride
 ### Properties
-* **profile**: [VirtualMachineReimageParameters](#virtualmachinereimageparameters) (Required): Per-resource reimage profile override
-* **resourceId**: string (Required): The Azure resource ID of the virtual machine for this override
+* **profile**: [VirtualMachineReimageParameters](#virtualmachinereimageparameters) (Required): The reimage configuration for this virtual machine.
+* **resourceId**: string (Required): The Azure resource ID of the virtual machine to which the override applies.
 
 ## ResourceAttachRequest
 ### Properties
-* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): List of resources to be attached/patched
+* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The list of resources to attach to the scheduled action.
 
 ## ResourceDetachRequest
 ### Properties
-* **resources**: string[] (Required): List of resources to be detached
+* **resources**: string[] (Required): The Azure resource IDs of the resources to remove.
 
 ## ResourceNotificationDetails
 ### Properties
-* **resourceContext**: string: Resource context for notification tracking
+* **resourceContext**: string: Caller-provided context string returned with the virtual machine operation result notification. Do not include secrets or personal data.
 
 ## ResourceOperation
 ### Properties
-* **errorCode**: string: Resource level error code if it exists
-* **errorDetails**: string: Resource level error details if they exist
-* **operation**: [ResourceOperationDetails](#resourceoperationdetails): Details of the operation performed on a resource
-* **resourceId**: string: Unique identifier for the resource involved in the operation, for example Azure resource ID
-* **virtualMachineInfo**: [VirtualMachineInfo](#virtualmachineinfo): Information about the virtual machine
+* **errorCode**: string: A code that identifies the error for the virtual machine operation.
+* **errorDetails**: string: A message that describes the error for the virtual machine operation.
+* **operation**: [ResourceOperationDetails](#resourceoperationdetails): The virtual machine operation details.
+* **resourceId**: string: The virtual machine Azure resource ID.
+* **virtualMachineInfo**: [VirtualMachineInfo](#virtualmachineinfo): Details of the virtual machine on which the operation is performed.
 
 ## ResourceOperationDetails
 ### Properties
 * **capacityRecommendation**: [CapacityRecommendation](#capacityrecommendation): The capacity/placement recommendation computed for the operation, if requested
-* **completedAt**: string: Time the operation was complete if errors are null
-* **deadline**: string: Deadline for the operation
-* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: Type of deadline of the operation
-* **fallbackOperationInfo**: [FallbackOperationInfo](#fallbackoperationinfo): Fallback operation details if a fallback was performed
-* **operationId**: string (Required): Operation identifier for the unique operation
-* **opType**: 'Create' | 'Deallocate' | 'Delete' | 'GetInstanceView' | 'Hibernate' | 'Start' | 'Unknown' | string: Type of operation performed on the resources
-* **resourceId**: string: Unique identifier for the resource involved in the operation, for example Azure resource ID
-* **resourceNotificationDetails**: [ResourceNotificationDetails](#resourcenotificationdetails): Resource notification details.
-* **resourceOperationError**: [ResourceOperationError](#resourceoperationerror): Operation level errors if they exist
-* **retryPolicy**: [RetryPolicy](#retrypolicy): Retry policy the user can pass
-* **state**: 'Blocked' | 'Cancelled' | 'Executing' | 'Failed' | 'PendingExecution' | 'PendingScheduling' | 'Scheduled' | 'Succeeded' | 'Unknown' | string (ReadOnly): Current state of the operation
-* **subscriptionId**: string: Subscription id attached to the request
-* **timezone**: string: Timezone for the operation
+* **completedAt**: string: The date and time when the operation completed.
+* **deadline**: string: The requested deadline for the operation.
+* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: Specifies whether the deadline time indicates the time at which the operation should start or should be complete.
+* **fallbackOperationInfo**: [FallbackOperationInfo](#fallbackoperationinfo): Information about the fallback operation attempted after the requested operation did not succeed.
+* **operationId**: string (Required): The operation ID used to track the action for this virtual machine.
+* **opType**: 'Create' | 'Deallocate' | 'Delete' | 'GetInstanceView' | 'Hibernate' | 'Start' | 'Unknown' | string: The type of operation performed on the virtual machine.
+* **resourceId**: string: The virtual machine's Azure resource ID.
+* **resourceNotificationDetails**: [ResourceNotificationDetails](#resourcenotificationdetails): Caller-provided context associated with the virtual machine operation.
+* **resourceOperationError**: [ResourceOperationError](#resourceoperationerror): Contains error details if the operation does not succeed.
+* **retryPolicy**: [RetryPolicy](#retrypolicy): The retry settings for the bulk action.
+* **state**: 'Blocked' | 'Cancelled' | 'Executing' | 'Failed' | 'PendingExecution' | 'PendingScheduling' | 'Scheduled' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current state of the operation.
+* **subscriptionId**: string: The subscription ID associated with the bulk action.
+* **timezone**: string: The time zone used to interpret the operation deadline.
 
 ## ResourceOperationError
 ### Properties
-* **errorCode**: string (Required): Code for the error eg 404, 500
-* **errorDetails**: string (Required): Detailed message about the error
+* **errorCode**: string (Required): A code that identifies the error.
+* **errorDetails**: string (Required): A message that describes the error.
 
 ## ResourceOperationResponse
 ### Properties
-* **resourcesStatuses**: [ResourceStatus](#resourcestatus)[] (Required): The resource status of for each resource
-* **totalResources**: int (Required): The total number of resources operated on
+* **resourcesStatuses**: [ResourceStatus](#resourcestatus)[] (Required): The operation result for each resource.
+* **totalResources**: int (Required): The number of resources included in the operation.
 
 ## ResourcePatchRequest
 ### Properties
-* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The list of resources we watch to patch
+* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The resources and notification settings to update.
 
 ## ResourceProvisionPayload
 ### Properties
-* **baseProfile**: [ResourceProvisionPayloadBaseProfile](#resourceprovisionpayloadbaseprofile): Bulk Actions Virtual Machine Profile object that contains VM properties that are common across all VMs in this batch
-* **resourceCount**: int (Required): Number of VMs to be created
-* **resourceOverrides**: [ResourceProvisionPayloadResourceOverridesItem](#resourceprovisionpayloadresourceoverridesitem)[]: Bulk Actions Virtual Machine Profile array, that contains VM properties that should be overridden for each VM in the batch
-* **resourcePrefix**: string: If resourceOverrides doesn't contain "name", the service will create a name based on the prefix and ResourceCount, e.g., resourceprefix-0, resourceprefix-1..
+* **baseProfile**: [ResourceProvisionPayloadBaseProfile](#resourceprovisionpayloadbaseprofile): The virtual machine configuration as a JSON object applied to every virtual machine in the bulk create action.
+* **resourceCount**: int (Required): The number of virtual machines to create.
+* **resourceOverrides**: [ResourceProvisionPayloadResourceOverridesItem](#resourceprovisionpayloadresourceoverridesitem)[]: The per-virtual-machine configuration overrides for the bulk create action.
+* **resourcePrefix**: string: The prefix used by Bulk Actions to generate virtual machine names when a per-virtual-machine override does not specify `name`.
 
 ## ResourceProvisionPayloadBaseProfile
 ### Properties
@@ -857,11 +862,11 @@
 
 ## ResourceProvisionVdiPayload
 ### Properties
-* **baseProfile**: [ResourceProvisionVdiPayloadBaseProfile](#resourceprovisionvdipayloadbaseprofile): Bulk Actions Virtual Machine Profile object that contains VM properties that are common across all VMs in this batch
-* **flexProperties**: [FlexProperties](#flexproperties) (Required): Flex properties used for VDI resource creation scenarios
-* **resourceCount**: int (Required): Number of VMs to be created
-* **resourceOverrides**: [ResourceProvisionVdiPayloadResourceOverridesItem](#resourceprovisionvdipayloadresourceoverridesitem)[]: Bulk Actions Virtual Machine Profile array, that contains VM properties that should be overridden for each VM in the batch
-* **resourcePrefix**: string: If resourceOverrides doesn't contain "name", the service will create a name based on the prefix and ResourceCount, e.g., resourceprefix-0, resourceprefix-1..
+* **baseProfile**: [ResourceProvisionVdiPayloadBaseProfile](#resourceprovisionvdipayloadbaseprofile): The virtual machine configuration as a JSON object applied to every virtual machine in the bulk create action.
+* **flexProperties**: [FlexProperties](#flexproperties) (Required): The flexible allocation preferences for the virtual desktop infrastructure workload.
+* **resourceCount**: int (Required): The number of virtual machines to create.
+* **resourceOverrides**: [ResourceProvisionVdiPayloadResourceOverridesItem](#resourceprovisionvdipayloadresourceoverridesitem)[]: The per-virtual-machine configuration overrides for the bulk create action.
+* **resourcePrefix**: string: The prefix used by Bulk Actions to generate virtual machine names when a per-virtual-machine override does not specify `name`.
 
 ## ResourceProvisionVdiPayloadBaseProfile
 ### Properties
@@ -875,19 +880,19 @@
 
 ## ResourceResultSummary
 ### Properties
-* **code**: string (Required): The error code for those resources. In case of success, code is populated with Success.
-* **count**: int (Required): The number of resources that the code applies to.
-* **errorDetails**: [AzureCoreFoundationsError](#azurecorefoundationserror): The error details for the resources. Not populated on success cases.
+* **code**: string (Required): The result code shared by the resources in this group. A successful result uses `Success`.
+* **count**: int (Required): The number of resources with this result code.
+* **errorDetails**: [AzureCoreFoundationsError](#azurecorefoundationserror): Error details for failed resources. This property is omitted for successful results.
 
 ## Resources
 ### Properties
-* **ids**: string[] (Required): The resource ids used for the request
+* **ids**: string[] (Required): The Azure resource IDs of the target virtual machines.
 
 ## ResourceStatus
 ### Properties
-* **error**: [AzureCoreFoundationsError](#azurecorefoundationserror): Errors encountered while trying to perform
-* **resourceId**: string (Required): The arm identifier of the resource
-* **status**: 'Failed' | 'Succeeded' | string (Required, ReadOnly): The state the resource is currently on
+* **error**: [AzureCoreFoundationsError](#azurecorefoundationserror): Error details when the operation fails for the resource.
+* **resourceId**: string (Required): The Azure resource ID of the targeted resource.
+* **status**: 'Failed' | 'Succeeded' | string (Required, ReadOnly): The result of the operation for the resource.
 
 ## ResourcesWithContext
 ### Properties
@@ -900,47 +905,46 @@
 
 ## RetryPolicy
 ### Properties
-* **onFailureAction**: 'Create' | 'Deallocate' | 'Delete' | 'GetInstanceView' | 'Hibernate' | 'Start' | 'Unknown' | string: Action to take on failure
-* **retryCount**: int: Retry count for user request
-* **retryWindowInMinutes**: int: Retry window in minutes for user request
+* **onFailureAction**: 'Create' | 'Deallocate' | 'Delete' | 'GetInstanceView' | 'Hibernate' | 'Start' | 'Unknown' | string: The operation that Bulk Actions attempts when the requested operation fails.
+* **retryCount**: int: The maximum number of retry attempts.
+* **retryWindowInMinutes**: int: The period, in minutes, during which Bulk Actions can retry the operation.
 
 ## ScheduledActionProperties
 ### Properties
-* **actionType**: 'Deallocate' | 'Hibernate' | 'Start' | string (Required): The action the scheduled action should perform in the resources
-* **disabled**: bool: Tell if the scheduled action is disabled or not
-* **endTime**: string: The time when the scheduled action is supposed to stop scheduling
-* **notificationSettings**: [NotificationProperties](#notificationproperties)[] (Required): The notification settings for the scheduled action
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last provisioning operation performed on the resource.
-* **resourceType**: 'VirtualMachine' | 'VirtualMachineScaleSet' | string (Required): The type of resource the scheduled action is targeting
-* **schedule**: [ScheduledActionsSchedule](#scheduledactionsschedule) (Required): The schedule the scheduled action is supposed to follow
-* **startTime**: string (Required): The time which the scheduled action is supposed to start running
+* **actionType**: 'Deallocate' | 'Hibernate' | 'Start' | string (Required): The operation performed on the targeted resources.
+* **disabled**: bool: Indicates whether new occurrences are disabled.
+* **endTime**: string: The date and time, including UTC offset, after which no new occurrences are scheduled.
+* **notificationSettings**: [NotificationProperties](#notificationproperties)[] (Required): Notification settings that apply to the scheduled action.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): Read-only. The provisioning state of the scheduled action.
+* **resourceType**: 'VirtualMachine' | 'VirtualMachineScaleSet' | string (Required): The type of compute resource targeted by the action.
+* **schedule**: [ScheduledActionsSchedule](#scheduledactionsschedule) (Required): The recurring schedule.
+* **startTime**: string (Required): The date and time, including UTC offset, when the schedule becomes active.
 
 ## ScheduledActionResourceInput
 ### Properties
-* **notificationSettings**: [NotificationProperties](#notificationproperties)[]: The desired notification settings for the specified resource.
-* **resourceId**: string (Required): The ARM Id of the resource.
-"subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Compute/virtualMachines/{vmName}"
+* **notificationSettings**: [NotificationProperties](#notificationproperties)[]: Notification settings that apply only to this resource.
+* **resourceId**: string (Required): The Azure resource ID of the targeted virtual machine.
 
 ## ScheduledActionsExecutionParameters
 ### Properties
-* **optimizationPreference**: 'Availability' | 'Cost' | 'CostAvailabilityBalanced' | string: Details that could optimize the user's request
-* **retryPolicy**: [ScheduledActionsRetryPolicy](#scheduledactionsretrypolicy): Retry policy the user can pass
+* **optimizationPreference**: 'Availability' | 'Cost' | 'CostAvailabilityBalanced' | string: The preferred optimization goal.
+* **retryPolicy**: [ScheduledActionsRetryPolicy](#scheduledactionsretrypolicy): The retry settings for failed resource operations.
 
 ## ScheduledActionsRetryPolicy
 ### Properties
-* **onFailureAction**: 'Create' | 'Deallocate' | 'Delete' | 'Hibernate' | 'Start' | 'Unknown' | string: Action to take on failure
-* **retryCount**: int: Retry count for the request
-* **retryWindowInMinutes**: int: Retry window in minutes for the request
+* **onFailureAction**: 'Create' | 'Deallocate' | 'Delete' | 'Hibernate' | 'Start' | 'Unknown' | string: The resource operation to retry after a failure.
+* **retryCount**: int: The maximum number of retry attempts.
+* **retryWindowInMinutes**: int: The time window, in minutes, during which retries can occur.
 
 ## ScheduledActionsSchedule
 ### Properties
-* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: The type of deadline the scheduled action is supposed to follow for the schedule. If no value is passed, it will default to InitiateAt.
-* **executionParameters**: [ScheduledActionsExecutionParameters](#scheduledactionsexecutionparameters): The execution parameters the scheduled action is supposed to follow
-* **requestedDaysOfTheMonth**: (int {minValue: 1, maxValue: 31})[]: The days of the month the scheduled action is supposed to run on. If empty, it means it will run on every day of the month.
-* **requestedMonths**: ('All' | 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string)[]: The months the scheduled action is supposed to run on. If empty, it means it will run on every month.
-* **requestedWeekDays**: ('All' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: The week days the scheduled action is supposed to run on. If empty, it means it will run on every week day.
-* **scheduledTime**: string (Required): The time the scheduled action is supposed to run on
-* **timeZone**: string (Required): The timezone the scheduled time is specified on
+* **deadlineType**: 'CompleteBy' | 'InitiateAt' | 'Unknown' | string: How the scheduled time is interpreted. The default is `InitiateAt`.
+* **executionParameters**: [ScheduledActionsExecutionParameters](#scheduledactionsexecutionparameters): Settings that control operation execution and retries.
+* **requestedDaysOfTheMonth**: (int {minValue: 1, maxValue: 31})[]: The calendar days when the action runs. An empty array means every day of the month.
+* **requestedMonths**: ('All' | 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string)[]: The months when the action runs. An empty array means every month.
+* **requestedWeekDays**: ('All' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: The days of the week when the action runs. An empty array means every day of the week.
+* **scheduledTime**: string (Required): The local time of day when the scheduled action runs.
+* **timeZone**: string (Required): The time zone used to interpret the scheduled time.
 
 ## ScheduledEventsAdditionalPublishingTargets
 ### Properties
@@ -977,10 +981,10 @@
 
 ## StartResourceOperationResponse
 ### Properties
-* **description**: string (Required): The description of the operation response
-* **location**: string (Required): The location of the start request eg westus
-* **results**: [ResourceOperation](#resourceoperation)[]: The results from the start request if no errors exist
-* **type**: string (Required): The type of resources used in the start request eg virtual machines
+* **description**: string (Required): A description of the bulk action result.
+* **location**: string (Required): The Azure region where Bulk Actions processes the request.
+* **results**: [ResourceOperation](#resourceoperation)[]: The result for each virtual machine.
+* **type**: string (Required): The type of resources targeted by the bulk action.
 
 ## StorageProfile
 ### Properties
@@ -991,7 +995,7 @@
 
 ## SubResource
 ### Properties
-* **id**: string: The ID of the sub-resource.
+* **id**: string: The Azure resource ID.
 
 ## SystemData
 ### Properties
@@ -1063,8 +1067,9 @@
 
 ## VirtualMachineInfo
 ### Properties
-* **vmSize**: string: The name of the VM size, eg Standard_D2ads_v5
-* **zone**: string: The zone identifier
+* **name**: string (Required): The resolved Azure virtual machine name.
+* **vmSize**: string: The virtual machine SKU, for example `Standard_D2ads_v5`.
+* **zone**: string: The availability zone identifier.
 
 ## VirtualMachineIpTag
 ### Properties
@@ -1145,9 +1150,9 @@
 
 ## VirtualMachineReimageParameters
 ### Properties
-* **exactVersion**: string: Specifies in decimal number, the version the OS disk should be reimaged to. If exact version is not provided, the OS disk is reimaged to the existing version of OS Disk.
-* **osProfile**: [OSProfileProvisioningData](#osprofileprovisioningdata): Specifies information required for reimaging the non-ephemeral OS disk.
-* **tempDisk**: bool: Specifies whether to reimage temp disk. Default value: false. Note: This temp disk reimage parameter is only supported for VM/VMSS with Ephemeral OS disk.
+* **exactVersion**: string: The exact image version to use when reimaging the operating system disk. When omitted, the disk is reimaged to its current image version.
+* **osProfile**: [OSProfileProvisioningData](#osprofileprovisioningdata): The operating system profile used when reimaging a non-ephemeral operating system disk.
+* **tempDisk**: bool: Indicates whether to reimage the temporary disk. The default value is `false`. This option is supported only for virtual machines or virtual machine scale sets that use an ephemeral operating system disk.
 
 ## VMAttributeMinMaxDouble
 ### Properties
@@ -1200,8 +1205,8 @@
 
 ## VmSizeProfile
 ### Properties
-* **name**: string {minLength: 1} (Required): The name of the VM size, eg Standard_D2ads_v5
-* **rank**: int (Required): The rank of this VM size in the priority order
+* **name**: string {minLength: 1} (Required): The virtual machine SKU, for example `Standard_D2ads_v5`.
+* **rank**: int (Required): The customer-defined priority rank for this virtual machine size.
 
 ## VmSizeProperties
 ### Properties
@@ -1233,11 +1238,11 @@
 
 ## ZoneAllocationPolicy
 ### Properties
-* **distributionStrategy**: 'BestEffortBalanced' | 'BestEffortSingleZone' | 'Prioritized' | 'StrictBalanced' | string: The distribution strategy for zone allocation
-* **zonePreferences**: [ZonePreference](#zonepreference)[]: The zone preferences for allocation priority
+* **distributionStrategy**: 'BestEffortBalanced' | 'BestEffortSingleZone' | 'Prioritized' | 'StrictBalanced' | string: The strategy used to distribute virtual machines across availability zones.
+* **zonePreferences**: [ZonePreference](#zonepreference)[]: The availability zones and their allocation priorities.
 
 ## ZonePreference
 ### Properties
-* **rank**: int (Required): The rank of this zone in the priority order
-* **zone**: string (Required): The zone identifier
+* **rank**: int (Required): The customer-defined priority rank for this availability zone.
+* **zone**: string (Required): The availability zone identifier.
 
