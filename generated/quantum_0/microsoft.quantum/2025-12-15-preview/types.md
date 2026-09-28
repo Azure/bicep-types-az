@@ -34,7 +34,7 @@
 ## ApiKey
 ### Properties
 * **createdAt**: string: The creation time of the api key.
-* **key**: string (ReadOnly): The Api key.
+* **key**: string {sensitive} (ReadOnly): The Api key.
 
 ## ApiKeys
 ### Properties
@@ -54,9 +54,9 @@
 ## ListKeysResult
 ### Properties
 * **apiKeyEnabled**: bool: Indicator of enablement of the Quantum workspace Api keys.
-* **primaryConnectionString**: string (ReadOnly): The connection string of the primary api key.
+* **primaryConnectionString**: string {sensitive} (ReadOnly): The connection string of the primary api key.
 * **primaryKey**: [ApiKey](#apikey): The quantum workspace primary api key.
-* **secondaryConnectionString**: string (ReadOnly): The connection string of the secondary api key.
+* **secondaryConnectionString**: string {sensitive} (ReadOnly): The connection string of the secondary api key.
 * **secondaryKey**: [ApiKey](#apikey): The quantum workspace secondary api key.
 
 ## ManagedOnBehalfOfConfiguration

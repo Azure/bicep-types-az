@@ -844,7 +844,7 @@
 ## ClusterUpdateStrategy
 ### Properties
 * **maxUnavailable**: int {minValue: 1}: The maximum number of worker nodes that can be offline within the increment of update, e.g., rack-by-rack. Limited by the maximum number of machines in the increment. Defaults to the whole increment size.
-* **strategyType**: 'PauseAfterRack' | 'Rack' | string (Required): The mode of operation for runtime protection.
+* **strategyType**: 'PauseAfterRack' | 'Rack' | string (Required): The strategy for updating the cluster.
 * **thresholdType**: 'CountSuccess' | 'PercentSuccess' | string (Required): Selection of how the threshold should be evaluated.
 * **thresholdValue**: int {minValue: 0} (Required): The numeric threshold value.
 * **waitTimeMinutes**: int {minValue: 0, maxValue: 60}: The time to wait between the increments of update defined by the strategy.
@@ -1270,7 +1270,7 @@
 ## SecretArchiveSettings
 ### Properties
 * **associatedIdentity**: [IdentitySelector](#identityselector): The selection of the managed identity to use with this vault URI. The identity type must be either system assigned or user assigned.
-* **vaultUri**: string: The URI for the key vault used as the secret archive.
+* **vaultUri**: string: The URI of the secret archive endpoint. The URI must use the `https://` scheme.
 
 ## SecretRotationStatus
 ### Properties

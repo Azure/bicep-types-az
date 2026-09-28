@@ -532,7 +532,7 @@ Mutually exclusive with `physicalZones` — set one or the other, not both.
 ## RunAfter
 ### Properties
 * **behavior**: 'All' | 'Any' | 'AtLeastOne' | string: Defines how multiple dependencies are evaluated.
-* **items**: [ActionDependency](#actiondependency)[] {minLength: 1} (Required): Array of action dependencies.
+* **items**: [ActionDependency](#actiondependency)[] (Required): Array of action dependencies.
 
 ## ScenarioAction
 ### Properties
