@@ -57,6 +57,11 @@
 * **ApiVersion**: 2020-03-01
 * **Output**: [AmlComputeNodesInformation](#amlcomputenodesinformation)
 
+## Function prepareNotebook (Microsoft.MachineLearningServices/workspaces@2020-03-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2020-03-01
+* **Output**: [NotebookResourceInfo](#notebookresourceinfo)
+
 ## Function resyncKeys (Microsoft.MachineLearningServices/workspaces@2020-03-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2020-03-01
@@ -219,8 +224,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The user assigned identities associated with the resource.
+* **type**: 'SystemAssigned': The identity type.
 
 ## KeyVaultProperties
 ### Properties
@@ -232,6 +236,7 @@
 ### Properties
 * **appInsightsInstrumentationKey**: string (ReadOnly)
 * **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
+* **notebookAccessKeys**: [NotebookListCredentialsResult](#notebooklistcredentialsresult)
 * **userStorageKey**: string (ReadOnly)
 * **userStorageResourceId**: string (ReadOnly)
 
@@ -247,6 +252,22 @@
 * **preparingNodeCount**: int (ReadOnly): Number of compute nodes which are being prepared.
 * **runningNodeCount**: int (ReadOnly): Number of compute nodes which are running jobs.
 * **unusableNodeCount**: int (ReadOnly): Number of compute nodes which are in unusable state.
+
+## NotebookListCredentialsResult
+### Properties
+* **primaryAccessKey**: string
+* **secondaryAccessKey**: string
+
+## NotebookPreparationError
+### Properties
+* **errorMessage**: string
+* **statusCode**: int
+
+## NotebookResourceInfo
+### Properties
+* **fqdn**: string
+* **notebookPreparationError**: [NotebookPreparationError](#notebookpreparationerror): The error that occurs when preparing notebook.
+* **resourceId**: string: the data plane resourceId that used to initialize notebook component
 
 ## Password
 ### Properties
@@ -376,17 +397,6 @@
 * **adminUserPassword**: string: Password of the administrator user account.
 * **adminUserSshPublicKey**: string: SSH public key of the administrator user account.
 
-## UserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string (ReadOnly): The clientId(aka appId) of the user assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of the user assigned identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the user assigned identity.
-
 ## VirtualMachineProperties
 ### Properties
 * **address**: string: Public IP address of the virtual machine.
@@ -414,6 +424,7 @@
 * **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
 * **imageBuildCompute**: string: The compute name for image build
 * **keyVault**: string: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+* **notebookInfo**: [NotebookResourceInfo](#notebookresourceinfo) (ReadOnly): The notebook info of Azure ML workspace.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
 * **privateLinkCount**: int (ReadOnly): Count of private connections in the workspace
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.

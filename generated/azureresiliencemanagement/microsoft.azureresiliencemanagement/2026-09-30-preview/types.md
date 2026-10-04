@@ -279,54 +279,28 @@
 * **runbookFaultRbacOnTargets**: 'NotSet' | 'Set' | string: RBAC required by AutomationAccount for runbook MSI not setup on the target resources.
 
 ## DrillResourceProperties
-* **Discriminator**: drillType
-
-### Base Properties
+### Properties
 * **activeLocations**: string[] (ReadOnly): Active location and zones of the Azure resource.
+* **activePhysicalZones**: string[] (ReadOnly): Active Resource location and physical zones of Azure Resource.
+* **advisorHaRecommendationId**: string (ReadOnly): Associated Advisor Recommendation link, if HA is not enabled on this resource.
 * **advisorRecommendationTypeId**: string (ReadOnly): Recommendation Type Id for the recommendation.
 * **attentionReason**: [DrillResourceAttentionReason](#drillresourceattentionreason) (ReadOnly): Attention reason if the Status is 'NeedsAttention'.
-* **faultEligibility**: 'Eligible' | 'Ineligible' | 'Unknown' | string (ReadOnly): Normal fault eligibility for a drill resource. Currently populated for regional resources only.
-Omitted until evaluated. Eligibility does not indicate inclusion or readiness,
-and force inclusion does not change this value.
-* **faultIneligibleReason**: 'RecoveryPlanNotConfigured' | 'ResourceNotIncludedInRecoveryPlan' | string (ReadOnly): Reason the resource is ineligible under normal fault inclusion policy. Currently populated for regional resources only.
-Contains the single applicable recovery-plan reason when Ineligible.
-Omitted when Eligible, Unknown, or not yet evaluated. Failed or incomplete recovery-plan reads do not establish non-inclusion.
-Binding and permission errors are reported separately in attentionReason and error fields.
 * **faultProperties**: [FaultProperties](#faultproperties) (ReadOnly): Fault Properties
 * **faultState**: 'CustomScript' | 'NotDefined' | 'SystemNative' | string (ReadOnly): Fault State of the Drill resource
 * **forceInclusionState**: 'Disable' | 'Enable' | string (ReadOnly): ForceInclusion status for this resource. Has the customer forceIncluded it?
+* **haStatus**: 'Enabled' | 'NotEnabled' | string (ReadOnly): HA status of the Drill resource
 * **inclusionState**: 'Excluded' | 'Included' | string: Inclusion State of the Drill resource in Drill
 * **monitoringRbacAssignmentError**: [ErrorDetails](#errordetails) (ReadOnly): Monitoring RBAC assignment error, if any.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'NeedsAttention' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
 * **rbacAssignmentError**: [ErrorDetails](#errordetails) (ReadOnly): Last RBAC assignment error, if any.
 * **readinessState**: 'NeedsAttention' | 'Ready' | string (ReadOnly): Readiness State of the Drill resource
 * **recoveryLocations**: string[] (ReadOnly): List of recovery locations and zones of the Azure resource.
+* **recoveryPhysicalZones**: string[] (ReadOnly): Recovery Resource location and physical zones of HA Azure Resource.
 * **recoveryPlanExclusionReason**: 'ExcludedFromRecoveryPlan' | 'ProtectionStatus' | string (ReadOnly): Exclusion reason of the Drill resource in Recovery Plan
 * **recoveryPlanInclusionState**: 'Excluded' | 'Included' | string (ReadOnly): Inclusion State of the Drill resource in Recovery Plan
 * **resourceId**: string (Required): ARM Id of the underlying resource.
-* **resourceProtectionSolutionType**: 'AzureCosmosDB' | 'AzureNative' | 'AzureNetAppFiles' | 'AzureServiceBus' | 'AzureSiteRecovery' | 'AzureStorageAccount' | 'AzureTemplate' | 'CrossZoneVMRecovery' | 'CustomRunbook' | 'None' | string (ReadOnly): Protection Solution Type of the Drill resource
+* **resourceProtectionSolutionType**: 'AzureNative' | 'AzureSiteRecovery' | 'CrossZoneVMRecovery' | 'CustomRunbook' | 'None' | string (ReadOnly): Protection Solution Type of the Drill resource
 * **resourceType**: string (Required): Type of the Drill resource.
-
-### RegionalDrillResourceProperties
-#### Properties
-* **advisorRegionalRecommendationId**: string (ReadOnly): Azure resource ID of the matching regional Advisor recommendation instance.
-The recommendation type is identified separately by advisorRecommendationTypeId.
-Omitted when no matching recommendation exists.
-* **drillType**: 'Regional' (Required): The discriminator for the Drill Resource object hierarchy. Matches the parent Drill type.
-* **regionalResiliencyStatus**: 'NotResilient' | 'Resilient' | string (ReadOnly): Regional resiliency status reported by the selected regional protection solution.
-Resilient corresponds to an available true posture value; NotResilient corresponds to an available false value.
-Omitted when the posture is unknown or unavailable; unavailable data is not reported as NotResilient.
-* **replicationMode**: 'ActiveActive' | 'ActivePassive' | 'None' | string (ReadOnly): Replication mode of the selected regional protection solution.
-Omitted when no applicable mode is available.
-
-### ZonalDrillResourceProperties
-#### Properties
-* **activePhysicalZones**: string[] (ReadOnly): Active Resource location and physical zones of Azure Resource.
-* **advisorHaRecommendationId**: string (ReadOnly): Associated Advisor Recommendation link, if HA is not enabled on this resource.
-* **drillType**: 'Zonal' (Required): The discriminator for the Drill Resource object hierarchy. Matches the parent Drill type.
-* **haStatus**: 'Enabled' | 'NotEnabled' | string (ReadOnly): HA status of the Drill resource
-* **recoveryPhysicalZones**: string[] (ReadOnly): Recovery Resource location and physical zones of HA Azure Resource.
-
 
 ## DrillRunProperties
 ### Properties
@@ -342,7 +316,6 @@ Omitted when no applicable mode is available.
 * **jobType**: 'DrillRun' | 'Invalid' | 'RecoveryPlan' | string (Required, ReadOnly): The type of job.
 * **notes**: string[] (ReadOnly): Notes for this Drill.
 * **operation**: string (ReadOnly): The operation that this job is intended to perform.
-* **recoveryTimeObjective**: 'PT15M' | 'PT1H' | 'PT24H' | 'PT4H' | string (ReadOnly): Recovery time objective for the drill run.
 * **report**: [DrillReportSummary](#drillreportsummary) (ReadOnly): Summary of report generation for this Drill Run.
 * **resourceId**: string (ReadOnly): The resource for which this job was created. This is typically the resource that the job is intended to manage or operate on.
 * **retryDetails**: [JobRetryDetails](#jobretrydetails)[]: Details of any retries that have been attempted for this job.
@@ -416,8 +389,6 @@ Omitted when no applicable mode is available.
 ### Properties
 * **errorDetails**: [ErrorDetail](#errordetail) (ReadOnly): Details of any errors encountered during the operation.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'NeedsAttention' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
-* **regionalObjectives**: [RegionalObjectives](#regionalobjectives): Recovery objectives targeted for regional resiliency.
-* **requireRegionalResiliency**: bool: Whether regional resiliency is required for this goal assignment.
 * **requireZonalResiliency**: bool (Required): Whether zonal resiliency is required for this goal assignment.
 * **serviceLevelResources**: [ServiceLevelResource](#servicelevelresource)[]: List of service level resources.
 
@@ -437,14 +408,12 @@ Omitted when no applicable mode is available.
 ## GoalResourceProperties
 ### Properties
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'NeedsAttention' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
-* **regionalResiliency**: [ResiliencyProperties](#resiliencyproperties): Regional resiliency posture (participation, attestation, exclusion reason, and user confirmations) for the Azure resource.
 * **resourceArmId**: string (Required): Arm Id of resource under the SG for which the extension resource is maintained.
 * **zonalResiliency**: [ResiliencyProperties](#resiliencyproperties): Zonal resiliency posture (participation, attestation, exclusion reason, and user confirmations) for the Arm resource.
 
 ## GoalsData
 ### Properties
 * **assignmentId**: string (Required): Arm id of the goal assignment.
-* **regionalResiliency**: [UnifiedResilienceItemGoalRequirement](#unifiedresilienceitemgoalrequirement): Regional resiliency goal copied from the goal assignment.
 * **zonalResiliency**: [UnifiedResilienceItemGoalRequirement](#unifiedresilienceitemgoalrequirement): Zonal resiliency goal copied from the goal assignment.
 
 ## HealthModelMonitoringProperties
@@ -497,7 +466,6 @@ Omitted when no applicable mode is available.
 ### Properties
 * **lastRunAttestation**: 'Failed' | 'Success' | string (ReadOnly): Attestation state of the last run of this Drill.
 * **lastRunDuration**: string (ReadOnly): Timespan of the last run of this Drill.
-* **lastRunRecoveryTimeActual**: string (ReadOnly): Actual recovery time of the last run of this Drill.
 * **lastRunState**: 'Cancelled' | 'Cancelling' | 'Completed' | 'CompletedWithWarnings' | 'Failed' | 'InProgress' | 'NotApplicable' | 'NotStarted' | 'Paused' | 'Pending' | 'Skipped' | string (ReadOnly): Status of the last run of this Drill.
 * **lastRunTime**: string (ReadOnly): Timestamp of the last run of this Drill.
 
@@ -625,7 +593,7 @@ Omitted when no applicable mode is available.
 * **jobId**: string (ReadOnly): Id of the Job under which this job-resource exists.
 * **jobResourceType**: 'DrillRun' | 'Invalid' | 'RecoveryPlan' | string (Required): Discriminator for the JobResource object hierarchy.
 * **operation**: string (ReadOnly): The operation that this job is intended to perform.
-* **protectionSolutionType**: 'AzureCosmosDB' | 'AzureNative' | 'AzureNetAppFiles' | 'AzureServiceBus' | 'AzureSiteRecovery' | 'AzureStorageAccount' | 'AzureTemplate' | 'CrossZoneVMRecovery' | 'CustomRunbook' | 'None' | string (ReadOnly): A setting that indicates the protection solution selected.
+* **protectionSolutionType**: 'AzureNative' | 'AzureSiteRecovery' | 'CrossZoneVMRecovery' | 'CustomRunbook' | 'None' | string (ReadOnly): A setting that indicates the protection solution selected.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'NeedsAttention' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the recovery job resource.
 * **recoveryGroupActionSettings**: [RecoveryGroupActionSettings](#recoverygroupactionsettings) (ReadOnly): The recovery action settings.
 * **resourceId**: string (ReadOnly): The resource for which this job was created. This is typically the resource that the job is intended to manage or operate on.
@@ -671,7 +639,6 @@ Omitted when no applicable mode is available.
 * **associatedIdentity**: [AssociatedIdentity](#associatedidentity): Identity details associated to the resource, which will be used for performing any operations on it
 * **attentionReasons**: string[] (ReadOnly): Reason for the resource to be in need of attention
 * **errorDetails**: [ErrorDetail](#errordetail) (ReadOnly): Error details associated with the resource.
-* **inclusionDisabledReasons**: ('ResourceActiveActiveProtection' | 'ResourceHighlyAvailable' | string)[] (ReadOnly): Reasons why inclusion of the resource in a recovery plan is disabled.
 * **inclusionState**: 'Excluded' | 'Included' | string: A state that indicates the resource status with respect to the recovery orchestration plan.
 * **needsAttention**: bool (ReadOnly): Indicating if resource needs user attention and action, details will be found in attentionReasons
 * **protectionStatus**: 'HighlyAvailable' | 'NotProtected' | 'Protected' | 'Unknown' | string (ReadOnly): A status that indicates the protection status of a resource with an Azure solution for regional or zonal recovery.
@@ -683,17 +650,12 @@ Omitted when no applicable mode is available.
 * **resourcePhysicalZones**: string[] (ReadOnly): Physical zones of the Azure resource associated with the recovery orchestration plan and linked to the recovery resource.
 * **resourceProtectionSolutions**: [ResourceProtectionSolutionSettings](#resourceprotectionsolutionsettings)[] (ReadOnly): A list of ResourceProtectionSolutions with which the recovery orchestration resource is protected.
 * **selectedProtectionSolutionSetting**: [ResourceBaseProtectionSolutionSetting](#resourcebaseprotectionsolutionsetting): Resource protection solution settings of the protection solutions recovery orchestration resource is protected with.
-* **selectedProtectionSolutionType**: 'AzureCosmosDB' | 'AzureNative' | 'AzureNetAppFiles' | 'AzureServiceBus' | 'AzureSiteRecovery' | 'AzureStorageAccount' | 'AzureTemplate' | 'CrossZoneVMRecovery' | 'CustomRunbook' | 'None' | string: A setting that indicates the protection solution selected.
+* **selectedProtectionSolutionType**: 'AzureNative' | 'AzureSiteRecovery' | 'CrossZoneVMRecovery' | 'CustomRunbook' | 'None' | string: A setting that indicates the protection solution selected.
 
 ## RefreshGoalResourcesResponse
 ### Properties
 * **lastRefreshTime**: string: Time when the refresh operation was last performed.
 * **resourceCount**: int: Total count of resources under the goal assignment after refresh.
-
-## RegionalObjectives
-### Properties
-* **targetRecoveryPointObjective**: 'PT15M' | 'PT1H' | 'PT24H' | 'PT4H' | string (Required): Target regional recovery point objective. eg, PT15M for 15 minutes.
-* **targetRecoveryTimeObjective**: 'PT15M' | 'PT1H' | 'PT24H' | 'PT4H' | string (Required): Target regional recovery time objective. eg, PT1H for 1 hour.
 
 ## ReportStageStatus
 ### Properties
@@ -714,21 +676,9 @@ Omitted when no applicable mode is available.
 
 ### Base Properties
 
-### ResourceCosmosDBProtectionSetting
-#### Properties
-* **protectionSolutionType**: 'AzureCosmosDB' (Required): A setting that indicates the resource protected with which recovery solution.
-
 ### ResourceNativeProtectionSolutionSetting
 #### Properties
 * **protectionSolutionType**: 'AzureNative' (Required): A setting that indicates the resource protected with which recovery solution.
-
-### ResourceNetAppFilesProtectionSetting
-#### Properties
-* **protectionSolutionType**: 'AzureNetAppFiles' (Required): A setting that indicates the resource protected with which recovery solution.
-
-### ResourceServiceBusProtectionSetting
-#### Properties
-* **protectionSolutionType**: 'AzureServiceBus' (Required): A setting that indicates the resource protected with which recovery solution.
 
 ### ResourceSiteRecoveryProtectionSetting
 #### Properties
@@ -736,19 +686,6 @@ Omitted when no applicable mode is available.
 * **reprotectParams**: [ResourceSiteRecoveryReprotectParams](#resourcesiterecoveryreprotectparams): Reprotect params for azure site recovery solution.
 * **testFailoverCleanupParams**: [ResourceSiteRecoveryTestFailoverCleanupParams](#resourcesiterecoverytestfailovercleanupparams): Test failover params for azure site recovery solution.
 * **testFailoverParams**: [ResourceSiteRecoveryTestFailoverParams](#resourcesiterecoverytestfailoverparams): Test failover params for azure site recovery solution.
-
-### ResourceStorageAccountProtectionSetting
-#### Properties
-* **protectionSolutionType**: 'AzureStorageAccount' (Required): A setting that indicates the resource protected with which recovery solution.
-
-### ResourceAzureTemplateProtectionSetting
-#### Properties
-* **deploymentLocation**: string: The location used to store deployment metadata. Required when deploymentScope is a subscription.
-* **deploymentScope**: string (Required): The Azure Resource Manager scope at which the recovery template is deployed. Must be the
-subscription containing the protected resource, or a resource group within it; deployments
-above subscription scope are not supported.
-* **protectionSolutionType**: 'AzureTemplate' (Required): A setting that indicates the resource protected with which recovery solution.
-* **templateSpecVersionId**: string (Required): The Azure resource ID of the Template Spec version to deploy.
 
 ### ResourceCrossZoneVmRecoveryProtectionSetting
 #### Properties
@@ -778,11 +715,10 @@ above subscription scope are not supported.
 * **failoverState**: 'FailedOver' | 'FailedOverCommitPending' | 'FailedOverReprotectPending' | 'None' | string (ReadOnly): Failover state of the recovery orchestration resource.
 * **isAutoFailover**: bool (Required, ReadOnly): Is AutoFailover configured for the resource replication.
 * **primaryResource**: string (ReadOnly): Primary resource which is getting replicated.
-* **protectionSolutionType**: 'AzureCosmosDB' | 'AzureNative' | 'AzureNetAppFiles' | 'AzureServiceBus' | 'AzureSiteRecovery' | 'AzureStorageAccount' | 'AzureTemplate' | 'CrossZoneVMRecovery' | 'CustomRunbook' | 'None' | string (ReadOnly): A setting that indicates the resource protected with which recovery solution.
+* **protectionSolutionType**: 'AzureNative' | 'AzureSiteRecovery' | 'CrossZoneVMRecovery' | 'CustomRunbook' | 'None' | string (ReadOnly): A setting that indicates the resource protected with which recovery solution.
 * **protectionStatus**: 'HighlyAvailable' | 'NotProtected' | 'Protected' | 'Unknown' | string (ReadOnly): A status that indicates the protection status of a resource with an Azure solution for regional or zonal recovery.
 * **recoveryLocations**: string[] (ReadOnly): List of recovery locations of the Azure resource associated with the recovery orchestration plan and linked to the recovery resource.
 * **replicaResources**: string[] (ReadOnly): List of Replica resources to which replication is happening.
-* **replicationMode**: 'ActiveActive' | 'ActivePassive' | 'None' | string: Replication mode configured for the protected resource.
 * **replicationRole**: 'Primary' | 'Replica' | 'Unknown' | string (ReadOnly): Specifies the role of the resource in the replication process.
 * **resourceId**: string (ReadOnly): Resource ID of the Azure resource associated with the recovery orchestration plan and linked to the recovery resource.
 * **testFailoverState**: 'None' | 'TestFailoverCleanupPending' | string (ReadOnly): TestFailover state of the recovery orchestration resource.
@@ -866,18 +802,8 @@ above subscription scope are not supported.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'NeedsAttention' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
 * **resiliencyPosture**: [UnifiedResilienceItemResiliencyPosture](#unifiedresilienceitemresiliencyposture) (Required): Resiliency posture computed for the service group.
 
-## UnifiedResilienceItemRegionalResiliencyPosture
-### Properties
-* **enabledResourceCount**: int: Count of resources that have regional resiliency enabled.
-* **estimatedRecoveryPointObjective**: 'PT15M' | 'PT1H' | 'PT24H' | 'PT4H' | string: The estimated recovery point objective computed for the service group, expressed as an ISO 8601 duration.
-* **evaluationDateTime**: string: The date and time when the regional resiliency posture was last evaluated.
-* **notEnabledResourceCount**: int: Count of resources that do not have regional resiliency enabled.
-* **notEvaluatedResourceCount**: int: Count of resources that have not been evaluated for regional resiliency.
-* **userConfirmationNeededCount**: int: Count of resources that require user confirmation for regional resiliency.
-
 ## UnifiedResilienceItemResiliencyPosture
 ### Properties
-* **regionalResiliency**: [UnifiedResilienceItemRegionalResiliencyPosture](#unifiedresilienceitemregionalresiliencyposture): The regional resiliency section of the resiliency posture.
 * **zonalResiliency**: [UnifiedResilienceItemZonalResiliencyPosture](#unifiedresilienceitemzonalresiliencyposture) (Required): The zonal resiliency section of the resiliency posture.
 
 ## UnifiedResilienceItemZonalResiliencyPosture

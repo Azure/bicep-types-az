@@ -25194,6 +25194,83 @@
   },
   {
     "$type": "ObjectType",
+    "name": "ManagedInstanceLongTermRetentionBackup",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/1500"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "lockTimeBasedImmutability",
+    "resourceType": "Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/1804"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "removeLegalHoldImmutability",
+    "resourceType": "Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/1804"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "removeTimeBasedImmutability",
+    "resourceType": "Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/1804"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "setLegalHoldImmutability",
+    "resourceType": "Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups",
+    "apiVersion": "2026-08-01-preview",
+    "output": {
+      "$ref": "#/1804"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "ManagedDatabaseMoveDefinition",
     "properties": {
       "destinationManagedDatabaseId": {
@@ -25214,7 +25291,7 @@
       "$ref": "#/1706"
     },
     "input": {
-      "$ref": "#/1804"
+      "$ref": "#/1809"
     }
   },
   {
@@ -25226,7 +25303,7 @@
       "$ref": "#/1706"
     },
     "input": {
-      "$ref": "#/1804"
+      "$ref": "#/1809"
     }
   },
   {
@@ -25251,7 +25328,7 @@
       "$ref": "#/1706"
     },
     "input": {
-      "$ref": "#/1807"
+      "$ref": "#/1812"
     }
   },
   {
@@ -25267,7 +25344,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1810"
+          "$ref": "#/1815"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -25323,7 +25400,7 @@
     "resourceType": "Microsoft.Sql/managedInstances/databases",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1809"
+      "$ref": "#/1814"
     }
   },
   {
@@ -25339,7 +25416,7 @@
       },
       "operationMode": {
         "type": {
-          "$ref": "#/1815"
+          "$ref": "#/1820"
         },
         "flags": 0,
         "description": "The move operation mode."
@@ -25358,10 +25435,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1813"
+        "$ref": "#/1818"
       },
       {
-        "$ref": "#/1814"
+        "$ref": "#/1819"
       },
       {
         "$ref": "#/0"
@@ -25377,7 +25454,7 @@
       "$ref": "#/1706"
     },
     "input": {
-      "$ref": "#/1812"
+      "$ref": "#/1817"
     }
   },
   {
@@ -25458,7 +25535,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1826"
+          "$ref": "#/1831"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -25547,7 +25624,7 @@
     "resourceType": "Microsoft.Sql/managedInstances",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1825"
+      "$ref": "#/1830"
     }
   },
   {
@@ -25577,7 +25654,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1829"
+          "$ref": "#/1834"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -25633,7 +25710,7 @@
     "resourceType": "Microsoft.Sql/managedInstances",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1828"
+      "$ref": "#/1833"
     }
   },
   {
@@ -25642,7 +25719,7 @@
     "resourceType": "Microsoft.Sql/managedInstances",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1828"
+      "$ref": "#/1833"
     }
   },
   {
@@ -25667,7 +25744,7 @@
       "$ref": "#/1706"
     },
     "input": {
-      "$ref": "#/1832"
+      "$ref": "#/1837"
     }
   },
   {
@@ -25676,7 +25753,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1835"
+          "$ref": "#/1840"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -25740,7 +25817,7 @@
       "$ref": "#/1706"
     },
     "input": {
-      "$ref": "#/1834"
+      "$ref": "#/1839"
     }
   },
   {
@@ -25790,7 +25867,7 @@
     "resourceType": "Microsoft.Sql/managedInstances/databases/ledgerDigestUploads",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1837"
+      "$ref": "#/1842"
     }
   },
   {
@@ -25853,10 +25930,10 @@
     "resourceType": "Microsoft.Sql/managedInstances/dnsAliases",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1840"
+      "$ref": "#/1845"
     },
     "input": {
-      "$ref": "#/1839"
+      "$ref": "#/1844"
     }
   },
   {
@@ -25906,7 +25983,7 @@
     "resourceType": "Microsoft.Sql/servers/networkSecurityPerimeterConfigurations",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1842"
+      "$ref": "#/1847"
     }
   },
   {
@@ -25956,7 +26033,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/replicationLinks",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1844"
+      "$ref": "#/1849"
     }
   },
   {
@@ -25965,7 +26042,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/replicationLinks",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1844"
+      "$ref": "#/1849"
     }
   },
   {
@@ -26046,10 +26123,10 @@
     "resourceType": "Microsoft.Sql/servers/dnsAliases",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1850"
+      "$ref": "#/1855"
     },
     "input": {
-      "$ref": "#/1849"
+      "$ref": "#/1854"
     }
   },
   {
@@ -26064,7 +26141,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1853"
+          "$ref": "#/1858"
         },
         "flags": 1
       }
@@ -26094,7 +26171,7 @@
       },
       "reason": {
         "type": {
-          "$ref": "#/1857"
+          "$ref": "#/1862"
         },
         "flags": 2,
         "description": "The reason code explaining why the name is unavailable. Will be undefined if the name is available."
@@ -26120,10 +26197,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1855"
+        "$ref": "#/1860"
       },
       {
-        "$ref": "#/1856"
+        "$ref": "#/1861"
       }
     ]
   },
@@ -26133,10 +26210,10 @@
     "resourceType": "Microsoft.Sql",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1854"
+      "$ref": "#/1859"
     },
     "input": {
-      "$ref": "#/1852"
+      "$ref": "#/1857"
     }
   },
   {
@@ -26173,7 +26250,7 @@
       },
       "storageKeyType": {
         "type": {
-          "$ref": "#/1863"
+          "$ref": "#/1868"
         },
         "flags": 5,
         "description": "Storage key type: StorageAccessKey, SharedAccessKey, or ManagedIdentity."
@@ -26238,13 +26315,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1860"
+        "$ref": "#/1865"
       },
       {
-        "$ref": "#/1861"
+        "$ref": "#/1866"
       },
       {
-        "$ref": "#/1862"
+        "$ref": "#/1867"
       },
       {
         "$ref": "#/0"
@@ -26260,7 +26337,7 @@
       "$ref": "#/1715"
     },
     "input": {
-      "$ref": "#/1859"
+      "$ref": "#/1864"
     }
   },
   {
@@ -26269,7 +26346,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1866"
+          "$ref": "#/1871"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -26358,7 +26435,7 @@
     "resourceType": "Microsoft.Sql/servers",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1865"
+      "$ref": "#/1870"
     }
   },
   {
@@ -26370,7 +26447,7 @@
       "$ref": "#/1706"
     },
     "input": {
-      "$ref": "#/1834"
+      "$ref": "#/1839"
     }
   },
   {
@@ -26392,7 +26469,7 @@
     "resourceType": "Microsoft.Sql/servers/syncAgents",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1869"
+      "$ref": "#/1874"
     }
   },
   {
@@ -26478,7 +26555,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/transparentDataEncryption",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1875"
+      "$ref": "#/1880"
     }
   },
   {
@@ -26487,7 +26564,7 @@
     "resourceType": "Microsoft.Sql/servers/databases/transparentDataEncryption",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1875"
+      "$ref": "#/1880"
     }
   },
   {
@@ -26496,7 +26573,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1879"
+          "$ref": "#/1884"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -26537,7 +26614,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/1883"
+          "$ref": "#/1888"
         },
         "flags": 2,
         "description": "The status of the DNS refresh operation."
@@ -26560,13 +26637,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1880"
+        "$ref": "#/1885"
       },
       {
-        "$ref": "#/1881"
+        "$ref": "#/1886"
       },
       {
-        "$ref": "#/1882"
+        "$ref": "#/1887"
       },
       {
         "$ref": "#/0"
@@ -26579,7 +26656,7 @@
     "resourceType": "Microsoft.Sql/virtualClusters",
     "apiVersion": "2026-08-01-preview",
     "output": {
-      "$ref": "#/1878"
+      "$ref": "#/1883"
     }
   }
 ]

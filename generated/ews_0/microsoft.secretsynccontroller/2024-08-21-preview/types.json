@@ -437,7 +437,7 @@
           "$ref": "#/35"
         },
         "flags": 1,
-        "description": "Type specifies the type of the Kubernetes secret object, e.g. \"Opaque\" or\"kubernetes.io/tls\". The controller must have permission to create secrets of the specified type."
+        "description": "Type specifies the type of the Kubernetes secret object, e.g. `Opaque` or `kubernetes.io/tls`. The controller must have permission to create secrets of the specified type."
       },
       "forceSynchronization": {
         "type": {

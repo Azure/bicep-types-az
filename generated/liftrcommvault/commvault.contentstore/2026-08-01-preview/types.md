@@ -1,0 +1,447 @@
+# Commvault.ContentStore @ 2026-08-01-preview
+
+## Resource Commvault.ContentStore/cloudAccounts@2026-08-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2026-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_\-.: ]*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [CloudAccountProperties](#cloudaccountproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Commvault.ContentStore/cloudAccounts' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Commvault.ContentStore/cloudAccounts/plans@2026-08-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2026-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_\-.: ]*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [PlanProperties](#planproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Commvault.ContentStore/cloudAccounts/plans' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Commvault.ContentStore/cloudAccounts/protectionGroups@2026-08-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2026-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_\-.: ]*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ProtectionGroupProperties](#protectiongroupproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Commvault.ContentStore/cloudAccounts/protectionGroups' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems@2026-08-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2026-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[a-zA-Z0-9\-_]{1,127}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ProtectedItemProperties](#protecteditemproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Commvault.ContentStore/cloudAccounts/roleMappings@2026-08-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2026-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [RoleMappingProperties](#rolemappingproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Commvault.ContentStore/cloudAccounts/roleMappings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Commvault.ContentStore/cloudAccounts/storages@2026-08-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2026-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_\-.: ]*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [StorageProperties](#storageproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Commvault.ContentStore/cloudAccounts/storages' (ReadOnly, DeployTimeConstant): The resource type
+
+## Function activateSaaS (Commvault.ContentStore@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore
+* **ApiVersion**: 2026-08-01-preview
+* **Input**: [ActivateSaaSParameterRequest](#activatesaasparameterrequest)
+* **Output**: [SaaSResourceDetailsResponse](#saasresourcedetailsresponse)
+
+## Function backup (Commvault.ContentStore/cloudAccounts/protectionGroups@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
+* **ApiVersion**: 2026-08-01-preview
+* **Input**: [BackupProtectionGroupRequest](#backupprotectiongrouprequest)
+* **Output**: [BackupProtectionGroupResponse](#backupprotectiongroupresponse)
+
+## Function disableComplianceLock (Commvault.ContentStore/cloudAccounts/storages@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/storages
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: [Storage](#storage)
+
+## Function enableComplianceLock (Commvault.ContentStore/cloudAccounts/storages@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/storages
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: [Storage](#storage)
+
+## Function getRestorePoints (Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: [RestorePoints](#restorepoints)
+
+## Function latestLinkedSaaS (Commvault.ContentStore/cloudAccounts@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: [LatestLinkedSaaSResponse](#latestlinkedsaasresponse)
+
+## Function linkSaaS (Commvault.ContentStore/cloudAccounts@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts
+* **ApiVersion**: 2026-08-01-preview
+* **Input**: [SaaSData](#saasdata)
+* **Output**: [CloudAccount](#cloudaccount)
+
+## Function protectedItemCount (Commvault.ContentStore@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore
+* **ApiVersion**: 2026-08-01-preview
+* **Input**: [CountProtectedItemsRequest](#countprotecteditemsrequest)
+* **Output**: [CountProtectedItemsResponse](#countprotecteditemsresponse)
+
+## Function refresh (Commvault.ContentStore/cloudAccounts/storages@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/storages
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: [Storage](#storage)
+
+## Function restore (Commvault.ContentStore/cloudAccounts/protectionGroups@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
+* **ApiVersion**: 2026-08-01-preview
+* **Input**: [RestoreProtectionItemRequest](#restoreprotectionitemrequest)
+* **Output**: [RestoreProtectionItemResponse](#restoreprotectionitemresponse)
+
+## Function restore (Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems
+* **ApiVersion**: 2026-08-01-preview
+* **Input**: [RestoreProtectionItemRequest](#restoreprotectionitemrequest)
+* **Output**: [RestoreProtectionItemResponse](#restoreprotectionitemresponse)
+
+## Function resumeBackup (Commvault.ContentStore/cloudAccounts/protectionGroups@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: any
+
+## Function stopBackup (Commvault.ContentStore/cloudAccounts/protectionGroups@2026-08-01-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
+* **ApiVersion**: 2026-08-01-preview
+* **Input**: [StopBackupProtectionGroupRequest](#stopbackupprotectiongrouprequest)
+* **Output**: any
+
+## ActivateSaaSParameterRequest
+### Properties
+* **activateSaaSRequestParam**: [ActivateSaaSRequestParam](#activatesaasrequestparam): Optional activation request parameters containing user and company details
+* **publisherId**: string: Optional publisher identifier
+* **saasGuid**: string (Required): SaaS guid for Activate and Validate SaaS Resource
+
+## ActivateSaaSRequestParam
+### Properties
+* **company**: [CompanyProfile](#companyprofile): Optional company details
+* **saasResourceId**: string: Optional Marketplace SaaS resource identifier
+* **user**: [LiftrBaseUserDetails](#liftrbaseuserdetails): Optional user details
+
+## BackupOptions
+### Properties
+* **backupCopyImmediately**: bool (Required): Indicates whether to run backup immediately or not for the VM
+* **backupLevel**: 'DIFFERENTIAL' | 'FULL' | 'INCREMENTAL' | 'SYNTHETIC_FULL' | string: Indicates whether to stop backup or not for the VM
+* **jobDescription**: string (Required): The name of the backup job to be shown in Commvault
+* **notifyUserOnJobCompletion**: bool (Required): Indicates whether to notify the user on job completion
+* **runSnapShotBackup**: bool (Required): Indicates whether to run snapshot backup or not for the VM, if false, it will run regular backup
+
+## BackupProtectionGroupRequest
+### Properties
+* **backupOptions**: [BackupOptions](#backupoptions) (Required): The backup options for the VM backup
+* **vmList**: [VmListItem](#vmlistitem)[] (Required): The vm list details.
+
+## BackupProtectionGroupResponse
+### Properties
+* **jobIds**: string[] (Required, ReadOnly): The jobIds returned from Commvault.
+* **taskId**: int (Required, ReadOnly): The Commvault response for taskId
+
+## CloudAccount
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [CloudAccountProperties](#cloudaccountproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## CloudAccountProperties
+### Properties
+* **company**: [CompanyProfile](#companyprofile): Optional company details for the cloud account
+* **marketplace**: [LiftrBaseMarketplaceDetails](#liftrbasemarketplacedetails) (Required): Marketplace details of the resource.
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
+* **roleAssignmentsOnCcaCreate**: [RoleAssignment](#roleassignment)[] (WriteOnly): Role assignments to provision during CCA creation. Each entry maps a Commvault role to its assigned Entra principals.
+* **ssoUrl**: string (ReadOnly): SSO URL for the Commvault Cloud Account
+* **user**: [LiftrBaseUserDetails](#liftrbaseuserdetails) (Required): Details of the user.
+
+## CompanyProfile
+### Properties
+* **city**: string: City of the company address.
+* **companyName**: string: Company name
+* **country**: string: Country of the company address.
+* **jobTitle**: string: Job title
+* **postalCode**: string: Postal code
+* **state**: string: State or province of the company address.
+* **street**: string: Street address
+* **website**: string: Company website
+
+## CountProtectedItemsRequest
+### Properties
+* **resourceIds**: string[] {minLength: 1} (Required): The list of CCA resource IDs.
+
+## CountProtectedItemsResponse
+### Properties
+* **count**: string (Required): The count of protected items.
+
+## EntityInfo
+### Properties
+* **displayName**: string: The display name of the Entra entity
+* **entityType**: 'Group' | 'User' | string: The type of entity - user or group
+* **id**: string: The unique identifier (UUID) of the Entra entity
+
+## ExtendedRetentionTime
+### Properties
+* **backupRuleType**: 'ALL_FULLS' | 'ALL_JOBS' | 'DAILY_FULLS' | 'HALF_YEARLY_FULLS' | 'HOURLY_FULLS' | 'MONTHLY_FULLS' | 'QUARTERLY_FULLS' | 'WEEKLY_FULLS' | 'YEARLY_FULLS' | string: Backup Rule Type for Extended Retention
+* **retentionPeriod**: int: Retention period for Extended Retention
+* **retentionTime**: 'monthly' | 'yearly' | string: Retention time for Extended Retention
+
+## LatestLinkedSaaSResponse
+### Properties
+* **isHiddenSaaS**: bool: Flag indicating if the SaaS resource is hidden
+* **saaSResourceId**: string: SaaS resource id
+
+## LiftrBaseMarketplaceDetails
+### Properties
+* **offerDetails**: [LiftrBaseOfferDetails](#liftrbaseofferdetails) (Required): Offer details for the marketplace that is selected by the user
+* **saasResourceId**: string: Marketplace SaaS Resource Id
+* **subscriptionId**: string: Azure subscription id for the the marketplace offer is purchased from
+* **subscriptionStatus**: 'PendingFulfillmentStart' | 'Subscribed' | 'Suspended' | 'Unsubscribed' | string (ReadOnly): Marketplace subscription status
+
+## LiftrBaseOfferDetails
+### Properties
+* **offerId**: string (Required): Offer Id for the marketplace offer
+* **planId**: string: Plan Id for the marketplace offer
+* **planName**: string: Plan Name for the marketplace offer
+* **publisherId**: string (Required): Publisher Id for the marketplace offer
+* **termId**: string: Plan Display Name for the marketplace offer
+* **termUnit**: string: Plan Display Name for the marketplace offer
+
+## LiftrBaseUserDetails
+### Properties
+* **emailAddress**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"}: Email address of the user
+* **firstName**: string: First name of the user
+* **lastName**: string: Last name of the user
+* **phoneNumber**: string: User's phone number
+* **upn**: string: User's principal name
+
+## ManagedServiceIdentity
+### Properties
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+
+## PlanProperties
+### Properties
+* **location**: string {minLength: 1, maxLength: 50} (Required): Location of the Commvault Plan
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
+* **retention**: [Retention](#retention): The Commvault Plan Retention
+* **schedules**: [Schedule](#schedule)[] {minLength: 1, maxLength: 11}: The Commvault Plan Schedule
+* **storagePlans**: [StoragePlan](#storageplan)[] {minLength: 1, maxLength: 11} (Required): The storage plans associated with the Commvault Plan
+
+## ProtectedItemProperties
+### Properties
+* **lastBackUpTime**: int (Required, ReadOnly): The Commvault Protected Item backup time
+* **location**: string (Required, ReadOnly): The location of the protected item
+* **resourceGroup**: string (Required, ReadOnly): The resource group of the protected item
+* **resourceName**: string (Required, ReadOnly): The Name of the commvault protected item
+* **vmGuid**: string {pattern: "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[4][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$"} (Required, ReadOnly): The GUID of VM
+
+## ProtectionGroupProperties
+### Properties
+* **backupActivityStatus**: string (ReadOnly): The backup activity status indicating if backup is enabled or not on the protection group
+* **dataSourceType**: 'AzureVM' (Required): The datasource type of Commvault Protection Group
+* **lastBackUpTime**: int (Required, ReadOnly): The Commvault Protection Group backup time
+* **numberOfProtectedItems**: int (Required, ReadOnly): The number of ProtectedItems under the Protection Group
+* **plan**: string (Required): The Commvault Plan to be associated with the Protection Group
+* **protectionStatus**: 'all' | 'backed_up_with_error' | 'discovered' | 'not_protected' | 'pending' | 'protected' | string (Required, ReadOnly): The protection group schedule
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
+* **resources**: [ProtectionGroupResources](#protectiongroupresources) (Required): The resources to be protected under Protection Group
+
+## ProtectionGroupResources
+### Properties
+* **manual**: string[]: The items to be protected under Protection Group
+* **matchRules**: [ProtectionGroupResourcesMatchRules](#protectiongroupresourcesmatchrules): Rules to match resources
+
+## ProtectionGroupResourcesMatchRules
+### Properties
+* **matchType**: 'all' | 'any' | string (Required): match Type all or any
+* **rules**: [Rule](#rule)[] (Required): rules to match
+
+## RestorePoints
+### Properties
+* **restoreTimes**: int[] (Required, ReadOnly): The Commvault Protected Item Restore points
+
+## RestoreProtectionItemRequest
+### Properties
+* **inPlaceRestore**: bool (Required): Check whether inplace or out of place restore.
+* **restoreType**: 'DISK_ATTACH' | 'NONE' | 'VIRTUAL_MACHINE' | string: Type of Restore
+* **toTime**: string: Time to restore
+* **vmDestinationInfo**: [VmDestinationInfo](#vmdestinationinfo) (Required): The vm destination details of the VM.
+
+## RestoreProtectionItemResponse
+### Properties
+* **jobIds**: string[] (Required, ReadOnly): The jobIds returned from Commvault.
+* **taskId**: int (Required, ReadOnly): The Commvault response for taskId
+
+## Retention
+### Properties
+* **numberOfSnapshots**: int: Number of Snapshots
+
+## RoleAssignment
+### Properties
+* **entities**: [EntityInfo](#entityinfo)[] {minLength: 1} (Required): The Entra entities (users or groups) assigned to this role
+* **roleName**: 'BackupAdmin' | 'BackupOperator' | 'BackupUser' | 'MultiPersonAuthorization' | 'SecurityAdmin' | string (Required): The name of the Commvault role
+
+## RoleMappingProperties
+### Properties
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
+* **roles**: [RoleAssignment](#roleassignment)[]: The list of role assignments mapping roles to Entra entities (users and groups)
+
+## Rule
+### Properties
+* **operator**: 'contains' | 'doesNotContains' | 'doesNotEqual' | 'endsWith' | 'equals' | 'startsWith' | string (Required): property of the rule
+* **property**: 'name' | 'region' | 'resourceGroup' | 'status' | 'tagName' | 'tagValue' | string (Required): property of the rule
+* **value**: string (Required): property of the rule
+
+## SaaSData
+### Properties
+* **saaSResourceId**: string: SaaS resource id
+
+## SaaSResourceDetailsResponse
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **saaSResourceId**: string: Id of the Marketplace SaaS Resource
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## Schedule
+### Properties
+* **backupType**: 'BOTH' | 'FULL' | 'INCREMENTAL' | string (Required): Type of Backup
+* **dayOfMonth**: int: Day of the month
+* **dayOfWeek**: 'DAY' | 'FRIDAY' | 'MONDAY' | 'SATURDAY' | 'SUNDAY' | 'THURSDAY' | 'TUESDAY' | 'WEDNESDAY' | 'WEEKDAY' | 'WEEKEND_DAYS' | string: Day of the week
+* **frequency**: 'daily' | 'minutes' | 'monthly' | 'weekly' | 'yearly' | string: Frequency of Retention
+* **monthOfYear**: 'APRIL' | 'AUGUST' | 'DECEMBER' | 'FEBRUARY' | 'JANUARY' | 'JULY' | 'JUNE' | 'MARCH' | 'MAY' | 'NOVEMBER' | 'OCTOBER' | 'SEPTEMBER' | string: Month of the year
+* **runsEvery**: int: Interval of Retention
+* **time**: string: Time of Retention
+* **timeZone**: string: Time Zone
+* **weeklyDays**: ('FRIDAY' | 'MONDAY' | 'SATURDAY' | 'SUNDAY' | 'THURSDAY' | 'TUESDAY' | 'WEDNESDAY' | string)[]: Weekly Days List
+* **weekOfMonth**: 'FIRST' | 'FOURTH' | 'LAST' | 'SECOND' | 'THIRD' | string: Week of the month
+
+## StopBackupProtectionGroupRequest
+### Properties
+* **comment**: string: Any further comments
+* **reason**: string (Required): The reason for stopping the backup
+
+## Storage
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [StorageProperties](#storageproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## StoragePlan
+### Properties
+* **backupRuleType**: 'ALL_FULLS' | 'ALL_JOBS' | 'DAILY_FULLS' | 'HALF_YEARLY_FULLS' | 'HOURLY_FULLS' | 'MONTHLY_FULLS' | 'QUARTERLY_FULLS' | 'WEEKLY_FULLS' | 'YEARLY_FULLS' | string: Backup Rule Type
+* **copyName**: string: Copy Name from Commvault
+* **copyPrecedence**: int: Precedence of the Storage Plan, 1 is the highest precedence, 2 is the next highest, and so on
+* **extendedRetention**: [ExtendedRetentionTime](#extendedretentiontime)[]: Extended Retention Policy
+* **name**: string (Required): The name of the Storage resource
+* **retentionPeriod**: int: Indicates the retention period valid only if the type of retention chosen in CUSTOM
+* **retentionTime**: 'monthly' | 'yearly' | string: Indicates the retention timeframe valid only if the type of retention chosen in CUSTOM
+* **storagePoolId**: string: Id of the Storage Pool
+
+## StorageProperties
+### Properties
+* **class**: 'COLD' | 'HOT' | string (Required): The class of Commvault Storage
+* **complianceLockStatus**: 'Disabled' | 'DisablementPending' | 'Enabled' | string (ReadOnly): The compliance lock status of the storage.
+* **location**: string {minLength: 1, maxLength: 50} (Required): Location of the Commvault Storage
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
+* **storageType**: 'Air_Gap_Protect' | string (Required): The type of Commvault Storage
+* **vendor**: 'Azure_Blob_Storage' | string (Required): The vendor of Commvault Storage
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
+## VmDestinationInfo
+### Properties
+* **vmInfoList**: [VmInfo](#vminfo)[] (Required): List of information on VMs
+
+## VmInfo
+### Properties
+* **attachAndSwapOsDisk**: bool: The identifier to check if to attach and swap disk of the VM.
+* **name**: string: The name of the VM.
+* **networkId**: string: The network Id of the VM.
+* **powerOnVmAfterRestore**: bool: The identifier to check if VM needs to be powered on.
+* **region**: string: The region of the VM.
+* **resourceGroup**: string: The resource group of the VM.
+* **sourceVmGuid**: string (Required): The GUID of VM to be restored.
+* **storageAccountId**: string (Required): The storage account to be used for restore.
+* **subnetId**: string: The subnet Id of the VM.
+* **targetVmGuid**: string: The GUID of target VM used in DISK ATTACH.
+* **vmtags**: [VmTag](#vmtag)[]: The vmTag of the VM.
+
+## VmListItem
+### Properties
+* **vmGuid**: string (Required): The GUID of the VM to backup
+
+## VmTag
+### Properties
+* **name**: string (Required): The name of VM tag.
+* **value**: string (Required): The value of VM tag.
+
