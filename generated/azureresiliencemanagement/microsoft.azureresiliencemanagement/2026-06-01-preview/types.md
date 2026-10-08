@@ -373,9 +373,10 @@
 ## GoalAssignmentProperties
 ### Properties
 * **errorDetails**: [ErrorDetail](#errordetail) (ReadOnly): Details of any errors encountered during the operation.
-* **goalAssignmentType**: 'Resiliency' | string (Required): The type of goal assignment.
-* **goalTemplateId**: string (Required): Arm id of the goal template.
+* **goalAssignmentType**: 'Resiliency' | string: The type of goal assignment.
+* **goalTemplateId**: string: Arm id of the goal template.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
+* **requireZonalResiliency**: bool: Whether zonal resiliency is required for this goal assignment.
 * **serviceLevelResources**: [ServiceLevelResource](#servicelevelresource)[]: List of service level resources.
 
 ## GoalResource
@@ -392,12 +393,13 @@
 * **disasterRecoveryGoalParticipation**: 'Excluded' | 'Included' | string: Flag which depicts whether the Arm resource is excluded for disaster recovery recommendation.
 * **exclusionReasonForDisasterRecoveryGoals**: 'FailedOverResource' | 'UnsupportedResource' | 'UserSelectedExclusion' | string (ReadOnly): Reason for exclusion from disaster recovery goals.
 * **exclusionReasonForHighAvailabilityGoals**: 'FailedOverResource' | 'UnsupportedResource' | 'UserSelectedExclusion' | string (ReadOnly): Reason for exclusion from high availability goals.
-* **highAvailabilityAttestationStatus**: 'ManuallyAttested' | 'NotAttested' | string (Required): Flag which depicts whether the Arm resource is manually attested for high availability recommendation.
-* **highAvailabilityGoalParticipation**: 'Excluded' | 'Included' | string (Required): Flag which depicts whether the Arm resource is excluded for high availability recommendation.
+* **highAvailabilityAttestationStatus**: 'ManuallyAttested' | 'NotAttested' | string: Flag which depicts whether the Arm resource is manually attested for high availability recommendation.
+* **highAvailabilityGoalParticipation**: 'Excluded' | 'Included' | string: Flag which depicts whether the Arm resource is excluded for high availability recommendation.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
 * **resourceArmId**: string (Required): Arm Id of resource under the SG for which the extension resource is maintained.
 * **serviceGroupMemberships**: [ServiceGroupMembership](#servicegroupmembership)[] (ReadOnly): List of service groups of which this resource is memberof.
-* **userConfirmationForHighAvailability**: [UserConfirmationForHighAvailabilityItem](#userconfirmationforhighavailabilityitem)[]: List of user confirmations for high availability solutions.
+* **userConfirmationForHighAvailability**: [UserConfirmationItem](#userconfirmationitem)[]: List of user confirmations for high availability solutions.
+* **zonalResiliency**: [ResiliencyProperties](#resiliencyproperties): Zonal resiliency posture (participation, attestation, exclusion reason, and user confirmations) for the Arm resource.
 
 ## GoalsData
 ### Properties
@@ -669,6 +671,13 @@
 * **lastRefreshTime**: string: Time when the refresh operation was last performed.
 * **resourceCount**: int: Total count of resources under the goal assignment after refresh.
 
+## ResiliencyProperties
+### Properties
+* **attestationStatus**: 'ManuallyAttested' | 'NotAttested' | string: Flag which depicts whether the Arm resource is manually attested for resiliency recommendation.
+* **exclusionReason**: 'FailedOverResource' | 'UnsupportedResource' | 'UserSelectedExclusion' | string (ReadOnly): Reason for exclusion from resiliency goals.
+* **goalParticipation**: 'Excluded' | 'Included' | string: Flag which depicts whether the Arm resource is excluded for resiliency recommendation.
+* **userConfirmation**: [UserConfirmationItem](#userconfirmationitem)[]: List of user confirmations for resiliency solutions.
+
 ## ResourceBaseProtectionSolutionSetting
 * **Discriminator**: protectionSolutionType
 
@@ -735,7 +744,7 @@
 ## ServiceLevelResource
 ### Properties
 * **serviceLevelIndicatorResourceId**: string (Required): The arm id of the service level indicator resource
-* **serviceLevelObjectiveResourceId**: string (Required): The arm id of the service level object resource
+* **serviceLevelObjectiveResourceId**: string: The arm id of the service level object resource
 
 ## SupportedVerbsForStage
 ### Properties
@@ -787,7 +796,7 @@
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 
-## UserConfirmationForHighAvailabilityItem
+## UserConfirmationItem
 ### Properties
 * **confirmationStatus**: 'ApprovalNotNeeded' | 'ApprovalPending' | 'ApprovedByUser' | 'RejectedByUser' | string (Required): The confirmation status of the high availability solution.
 * **reasonForRequestingConfirmation**: 'VmInMultiZoneScaleSetStatelessOnly' | 'ZonePinnedZrsDataDisksConditional' | string: The reason for requesting user confirmation for the high availability solution.

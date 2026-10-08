@@ -14,7 +14,7 @@
 * **excludeTerraformResource**: string[]: Excludes specified Terraform resource types. Example: `["azurerm_virtual_network"]`.
 * **fullProperties**: bool: Whether to output all non-computed properties in the generated Terraform configuration. If set to `false` empty-valued properties will be omitted from the configuration. Defaults to `true`.
 * **includeManagedResource**: bool: Whether to include internal resources managed by Azure in the exported configuration. Defaults to `false`.
-* **includeRoleAssignment**: bool: Whether to include RBAC role assignments assigned to the resources exported. Only resource-scoped role assignments are supported. Defaults to `false`.
+* **includeRoleAssignment**: bool: Whether to include role assignments assigned to the resources exported. Defaults to `false`. This is deprecated in favor of `includeExtensions` (with `role-assignments` specified).
 * **maskSensitive**: bool: Mask sensitive attributes in the Terraform configuration. Defaults to `true`.
 * **targetProvider**: 'azapi' | 'azurerm' | string: The target Azure Terraform provider. Defaults to `azurerm`.
 

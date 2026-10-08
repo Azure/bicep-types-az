@@ -1,8 +1,36 @@
 Generating types for 'specification/paloaltonetworks/resource-manager/PaloAltoNetworks.Cloudngfw/Cloudngfw/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v24.20.0]
+AutoRest code generation utility [cli version: 3.8.0; node: v24.21.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required query parameter "type"
+warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
+warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
+warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
+warning | Resource action commit under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/commit' has no response schema. Returning 'any'.
+warning | Resource action revert under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/revert' has no response schema. Returning 'any'.
+warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/postRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
+warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/preRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
+warning | Resource action saveLogProfile under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/PaloAltoNetworks.Cloudngfw/firewalls/{firewallName}/saveLogProfile' has no response schema. Returning 'any'.
+warning | Resource action commit under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/PaloAltoNetworks.Cloudngfw/localRulestacks/{localRulestackName}/commit' has no response schema. Returning 'any'.
+warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/PaloAltoNetworks.Cloudngfw/localRulestacks/{localRulestackName}/revert' has no response schema. Returning 'any'.
+warning | Resource action refreshCounters under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/PaloAltoNetworks.Cloudngfw/localRulestacks/{localRulestackName}/localRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required query parameter "type"
+warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
+warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
+warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
+warning | Resource action commit under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/commit' has no response schema. Returning 'any'.
+warning | Resource action revert under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/revert' has no response schema. Returning 'any'.
+warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/postRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
+warning | Resource action refreshCounters under path '/providers/PaloAltoNetworks.Cloudngfw/globalRulestacks/{globalRulestackName}/preRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
+warning | Resource action saveLogProfile under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/PaloAltoNetworks.Cloudngfw/firewalls/{firewallName}/saveLogProfile' has no response schema. Returning 'any'.
+warning | Resource action commit under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/PaloAltoNetworks.Cloudngfw/localRulestacks/{localRulestackName}/commit' has no response schema. Returning 'any'.
+warning | Resource action revert under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/PaloAltoNetworks.Cloudngfw/localRulestacks/{localRulestackName}/revert' has no response schema. Returning 'any'.
+warning | Resource action refreshCounters under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/PaloAltoNetworks.Cloudngfw/localRulestacks/{localRulestackName}/localRules/{priority}/refreshCounters' has no response schema. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required query parameter "type"

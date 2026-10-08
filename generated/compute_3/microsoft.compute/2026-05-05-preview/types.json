@@ -538,7 +538,7 @@
           "$ref": "#/47"
         },
         "flags": 0,
-        "description": "Required when priority is Spot. Contains spot-specific configuration."
+        "description": "Contains spot-specific configuration."
       },
       "allocationStrategy": {
         "type": {

@@ -578,7 +578,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## BlobStorageTokenStore
 ### Properties
-* **sasUrlSettingName**: string (Required): The name of the app secrets containing the SAS URL of the blob storage containing the tokens.
+* **sasUrlSettingName**: string: The name of the app secrets containing the SAS URL of the blob storage containing the tokens.
 
 ## CertificateKeyVaultProperties
 ### Properties

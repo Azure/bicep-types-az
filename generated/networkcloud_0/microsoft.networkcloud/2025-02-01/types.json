@@ -6042,14 +6042,14 @@
           "$ref": "#/50"
         },
         "flags": 2,
-        "description": "The amount of storage consumed."
+        "description": "The amount of storage consumed. Measured in GiB."
       },
       "clusterId": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 2,
-        "description": "The resource ID of the cluster this storage appliance is associated with. Measured in GiB."
+        "description": "The resource ID of the cluster this storage appliance is associated with."
       },
       "detailedStatus": {
         "type": {
