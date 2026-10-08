@@ -1,14 +1,31 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "type": "npm",
-            "script": "build",
-            "path": "src/autorest.bicep/",
-            "group": "build",
-            "problemMatcher": [],
-            "label": "build autorest.bicep",
-            "detail": "tsc -p ."
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "build",
+      "path": "src/autorest.bicep/",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "build autorest.bicep",
+      "detail": "tsc -p ."
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "path": "src/typespec-bicep/",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "build typespec-bicep",
+      "detail": "tsc -p ."
+    },
+    {
+      "label": "build emitters",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "build autorest.bicep",
+        "build typespec-bicep"
+      ]
+    }
+  ]
 }

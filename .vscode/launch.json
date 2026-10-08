@@ -1,64 +1,75 @@
 {
-    "version": "2.0.0",
-    "configurations": [
-        {
-            "name": "Generate",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "run",
-                "generate",
-                "--",
-                "--specs-dir",
-                "../../../azure-rest-api-specs",
-                "--wait-for-debugger"
-            ],
-            "cwd": "${workspaceFolder}/src/generator",
-            "preLaunchTask": "build autorest.bicep"
-        },
-        {
-            "name": "Generate Single",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "run",
-                "generate",
-                "--",
-                "--specs-dir",
-                "../../../azure-rest-api-specs",
-                "--single-path",
-                "${input:pickSinglePath}",
-                "--wait-for-debugger"
-            ],
-            "cwd": "${workspaceFolder}/src/generator",
-            "preLaunchTask": "build autorest.bicep"
-        },
-        {
-            "name": "Test autorest.bicep",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "test"
-            ],
-            "cwd": "${workspaceFolder}/src/autorest.bicep",
-            "preLaunchTask": "build autorest.bicep"
-        },
-        {
-            "type": "node",
-            "request": "attach",
-            "name": "Attach",
-            "port": 9229
-        },
-    ],
-    "inputs": [
-        {
-            "id": "pickSinglePath",
-            "default": "compute",
-            "type": "promptString",
-            "description": "Pick a specific base path to generate types for"
-        }
-    ]
+  "version": "2.0.0",
+  "configurations": [
+    {
+      "name": "Generate",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "generate",
+        "--",
+        "--specs-dir",
+        "../../../azure-rest-api-specs",
+        "--wait-for-debugger"
+      ],
+      "cwd": "${workspaceFolder}/src/generator",
+      "preLaunchTask": "build emitters"
+    },
+    {
+      "name": "Generate (Path Prefix)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "generate",
+        "--",
+        "--specs-dir",
+        "../../../azure-rest-api-specs",
+        "--path-prefix",
+        "${input:pickPathPrefix}",
+        "--wait-for-debugger"
+      ],
+      "cwd": "${workspaceFolder}/src/generator",
+      "preLaunchTask": "build emitters"
+    },
+    {
+      "name": "Test autorest.bicep",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "test"
+      ],
+      "cwd": "${workspaceFolder}/src/autorest.bicep",
+      "preLaunchTask": "build autorest.bicep"
+    },
+    {
+      "name": "Test typespec-bicep",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "test"
+      ],
+      "cwd": "${workspaceFolder}/src/typespec-bicep",
+      "preLaunchTask": "build typespec-bicep"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach",
+      "port": 9229
+    },
+  ],
+  "inputs": [
+    {
+      "id": "pickPathPrefix",
+      "default": "dns",
+      "type": "promptString",
+      "description": "Enter a top-level path to generate types for"
+    }
+  ]
 }
