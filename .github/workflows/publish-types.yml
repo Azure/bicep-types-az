@@ -35,7 +35,7 @@ jobs:
       
       - name: Install nbgv
         id: nbgv
-        uses: dotnet/nbgv@master
+        uses: dotnet/nbgv@705dad19ab067f12f4e9eeaa60812e01edef5d25 # v0.5.2
 
       - name: Generate tag for the package based on event type
         id: generate_tag
