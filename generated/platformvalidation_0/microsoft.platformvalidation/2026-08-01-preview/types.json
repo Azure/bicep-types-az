@@ -1674,7 +1674,7 @@
       },
       "name": {
         "type": {
-          "$ref": "#/0"
+          "$ref": "#/76"
         },
         "flags": 9,
         "description": "The resource name"

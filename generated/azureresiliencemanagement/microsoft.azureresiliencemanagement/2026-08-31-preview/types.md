@@ -395,7 +395,7 @@
 * **errorDetails**: [ErrorDetail](#errordetail) (ReadOnly): Details of any errors encountered during the operation.
 * **goalAssignmentType**: 'Resiliency' | string: The type of goal assignment.
 * **goalTemplateId**: string: Arm id of the goal template.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'NeedsAttention' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'NeedsAttention' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the goal assignment.
 * **requireZonalResiliency**: bool: Whether zonal resiliency is required for this goal assignment.
 * **serviceLevelResources**: [ServiceLevelResource](#servicelevelresource)[]: List of service level resources.
 
@@ -415,11 +415,11 @@
 * **exclusionReasonForHighAvailabilityGoals**: 'FailedOverResource' | 'UnsupportedResource' | 'UserSelectedExclusion' | string (ReadOnly): Reason for exclusion from high availability goals.
 * **highAvailabilityAttestationStatus**: 'ManuallyAttested' | 'NotAttested' | string: Flag which depicts whether the Arm resource is manually attested for high availability recommendation.
 * **highAvailabilityGoalParticipation**: 'Excluded' | 'Included' | string: Flag which depicts whether the Arm resource is excluded for high availability recommendation.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'NeedsAttention' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
-* **resourceArmId**: string (Required): Arm Id of resource under the SG for which the extension resource is maintained.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'NeedsAttention' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the goal resource.
+* **resourceArmId**: string (Required): The fully qualified ARM resource ID represented by this goal resource.
 * **serviceGroupMemberships**: [ServiceGroupMembership](#servicegroupmembership)[] (ReadOnly): List of service groups of which this resource is memberof.
 * **userConfirmationForHighAvailability**: [UserConfirmationItem](#userconfirmationitem)[]: List of user confirmations for high availability solutions.
-* **zonalResiliency**: [ResiliencyProperties](#resiliencyproperties): Zonal resiliency posture (participation, attestation, exclusion reason, and user confirmations) for the Arm resource.
+* **zonalResiliency**: [ResiliencyProperties](#resiliencyproperties): The zonal resiliency posture for the ARM resource, including participation, attestation, exclusion reason, and user confirmations.
 
 ## GoalsData
 ### Properties
@@ -705,10 +705,10 @@
 
 ## ResiliencyProperties
 ### Properties
-* **attestationStatus**: 'ManuallyAttested' | 'NotAttested' | string: Flag which depicts whether the Arm resource is manually attested for resiliency recommendation.
-* **exclusionReason**: 'FailedOverResource' | 'UnsupportedResource' | 'UserSelectedExclusion' | string (ReadOnly): Reason for exclusion from resiliency goals.
-* **goalParticipation**: 'Excluded' | 'Included' | string: Flag which depicts whether the Arm resource is excluded for resiliency recommendation.
-* **userConfirmation**: [UserConfirmationItem](#userconfirmationitem)[]: List of user confirmations for resiliency solutions.
+* **attestationStatus**: 'ManuallyAttested' | 'NotAttested' | string: Indicates whether the ARM resource's resiliency posture is manually attested.
+* **exclusionReason**: 'FailedOverResource' | 'UnsupportedResource' | 'UserSelectedExclusion' | string (ReadOnly): The reason the ARM resource is excluded from resiliency goals.
+* **goalParticipation**: 'Excluded' | 'Included' | string: Indicates whether the ARM resource is excluded from resiliency recommendations.
+* **userConfirmation**: [UserConfirmationItem](#userconfirmationitem)[]: User confirmations for resiliency solutions recommended for the ARM resource.
 
 ## ResourceBaseProtectionSolutionSetting
 * **Discriminator**: protectionSolutionType
@@ -781,8 +781,8 @@
 
 ## ServiceLevelResource
 ### Properties
-* **serviceLevelIndicatorResourceId**: string (Required): The arm id of the service level indicator resource
-* **serviceLevelObjectiveResourceId**: string: The arm id of the service level object resource
+* **serviceLevelIndicatorResourceId**: string (Required): The ARM resource ID of the service-level indicator resource.
+* **serviceLevelObjectiveResourceId**: string: The ARM resource ID of the service-level objective resource.
 
 ## SliAttentionStatus
 ### Properties
@@ -836,11 +836,11 @@
 
 ## UpdateGoalResourceRequest
 ### Properties
-* **resources**: [GoalResource](#goalresource)[] (Required): List of update goal resource.
+* **resources**: [GoalResource](#goalresource)[] (Required): The goal resources to update.
 
 ## UpdateGoalResourceResponse
 ### Properties
-* **resources**: [GoalResource](#goalresource)[] (Required): List of update goal resource.
+* **resources**: [GoalResource](#goalresource)[] (Required): The updated goal resources.
 
 ## UsagePlanProperties
 ### Properties

@@ -454,7 +454,7 @@
 * **errorDetails**: [ErrorDetail](#errordetail) (ReadOnly): Details of any errors encountered during the operation.
 * **goalAssignmentType**: 'Resiliency' | string (Required): The type of goal assignment.
 * **goalTemplateId**: string (Required): Arm id of the goal template.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the goal assignment.
 * **serviceLevelResources**: [ServiceLevelResource](#servicelevelresource)[]: List of service level resources.
 
 ## GoalResource
@@ -473,8 +473,8 @@
 * **exclusionReasonForHighAvailabilityGoals**: 'FailedOverResource' | 'UnsupportedResource' | 'UserSelectedExclusion' | string (ReadOnly): Reason for exclusion from high availability goals.
 * **highAvailabilityAttestationStatus**: 'ManuallyAttested' | 'NotAttested' | string (Required): Flag which depicts whether the Arm resource is manually attested for high availability recommendation.
 * **highAvailabilityGoalParticipation**: 'Excluded' | 'Included' | string (Required): Flag which depicts whether the Arm resource is excluded for high availability recommendation.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state
-* **resourceArmId**: string (Required): Arm Id of resource under the SG for which the extension resource is maintained.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the goal resource.
+* **resourceArmId**: string (Required): The fully qualified ARM resource ID represented by this goal resource.
 * **serviceGroupMemberships**: [ServiceGroupMembership](#servicegroupmembership)[] (ReadOnly): List of service groups of which this resource is memberof.
 
 ## GoalsData
@@ -810,8 +810,8 @@ Example: `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/pro
 
 ## ServiceLevelResource
 ### Properties
-* **serviceLevelIndicatorResourceId**: string (Required): The arm id of the service level indicator resource
-* **serviceLevelObjectiveResourceId**: string (Required): The arm id of the service level object resource
+* **serviceLevelIndicatorResourceId**: string (Required): The ARM resource ID of the service-level indicator resource.
+* **serviceLevelObjectiveResourceId**: string (Required): The ARM resource ID of the service-level objective resource.
 
 ## SupportedVerbsForStage
 ### Properties
@@ -840,11 +840,11 @@ Example: `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/pro
 
 ## UpdateGoalResourceRequest
 ### Properties
-* **resources**: [GoalResource](#goalresource)[] (Required): List of update goal resource.
+* **resources**: [GoalResource](#goalresource)[] (Required): The goal resources to update.
 
 ## UpdateGoalResourceResponse
 ### Properties
-* **resources**: [GoalResource](#goalresource)[] (Required): List of update goal resource.
+* **resources**: [GoalResource](#goalresource)[] (Required): The updated goal resources.
 
 ## UserAssignedIdentity
 ### Properties

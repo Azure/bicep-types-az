@@ -54,6 +54,12 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Compute/scheduledActions/occurrences' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function acknowledgeBulkOperationErrors (Microsoft.Compute/locations@2026-10-06-preview)
+* **Resource**: Microsoft.Compute/locations
+* **ApiVersion**: 2026-10-06-preview
+* **Input**: [AcknowledgeBulkOperationErrorsRequest](#acknowledgebulkoperationerrorsrequest)
+* **Output**: [AcknowledgeBulkOperationErrorsResponse](#acknowledgebulkoperationerrorsresponse)
+
 ## Function attachResources (Microsoft.Compute/scheduledActions@2026-10-06-preview)
 * **Resource**: Microsoft.Compute/scheduledActions
 * **ApiVersion**: 2026-10-06-preview
@@ -166,6 +172,16 @@
 * **Resource**: Microsoft.Compute/locations/bulkCreateCustom
 * **ApiVersion**: 2026-10-06-preview
 * **Output**: [BulkCreateCustomOperationStatusListResult](#bulkcreatecustomoperationstatuslistresult)
+
+## AcknowledgeBulkOperationErrorsRequest
+### Properties
+* **operationIds**: string[] (Required): The Bulk Action Operation Ids that identify operations for which errors should be acknowledged.
+
+## AcknowledgeBulkOperationErrorsResponse
+### Properties
+* **acknowledged**: string[] (Required): The Bulk Action Operation Ids that identify operations with acknowledged errors.
+* **notFound**: string[] (Required): The Bulk Action Operation Ids that were not found or are no longer available.
+* **skipped**: string[] (Required): The Bulk Action Operation Ids that identify operations with errors that could not be acknowledged.
 
 ## AdditionalCapabilities
 ### Properties

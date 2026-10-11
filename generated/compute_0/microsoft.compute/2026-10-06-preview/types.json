@@ -6397,11 +6397,87 @@
   },
   {
     "$type": "ObjectType",
-    "name": "CancelOperationsRequest",
+    "name": "AcknowledgeBulkOperationErrorsRequest",
     "properties": {
       "operationIds": {
         "type": {
           "$ref": "#/492"
+        },
+        "flags": 1,
+        "description": "The Bulk Action Operation Ids that identify operations for which errors should be acknowledged."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AcknowledgeBulkOperationErrorsResponse",
+    "properties": {
+      "acknowledged": {
+        "type": {
+          "$ref": "#/494"
+        },
+        "flags": 1,
+        "description": "The Bulk Action Operation Ids that identify operations with acknowledged errors."
+      },
+      "notFound": {
+        "type": {
+          "$ref": "#/495"
+        },
+        "flags": 1,
+        "description": "The Bulk Action Operation Ids that were not found or are no longer available."
+      },
+      "skipped": {
+        "type": {
+          "$ref": "#/496"
+        },
+        "flags": 1,
+        "description": "The Bulk Action Operation Ids that identify operations with errors that could not be acknowledged."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "acknowledgeBulkOperationErrors",
+    "resourceType": "Microsoft.Compute/locations",
+    "apiVersion": "2026-10-06-preview",
+    "output": {
+      "$ref": "#/493"
+    },
+    "input": {
+      "$ref": "#/491"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CancelOperationsRequest",
+    "properties": {
+      "operationIds": {
+        "type": {
+          "$ref": "#/499"
         },
         "flags": 1,
         "description": "The Bulk Action Operation Ids that identify the operations to cancel."
@@ -6420,7 +6496,7 @@
     "properties": {
       "results": {
         "type": {
-          "$ref": "#/494"
+          "$ref": "#/501"
         },
         "flags": 1,
         "description": "The current result for each operation submitted for cancellation."
@@ -6439,10 +6515,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-10-06-preview",
     "output": {
-      "$ref": "#/493"
+      "$ref": "#/500"
     },
     "input": {
-      "$ref": "#/491"
+      "$ref": "#/498"
     }
   },
   {
@@ -6458,14 +6534,14 @@
       },
       "resources": {
         "type": {
-          "$ref": "#/497"
+          "$ref": "#/504"
         },
         "flags": 0,
         "description": "The target virtual machines."
       },
       "resourcesWithContext": {
         "type": {
-          "$ref": "#/499"
+          "$ref": "#/506"
         },
         "flags": 0,
         "description": "The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified."
@@ -6478,7 +6554,7 @@
     "properties": {
       "ids": {
         "type": {
-          "$ref": "#/498"
+          "$ref": "#/505"
         },
         "flags": 1,
         "description": "The Azure resource IDs of the target virtual machines."
@@ -6497,7 +6573,7 @@
     "properties": {
       "resources": {
         "type": {
-          "$ref": "#/501"
+          "$ref": "#/508"
         },
         "flags": 1,
         "description": "The resource ids used for the request"
@@ -6527,7 +6603,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/500"
+      "$ref": "#/507"
     }
   },
   {
@@ -6557,7 +6633,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/503"
+          "$ref": "#/510"
         },
         "flags": 0,
         "description": "The result for each virtual machine."
@@ -6576,10 +6652,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-10-06-preview",
     "output": {
-      "$ref": "#/502"
+      "$ref": "#/509"
     },
     "input": {
-      "$ref": "#/496"
+      "$ref": "#/503"
     }
   },
   {
@@ -6595,14 +6671,14 @@
       },
       "resources": {
         "type": {
-          "$ref": "#/497"
+          "$ref": "#/504"
         },
         "flags": 0,
         "description": "The target virtual machines."
       },
       "resourcesWithContext": {
         "type": {
-          "$ref": "#/499"
+          "$ref": "#/506"
         },
         "flags": 0,
         "description": "The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified."
@@ -6643,7 +6719,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/507"
+          "$ref": "#/514"
         },
         "flags": 0,
         "description": "The result for each virtual machine."
@@ -6662,10 +6738,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-10-06-preview",
     "output": {
-      "$ref": "#/506"
+      "$ref": "#/513"
     },
     "input": {
-      "$ref": "#/505"
+      "$ref": "#/512"
     }
   },
   {
@@ -6674,7 +6750,7 @@
     "properties": {
       "operationIds": {
         "type": {
-          "$ref": "#/510"
+          "$ref": "#/517"
         },
         "flags": 1,
         "description": "The Bulk Action Operation Ids that identify the operations for which current status should be returned."
@@ -6693,7 +6769,7 @@
     "properties": {
       "results": {
         "type": {
-          "$ref": "#/512"
+          "$ref": "#/519"
         },
         "flags": 1,
         "description": "The current result for each requested operation."
@@ -6712,10 +6788,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-10-06-preview",
     "output": {
-      "$ref": "#/511"
+      "$ref": "#/518"
     },
     "input": {
-      "$ref": "#/509"
+      "$ref": "#/516"
     }
   },
   {
@@ -6731,14 +6807,14 @@
       },
       "resources": {
         "type": {
-          "$ref": "#/497"
+          "$ref": "#/504"
         },
         "flags": 0,
         "description": "The target virtual machines."
       },
       "resourcesWithContext": {
         "type": {
-          "$ref": "#/499"
+          "$ref": "#/506"
         },
         "flags": 0,
         "description": "The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified."
@@ -6772,7 +6848,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/516"
+          "$ref": "#/523"
         },
         "flags": 0,
         "description": "The result for each virtual machine."
@@ -6791,10 +6867,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-10-06-preview",
     "output": {
-      "$ref": "#/515"
+      "$ref": "#/522"
     },
     "input": {
-      "$ref": "#/514"
+      "$ref": "#/521"
     }
   },
   {
@@ -6810,21 +6886,21 @@
       },
       "resources": {
         "type": {
-          "$ref": "#/497"
+          "$ref": "#/504"
         },
         "flags": 0,
         "description": "The target virtual machines."
       },
       "resourcesWithContext": {
         "type": {
-          "$ref": "#/499"
+          "$ref": "#/506"
         },
         "flags": 0,
         "description": "The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified."
       },
       "reimageParameters": {
         "type": {
-          "$ref": "#/519"
+          "$ref": "#/526"
         },
         "flags": 0,
         "description": "The shared and per-virtual-machine reimage configuration."
@@ -6837,14 +6913,14 @@
     "properties": {
       "baseProfile": {
         "type": {
-          "$ref": "#/520"
+          "$ref": "#/527"
         },
         "flags": 0,
         "description": "The reimage configuration applied to every virtual machine unless a per-virtual-machine override is provided."
       },
       "resourceOverrides": {
         "type": {
-          "$ref": "#/523"
+          "$ref": "#/530"
         },
         "flags": 0,
         "description": "The reimage configuration overrides for individual virtual machines."
@@ -6871,7 +6947,7 @@
       },
       "osProfile": {
         "type": {
-          "$ref": "#/521"
+          "$ref": "#/528"
         },
         "flags": 0,
         "description": "The operating system profile used when reimaging a non-ephemeral operating system disk."
@@ -6911,7 +6987,7 @@
       },
       "profile": {
         "type": {
-          "$ref": "#/520"
+          "$ref": "#/527"
         },
         "flags": 1,
         "description": "The reimage configuration for this virtual machine."
@@ -6921,7 +6997,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/522"
+      "$ref": "#/529"
     }
   },
   {
@@ -6951,7 +7027,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/525"
+          "$ref": "#/532"
         },
         "flags": 0,
         "description": "The result for each virtual machine."
@@ -6970,10 +7046,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-10-06-preview",
     "output": {
-      "$ref": "#/524"
+      "$ref": "#/531"
     },
     "input": {
-      "$ref": "#/518"
+      "$ref": "#/525"
     }
   },
   {
@@ -6989,14 +7065,14 @@
       },
       "resources": {
         "type": {
-          "$ref": "#/497"
+          "$ref": "#/504"
         },
         "flags": 0,
         "description": "The target virtual machines."
       },
       "resourcesWithContext": {
         "type": {
-          "$ref": "#/499"
+          "$ref": "#/506"
         },
         "flags": 0,
         "description": "The resources for the request with resource context information. Cannot be provided together with `resources` - exactly one must be specified."
@@ -7030,7 +7106,7 @@
       },
       "results": {
         "type": {
-          "$ref": "#/529"
+          "$ref": "#/536"
         },
         "flags": 0,
         "description": "The result for each virtual machine."
@@ -7049,10 +7125,10 @@
     "resourceType": "Microsoft.Compute/locations",
     "apiVersion": "2026-10-06-preview",
     "output": {
-      "$ref": "#/528"
+      "$ref": "#/535"
     },
     "input": {
-      "$ref": "#/527"
+      "$ref": "#/534"
     }
   },
   {
@@ -7080,7 +7156,7 @@
       },
       "resourceIds": {
         "type": {
-          "$ref": "#/533"
+          "$ref": "#/540"
         },
         "flags": 1,
         "description": "The resources to delay. An empty array delays all resources in the occurrence."
@@ -7102,7 +7178,7 @@
       "$ref": "#/471"
     },
     "input": {
-      "$ref": "#/532"
+      "$ref": "#/539"
     }
   }
 ]

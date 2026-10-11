@@ -1,42 +1,42 @@
-Generating types for 'specification/workloads/resource-manager/readme.md'
+Generating types for 'specification/workloads/resource-manager/Microsoft.Workloads/Workloads/readme.md'
 AutoRest code generation utility [cli version: 3.8.0; node: v24.21.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationsDefinition-display' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/stable/2023-04-01/monitors.json:872:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/stable/2023-04-01/monitors.json:872:9
 warning | PreCheck/SchemaMissingType | The schema 'MonitorProperties-errors' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/stable/2023-04-01/monitors.json:1055:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/stable/2023-04-01/monitors.json:1055:9
 warning | PreCheck/SchemaMissingType | The schema 'ProviderInstanceProperties-errors' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/stable/2023-04-01/monitors.json:1471:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/stable/2023-04-01/monitors.json:1471:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'OperationsDefinition-properties' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/stable/2023-04-01/monitors.json#/components/schemas/OperationsDefinition-properties
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/stable/2023-04-01/monitors.json#/components/schemas/OperationsDefinition-properties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationsDefinition-display' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/preview/2022-11-01-preview/monitors.json:872:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/preview/2022-11-01-preview/monitors.json:872:9
 warning | PreCheck/SchemaMissingType | The schema 'MonitorProperties-errors' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/preview/2022-11-01-preview/monitors.json:1054:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/preview/2022-11-01-preview/monitors.json:1054:9
 warning | PreCheck/SchemaMissingType | The schema 'ProviderInstanceProperties-errors' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/preview/2022-11-01-preview/monitors.json:1468:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/preview/2022-11-01-preview/monitors.json:1468:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'OperationsDefinition-properties' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/preview/2022-11-01-preview/monitors.json#/components/schemas/OperationsDefinition-properties
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/preview/2022-11-01-preview/monitors.json#/components/schemas/OperationsDefinition-properties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'phpWorkloadResource-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/preview/2021-12-01-preview/phpWorkloads.json:556:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/preview/2021-12-01-preview/phpWorkloads.json:556:9
 warning | PreCheck/SchemaMissingType | The schema 'PatchResourceRequestBody-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/preview/2021-12-01-preview/phpWorkloads.json:1342:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/preview/2021-12-01-preview/phpWorkloads.json:1342:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationsDefinition-display' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/preview/2021-12-01-preview/monitors.json:645:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/preview/2021-12-01-preview/monitors.json:645:9
 warning | PreCheck/SchemaMissingType | The schema 'MonitorProperties-errors' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/preview/2021-12-01-preview/monitors.json:827:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/preview/2021-12-01-preview/monitors.json:827:9
 warning | PreCheck/SchemaMissingType | The schema 'ProviderInstanceProperties-errors' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/preview/2021-12-01-preview/monitors.json:1241:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/preview/2021-12-01-preview/monitors.json:1241:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'OperationsDefinition-properties' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/preview/2021-12-01-preview/monitors.json#/components/schemas/OperationsDefinition-properties
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/workloads/resource-manager/Microsoft.Workloads/Workloads/preview/2021-12-01-preview/monitors.json#/components/schemas/OperationsDefinition-properties
 warning | Unrecognized property type: any-object. Returning 'any'.

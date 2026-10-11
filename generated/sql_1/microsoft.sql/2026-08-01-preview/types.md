@@ -1635,6 +1635,11 @@ az sql elastic-pool list-editions -l <location> -o table
 * **ApiVersion**: 2026-08-01-preview
 * **Output**: [LongTermRetentionBackup](#longtermretentionbackup)
 
+## Function lockTimeBasedImmutability (Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups@2026-08-01-preview)
+* **Resource**: Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: [ManagedInstanceLongTermRetentionBackup](#managedinstancelongtermretentionbackup)
+
 ## Function move (Microsoft.Sql/servers/databases@2026-08-01-preview)
 * **Resource**: Microsoft.Sql/servers/databases
 * **ApiVersion**: 2026-08-01-preview
@@ -1691,10 +1696,20 @@ az sql elastic-pool list-editions -l <location> -o table
 * **ApiVersion**: 2026-08-01-preview
 * **Output**: [LongTermRetentionBackup](#longtermretentionbackup)
 
+## Function removeLegalHoldImmutability (Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups@2026-08-01-preview)
+* **Resource**: Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: [ManagedInstanceLongTermRetentionBackup](#managedinstancelongtermretentionbackup)
+
 ## Function removeTimeBasedImmutability (Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups@2026-08-01-preview)
 * **Resource**: Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups
 * **ApiVersion**: 2026-08-01-preview
 * **Output**: [LongTermRetentionBackup](#longtermretentionbackup)
+
+## Function removeTimeBasedImmutability (Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups@2026-08-01-preview)
+* **Resource**: Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: [ManagedInstanceLongTermRetentionBackup](#managedinstancelongtermretentionbackup)
 
 ## Function restorePoints (Microsoft.Sql/servers/databases@2026-08-01-preview)
 * **Resource**: Microsoft.Sql/servers/databases
@@ -1736,6 +1751,11 @@ az sql elastic-pool list-editions -l <location> -o table
 * **Resource**: Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups
 * **ApiVersion**: 2026-08-01-preview
 * **Output**: [LongTermRetentionBackup](#longtermretentionbackup)
+
+## Function setLegalHoldImmutability (Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups@2026-08-01-preview)
+* **Resource**: Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups
+* **ApiVersion**: 2026-08-01-preview
+* **Output**: [ManagedInstanceLongTermRetentionBackup](#managedinstancelongtermretentionbackup)
 
 ## Function setRole (Microsoft.Sql/managedInstances/distributedAvailabilityGroups@2026-08-01-preview)
 * **Resource**: Microsoft.Sql/managedInstances/distributedAvailabilityGroups
@@ -3147,6 +3167,14 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required, WriteOnly): The key type like 'ServiceManaged', 'AzureKeyVault'.
 * **thumbprint**: string (ReadOnly): Thumbprint of the key.
 * **uri**: string (WriteOnly): The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
+
+## ManagedInstanceLongTermRetentionBackup
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [ManagedInstanceLongTermRetentionBackupProperties](#managedinstancelongtermretentionbackupproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ManagedInstanceLongTermRetentionBackupProperties
 ### Properties

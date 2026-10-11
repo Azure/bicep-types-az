@@ -81,6 +81,16 @@
 * **Input**: [BackupProtectionGroupRequest](#backupprotectiongrouprequest)
 * **Output**: [BackupProtectionGroupResponse](#backupprotectiongroupresponse)
 
+## Function disableComplianceLock (Commvault.ContentStore/cloudAccounts/storages@2026-07-03-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/storages
+* **ApiVersion**: 2026-07-03-preview
+* **Output**: [Storage](#storage)
+
+## Function enableComplianceLock (Commvault.ContentStore/cloudAccounts/storages@2026-07-03-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/storages
+* **ApiVersion**: 2026-07-03-preview
+* **Output**: [Storage](#storage)
+
 ## Function getRestorePoints (Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems@2026-07-03-preview)
 * **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems
 * **ApiVersion**: 2026-07-03-preview
@@ -102,6 +112,11 @@
 * **ApiVersion**: 2026-07-03-preview
 * **Input**: [CountProtectedItemsRequest](#countprotecteditemsrequest)
 * **Output**: [CountProtectedItemsResponse](#countprotecteditemsresponse)
+
+## Function refresh (Commvault.ContentStore/cloudAccounts/storages@2026-07-03-preview)
+* **Resource**: Commvault.ContentStore/cloudAccounts/storages
+* **ApiVersion**: 2026-07-03-preview
+* **Output**: [Storage](#storage)
 
 ## Function restore (Commvault.ContentStore/cloudAccounts/protectionGroups@2026-07-03-preview)
 * **Resource**: Commvault.ContentStore/cloudAccounts/protectionGroups
@@ -161,10 +176,9 @@
 
 ## CloudAccountProperties
 ### Properties
-* **backupAdminOnCcaCreate**: [EntityInfo](#entityinfo) (WriteOnly): The backup administrator principal provided during CCA create. Required on create (enforced by backend), ignored on update.
 * **marketplace**: [LiftrBaseMarketplaceDetails](#liftrbasemarketplacedetails) (Required): Marketplace details of the resource.
-* **multiPersonAuthorizationOnCcaCreate**: [EntityInfo](#entityinfo) (WriteOnly): The multi-person authorization (MPA) administrator principal provided during CCA create. Required on create (enforced by backend), ignored on update.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
+* **roleAssignmentsOnCcaCreate**: [RoleAssignment](#roleassignment)[] (WriteOnly): Role assignments to provision during CCA creation. Each entry maps a Commvault role to its assigned Entra principals.
 * **ssoUrl**: string (ReadOnly): SSO URL for the Commvault Cloud Account
 * **user**: [LiftrBaseUserDetails](#liftrbaseuserdetails) (Required): Details of the user.
 
@@ -244,10 +258,10 @@
 ### Properties
 * **backupActivityStatus**: string (ReadOnly): The backup activity status indicating if backup is enabled or not on the protection group
 * **dataSourceType**: 'AzureVM' (Required): The datasource type of Commvault Protection Group
-* **lastBackUpTime**: int (ReadOnly): The Commvault Protection Group backup time
-* **numberOfProtectedItems**: int (ReadOnly): The number of ProtectedItems under the Protection Group
+* **lastBackUpTime**: int (Required, ReadOnly): The Commvault Protection Group backup time
+* **numberOfProtectedItems**: int (Required, ReadOnly): The number of ProtectedItems under the Protection Group
 * **plan**: string (Required): The Commvault Plan to be associated with the Protection Group
-* **protectionStatus**: 'all' | 'backed_up_with_error' | 'discovered' | 'not_protected' | 'pending' | 'protected' | string (ReadOnly): The protection group schedule
+* **protectionStatus**: 'all' | 'backed_up_with_error' | 'discovered' | 'not_protected' | 'pending' | 'protected' | string (Required, ReadOnly): The protection group schedule
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
 * **resources**: [ProtectionGroupResources](#protectiongroupresources) (Required): The resources to be protected under Protection Group
 
@@ -283,8 +297,8 @@
 
 ## RoleAssignment
 ### Properties
-* **entities**: [EntityInfo](#entityinfo)[]: The Entra entities (users or groups) assigned to this role
-* **roleName**: 'BackupAdmin' | 'BackupOperator' | 'BackupUser' | 'MultiPersonAuthorization' | 'SecurityAdmin' | string: The name of the Commvault role
+* **entities**: [EntityInfo](#entityinfo)[] {minLength: 1} (Required): The Entra entities (users or groups) assigned to this role
+* **roleName**: 'BackupAdmin' | 'BackupOperator' | 'BackupUser' | 'MultiPersonAuthorization' | 'SecurityAdmin' | string (Required): The name of the Commvault role
 
 ## RoleMappingProperties
 ### Properties
@@ -327,6 +341,14 @@
 * **comment**: string: Any further comments
 * **reason**: string (Required): The reason for stopping the backup
 
+## Storage
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [StorageProperties](#storageproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
 ## StoragePlan
 ### Properties
 * **backupRuleType**: 'ALL_FULLS' | 'ALL_JOBS' | 'DAILY_FULLS' | 'HALF_YEARLY_FULLS' | 'HOURLY_FULLS' | 'MONTHLY_FULLS' | 'QUARTERLY_FULLS' | 'WEEKLY_FULLS' | 'YEARLY_FULLS' | string: Backup Rule Type
@@ -341,6 +363,7 @@
 ## StorageProperties
 ### Properties
 * **class**: 'COLD' | 'HOT' | string (Required): The class of Commvault Storage
+* **complianceLockStatus**: 'Disabled' | 'DisablementPending' | 'Enabled' | string (ReadOnly): The compliance lock status of the storage.
 * **location**: string {minLength: 1, maxLength: 50} (Required): Location of the Commvault Storage
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
 * **storageType**: 'Air_Gap_Protect' | string (Required): The type of Commvault Storage
