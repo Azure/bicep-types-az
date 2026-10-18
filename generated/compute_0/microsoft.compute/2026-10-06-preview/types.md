@@ -5,9 +5,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2026-10-06-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation): The extended location of the virtual machines created by the BulkCreate operation.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **name**: string {minLength: 1, pattern: "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
+* **placement**: [Placement](#placement): The availability zone placement constraints applied to the virtual machines created by the BulkCreate operation.
 * **plan**: [Plan](#plan): Details of the resource plan.
 * **properties**: [BulkCreateProperties](#bulkcreateproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -20,9 +22,11 @@
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2026-10-06-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation): The extended location of the virtual machines created by the BulkCreateCustom operation.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **name**: string {minLength: 1, pattern: "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
+* **placement**: [Placement](#placement): The availability zone placement constraints applied to the virtual machines created by the BulkCreateCustom operation.
 * **plan**: [Plan](#plan): Details of the resource plan.
 * **properties**: [BulkCreateCustomProperties](#bulkcreatecustomproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -53,6 +57,12 @@
 * **properties**: [OccurrenceProperties](#occurrenceproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Compute/scheduledActions/occurrences' (ReadOnly, DeployTimeConstant): The resource type
+
+## Function acknowledgeBulkOperationErrors (Microsoft.Compute/locations@2026-10-06-preview)
+* **Resource**: Microsoft.Compute/locations
+* **ApiVersion**: 2026-10-06-preview
+* **Input**: [AcknowledgeBulkOperationErrorsRequest](#acknowledgebulkoperationerrorsrequest)
+* **Output**: [AcknowledgeBulkOperationErrorsResponse](#acknowledgebulkoperationerrorsresponse)
 
 ## Function attachResources (Microsoft.Compute/scheduledActions@2026-10-06-preview)
 * **Resource**: Microsoft.Compute/scheduledActions
@@ -167,6 +177,16 @@
 * **ApiVersion**: 2026-10-06-preview
 * **Output**: [BulkCreateCustomOperationStatusListResult](#bulkcreatecustomoperationstatuslistresult)
 
+## AcknowledgeBulkOperationErrorsRequest
+### Properties
+* **operationIds**: string[] (Required): The Bulk Action Operation Ids that identify operations for which errors should be acknowledged.
+
+## AcknowledgeBulkOperationErrorsResponse
+### Properties
+* **acknowledged**: string[] (Required): The Bulk Action Operation Ids that identify operations with acknowledged errors.
+* **notFound**: string[] (Required): The Bulk Action Operation Ids that were not found or are no longer available.
+* **skipped**: string[] (Required): The Bulk Action Operation Ids that identify operations with errors that could not be acknowledged.
+
 ## AdditionalCapabilities
 ### Properties
 * **hibernationEnabled**: bool: The flag that enables or disables hibernation capability on the VM.
@@ -203,6 +223,15 @@
 ### Properties
 * **code**: string: One of a server-defined set of error codes.
 * **innererror**: [AzureCoreFoundationsInnerError](#azurecorefoundationsinnererror): Inner error.
+
+## AzureResourceManagerCommonTypesExtendedLocation
+### Properties
+* **name**: string (Required): The name of the extended location.
+* **type**: 'CustomLocation' | 'EdgeZone' | string (Required): The type of the extended location.
+
+## BillingProfile
+### Properties
+* **maxPrice**: int: Specifies the maximum price, in US Dollars, you are willing to pay per hour for each Azure Spot virtual machine. This price is compared with the current Azure Spot price for the virtual machine size at create time, and the operation only succeeds if maxPrice is greater than the current Azure Spot price. It is also used to evict a virtual machine if the current Azure Spot price rises above it after creation. Possible values are any decimal value greater than zero, or -1 to indicate the default price is up-to on-demand and the virtual machine should not be evicted for price reasons. The default is -1 when not provided.
 
 ## BootDiagnostics
 ### Properties
@@ -242,13 +271,16 @@
 ### Properties
 * **additionalCapabilities**: [AdditionalCapabilities](#additionalcapabilities): Specifies additional capabilities enabled or disabled on the virtual machine.
 * **applicationProfile**: [ApplicationProfile](#applicationprofile): Specifies the gallery applications that should be made available to the VM.
+* **billingProfile**: [BillingProfile](#billingprofile): Specifies the billing related details of the Azure Spot virtual machines. Mirrors the billingProfile property on Microsoft.Compute/virtualMachines. Only applies when priority is Spot.
 * **capacityReservation**: [CapacityReservationProfile](#capacityreservationprofile): Specifies information about the capacity reservation that is used to allocate virtual machine. Minimum compute api-version: 2021-04-01.
 * **diagnosticsProfile**: [DiagnosticsProfile](#diagnosticsprofile): Specifies the boot diagnostic settings state. Minimum compute api-version: 2015-06-15.
+* **evictionPolicy**: 'Deallocate' | 'Delete' | string: Specifies the eviction policy for the Azure Spot virtual machines. Both Deallocate and Delete are supported. Mirrors the evictionPolicy property on Microsoft.Compute/virtualMachines. Only applies when priority is Spot.
 * **extensionsTimeBudget**: string: Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). Minimum compute api-version: 2020-06-01.
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile): Specifies the hardware profile for the virtual machine.
 * **licenseType**: string: Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
 * **networkProfile**: [NetworkProfile](#networkprofile): Specifies the network interfaces of the virtual machine.
 * **osProfile**: [OSProfile](#osprofile): Specifies the operating system settings used while creating the virtual machine. Some of the settings cannot be changed once VM is provisioned.
+* **priority**: 'Regular' | 'Spot' | string: Specifies the priority for the virtual machines. Mirrors the priority property on Microsoft.Compute/virtualMachines.
 * **scheduledEventsPolicy**: [ScheduledEventsPolicy](#scheduledeventspolicy): Specifies Redeploy, Reboot and ScheduledEventsAdditionalPublishingTargets Scheduled Event related configurations for the virtual machine.
 * **scheduledEventsProfile**: [ScheduledEventsProfile](#scheduledeventsprofile): Specifies Scheduled Event related configurations.
 * **securityProfile**: [SecurityProfile](#securityprofile): Specifies the Security related profile settings for the virtual machine.
@@ -263,12 +295,15 @@
 
 ## BulkCreateCustomOverride
 ### Properties
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation): The extended location this VM is created in. Overrides the operation-level extendedLocation for this VM only; when omitted the VM inherits the operation-level extendedLocation.
 * **extensions**: [BulkactionVMExtension](#bulkactionvmextension)[]: Extensions. When non-empty they replace the operation-level extensions; when omitted the operation-level extensions are inherited.
 * **identity**: [VirtualMachineIdentity](#virtualmachineidentity): Identity overriding the operation-level identity.
+* **placement**: [Placement](#placement): The placement constraints applied to this VM. Overrides the operation-level placement for this VM only; when omitted the VM inherits the operation-level placement.
 * **plan**: [Plan](#plan): Plan overriding the operation-level plan.
 * **tags**: [BulkCreateCustomOverrideTags](#bulkcreatecustomoverridetags): Tags overriding the operation-level tags.
 * **virtualMachineName**: string: ARM VM name for this VM. Optional; when omitted the name is generated from the prefix as {prefix}_{index}.
 * **virtualMachineProfile**: [BulkactionVMProperties](#bulkactionvmproperties): VM profile, the same shape as operation-level ComputeProfile.virtualMachineProfile. Overrides the operation-level VM profile.
+* **zone**: string: The availability zone this VM is created in. Overrides the operation-level zones for this VM only. A null value does not override, so the VM is placed using the operation-level zones; an empty value does override and deploys this VM as a regional (non-zonal) VM.
 
 ## BulkCreateCustomOverridesProfile
 ### Properties
@@ -280,12 +315,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## BulkCreateCustomPriorityProfile
-### Properties
-* **evictionPolicy**: 'Deallocate' | 'Delete' | string: Eviction Policy to follow when evicting Spot VMs.
-* **maxPricePerVM**: int: Price per hour of each Spot VM will never exceed this.
-* **type**: 'Regular' | 'Spot' | string: The priority type for VM allocation
-
 ## BulkCreateCustomProperties
 ### Properties
 * **capacity**: int {minValue: 1} (Required): Total capacity to achieve. It can be in terms of VMs or vCPUs.
@@ -293,10 +322,7 @@
 * **computeProfile**: [ComputeProfile](#computeprofile) (Required): Compute Profile to configure the Virtual Machines.
 * **createdTime**: string (ReadOnly): The UTC time the BulkCreateCustom resource was created.
 * **executionParameters**: [ExecutionParameters](#executionparameters): Extra parameters that control how the request is executed, including the retry policy.
-* **minCapacity**: int {minValue: 1}: The minimum capacity, expressed in units specified by capacityType, that Azure must be able to allocate for the request to proceed. If Azure cannot allocate at least this capacity with high confidence, the request is rejected with 409 Conflict (InsufficientCapacity) and no VMs are created. Otherwise, Azure allocates as much capacity as possible, up to the requested capacity. Must be greater than 0, less than capacity, and requires partialFulfillmentPolicy.mode to be Enabled.
 * **overridesProfile**: [BulkCreateCustomOverridesProfile](#bulkcreatecustomoverridesprofile) (WriteOnly): Per-VM overrides and the shared name prefix, specified when the operation is created.
-* **partialFulfillmentPolicy**: [PartialFulfillmentPolicy](#partialfulfillmentpolicy): Controls how partial fulfillment is handled for a BulkCreateCustom request. When enabled, Azure creates only the VMs or vCPUs it has high confidence can be successfully allocated, instead of attempting the entire request and potentially returning allocation failures.
-* **priorityProfile**: [BulkCreateCustomPriorityProfile](#bulkcreatecustompriorityprofile) (Required): Configuration Options for Regular or Spot instances in BulkCreateCustom.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last operation.
 * **resources**: [BulkCreateCustomResource](#bulkcreatecustomresource)[] (ReadOnly): The virtual machine resources resolved for the operation.
 
@@ -322,9 +348,6 @@
 * **computeProfile**: [ComputeProfile](#computeprofile) (Required): Compute Profile to configure the Virtual Machines. Applied uniformly to every virtual machine created by the operation.
 * **createdTime**: string (ReadOnly): The UTC time the BulkCreate resource was created.
 * **executionParameters**: [ExecutionParameters](#executionparameters): Extra parameters that control how the request is executed, including the retry policy.
-* **minCapacity**: int {minValue: 1}: The minimum capacity, expressed in units specified by capacityType, that Azure must be able to allocate for the request to proceed. If Azure cannot allocate at least this capacity with high confidence, the request is rejected with 409 Conflict (InsufficientCapacity) and no VMs are created. Otherwise, Azure allocates as much capacity as possible, up to the requested capacity. Must be greater than 0, less than capacity, and requires partialFulfillmentPolicy.mode to be Enabled.
-* **partialFulfillmentPolicy**: [PartialFulfillmentPolicy](#partialfulfillmentpolicy): Controls how partial fulfillment is handled for a BulkCreate request. When enabled, Azure creates only the VMs or vCPUs it has high confidence can be successfully allocated, instead of attempting the entire request and potentially returning allocation failures.
-* **priorityProfile**: [PriorityProfile](#priorityprofile) (Required): Configuration Options for Regular or Spot instances in BulkCreate.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last operation.
 
 ## CancelOccurrenceRequest
@@ -667,18 +690,18 @@
 * **adminPassword**: string {sensitive}: The password for the virtual machine administrator account. The password must be 8 to 123 characters long for Windows virtual machines or 6 to 72 characters long for Linux virtual machines. It must contain characters from at least three of these categories: lowercase letters, uppercase letters, digits, and special characters. The following values are not allowed: `abc@123`, `P@$$w0rd`, `P@ssw0rd`, `P@ssword123`, `Pa$$word`, `pass@word1`, `Password!`, `Password1`, `Password22`, and `iloveyou!`. This secret is accepted only in the request and is not returned in responses.
 * **customData**: string: Base64-encoded custom data provided to the virtual machine. The decoded data can contain up to 65,535 bytes. Do not include secrets or passwords.
 
-## PartialFulfillmentPolicy
-### Properties
-* **fulfilledCapacity**: int (ReadOnly): The amount of capacity that was actually attempted, expressed in the units specified by capacityType. When partial fulfillment is enabled, this value can be less than the requested capacity.
-* **mode**: 'Disabled' | 'Enabled' | string: Specifies whether partial fulfillment is allowed. When Enabled, Azure creates as many VMs as it has high confidence can be successfully allocated. When Disabled, Azure attempts to create all requested VMs, which may result into allocation failures.
-* **reason**: 'InsufficientCapacity' | 'InsufficientQuota' | 'None' | string (ReadOnly): Indicates why the fulfilled capacity is less than the requested capacity. Possible values include InsufficientCapacity and InsufficientQuota. Returned only in the create response when partial fulfillment is enabled and the request cannot be fully satisfied.
-
 ## PatchSettings
 ### Properties
 * **assessmentMode**: 'AutomaticByPlatform' | 'ImageDefault' | string: Specifies the mode of VM Guest patch assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine.<br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
 * **automaticByPlatformSettings**: [WindowsVMGuestPatchAutomaticByPlatformSettings](#windowsvmguestpatchautomaticbyplatformsettings): Specifies additional settings for patch mode AutomaticByPlatform in VM Guest Patching on Windows.
 * **enableHotpatching**: bool: Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.
 * **patchMode**: 'AutomaticByOS' | 'AutomaticByPlatform' | 'Manual' | string: Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true
+
+## Placement
+### Properties
+* **excludeZones**: string[]: The availability zones that Bulk Actions must not select.
+* **includeZones**: string[]: The availability zones that Bulk Actions can select. When omitted, Bulk Actions can consider any supported zone in the region.
+* **zonePlacementPolicy**: 'Any' | 'Auto' | string: The policy used to select an availability zone.
 
 ## Plan
 ### Properties
@@ -687,12 +710,6 @@
 * **promotionCode**: string: A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
 * **publisher**: string (Required): The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
 * **version**: string: The version of the desired product/artifact.
-
-## PriorityProfile
-### Properties
-* **evictionPolicy**: 'Deallocate' | 'Delete' | string: The action applied to a Spot virtual machine when Azure evicts it.
-* **maxPricePerVM**: int: The maximum hourly price, in US dollars, for each Spot virtual machine.
-* **type**: 'Regular' | 'Spot' | string: The priority type for virtual machine allocation.
 
 ## ProxyAgentSettings
 ### Properties
@@ -727,7 +744,7 @@
 
 ## ResourceAttachRequest
 ### Properties
-* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The list of resources to attach to the scheduled action.
+* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The list of resources to attach to the recurring bulk action.
 
 ## ResourceDetachRequest
 ### Properties
@@ -812,8 +829,8 @@
 * **actionType**: 'Deallocate' | 'Hibernate' | 'Start' | string (Required): The operation performed on the targeted resources.
 * **disabled**: bool: Indicates whether new occurrences are disabled.
 * **endTime**: string: The date and time, including UTC offset, after which no new occurrences are scheduled.
-* **notificationSettings**: [NotificationProperties](#notificationproperties)[] (Required): Notification settings that apply to the scheduled action.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Read-only. The provisioning state of the scheduled action.
+* **notificationSettings**: [NotificationProperties](#notificationproperties)[] (Required): Notification settings that apply to the recurring bulk action.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Read-only. The provisioning state of the recurring bulk action.
 * **resourceType**: 'VirtualMachine' | 'VirtualMachineScaleSet' | string (Required): The type of compute resource targeted by the action.
 * **schedule**: [ScheduledActionsSchedule](#scheduledactionsschedule) (Required): The recurring schedule.
 * **startTime**: string (Required): The date and time, including UTC offset, when the schedule becomes active.
@@ -840,7 +857,7 @@
 * **requestedDaysOfTheMonth**: (int {minValue: 1, maxValue: 31})[]: The calendar days when the action runs. An empty array means every day of the month.
 * **requestedMonths**: ('All' | 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string)[]: The months when the action runs. An empty array means every month.
 * **requestedWeekDays**: ('All' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: The days of the week when the action runs. An empty array means every day of the week.
-* **scheduledTime**: string (Required): The local time of day when the scheduled action runs.
+* **scheduledTime**: string (Required): The local time of day when the recurring bulk action runs.
 * **timeZone**: string (Required): The time zone used to interpret the scheduled time.
 
 ## ScheduledEventsAdditionalPublishingTargets

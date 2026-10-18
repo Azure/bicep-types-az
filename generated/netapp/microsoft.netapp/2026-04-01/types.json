@@ -2275,7 +2275,7 @@
           "$ref": "#/155"
         },
         "flags": 0,
-        "description": "Enables non-browsable property for SMB Shares. Only applicable for SMB/DualProtocol volume"
+        "description": "Enables non-browsable property for SMB Shares. Only applicable for SMB/DualProtocol cache"
       }
     }
   },

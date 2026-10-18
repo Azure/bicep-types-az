@@ -2543,14 +2543,14 @@
       },
       "identity": {
         "type": {
-          "$ref": "#/485"
+          "$ref": "#/486"
         },
         "flags": 0,
         "description": "The identity of the virtual machine scale set, if configured."
       },
       "zones": {
         "type": {
-          "$ref": "#/493"
+          "$ref": "#/494"
         },
         "flags": 0,
         "description": "The availability zones."
@@ -2578,7 +2578,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/494"
+          "$ref": "#/495"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2730,35 +2730,35 @@
       },
       "additionalCapabilities": {
         "type": {
-          "$ref": "#/434"
+          "$ref": "#/435"
         },
         "flags": 0,
         "description": "Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type."
       },
       "scaleInPolicy": {
         "type": {
-          "$ref": "#/435"
+          "$ref": "#/436"
         },
         "flags": 0,
         "description": "Specifies the policies applied when scaling in Virtual Machines in the Virtual Machine Scale Set."
       },
       "orchestrationMode": {
         "type": {
-          "$ref": "#/443"
+          "$ref": "#/444"
         },
         "flags": 0,
         "description": "Specifies the orchestration mode for the virtual machine scale set."
       },
       "spotRestorePolicy": {
         "type": {
-          "$ref": "#/444"
+          "$ref": "#/445"
         },
         "flags": 0,
         "description": "Specifies the Spot Restore properties for the virtual machine scale set."
       },
       "priorityMixPolicy": {
         "type": {
-          "$ref": "#/445"
+          "$ref": "#/446"
         },
         "flags": 0,
         "description": "Specifies the desired targets for mixing Spot and Regular priority VMs within the same VMSS Flex instance."
@@ -2779,42 +2779,42 @@
       },
       "resiliencyPolicy": {
         "type": {
-          "$ref": "#/446"
+          "$ref": "#/447"
         },
         "flags": 0,
         "description": "Policy for Resiliency"
       },
       "zonalPlatformFaultDomainAlignMode": {
         "type": {
-          "$ref": "#/463"
+          "$ref": "#/464"
         },
         "flags": 0,
         "description": "Specifies the align mode between Virtual Machine Scale Set compute and storage Fault Domain count."
       },
       "skuProfile": {
         "type": {
-          "$ref": "#/464"
+          "$ref": "#/465"
         },
         "flags": 0,
         "description": "Specifies the sku profile for the virtual machine scale set."
       },
       "highSpeedInterconnectPlacement": {
         "type": {
-          "$ref": "#/474"
+          "$ref": "#/475"
         },
         "flags": 0,
         "description": "Specifies the high speed interconnect placement for the virtual machine scale set."
       },
       "lifecycleHooksProfile": {
         "type": {
-          "$ref": "#/475"
+          "$ref": "#/476"
         },
         "flags": 0,
         "description": "Specifies the lifecycle hooks profile for the virtual machine scale set."
       },
       "externalHealthPolicy": {
         "type": {
-          "$ref": "#/484"
+          "$ref": "#/485"
         },
         "flags": 0,
         "description": "Specifies the external health policy for the virtual machine scale set."
@@ -3062,21 +3062,21 @@
       },
       "securityProfile": {
         "type": {
-          "$ref": "#/384"
+          "$ref": "#/385"
         },
         "flags": 0,
         "description": "Specifies the Security related profile settings for the virtual machines in the scale set."
       },
       "diagnosticsProfile": {
         "type": {
-          "$ref": "#/400"
+          "$ref": "#/401"
         },
         "flags": 0,
         "description": "Specifies the boot diagnostic settings state. Minimum api-version: 2015-06-15."
       },
       "extensionProfile": {
         "type": {
-          "$ref": "#/402"
+          "$ref": "#/403"
         },
         "flags": 0,
         "description": "Specifies a collection of settings for extensions installed on virtual machines in the scale set."
@@ -3090,28 +3090,28 @@
       },
       "priority": {
         "type": {
-          "$ref": "#/413"
+          "$ref": "#/414"
         },
         "flags": 0,
         "description": "Specifies the priority for the virtual machines in the scale set. Minimum api-version: 2017-10-30-preview."
       },
       "evictionPolicy": {
         "type": {
-          "$ref": "#/416"
+          "$ref": "#/417"
         },
         "flags": 0,
         "description": "Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview."
       },
       "billingProfile": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/418"
         },
         "flags": 0,
         "description": "Specifies the billing related details of a Azure Spot VMSS. Minimum api-version: 2019-03-01."
       },
       "scheduledEventsProfile": {
         "type": {
-          "$ref": "#/418"
+          "$ref": "#/419"
         },
         "flags": 0,
         "description": "Specifies Scheduled Event related configurations."
@@ -3125,42 +3125,42 @@
       },
       "capacityReservation": {
         "type": {
-          "$ref": "#/421"
+          "$ref": "#/422"
         },
         "flags": 0,
         "description": "Specifies the capacity reservation related details of a scale set. Minimum api-version: 2021-04-01."
       },
       "interconnectBlockProfile": {
         "type": {
-          "$ref": "#/422"
+          "$ref": "#/423"
         },
         "flags": 0,
         "description": "Specifies the Interconnect Block related details of a Scale Set. Minimum api-version: 2026-03-01."
       },
       "applicationProfile": {
         "type": {
-          "$ref": "#/423"
+          "$ref": "#/424"
         },
         "flags": 0,
         "description": "Specifies the gallery applications that should be made available to the VM/VMSS"
       },
       "hardwareProfile": {
         "type": {
-          "$ref": "#/426"
+          "$ref": "#/427"
         },
         "flags": 0,
         "description": "Specifies the hardware profile related details of a scale set. Minimum api-version: 2021-11-01."
       },
       "serviceArtifactReference": {
         "type": {
-          "$ref": "#/431"
+          "$ref": "#/432"
         },
         "flags": 0,
         "description": "Specifies the service artifact reference id used to set same image version for all virtual machines in the scale set when using 'latest' image version. Minimum api-version: 2022-11-01"
       },
       "securityPostureReference": {
         "type": {
-          "$ref": "#/432"
+          "$ref": "#/433"
         },
         "flags": 0,
         "description": "Specifies the security posture to be used in the scale set. Minimum api-version: 2023-03-01"
@@ -4801,21 +4801,21 @@
       },
       "networkInterfaceConfigurations": {
         "type": {
-          "$ref": "#/378"
+          "$ref": "#/379"
         },
         "flags": 0,
         "description": "The list of network configurations."
       },
       "networkApiVersion": {
         "type": {
-          "$ref": "#/381"
+          "$ref": "#/382"
         },
         "flags": 0,
         "description": "specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode 'Flexible'"
       },
       "interconnectGroupProfile": {
         "type": {
-          "$ref": "#/382"
+          "$ref": "#/383"
         },
         "flags": 0,
         "description": "Specifies the interconnect group profile to associate with the scale set. Minimum api-version: 2026-03-01."
@@ -4842,7 +4842,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/377"
+          "$ref": "#/378"
         },
         "flags": 0,
         "description": "Resource tags applied to the networkInterface address created by this NetworkInterfaceConfiguration"
@@ -4897,7 +4897,7 @@
       },
       "ipConfigurations": {
         "type": {
-          "$ref": "#/363"
+          "$ref": "#/364"
         },
         "flags": 1,
         "description": "Specifies the IP configurations of the network interface."
@@ -4911,21 +4911,21 @@
       },
       "deleteOption": {
         "type": {
-          "$ref": "#/366"
+          "$ref": "#/367"
         },
         "flags": 0,
         "description": "Specify what happens to the network interface when the VM is deleted"
       },
       "auxiliaryMode": {
         "type": {
-          "$ref": "#/370"
+          "$ref": "#/371"
         },
         "flags": 0,
         "description": "Specifies whether the Auxiliary mode is enabled for the Network Interface resource."
       },
       "auxiliarySku": {
         "type": {
-          "$ref": "#/376"
+          "$ref": "#/377"
         },
         "flags": 0,
         "description": "Specifies whether the Auxiliary sku is enabled for the Network Interface resource."
@@ -5003,30 +5003,37 @@
         "flags": 0,
         "description": "Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'."
       },
-      "applicationGatewayBackendAddressPools": {
+      "privateIPAddressPrefixLength": {
         "type": {
           "$ref": "#/359"
+        },
+        "flags": 0,
+        "description": "The private IP address prefix length. If specified and the allocation method is dynamic, the service will allocate a CIDR block instead of a single IP address."
+      },
+      "applicationGatewayBackendAddressPools": {
+        "type": {
+          "$ref": "#/360"
         },
         "flags": 0,
         "description": "Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway."
       },
       "applicationSecurityGroups": {
         "type": {
-          "$ref": "#/360"
+          "$ref": "#/361"
         },
         "flags": 0,
         "description": "Specifies an array of references to application security group."
       },
       "loadBalancerBackendAddressPools": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/362"
         },
         "flags": 0,
         "description": "Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer."
       },
       "loadBalancerInboundNatPools": {
         "type": {
-          "$ref": "#/362"
+          "$ref": "#/363"
         },
         "flags": 0,
         "description": "Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer."
@@ -5343,6 +5350,11 @@
     ]
   },
   {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 128
+  },
+  {
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/6"
@@ -5384,10 +5396,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/364"
+        "$ref": "#/365"
       },
       {
-        "$ref": "#/365"
+        "$ref": "#/366"
       },
       {
         "$ref": "#/0"
@@ -5410,13 +5422,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/367"
-      },
-      {
         "$ref": "#/368"
       },
       {
         "$ref": "#/369"
+      },
+      {
+        "$ref": "#/370"
       },
       {
         "$ref": "#/0"
@@ -5447,9 +5459,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/371"
-      },
-      {
         "$ref": "#/372"
       },
       {
@@ -5460,6 +5469,9 @@
       },
       {
         "$ref": "#/375"
+      },
+      {
+        "$ref": "#/376"
       },
       {
         "$ref": "#/0"
@@ -5492,10 +5504,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/379"
+        "$ref": "#/380"
       },
       {
-        "$ref": "#/380"
+        "$ref": "#/381"
       },
       {
         "$ref": "#/0"
@@ -5515,7 +5527,7 @@
       },
       "subgroups": {
         "type": {
-          "$ref": "#/383"
+          "$ref": "#/384"
         },
         "flags": 0,
         "description": "The list of subgroup references within the interconnect group."
@@ -5534,7 +5546,7 @@
     "properties": {
       "uefiSettings": {
         "type": {
-          "$ref": "#/385"
+          "$ref": "#/386"
         },
         "flags": 0,
         "description": "Specifies the security settings like secure boot and vTPM used while creating the virtual machine. Minimum api-version: 2020-12-01."
@@ -5548,21 +5560,21 @@
       },
       "securityType": {
         "type": {
-          "$ref": "#/389"
+          "$ref": "#/390"
         },
         "flags": 0,
         "description": "Specifies the SecurityType of the virtual machine. It has to be set to any specified value to enable UefiSettings. The default behavior is: UefiSettings will not be enabled unless this property is set and is not Standard. If not specified, Standard will be returned starting api version 2025-11-01."
       },
       "encryptionIdentity": {
         "type": {
-          "$ref": "#/390"
+          "$ref": "#/391"
         },
         "flags": 0,
         "description": "Specifies the Managed Identity used by ADE to get access token for keyvault operations."
       },
       "proxyAgentSettings": {
         "type": {
-          "$ref": "#/391"
+          "$ref": "#/392"
         },
         "flags": 0,
         "description": "Specifies ProxyAgent settings while creating the virtual machine. Minimum api-version: 2023-09-01."
@@ -5605,13 +5617,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/386"
-      },
-      {
         "$ref": "#/387"
       },
       {
         "$ref": "#/388"
+      },
+      {
+        "$ref": "#/389"
       },
       {
         "$ref": "#/0"
@@ -5644,7 +5656,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/394"
+          "$ref": "#/395"
         },
         "flags": 0,
         "description": "Specifies the mode that ProxyAgent will execute on. Warning: this property has been deprecated, please specify 'mode' under particular hostendpoint setting."
@@ -5658,14 +5670,14 @@
       },
       "wireServer": {
         "type": {
-          "$ref": "#/395"
+          "$ref": "#/396"
         },
         "flags": 0,
         "description": "Specifies the Wire Server endpoint settings while creating the virtual machine or virtual machine scale set. Minimum api-version: 2024-03-01."
       },
       "imds": {
         "type": {
-          "$ref": "#/395"
+          "$ref": "#/396"
         },
         "flags": 0,
         "description": "Specifies the IMDS endpoint settings while creating the virtual machine or virtual machine scale set. Minimum api-version: 2024-03-01."
@@ -5691,10 +5703,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/392"
+        "$ref": "#/393"
       },
       {
-        "$ref": "#/393"
+        "$ref": "#/394"
       },
       {
         "$ref": "#/0"
@@ -5707,7 +5719,7 @@
     "properties": {
       "mode": {
         "type": {
-          "$ref": "#/399"
+          "$ref": "#/400"
         },
         "flags": 0,
         "description": "Specifies the execution mode. In Audit mode, the system acts as if it is enforcing the access control policy, including emitting access denial entries in the logs but it does not actually deny any requests to host endpoints. In Enforce mode, the system will enforce the access control and it is the recommended mode of operation."
@@ -5744,13 +5756,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/396"
-      },
-      {
         "$ref": "#/397"
       },
       {
         "$ref": "#/398"
+      },
+      {
+        "$ref": "#/399"
       },
       {
         "$ref": "#/0"
@@ -5763,7 +5775,7 @@
     "properties": {
       "bootDiagnostics": {
         "type": {
-          "$ref": "#/401"
+          "$ref": "#/402"
         },
         "flags": 0,
         "description": "Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. **NOTE**: If storageUri is being specified then ensure that the storage account is in the same region and subscription as the VM. You can easily view the output of your console log. Azure also enables you to see a screenshot of the VM from the hypervisor."
@@ -5796,7 +5808,7 @@
     "properties": {
       "extensions": {
         "type": {
-          "$ref": "#/408"
+          "$ref": "#/409"
         },
         "flags": 0,
         "description": "The virtual machine scale set child extension resources."
@@ -5830,7 +5842,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/404"
+          "$ref": "#/405"
         },
         "flags": 0,
         "description": "Describes the properties of a Virtual Machine Scale Set Extension."
@@ -5892,14 +5904,14 @@
       },
       "settings": {
         "type": {
-          "$ref": "#/405"
+          "$ref": "#/406"
         },
         "flags": 0,
         "description": "Json formatted public settings for the extension."
       },
       "protectedSettings": {
         "type": {
-          "$ref": "#/405"
+          "$ref": "#/406"
         },
         "flags": 0,
         "description": "The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."
@@ -5913,7 +5925,7 @@
       },
       "provisionAfterExtensions": {
         "type": {
-          "$ref": "#/406"
+          "$ref": "#/407"
         },
         "flags": 0,
         "description": "Collection of extension names after which this extension needs to be provisioned."
@@ -5927,7 +5939,7 @@
       },
       "protectedSettingsFromKeyVault": {
         "type": {
-          "$ref": "#/407"
+          "$ref": "#/408"
         },
         "flags": 0,
         "description": "The extensions protected settings that are passed by reference, and consumed from key vault"
@@ -5966,7 +5978,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/403"
+      "$ref": "#/404"
     }
   },
   {
@@ -5989,9 +6001,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/409"
-      },
-      {
         "$ref": "#/410"
       },
       {
@@ -5999,6 +6008,9 @@
       },
       {
         "$ref": "#/412"
+      },
+      {
+        "$ref": "#/413"
       },
       {
         "$ref": "#/0"
@@ -6017,10 +6029,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/414"
+        "$ref": "#/415"
       },
       {
-        "$ref": "#/415"
+        "$ref": "#/416"
       },
       {
         "$ref": "#/0"
@@ -6046,14 +6058,14 @@
     "properties": {
       "terminateNotificationProfile": {
         "type": {
-          "$ref": "#/419"
+          "$ref": "#/420"
         },
         "flags": 0,
         "description": "Specifies Terminate Scheduled Event related configurations."
       },
       "osImageNotificationProfile": {
         "type": {
-          "$ref": "#/420"
+          "$ref": "#/421"
         },
         "flags": 0,
         "description": "Specifies OS Image Scheduled Event related configurations."
@@ -6139,7 +6151,7 @@
     "properties": {
       "galleryApplications": {
         "type": {
-          "$ref": "#/425"
+          "$ref": "#/426"
         },
         "flags": 0,
         "description": "Specifies the gallery applications that should be made available to the VM/VMSS"
@@ -6197,7 +6209,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/424"
+      "$ref": "#/425"
     }
   },
   {
@@ -6206,14 +6218,14 @@
     "properties": {
       "vmSizeProperties": {
         "type": {
-          "$ref": "#/427"
+          "$ref": "#/428"
         },
         "flags": 0,
         "description": "Specifies the properties for customizing the size of the virtual machine. Minimum api-version: 2021-11-01. Please follow the instructions in [VM Customization](https://aka.ms/vmcustomization) for more details."
       },
       "processorMode": {
         "type": {
-          "$ref": "#/430"
+          "$ref": "#/431"
         },
         "flags": 0,
         "description": "Specifies the processor mode for the virtual machine scale set. Optional; if omitted, the platform default applies (currently Deterministic). This property can be updated on a running VMSS without deallocation or reboot. Minimum api-version: 2026-04-01."
@@ -6252,10 +6264,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/428"
+        "$ref": "#/429"
       },
       {
-        "$ref": "#/429"
+        "$ref": "#/430"
       },
       {
         "$ref": "#/0"
@@ -6288,7 +6300,7 @@
       },
       "excludeExtensions": {
         "type": {
-          "$ref": "#/433"
+          "$ref": "#/434"
         },
         "flags": 0,
         "description": "The list of virtual machine extension names to exclude when applying the security posture."
@@ -6341,7 +6353,7 @@
     "properties": {
       "rules": {
         "type": {
-          "$ref": "#/440"
+          "$ref": "#/441"
         },
         "flags": 0,
         "description": "The rules to be followed when scaling-in a virtual machine scale set. <br><br> Possible values are: <br><br> **Default** When a virtual machine scale set is scaled in, the scale set will first be balanced across zones if it is a zonal scale set. Then, it will be balanced across Fault Domains as far as possible. Within each Fault Domain, the virtual machines chosen for removal will be the newest ones that are not protected from scale-in. <br><br> **OldestVM** When a virtual machine scale set is being scaled-in, the oldest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the oldest virtual machines that are not protected will be chosen for removal. <br><br> **NewestVM** When a virtual machine scale set is being scaled-in, the newest virtual machines that are not protected from scale-in will be chosen for removal. For zonal virtual machine scale sets, the scale set will first be balanced across zones. Within each zone, the newest virtual machines that are not protected will be chosen for removal. <br><br>"
@@ -6378,13 +6390,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/436"
-      },
-      {
         "$ref": "#/437"
       },
       {
         "$ref": "#/438"
+      },
+      {
+        "$ref": "#/439"
       },
       {
         "$ref": "#/0"
@@ -6394,7 +6406,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/439"
+      "$ref": "#/440"
     }
   },
   {
@@ -6409,10 +6421,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/441"
+        "$ref": "#/442"
       },
       {
-        "$ref": "#/442"
+        "$ref": "#/443"
       },
       {
         "$ref": "#/0"
@@ -6465,35 +6477,35 @@
     "properties": {
       "resilientVMCreationPolicy": {
         "type": {
-          "$ref": "#/447"
+          "$ref": "#/448"
         },
         "flags": 0,
         "description": "The configuration parameters used while performing resilient VM creation."
       },
       "resilientVMDeletionPolicy": {
         "type": {
-          "$ref": "#/448"
+          "$ref": "#/449"
         },
         "flags": 0,
         "description": "The configuration parameters used while performing resilient VM deletion."
       },
       "automaticZoneRebalancingPolicy": {
         "type": {
-          "$ref": "#/449"
+          "$ref": "#/450"
         },
         "flags": 0,
         "description": "The configuration parameters used while performing automatic AZ balancing."
       },
       "zoneAllocationPolicy": {
         "type": {
-          "$ref": "#/454"
+          "$ref": "#/455"
         },
         "flags": 0,
         "description": "The configuration parameters used while performing zone allocation."
       },
       "operationRecoverySettings": {
         "type": {
-          "$ref": "#/456"
+          "$ref": "#/457"
         },
         "flags": 0,
         "description": "The configuration parameters used for operation recovery settings."
@@ -6539,14 +6551,14 @@
       },
       "rebalanceStrategy": {
         "type": {
-          "$ref": "#/451"
+          "$ref": "#/452"
         },
         "flags": 0,
         "description": "Type of rebalance strategy that will be used for rebalancing virtual machines in the scale set across availability zones. Default and only supported value for now is Recreate."
       },
       "rebalanceBehavior": {
         "type": {
-          "$ref": "#/453"
+          "$ref": "#/454"
         },
         "flags": 0,
         "description": "Type of rebalance behavior that will be used for recreating virtual machines in the scale set across availability zones. Default and only supported value for now is CreateBeforeDelete."
@@ -6561,7 +6573,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/450"
+        "$ref": "#/451"
       },
       {
         "$ref": "#/0"
@@ -6576,7 +6588,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/452"
+        "$ref": "#/453"
       },
       {
         "$ref": "#/0"
@@ -6596,7 +6608,7 @@
       },
       "maxInstancePercentPerZonePolicy": {
         "type": {
-          "$ref": "#/455"
+          "$ref": "#/456"
         },
         "flags": 0,
         "description": "The configuration parameters used to limit the number of virtual machines per availability zone in the virtual machine scale set."
@@ -6629,21 +6641,21 @@
     "properties": {
       "restartRecoveryPolicy": {
         "type": {
-          "$ref": "#/457"
+          "$ref": "#/458"
         },
         "flags": 0,
         "description": "The configuration parameters used for restart recovery policy."
       },
       "startRecoveryPolicy": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/459"
         },
         "flags": 0,
         "description": "The configuration parameters used for start recovery policy."
       },
       "reimageRecoveryPolicy": {
         "type": {
-          "$ref": "#/459"
+          "$ref": "#/460"
         },
         "flags": 0,
         "description": "The configuration parameters used for reimage recovery policy."
@@ -6705,13 +6717,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/460"
-      },
-      {
         "$ref": "#/461"
       },
       {
         "$ref": "#/462"
+      },
+      {
+        "$ref": "#/463"
       },
       {
         "$ref": "#/0"
@@ -6724,21 +6736,21 @@
     "properties": {
       "vmSizes": {
         "type": {
-          "$ref": "#/466"
+          "$ref": "#/467"
         },
         "flags": 0,
         "description": "Specifies the VM sizes for the virtual machine scale set."
       },
       "allocationStrategy": {
         "type": {
-          "$ref": "#/470"
+          "$ref": "#/471"
         },
         "flags": 0,
         "description": "Specifies the allocation strategy for the virtual machine scale set based on which the VMs will be allocated."
       },
       "automaticSkuMigrationPolicy": {
         "type": {
-          "$ref": "#/471"
+          "$ref": "#/472"
         },
         "flags": 0,
         "description": "Specifies the policy that controls whether the platform may automatically migrate scale set instances to a different VM size from the SKU profile depending on platform demands. When omitted, automatic SKU migration is disabled."
@@ -6768,7 +6780,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/465"
+      "$ref": "#/466"
     }
   },
   {
@@ -6787,13 +6799,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/467"
-      },
-      {
         "$ref": "#/468"
       },
       {
         "$ref": "#/469"
+      },
+      {
+        "$ref": "#/470"
       },
       {
         "$ref": "#/0"
@@ -6825,10 +6837,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/472"
+        "$ref": "#/473"
       },
       {
-        "$ref": "#/473"
+        "$ref": "#/474"
       },
       {
         "$ref": "#/0"
@@ -6841,7 +6853,7 @@
     "properties": {
       "lifecycleHooks": {
         "type": {
-          "$ref": "#/483"
+          "$ref": "#/484"
         },
         "flags": 0,
         "description": "Specifies the lifecycle hooks configured for the virtual machine scale set."
@@ -6854,7 +6866,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/479"
+          "$ref": "#/480"
         },
         "flags": 0,
         "description": "Specifies the type of the lifecycle hook."
@@ -6868,7 +6880,7 @@
       },
       "defaultAction": {
         "type": {
-          "$ref": "#/482"
+          "$ref": "#/483"
         },
         "flags": 0,
         "description": "Specifies the action that will be applied to a target resource in the virtual machine scale set lifecycle hook event if the platform does not receive a response from the customer for the target resource before waitUntil."
@@ -6887,10 +6899,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/477"
+        "$ref": "#/478"
       },
       {
-        "$ref": "#/478"
+        "$ref": "#/479"
       },
       {
         "$ref": "#/0"
@@ -6909,10 +6921,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/480"
+        "$ref": "#/481"
       },
       {
-        "$ref": "#/481"
+        "$ref": "#/482"
       },
       {
         "$ref": "#/0"
@@ -6922,7 +6934,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/476"
+      "$ref": "#/477"
     }
   },
   {
@@ -6972,14 +6984,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/490"
+          "$ref": "#/491"
         },
         "flags": 0,
         "description": "The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/492"
+          "$ref": "#/493"
         },
         "flags": 0,
         "description": "The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
@@ -7006,9 +7018,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/486"
-      },
-      {
         "$ref": "#/487"
       },
       {
@@ -7016,6 +7025,9 @@
       },
       {
         "$ref": "#/489"
+      },
+      {
+        "$ref": "#/490"
       }
     ]
   },
@@ -7044,7 +7056,7 @@
     "name": "VirtualMachineScaleSetIdentityUserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/491"
+      "$ref": "#/492"
     }
   },
   {
@@ -7098,21 +7110,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/496"
+          "$ref": "#/497"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/497"
+          "$ref": "#/498"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/499"
+          "$ref": "#/500"
         },
         "flags": 0,
         "description": "Describes the properties of a Virtual Machine."
@@ -7126,21 +7138,21 @@
       },
       "resources": {
         "type": {
-          "$ref": "#/858"
+          "$ref": "#/860"
         },
         "flags": 2,
         "description": "The virtual machine child extension resources."
       },
       "identity": {
         "type": {
-          "$ref": "#/859"
+          "$ref": "#/861"
         },
         "flags": 0,
         "description": "The identity of the virtual machine, if configured."
       },
       "zones": {
         "type": {
-          "$ref": "#/866"
+          "$ref": "#/868"
         },
         "flags": 0,
         "description": "The availability zones."
@@ -7175,7 +7187,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/867"
+          "$ref": "#/869"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -7202,10 +7214,17 @@
     "properties": {
       "hardwareProfile": {
         "type": {
-          "$ref": "#/500"
+          "$ref": "#/501"
         },
         "flags": 0,
         "description": "Specifies the hardware settings for the virtual machine."
+      },
+      "flexProfile": {
+        "type": {
+          "$ref": "#/672"
+        },
+        "flags": 0,
+        "description": "[Preview Feature] Specifies a FlexProfile for VM size. Azure may deploy a compatible alternative VM size based on capacity and placement considerations, and returns the deployed size in hardwareProfile.vmSize. A request that adds flexProfile must omit hardwareProfile.vmSize. For a virtual machine that uses FlexProfile, a hardwareProfile.vmSize equal to the deployed size is ignored, so a GET response can be sent back unchanged. A PATCH request that omits flexProfile keeps it. A PUT request that omits flexProfile and sets hardwareProfile.vmSize clears it. This property cannot exist along with a non-null properties.availabilitySet, properties.capacityReservation, properties.host, properties.hostGroup, properties.proximityPlacementGroup or properties.virtualMachineScaleSet."
       },
       "scheduledEventsPolicy": {
         "type": {
@@ -7216,42 +7235,42 @@
       },
       "storageProfile": {
         "type": {
-          "$ref": "#/671"
+          "$ref": "#/673"
         },
         "flags": 0,
         "description": "Specifies the storage settings for the virtual machine disks."
       },
       "additionalCapabilities": {
         "type": {
-          "$ref": "#/434"
+          "$ref": "#/435"
         },
         "flags": 0,
         "description": "Specifies additional capabilities enabled or disabled on the virtual machine."
       },
       "osProfile": {
         "type": {
-          "$ref": "#/729"
+          "$ref": "#/731"
         },
         "flags": 0,
         "description": "Specifies the operating system settings used while creating the virtual machine. Some of the settings cannot be changed once VM is provisioned."
       },
       "networkProfile": {
         "type": {
-          "$ref": "#/731"
+          "$ref": "#/733"
         },
         "flags": 0,
         "description": "Specifies the network interfaces of the virtual machine."
       },
       "securityProfile": {
         "type": {
-          "$ref": "#/384"
+          "$ref": "#/385"
         },
         "flags": 0,
         "description": "Specifies the Security related profile settings for the virtual machine."
       },
       "diagnosticsProfile": {
         "type": {
-          "$ref": "#/400"
+          "$ref": "#/401"
         },
         "flags": 0,
         "description": "Specifies the boot diagnostic settings state. Minimum api-version: 2015-06-15."
@@ -7279,21 +7298,21 @@
       },
       "priority": {
         "type": {
-          "$ref": "#/793"
+          "$ref": "#/795"
         },
         "flags": 0,
         "description": "Specifies the priority for the virtual machine. Minimum api-version: 2019-03-01"
       },
       "evictionPolicy": {
         "type": {
-          "$ref": "#/796"
+          "$ref": "#/798"
         },
         "flags": 0,
         "description": "Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview."
       },
       "billingProfile": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/418"
         },
         "flags": 0,
         "description": "Specifies the billing related details of a Azure Spot virtual machine. Minimum api-version: 2019-03-01."
@@ -7321,7 +7340,7 @@
       },
       "instanceView": {
         "type": {
-          "$ref": "#/797"
+          "$ref": "#/799"
         },
         "flags": 2,
         "description": "The virtual machine instance view."
@@ -7356,7 +7375,7 @@
       },
       "scheduledEventsProfile": {
         "type": {
-          "$ref": "#/418"
+          "$ref": "#/419"
         },
         "flags": 0,
         "description": "Specifies Scheduled Event related configurations."
@@ -7370,21 +7389,21 @@
       },
       "capacityReservation": {
         "type": {
-          "$ref": "#/421"
+          "$ref": "#/422"
         },
         "flags": 0,
         "description": "Specifies information about the capacity reservation that is used to allocate virtual machine. Minimum api-version: 2021-04-01."
       },
       "interconnectBlockProfile": {
         "type": {
-          "$ref": "#/422"
+          "$ref": "#/423"
         },
         "flags": 0,
         "description": "Specifies information about the Interconnect Block that is used to allocate the Virtual Machine. Minimum api-version: 2026-03-01."
       },
       "applicationProfile": {
         "type": {
-          "$ref": "#/423"
+          "$ref": "#/424"
         },
         "flags": 0,
         "description": "Specifies the gallery applications that should be made available to the VM/VMSS."
@@ -7398,7 +7417,7 @@
       },
       "resiliencyProfile": {
         "type": {
-          "$ref": "#/852"
+          "$ref": "#/854"
         },
         "flags": 0,
         "description": "Resiliency profile for the virtual machine."
@@ -7411,21 +7430,21 @@
     "properties": {
       "vmSize": {
         "type": {
-          "$ref": "#/667"
+          "$ref": "#/668"
         },
         "flags": 0,
         "description": "Specifies the size of the virtual machine. The enum data type is currently deprecated and will be removed by December 23rd 2023. The recommended way to get the list of available sizes is using these APIs: [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes), [List all available virtual machine sizes in a region]( https://docs.microsoft.com/rest/api/compute/resourceskus/list), [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/azure/virtual-machines/sizes). The available VM sizes depend on region and availability set."
       },
       "vmSizeProperties": {
         "type": {
-          "$ref": "#/427"
+          "$ref": "#/428"
         },
         "flags": 0,
         "description": "Specifies the properties for customizing the size of the virtual machine. Minimum api-version: 2021-07-01. This feature is still in preview mode and is not supported for VirtualMachineScaleSet. Please follow the instructions in [VM Customization](https://aka.ms/vmcustomization) for more details."
       },
       "processorMode": {
         "type": {
-          "$ref": "#/670"
+          "$ref": "#/671"
         },
         "flags": 0,
         "description": "Specifies the processor mode for the virtual machine or virtual machine scale set. Optional; if omitted, the platform default applies (currently Deterministic). This property can be updated on a running VM or VMSS without deallocation or reboot. Minimum api-version: 2026-04-01."
@@ -8100,9 +8119,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/501"
-      },
-      {
         "$ref": "#/502"
       },
       {
@@ -8598,6 +8614,9 @@
         "$ref": "#/666"
       },
       {
+        "$ref": "#/667"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -8614,15 +8633,28 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/668"
+        "$ref": "#/669"
       },
       {
-        "$ref": "#/669"
+        "$ref": "#/670"
       },
       {
         "$ref": "#/0"
       }
     ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FlexProfile",
+    "properties": {
+      "preferredVMSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Specifies the preferred VM size, for example Standard_D4s_v5. Azure may deploy a compatible alternative size based on capacity and placement considerations. Supported VM families for FlexProfile may vary by region. The recommended way to get the list of available sizes is using these APIs: [List all available virtual machine sizes in a region](https://docs.microsoft.com/rest/api/compute/resourceskus/list), [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes)."
+      }
+    }
   },
   {
     "$type": "ObjectType",
@@ -8637,21 +8669,21 @@
       },
       "osDisk": {
         "type": {
-          "$ref": "#/672"
+          "$ref": "#/674"
         },
         "flags": 0,
         "description": "Specifies information about the operating system disk used by the virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview)."
       },
       "dataDisks": {
         "type": {
-          "$ref": "#/722"
+          "$ref": "#/724"
         },
         "flags": 0,
         "description": "Specifies the parameters that are used to add a data disk to a virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview)."
       },
       "diskControllerType": {
         "type": {
-          "$ref": "#/725"
+          "$ref": "#/727"
         },
         "flags": 0,
         "description": "Specifies the disk controller type configured for the VM. **Note:** This property will be set to the default disk controller type if not specified provided virtual machine is being created with 'hyperVGeneration' set to V2 based on the capabilities of the operating system disk and VM size from the the specified minimum api version. You need to deallocate the VM before updating its disk controller type unless you are updating the VM size in the VM configuration which implicitly deallocates and reallocates the VM. Minimum api-version: 2022-08-01."
@@ -8665,7 +8697,7 @@
       },
       "diskApiVersion": {
         "type": {
-          "$ref": "#/728"
+          "$ref": "#/730"
         },
         "flags": 0,
         "description": "Specifies the Disk API version used when applying additionalDiskProperties to managed disks. The value must be in the format YYYY-MM-DD (e.g., \"2026-03-02\")."
@@ -8678,14 +8710,14 @@
     "properties": {
       "osType": {
         "type": {
-          "$ref": "#/675"
+          "$ref": "#/677"
         },
         "flags": 0,
         "description": "This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. Possible values are: **Windows,** **Linux.**"
       },
       "encryptionSettings": {
         "type": {
-          "$ref": "#/676"
+          "$ref": "#/678"
         },
         "flags": 0,
         "description": "Specifies the encryption settings for the OS Disk. Minimum api-version: 2015-06-15."
@@ -8713,7 +8745,7 @@
       },
       "caching": {
         "type": {
-          "$ref": "#/681"
+          "$ref": "#/683"
         },
         "flags": 0,
         "description": "Specifies the caching requirements. Possible values are: **None,** **ReadOnly,** **ReadWrite.** The defaulting behavior is: **None for Standard storage. ReadOnly for Premium storage.**"
@@ -8734,7 +8766,7 @@
       },
       "createOption": {
         "type": {
-          "$ref": "#/687"
+          "$ref": "#/689"
         },
         "flags": 1,
         "description": "Specifies how the virtual machine disk should be created. Possible values are **Attach:** This value is used when you are using a specialized disk to create the virtual machine. **FromImage:** This value is used when you are using an image to create the virtual machine. If you are using a platform image, you should also use the imageReference element described above. If you are using a marketplace image, you should also use the plan element previously described."
@@ -8748,21 +8780,21 @@
       },
       "storageFaultDomainAlignment": {
         "type": {
-          "$ref": "#/690"
+          "$ref": "#/692"
         },
         "flags": 0,
         "description": "Specifies the storage fault domain alignment type for the disk."
       },
       "managedDisk": {
         "type": {
-          "$ref": "#/691"
+          "$ref": "#/693"
         },
         "flags": 0,
         "description": "The managed disk parameters."
       },
       "deleteOption": {
         "type": {
-          "$ref": "#/702"
+          "$ref": "#/704"
         },
         "flags": 0,
         "description": "Specifies whether OS Disk should be deleted or detached upon VM deletion. Possible values are: **Delete.** If this value is used, the OS disk is deleted when VM is deleted. **Detach.** If this value is used, the os disk is retained after VM is deleted. The default value is set to **Detach**. For an ephemeral OS Disk, the default value is set to **Delete**. The user cannot change the delete option for an ephemeral OS Disk."
@@ -8781,10 +8813,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/673"
+        "$ref": "#/675"
       },
       {
-        "$ref": "#/674"
+        "$ref": "#/676"
       }
     ]
   },
@@ -8794,14 +8826,14 @@
     "properties": {
       "diskEncryptionKey": {
         "type": {
-          "$ref": "#/407"
+          "$ref": "#/408"
         },
         "flags": 0,
         "description": "Specifies the location of the disk encryption key, which is a Key Vault Secret."
       },
       "keyEncryptionKey": {
         "type": {
-          "$ref": "#/677"
+          "$ref": "#/679"
         },
         "flags": 0,
         "description": "Specifies the location of the key encryption key in Key Vault."
@@ -8851,13 +8883,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/678"
-      },
-      {
-        "$ref": "#/679"
-      },
-      {
         "$ref": "#/680"
+      },
+      {
+        "$ref": "#/681"
+      },
+      {
+        "$ref": "#/682"
       }
     ]
   },
@@ -8885,12 +8917,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/682"
-      },
-      {
-        "$ref": "#/683"
-      },
-      {
         "$ref": "#/684"
       },
       {
@@ -8898,6 +8924,12 @@
       },
       {
         "$ref": "#/686"
+      },
+      {
+        "$ref": "#/687"
+      },
+      {
+        "$ref": "#/688"
       },
       {
         "$ref": "#/0"
@@ -8916,10 +8948,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/688"
+        "$ref": "#/690"
       },
       {
-        "$ref": "#/689"
+        "$ref": "#/691"
       },
       {
         "$ref": "#/0"
@@ -8932,7 +8964,7 @@
     "properties": {
       "storageAccountType": {
         "type": {
-          "$ref": "#/699"
+          "$ref": "#/701"
         },
         "flags": 0,
         "description": "Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk."
@@ -8999,12 +9031,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/692"
-      },
-      {
-        "$ref": "#/693"
-      },
-      {
         "$ref": "#/694"
       },
       {
@@ -9018,6 +9044,12 @@
       },
       {
         "$ref": "#/698"
+      },
+      {
+        "$ref": "#/699"
+      },
+      {
+        "$ref": "#/700"
       },
       {
         "$ref": "#/0"
@@ -9036,10 +9068,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/700"
+        "$ref": "#/702"
       },
       {
-        "$ref": "#/701"
+        "$ref": "#/703"
       },
       {
         "$ref": "#/0"
@@ -9080,7 +9112,7 @@
       },
       "caching": {
         "type": {
-          "$ref": "#/707"
+          "$ref": "#/709"
         },
         "flags": 0,
         "description": "Specifies the caching requirements. Possible values are: **None,** **ReadOnly,** **ReadWrite.** The defaulting behavior is: **None for Standard storage. ReadOnly for Premium storage.**"
@@ -9094,7 +9126,7 @@
       },
       "createOption": {
         "type": {
-          "$ref": "#/713"
+          "$ref": "#/715"
         },
         "flags": 1,
         "description": "Specifies how the virtual machine disk should be created. Possible values are **Attach:** This value is used when you are using a specialized disk to create the virtual machine. **FromImage:** This value is used when you are using an image to create the virtual machine data disk. If you are using a platform image, you should also use the imageReference element described above. If you are using a marketplace image, you should also use the plan element previously described. **Empty:** This value is used when creating an empty data disk. **Copy:** This value is used to create a data disk from a snapshot or another disk. **Restore:** This value is used to create a data disk from a disk restore point."
@@ -9108,14 +9140,14 @@
       },
       "storageFaultDomainAlignment": {
         "type": {
-          "$ref": "#/716"
+          "$ref": "#/718"
         },
         "flags": 0,
         "description": "Specifies the storage fault domain alignment type for the disk."
       },
       "managedDisk": {
         "type": {
-          "$ref": "#/691"
+          "$ref": "#/693"
         },
         "flags": 0,
         "description": "The managed disk parameters."
@@ -9150,14 +9182,14 @@
       },
       "detachOption": {
         "type": {
-          "$ref": "#/718"
+          "$ref": "#/720"
         },
         "flags": 0,
         "description": "Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach.** detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. **This feature is still in preview**. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'."
       },
       "deleteOption": {
         "type": {
-          "$ref": "#/721"
+          "$ref": "#/723"
         },
         "flags": 0,
         "description": "Specifies whether data disk should be deleted or detached upon VM deletion. Possible values are: **Delete.** If this value is used, the data disk is deleted when VM is deleted. **Detach.** If this value is used, the data disk is retained after VM is deleted. The default value is set to **Detach**."
@@ -9180,13 +9212,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/704"
-      },
-      {
-        "$ref": "#/705"
-      },
-      {
         "$ref": "#/706"
+      },
+      {
+        "$ref": "#/707"
+      },
+      {
+        "$ref": "#/708"
       }
     ]
   },
@@ -9214,12 +9246,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/708"
-      },
-      {
-        "$ref": "#/709"
-      },
-      {
         "$ref": "#/710"
       },
       {
@@ -9227,6 +9253,12 @@
       },
       {
         "$ref": "#/712"
+      },
+      {
+        "$ref": "#/713"
+      },
+      {
+        "$ref": "#/714"
       },
       {
         "$ref": "#/0"
@@ -9245,10 +9277,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/714"
+        "$ref": "#/716"
       },
       {
-        "$ref": "#/715"
+        "$ref": "#/717"
       },
       {
         "$ref": "#/0"
@@ -9263,7 +9295,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/717"
+        "$ref": "#/719"
       },
       {
         "$ref": "#/0"
@@ -9282,10 +9314,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/719"
+        "$ref": "#/721"
       },
       {
-        "$ref": "#/720"
+        "$ref": "#/722"
       },
       {
         "$ref": "#/0"
@@ -9295,7 +9327,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/703"
+      "$ref": "#/705"
     }
   },
   {
@@ -9310,10 +9342,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/723"
+        "$ref": "#/725"
       },
       {
-        "$ref": "#/724"
+        "$ref": "#/726"
       },
       {
         "$ref": "#/0"
@@ -9332,10 +9364,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/726"
+        "$ref": "#/728"
       },
       {
-        "$ref": "#/727"
+        "$ref": "#/729"
       },
       {
         "$ref": "#/0"
@@ -9390,7 +9422,7 @@
       },
       "secrets": {
         "type": {
-          "$ref": "#/730"
+          "$ref": "#/732"
         },
         "flags": 0,
         "description": "Specifies set of certificates that should be installed onto the virtual machine. To install certificates on a virtual machine it is recommended to use the [Azure Key Vault virtual machine extension for Linux](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux) or the [Azure Key Vault virtual machine extension for Windows](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows)."
@@ -9423,28 +9455,28 @@
     "properties": {
       "networkInterfaces": {
         "type": {
-          "$ref": "#/737"
+          "$ref": "#/739"
         },
         "flags": 0,
         "description": "Specifies the list of resource Ids for the network interfaces associated with the virtual machine."
       },
       "networkApiVersion": {
         "type": {
-          "$ref": "#/740"
+          "$ref": "#/742"
         },
         "flags": 0,
         "description": "specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations"
       },
       "networkInterfaceConfigurations": {
         "type": {
-          "$ref": "#/788"
+          "$ref": "#/790"
         },
         "flags": 0,
         "description": "Specifies the networking configurations that will be used to create the virtual machine networking resources."
       },
       "interconnectGroupProfile": {
         "type": {
-          "$ref": "#/382"
+          "$ref": "#/383"
         },
         "flags": 0,
         "description": "Specifies the interconnect group profile to associate with the virtual machine. Minimum api-version: 2026-03-01."
@@ -9457,7 +9489,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/733"
+          "$ref": "#/735"
         },
         "flags": 0,
         "description": "Describes a network interface reference properties."
@@ -9484,7 +9516,7 @@
       },
       "deleteOption": {
         "type": {
-          "$ref": "#/736"
+          "$ref": "#/738"
         },
         "flags": 0,
         "description": "Specify what happens to the network interface when the VM is deleted"
@@ -9503,10 +9535,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/734"
+        "$ref": "#/736"
       },
       {
-        "$ref": "#/735"
+        "$ref": "#/737"
       },
       {
         "$ref": "#/0"
@@ -9516,7 +9548,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/732"
+      "$ref": "#/734"
     }
   },
   {
@@ -9531,10 +9563,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/738"
+        "$ref": "#/740"
       },
       {
-        "$ref": "#/739"
+        "$ref": "#/741"
       },
       {
         "$ref": "#/0"
@@ -9554,14 +9586,14 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/742"
+          "$ref": "#/744"
         },
         "flags": 0,
         "description": "Describes a virtual machine network profile's IP configuration."
       },
       "tags": {
         "type": {
-          "$ref": "#/787"
+          "$ref": "#/789"
         },
         "flags": 0,
         "description": "Resource tags applied to the networkInterface address created by this NetworkInterfaceConfiguration"
@@ -9581,7 +9613,7 @@
       },
       "deleteOption": {
         "type": {
-          "$ref": "#/745"
+          "$ref": "#/747"
         },
         "flags": 0,
         "description": "Specify what happens to the network interface when the VM is deleted"
@@ -9623,14 +9655,14 @@
       },
       "dnsSettings": {
         "type": {
-          "$ref": "#/746"
+          "$ref": "#/748"
         },
         "flags": 0,
         "description": "The dns settings to be applied on the network interfaces."
       },
       "ipConfigurations": {
         "type": {
-          "$ref": "#/776"
+          "$ref": "#/778"
         },
         "flags": 1,
         "description": "Specifies the IP configurations of the network interface."
@@ -9643,14 +9675,14 @@
       },
       "auxiliaryMode": {
         "type": {
-          "$ref": "#/780"
+          "$ref": "#/782"
         },
         "flags": 0,
         "description": "Specifies whether the Auxiliary mode is enabled for the Network Interface resource."
       },
       "auxiliarySku": {
         "type": {
-          "$ref": "#/786"
+          "$ref": "#/788"
         },
         "flags": 0,
         "description": "Specifies whether the Auxiliary sku is enabled for the Network Interface resource."
@@ -9669,10 +9701,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/743"
+        "$ref": "#/745"
       },
       {
-        "$ref": "#/744"
+        "$ref": "#/746"
       },
       {
         "$ref": "#/0"
@@ -9685,7 +9717,7 @@
     "properties": {
       "dnsServers": {
         "type": {
-          "$ref": "#/747"
+          "$ref": "#/749"
         },
         "flags": 0,
         "description": "List of DNS servers IP addresses"
@@ -9711,7 +9743,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/749"
+          "$ref": "#/751"
         },
         "flags": 0,
         "description": "Describes a virtual machine network interface IP configuration properties."
@@ -9738,35 +9770,42 @@
       },
       "publicIPAddressConfiguration": {
         "type": {
-          "$ref": "#/750"
+          "$ref": "#/752"
         },
         "flags": 0,
         "description": "The publicIPAddressConfiguration."
       },
       "privateIPAddressVersion": {
         "type": {
-          "$ref": "#/772"
+          "$ref": "#/774"
         },
         "flags": 0,
         "description": "Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'."
       },
+      "privateIPAddressPrefixLength": {
+        "type": {
+          "$ref": "#/359"
+        },
+        "flags": 0,
+        "description": "The private IP address prefix length. If specified and the allocation method is dynamic, the service will allocate a CIDR block instead of a single IP address."
+      },
       "applicationSecurityGroups": {
         "type": {
-          "$ref": "#/773"
+          "$ref": "#/775"
         },
         "flags": 0,
         "description": "Specifies an array of references to application security group."
       },
       "applicationGatewayBackendAddressPools": {
         "type": {
-          "$ref": "#/774"
+          "$ref": "#/776"
         },
         "flags": 0,
         "description": "Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway."
       },
       "loadBalancerBackendAddressPools": {
         "type": {
-          "$ref": "#/775"
+          "$ref": "#/777"
         },
         "flags": 0,
         "description": "Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer]."
@@ -9786,7 +9825,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/751"
+          "$ref": "#/753"
         },
         "flags": 0,
         "description": "Describes a virtual machines IP Configuration's PublicIPAddress configuration"
@@ -9800,7 +9839,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/769"
+          "$ref": "#/771"
         },
         "flags": 0,
         "description": "Resource tags applied to the publicIP address created by this PublicIPAddressConfiguration"
@@ -9820,21 +9859,21 @@
       },
       "deleteOption": {
         "type": {
-          "$ref": "#/754"
+          "$ref": "#/756"
         },
         "flags": 0,
         "description": "Specify what happens to the public IP address when the VM is deleted"
       },
       "dnsSettings": {
         "type": {
-          "$ref": "#/755"
+          "$ref": "#/757"
         },
         "flags": 0,
         "description": "The dns settings to be applied on the publicIP addresses ."
       },
       "ipTags": {
         "type": {
-          "$ref": "#/762"
+          "$ref": "#/764"
         },
         "flags": 0,
         "description": "The list of IP tags associated with the public IP address."
@@ -9848,14 +9887,14 @@
       },
       "publicIPAddressVersion": {
         "type": {
-          "$ref": "#/765"
+          "$ref": "#/767"
         },
         "flags": 0,
         "description": "Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'."
       },
       "publicIPAllocationMethod": {
         "type": {
-          "$ref": "#/768"
+          "$ref": "#/770"
         },
         "flags": 0,
         "description": "Specify the public IP allocation type"
@@ -9874,10 +9913,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/752"
+        "$ref": "#/754"
       },
       {
-        "$ref": "#/753"
+        "$ref": "#/755"
       },
       {
         "$ref": "#/0"
@@ -9897,7 +9936,7 @@
       },
       "domainNameLabelScope": {
         "type": {
-          "$ref": "#/760"
+          "$ref": "#/762"
         },
         "flags": 0,
         "description": "The Domain name label scope of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the hashed domain name label with policy according to the domain name label scope and vm network profile unique ID."
@@ -9924,16 +9963,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/756"
-      },
-      {
-        "$ref": "#/757"
-      },
-      {
         "$ref": "#/758"
       },
       {
         "$ref": "#/759"
+      },
+      {
+        "$ref": "#/760"
+      },
+      {
+        "$ref": "#/761"
       },
       {
         "$ref": "#/0"
@@ -9970,7 +10009,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/761"
+      "$ref": "#/763"
     }
   },
   {
@@ -9985,10 +10024,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/763"
+        "$ref": "#/765"
       },
       {
-        "$ref": "#/764"
+        "$ref": "#/766"
       },
       {
         "$ref": "#/0"
@@ -10007,10 +10046,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/766"
+        "$ref": "#/768"
       },
       {
-        "$ref": "#/767"
+        "$ref": "#/769"
       },
       {
         "$ref": "#/0"
@@ -10037,10 +10076,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/770"
+        "$ref": "#/772"
       },
       {
-        "$ref": "#/771"
+        "$ref": "#/773"
       },
       {
         "$ref": "#/0"
@@ -10068,7 +10107,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/748"
+      "$ref": "#/750"
     }
   },
   {
@@ -10087,13 +10126,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/777"
-      },
-      {
-        "$ref": "#/778"
-      },
-      {
         "$ref": "#/779"
+      },
+      {
+        "$ref": "#/780"
+      },
+      {
+        "$ref": "#/781"
       },
       {
         "$ref": "#/0"
@@ -10124,12 +10163,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/781"
-      },
-      {
-        "$ref": "#/782"
-      },
-      {
         "$ref": "#/783"
       },
       {
@@ -10137,6 +10170,12 @@
       },
       {
         "$ref": "#/785"
+      },
+      {
+        "$ref": "#/786"
+      },
+      {
+        "$ref": "#/787"
       },
       {
         "$ref": "#/0"
@@ -10154,7 +10193,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/741"
+      "$ref": "#/743"
     }
   },
   {
@@ -10177,16 +10216,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/789"
-      },
-      {
-        "$ref": "#/790"
-      },
-      {
         "$ref": "#/791"
       },
       {
         "$ref": "#/792"
+      },
+      {
+        "$ref": "#/793"
+      },
+      {
+        "$ref": "#/794"
       },
       {
         "$ref": "#/0"
@@ -10205,10 +10244,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/794"
+        "$ref": "#/796"
       },
       {
-        "$ref": "#/795"
+        "$ref": "#/797"
       },
       {
         "$ref": "#/0"
@@ -10256,7 +10295,7 @@
       },
       "hyperVGeneration": {
         "type": {
-          "$ref": "#/800"
+          "$ref": "#/802"
         },
         "flags": 0,
         "description": "Specifies the HyperVGeneration Type associated with a resource"
@@ -10270,42 +10309,42 @@
       },
       "vmAgent": {
         "type": {
-          "$ref": "#/801"
+          "$ref": "#/803"
         },
         "flags": 0,
         "description": "The VM Agent running on the virtual machine."
       },
       "maintenanceRedeployStatus": {
         "type": {
-          "$ref": "#/805"
+          "$ref": "#/807"
         },
         "flags": 0,
         "description": "The Maintenance Operation status on the virtual machine."
       },
       "disks": {
         "type": {
-          "$ref": "#/817"
+          "$ref": "#/819"
         },
         "flags": 0,
         "description": "The virtual machine disk information."
       },
       "extensions": {
         "type": {
-          "$ref": "#/821"
+          "$ref": "#/823"
         },
         "flags": 0,
         "description": "The extensions information."
       },
       "vmHealth": {
         "type": {
-          "$ref": "#/822"
+          "$ref": "#/824"
         },
         "flags": 2,
         "description": "The health status for the VM."
       },
       "bootDiagnostics": {
         "type": {
-          "$ref": "#/823"
+          "$ref": "#/825"
         },
         "flags": 0,
         "description": "Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. You can easily view the output of your console log. Azure also enables you to see a screenshot of the VM from the hypervisor."
@@ -10319,14 +10358,14 @@
       },
       "statuses": {
         "type": {
-          "$ref": "#/824"
+          "$ref": "#/826"
         },
         "flags": 0,
         "description": "The resource status information."
       },
       "patchStatus": {
         "type": {
-          "$ref": "#/825"
+          "$ref": "#/827"
         },
         "flags": 0,
         "description": "[Preview Feature] The status of virtual machine patch operations."
@@ -10340,14 +10379,14 @@
       },
       "interconnectInstanceView": {
         "type": {
-          "$ref": "#/845"
+          "$ref": "#/847"
         },
         "flags": 2,
         "description": "The Interconnect runtime view of the Virtual Machine. Minimum api-version: 2026-03-01."
       },
       "capacityReservationType": {
         "type": {
-          "$ref": "#/851"
+          "$ref": "#/853"
         },
         "flags": 2,
         "description": "Specifies which type of capacity reservation the virtual machine will consume capacity from if eligible or whether it is explicitly opted out from being associated and consuming capacity from any reserved capacity available in the subscription. Minimum api-version: 2026-04-01."
@@ -10366,10 +10405,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/798"
+        "$ref": "#/800"
       },
       {
-        "$ref": "#/799"
+        "$ref": "#/801"
       },
       {
         "$ref": "#/0"
@@ -10389,14 +10428,14 @@
       },
       "extensionHandlers": {
         "type": {
-          "$ref": "#/803"
+          "$ref": "#/805"
         },
         "flags": 0,
         "description": "The virtual machine extension handler instance view."
       },
       "statuses": {
         "type": {
-          "$ref": "#/804"
+          "$ref": "#/806"
         },
         "flags": 0,
         "description": "The resource status information."
@@ -10433,7 +10472,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/802"
+      "$ref": "#/804"
     }
   },
   {
@@ -10483,7 +10522,7 @@
       },
       "lastOperationResultCode": {
         "type": {
-          "$ref": "#/810"
+          "$ref": "#/812"
         },
         "flags": 0,
         "description": "The Last Maintenance Operation Result Code."
@@ -10517,16 +10556,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/806"
-      },
-      {
-        "$ref": "#/807"
-      },
-      {
         "$ref": "#/808"
       },
       {
         "$ref": "#/809"
+      },
+      {
+        "$ref": "#/810"
+      },
+      {
+        "$ref": "#/811"
       }
     ]
   },
@@ -10543,21 +10582,21 @@
       },
       "encryptionSettings": {
         "type": {
-          "$ref": "#/812"
+          "$ref": "#/814"
         },
         "flags": 0,
         "description": "Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15"
       },
       "statuses": {
         "type": {
-          "$ref": "#/813"
+          "$ref": "#/815"
         },
         "flags": 0,
         "description": "The resource status information."
       },
       "storageAlignmentStatus": {
         "type": {
-          "$ref": "#/816"
+          "$ref": "#/818"
         },
         "flags": 0,
         "description": "Specifies the storage alignment status for the disk."
@@ -10567,7 +10606,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/676"
+      "$ref": "#/678"
     }
   },
   {
@@ -10588,10 +10627,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/814"
+        "$ref": "#/816"
       },
       {
-        "$ref": "#/815"
+        "$ref": "#/817"
       },
       {
         "$ref": "#/0"
@@ -10601,7 +10640,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/811"
+      "$ref": "#/813"
     }
   },
   {
@@ -10631,14 +10670,14 @@
       },
       "substatuses": {
         "type": {
-          "$ref": "#/819"
+          "$ref": "#/821"
         },
         "flags": 0,
         "description": "The resource status information."
       },
       "statuses": {
         "type": {
-          "$ref": "#/820"
+          "$ref": "#/822"
         },
         "flags": 0,
         "description": "The resource status information."
@@ -10660,7 +10699,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/818"
+      "$ref": "#/820"
     }
   },
   {
@@ -10715,21 +10754,21 @@
     "properties": {
       "availablePatchSummary": {
         "type": {
-          "$ref": "#/826"
+          "$ref": "#/828"
         },
         "flags": 0,
         "description": "The available patch summary of the latest assessment operation for the virtual machine."
       },
       "lastPatchInstallationSummary": {
         "type": {
-          "$ref": "#/837"
+          "$ref": "#/839"
         },
         "flags": 0,
         "description": "The installation summary of the latest installation operation for the virtual machine."
       },
       "configurationStatuses": {
         "type": {
-          "$ref": "#/844"
+          "$ref": "#/846"
         },
         "flags": 2,
         "description": "The enablement status of the specified patchMode"
@@ -10742,7 +10781,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/832"
+          "$ref": "#/834"
         },
         "flags": 2,
         "description": "The overall success or failure status of the operation. It remains \"InProgress\" until the operation completes. At that point it will become \"Unknown\", \"Failed\", \"Succeeded\", or \"CompletedWithWarnings.\""
@@ -10791,7 +10830,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/835"
         },
         "flags": 2,
         "description": "The errors that were encountered during execution of the operation. The details array contains the list of them."
@@ -10822,12 +10861,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/827"
-      },
-      {
-        "$ref": "#/828"
-      },
-      {
         "$ref": "#/829"
       },
       {
@@ -10835,6 +10868,12 @@
       },
       {
         "$ref": "#/831"
+      },
+      {
+        "$ref": "#/832"
+      },
+      {
+        "$ref": "#/833"
       },
       {
         "$ref": "#/0"
@@ -10847,14 +10886,14 @@
     "properties": {
       "details": {
         "type": {
-          "$ref": "#/835"
+          "$ref": "#/837"
         },
         "flags": 0,
         "description": "The Api error details"
       },
       "innererror": {
         "type": {
-          "$ref": "#/836"
+          "$ref": "#/838"
         },
         "flags": 0,
         "description": "The Api inner error"
@@ -10912,7 +10951,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/834"
+      "$ref": "#/836"
     }
   },
   {
@@ -10941,7 +10980,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/843"
+          "$ref": "#/845"
         },
         "flags": 2,
         "description": "The overall success or failure status of the operation. It remains \"InProgress\" until the operation completes. At that point it will become \"Unknown\", \"Failed\", \"Succeeded\", or \"CompletedWithWarnings.\""
@@ -11011,7 +11050,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/835"
         },
         "flags": 2,
         "description": "The errors that were encountered during execution of the operation. The details array contains the list of them."
@@ -11042,12 +11081,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/838"
-      },
-      {
-        "$ref": "#/839"
-      },
-      {
         "$ref": "#/840"
       },
       {
@@ -11055,6 +11088,12 @@
       },
       {
         "$ref": "#/842"
+      },
+      {
+        "$ref": "#/843"
+      },
+      {
+        "$ref": "#/844"
       },
       {
         "$ref": "#/0"
@@ -11104,12 +11143,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/846"
-      },
-      {
-        "$ref": "#/847"
-      },
-      {
         "$ref": "#/848"
       },
       {
@@ -11117,6 +11150,12 @@
       },
       {
         "$ref": "#/850"
+      },
+      {
+        "$ref": "#/851"
+      },
+      {
+        "$ref": "#/852"
       },
       {
         "$ref": "#/0"
@@ -11129,7 +11168,7 @@
     "properties": {
       "zoneMovement": {
         "type": {
-          "$ref": "#/853"
+          "$ref": "#/855"
         },
         "flags": 0,
         "description": "Zone movement configuration."
@@ -11155,14 +11194,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/855"
+          "$ref": "#/857"
         },
         "flags": 0,
         "description": "Describes the properties of a Virtual Machine Extension."
       },
       "tags": {
         "type": {
-          "$ref": "#/857"
+          "$ref": "#/859"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -11252,14 +11291,14 @@
       },
       "settings": {
         "type": {
-          "$ref": "#/405"
+          "$ref": "#/406"
         },
         "flags": 0,
         "description": "Json formatted public settings for the extension."
       },
       "protectedSettings": {
         "type": {
-          "$ref": "#/405"
+          "$ref": "#/406"
         },
         "flags": 0,
         "description": "The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."
@@ -11273,7 +11312,7 @@
       },
       "instanceView": {
         "type": {
-          "$ref": "#/818"
+          "$ref": "#/820"
         },
         "flags": 0,
         "description": "The virtual machine extension instance view."
@@ -11287,14 +11326,14 @@
       },
       "protectedSettingsFromKeyVault": {
         "type": {
-          "$ref": "#/407"
+          "$ref": "#/408"
         },
         "flags": 0,
         "description": "The extensions protected settings that are passed by reference, and consumed from key vault"
       },
       "provisionAfterExtensions": {
         "type": {
-          "$ref": "#/856"
+          "$ref": "#/858"
         },
         "flags": 0,
         "description": "Collection of extension names after which this extension needs to be provisioned."
@@ -11318,7 +11357,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/854"
+      "$ref": "#/856"
     }
   },
   {
@@ -11341,14 +11380,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/864"
+          "$ref": "#/866"
         },
         "flags": 0,
         "description": "The type of identity used for the virtual machine. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/865"
+          "$ref": "#/867"
         },
         "flags": 0,
         "description": "The list of user identities associated with the Virtual Machine. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
@@ -11375,16 +11414,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/860"
-      },
-      {
-        "$ref": "#/861"
-      },
-      {
         "$ref": "#/862"
       },
       {
         "$ref": "#/863"
+      },
+      {
+        "$ref": "#/864"
+      },
+      {
+        "$ref": "#/865"
       }
     ]
   },
@@ -11393,7 +11432,7 @@
     "name": "VirtualMachineIdentityUserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/491"
+      "$ref": "#/492"
     }
   },
   {
@@ -11414,7 +11453,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/virtualMachines@2026-04-01",
     "body": {
-      "$ref": "#/498"
+      "$ref": "#/499"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -11447,35 +11486,35 @@
       },
       "type": {
         "type": {
-          "$ref": "#/869"
+          "$ref": "#/871"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/870"
+          "$ref": "#/872"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/872"
+          "$ref": "#/874"
         },
         "flags": 0,
         "description": "Describes the properties of a Proximity Placement Group."
       },
       "zones": {
         "type": {
-          "$ref": "#/882"
+          "$ref": "#/884"
         },
         "flags": 0,
         "description": "The availability zones."
       },
       "tags": {
         "type": {
-          "$ref": "#/883"
+          "$ref": "#/885"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -11502,28 +11541,28 @@
     "properties": {
       "proximityPlacementGroupType": {
         "type": {
-          "$ref": "#/875"
+          "$ref": "#/877"
         },
         "flags": 0,
         "description": "Specifies the type of the proximity placement group. Possible values are: **Standard** : Co-locate resources within an Azure region or Availability Zone. **Ultra** : For future use."
       },
       "virtualMachines": {
         "type": {
-          "$ref": "#/877"
+          "$ref": "#/879"
         },
         "flags": 2,
         "description": "A list of references to all virtual machines in the proximity placement group."
       },
       "virtualMachineScaleSets": {
         "type": {
-          "$ref": "#/878"
+          "$ref": "#/880"
         },
         "flags": 2,
         "description": "A list of references to all virtual machine scale sets in the proximity placement group."
       },
       "availabilitySets": {
         "type": {
-          "$ref": "#/879"
+          "$ref": "#/881"
         },
         "flags": 2,
         "description": "A list of references to all availability sets in the proximity placement group."
@@ -11537,7 +11576,7 @@
       },
       "intent": {
         "type": {
-          "$ref": "#/880"
+          "$ref": "#/882"
         },
         "flags": 0,
         "description": "Specifies the user intent of the proximity placement group."
@@ -11556,10 +11595,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/873"
+        "$ref": "#/875"
       },
       {
-        "$ref": "#/874"
+        "$ref": "#/876"
       },
       {
         "$ref": "#/0"
@@ -11589,19 +11628,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/876"
+      "$ref": "#/878"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/876"
+      "$ref": "#/878"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/876"
+      "$ref": "#/878"
     }
   },
   {
@@ -11610,7 +11649,7 @@
     "properties": {
       "vmSizes": {
         "type": {
-          "$ref": "#/881"
+          "$ref": "#/883"
         },
         "flags": 0,
         "description": "Specifies possible sizes of virtual machines that can be created in the proximity placement group."
@@ -11641,7 +11680,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/proximityPlacementGroups@2026-04-01",
     "body": {
-      "$ref": "#/871"
+      "$ref": "#/873"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -11674,28 +11713,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/885"
+          "$ref": "#/887"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/886"
+          "$ref": "#/888"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/888"
+          "$ref": "#/890"
         },
         "flags": 0,
         "description": "The restore point collection properties."
       },
       "tags": {
         "type": {
-          "$ref": "#/937"
+          "$ref": "#/939"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -11722,7 +11761,7 @@
     "properties": {
       "source": {
         "type": {
-          "$ref": "#/889"
+          "$ref": "#/891"
         },
         "flags": 0,
         "description": "The properties of the source resource that this restore point collection is created from."
@@ -11743,7 +11782,7 @@
       },
       "restorePoints": {
         "type": {
-          "$ref": "#/936"
+          "$ref": "#/938"
         },
         "flags": 2,
         "description": "A list containing all restore points created under this restore point collection."
@@ -11783,7 +11822,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/891"
+          "$ref": "#/893"
         },
         "flags": 0,
         "description": "The restore point properties."
@@ -11824,14 +11863,14 @@
     "properties": {
       "excludeDisks": {
         "type": {
-          "$ref": "#/892"
+          "$ref": "#/894"
         },
         "flags": 0,
         "description": "List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included."
       },
       "sourceMetadata": {
         "type": {
-          "$ref": "#/893"
+          "$ref": "#/895"
         },
         "flags": 0,
         "description": "Gets the details of the VM captured at the time of the restore point creation."
@@ -11845,7 +11884,7 @@
       },
       "consistencyMode": {
         "type": {
-          "$ref": "#/924"
+          "$ref": "#/926"
         },
         "flags": 0,
         "description": "ConsistencyMode of the RestorePoint. Can be specified in the input while creating a restore point. For now, only CrashConsistent is accepted as a valid input. Please refer to https://aka.ms/RestorePoints for more details."
@@ -11866,7 +11905,7 @@
       },
       "instanceView": {
         "type": {
-          "$ref": "#/925"
+          "$ref": "#/927"
         },
         "flags": 2,
         "description": "The restore point instance view."
@@ -11892,28 +11931,28 @@
     "properties": {
       "hardwareProfile": {
         "type": {
-          "$ref": "#/500"
+          "$ref": "#/501"
         },
         "flags": 2,
         "description": "Gets the hardware profile."
       },
       "storageProfile": {
         "type": {
-          "$ref": "#/894"
+          "$ref": "#/896"
         },
         "flags": 0,
         "description": "Gets the storage profile."
       },
       "osProfile": {
         "type": {
-          "$ref": "#/729"
+          "$ref": "#/731"
         },
         "flags": 2,
         "description": "Gets the OS profile."
       },
       "diagnosticsProfile": {
         "type": {
-          "$ref": "#/400"
+          "$ref": "#/401"
         },
         "flags": 2,
         "description": "Gets the diagnostics profile."
@@ -11934,7 +11973,7 @@
       },
       "securityProfile": {
         "type": {
-          "$ref": "#/384"
+          "$ref": "#/385"
         },
         "flags": 2,
         "description": "Gets the security profile."
@@ -11955,7 +11994,7 @@
       },
       "hyperVGeneration": {
         "type": {
-          "$ref": "#/920"
+          "$ref": "#/922"
         },
         "flags": 2,
         "description": "HyperVGeneration of the source VM for which restore point is captured."
@@ -11968,21 +12007,21 @@
     "properties": {
       "osDisk": {
         "type": {
-          "$ref": "#/895"
+          "$ref": "#/897"
         },
         "flags": 0,
         "description": "Gets the OS disk of the VM captured at the time of the restore point creation."
       },
       "dataDisks": {
         "type": {
-          "$ref": "#/914"
+          "$ref": "#/916"
         },
         "flags": 0,
         "description": "Gets the data disks of the VM captured at the time of the restore point creation."
       },
       "diskControllerType": {
         "type": {
-          "$ref": "#/917"
+          "$ref": "#/919"
         },
         "flags": 2,
         "description": "Gets the disk controller type of the VM captured at the time of the restore point creation."
@@ -11995,14 +12034,14 @@
     "properties": {
       "osType": {
         "type": {
-          "$ref": "#/898"
+          "$ref": "#/900"
         },
         "flags": 2,
         "description": "Gets the Operating System type."
       },
       "encryptionSettings": {
         "type": {
-          "$ref": "#/676"
+          "$ref": "#/678"
         },
         "flags": 2,
         "description": "Gets the disk encryption settings."
@@ -12016,7 +12055,7 @@
       },
       "caching": {
         "type": {
-          "$ref": "#/902"
+          "$ref": "#/904"
         },
         "flags": 2,
         "description": "Gets the caching type."
@@ -12030,14 +12069,14 @@
       },
       "managedDisk": {
         "type": {
-          "$ref": "#/691"
+          "$ref": "#/693"
         },
         "flags": 0,
         "description": "Gets the managed disk details"
       },
       "diskRestorePoint": {
         "type": {
-          "$ref": "#/903"
+          "$ref": "#/905"
         },
         "flags": 0,
         "description": "Contains Disk Restore Point properties."
@@ -12063,10 +12102,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/896"
+        "$ref": "#/898"
       },
       {
-        "$ref": "#/897"
+        "$ref": "#/899"
       },
       {
         "$ref": "#/0"
@@ -12089,13 +12128,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/899"
-      },
-      {
-        "$ref": "#/900"
-      },
-      {
         "$ref": "#/901"
+      },
+      {
+        "$ref": "#/902"
+      },
+      {
+        "$ref": "#/903"
       }
     ]
   },
@@ -12105,7 +12144,7 @@
     "properties": {
       "encryption": {
         "type": {
-          "$ref": "#/904"
+          "$ref": "#/906"
         },
         "flags": 0,
         "description": "Encryption at rest settings for disk restore point. It is an optional property that can be specified in the input while creating a restore point."
@@ -12139,7 +12178,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/908"
+          "$ref": "#/910"
         },
         "flags": 0,
         "description": "The type of key used to encrypt the data of the disk restore point."
@@ -12162,13 +12201,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/905"
-      },
-      {
-        "$ref": "#/906"
-      },
-      {
         "$ref": "#/907"
+      },
+      {
+        "$ref": "#/908"
+      },
+      {
+        "$ref": "#/909"
       },
       {
         "$ref": "#/0"
@@ -12195,7 +12234,7 @@
       },
       "caching": {
         "type": {
-          "$ref": "#/913"
+          "$ref": "#/915"
         },
         "flags": 2,
         "description": "Gets the caching type."
@@ -12209,14 +12248,14 @@
       },
       "managedDisk": {
         "type": {
-          "$ref": "#/691"
+          "$ref": "#/693"
         },
         "flags": 0,
         "description": "Contains the managed disk details."
       },
       "diskRestorePoint": {
         "type": {
-          "$ref": "#/903"
+          "$ref": "#/905"
         },
         "flags": 0,
         "description": "Contains Disk Restore Point properties."
@@ -12246,20 +12285,20 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/910"
-      },
-      {
-        "$ref": "#/911"
-      },
-      {
         "$ref": "#/912"
+      },
+      {
+        "$ref": "#/913"
+      },
+      {
+        "$ref": "#/914"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/909"
+      "$ref": "#/911"
     }
   },
   {
@@ -12274,10 +12313,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/915"
+        "$ref": "#/917"
       },
       {
-        "$ref": "#/916"
+        "$ref": "#/918"
       },
       {
         "$ref": "#/0"
@@ -12296,10 +12335,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/918"
+        "$ref": "#/920"
       },
       {
-        "$ref": "#/919"
+        "$ref": "#/921"
       },
       {
         "$ref": "#/0"
@@ -12322,13 +12361,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/921"
-      },
-      {
-        "$ref": "#/922"
-      },
-      {
         "$ref": "#/923"
+      },
+      {
+        "$ref": "#/924"
+      },
+      {
+        "$ref": "#/925"
       },
       {
         "$ref": "#/0"
@@ -12341,17 +12380,17 @@
     "properties": {
       "diskRestorePoints": {
         "type": {
-          "$ref": "#/934"
+          "$ref": "#/936"
         },
         "flags": 0,
         "description": "The disk restore points information."
       },
       "statuses": {
         "type": {
-          "$ref": "#/935"
+          "$ref": "#/937"
         },
         "flags": 0,
-        "description": "The resource status information."
+        "description": "The aggregate status information for the restore point. The list may include separate aggregate entries for replication and, in supported API versions, Instant Access, as applicable. For more information about Instant Access, see [Use virtual machine restore points](https://learn.microsoft.com/azure/virtual-machines/virtual-machines-create-restore-points#instant-access)."
       }
     }
   },
@@ -12368,14 +12407,14 @@
       },
       "snapshotAccessState": {
         "type": {
-          "$ref": "#/932"
+          "$ref": "#/934"
         },
         "flags": 0,
         "description": "The state of snapshot which determines the access availability of the snapshot."
       },
       "replicationStatus": {
         "type": {
-          "$ref": "#/933"
+          "$ref": "#/935"
         },
         "flags": 0,
         "description": "The disk restore point replication status information."
@@ -12406,12 +12445,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/927"
-      },
-      {
-        "$ref": "#/928"
-      },
-      {
         "$ref": "#/929"
       },
       {
@@ -12419,6 +12452,12 @@
       },
       {
         "$ref": "#/931"
+      },
+      {
+        "$ref": "#/932"
+      },
+      {
+        "$ref": "#/933"
       },
       {
         "$ref": "#/0"
@@ -12448,7 +12487,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/926"
+      "$ref": "#/928"
     }
   },
   {
@@ -12460,7 +12499,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/890"
+      "$ref": "#/892"
     }
   },
   {
@@ -12475,7 +12514,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/restorePointCollections@2026-04-01",
     "body": {
-      "$ref": "#/887"
+      "$ref": "#/889"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12508,28 +12547,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/939"
+          "$ref": "#/941"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/940"
+          "$ref": "#/942"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/942"
+          "$ref": "#/944"
         },
         "flags": 0,
         "description": "Properties of the SSH public key."
       },
       "tags": {
         "type": {
-          "$ref": "#/943"
+          "$ref": "#/945"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -12575,7 +12614,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/sshPublicKeys@2026-04-01",
     "body": {
-      "$ref": "#/941"
+      "$ref": "#/943"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12608,21 +12647,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/945"
+          "$ref": "#/947"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/946"
+          "$ref": "#/948"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/948"
+          "$ref": "#/950"
         },
         "flags": 0,
         "description": "Properties of the Capacity reservation."
@@ -12636,14 +12675,14 @@
       },
       "zones": {
         "type": {
-          "$ref": "#/953"
+          "$ref": "#/955"
         },
         "flags": 0,
         "description": "The availability zones."
       },
       "tags": {
         "type": {
-          "$ref": "#/954"
+          "$ref": "#/956"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -12684,7 +12723,7 @@
       },
       "virtualMachinesAssociated": {
         "type": {
-          "$ref": "#/949"
+          "$ref": "#/951"
         },
         "flags": 2,
         "description": "A list of all virtual machine resource ids that are associated with the capacity reservation."
@@ -12705,7 +12744,7 @@
       },
       "instanceView": {
         "type": {
-          "$ref": "#/950"
+          "$ref": "#/952"
         },
         "flags": 2,
         "description": "The Capacity reservation instance view."
@@ -12719,7 +12758,7 @@
       },
       "scheduleProfile": {
         "type": {
-          "$ref": "#/952"
+          "$ref": "#/954"
         },
         "flags": 0,
         "description": "Defines the schedule for Block and Future capacity reservations. Specifies the schedule during which capacity reservation is active and VM or VMSS resource can be allocated using reservation. For Block capacity reservations, the scheduleProfile, start, and end fields are immutable after creation. Please refer to https://aka.ms/blockcapacityreservation for more details. Minimum API version for Block capacity reservations: 2025-04-01. Future capacity reservations must use this property with only a start time, which can be changed until the ‘modifiableUntil’ time. Please refer to https://aka.ms/futurecapacityreservation for more details. Minimum API version for Future capacity reservations: 2026-04-01."
@@ -12745,7 +12784,7 @@
       },
       "statuses": {
         "type": {
-          "$ref": "#/951"
+          "$ref": "#/953"
         },
         "flags": 0,
         "description": "The resource status information."
@@ -12817,7 +12856,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/capacityReservationGroups/capacityReservations@2026-04-01",
     "body": {
-      "$ref": "#/947"
+      "$ref": "#/949"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12850,21 +12889,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/956"
+          "$ref": "#/958"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/957"
+          "$ref": "#/959"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/959"
+          "$ref": "#/961"
         },
         "flags": 0,
         "description": "Properties of the dedicated host."
@@ -12878,7 +12917,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/967"
+          "$ref": "#/969"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -12926,14 +12965,14 @@
       },
       "virtualMachines": {
         "type": {
-          "$ref": "#/960"
+          "$ref": "#/962"
         },
         "flags": 2,
         "description": "A list of references to all virtual machines in the Dedicated Host."
       },
       "licenseType": {
         "type": {
-          "$ref": "#/964"
+          "$ref": "#/966"
         },
         "flags": 0,
         "description": "Specifies the software license type that will be applied to the VMs deployed on the dedicated host. Possible values are: **None,** **Windows_Server_Hybrid,** **Windows_Server_Perpetual.** The default value is: **None.**"
@@ -12954,7 +12993,7 @@
       },
       "instanceView": {
         "type": {
-          "$ref": "#/965"
+          "$ref": "#/967"
         },
         "flags": 2,
         "description": "The dedicated host instance view."
@@ -12990,13 +13029,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/961"
-      },
-      {
-        "$ref": "#/962"
-      },
-      {
         "$ref": "#/963"
+      },
+      {
+        "$ref": "#/964"
+      },
+      {
+        "$ref": "#/965"
       }
     ]
   },
@@ -13020,7 +13059,7 @@
       },
       "statuses": {
         "type": {
-          "$ref": "#/966"
+          "$ref": "#/968"
         },
         "flags": 0,
         "description": "The resource status information."
@@ -13045,7 +13084,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/hostGroups/hosts@2026-04-01",
     "body": {
-      "$ref": "#/958"
+      "$ref": "#/960"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13078,21 +13117,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/969"
+          "$ref": "#/971"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/970"
+          "$ref": "#/972"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/891"
+          "$ref": "#/893"
         },
         "flags": 0,
         "description": "The restore point properties."
@@ -13110,7 +13149,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/restorePointCollections/restorePoints@2026-04-01",
     "body": {
-      "$ref": "#/971"
+      "$ref": "#/973"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13143,21 +13182,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/973"
+          "$ref": "#/975"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/974"
+          "$ref": "#/976"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/404"
+          "$ref": "#/405"
         },
         "flags": 0,
         "description": "Describes the properties of a Virtual Machine Scale Set Extension."
@@ -13168,7 +13207,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/virtualMachineScaleSets/extensions@2026-04-01",
     "body": {
-      "$ref": "#/975"
+      "$ref": "#/977"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13201,21 +13240,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/977"
+          "$ref": "#/979"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/978"
+          "$ref": "#/980"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/980"
+          "$ref": "#/982"
         },
         "flags": 0,
         "description": "Describes the properties of a virtual machine scale set virtual machine."
@@ -13243,21 +13282,21 @@
       },
       "resources": {
         "type": {
-          "$ref": "#/1002"
+          "$ref": "#/1004"
         },
         "flags": 2,
         "description": "The virtual machine child extension resources."
       },
       "zones": {
         "type": {
-          "$ref": "#/1003"
+          "$ref": "#/1005"
         },
         "flags": 2,
         "description": "The virtual machine zones."
       },
       "identity": {
         "type": {
-          "$ref": "#/859"
+          "$ref": "#/861"
         },
         "flags": 0,
         "description": "The identity of the virtual machine, if configured."
@@ -13271,7 +13310,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1004"
+          "$ref": "#/1006"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -13312,70 +13351,70 @@
       },
       "instanceView": {
         "type": {
-          "$ref": "#/981"
+          "$ref": "#/983"
         },
         "flags": 2,
         "description": "The virtual machine instance view."
       },
       "hardwareProfile": {
         "type": {
-          "$ref": "#/500"
+          "$ref": "#/501"
         },
         "flags": 0,
         "description": "Specifies the hardware settings for the virtual machine."
       },
       "resilientVMDeletionStatus": {
         "type": {
-          "$ref": "#/998"
+          "$ref": "#/1000"
         },
         "flags": 0,
         "description": "Specifies the resilient VM deletion status for the virtual machine."
       },
       "storageProfile": {
         "type": {
-          "$ref": "#/671"
+          "$ref": "#/673"
         },
         "flags": 0,
         "description": "Specifies the storage settings for the virtual machine disks."
       },
       "additionalCapabilities": {
         "type": {
-          "$ref": "#/434"
+          "$ref": "#/435"
         },
         "flags": 0,
         "description": "Specifies additional capabilities enabled or disabled on the virtual machine in the scale set. For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type."
       },
       "osProfile": {
         "type": {
-          "$ref": "#/729"
+          "$ref": "#/731"
         },
         "flags": 0,
         "description": "Specifies the operating system settings for the virtual machine."
       },
       "securityProfile": {
         "type": {
-          "$ref": "#/384"
+          "$ref": "#/385"
         },
         "flags": 0,
         "description": "Specifies the Security related profile settings for the virtual machine."
       },
       "networkProfile": {
         "type": {
-          "$ref": "#/731"
+          "$ref": "#/733"
         },
         "flags": 0,
         "description": "Specifies the network interfaces of the virtual machine."
       },
       "networkProfileConfiguration": {
         "type": {
-          "$ref": "#/999"
+          "$ref": "#/1001"
         },
         "flags": 0,
         "description": "Specifies the network profile configuration of the virtual machine."
       },
       "diagnosticsProfile": {
         "type": {
-          "$ref": "#/400"
+          "$ref": "#/401"
         },
         "flags": 0,
         "description": "Specifies the boot diagnostic settings state. Minimum api-version: 2015-06-15."
@@ -13410,7 +13449,7 @@
       },
       "protectionPolicy": {
         "type": {
-          "$ref": "#/1001"
+          "$ref": "#/1003"
         },
         "flags": 0,
         "description": "Specifies the protection policy of the virtual machine."
@@ -13438,14 +13477,14 @@
       },
       "interconnectBlockProfile": {
         "type": {
-          "$ref": "#/422"
+          "$ref": "#/423"
         },
         "flags": 0,
         "description": "Specifies the Interconnect Block related details of a Scale Set VM instance. Minimum api-version: 2026-03-01."
       },
       "capacityReservation": {
         "type": {
-          "$ref": "#/421"
+          "$ref": "#/422"
         },
         "flags": 0,
         "description": "Specifies information about the capacity reservation that is used to allocate the virtual machine scale set VM instance. The capacity reservation group is inherited from the parent virtual machine scale set and cannot be changed on the individual scale set VM instance. Minimum api-version: 2026-04-01."
@@ -13479,49 +13518,49 @@
       },
       "vmAgent": {
         "type": {
-          "$ref": "#/801"
+          "$ref": "#/803"
         },
         "flags": 0,
         "description": "The VM Agent running on the virtual machine."
       },
       "maintenanceRedeployStatus": {
         "type": {
-          "$ref": "#/805"
+          "$ref": "#/807"
         },
         "flags": 0,
         "description": "The Maintenance Operation status on the virtual machine."
       },
       "disks": {
         "type": {
-          "$ref": "#/982"
+          "$ref": "#/984"
         },
         "flags": 0,
         "description": "The disks information."
       },
       "extensions": {
         "type": {
-          "$ref": "#/983"
+          "$ref": "#/985"
         },
         "flags": 0,
         "description": "The extensions information."
       },
       "vmHealth": {
         "type": {
-          "$ref": "#/822"
+          "$ref": "#/824"
         },
         "flags": 2,
         "description": "The health status for the VM."
       },
       "bootDiagnostics": {
         "type": {
-          "$ref": "#/823"
+          "$ref": "#/825"
         },
         "flags": 0,
         "description": "Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. You can easily view the output of your console log. Azure also enables you to see a screenshot of the VM from the hypervisor."
       },
       "statuses": {
         "type": {
-          "$ref": "#/984"
+          "$ref": "#/986"
         },
         "flags": 0,
         "description": "The resource status information."
@@ -13563,21 +13602,21 @@
       },
       "hyperVGeneration": {
         "type": {
-          "$ref": "#/987"
+          "$ref": "#/989"
         },
         "flags": 0,
         "description": "The hypervisor generation of the Virtual Machine [V1, V2]"
       },
       "interconnectInstanceView": {
         "type": {
-          "$ref": "#/845"
+          "$ref": "#/847"
         },
         "flags": 2,
         "description": "The Interconnect runtime view of the Scale Set VM instance. Minimum api-version: 2026-03-01."
       },
       "capacityReservationType": {
         "type": {
-          "$ref": "#/993"
+          "$ref": "#/995"
         },
         "flags": 2,
         "description": "Specifies which type of capacity reservation the virtual machine scale set VM instance will consume capacity from if eligible or whether it is explicitly opted out from being associated and consuming capacity from any reserved capacity available in the subscription. Minimum api-version: 2026-04-01."
@@ -13587,13 +13626,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/811"
+      "$ref": "#/813"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/818"
+      "$ref": "#/820"
     }
   },
   {
@@ -13614,10 +13653,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/985"
+        "$ref": "#/987"
       },
       {
-        "$ref": "#/986"
+        "$ref": "#/988"
       },
       {
         "$ref": "#/0"
@@ -13648,12 +13687,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/988"
-      },
-      {
-        "$ref": "#/989"
-      },
-      {
         "$ref": "#/990"
       },
       {
@@ -13661,6 +13694,12 @@
       },
       {
         "$ref": "#/992"
+      },
+      {
+        "$ref": "#/993"
+      },
+      {
+        "$ref": "#/994"
       },
       {
         "$ref": "#/0"
@@ -13687,16 +13726,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/994"
-      },
-      {
-        "$ref": "#/995"
-      },
-      {
         "$ref": "#/996"
       },
       {
         "$ref": "#/997"
+      },
+      {
+        "$ref": "#/998"
+      },
+      {
+        "$ref": "#/999"
       },
       {
         "$ref": "#/0"
@@ -13709,14 +13748,14 @@
     "properties": {
       "networkInterfaceConfigurations": {
         "type": {
-          "$ref": "#/1000"
+          "$ref": "#/1002"
         },
         "flags": 0,
         "description": "The list of network configurations."
       },
       "interconnectGroupProfile": {
         "type": {
-          "$ref": "#/382"
+          "$ref": "#/383"
         },
         "flags": 0,
         "description": "Specifies the interconnect group profile to associate with the scale set vm instance. Minimum api-version: 2026-03-01."
@@ -13752,7 +13791,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/854"
+      "$ref": "#/856"
     }
   },
   {
@@ -13773,7 +13812,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines@2026-04-01",
     "body": {
-      "$ref": "#/979"
+      "$ref": "#/981"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13806,14 +13845,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1006"
+          "$ref": "#/1008"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1007"
+          "$ref": "#/1009"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13827,7 +13866,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1009"
+          "$ref": "#/1011"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -13860,7 +13899,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/diagnosticRunCommands@2026-04-01",
     "body": {
-      "$ref": "#/1008"
+      "$ref": "#/1010"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13893,21 +13932,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1011"
+          "$ref": "#/1013"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1012"
+          "$ref": "#/1014"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/855"
+          "$ref": "#/857"
         },
         "flags": 0,
         "description": "Describes the properties of a Virtual Machine Extension."
@@ -13925,7 +13964,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/extensions@2026-04-01",
     "body": {
-      "$ref": "#/1013"
+      "$ref": "#/1015"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -13958,14 +13997,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1015"
+          "$ref": "#/1017"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1016"
+          "$ref": "#/1018"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13979,7 +14018,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1018"
+          "$ref": "#/1020"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -14012,7 +14051,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands@2026-04-01",
     "body": {
-      "$ref": "#/1017"
+      "$ref": "#/1019"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14045,14 +14084,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1020"
+          "$ref": "#/1022"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1021"
+          "$ref": "#/1023"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14066,7 +14105,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1023"
+          "$ref": "#/1025"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -14099,7 +14138,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/virtualMachines/diagnosticRunCommands@2026-04-01",
     "body": {
-      "$ref": "#/1022"
+      "$ref": "#/1024"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14132,28 +14171,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1025"
+          "$ref": "#/1027"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1026"
+          "$ref": "#/1028"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/855"
+          "$ref": "#/857"
         },
         "flags": 0,
         "description": "Describes the properties of a Virtual Machine Extension."
       },
       "tags": {
         "type": {
-          "$ref": "#/1028"
+          "$ref": "#/1030"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -14186,7 +14225,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/virtualMachines/extensions@2026-04-01",
     "body": {
-      "$ref": "#/1027"
+      "$ref": "#/1029"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14219,28 +14258,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1030"
+          "$ref": "#/1032"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1031"
+          "$ref": "#/1033"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1033"
+          "$ref": "#/1035"
         },
         "flags": 2,
         "description": "Describes the properties of a Virtual Machine Extension Image."
       },
       "tags": {
         "type": {
-          "$ref": "#/1052"
+          "$ref": "#/1054"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -14309,28 +14348,28 @@
       },
       "releaseCategory": {
         "type": {
-          "$ref": "#/1039"
+          "$ref": "#/1041"
         },
         "flags": 2,
         "description": "Categorizes the type of change introduced (e.g., BugFix, SecurityFix, CompatibilityUpdate, NewFeature, Other)."
       },
       "urgencyLevel": {
         "type": {
-          "$ref": "#/1043"
+          "$ref": "#/1045"
         },
         "flags": 2,
         "description": "Indicates the urgency level for applying this extension update."
       },
       "runProfile": {
         "type": {
-          "$ref": "#/1048"
+          "$ref": "#/1050"
         },
         "flags": 2,
         "description": "Specifies when and how the extension should be executed."
       },
       "extensionFeatureMetadata": {
         "type": {
-          "$ref": "#/1049"
+          "$ref": "#/1051"
         },
         "flags": 2,
         "description": "Additional metadata about extension features, including compliance and capability tags."
@@ -14361,12 +14400,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1034"
-      },
-      {
-        "$ref": "#/1035"
-      },
-      {
         "$ref": "#/1036"
       },
       {
@@ -14374,6 +14407,12 @@
       },
       {
         "$ref": "#/1038"
+      },
+      {
+        "$ref": "#/1039"
+      },
+      {
+        "$ref": "#/1040"
       },
       {
         "$ref": "#/0"
@@ -14396,13 +14435,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1040"
-      },
-      {
-        "$ref": "#/1041"
-      },
-      {
         "$ref": "#/1042"
+      },
+      {
+        "$ref": "#/1043"
+      },
+      {
+        "$ref": "#/1044"
       },
       {
         "$ref": "#/0"
@@ -14429,16 +14468,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1044"
-      },
-      {
-        "$ref": "#/1045"
-      },
-      {
         "$ref": "#/1046"
       },
       {
         "$ref": "#/1047"
+      },
+      {
+        "$ref": "#/1048"
+      },
+      {
+        "$ref": "#/1049"
       },
       {
         "$ref": "#/0"
@@ -14451,7 +14490,7 @@
     "properties": {
       "extensionFeatureTags": {
         "type": {
-          "$ref": "#/1051"
+          "$ref": "#/1053"
         },
         "flags": 0,
         "description": "List of additional metadata properties (e.g., compliance flags, supported features)."
@@ -14481,7 +14520,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1050"
+      "$ref": "#/1052"
     }
   },
   {
@@ -14496,7 +14535,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/locations/publishers/artifacttypes/types/versions@2026-04-01",
     "body": {
-      "$ref": "#/1032"
+      "$ref": "#/1034"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -14526,35 +14565,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1054"
+          "$ref": "#/1056"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1055"
+          "$ref": "#/1057"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1056"
+          "$ref": "#/1058"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1058"
+          "$ref": "#/1060"
         },
         "flags": 2,
         "description": "The status of the latest virtual machine scale set rolling upgrade."
       },
       "tags": {
         "type": {
-          "$ref": "#/1070"
+          "$ref": "#/1072"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -14588,21 +14627,21 @@
       },
       "runningStatus": {
         "type": {
-          "$ref": "#/1059"
+          "$ref": "#/1061"
         },
         "flags": 2,
         "description": "Information about the current running state of the overall upgrade."
       },
       "progress": {
         "type": {
-          "$ref": "#/1069"
+          "$ref": "#/1071"
         },
         "flags": 2,
         "description": "Information about the number of virtual machine instances in each upgrade state."
       },
       "error": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/835"
         },
         "flags": 2,
         "description": "Error details for this upgrade, if there are any."
@@ -14615,7 +14654,7 @@
     "properties": {
       "code": {
         "type": {
-          "$ref": "#/1065"
+          "$ref": "#/1067"
         },
         "flags": 2,
         "description": "Code indicating the current status of the upgrade."
@@ -14629,7 +14668,7 @@
       },
       "lastAction": {
         "type": {
-          "$ref": "#/1068"
+          "$ref": "#/1070"
         },
         "flags": 2,
         "description": "The last action performed on the rolling upgrade."
@@ -14667,12 +14706,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1060"
-      },
-      {
-        "$ref": "#/1061"
-      },
-      {
         "$ref": "#/1062"
       },
       {
@@ -14680,6 +14713,12 @@
       },
       {
         "$ref": "#/1064"
+      },
+      {
+        "$ref": "#/1065"
+      },
+      {
+        "$ref": "#/1066"
       }
     ]
   },
@@ -14695,10 +14734,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1066"
+        "$ref": "#/1068"
       },
       {
-        "$ref": "#/1067"
+        "$ref": "#/1069"
       }
     ]
   },
@@ -14748,7 +14787,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/virtualMachineScaleSets/rollingUpgrades@2026-04-01",
     "body": {
-      "$ref": "#/1057"
+      "$ref": "#/1059"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -14781,21 +14820,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1072"
+          "$ref": "#/1074"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1073"
+          "$ref": "#/1075"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1075"
+          "$ref": "#/1077"
         },
         "flags": 2,
         "description": "Defines the virtual machine scale set lifecycle hook event properties."
@@ -14815,7 +14854,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/1078"
+          "$ref": "#/1080"
         },
         "flags": 0,
         "description": "Defines the type or scenario for sending a virtual machine scale set lifecycle hook event to the customer."
@@ -14843,28 +14882,28 @@
       },
       "defaultAction": {
         "type": {
-          "$ref": "#/1081"
+          "$ref": "#/1083"
         },
         "flags": 2,
         "description": "Specify the action that will be applied on the a target resource in the virtual machine scale set lifecycle hook event if the platform does not get a response from the customer for the target resource before waitUntil."
       },
       "targetResources": {
         "type": {
-          "$ref": "#/1087"
+          "$ref": "#/1089"
         },
         "flags": 0,
         "description": "List of target resources which are getting processed in the virtual machine scale set lifecycle hook event."
       },
       "additionalContext": {
         "type": {
-          "$ref": "#/1088"
+          "$ref": "#/1090"
         },
         "flags": 0,
         "description": "Additional key-value pairs set on the lifecycle hook event that gives customer some useful context/data.\nThe keys in this dictionary are specific to the lifecycle hook type. Different lifecycle hook events can have different sets of keys in the additional context depending on the lifecycle hook type.\nFor example, for a lifecycle hook event with UpgradeAutoOSScheduling type,\nthe additional context can contain the key \"priority\" that helps customer identify the priority of the Auto OS Upgrade operation triggered on the virtual machine scale set."
       },
       "state": {
         "type": {
-          "$ref": "#/1091"
+          "$ref": "#/1093"
         },
         "flags": 2,
         "description": "Specifies the state of the virtual machine scale set lifecycle hook event."
@@ -14883,10 +14922,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1076"
+        "$ref": "#/1078"
       },
       {
-        "$ref": "#/1077"
+        "$ref": "#/1079"
       },
       {
         "$ref": "#/0"
@@ -14905,10 +14944,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1079"
+        "$ref": "#/1081"
       },
       {
-        "$ref": "#/1080"
+        "$ref": "#/1082"
       },
       {
         "$ref": "#/0"
@@ -14928,7 +14967,7 @@
       },
       "actionState": {
         "type": {
-          "$ref": "#/1086"
+          "$ref": "#/1088"
         },
         "flags": 0,
         "description": "State of the lifecycle hook for the target resource. The customer can patch this property to move the lifecycle hook to a terminal state."
@@ -14951,13 +14990,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1083"
-      },
-      {
-        "$ref": "#/1084"
-      },
-      {
         "$ref": "#/1085"
+      },
+      {
+        "$ref": "#/1086"
+      },
+      {
+        "$ref": "#/1087"
       },
       {
         "$ref": "#/0"
@@ -14967,7 +15006,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1082"
+      "$ref": "#/1084"
     }
   },
   {
@@ -14995,10 +15034,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1089"
+        "$ref": "#/1091"
       },
       {
-        "$ref": "#/1090"
+        "$ref": "#/1092"
       },
       {
         "$ref": "#/0"
@@ -15009,7 +15048,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.Compute/virtualMachineScaleSets/lifecycleHookEvents@2026-04-01",
     "body": {
-      "$ref": "#/1074"
+      "$ref": "#/1076"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -15020,7 +15059,7 @@
     "resourceType": "Microsoft.Compute/availabilitySets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -15042,10 +15081,10 @@
     "resourceType": "Microsoft.Compute/availabilitySets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1094"
+      "$ref": "#/1096"
     }
   },
   {
@@ -15067,10 +15106,10 @@
     "resourceType": "Microsoft.Compute/availabilitySets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1096"
+      "$ref": "#/1098"
     }
   },
   {
@@ -15079,10 +15118,10 @@
     "resourceType": "Microsoft.Compute/availabilitySets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1096"
+      "$ref": "#/1098"
     }
   },
   {
@@ -15091,7 +15130,7 @@
     "properties": {
       "intervalLength": {
         "type": {
-          "$ref": "#/1104"
+          "$ref": "#/1106"
         },
         "flags": 1,
         "description": "Interval value in minutes used to create LogAnalytics call rate logs."
@@ -15174,16 +15213,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1100"
-      },
-      {
-        "$ref": "#/1101"
-      },
-      {
         "$ref": "#/1102"
       },
       {
         "$ref": "#/1103"
+      },
+      {
+        "$ref": "#/1104"
+      },
+      {
+        "$ref": "#/1105"
       }
     ]
   },
@@ -15193,7 +15232,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1106"
+          "$ref": "#/1108"
         },
         "flags": 2,
         "description": "LogAnalyticsOutput"
@@ -15219,10 +15258,10 @@
     "resourceType": "Microsoft.Compute/locations/logAnalytics",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/1105"
+      "$ref": "#/1107"
     },
     "input": {
-      "$ref": "#/1099"
+      "$ref": "#/1101"
     }
   },
   {
@@ -15293,10 +15332,10 @@
     "resourceType": "Microsoft.Compute/locations/logAnalytics",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/1105"
+      "$ref": "#/1107"
     },
     "input": {
-      "$ref": "#/1108"
+      "$ref": "#/1110"
     }
   },
   {
@@ -15305,7 +15344,7 @@
     "properties": {
       "instanceIds": {
         "type": {
-          "$ref": "#/1111"
+          "$ref": "#/1113"
         },
         "flags": 0,
         "description": "The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set."
@@ -15324,10 +15363,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1110"
+      "$ref": "#/1112"
     }
   },
   {
@@ -15349,10 +15388,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1113"
+      "$ref": "#/1115"
     }
   },
   {
@@ -15361,10 +15400,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1110"
+      "$ref": "#/1112"
     }
   },
   {
@@ -15373,7 +15412,7 @@
     "properties": {
       "instanceIds": {
         "type": {
-          "$ref": "#/1117"
+          "$ref": "#/1119"
         },
         "flags": 1,
         "description": "The virtual machine scale set instance ids."
@@ -15392,10 +15431,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1116"
+      "$ref": "#/1118"
     }
   },
   {
@@ -15404,10 +15443,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1116"
+      "$ref": "#/1118"
     }
   },
   {
@@ -15416,7 +15455,7 @@
     "properties": {
       "instanceIds": {
         "type": {
-          "$ref": "#/1121"
+          "$ref": "#/1123"
         },
         "flags": 1,
         "description": "The virtual machine scale set instance ids to be migrated to the target availability zone."
@@ -15442,10 +15481,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1120"
+      "$ref": "#/1122"
     }
   },
   {
@@ -15454,10 +15493,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1110"
+      "$ref": "#/1112"
     }
   },
   {
@@ -15466,10 +15505,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1110"
+      "$ref": "#/1112"
     }
   },
   {
@@ -15478,7 +15517,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -15487,10 +15526,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1110"
+      "$ref": "#/1112"
     }
   },
   {
@@ -15499,7 +15538,7 @@
     "properties": {
       "instanceIds": {
         "type": {
-          "$ref": "#/1128"
+          "$ref": "#/1130"
         },
         "flags": 0,
         "description": "The virtual machine scale set instance ids. Omitting the virtual machine scale set instance ids will result in the operation being performed on all virtual machines in the virtual machine scale set."
@@ -15527,7 +15566,7 @@
       },
       "osProfile": {
         "type": {
-          "$ref": "#/1129"
+          "$ref": "#/1131"
         },
         "flags": 0,
         "description": "Specifies information required for reimaging the non-ephemeral OS disk."
@@ -15566,10 +15605,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1127"
+      "$ref": "#/1129"
     }
   },
   {
@@ -15578,10 +15617,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1110"
+      "$ref": "#/1112"
     }
   },
   {
@@ -15590,10 +15629,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1110"
+      "$ref": "#/1112"
     }
   },
   {
@@ -15609,7 +15648,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1134"
+          "$ref": "#/1136"
         },
         "flags": 0,
         "description": "The input properties for ScaleOut"
@@ -15635,10 +15674,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1133"
+      "$ref": "#/1135"
     }
   },
   {
@@ -15647,14 +15686,14 @@
     "properties": {
       "serviceName": {
         "type": {
-          "$ref": "#/1139"
+          "$ref": "#/1141"
         },
         "flags": 1,
         "description": "The name of the service."
       },
       "action": {
         "type": {
-          "$ref": "#/1142"
+          "$ref": "#/1144"
         },
         "flags": 1,
         "description": "The action to be performed."
@@ -15673,10 +15712,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1137"
+        "$ref": "#/1139"
       },
       {
-        "$ref": "#/1138"
+        "$ref": "#/1140"
       },
       {
         "$ref": "#/0"
@@ -15695,10 +15734,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1140"
+        "$ref": "#/1142"
       },
       {
-        "$ref": "#/1141"
+        "$ref": "#/1143"
       },
       {
         "$ref": "#/0"
@@ -15711,10 +15750,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1136"
+      "$ref": "#/1138"
     }
   },
   {
@@ -15723,10 +15762,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1110"
+      "$ref": "#/1112"
     }
   },
   {
@@ -15735,7 +15774,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -15744,7 +15783,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -15753,7 +15792,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/1153"
+          "$ref": "#/1155"
         },
         "flags": 2,
         "description": "The overall success or failure status of the operation. It remains \"InProgress\" until the operation completes. At that point it will become \"Unknown\", \"Failed\", \"Succeeded\", or \"CompletedWithWarnings.\""
@@ -15795,14 +15834,14 @@
       },
       "availablePatches": {
         "type": {
-          "$ref": "#/1164"
+          "$ref": "#/1166"
         },
         "flags": 2,
         "description": "The list of patches that have been detected as available for installation."
       },
       "error": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/835"
         },
         "flags": 2,
         "description": "The errors that were encountered during execution of the operation. The details array contains the list of them."
@@ -15833,12 +15872,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1148"
-      },
-      {
-        "$ref": "#/1149"
-      },
-      {
         "$ref": "#/1150"
       },
       {
@@ -15846,6 +15879,12 @@
       },
       {
         "$ref": "#/1152"
+      },
+      {
+        "$ref": "#/1153"
+      },
+      {
+        "$ref": "#/1154"
       },
       {
         "$ref": "#/0"
@@ -15886,14 +15925,14 @@
       },
       "classifications": {
         "type": {
-          "$ref": "#/1155"
+          "$ref": "#/1157"
         },
         "flags": 2,
         "description": "The classification(s) of the patch as provided by the patch publisher."
       },
       "rebootBehavior": {
         "type": {
-          "$ref": "#/1160"
+          "$ref": "#/1162"
         },
         "flags": 2,
         "description": "Describes the reboot requirements of the patch."
@@ -15921,7 +15960,7 @@
       },
       "assessmentState": {
         "type": {
-          "$ref": "#/1163"
+          "$ref": "#/1165"
         },
         "flags": 2,
         "description": "Describes the availability of a given patch."
@@ -15954,16 +15993,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1156"
-      },
-      {
-        "$ref": "#/1157"
-      },
-      {
         "$ref": "#/1158"
       },
       {
         "$ref": "#/1159"
+      },
+      {
+        "$ref": "#/1160"
+      },
+      {
+        "$ref": "#/1161"
       },
       {
         "$ref": "#/0"
@@ -15982,10 +16021,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1161"
+        "$ref": "#/1163"
       },
       {
-        "$ref": "#/1162"
+        "$ref": "#/1164"
       },
       {
         "$ref": "#/0"
@@ -15995,7 +16034,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1154"
+      "$ref": "#/1156"
     }
   },
   {
@@ -16004,7 +16043,7 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/1147"
+      "$ref": "#/1149"
     }
   },
   {
@@ -16013,14 +16052,14 @@
     "properties": {
       "dataDisksToAttach": {
         "type": {
-          "$ref": "#/1175"
+          "$ref": "#/1177"
         },
         "flags": 0,
         "description": "The list of managed data disks to be attached."
       },
       "dataDisksToDetach": {
         "type": {
-          "$ref": "#/1179"
+          "$ref": "#/1181"
         },
         "flags": 0,
         "description": "The list of managed data disks to be detached."
@@ -16047,14 +16086,14 @@
       },
       "caching": {
         "type": {
-          "$ref": "#/1171"
+          "$ref": "#/1173"
         },
         "flags": 0,
         "description": "Specifies the caching requirements. Possible values are: **None,** **ReadOnly,** **ReadWrite.** The defaulting behavior is: **None for Standard storage. ReadOnly for Premium storage.**"
       },
       "deleteOption": {
         "type": {
-          "$ref": "#/1174"
+          "$ref": "#/1176"
         },
         "flags": 0,
         "description": "Specifies whether data disk should be deleted or detached upon VM deletion. Possible values are: **Delete.** If this value is used, the data disk is deleted when VM is deleted. **Detach.** If this value is used, the data disk is retained after VM is deleted. The default value is set to **Detach**."
@@ -16091,13 +16130,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1168"
-      },
-      {
-        "$ref": "#/1169"
-      },
-      {
         "$ref": "#/1170"
+      },
+      {
+        "$ref": "#/1171"
+      },
+      {
+        "$ref": "#/1172"
       }
     ]
   },
@@ -16113,10 +16152,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1172"
+        "$ref": "#/1174"
       },
       {
-        "$ref": "#/1173"
+        "$ref": "#/1175"
       },
       {
         "$ref": "#/0"
@@ -16126,7 +16165,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1167"
+      "$ref": "#/1169"
     },
     "minLength": 1
   },
@@ -16143,7 +16182,7 @@
       },
       "detachOption": {
         "type": {
-          "$ref": "#/1178"
+          "$ref": "#/1180"
         },
         "flags": 0,
         "description": "Supported options available for Detach of a disk from a VM. Refer to DetachOption object reference for more details."
@@ -16158,7 +16197,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1177"
+        "$ref": "#/1179"
       },
       {
         "$ref": "#/0"
@@ -16168,7 +16207,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1176"
+      "$ref": "#/1178"
     },
     "minLength": 1
   },
@@ -16178,10 +16217,10 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/671"
+      "$ref": "#/673"
     },
     "input": {
-      "$ref": "#/1166"
+      "$ref": "#/1168"
     }
   },
   {
@@ -16231,14 +16270,14 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/405"
+          "$ref": "#/406"
         },
         "flags": 2,
         "description": "parameters of the captured virtual machine"
       },
       "resources": {
         "type": {
-          "$ref": "#/1183"
+          "$ref": "#/1185"
         },
         "flags": 2,
         "description": "a list of resource items of the captured virtual machine"
@@ -16255,7 +16294,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -16264,10 +16303,10 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/1182"
+      "$ref": "#/1184"
     },
     "input": {
-      "$ref": "#/1181"
+      "$ref": "#/1183"
     }
   },
   {
@@ -16276,7 +16315,7 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -16285,7 +16324,7 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -16294,7 +16333,7 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -16310,21 +16349,21 @@
       },
       "rebootSetting": {
         "type": {
-          "$ref": "#/1192"
+          "$ref": "#/1194"
         },
         "flags": 1,
         "description": "Defines when it is acceptable to reboot a VM during a software update operation."
       },
       "windowsParameters": {
         "type": {
-          "$ref": "#/1193"
+          "$ref": "#/1195"
         },
         "flags": 0,
         "description": "Input for InstallPatches on a Windows VM, as directly received by the API"
       },
       "linuxParameters": {
         "type": {
-          "$ref": "#/1208"
+          "$ref": "#/1210"
         },
         "flags": 0,
         "description": "Input for InstallPatches on a Linux VM, as directly received by the API"
@@ -16347,13 +16386,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1189"
-      },
-      {
-        "$ref": "#/1190"
-      },
-      {
         "$ref": "#/1191"
+      },
+      {
+        "$ref": "#/1192"
+      },
+      {
+        "$ref": "#/1193"
       },
       {
         "$ref": "#/0"
@@ -16366,21 +16405,21 @@
     "properties": {
       "classificationsToInclude": {
         "type": {
-          "$ref": "#/1203"
+          "$ref": "#/1205"
         },
         "flags": 0,
         "description": "The update classifications to select when installing patches for Windows."
       },
       "kbNumbersToInclude": {
         "type": {
-          "$ref": "#/1204"
+          "$ref": "#/1206"
         },
         "flags": 0,
         "description": "Kbs to include in the patch operation"
       },
       "kbNumbersToExclude": {
         "type": {
-          "$ref": "#/1205"
+          "$ref": "#/1207"
         },
         "flags": 0,
         "description": "Kbs to exclude in the patch operation"
@@ -16401,14 +16440,14 @@
       },
       "patchNameMasksToInclude": {
         "type": {
-          "$ref": "#/1206"
+          "$ref": "#/1208"
         },
         "flags": 0,
         "description": "This is used to include patches that match the given patch name masks. Alphanumeric strings and wildcard expressions consisting of * and ? are only supported as input values in the list. Null, empty and only whitespaces strings as inputs values are not supported."
       },
       "patchNameMasksToExclude": {
         "type": {
-          "$ref": "#/1207"
+          "$ref": "#/1209"
         },
         "flags": 0,
         "description": "This is used to exclude patches that match the given patch name masks. Alphanumeric strings and wildcard expressions consisting of * and ? are only supported as input values in the list. Null, empty and only whitespaces strings as inputs values are not supported."
@@ -16451,12 +16490,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1194"
-      },
-      {
-        "$ref": "#/1195"
-      },
-      {
         "$ref": "#/1196"
       },
       {
@@ -16475,6 +16508,12 @@
         "$ref": "#/1201"
       },
       {
+        "$ref": "#/1202"
+      },
+      {
+        "$ref": "#/1203"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -16482,7 +16521,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1202"
+      "$ref": "#/1204"
     }
   },
   {
@@ -16515,21 +16554,21 @@
     "properties": {
       "classificationsToInclude": {
         "type": {
-          "$ref": "#/1213"
+          "$ref": "#/1215"
         },
         "flags": 0,
         "description": "The update classifications to select when installing patches for Linux."
       },
       "packageNameMasksToInclude": {
         "type": {
-          "$ref": "#/1214"
+          "$ref": "#/1216"
         },
         "flags": 0,
         "description": "packages to include in the patch operation. Format: packageName_packageVersion"
       },
       "packageNameMasksToExclude": {
         "type": {
-          "$ref": "#/1215"
+          "$ref": "#/1217"
         },
         "flags": 0,
         "description": "packages to exclude in the patch operation. Format: packageName_packageVersion"
@@ -16559,13 +16598,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1209"
-      },
-      {
-        "$ref": "#/1210"
-      },
-      {
         "$ref": "#/1211"
+      },
+      {
+        "$ref": "#/1212"
+      },
+      {
+        "$ref": "#/1213"
       },
       {
         "$ref": "#/0"
@@ -16575,7 +16614,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1212"
+      "$ref": "#/1214"
     }
   },
   {
@@ -16596,7 +16635,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/1222"
+          "$ref": "#/1224"
         },
         "flags": 2,
         "description": "The overall success or failure status of the operation. It remains \"InProgress\" until the operation completes. At that point it will become \"Failed\", \"Succeeded\", \"Unknown\" or \"CompletedWithWarnings.\""
@@ -16610,7 +16649,7 @@
       },
       "rebootStatus": {
         "type": {
-          "$ref": "#/1229"
+          "$ref": "#/1231"
         },
         "flags": 2,
         "description": "The reboot state of the VM following completion of the operation."
@@ -16659,7 +16698,7 @@
       },
       "patches": {
         "type": {
-          "$ref": "#/1239"
+          "$ref": "#/1241"
         },
         "flags": 2,
         "description": "The patches that were installed during the operation."
@@ -16673,7 +16712,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/835"
         },
         "flags": 2,
         "description": "The errors that were encountered during execution of the operation. The details array contains the list of them."
@@ -16704,12 +16743,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1217"
-      },
-      {
-        "$ref": "#/1218"
-      },
-      {
         "$ref": "#/1219"
       },
       {
@@ -16717,6 +16750,12 @@
       },
       {
         "$ref": "#/1221"
+      },
+      {
+        "$ref": "#/1222"
+      },
+      {
+        "$ref": "#/1223"
       },
       {
         "$ref": "#/0"
@@ -16751,12 +16790,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1223"
-      },
-      {
-        "$ref": "#/1224"
-      },
-      {
         "$ref": "#/1225"
       },
       {
@@ -16767,6 +16800,12 @@
       },
       {
         "$ref": "#/1228"
+      },
+      {
+        "$ref": "#/1229"
+      },
+      {
+        "$ref": "#/1230"
       },
       {
         "$ref": "#/0"
@@ -16807,14 +16846,14 @@
       },
       "classifications": {
         "type": {
-          "$ref": "#/1231"
+          "$ref": "#/1233"
         },
         "flags": 2,
         "description": "The classification(s) of the patch as provided by the patch publisher."
       },
       "installationState": {
         "type": {
-          "$ref": "#/1238"
+          "$ref": "#/1240"
         },
         "flags": 2,
         "description": "The state of the patch after the installation operation completed."
@@ -16855,12 +16894,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1232"
-      },
-      {
-        "$ref": "#/1233"
-      },
-      {
         "$ref": "#/1234"
       },
       {
@@ -16873,6 +16906,12 @@
         "$ref": "#/1237"
       },
       {
+        "$ref": "#/1238"
+      },
+      {
+        "$ref": "#/1239"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -16880,7 +16919,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1230"
+      "$ref": "#/1232"
     }
   },
   {
@@ -16889,10 +16928,10 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/1216"
+      "$ref": "#/1218"
     },
     "input": {
-      "$ref": "#/1188"
+      "$ref": "#/1190"
     }
   },
   {
@@ -16928,10 +16967,10 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1241"
+      "$ref": "#/1243"
     }
   },
   {
@@ -16940,7 +16979,7 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -16949,7 +16988,7 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -16958,7 +16997,7 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -16967,7 +17006,7 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -16990,7 +17029,7 @@
       },
       "osProfile": {
         "type": {
-          "$ref": "#/1129"
+          "$ref": "#/1131"
         },
         "flags": 0,
         "description": "Specifies information required for reimaging the non-ephemeral OS disk."
@@ -17003,10 +17042,10 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1247"
+      "$ref": "#/1249"
     }
   },
   {
@@ -17015,7 +17054,7 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17044,7 +17083,7 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/1250"
+      "$ref": "#/1252"
     }
   },
   {
@@ -17060,14 +17099,14 @@
       },
       "script": {
         "type": {
-          "$ref": "#/1253"
+          "$ref": "#/1255"
         },
         "flags": 0,
         "description": "Optional. The script to be executed.  When this value is given, the given script will override the default script of the command."
       },
       "parameters": {
         "type": {
-          "$ref": "#/1254"
+          "$ref": "#/1256"
         },
         "flags": 0,
         "description": "The run command parameters."
@@ -17092,7 +17131,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/1256"
+          "$ref": "#/1258"
         },
         "flags": 0,
         "description": "Run command operation response."
@@ -17111,10 +17150,10 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/1255"
+      "$ref": "#/1257"
     },
     "input": {
-      "$ref": "#/1252"
+      "$ref": "#/1254"
     }
   },
   {
@@ -17123,7 +17162,7 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17132,7 +17171,7 @@
     "resourceType": "Microsoft.Compute/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17141,7 +17180,7 @@
     "properties": {
       "encryptionType": {
         "type": {
-          "$ref": "#/1263"
+          "$ref": "#/1265"
         },
         "flags": 0,
         "description": "The encryption type of the SSH keys to be generated. See SshEncryptionTypes for possible set of values. If not provided, will default to RSA"
@@ -17160,10 +17199,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1261"
+        "$ref": "#/1263"
       },
       {
-        "$ref": "#/1262"
+        "$ref": "#/1264"
       },
       {
         "$ref": "#/0"
@@ -17203,10 +17242,10 @@
     "resourceType": "Microsoft.Compute/sshPublicKeys",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/1264"
+      "$ref": "#/1266"
     },
     "input": {
-      "$ref": "#/1260"
+      "$ref": "#/1262"
     }
   },
   {
@@ -17215,7 +17254,7 @@
     "resourceType": "Microsoft.Compute/hostGroups/hosts",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17224,7 +17263,7 @@
     "resourceType": "Microsoft.Compute/hostGroups/hosts",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17233,7 +17272,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17242,10 +17281,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/671"
+      "$ref": "#/673"
     },
     "input": {
-      "$ref": "#/1166"
+      "$ref": "#/1168"
     }
   },
   {
@@ -17254,7 +17293,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17263,7 +17302,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17272,7 +17311,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17281,7 +17320,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17311,7 +17350,7 @@
       },
       "osProfile": {
         "type": {
-          "$ref": "#/1129"
+          "$ref": "#/1131"
         },
         "flags": 0,
         "description": "Specifies information required for reimaging the non-ephemeral OS disk."
@@ -17324,10 +17363,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     },
     "input": {
-      "$ref": "#/1274"
+      "$ref": "#/1276"
     }
   },
   {
@@ -17336,7 +17375,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17345,7 +17384,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17354,7 +17393,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/1250"
+      "$ref": "#/1252"
     }
   },
   {
@@ -17363,10 +17402,10 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/1255"
+      "$ref": "#/1257"
     },
     "input": {
-      "$ref": "#/1252"
+      "$ref": "#/1254"
     }
   },
   {
@@ -17375,7 +17414,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   },
   {
@@ -17384,7 +17423,7 @@
     "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
     "apiVersion": "2026-04-01",
     "output": {
-      "$ref": "#/405"
+      "$ref": "#/406"
     }
   }
 ]

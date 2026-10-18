@@ -7,7 +7,7 @@
 * **apiVersion**: '2026-09-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'spot' (Required, DeployTimeConstant): The resource name
-* **properties**: [DiagnosticProperties](#diagnosticproperties) (ReadOnly): Contains additional properties of a diagnostic
+* **properties**: [PlacementScoresProperties](#placementscoresproperties) (ReadOnly): Contains additional properties of a placement scores resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Compute/locations/placementScores' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -34,10 +34,6 @@
 * **Input**: [SkuMixPlacementRequest](#skumixplacementrequest)
 * **Output**: [SkuMixPlacementResponse](#skumixplacementresponse)
 
-## DiagnosticProperties
-### Properties
-* **supportedResourceTypes**: string[]: Describes what are the supported resource types for a diagnostic.
-
 ## PlacementScore
 ### Properties
 * **availabilityZone**: string: The availability zone.
@@ -45,6 +41,10 @@
 * **region**: string: The region.
 * **score**: string: A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation.
 * **sku**: string: The resource's CRP virtual machine SKU size.
+
+## PlacementScoresProperties
+### Properties
+* **supportedResourceTypes**: string[]: Describes the supported resource types for placement scoring.
 
 ## ResourceSize
 ### Properties
@@ -130,8 +130,8 @@ Replaces the per-choice id that was present on placementChoices in earlier API v
 ## SpotPlacementScoresInput
 ### Properties
 * **availabilityZones**: bool: Defines if the scope is zonal or regional.
-* **desiredCount**: int: Desired instance count per region/zone based on the scope.
-* **desiredLocations**: string[]: The desired regions
+* **desiredCount**: int: Desired instance count per region/zone based on the scope. If not set, defaults to 1.
+* **desiredLocations**: string[]: The desired regions. If not set, the location from the request URI is used as the desired location. Each location in this list must be a valid Azure region.
 * **desiredSizes**: [ResourceSize](#resourcesize)[]: The desired virtual machine SKU sizes.
 
 ## SpotPlacementScoresResponse

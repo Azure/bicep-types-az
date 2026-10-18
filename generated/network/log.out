@@ -207,6 +207,21 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (4 differences):
+  - properties: {"id":{"$ref":"#/components/schemas/schemas:800","description":"Resource ID."},"name":{"$ref":"#/components/schemas/schemas:801","description":"Resource name.","readOnly":true},"type":{"$ref":"#/components/schemas/schemas:802","description":"Resource type.","readOnly":true},"etag":{"$ref":"#/components/schemas/schemas:803","description":"A unique read-only string that changes whenever the resource is updated.","readOnly":true}} => <none>
+  - x-ms-azure-resource: true => <none>
+  - title: <none> => "Proxy Resource"
+  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:6358"}]
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (9 differences):
+  - properties.id.$ref: "#/components/schemas/schemas:825" => "#/components/schemas/schemas:6359"
+  - properties.id.description: "Resource ID." => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+  - properties.id.readOnly: <none> => true
+  - properties.name.description: "Resource name." => "The name of the resource"
+  - properties.type.description: "Resource type." => "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+  - properties.location: {"$ref":"#/components/schemas/schemas:828","description":"Resource location."} => <none>
+  - properties.tags: {"$ref":"#/components/schemas/schemas:829","description":"Resource tags."} => <none>
+  - properties.systemData: <none> => {"$ref":"#/components/schemas/schemas:6386","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true}
+  - title: <none> => "Resource"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ExpressRouteLag' has a property 'id' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from ExpressRouteLag
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ExpressRouteLag' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ExpressRouteLag
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ExpressRouteLagLink' has a property 'id' that is already declared the parent schema 'SubResource' but 'readonly' has been changed -- this is not permitted. The property has been removed from ExpressRouteLagLink
@@ -215,22 +230,25 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'FirstPartyServiceTag' 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FirstPartyServiceTag' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from FirstPartyServiceTag
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ScopeConnection' has a property 'etag' that is already declared the parent schema 'ChildResource' but isn't significantly different. The property has been removed from ScopeConnection
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DdosDetectionRule' has a property 'id' that is already declared the parent schema 'SubResource' but 'readonly' has been changed -- this is not permitted. The property has been removed from DdosDetectionRule
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DdosMitigationRule' has a property 'id' that is already declared the parent schema 'SubResource' but 'readonly' has been changed -- this is not permitted. The property has been removed from DdosMitigationRule
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ReachabilityAnalysisIntent' has a property 'systemData' that is already declared the parent schema 'CommonResource' but isn't significantly different. The property has been removed from ReachabilityAnalysisIntent
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ReachabilityAnalysisRun' has a property 'systemData' that is already declared the parent schema 'CommonResource' but isn't significantly different. The property has been removed from ReachabilityAnalysisRun
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ResourceNavigationLink' has a property 'id' that is already declared the parent schema 'SubResource' but 'readonly' has been changed -- this is not permitted. The property has been removed from ResourceNavigationLink
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'VerifierWorkspace' has a property 'systemData' that is already declared the parent schema 'CommonResource' but isn't significantly different. The property has been removed from VerifierWorkspace
 warning | Modeler/MissingType | The schema 'CommonErrorAdditionalInfo-info' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-01-01/common.json#/components/schemas/CommonErrorAdditionalInfo-info
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-03-01/common.json#/components/schemas/CommonErrorAdditionalInfo-info
 warning | Modeler/MissingType | The schema 'paths·ev2xrn·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-profiles-profilename-accessrules-accessrulename-reconcile·post·requestbody·content·application-json·schema' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-01-01/networkSecurityPerimeter.json#/components/schemas/paths·ev2xrn·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-profiles-profilename-accessrules-accessrulename-reconcile·post·requestbody·content·application-json·schema
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-03-01/networkSecurityPerimeter.json#/components/schemas/paths·ev2xrn·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-profiles-profilename-accessrules-accessrulename-reconcile·post·requestbody·content·application-json·schema
 warning | Modeler/MissingType | The schema 'paths·1yy5htq·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-profiles-profilename-accessrules-accessrulename-reconcile·post·responses·200·content·application-json·schema' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-01-01/networkSecurityPerimeter.json#/components/schemas/paths·1yy5htq·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-profiles-profilename-accessrules-accessrulename-reconcile·post·responses·200·content·application-json·schema
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-03-01/networkSecurityPerimeter.json#/components/schemas/paths·1yy5htq·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-profiles-profilename-accessrules-accessrulename-reconcile·post·responses·200·content·application-json·schema
 warning | Modeler/MissingType | The schema 'paths·p1vjj0·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-resourceassociations-associationname-reconcile·post·requestbody·content·application-json·schema' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-01-01/networkSecurityPerimeter.json#/components/schemas/paths·p1vjj0·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-resourceassociations-associationname-reconcile·post·requestbody·content·application-json·schema
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-03-01/networkSecurityPerimeter.json#/components/schemas/paths·p1vjj0·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-resourceassociations-associationname-reconcile·post·requestbody·content·application-json·schema
 warning | Modeler/MissingType | The schema 'paths·1gapu3b·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-resourceassociations-associationname-reconcile·post·responses·200·content·application-json·schema' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-01-01/networkSecurityPerimeter.json#/components/schemas/paths·1gapu3b·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-resourceassociations-associationname-reconcile·post·responses·200·content·application-json·schema
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-03-01/networkSecurityPerimeter.json#/components/schemas/paths·1gapu3b·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-resourceassociations-associationname-reconcile·post·responses·200·content·application-json·schema
 warning | Modeler/MissingType | The schema 'BastionActiveSession-startTime' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-01-01/virtualNetwork.json#/components/schemas/BastionActiveSession-startTime
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-03-01/virtualNetwork.json#/components/schemas/BastionActiveSession-startTime
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
 warning | Skipping ExpressRouteCircuits_GetCircuitLinkFailoverSingleTestDetails due to required query parameter "linkType"
 warning | Skipping ExpressRouteCircuits_GetCircuitLinkFailoverSingleTestDetails due to required query parameter "circuitTestCategory"
 warning | Skipping ExpressRouteCircuits_GetCircuitLinkFailoverSingleTestDetails due to required query parameter "failoverTestId"
@@ -2045,6 +2063,183 @@ warning | Resource action stop under path '/subscriptions/{subscriptionId}/resou
 warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/connectionMonitors/{connectionMonitorName}/start' has no response schema. Returning 'any'.
 warning | Resource action resetvpnclientsharedkey under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}/resetvpnclientsharedkey' has no response schema. Returning 'any'.
 warning | Resource action vpnConfiguration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{virtualWANName}/vpnConfiguration' has no response schema. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.54.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.55.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.56.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.58.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.59.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.69.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.70.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.71.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.72.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.73.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.74.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.75.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.76.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.77.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.78.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.79.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.80.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.81.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.82.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.83.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.84.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.85.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.86.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.87.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.88.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.89.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.90.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.91.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.92.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.93.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.94.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ExpressRouteLag' has a property 'id' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from ExpressRouteLag
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ExpressRouteLag' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ExpressRouteLag
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ExpressRouteLagLink' has a property 'id' that is already declared the parent schema 'SubResource' but 'readonly' has been changed -- this is not permitted. The property has been removed from ExpressRouteLagLink
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ExpressRouteLagMember' has a property 'id' that is already declared the parent schema 'SubResource' but 'readonly' has been changed -- this is not permitted. The property has been removed from ExpressRouteLagMember
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'FirstPartyServiceTag' has a property 'id' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from FirstPartyServiceTag
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'FirstPartyServiceTag' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from FirstPartyServiceTag
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ScopeConnection' has a property 'etag' that is already declared the parent schema 'ChildResource' but isn't significantly different. The property has been removed from ScopeConnection
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DdosDetectionRule' has a property 'id' that is already declared the parent schema 'SubResource' but 'readonly' has been changed -- this is not permitted. The property has been removed from DdosDetectionRule
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ReachabilityAnalysisIntent' has a property 'systemData' that is already declared the parent schema 'CommonResource' but isn't significantly different. The property has been removed from ReachabilityAnalysisIntent
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ReachabilityAnalysisRun' has a property 'systemData' that is already declared the parent schema 'CommonResource' but isn't significantly different. The property has been removed from ReachabilityAnalysisRun
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ResourceNavigationLink' has a property 'id' that is already declared the parent schema 'SubResource' but 'readonly' has been changed -- this is not permitted. The property has been removed from ResourceNavigationLink
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'VerifierWorkspace' has a property 'systemData' that is already declared the parent schema 'CommonResource' but isn't significantly different. The property has been removed from VerifierWorkspace
+warning | Modeler/MissingType | The schema 'CommonErrorAdditionalInfo-info' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-01-01/common.json#/components/schemas/CommonErrorAdditionalInfo-info
+warning | Modeler/MissingType | The schema 'paths·ev2xrn·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-profiles-profilename-accessrules-accessrulename-reconcile·post·requestbody·content·application-json·schema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-01-01/networkSecurityPerimeter.json#/components/schemas/paths·ev2xrn·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-profiles-profilename-accessrules-accessrulename-reconcile·post·requestbody·content·application-json·schema
+warning | Modeler/MissingType | The schema 'paths·1yy5htq·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-profiles-profilename-accessrules-accessrulename-reconcile·post·responses·200·content·application-json·schema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-01-01/networkSecurityPerimeter.json#/components/schemas/paths·1yy5htq·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-profiles-profilename-accessrules-accessrulename-reconcile·post·responses·200·content·application-json·schema
+warning | Modeler/MissingType | The schema 'paths·p1vjj0·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-resourceassociations-associationname-reconcile·post·requestbody·content·application-json·schema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-01-01/networkSecurityPerimeter.json#/components/schemas/paths·p1vjj0·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-resourceassociations-associationname-reconcile·post·requestbody·content·application-json·schema
+warning | Modeler/MissingType | The schema 'paths·1gapu3b·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-resourceassociations-associationname-reconcile·post·responses·200·content·application-json·schema' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-01-01/networkSecurityPerimeter.json#/components/schemas/paths·1gapu3b·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-networksecurityperimeters-networksecurityperimetername-resourceassociations-associationname-reconcile·post·responses·200·content·application-json·schema
+warning | Modeler/MissingType | The schema 'BastionActiveSession-startTime' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/Network/stable/2026-01-01/virtualNetwork.json#/components/schemas/BastionActiveSession-startTime
+warning | Skipping ExpressRouteCircuits_GetCircuitLinkFailoverSingleTestDetails due to required query parameter "linkType"
+warning | Skipping ExpressRouteCircuits_GetCircuitLinkFailoverSingleTestDetails due to required query parameter "circuitTestCategory"
+warning | Skipping ExpressRouteCircuits_GetCircuitLinkFailoverSingleTestDetails due to required query parameter "failoverTestId"
+warning | Skipping ExpressRouteCircuits_StartCircuitLinkFailoverTest due to required query parameter "linkType"
+warning | Skipping ExpressRouteCircuits_StartCircuitLinkFailoverTest due to required query parameter "circuitTestCategory"
+warning | Skipping CheckDnsNameAvailability due to required query parameter "domainNameLabel"
+warning | Skipping VirtualNetworkGateways_GetAdvertisedRoutes due to required query parameter "peer"
+warning | Skipping VirtualNetworkGateways_GetFailoverAllTestDetails due to required query parameter "type"
+warning | Skipping VirtualNetworkGateways_GetFailoverAllTestDetails due to required query parameter "fetchLatest"
+warning | Skipping VirtualNetworkGateways_GetFailoverSingleTestDetails due to required query parameter "peeringLocation"
+warning | Skipping VirtualNetworkGateways_GetFailoverSingleTestDetails due to required query parameter "failoverTestId"
+warning | Skipping VirtualNetworkGateways_StartExpressRouteSiteFailoverSimulation due to required query parameter "peeringLocation"
+warning | Skipping VirtualNetworks_CheckIPAddressAvailability due to required query parameter "ipAddress"
+warning | Skipping ExpressRouteGateways_GetFailoverSingleTestDetails due to required query parameter "peeringLocation"
+warning | Skipping ExpressRouteGateways_GetFailoverSingleTestDetails due to required query parameter "failoverTestId"
+warning | Skipping ExpressRouteGateways_StartSiteFailoverTest due to required query parameter "peeringLocation"
+warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCircuits/{circuitName}/peerings/{peeringName}/arpTables/{devicePath}': Found mismatch between type segments (3) and name segments (2)
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCircuits/{circuitName}/peerings/{peeringName}/routeTables/{devicePath}': Found mismatch between type segments (3) and name segments (2)
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCircuits/{circuitName}/peerings/{peeringName}/routeTablesSummary/{devicePath}': Found mismatch between type segments (3) and name segments (2)
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCrossConnections/{crossConnectionName}/peerings/{peeringName}/arpTables/{devicePath}': Found mismatch between type segments (3) and name segments (2)
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCrossConnections/{crossConnectionName}/peerings/{peeringName}/routeTables/{devicePath}': Found mismatch between type segments (3) and name segments (2)
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCrossConnections/{crossConnectionName}/peerings/{peeringName}/routeTablesSummary/{devicePath}': Found mismatch between type segments (3) and name segments (2)
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey/reset': Found mismatch between type segments (2) and name segments (1)
+warning | Resource action start under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}/start' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}/stop' has no response schema. Returning 'any'.
+warning | Resource action moveIpConfigurations under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/moveIpConfigurations' has no response schema. Returning 'any'.
+warning | Resource action deleteShareableLinks under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts/{bastionHostName}/deleteShareableLinks' has no response schema. Returning 'any'.
+warning | Resource action deleteShareableLinksByToken under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts/{bastionHostName}/deleteShareableLinksByToken' has no response schema. Returning 'any'.
+warning | Resource action vpnConfiguration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{virtualWANName}/vpnConfiguration' has no response schema. Returning 'any'.
+warning | Resource action packetCapture under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/azureFirewalls/{azureFirewallName}/packetCapture' has no response schema. Returning 'any'.
+warning | Resource action deploy under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/firewallPolicies/{firewallPolicyName}/deploy' has no response schema. Returning 'any'.
+warning | Resource action setLoadBalancerFrontendPublicIpAddresses under path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/locations/{location}/setLoadBalancerFrontendPublicIpAddresses' has no response schema. Returning 'any'.
+warning | Resource action resetconnection under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/resetconnection' has no response schema. Returning 'any'.
+warning | Resource action abortMigration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}/abortMigration' has no response schema. Returning 'any'.
+warning | Resource action commitMigration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}/commitMigration' has no response schema. Returning 'any'.
+warning | Resource action disconnectVirtualNetworkGatewayVpnConnections under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}/disconnectVirtualNetworkGatewayVpnConnections' has no response schema. Returning 'any'.
+warning | Resource action executeMigration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}/executeMigration' has no response schema. Returning 'any'.
+warning | Resource action prepareMigration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}/prepareMigration' has no response schema. Returning 'any'.
+warning | Resource action resetvpnclientsharedkey under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}/resetvpnclientsharedkey' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/connectionMonitors/{connectionMonitorName}/stop' has no response schema. Returning 'any'.
+warning | Resource action stop under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/packetCaptures/{packetCaptureName}/stop' has no response schema. Returning 'any'.
+warning | Resource action abortMigration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/abortMigration' has no response schema. Returning 'any'.
+warning | Resource action commitMigration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/commitMigration' has no response schema. Returning 'any'.
+warning | Resource action executeMigration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/executeMigration' has no response schema. Returning 'any'.
+warning | Resource action prepareMigration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/prepareMigration' has no response schema. Returning 'any'.
+warning | Resource action prepareNetworkPolicies under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}/prepareNetworkPolicies' has no response schema. Returning 'any'.
+warning | Resource action unprepareNetworkPolicies under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}/unprepareNetworkPolicies' has no response schema. Returning 'any'.
+warning | Resource action disconnectP2sVpnConnections under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/p2svpnGateways/{p2sVpnGatewayName}/disconnectP2sVpnConnections' has no response schema. Returning 'any'.
+warning | Resource action resetconnection under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnGateways/{gatewayName}/vpnConnections/{connectionName}/vpnLinkConnections/{linkConnectionName}/resetconnection' has no response schema. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.

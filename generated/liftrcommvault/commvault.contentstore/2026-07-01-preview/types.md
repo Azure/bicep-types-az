@@ -225,10 +225,10 @@
 ### Properties
 * **backupActivityStatus**: string (ReadOnly): The backup activity status indicating if backup is enabled or not on the protection group
 * **dataSourceType**: 'AzureVM' (Required): The datasource type of Commvault Protection Group
-* **lastBackUpTime**: int (ReadOnly): The Commvault Protection Group backup time
-* **numberOfProtectedItems**: int (ReadOnly): The number of ProtectedItems under the Protection Group
+* **lastBackUpTime**: int (Required, ReadOnly): The Commvault Protection Group backup time
+* **numberOfProtectedItems**: int (Required, ReadOnly): The number of ProtectedItems under the Protection Group
 * **plan**: string (Required): The Commvault Plan to be associated with the Protection Group
-* **protectionStatus**: 'all' | 'backed_up_with_error' | 'discovered' | 'not_protected' | 'pending' | 'protected' | string (ReadOnly): The protection group schedule
+* **protectionStatus**: 'all' | 'backed_up_with_error' | 'discovered' | 'not_protected' | 'pending' | 'protected' | string (Required, ReadOnly): The protection group schedule
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
 * **resources**: [ProtectionGroupResources](#protectiongroupresources) (Required): The resources to be protected under Protection Group
 

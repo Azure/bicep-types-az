@@ -87,11 +87,9 @@
 ### Properties
 * **apiVersion**: '2026-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[0-9a-zA-Z][a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificatePolicyProperties](#certificatepolicyproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeviceRegistry/namespaces/certificateAuthorities/certificatePolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/namespaces/devices@2026-11-01
@@ -1051,11 +1049,6 @@
 ### Properties
 * **path**: string (Required): The topic path for messages published to an MQTT broker.
 * **retain**: 'Keep' | 'Never' | string: When set to 'Keep', messages published to an MQTT broker will have the retain flag set. Default: 'Never'.
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

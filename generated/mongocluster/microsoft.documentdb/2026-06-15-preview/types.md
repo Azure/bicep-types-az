@@ -170,7 +170,7 @@
 * **encryption**: [EncryptionProperties](#encryptionproperties): The encryption configuration for the cluster. Depends on identity being configured.
 * **highAvailability**: [HighAvailabilityProperties](#highavailabilityproperties): The high availability properties of the mongo cluster.
 * **infrastructureVersion**: string (ReadOnly): The infrastructure version the cluster is provisioned on.
-* **networkBypassMode**: 'AzureCosmosDB' | 'None' | string: The network bypass mode for the cluster. Setting to 'AzureCosmosDB' allows Azure Cosmos DB service to bypass network restrictions.
+* **networkBypassMode**: 'AzureCosmosDB' | 'None' | string: The network bypass mode for the cluster. Setting to 'AzureCosmosDB' allows the Azure Cosmos DB service to bypass network restrictions.
 * **previewFeatures**: ('GeoReplicas' | string)[]: List of private endpoint connections.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections.
 * **provisioningState**: 'Canceled' | 'Dropping' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the mongo cluster.

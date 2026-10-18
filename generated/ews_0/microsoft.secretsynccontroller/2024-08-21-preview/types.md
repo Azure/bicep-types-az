@@ -58,7 +58,7 @@
 ## SecretSyncProperties
 ### Properties
 * **forceSynchronization**: string {maxLength: 253, pattern: "^[A-Za-z0-9]([-A-Za-z0-9]+([-._a-zA-Z0-9]?[A-Za-z0-9])*)?"}: ForceSynchronization can be used to force the secret synchronization. The secret synchronization is triggered by changing the value in this field. This field is not used to resolve synchronization conflicts.
-* **kubernetesSecretType**: 'Opaque' | 'kubernetes.io/tls' | string (Required): Type specifies the type of the Kubernetes secret object, e.g. "Opaque" or"kubernetes.io/tls". The controller must have permission to create secrets of the specified type.
+* **kubernetesSecretType**: 'Opaque' | 'kubernetes.io/tls' | string (Required): Type specifies the type of the Kubernetes secret object, e.g. `Opaque` or `kubernetes.io/tls`. The controller must have permission to create secrets of the specified type.
 * **objectSecretMapping**: [KubernetesSecretObjectMapping](#kubernetessecretobjectmapping)[] {minLength: 1} (Required): An array of SecretObjectData that maps secret data from the external secret provider to the Kubernetes secret. Each entry specifies the source secret in the external provider and the corresponding key in the Kubernetes secret.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the SecretSync instance.
 * **secretProviderClassName**: string {minLength: 1, maxLength: 253, pattern: "^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$"} (Required): SecretProviderClassName specifies the name of the SecretProviderClass resource, which contains the information needed to access the cloud provider secret store.
