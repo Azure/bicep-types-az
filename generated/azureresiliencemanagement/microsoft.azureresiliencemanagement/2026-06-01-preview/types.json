@@ -1736,7 +1736,7 @@
           "$ref": "#/163"
         },
         "flags": 2,
-        "description": "Provisioning state"
+        "description": "The provisioning state of the goal assignment."
       },
       "errorDetails": {
         "type": {
@@ -1774,14 +1774,14 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The arm id of the service level indicator resource"
+        "description": "The ARM resource ID of the service-level indicator resource."
       },
       "serviceLevelObjectiveResourceId": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The arm id of the service level object resource"
+        "description": "The ARM resource ID of the service-level objective resource."
       }
     }
   },
@@ -5279,7 +5279,7 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "Arm Id of resource under the SG for which the extension resource is maintained."
+        "description": "The fully qualified ARM resource ID represented by this goal resource."
       },
       "highAvailabilityGoalParticipation": {
         "type": {
@@ -5300,7 +5300,7 @@
           "$ref": "#/473"
         },
         "flags": 0,
-        "description": "Zonal resiliency posture (participation, attestation, exclusion reason, and user confirmations) for the Arm resource."
+        "description": "The zonal resiliency posture for the ARM resource, including participation, attestation, exclusion reason, and user confirmations."
       },
       "disasterRecoveryGoalParticipation": {
         "type": {
@@ -5349,7 +5349,7 @@
           "$ref": "#/525"
         },
         "flags": 2,
-        "description": "Provisioning state"
+        "description": "The provisioning state of the goal resource."
       }
     }
   },
@@ -5406,28 +5406,28 @@
           "$ref": "#/476"
         },
         "flags": 0,
-        "description": "Flag which depicts whether the Arm resource is excluded for resiliency recommendation."
+        "description": "Indicates whether the ARM resource is excluded from resiliency recommendations."
       },
       "attestationStatus": {
         "type": {
           "$ref": "#/479"
         },
         "flags": 0,
-        "description": "Flag which depicts whether the Arm resource is manually attested for resiliency recommendation."
+        "description": "Indicates whether the ARM resource's resiliency posture is manually attested."
       },
       "exclusionReason": {
         "type": {
           "$ref": "#/483"
         },
         "flags": 2,
-        "description": "Reason for exclusion from resiliency goals."
+        "description": "The reason the ARM resource is excluded from resiliency goals."
       },
       "userConfirmation": {
         "type": {
           "$ref": "#/496"
         },
         "flags": 0,
-        "description": "List of user confirmations for resiliency solutions."
+        "description": "User confirmations for resiliency solutions recommended for the ARM resource."
       }
     }
   },
@@ -8371,7 +8371,7 @@
           "$ref": "#/751"
         },
         "flags": 1,
-        "description": "List of update goal resource."
+        "description": "The goal resources to update."
       }
     }
   },
@@ -8431,7 +8431,7 @@
           "$ref": "#/753"
         },
         "flags": 1,
-        "description": "List of update goal resource."
+        "description": "The updated goal resources."
       }
     }
   },

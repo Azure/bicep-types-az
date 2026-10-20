@@ -43,7 +43,7 @@
 ### Properties
 * **apiVersion**: '2026-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9-]{1,90}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ValidationTestRunProperties](#validationtestrunproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.PlatformValidation/cloudValidations/validationExecutionPlans/executionPlanRuns/validationTestRuns' (ReadOnly, DeployTimeConstant): The resource type

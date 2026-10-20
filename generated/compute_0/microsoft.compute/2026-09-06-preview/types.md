@@ -756,7 +756,7 @@
 
 ## ResourceAttachRequest
 ### Properties
-* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The list of resources to attach to the scheduled action.
+* **resources**: [ScheduledActionResourceInput](#scheduledactionresourceinput)[] (Required): The list of resources to attach to the recurring bulk action.
 
 ## ResourceDetachRequest
 ### Properties
@@ -841,8 +841,8 @@
 * **actionType**: 'Deallocate' | 'Hibernate' | 'Start' | string (Required): The operation performed on the targeted resources.
 * **disabled**: bool: Indicates whether new occurrences are disabled.
 * **endTime**: string: The date and time, including UTC offset, after which no new occurrences are scheduled.
-* **notificationSettings**: [NotificationProperties](#notificationproperties)[] (Required): Notification settings that apply to the scheduled action.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Read-only. The provisioning state of the scheduled action.
+* **notificationSettings**: [NotificationProperties](#notificationproperties)[] (Required): Notification settings that apply to the recurring bulk action.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Read-only. The provisioning state of the recurring bulk action.
 * **resourceType**: 'VirtualMachine' | 'VirtualMachineScaleSet' | string (Required): The type of compute resource targeted by the action.
 * **schedule**: [ScheduledActionsSchedule](#scheduledactionsschedule) (Required): The recurring schedule.
 * **startTime**: string (Required): The date and time, including UTC offset, when the schedule becomes active.
@@ -869,7 +869,7 @@
 * **requestedDaysOfTheMonth**: (int {minValue: 1, maxValue: 31})[]: The calendar days when the action runs. An empty array means every day of the month.
 * **requestedMonths**: ('All' | 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string)[]: The months when the action runs. An empty array means every month.
 * **requestedWeekDays**: ('All' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: The days of the week when the action runs. An empty array means every day of the week.
-* **scheduledTime**: string (Required): The local time of day when the scheduled action runs.
+* **scheduledTime**: string (Required): The local time of day when the recurring bulk action runs.
 * **timeZone**: string (Required): The time zone used to interpret the scheduled time.
 
 ## ScheduledEventsAdditionalPublishingTargets

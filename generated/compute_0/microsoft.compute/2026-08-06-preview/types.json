@@ -5585,7 +5585,7 @@
           "$ref": "#/488"
         },
         "flags": 1,
-        "description": "Notification settings that apply to the scheduled action."
+        "description": "Notification settings that apply to the recurring bulk action."
       },
       "disabled": {
         "type": {
@@ -5599,7 +5599,7 @@
           "$ref": "#/493"
         },
         "flags": 2,
-        "description": "Read-only. The provisioning state of the scheduled action."
+        "description": "Read-only. The provisioning state of the recurring bulk action."
       }
     }
   },
@@ -5663,7 +5663,7 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The local time of day when the scheduled action runs."
+        "description": "The local time of day when the recurring bulk action runs."
       },
       "timeZone": {
         "type": {
@@ -7137,7 +7137,7 @@
           "$ref": "#/572"
         },
         "flags": 1,
-        "description": "The list of resources to attach to the scheduled action."
+        "description": "The list of resources to attach to the recurring bulk action."
       }
     }
   },

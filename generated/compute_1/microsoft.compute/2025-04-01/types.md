@@ -1232,7 +1232,7 @@ its default value is true
 ## RestorePointInstanceView
 ### Properties
 * **diskRestorePoints**: [DiskRestorePointInstanceView](#diskrestorepointinstanceview)[]: The disk restore points information.
-* **statuses**: [InstanceViewStatus](#instanceviewstatus)[]: The resource status information.
+* **statuses**: [InstanceViewStatus](#instanceviewstatus)[]: The aggregate status information for the restore point. The list may include separate aggregate entries for replication and, in supported API versions, Instant Access, as applicable. For more information about Instant Access, see [Use virtual machine restore points](https://learn.microsoft.com/azure/virtual-machines/virtual-machines-create-restore-points#instant-access).
 
 ## RestorePointProperties
 ### Properties

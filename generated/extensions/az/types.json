@@ -9,10 +9,6 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Astronomer.Astro"
-  },
-  {
-    "$type": "StringLiteralType",
     "value": "Commvault.ContentStore"
   },
   {
@@ -2000,16 +1996,13 @@
       },
       {
         "$ref": "#/284"
-      },
-      {
-        "$ref": "#/285"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/286"
+      "$ref": "#/285"
     }
   },
   {
@@ -2018,7 +2011,7 @@
     "properties": {
       "providers": {
         "type": {
-          "$ref": "#/287"
+          "$ref": "#/286"
         },
         "flags": 0,
         "description": "The Azure provider namespaces to register for the az extension."

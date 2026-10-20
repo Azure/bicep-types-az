@@ -1407,7 +1407,7 @@ Possible values include: 'Update', 'Fail'
 ### Properties
 * **smbAccessBasedEnumeration**: 'Disabled' | 'Enabled' | string: Enables access-based enumeration share property for SMB Shares. Only applicable for SMB/DualProtocol volume
 * **smbEncryption**: 'Disabled' | 'Enabled' | string: Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol cache.
-* **smbNonBrowsable**: 'Disabled' | 'Enabled' | string: Enables non-browsable property for SMB Shares. Only applicable for SMB/DualProtocol volume
+* **smbNonBrowsable**: 'Disabled' | 'Enabled' | string: Enables non-browsable property for SMB Shares. Only applicable for SMB/DualProtocol cache
 
 ## SnapshotPolicyProperties
 ### Properties

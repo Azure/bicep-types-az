@@ -5,7 +5,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.EdgeOperator/systemReadiness"
+    "value": "Microsoft.EdgeOperator/observabilityConfiguration"
   },
   {
     "$type": "StringType"
@@ -16,7 +16,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.EdgeOperator/systemReadiness",
+    "name": "Microsoft.EdgeOperator/observabilityConfiguration",
     "properties": {
       "id": {
         "type": {
@@ -55,7 +55,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/11"
+          "$ref": "#/10"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -64,70 +64,94 @@
   },
   {
     "$type": "ObjectType",
-    "name": "SystemReadinessProperties",
+    "name": "ObservabilityConfigurationProperties",
     "properties": {
-      "systemReady": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 3,
-        "description": "Indicates whether the system is ready. `true` when every readiness category has reported 100 percent."
-      },
-      "categories": {
-        "type": {
-          "$ref": "#/10"
-        },
-        "flags": 3,
-        "description": "The readiness state reported for each provider-defined category."
-      }
-    }
-  },
-  {
-    "$type": "BooleanType"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SystemReadinessCategory",
-    "properties": {
-      "categoryName": {
+      "resourceGroup": {
         "type": {
           "$ref": "#/2"
         },
-        "flags": 1,
-        "description": "The provider-defined name of the readiness category (for example, `services`, `diagnostics`, `identity`, `networking`). Categories may be added, renamed, or removed without an API-version change and must be treated as an open string."
+        "flags": 2,
+        "description": "The resource group that owns the observability configuration."
       },
-      "readinessPercentage": {
+      "tenantId": {
         "type": {
-          "$ref": "#/8"
+          "$ref": "#/2"
         },
-        "flags": 1,
-        "description": "The readiness percentage reported by the category, from 0 (not ready) to 100 (fully ready)."
+        "flags": 2,
+        "description": "The Microsoft Entra tenant ID associated with the observability configuration."
       },
-      "errorMessageDetails": {
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Azure region where the observability configuration applies."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The customer Azure subscription ID associated with observability onboarding. This is distinct from the operator subscription ID in the request URI path."
+      },
+      "servicePrincipalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Microsoft Entra application ID used for observability authentication."
+      },
+      "cloud": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The cloud environment name. Defaults to `AzureCloud` when omitted by the service."
+      },
+      "originalLocation": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The original Azure region when the service remapped the requested location."
+      },
+      "provisioningState": {
         "type": {
           "$ref": "#/9"
         },
-        "flags": 1,
-        "description": "The error messages reported for the category. The list is empty when no specific errors are available."
+        "flags": 2,
+        "description": "The provisioning state of the resource."
       }
     }
   },
   {
-    "$type": "IntegerType",
-    "minValue": 0,
-    "maxValue": 100
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
   },
   {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/2"
-    }
+    "$type": "StringLiteralType",
+    "value": "Failed"
   },
   {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/7"
-    }
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
   },
   {
     "$type": "ObjectType",
@@ -142,7 +166,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/16"
+          "$ref": "#/15"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -163,7 +187,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/21"
+          "$ref": "#/20"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -197,6 +221,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/11"
+      },
+      {
         "$ref": "#/12"
       },
       {
@@ -204,9 +231,6 @@
       },
       {
         "$ref": "#/14"
-      },
-      {
-        "$ref": "#/15"
       },
       {
         "$ref": "#/2"
@@ -233,6 +257,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/16"
+      },
+      {
         "$ref": "#/17"
       },
       {
@@ -242,16 +269,13 @@
         "$ref": "#/19"
       },
       {
-        "$ref": "#/20"
-      },
-      {
         "$ref": "#/2"
       }
     ]
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.EdgeOperator/systemReadiness@2026-06-01-preview",
+    "name": "Microsoft.EdgeOperator/observabilityConfiguration@2026-06-01-preview",
     "body": {
       "$ref": "#/4"
     },
