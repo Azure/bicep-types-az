@@ -68,37 +68,52 @@ npm run generate -- --specs-dir ../../../azure-rest-api-specs --path-prefix <fol
 
 - `--path-prefix` scopes generation to one top-level folder and is much faster for iteration.
 - This does **not** clean up stale/superseded folders (that only happens on a full run without
-  `--path-prefix` — see Step 4).
+  `--path-prefix` — see Step 5).
 - Output goes to `generated/_tsp/<folder>/...`. Check `generated/_tsp/<folder>/log.out` for the
   TypeSpec compiler's own output/warnings, and watch the console output of the `generate` command
   itself for `WARNING: Found duplicate type/function "..."` — these indicate the new TypeSpec output
-  overlaps with something still being produced elsewhere (expected during migration; see Step 4).
+  overlaps with something still being produced elsewhere (expected during migration; see Step 5).
 - If generation throws `Unable to find .../dist. Did you forget to run 'npm run build'?`, go back to
   Step 2.
 
-## Step 4 — Remove overlapping AutoRest-generated API versions
+## Step 4 — Move AutoRest-generated schemas to `_legacy`
+
+From the repository root, move the folder's existing AutoRest output into `generated/_legacy/`,
+preserving its folder name and provider/API-version structure:
+
+```sh
+mkdir -p generated/_legacy
+mv generated/<folder> generated/_legacy/<folder>
+```
+
+If the service has multiple AutoRest output folders (for example, `<folder>_0`, `<folder>_1`), move
+each one into `generated/_legacy/` as well. If a destination already exists, reconcile its contents
+instead of nesting or overwriting the existing folder. Keep API versions not yet covered by
+TypeSpec in `_legacy` so they continue to ship; remove superseded versions in Step 5.
+
+## Step 5 — Remove overlapping AutoRest-generated API versions
 
 Once a folder is TypeSpec-enabled, AutoRest is no longer run for it, but any previously-generated
-`generated/<folder>/...` output is left on disk until a full (no `--path-prefix`) generation run
-prunes it as "stale". Don't rely on that implicitly — explicitly reconcile the two folders:
+output has been moved to `generated/_legacy/<folder>/...` in Step 4. Explicitly reconcile the
+legacy and TypeSpec folders:
 
-1. Compare `generated/<folder>/` (old AutoRest output) against `generated/_tsp/<folder>/` (new
+1. Compare `generated/_legacy/<folder>/` (old AutoRest output) against `generated/_tsp/<folder>/` (new
    TypeSpec output), API version by API version.
 2. For every `<provider>/<api-version>` pair now produced by TypeSpec, delete the corresponding
-   folder under `generated/<folder>/` — it's superseded and would otherwise just be dead weight
+  folder under `generated/_legacy/<folder>/` — it's superseded and would otherwise just be dead weight
    (or a silent duplicate warning) in the repo.
 3. If TypeSpec does **not** yet cover every API version AutoRest used to produce for this folder
    (partial migration), leave the AutoRest folders for the *uncovered* API versions in place — they
-   still need `generated/<folder>/...` to exist so the old output continues to ship. Only delete the
+  still need `generated/_legacy/<folder>/...` to exist so the old output continues to ship. Only delete the
    API versions that TypeSpec now generates.
 4. Re-run `npm run generate -- --specs-dir ... --path-prefix <folder>` and confirm the "Found
    duplicate" warnings for this folder are gone, and `generated/index.json` only references
    `_tsp/<folder>/...` paths for the migrated API versions
    (`grep '"_tsp/<folder>/' generated/index.json`).
 5. Also delete the folder's now-orphaned `readme.bicep.md` if one was left behind, and remove any
-   now-stale `generated/<folder>/log.out` / `summary.log` if they're no longer relevant.
+  now-stale `generated/_legacy/<folder>/log.out` / `summary.log` if they're no longer relevant.
 
-## Step 5 — Review the diff for semantic regressions
+## Step 6 — Review the diff for semantic regressions
 
 Since TypeSpec and AutoRest parse the spec through completely different pipelines, expect a large
 line-diff in `types.json`/`types.md` even for resources whose real shape hasn't changed (different
@@ -129,12 +144,12 @@ To review efficiently:
 git diff -- 'generated/_tsp/<folder>/**/types.md'
 ```
 
-and diff the equivalent pre-migration `types.md` (from `generated/<folder>/...` before you deleted
-it in Step 4, or from `main`) against the new one, resource-by-resource.
+and diff the equivalent pre-migration `types.md` (from `generated/_legacy/<folder>/...` before you
+deleted it in Step 5, or from `main`) against the new one, resource-by-resource.
 
-## Step 6 — Iterate on the generator if needed
+## Step 7 — Iterate on the generator if needed
 
-If Step 5 turns up a real regression, the fix almost always belongs in
+If Step 6 turns up a real regression, the fix almost always belongs in
 `src/typespec-bicep/src/` (mirrors `src/autorest.bicep/` — see
 [src/typespec-bicep/README.md](../../../src/typespec-bicep/README.md) for the architecture mapping):
 
@@ -156,21 +171,21 @@ npm run build          # after any src change
 npx vitest run          # run the integration/unit tests
 ```
 
-Then re-run Step 3 against the real spec to confirm the fix, and re-check Step 5.
+Then re-run Step 3 against the real spec to confirm the fix, and re-check Step 6.
 
 You can also debug interactively: use the "Generate (Path Prefix)" VS Code launch config
 (`.vscode/launch.json`), which builds emitters first and passes `--wait-for-debugger`, letting you
 step through `src/generator` and `src/typespec-bicep` code.
 
-## Step 7 — Submit the PR
+## Step 8 — Submit the PR
 
 1. Make sure `generated/index.json` / `generated/index.md` are regenerated and included (they're
    derived files but are committed).
-2. Double check no stray AutoRest leftovers remain for the migrated API versions (Step 4), and no
+2. Double check no stray AutoRest leftovers remain for the migrated API versions (Step 5), and no
    unrelated folders were touched — a full run without `--path-prefix` will also emit types for
    every other spec folder, so avoid committing unrelated changes by only running with
    `--path-prefix` during migration, or by discarding unrelated diffs before committing.
 3. Include in the PR description: which folder/service was migrated, which API versions moved from
    AutoRest to TypeSpec (and any left on AutoRest, with why), and a summary of any semantic diffs
-   found in Step 5 plus how they were resolved.
+  found in Step 6 plus how they were resolved.
 4. Open the PR against `main` as usual (see repo `README.md` contribution section — CLA bot applies).

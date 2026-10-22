@@ -11,7 +11,7 @@ import * as yaml from 'js-yaml'
 import { TypeFile, TypeSettings, buildIndex, writeIndexJson, writeIndexMarkdown, readTypesJson } from '@azure/bicep-types';
 import { executeSynchronous, getLogger, logErr, logOut, ILogger, defaultLogger, executeCmd, findRecursive, replaceRecursive } from '../utils';
 import { addAzExtensionConfigurationType } from '../index/azExtensionConfiguration';
-import { getPathData } from '../pathData';
+import { getPathData, legacyOutputFolder, typeSpecOutputFolder } from '../pathData';
 
 const rootDir = `${__dirname}/../../../../`;
 
@@ -231,6 +231,7 @@ async function clearStaleTypeFolders(logger: ILogger, outputBaseDir: string, out
   const generatedBasePaths = outputDirs.map(p => path.relative(outputBaseDir, p).split(path.sep)[0].toLowerCase());
 
   const staleBasePaths = typesBasePaths
+    .filter(p => p !== typeSpecOutputFolder && p !== legacyOutputFolder)
     .filter(p => !generatedBasePaths.includes(p))
     .filter((value, index, array) => array.indexOf(value) === index);
 

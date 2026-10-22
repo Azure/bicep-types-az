@@ -5,6 +5,11 @@ import { existsSync } from 'fs';
 import { isTypeSpecEnabled } from './config';
 import { findRecursive, lowerCaseCompare } from './utils';
 
+// Contains TypeSpec-generated types, which take precedence over AutoRest-generated types.
+export const typeSpecOutputFolder = '_tsp';
+// Preserves older AutoRest-generated types that can no longer be regenerated.
+export const legacyOutputFolder = '_legacy';
+
 type CommonPathData = {
   relativeSourcePath: string;
   tmpOutputDir: string;
@@ -39,9 +44,7 @@ export async function getPathData(specsPath: string, pathPrefix: string | undefi
         typeSpecConfigPath: source.typeSpecConfigPath,
         relativeSourcePath: path.relative(inputBaseDir, source.typeSpecConfigPath),
         tmpOutputDir: `${tmpOutputPath}/${tmpOutputBasePath}`,
-        // Put all TypeSpec generated files under _tsp, to make resolving duplicate types simpler between TypeSpec and Autorest generated types.
-        // We want to always let TypeSpec generated types take precedence over Autorest generated types.
-        outputDir: `${outputBaseDir}/_tsp/${source.basePath}`,
+        outputDir: `${outputBaseDir}/${typeSpecOutputFolder}/${source.basePath}`,
       };
     }
 
