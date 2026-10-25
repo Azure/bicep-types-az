@@ -43,7 +43,7 @@
     "eslint": "^8.52.0",
     "eslint-plugin-header": "^3.1.1",
     "jest": "^30.5.1",
-    "js-yaml": "^5.4.3",
+    "js-yaml": "^5.5.0",
     "ts-jest": "^29.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.2.2",
