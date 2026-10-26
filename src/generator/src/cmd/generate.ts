@@ -19,6 +19,7 @@ const extensionDir = path.resolve(`${rootDir}/src/autorest.bicep/`);
 const typespecBicepDir = path.resolve(`${rootDir}/src/typespec-bicep/`);
 const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
 const tspBinary = os.platform() === 'win32' ? 'tsp.cmd' : 'tsp';
+const pnpmBinary = os.platform() === 'win32' ? 'pnpm.cmd' : 'pnpm';
 const defaultOutDir = path.resolve(`${rootDir}/generated`);
 
 const argsConfig = yargs(hideBin(process.argv))
@@ -48,6 +49,13 @@ executeSynchronous(async () => {
   const pathData = await getPathData(specsPath, pathPrefix, inputBaseDir, tmpOutputPath, outputBaseDir);
   if (pathData.some(entry => entry.kind === 'autorest') && !existsSync(`${extensionDir}/dist`)) {
     throw `Unable to find ${extensionDir}/dist. Did you forget to run 'npm run build'?`;
+  }
+
+  if (pathData.some(entry => entry.kind === 'typespec')) {
+    // azure-rest-api-specs uses a pnpm workspace with shared TypeSpec dependencies.
+    // Install once at the repo root because tsp install does not support pnpm.
+    logOut(defaultLogger, 'Installing TypeSpec workspace dependencies');
+    await executeCmd(defaultLogger, isVerboseLoggingLevel(logLevel), inputBaseDir, pnpmBinary, ['install']);
   }
 
   for (const entry of pathData) {
@@ -294,9 +302,6 @@ async function runTypeSpec(logger: ILogger, projectDir: string, outputDir: strin
   if (!existsSync(`${typespecBicepDir}/dist`)) {
     throw `Unable to find ${typespecBicepDir}/dist. Did you forget to build typespec-bicep?`;
   }
-
-  // Install TypeSpec project dependencies before compiling
-  await executeCmd(logger, verbose, projectDir, tspBinary, ['install']);
 
   const tspArgs = [
     'compile',
