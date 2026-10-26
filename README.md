@@ -29,6 +29,8 @@ See [/generated/index.md](./generated/index.md) for a searchable list of all the
     ```
 
 ### Running
+When the selected specs include TypeSpec projects, the generator runs `pnpm install` once at the root of the specs repo before compiling each project. pnpm is installed with the generator dependencies and is available automatically through `npm run generate`; no global installation is needed. AutoRest-only generation skips this install step.
+
 1. To run generation across the entire specs repo:
     ```sh
     npm run generate -- --specs-dir {path to azure-rest-api-specs}
