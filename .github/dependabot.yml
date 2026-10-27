@@ -7,6 +7,10 @@ version: 2
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
     schedule:
       interval: "weekly"
       day: "sunday"
@@ -14,16 +18,28 @@ updates:
       default-days: 7
   - package-ecosystem: "npm"
     directory: "/src/generator"
+    groups:
+      npm:
+        patterns:
+          - "*"
     schedule:
       interval: "weekly"
       day: "sunday"
   - package-ecosystem: "npm"
     directory: "/src/autorest.bicep"
+    groups:
+      npm:
+        patterns:
+          - "*"
     schedule:
       interval: "weekly"
       day: "sunday"
   - package-ecosystem: "nuget"
     directory: "/"
+    groups:
+      nuget:
+        patterns:
+          - "*"
     schedule:
       interval: "weekly"
       day: "sunday"
