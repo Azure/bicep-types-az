@@ -970,7 +970,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/223"
+          "$ref": "#/225"
         },
         "flags": 0,
         "description": "Indicates the type of database account. This can only be set at database account creation."
@@ -2747,7 +2747,7 @@
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/16"
+          "$ref": "#/221"
         },
         "flags": 0,
         "description": "The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
@@ -2788,6 +2788,34 @@
     ]
   },
   {
+    "$type": "ObjectType",
+    "name": "ManagedServiceIdentityUserAssignedIdentities",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The principal id of user assigned identity."
+      },
+      "clientId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The client id of user assigned identity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TypeSpec.Record",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/220"
+    }
+  },
+  {
     "$type": "StringLiteralType",
     "value": "GlobalDocumentDB"
   },
@@ -2806,13 +2834,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/220"
-      },
-      {
-        "$ref": "#/221"
-      },
-      {
         "$ref": "#/222"
+      },
+      {
+        "$ref": "#/223"
+      },
+      {
+        "$ref": "#/224"
       }
     ]
   },
@@ -2853,14 +2881,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/225"
+          "$ref": "#/227"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/226"
+          "$ref": "#/228"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -2874,7 +2902,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/228"
+          "$ref": "#/230"
         },
         "flags": 0,
         "description": "Properties to create and update an Azure Cosmos DB MongoMI Role Definition."
@@ -2901,21 +2929,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/231"
+          "$ref": "#/233"
         },
         "flags": 0,
         "description": "Indicates whether the Role Definition was built-in or user created."
       },
       "assignableScopes": {
         "type": {
-          "$ref": "#/232"
+          "$ref": "#/234"
         },
         "flags": 0,
         "description": "A set of fully qualified Scopes at or below which MongoMI Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist."
       },
       "permissions": {
         "type": {
-          "$ref": "#/236"
+          "$ref": "#/238"
         },
         "flags": 0,
         "description": "The set of operations allowed through this Role Definition."
@@ -2934,10 +2962,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/229"
+        "$ref": "#/231"
       },
       {
-        "$ref": "#/230"
+        "$ref": "#/232"
       }
     ]
   },
@@ -2960,14 +2988,14 @@
       },
       "dataActions": {
         "type": {
-          "$ref": "#/234"
+          "$ref": "#/236"
         },
         "flags": 0,
         "description": "An array of data actions that are allowed."
       },
       "notDataActions": {
         "type": {
-          "$ref": "#/235"
+          "$ref": "#/237"
         },
         "flags": 0,
         "description": "An array of data actions that are denied."
@@ -2989,14 +3017,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/233"
+      "$ref": "#/235"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/mongoMIRoleDefinitions@2026-04-01-preview",
     "body": {
-      "$ref": "#/227"
+      "$ref": "#/229"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3029,14 +3057,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/238"
+          "$ref": "#/240"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/239"
+          "$ref": "#/241"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -3050,7 +3078,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/241"
+          "$ref": "#/243"
         },
         "flags": 0,
         "description": "Properties to create and update an Azure Cosmos DB MongoMI Role Assignment."
@@ -3095,7 +3123,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/mongoMIRoleAssignments@2026-04-01-preview",
     "body": {
-      "$ref": "#/240"
+      "$ref": "#/242"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3128,14 +3156,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/243"
+          "$ref": "#/245"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/244"
+          "$ref": "#/246"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -3149,7 +3177,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/246"
+          "$ref": "#/248"
         },
         "flags": 0,
         "description": "Properties to create and update an Azure Cosmos DB Gremlin Role Definition."
@@ -3176,21 +3204,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/249"
+          "$ref": "#/251"
         },
         "flags": 0,
         "description": "Indicates whether the Role Definition was built-in or user created."
       },
       "assignableScopes": {
         "type": {
-          "$ref": "#/250"
+          "$ref": "#/252"
         },
         "flags": 0,
         "description": "A set of fully qualified Scopes at or below which Gremlin Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist."
       },
       "permissions": {
         "type": {
-          "$ref": "#/251"
+          "$ref": "#/253"
         },
         "flags": 0,
         "description": "The set of operations allowed through this Role Definition."
@@ -3209,10 +3237,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/247"
+        "$ref": "#/249"
       },
       {
-        "$ref": "#/248"
+        "$ref": "#/250"
       }
     ]
   },
@@ -3225,14 +3253,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/233"
+      "$ref": "#/235"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/gremlinRoleDefinitions@2026-04-01-preview",
     "body": {
-      "$ref": "#/245"
+      "$ref": "#/247"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3265,14 +3293,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/253"
+          "$ref": "#/255"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/254"
+          "$ref": "#/256"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -3286,7 +3314,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/256"
+          "$ref": "#/258"
         },
         "flags": 0,
         "description": "Properties to create and update an Azure Cosmos DB Gremlin Role Assignment."
@@ -3331,7 +3359,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/gremlinRoleAssignments@2026-04-01-preview",
     "body": {
-      "$ref": "#/255"
+      "$ref": "#/257"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3364,14 +3392,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/258"
+          "$ref": "#/260"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/259"
+          "$ref": "#/261"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -3385,7 +3413,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/261"
+          "$ref": "#/263"
         },
         "flags": 0,
         "description": "Properties to create and update an Azure Cosmos DB Cassandra Role Definition."
@@ -3412,21 +3440,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/264"
+          "$ref": "#/266"
         },
         "flags": 0,
         "description": "Indicates whether the Role Definition was built-in or user created."
       },
       "assignableScopes": {
         "type": {
-          "$ref": "#/265"
+          "$ref": "#/267"
         },
         "flags": 0,
         "description": "A set of fully qualified Scopes at or below which Cassandra Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist."
       },
       "permissions": {
         "type": {
-          "$ref": "#/266"
+          "$ref": "#/268"
         },
         "flags": 0,
         "description": "The set of operations allowed through this Role Definition."
@@ -3445,10 +3473,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/262"
+        "$ref": "#/264"
       },
       {
-        "$ref": "#/263"
+        "$ref": "#/265"
       }
     ]
   },
@@ -3461,14 +3489,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/233"
+      "$ref": "#/235"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/cassandraRoleDefinitions@2026-04-01-preview",
     "body": {
-      "$ref": "#/260"
+      "$ref": "#/262"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3501,14 +3529,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/268"
+          "$ref": "#/270"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/269"
+          "$ref": "#/271"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -3522,7 +3550,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/271"
+          "$ref": "#/273"
         },
         "flags": 0,
         "description": "Properties to create and update an Azure Cosmos DB Cassandra Role Assignment."
@@ -3567,7 +3595,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/cassandraRoleAssignments@2026-04-01-preview",
     "body": {
-      "$ref": "#/270"
+      "$ref": "#/272"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3600,14 +3628,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/273"
+          "$ref": "#/275"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/274"
+          "$ref": "#/276"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -3635,7 +3663,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/276"
+          "$ref": "#/278"
         },
         "flags": 0,
         "description": "Properties to update Azure Cosmos DB throughput pool."
@@ -3648,7 +3676,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/287"
+          "$ref": "#/289"
         },
         "flags": 0,
         "description": "A provisioning state of the ThroughputPool."
@@ -3709,12 +3737,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/277"
-      },
-      {
-        "$ref": "#/278"
-      },
-      {
         "$ref": "#/279"
       },
       {
@@ -3737,6 +3759,12 @@
       },
       {
         "$ref": "#/286"
+      },
+      {
+        "$ref": "#/287"
+      },
+      {
+        "$ref": "#/288"
       }
     ]
   },
@@ -3744,7 +3772,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/throughputPools@2026-04-01-preview",
     "body": {
-      "$ref": "#/275"
+      "$ref": "#/277"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3777,14 +3805,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/289"
+          "$ref": "#/291"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/290"
+          "$ref": "#/292"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -3798,7 +3826,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/292"
+          "$ref": "#/294"
         },
         "flags": 0,
         "description": "Properties to create and update an Azure Cosmos DB Table Role Definition."
@@ -3825,21 +3853,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/295"
+          "$ref": "#/297"
         },
         "flags": 0,
         "description": "Indicates whether the Role Definition was built-in or user created."
       },
       "assignableScopes": {
         "type": {
-          "$ref": "#/296"
+          "$ref": "#/298"
         },
         "flags": 0,
         "description": "A set of fully qualified Scopes at or below which Table Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist."
       },
       "permissions": {
         "type": {
-          "$ref": "#/297"
+          "$ref": "#/299"
         },
         "flags": 0,
         "description": "The set of operations allowed through this Role Definition."
@@ -3858,10 +3886,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/293"
+        "$ref": "#/295"
       },
       {
-        "$ref": "#/294"
+        "$ref": "#/296"
       }
     ]
   },
@@ -3874,14 +3902,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/233"
+      "$ref": "#/235"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/tableRoleDefinitions@2026-04-01-preview",
     "body": {
-      "$ref": "#/291"
+      "$ref": "#/293"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3914,14 +3942,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/299"
+          "$ref": "#/301"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/300"
+          "$ref": "#/302"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -3935,7 +3963,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/302"
+          "$ref": "#/304"
         },
         "flags": 0,
         "description": "An Azure Cosmos DB Global Database Account which is part of a Throughputpool."
@@ -3948,7 +3976,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/313"
+          "$ref": "#/315"
         },
         "flags": 2,
         "description": "A provisioning state of the ThroughputPool Account."
@@ -4023,12 +4051,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/303"
-      },
-      {
-        "$ref": "#/304"
-      },
-      {
         "$ref": "#/305"
       },
       {
@@ -4051,6 +4073,12 @@
       },
       {
         "$ref": "#/312"
+      },
+      {
+        "$ref": "#/313"
+      },
+      {
+        "$ref": "#/314"
       }
     ]
   },
@@ -4058,7 +4086,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/throughputPools/throughputPoolAccounts@2026-04-01-preview",
     "body": {
-      "$ref": "#/301"
+      "$ref": "#/303"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -4091,14 +4119,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/315"
+          "$ref": "#/317"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/316"
+          "$ref": "#/318"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -4112,7 +4140,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/318"
+          "$ref": "#/320"
         },
         "flags": 0,
         "description": "Properties to create and update an Azure Cosmos DB Table Role Assignment."
@@ -4157,7 +4185,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/tableRoleAssignments@2026-04-01-preview",
     "body": {
-      "$ref": "#/317"
+      "$ref": "#/319"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -4190,14 +4218,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/320"
+          "$ref": "#/322"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/321"
+          "$ref": "#/323"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -4211,7 +4239,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/323"
+          "$ref": "#/325"
         },
         "flags": 0
       }
@@ -4223,14 +4251,14 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/334"
+          "$ref": "#/336"
         },
         "flags": 2,
         "description": "A provisioning state of the FleetAnalytics."
       },
       "storageLocationType": {
         "type": {
-          "$ref": "#/337"
+          "$ref": "#/339"
         },
         "flags": 0,
         "description": "The type of the fleet analytics resource."
@@ -4291,12 +4319,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/324"
-      },
-      {
-        "$ref": "#/325"
-      },
-      {
         "$ref": "#/326"
       },
       {
@@ -4319,6 +4341,12 @@
       },
       {
         "$ref": "#/333"
+      },
+      {
+        "$ref": "#/334"
+      },
+      {
+        "$ref": "#/335"
       }
     ]
   },
@@ -4337,10 +4365,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/335"
+        "$ref": "#/337"
       },
       {
-        "$ref": "#/336"
+        "$ref": "#/338"
       }
     ]
   },
@@ -4348,7 +4376,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/fleets/fleetAnalytics@2026-04-01-preview",
     "body": {
-      "$ref": "#/322"
+      "$ref": "#/324"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -4381,14 +4409,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/339"
+          "$ref": "#/341"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/340"
+          "$ref": "#/342"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -4402,7 +4430,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/342"
+          "$ref": "#/344"
         },
         "flags": 0,
         "description": "A request object to enable/disable the chaos fault."
@@ -4415,7 +4443,7 @@
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/345"
+          "$ref": "#/347"
         },
         "flags": 0,
         "description": "Indicates whether what action to take for the Chaos Fault."
@@ -4462,10 +4490,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/343"
+        "$ref": "#/345"
       },
       {
-        "$ref": "#/344"
+        "$ref": "#/346"
       }
     ]
   },
@@ -4473,7 +4501,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/chaosFaults@2026-04-01-preview",
     "body": {
-      "$ref": "#/341"
+      "$ref": "#/343"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -4503,21 +4531,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/347"
+          "$ref": "#/349"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/348"
+          "$ref": "#/350"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/349"
+          "$ref": "#/351"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -4531,7 +4559,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/351"
+          "$ref": "#/353"
         },
         "flags": 1,
         "description": "The properties of a Copy Job"
@@ -4544,14 +4572,14 @@
     "properties": {
       "jobProperties": {
         "type": {
-          "$ref": "#/352"
+          "$ref": "#/354"
         },
         "flags": 1,
         "description": "Job Properties"
       },
       "status": {
         "type": {
-          "$ref": "#/441"
+          "$ref": "#/443"
         },
         "flags": 2,
         "description": "Job Status"
@@ -4586,7 +4614,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/442"
+          "$ref": "#/444"
         },
         "flags": 2,
         "description": "Error response for Faulted job"
@@ -4600,7 +4628,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/450"
+          "$ref": "#/452"
         },
         "flags": 0,
         "description": "Mode of job execution"
@@ -4614,22 +4642,22 @@
     "baseProperties": {},
     "elements": {
       "CassandraRUToCassandraRU": {
-        "$ref": "#/353"
+        "$ref": "#/355"
       },
       "AzureBlobStorageToCassandraRU": {
-        "$ref": "#/367"
+        "$ref": "#/369"
       },
       "CassandraRUToAzureBlobStorage": {
-        "$ref": "#/382"
+        "$ref": "#/384"
       },
       "MongoRUToMongoRU": {
-        "$ref": "#/394"
+        "$ref": "#/396"
       },
       "MongoRUToMongoVCore": {
-        "$ref": "#/407"
+        "$ref": "#/409"
       },
       "NoSqlRUToNoSqlRU": {
-        "$ref": "#/421"
+        "$ref": "#/423"
       }
     }
   },
@@ -4639,28 +4667,28 @@
     "properties": {
       "jobType": {
         "type": {
-          "$ref": "#/366"
+          "$ref": "#/368"
         },
         "flags": 1,
         "description": "Copy Job Type"
       },
       "sourceDetails": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/363"
         },
         "flags": 0,
         "description": "Source Cassandra DataStore details"
       },
       "destinationDetails": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/363"
         },
         "flags": 0,
         "description": "Destination Cassandra DataStore details"
       },
       "tasks": {
         "type": {
-          "$ref": "#/364"
+          "$ref": "#/366"
         },
         "flags": 1,
         "description": "Copy Job tasks."
@@ -4698,12 +4726,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/354"
-      },
-      {
-        "$ref": "#/355"
-      },
-      {
         "$ref": "#/356"
       },
       {
@@ -4714,6 +4736,12 @@
       },
       {
         "$ref": "#/359"
+      },
+      {
+        "$ref": "#/360"
+      },
+      {
+        "$ref": "#/361"
       }
     ]
   },
@@ -4750,14 +4778,14 @@
       },
       "source": {
         "type": {
-          "$ref": "#/363"
+          "$ref": "#/365"
         },
         "flags": 1,
         "description": "Source Cassandra table"
       },
       "destination": {
         "type": {
-          "$ref": "#/363"
+          "$ref": "#/365"
         },
         "flags": 1,
         "description": "Destination Cassandra table"
@@ -4787,7 +4815,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/362"
+      "$ref": "#/364"
     }
   },
   {
@@ -4804,28 +4832,28 @@
     "properties": {
       "jobType": {
         "type": {
-          "$ref": "#/381"
+          "$ref": "#/383"
         },
         "flags": 1,
         "description": "Copy Job Type"
       },
       "sourceDetails": {
         "type": {
-          "$ref": "#/375"
+          "$ref": "#/377"
         },
         "flags": 1,
         "description": "Azure Storage container DataStore details"
       },
       "destinationDetails": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/363"
         },
         "flags": 0,
         "description": "Destination Cassandra DataStore details"
       },
       "tasks": {
         "type": {
-          "$ref": "#/379"
+          "$ref": "#/381"
         },
         "flags": 1,
         "description": "Copy Job tasks."
@@ -4863,12 +4891,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/368"
-      },
-      {
-        "$ref": "#/369"
-      },
-      {
         "$ref": "#/370"
       },
       {
@@ -4879,6 +4901,12 @@
       },
       {
         "$ref": "#/373"
+      },
+      {
+        "$ref": "#/374"
+      },
+      {
+        "$ref": "#/375"
       }
     ]
   },
@@ -4888,7 +4916,7 @@
     "properties": {
       "endpointUrl": {
         "type": {
-          "$ref": "#/376"
+          "$ref": "#/378"
         },
         "flags": 1,
         "description": "Azure Blob container endpoint."
@@ -4919,14 +4947,14 @@
       },
       "source": {
         "type": {
-          "$ref": "#/378"
+          "$ref": "#/380"
         },
         "flags": 1,
         "description": "Source Azure Blob container"
       },
       "destination": {
         "type": {
-          "$ref": "#/363"
+          "$ref": "#/365"
         },
         "flags": 1,
         "description": "Destination Cassandra table"
@@ -4949,7 +4977,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/377"
+      "$ref": "#/379"
     }
   },
   {
@@ -4966,28 +4994,28 @@
     "properties": {
       "jobType": {
         "type": {
-          "$ref": "#/393"
+          "$ref": "#/395"
         },
         "flags": 1,
         "description": "Copy Job Type"
       },
       "sourceDetails": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/363"
         },
         "flags": 0,
         "description": "Source Cassandra DataStore details"
       },
       "destinationDetails": {
         "type": {
-          "$ref": "#/375"
+          "$ref": "#/377"
         },
         "flags": 1,
         "description": "Destination Cassandra DataStore details"
       },
       "tasks": {
         "type": {
-          "$ref": "#/391"
+          "$ref": "#/393"
         },
         "flags": 1,
         "description": "Copy Job tasks."
@@ -5025,12 +5053,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/383"
-      },
-      {
-        "$ref": "#/384"
-      },
-      {
         "$ref": "#/385"
       },
       {
@@ -5041,6 +5063,12 @@
       },
       {
         "$ref": "#/388"
+      },
+      {
+        "$ref": "#/389"
+      },
+      {
+        "$ref": "#/390"
       }
     ]
   },
@@ -5064,14 +5092,14 @@
       },
       "source": {
         "type": {
-          "$ref": "#/363"
+          "$ref": "#/365"
         },
         "flags": 1,
         "description": "Source Cassandra table"
       },
       "destination": {
         "type": {
-          "$ref": "#/378"
+          "$ref": "#/380"
         },
         "flags": 1,
         "description": "Destination Azure Blob container"
@@ -5081,7 +5109,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/390"
+      "$ref": "#/392"
     }
   },
   {
@@ -5098,28 +5126,28 @@
     "properties": {
       "jobType": {
         "type": {
-          "$ref": "#/406"
+          "$ref": "#/408"
         },
         "flags": 1,
         "description": "Copy Job Type"
       },
       "sourceDetails": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/363"
         },
         "flags": 0,
         "description": "Source Mongo DataStore details"
       },
       "destinationDetails": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/363"
         },
         "flags": 0,
         "description": "Destination Mongo DataStore details"
       },
       "tasks": {
         "type": {
-          "$ref": "#/404"
+          "$ref": "#/406"
         },
         "flags": 1,
         "description": "Copy Job tasks."
@@ -5157,12 +5185,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/395"
-      },
-      {
-        "$ref": "#/396"
-      },
-      {
         "$ref": "#/397"
       },
       {
@@ -5173,6 +5195,12 @@
       },
       {
         "$ref": "#/400"
+      },
+      {
+        "$ref": "#/401"
+      },
+      {
+        "$ref": "#/402"
       }
     ]
   },
@@ -5196,14 +5224,14 @@
       },
       "source": {
         "type": {
-          "$ref": "#/403"
+          "$ref": "#/405"
         },
         "flags": 1,
         "description": "Source Mongo (RU) collection"
       },
       "destination": {
         "type": {
-          "$ref": "#/403"
+          "$ref": "#/405"
         },
         "flags": 1,
         "description": "Destination Mongo (RU) collection"
@@ -5233,7 +5261,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/402"
+      "$ref": "#/404"
     }
   },
   {
@@ -5250,28 +5278,28 @@
     "properties": {
       "jobType": {
         "type": {
-          "$ref": "#/420"
+          "$ref": "#/422"
         },
         "flags": 1,
         "description": "Copy Job Type"
       },
       "sourceDetails": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/363"
         },
         "flags": 0,
         "description": "Source Mongo (RU) DataStore details"
       },
       "destinationDetails": {
         "type": {
-          "$ref": "#/415"
+          "$ref": "#/417"
         },
         "flags": 1,
         "description": "Destination Mongo (vCore) DataStore details"
       },
       "tasks": {
         "type": {
-          "$ref": "#/418"
+          "$ref": "#/420"
         },
         "flags": 1,
         "description": "Copy Job tasks."
@@ -5309,12 +5337,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/408"
-      },
-      {
-        "$ref": "#/409"
-      },
-      {
         "$ref": "#/410"
       },
       {
@@ -5325,6 +5347,12 @@
       },
       {
         "$ref": "#/413"
+      },
+      {
+        "$ref": "#/414"
+      },
+      {
+        "$ref": "#/415"
       }
     ]
   },
@@ -5340,7 +5368,7 @@
       },
       "connectionStringKeyVaultUri": {
         "type": {
-          "$ref": "#/376"
+          "$ref": "#/378"
         },
         "flags": 0,
         "description": "URI of Azure KeyVault secret containing connection string."
@@ -5367,14 +5395,14 @@
       },
       "source": {
         "type": {
-          "$ref": "#/403"
+          "$ref": "#/405"
         },
         "flags": 1,
         "description": "Source Mongo (RU) collection"
       },
       "destination": {
         "type": {
-          "$ref": "#/417"
+          "$ref": "#/419"
         },
         "flags": 1,
         "description": "Destination Mongo (vCore) collection"
@@ -5404,7 +5432,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/416"
+      "$ref": "#/418"
     }
   },
   {
@@ -5421,28 +5449,28 @@
     "properties": {
       "jobType": {
         "type": {
-          "$ref": "#/433"
+          "$ref": "#/435"
         },
         "flags": 1,
         "description": "Copy Job Type"
       },
       "sourceDetails": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/363"
         },
         "flags": 0,
         "description": "Source SQL DataStore details"
       },
       "destinationDetails": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/363"
         },
         "flags": 0,
         "description": "Destination SQL DataStore details"
       },
       "tasks": {
         "type": {
-          "$ref": "#/431"
+          "$ref": "#/433"
         },
         "flags": 1,
         "description": "Copy Job tasks."
@@ -5480,12 +5508,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/422"
-      },
-      {
-        "$ref": "#/423"
-      },
-      {
         "$ref": "#/424"
       },
       {
@@ -5496,6 +5518,12 @@
       },
       {
         "$ref": "#/427"
+      },
+      {
+        "$ref": "#/428"
+      },
+      {
+        "$ref": "#/429"
       }
     ]
   },
@@ -5519,14 +5547,14 @@
       },
       "source": {
         "type": {
-          "$ref": "#/430"
+          "$ref": "#/432"
         },
         "flags": 1,
         "description": "Source SQL container"
       },
       "destination": {
         "type": {
-          "$ref": "#/430"
+          "$ref": "#/432"
         },
         "flags": 1,
         "description": "Destination SQL container"
@@ -5556,7 +5584,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/429"
+      "$ref": "#/431"
     }
   },
   {
@@ -5602,12 +5630,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/434"
-      },
-      {
-        "$ref": "#/435"
-      },
-      {
         "$ref": "#/436"
       },
       {
@@ -5621,6 +5643,12 @@
       },
       {
         "$ref": "#/440"
+      },
+      {
+        "$ref": "#/441"
+      },
+      {
+        "$ref": "#/442"
       }
     ]
   },
@@ -5630,7 +5658,7 @@
     "properties": {
       "error": {
         "type": {
-          "$ref": "#/443"
+          "$ref": "#/445"
         },
         "flags": 0,
         "description": "The error object."
@@ -5664,14 +5692,14 @@
       },
       "details": {
         "type": {
-          "$ref": "#/444"
+          "$ref": "#/446"
         },
         "flags": 2,
         "description": "The error details."
       },
       "additionalInfo": {
         "type": {
-          "$ref": "#/447"
+          "$ref": "#/449"
         },
         "flags": 2,
         "description": "The error additional info."
@@ -5681,7 +5709,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/443"
+      "$ref": "#/445"
     }
   },
   {
@@ -5697,7 +5725,7 @@
       },
       "info": {
         "type": {
-          "$ref": "#/446"
+          "$ref": "#/448"
         },
         "flags": 2,
         "description": "The additional info."
@@ -5710,7 +5738,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/445"
+      "$ref": "#/447"
     }
   },
   {
@@ -5728,10 +5756,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/448"
+        "$ref": "#/450"
       },
       {
-        "$ref": "#/449"
+        "$ref": "#/451"
       }
     ]
   },
@@ -5739,7 +5767,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-04-01-preview",
     "body": {
-      "$ref": "#/350"
+      "$ref": "#/352"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -5772,14 +5800,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/452"
+          "$ref": "#/454"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/453"
+          "$ref": "#/455"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -5793,7 +5821,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/455"
+          "$ref": "#/457"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB Graph resource."
@@ -5827,13 +5855,13 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/456"
+          "$ref": "#/458"
         },
         "flags": 0
       },
       "options": {
         "type": {
-          "$ref": "#/457"
+          "$ref": "#/459"
         },
         "flags": 0
       }
@@ -5865,7 +5893,7 @@
       },
       "autoscaleSettings": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/460"
         },
         "flags": 0,
         "description": "Specifies the Autoscale settings."
@@ -5889,7 +5917,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/graphs@2026-04-01-preview",
     "body": {
-      "$ref": "#/454"
+      "$ref": "#/456"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -5922,14 +5950,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/460"
+          "$ref": "#/462"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/461"
+          "$ref": "#/463"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -5943,7 +5971,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/463"
+          "$ref": "#/465"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB SQL database"
@@ -5977,13 +6005,13 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/464"
+          "$ref": "#/466"
         },
         "flags": 0
       },
       "options": {
         "type": {
-          "$ref": "#/469"
+          "$ref": "#/471"
         },
         "flags": 0
       }
@@ -6002,14 +6030,14 @@
       },
       "restoreParameters": {
         "type": {
-          "$ref": "#/465"
+          "$ref": "#/467"
         },
         "flags": 0,
         "description": "Parameters to indicate the information about the restore"
       },
       "createMode": {
         "type": {
-          "$ref": "#/468"
+          "$ref": "#/470"
         },
         "flags": 0,
         "description": "Enum to indicate the mode of account creation."
@@ -6093,10 +6121,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/466"
+        "$ref": "#/468"
       },
       {
-        "$ref": "#/467"
+        "$ref": "#/469"
       }
     ]
   },
@@ -6113,7 +6141,7 @@
       },
       "autoscaleSettings": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/460"
         },
         "flags": 0,
         "description": "Specifies the Autoscale settings."
@@ -6124,7 +6152,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2026-04-01-preview",
     "body": {
-      "$ref": "#/462"
+      "$ref": "#/464"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -6157,14 +6185,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/471"
+          "$ref": "#/473"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/472"
+          "$ref": "#/474"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -6178,7 +6206,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/474"
+          "$ref": "#/476"
         },
         "flags": 0,
         "description": "The properties of a ClientEncryptionKey"
@@ -6191,7 +6219,7 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/475"
+          "$ref": "#/477"
         },
         "flags": 0
       }
@@ -6224,7 +6252,7 @@
       },
       "keyWrapMetadata": {
         "type": {
-          "$ref": "#/476"
+          "$ref": "#/478"
         },
         "flags": 0,
         "description": "Metadata for the wrapping provider that can be used to unwrap the wrapped client encryption key."
@@ -6290,7 +6318,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys@2026-04-01-preview",
     "body": {
-      "$ref": "#/473"
+      "$ref": "#/475"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -6323,14 +6351,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/478"
+          "$ref": "#/480"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/479"
+          "$ref": "#/481"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -6344,7 +6372,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/481"
+          "$ref": "#/483"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB container"
@@ -6378,13 +6406,13 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/482"
+          "$ref": "#/484"
         },
         "flags": 0
       },
       "options": {
         "type": {
-          "$ref": "#/577"
+          "$ref": "#/579"
         },
         "flags": 0
       }
@@ -6403,14 +6431,14 @@
       },
       "indexingPolicy": {
         "type": {
-          "$ref": "#/483"
+          "$ref": "#/485"
         },
         "flags": 0,
         "description": "The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container"
       },
       "partitionKey": {
         "type": {
-          "$ref": "#/530"
+          "$ref": "#/532"
         },
         "flags": 0,
         "description": "The configuration of the partition key to be used for partitioning data into multiple partitions"
@@ -6424,21 +6452,21 @@
       },
       "uniqueKeyPolicy": {
         "type": {
-          "$ref": "#/537"
+          "$ref": "#/539"
         },
         "flags": 0,
         "description": "The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service."
       },
       "conflictResolutionPolicy": {
         "type": {
-          "$ref": "#/541"
+          "$ref": "#/543"
         },
         "flags": 0,
         "description": "The conflict resolution policy for the container."
       },
       "clientEncryptionPolicy": {
         "type": {
-          "$ref": "#/545"
+          "$ref": "#/547"
         },
         "flags": 0,
         "description": "The client encryption policy for the container."
@@ -6452,63 +6480,63 @@
       },
       "restoreParameters": {
         "type": {
-          "$ref": "#/465"
+          "$ref": "#/467"
         },
         "flags": 0,
         "description": "Parameters to indicate the information about the restore"
       },
       "createMode": {
         "type": {
-          "$ref": "#/550"
+          "$ref": "#/552"
         },
         "flags": 0,
         "description": "Enum to indicate the mode of account creation."
       },
       "materializedViewDefinition": {
         "type": {
-          "$ref": "#/551"
+          "$ref": "#/553"
         },
         "flags": 0,
         "description": "The configuration for defining Materialized Views. This must be specified only for creating a Materialized View container."
       },
       "materializedViews": {
         "type": {
-          "$ref": "#/553"
+          "$ref": "#/555"
         },
         "flags": 0,
         "description": "Materialized Views defined on the container."
       },
       "materializedViewsProperties": {
         "type": {
-          "$ref": "#/554"
+          "$ref": "#/556"
         },
         "flags": 0,
         "description": "Materialized Views Properties defined for source container."
       },
       "computedProperties": {
         "type": {
-          "$ref": "#/556"
+          "$ref": "#/558"
         },
         "flags": 0,
         "description": "List of computed properties"
       },
       "vectorEmbeddingPolicy": {
         "type": {
-          "$ref": "#/557"
+          "$ref": "#/559"
         },
         "flags": 0,
         "description": "The vector embedding policy for the container."
       },
       "fullTextPolicy": {
         "type": {
-          "$ref": "#/569"
+          "$ref": "#/571"
         },
         "flags": 0,
         "description": "The FullText policy for the container."
       },
       "dataMaskingPolicy": {
         "type": {
-          "$ref": "#/572"
+          "$ref": "#/574"
         },
         "flags": 0,
         "description": "The Data Masking policy for the container."
@@ -6549,49 +6577,49 @@
       },
       "indexingMode": {
         "type": {
-          "$ref": "#/487"
+          "$ref": "#/489"
         },
         "flags": 0,
         "description": "Indicates the indexing mode."
       },
       "includedPaths": {
         "type": {
-          "$ref": "#/502"
+          "$ref": "#/504"
         },
         "flags": 0,
         "description": "List of paths to include in the indexing"
       },
       "excludedPaths": {
         "type": {
-          "$ref": "#/504"
+          "$ref": "#/506"
         },
         "flags": 0,
         "description": "List of paths to exclude from indexing"
       },
       "compositeIndexes": {
         "type": {
-          "$ref": "#/510"
+          "$ref": "#/512"
         },
         "flags": 0,
         "description": "List of composite path list"
       },
       "spatialIndexes": {
         "type": {
-          "$ref": "#/518"
+          "$ref": "#/520"
         },
         "flags": 0,
         "description": "List of spatial specifics"
       },
       "vectorIndexes": {
         "type": {
-          "$ref": "#/527"
+          "$ref": "#/529"
         },
         "flags": 0,
         "description": "List of paths to include in the vector indexing"
       },
       "fullTextIndexes": {
         "type": {
-          "$ref": "#/529"
+          "$ref": "#/531"
         },
         "flags": 0,
         "description": "List of paths to include in the full text indexing"
@@ -6617,13 +6645,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/484"
-      },
-      {
-        "$ref": "#/485"
-      },
-      {
         "$ref": "#/486"
+      },
+      {
+        "$ref": "#/487"
+      },
+      {
+        "$ref": "#/488"
       }
     ]
   },
@@ -6640,7 +6668,7 @@
       },
       "indexes": {
         "type": {
-          "$ref": "#/501"
+          "$ref": "#/503"
         },
         "flags": 0,
         "description": "List of indexes for this path"
@@ -6653,7 +6681,7 @@
     "properties": {
       "dataType": {
         "type": {
-          "$ref": "#/496"
+          "$ref": "#/498"
         },
         "flags": 0,
         "description": "The datatype for which the indexing behavior is applied to."
@@ -6667,7 +6695,7 @@
       },
       "kind": {
         "type": {
-          "$ref": "#/500"
+          "$ref": "#/502"
         },
         "flags": 0,
         "description": "Indicates the type of index."
@@ -6705,12 +6733,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/490"
-      },
-      {
-        "$ref": "#/491"
-      },
-      {
         "$ref": "#/492"
       },
       {
@@ -6721,6 +6743,12 @@
       },
       {
         "$ref": "#/495"
+      },
+      {
+        "$ref": "#/496"
+      },
+      {
+        "$ref": "#/497"
       }
     ]
   },
@@ -6743,26 +6771,26 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/497"
-      },
-      {
-        "$ref": "#/498"
-      },
-      {
         "$ref": "#/499"
+      },
+      {
+        "$ref": "#/500"
+      },
+      {
+        "$ref": "#/501"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/489"
+      "$ref": "#/491"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/488"
+      "$ref": "#/490"
     }
   },
   {
@@ -6781,7 +6809,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/503"
+      "$ref": "#/505"
     }
   },
   {
@@ -6797,7 +6825,7 @@
       },
       "order": {
         "type": {
-          "$ref": "#/508"
+          "$ref": "#/510"
         },
         "flags": 0,
         "description": "Sort order for composite paths."
@@ -6819,23 +6847,23 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/506"
+        "$ref": "#/508"
       },
       {
-        "$ref": "#/507"
+        "$ref": "#/509"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/505"
+      "$ref": "#/507"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/509"
+      "$ref": "#/511"
     }
   },
   {
@@ -6851,7 +6879,7 @@
       },
       "types": {
         "type": {
-          "$ref": "#/517"
+          "$ref": "#/519"
         },
         "flags": 0,
         "description": "List of path's spatial type"
@@ -6881,29 +6909,29 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/512"
-      },
-      {
-        "$ref": "#/513"
-      },
-      {
         "$ref": "#/514"
       },
       {
         "$ref": "#/515"
+      },
+      {
+        "$ref": "#/516"
+      },
+      {
+        "$ref": "#/517"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/516"
+      "$ref": "#/518"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/511"
+      "$ref": "#/513"
     }
   },
   {
@@ -6919,28 +6947,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/523"
+          "$ref": "#/525"
         },
         "flags": 1,
         "description": "The index type of the vector. Currently, flat, diskANN, and quantizedFlat are supported."
       },
       "quantizationByteSize": {
         "type": {
-          "$ref": "#/524"
+          "$ref": "#/526"
         },
         "flags": 0,
         "description": "The number of bytes used in product quantization of the vectors. A larger value may result in better recall for vector searches at the expense of latency. This is only applicable for the quantizedFlat and diskANN vector index types."
       },
       "indexingSearchListSize": {
         "type": {
-          "$ref": "#/525"
+          "$ref": "#/527"
         },
         "flags": 0,
         "description": "This is the size of the candidate list of approximate neighbors stored while building the DiskANN index as part of the optimization processes. Large values may improve recall at the expense of latency. This is only applicable for the diskANN vector index type."
       },
       "vectorIndexShardKey": {
         "type": {
-          "$ref": "#/526"
+          "$ref": "#/528"
         },
         "flags": 0,
         "description": "Array of shard keys for the vector index. This is only applicable for the quantizedFlat and diskANN vector index types."
@@ -6966,13 +6994,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/520"
-      },
-      {
-        "$ref": "#/521"
-      },
-      {
         "$ref": "#/522"
+      },
+      {
+        "$ref": "#/523"
+      },
+      {
+        "$ref": "#/524"
       }
     ]
   },
@@ -6994,7 +7022,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/519"
+      "$ref": "#/521"
     }
   },
   {
@@ -7013,7 +7041,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/528"
+      "$ref": "#/530"
     }
   },
   {
@@ -7022,21 +7050,21 @@
     "properties": {
       "paths": {
         "type": {
-          "$ref": "#/531"
+          "$ref": "#/533"
         },
         "flags": 0,
         "description": "List of paths using which data within the container can be partitioned"
       },
       "kind": {
         "type": {
-          "$ref": "#/535"
+          "$ref": "#/537"
         },
         "flags": 0,
         "description": "Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create"
       },
       "version": {
         "type": {
-          "$ref": "#/536"
+          "$ref": "#/538"
         },
         "flags": 0,
         "description": "Indicates the version of the partition key definition"
@@ -7075,13 +7103,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/532"
-      },
-      {
-        "$ref": "#/533"
-      },
-      {
         "$ref": "#/534"
+      },
+      {
+        "$ref": "#/535"
+      },
+      {
+        "$ref": "#/536"
       }
     ]
   },
@@ -7096,7 +7124,7 @@
     "properties": {
       "uniqueKeys": {
         "type": {
-          "$ref": "#/540"
+          "$ref": "#/542"
         },
         "flags": 0,
         "description": "List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service."
@@ -7109,7 +7137,7 @@
     "properties": {
       "paths": {
         "type": {
-          "$ref": "#/539"
+          "$ref": "#/541"
         },
         "flags": 0,
         "description": "List of paths must be unique for each document in the Azure Cosmos DB service"
@@ -7125,7 +7153,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/538"
+      "$ref": "#/540"
     }
   },
   {
@@ -7134,7 +7162,7 @@
     "properties": {
       "mode": {
         "type": {
-          "$ref": "#/544"
+          "$ref": "#/546"
         },
         "flags": 0,
         "description": "Indicates the conflict resolution mode."
@@ -7170,10 +7198,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/542"
+        "$ref": "#/544"
       },
       {
-        "$ref": "#/543"
+        "$ref": "#/545"
       }
     ]
   },
@@ -7183,14 +7211,14 @@
     "properties": {
       "includedPaths": {
         "type": {
-          "$ref": "#/547"
+          "$ref": "#/549"
         },
         "flags": 1,
         "description": "Paths of the item that need encryption along with path-specific settings."
       },
       "policyFormatVersion": {
         "type": {
-          "$ref": "#/536"
+          "$ref": "#/538"
         },
         "flags": 1,
         "description": "Version of the client encryption policy definition. Supported versions are 1 and 2. Version 2 supports id and partition key path encryption."
@@ -7234,7 +7262,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/546"
+      "$ref": "#/548"
     }
   },
   {
@@ -7252,10 +7280,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/548"
+        "$ref": "#/550"
       },
       {
-        "$ref": "#/549"
+        "$ref": "#/551"
       }
     ]
   },
@@ -7316,7 +7344,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/552"
+      "$ref": "#/554"
     }
   },
   {
@@ -7355,7 +7383,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/555"
+      "$ref": "#/557"
     }
   },
   {
@@ -7364,7 +7392,7 @@
     "properties": {
       "vectorEmbeddings": {
         "type": {
-          "$ref": "#/568"
+          "$ref": "#/570"
         },
         "flags": 0,
         "description": "List of vector embeddings"
@@ -7384,14 +7412,14 @@
       },
       "dataType": {
         "type": {
-          "$ref": "#/563"
+          "$ref": "#/565"
         },
         "flags": 1,
         "description": "Indicates the data type of vector."
       },
       "distanceFunction": {
         "type": {
-          "$ref": "#/567"
+          "$ref": "#/569"
         },
         "flags": 1,
         "description": "The distance function to use for distance calculation in between vectors."
@@ -7428,16 +7456,16 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/559"
-      },
-      {
-        "$ref": "#/560"
-      },
-      {
         "$ref": "#/561"
       },
       {
         "$ref": "#/562"
+      },
+      {
+        "$ref": "#/563"
+      },
+      {
+        "$ref": "#/564"
       }
     ]
   },
@@ -7460,20 +7488,20 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/564"
-      },
-      {
-        "$ref": "#/565"
-      },
-      {
         "$ref": "#/566"
+      },
+      {
+        "$ref": "#/567"
+      },
+      {
+        "$ref": "#/568"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/558"
+      "$ref": "#/560"
     }
   },
   {
@@ -7489,7 +7517,7 @@
       },
       "fullTextPaths": {
         "type": {
-          "$ref": "#/571"
+          "$ref": "#/573"
         },
         "flags": 0,
         "description": "List of FullText Paths"
@@ -7519,7 +7547,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/570"
+      "$ref": "#/572"
     }
   },
   {
@@ -7528,14 +7556,14 @@
     "properties": {
       "includedPaths": {
         "type": {
-          "$ref": "#/574"
+          "$ref": "#/576"
         },
         "flags": 0,
         "description": "List of JSON paths to include in the masking policy."
       },
       "excludedPaths": {
         "type": {
-          "$ref": "#/576"
+          "$ref": "#/578"
         },
         "flags": 0,
         "description": "List of JSON paths to exclude from masking."
@@ -7586,7 +7614,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/573"
+      "$ref": "#/575"
     }
   },
   {
@@ -7605,7 +7633,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/575"
+      "$ref": "#/577"
     }
   },
   {
@@ -7621,7 +7649,7 @@
       },
       "autoscaleSettings": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/460"
         },
         "flags": 0,
         "description": "Specifies the Autoscale settings."
@@ -7632,7 +7660,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-04-01-preview",
     "body": {
-      "$ref": "#/480"
+      "$ref": "#/482"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -7665,14 +7693,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/579"
+          "$ref": "#/581"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/580"
+          "$ref": "#/582"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -7686,7 +7714,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/582"
+          "$ref": "#/584"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB storedProcedure"
@@ -7720,7 +7748,7 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/583"
+          "$ref": "#/585"
         },
         "flags": 0
       }
@@ -7771,7 +7799,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2026-04-01-preview",
     "body": {
-      "$ref": "#/581"
+      "$ref": "#/583"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -7804,14 +7832,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/585"
+          "$ref": "#/587"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/586"
+          "$ref": "#/588"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -7825,7 +7853,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/588"
+          "$ref": "#/590"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB userDefinedFunction"
@@ -7859,7 +7887,7 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/589"
+          "$ref": "#/591"
         },
         "flags": 0
       }
@@ -7910,7 +7938,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2026-04-01-preview",
     "body": {
-      "$ref": "#/587"
+      "$ref": "#/589"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -7943,14 +7971,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/591"
+          "$ref": "#/593"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/592"
+          "$ref": "#/594"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -7964,7 +7992,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/594"
+          "$ref": "#/596"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB trigger"
@@ -7998,7 +8026,7 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/595"
+          "$ref": "#/597"
         },
         "flags": 0
       }
@@ -8024,14 +8052,14 @@
       },
       "triggerType": {
         "type": {
-          "$ref": "#/598"
+          "$ref": "#/600"
         },
         "flags": 0,
         "description": "Type of the Trigger"
       },
       "triggerOperation": {
         "type": {
-          "$ref": "#/604"
+          "$ref": "#/606"
         },
         "flags": 0,
         "description": "The operation the trigger is associated with"
@@ -8074,10 +8102,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/596"
+        "$ref": "#/598"
       },
       {
-        "$ref": "#/597"
+        "$ref": "#/599"
       }
     ]
   },
@@ -8108,12 +8136,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/599"
-      },
-      {
-        "$ref": "#/600"
-      },
-      {
         "$ref": "#/601"
       },
       {
@@ -8121,6 +8143,12 @@
       },
       {
         "$ref": "#/603"
+      },
+      {
+        "$ref": "#/604"
+      },
+      {
+        "$ref": "#/605"
       }
     ]
   },
@@ -8128,7 +8156,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2026-04-01-preview",
     "body": {
-      "$ref": "#/593"
+      "$ref": "#/595"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -8161,14 +8189,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/606"
+          "$ref": "#/608"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/607"
+          "$ref": "#/609"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -8182,7 +8210,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/609"
+          "$ref": "#/611"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB MongoDB database"
@@ -8216,13 +8244,13 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/610"
+          "$ref": "#/612"
         },
         "flags": 0
       },
       "options": {
         "type": {
-          "$ref": "#/614"
+          "$ref": "#/616"
         },
         "flags": 0
       }
@@ -8241,14 +8269,14 @@
       },
       "restoreParameters": {
         "type": {
-          "$ref": "#/465"
+          "$ref": "#/467"
         },
         "flags": 0,
         "description": "Parameters to indicate the information about the restore"
       },
       "createMode": {
         "type": {
-          "$ref": "#/613"
+          "$ref": "#/615"
         },
         "flags": 0,
         "description": "Enum to indicate the mode of account creation."
@@ -8291,10 +8319,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/611"
+        "$ref": "#/613"
       },
       {
-        "$ref": "#/612"
+        "$ref": "#/614"
       }
     ]
   },
@@ -8311,7 +8339,7 @@
       },
       "autoscaleSettings": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/460"
         },
         "flags": 0,
         "description": "Specifies the Autoscale settings."
@@ -8322,7 +8350,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2026-04-01-preview",
     "body": {
-      "$ref": "#/608"
+      "$ref": "#/610"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -8355,14 +8383,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/616"
+          "$ref": "#/618"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/617"
+          "$ref": "#/619"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -8376,7 +8404,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/619"
+          "$ref": "#/621"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB MongoDB collection"
@@ -8410,13 +8438,13 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/620"
+          "$ref": "#/622"
         },
         "flags": 0
       },
       "options": {
         "type": {
-          "$ref": "#/629"
+          "$ref": "#/631"
         },
         "flags": 0
       }
@@ -8442,7 +8470,7 @@
       },
       "indexes": {
         "type": {
-          "$ref": "#/625"
+          "$ref": "#/627"
         },
         "flags": 0,
         "description": "List of index keys"
@@ -8456,14 +8484,14 @@
       },
       "restoreParameters": {
         "type": {
-          "$ref": "#/465"
+          "$ref": "#/467"
         },
         "flags": 0,
         "description": "Parameters to indicate the information about the restore"
       },
       "createMode": {
         "type": {
-          "$ref": "#/628"
+          "$ref": "#/630"
         },
         "flags": 0,
         "description": "Enum to indicate the mode of resource creation."
@@ -8497,14 +8525,14 @@
     "properties": {
       "key": {
         "type": {
-          "$ref": "#/622"
+          "$ref": "#/624"
         },
         "flags": 0,
         "description": "Cosmos DB MongoDB collection index keys"
       },
       "options": {
         "type": {
-          "$ref": "#/624"
+          "$ref": "#/626"
         },
         "flags": 0,
         "description": "Cosmos DB MongoDB collection index key options"
@@ -8517,7 +8545,7 @@
     "properties": {
       "keys": {
         "type": {
-          "$ref": "#/623"
+          "$ref": "#/625"
         },
         "flags": 0,
         "description": "List of keys for each MongoDB collection in the Azure Cosmos DB service"
@@ -8553,7 +8581,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/621"
+      "$ref": "#/623"
     }
   },
   {
@@ -8571,10 +8599,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/626"
+        "$ref": "#/628"
       },
       {
-        "$ref": "#/627"
+        "$ref": "#/629"
       }
     ]
   },
@@ -8591,7 +8619,7 @@
       },
       "autoscaleSettings": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/460"
         },
         "flags": 0,
         "description": "Specifies the Autoscale settings."
@@ -8602,7 +8630,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-04-01-preview",
     "body": {
-      "$ref": "#/618"
+      "$ref": "#/620"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -8635,14 +8663,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/631"
+          "$ref": "#/633"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/632"
+          "$ref": "#/634"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -8656,7 +8684,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/634"
+          "$ref": "#/636"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB Table"
@@ -8690,13 +8718,13 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/635"
+          "$ref": "#/637"
         },
         "flags": 0
       },
       "options": {
         "type": {
-          "$ref": "#/639"
+          "$ref": "#/641"
         },
         "flags": 0
       }
@@ -8715,14 +8743,14 @@
       },
       "restoreParameters": {
         "type": {
-          "$ref": "#/465"
+          "$ref": "#/467"
         },
         "flags": 0,
         "description": "Parameters to indicate the information about the restore"
       },
       "createMode": {
         "type": {
-          "$ref": "#/638"
+          "$ref": "#/640"
         },
         "flags": 0,
         "description": "Enum to indicate the mode of account creation."
@@ -8765,10 +8793,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/636"
+        "$ref": "#/638"
       },
       {
-        "$ref": "#/637"
+        "$ref": "#/639"
       }
     ]
   },
@@ -8785,7 +8813,7 @@
       },
       "autoscaleSettings": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/460"
         },
         "flags": 0,
         "description": "Specifies the Autoscale settings."
@@ -8796,7 +8824,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/tables@2026-04-01-preview",
     "body": {
-      "$ref": "#/633"
+      "$ref": "#/635"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -8829,14 +8857,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/641"
+          "$ref": "#/643"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/642"
+          "$ref": "#/644"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -8850,7 +8878,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/644"
+          "$ref": "#/646"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB Cassandra keyspace"
@@ -8884,13 +8912,13 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/645"
+          "$ref": "#/647"
         },
         "flags": 0
       },
       "options": {
         "type": {
-          "$ref": "#/646"
+          "$ref": "#/648"
         },
         "flags": 0
       }
@@ -8943,7 +8971,7 @@
       },
       "autoscaleSettings": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/460"
         },
         "flags": 0,
         "description": "Specifies the Autoscale settings."
@@ -8954,7 +8982,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2026-04-01-preview",
     "body": {
-      "$ref": "#/643"
+      "$ref": "#/645"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -8987,14 +9015,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/648"
+          "$ref": "#/650"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/649"
+          "$ref": "#/651"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -9008,7 +9036,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/651"
+          "$ref": "#/653"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB Cassandra table"
@@ -9042,13 +9070,13 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/652"
+          "$ref": "#/654"
         },
         "flags": 0
       },
       "options": {
         "type": {
-          "$ref": "#/660"
+          "$ref": "#/662"
         },
         "flags": 0
       }
@@ -9074,7 +9102,7 @@
       },
       "schema": {
         "type": {
-          "$ref": "#/653"
+          "$ref": "#/655"
         },
         "flags": 0,
         "description": "Schema of the Cosmos DB Cassandra table"
@@ -9115,21 +9143,21 @@
     "properties": {
       "columns": {
         "type": {
-          "$ref": "#/655"
+          "$ref": "#/657"
         },
         "flags": 0,
         "description": "List of Cassandra table columns."
       },
       "partitionKeys": {
         "type": {
-          "$ref": "#/657"
+          "$ref": "#/659"
         },
         "flags": 0,
         "description": "List of partition key."
       },
       "clusterKeys": {
         "type": {
-          "$ref": "#/659"
+          "$ref": "#/661"
         },
         "flags": 0,
         "description": "List of cluster key."
@@ -9159,7 +9187,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/654"
+      "$ref": "#/656"
     }
   },
   {
@@ -9178,7 +9206,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/656"
+      "$ref": "#/658"
     }
   },
   {
@@ -9204,7 +9232,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/658"
+      "$ref": "#/660"
     }
   },
   {
@@ -9220,7 +9248,7 @@
       },
       "autoscaleSettings": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/460"
         },
         "flags": 0,
         "description": "Specifies the Autoscale settings."
@@ -9231,7 +9259,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2026-04-01-preview",
     "body": {
-      "$ref": "#/650"
+      "$ref": "#/652"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -9264,14 +9292,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/662"
+          "$ref": "#/664"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/663"
+          "$ref": "#/665"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -9285,7 +9313,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/665"
+          "$ref": "#/667"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB SQL database"
@@ -9319,13 +9347,13 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/666"
+          "$ref": "#/668"
         },
         "flags": 0
       },
       "options": {
         "type": {
-          "$ref": "#/670"
+          "$ref": "#/672"
         },
         "flags": 0
       }
@@ -9344,14 +9372,14 @@
       },
       "restoreParameters": {
         "type": {
-          "$ref": "#/465"
+          "$ref": "#/467"
         },
         "flags": 0,
         "description": "Parameters to indicate the information about the restore"
       },
       "createMode": {
         "type": {
-          "$ref": "#/669"
+          "$ref": "#/671"
         },
         "flags": 0,
         "description": "Enum to indicate the mode of resource creation."
@@ -9394,10 +9422,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/667"
+        "$ref": "#/669"
       },
       {
-        "$ref": "#/668"
+        "$ref": "#/670"
       }
     ]
   },
@@ -9414,7 +9442,7 @@
       },
       "autoscaleSettings": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/460"
         },
         "flags": 0,
         "description": "Specifies the Autoscale settings."
@@ -9425,7 +9453,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2026-04-01-preview",
     "body": {
-      "$ref": "#/664"
+      "$ref": "#/666"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -9458,14 +9486,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/672"
+          "$ref": "#/674"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/673"
+          "$ref": "#/675"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -9479,7 +9507,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/675"
+          "$ref": "#/677"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB Gremlin graph"
@@ -9513,13 +9541,13 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/676"
+          "$ref": "#/678"
         },
         "flags": 0
       },
       "options": {
         "type": {
-          "$ref": "#/680"
+          "$ref": "#/682"
         },
         "flags": 0
       }
@@ -9538,14 +9566,14 @@
       },
       "indexingPolicy": {
         "type": {
-          "$ref": "#/483"
+          "$ref": "#/485"
         },
         "flags": 0,
         "description": "The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph"
       },
       "partitionKey": {
         "type": {
-          "$ref": "#/530"
+          "$ref": "#/532"
         },
         "flags": 0,
         "description": "The configuration of the partition key to be used for partitioning data into multiple partitions"
@@ -9559,14 +9587,14 @@
       },
       "uniqueKeyPolicy": {
         "type": {
-          "$ref": "#/537"
+          "$ref": "#/539"
         },
         "flags": 0,
         "description": "The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service."
       },
       "conflictResolutionPolicy": {
         "type": {
-          "$ref": "#/541"
+          "$ref": "#/543"
         },
         "flags": 0,
         "description": "The conflict resolution policy for the graph."
@@ -9580,14 +9608,14 @@
       },
       "restoreParameters": {
         "type": {
-          "$ref": "#/465"
+          "$ref": "#/467"
         },
         "flags": 0,
         "description": "Parameters to indicate the information about the restore"
       },
       "createMode": {
         "type": {
-          "$ref": "#/679"
+          "$ref": "#/681"
         },
         "flags": 0,
         "description": "Enum to indicate the mode of resource creation."
@@ -9630,10 +9658,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/677"
+        "$ref": "#/679"
       },
       {
-        "$ref": "#/678"
+        "$ref": "#/680"
       }
     ]
   },
@@ -9650,7 +9678,7 @@
       },
       "autoscaleSettings": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/460"
         },
         "flags": 0,
         "description": "Specifies the Autoscale settings."
@@ -9661,7 +9689,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2026-04-01-preview",
     "body": {
-      "$ref": "#/674"
+      "$ref": "#/676"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -9694,14 +9722,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/682"
+          "$ref": "#/684"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/683"
+          "$ref": "#/685"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -9715,7 +9743,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/685"
+          "$ref": "#/687"
         },
         "flags": 0,
         "description": "Cosmos DB location metadata"
@@ -9742,7 +9770,7 @@
       },
       "backupStorageRedundancies": {
         "type": {
-          "$ref": "#/690"
+          "$ref": "#/692"
         },
         "flags": 2,
         "description": "The properties of available backup storage redundancies."
@@ -9763,7 +9791,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/701"
+          "$ref": "#/703"
         },
         "flags": 2,
         "description": "Enum to indicate current buildout status of the region."
@@ -9789,20 +9817,20 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/686"
-      },
-      {
-        "$ref": "#/687"
-      },
-      {
         "$ref": "#/688"
+      },
+      {
+        "$ref": "#/689"
+      },
+      {
+        "$ref": "#/690"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/689"
+      "$ref": "#/691"
     }
   },
   {
@@ -9852,12 +9880,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/691"
-      },
-      {
-        "$ref": "#/692"
-      },
-      {
         "$ref": "#/693"
       },
       {
@@ -9880,6 +9902,12 @@
       },
       {
         "$ref": "#/700"
+      },
+      {
+        "$ref": "#/701"
+      },
+      {
+        "$ref": "#/702"
       }
     ]
   },
@@ -9887,7 +9915,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/locations@2026-04-01-preview",
     "body": {
-      "$ref": "#/684"
+      "$ref": "#/686"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -9920,14 +9948,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/703"
+          "$ref": "#/705"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/704"
+          "$ref": "#/706"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -9941,7 +9969,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/706"
+          "$ref": "#/708"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB Cassandra view"
@@ -9975,13 +10003,13 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/707"
+          "$ref": "#/709"
         },
         "flags": 0
       },
       "options": {
         "type": {
-          "$ref": "#/708"
+          "$ref": "#/710"
         },
         "flags": 0
       }
@@ -10041,7 +10069,7 @@
       },
       "autoscaleSettings": {
         "type": {
-          "$ref": "#/458"
+          "$ref": "#/460"
         },
         "flags": 0,
         "description": "Specifies the Autoscale settings."
@@ -10052,7 +10080,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views@2026-04-01-preview",
     "body": {
-      "$ref": "#/705"
+      "$ref": "#/707"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -10078,21 +10106,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/347"
+          "$ref": "#/349"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/710"
+          "$ref": "#/712"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/711"
+          "$ref": "#/713"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -10106,7 +10134,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/713"
+          "$ref": "#/715"
         },
         "flags": 0,
         "description": "The properties of a DataTransfer Job"
@@ -10126,14 +10154,14 @@
       },
       "source": {
         "type": {
-          "$ref": "#/714"
+          "$ref": "#/716"
         },
         "flags": 1,
         "description": "Source DataStore details"
       },
       "destination": {
         "type": {
-          "$ref": "#/714"
+          "$ref": "#/716"
         },
         "flags": 1,
         "description": "Destination DataStore details"
@@ -10175,7 +10203,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/442"
+          "$ref": "#/771"
         },
         "flags": 2,
         "description": "Error response for Faulted job"
@@ -10189,7 +10217,7 @@
       },
       "mode": {
         "type": {
-          "$ref": "#/771"
+          "$ref": "#/774"
         },
         "flags": 0,
         "description": "Mode of job execution"
@@ -10203,22 +10231,22 @@
     "baseProperties": {},
     "elements": {
       "BaseCosmosDataTransferDataSourceSink": {
-        "$ref": "#/715"
+        "$ref": "#/717"
       },
       "CosmosDBCassandra": {
-        "$ref": "#/724"
+        "$ref": "#/726"
       },
       "CosmosDBMongo": {
-        "$ref": "#/733"
+        "$ref": "#/735"
       },
       "CosmosDBMongoVCore": {
-        "$ref": "#/742"
+        "$ref": "#/744"
       },
       "CosmosDBSql": {
-        "$ref": "#/751"
+        "$ref": "#/753"
       },
       "AzureBlobStorage": {
-        "$ref": "#/760"
+        "$ref": "#/762"
       }
     }
   },
@@ -10228,7 +10256,7 @@
     "properties": {
       "component": {
         "type": {
-          "$ref": "#/723"
+          "$ref": "#/725"
         },
         "flags": 1
       },
@@ -10271,12 +10299,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/716"
-      },
-      {
-        "$ref": "#/717"
-      },
-      {
         "$ref": "#/718"
       },
       {
@@ -10287,6 +10309,12 @@
       },
       {
         "$ref": "#/721"
+      },
+      {
+        "$ref": "#/722"
+      },
+      {
+        "$ref": "#/723"
       }
     ]
   },
@@ -10300,7 +10328,7 @@
     "properties": {
       "component": {
         "type": {
-          "$ref": "#/732"
+          "$ref": "#/734"
         },
         "flags": 1
       },
@@ -10355,12 +10383,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/725"
-      },
-      {
-        "$ref": "#/726"
-      },
-      {
         "$ref": "#/727"
       },
       {
@@ -10371,6 +10393,12 @@
       },
       {
         "$ref": "#/730"
+      },
+      {
+        "$ref": "#/731"
+      },
+      {
+        "$ref": "#/732"
       }
     ]
   },
@@ -10384,7 +10412,7 @@
     "properties": {
       "component": {
         "type": {
-          "$ref": "#/741"
+          "$ref": "#/743"
         },
         "flags": 1
       },
@@ -10439,12 +10467,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/734"
-      },
-      {
-        "$ref": "#/735"
-      },
-      {
         "$ref": "#/736"
       },
       {
@@ -10455,6 +10477,12 @@
       },
       {
         "$ref": "#/739"
+      },
+      {
+        "$ref": "#/740"
+      },
+      {
+        "$ref": "#/741"
       }
     ]
   },
@@ -10468,7 +10496,7 @@
     "properties": {
       "component": {
         "type": {
-          "$ref": "#/750"
+          "$ref": "#/752"
         },
         "flags": 1
       },
@@ -10529,12 +10557,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/743"
-      },
-      {
-        "$ref": "#/744"
-      },
-      {
         "$ref": "#/745"
       },
       {
@@ -10545,6 +10567,12 @@
       },
       {
         "$ref": "#/748"
+      },
+      {
+        "$ref": "#/749"
+      },
+      {
+        "$ref": "#/750"
       }
     ]
   },
@@ -10558,7 +10586,7 @@
     "properties": {
       "component": {
         "type": {
-          "$ref": "#/759"
+          "$ref": "#/761"
         },
         "flags": 1
       },
@@ -10613,12 +10641,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/752"
-      },
-      {
-        "$ref": "#/753"
-      },
-      {
         "$ref": "#/754"
       },
       {
@@ -10629,6 +10651,12 @@
       },
       {
         "$ref": "#/757"
+      },
+      {
+        "$ref": "#/758"
+      },
+      {
+        "$ref": "#/759"
       }
     ]
   },
@@ -10642,7 +10670,7 @@
     "properties": {
       "component": {
         "type": {
-          "$ref": "#/768"
+          "$ref": "#/770"
         },
         "flags": 1
       },
@@ -10691,12 +10719,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/761"
-      },
-      {
-        "$ref": "#/762"
-      },
-      {
         "$ref": "#/763"
       },
       {
@@ -10707,12 +10729,38 @@
       },
       {
         "$ref": "#/766"
+      },
+      {
+        "$ref": "#/767"
+      },
+      {
+        "$ref": "#/768"
       }
     ]
   },
   {
     "$type": "StringLiteralType",
     "value": "AzureBlobStorage"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DocumentDB.ErrorResponse",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Error message indicating why the operation failed."
+      }
+    }
   },
   {
     "$type": "StringLiteralType",
@@ -10729,10 +10777,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/769"
+        "$ref": "#/772"
       },
       {
-        "$ref": "#/770"
+        "$ref": "#/773"
       }
     ]
   },
@@ -10740,7 +10788,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-04-01-preview",
     "body": {
-      "$ref": "#/712"
+      "$ref": "#/714"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -10772,21 +10820,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/773"
+          "$ref": "#/776"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/774"
+          "$ref": "#/777"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/775"
+          "$ref": "#/778"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -10800,7 +10848,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/777"
+          "$ref": "#/780"
         },
         "flags": 0,
         "description": "Properties of a managed Cassandra cluster."
@@ -10821,7 +10869,7 @@
       },
       "identity": {
         "type": {
-          "$ref": "#/816"
+          "$ref": "#/819"
         },
         "flags": 0,
         "description": "Identity for the resource."
@@ -10834,7 +10882,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/784"
+          "$ref": "#/787"
         },
         "flags": 0,
         "description": "The status of the resource at the time the operation was called."
@@ -10869,21 +10917,21 @@
       },
       "authenticationMethod": {
         "type": {
-          "$ref": "#/788"
+          "$ref": "#/791"
         },
         "flags": 0,
         "description": "Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'."
       },
       "initialCassandraAdminPassword": {
         "type": {
-          "$ref": "#/789"
+          "$ref": "#/792"
         },
         "flags": 4,
         "description": "Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'."
       },
       "prometheusEndpoint": {
         "type": {
-          "$ref": "#/790"
+          "$ref": "#/793"
         },
         "flags": 0,
         "description": "Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached."
@@ -10897,49 +10945,49 @@
       },
       "autoReplicate": {
         "type": {
-          "$ref": "#/794"
+          "$ref": "#/797"
         },
         "flags": 0,
         "description": "The form of AutoReplicate that is being used by this cluster."
       },
       "clientCertificates": {
         "type": {
-          "$ref": "#/796"
+          "$ref": "#/799"
         },
         "flags": 0,
         "description": "List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property."
       },
       "externalGossipCertificates": {
         "type": {
-          "$ref": "#/797"
+          "$ref": "#/800"
         },
         "flags": 0,
         "description": "List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property."
       },
       "gossipCertificates": {
         "type": {
-          "$ref": "#/798"
+          "$ref": "#/801"
         },
         "flags": 2,
         "description": "List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property."
       },
       "externalSeedNodes": {
         "type": {
-          "$ref": "#/799"
+          "$ref": "#/802"
         },
         "flags": 0,
         "description": "List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes."
       },
       "seedNodes": {
         "type": {
-          "$ref": "#/800"
+          "$ref": "#/803"
         },
         "flags": 2,
         "description": "List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes."
       },
       "externalDataCenters": {
         "type": {
-          "$ref": "#/801"
+          "$ref": "#/804"
         },
         "flags": 0,
         "description": "List of the data center names for unmanaged data centers in this cluster to be included in auto-replication."
@@ -10967,42 +11015,42 @@
       },
       "clusterType": {
         "type": {
-          "$ref": "#/804"
+          "$ref": "#/807"
         },
         "flags": 0,
         "description": "Type of the cluster. If set to Production, some operations might not be permitted on cluster."
       },
       "provisionError": {
         "type": {
-          "$ref": "#/805"
+          "$ref": "#/808"
         },
         "flags": 0,
         "description": "Error related to resource provisioning."
       },
       "extensions": {
         "type": {
-          "$ref": "#/806"
+          "$ref": "#/809"
         },
         "flags": 0,
         "description": "Extensions to be added or updated on cluster."
       },
       "backupSchedules": {
         "type": {
-          "$ref": "#/808"
+          "$ref": "#/811"
         },
         "flags": 0,
         "description": "List of backup schedules that define when you want to back up your data."
       },
       "scheduledEventStrategy": {
         "type": {
-          "$ref": "#/812"
+          "$ref": "#/815"
         },
         "flags": 0,
         "description": "How the nodes in the cluster react to scheduled events"
       },
       "azureConnectionMethod": {
         "type": {
-          "$ref": "#/815"
+          "$ref": "#/818"
         },
         "flags": 0,
         "description": "How to connect to the azure services needed for running the cluster"
@@ -11047,15 +11095,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/778"
-      },
-      {
-        "$ref": "#/779"
-      },
-      {
-        "$ref": "#/780"
-      },
-      {
         "$ref": "#/781"
       },
       {
@@ -11063,6 +11102,15 @@
       },
       {
         "$ref": "#/783"
+      },
+      {
+        "$ref": "#/784"
+      },
+      {
+        "$ref": "#/785"
+      },
+      {
+        "$ref": "#/786"
       }
     ]
   },
@@ -11085,13 +11133,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/785"
+        "$ref": "#/788"
       },
       {
-        "$ref": "#/786"
+        "$ref": "#/789"
       },
       {
-        "$ref": "#/787"
+        "$ref": "#/790"
       }
     ]
   },
@@ -11131,13 +11179,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/791"
+        "$ref": "#/794"
       },
       {
-        "$ref": "#/792"
+        "$ref": "#/795"
       },
       {
-        "$ref": "#/793"
+        "$ref": "#/796"
       }
     ]
   },
@@ -11157,31 +11205,31 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/795"
+      "$ref": "#/798"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/795"
+      "$ref": "#/798"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/795"
+      "$ref": "#/798"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/790"
+      "$ref": "#/793"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/790"
+      "$ref": "#/793"
     }
   },
   {
@@ -11205,10 +11253,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/802"
+        "$ref": "#/805"
       },
       {
-        "$ref": "#/803"
+        "$ref": "#/806"
       }
     ]
   },
@@ -11282,7 +11330,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/807"
+      "$ref": "#/810"
     }
   },
   {
@@ -11304,13 +11352,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/809"
+        "$ref": "#/812"
       },
       {
-        "$ref": "#/810"
+        "$ref": "#/813"
       },
       {
-        "$ref": "#/811"
+        "$ref": "#/814"
       }
     ]
   },
@@ -11329,10 +11377,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/813"
+        "$ref": "#/816"
       },
       {
-        "$ref": "#/814"
+        "$ref": "#/817"
       }
     ]
   },
@@ -11356,7 +11404,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/819"
+          "$ref": "#/822"
         },
         "flags": 0,
         "description": "The type of the resource."
@@ -11378,10 +11426,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/817"
+        "$ref": "#/820"
       },
       {
-        "$ref": "#/818"
+        "$ref": "#/821"
       }
     ]
   },
@@ -11389,7 +11437,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview",
     "body": {
-      "$ref": "#/776"
+      "$ref": "#/779"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -11415,21 +11463,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/773"
+          "$ref": "#/776"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/821"
+          "$ref": "#/824"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/822"
+          "$ref": "#/825"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -11457,14 +11505,14 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/824"
+          "$ref": "#/827"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
       },
       "identity": {
         "type": {
-          "$ref": "#/816"
+          "$ref": "#/819"
         },
         "flags": 0,
         "description": "Identity for the resource."
@@ -11477,7 +11525,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/831"
+          "$ref": "#/834"
         },
         "flags": 2,
         "description": "The provisioning state of the resource."
@@ -11491,7 +11539,7 @@
       },
       "endPoints": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/836"
         },
         "flags": 2,
         "description": "Endpoints for clients to connect to the cluster."
@@ -11533,7 +11581,7 @@
       },
       "authenticationMethod": {
         "type": {
-          "$ref": "#/835"
+          "$ref": "#/838"
         },
         "flags": 0,
         "description": "The authentication method used for the Garnet cluster."
@@ -11547,28 +11595,28 @@
       },
       "allocationState": {
         "type": {
-          "$ref": "#/838"
+          "$ref": "#/841"
         },
         "flags": 0,
         "description": "Allocation state of the cluster and data center resources. Active implies the virtual machines of the cluster are allocated, deallocated implies virtual machines and resources are deallocated."
       },
       "clusterType": {
         "type": {
-          "$ref": "#/841"
+          "$ref": "#/844"
         },
         "flags": 0,
         "description": "Type of the cluster. If set to Production, some operations might not be permitted on cluster."
       },
       "provisionError": {
         "type": {
-          "$ref": "#/443"
+          "$ref": "#/445"
         },
         "flags": 0,
         "description": "Error related to resource provisioning."
       },
       "extensions": {
         "type": {
-          "$ref": "#/842"
+          "$ref": "#/845"
         },
         "flags": 0,
         "description": "Extensions to be added or updated on cluster."
@@ -11606,15 +11654,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/825"
-      },
-      {
-        "$ref": "#/826"
-      },
-      {
-        "$ref": "#/827"
-      },
-      {
         "$ref": "#/828"
       },
       {
@@ -11622,6 +11661,15 @@
       },
       {
         "$ref": "#/830"
+      },
+      {
+        "$ref": "#/831"
+      },
+      {
+        "$ref": "#/832"
+      },
+      {
+        "$ref": "#/833"
       }
     ]
   },
@@ -11648,7 +11696,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/832"
+      "$ref": "#/835"
     }
   },
   {
@@ -11662,7 +11710,7 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/834"
+        "$ref": "#/837"
       }
     ]
   },
@@ -11681,10 +11729,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/836"
+        "$ref": "#/839"
       },
       {
-        "$ref": "#/837"
+        "$ref": "#/840"
       }
     ]
   },
@@ -11703,10 +11751,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/839"
+        "$ref": "#/842"
       },
       {
-        "$ref": "#/840"
+        "$ref": "#/843"
       }
     ]
   },
@@ -11720,7 +11768,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/garnetClusters@2026-04-01-preview",
     "body": {
-      "$ref": "#/823"
+      "$ref": "#/826"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -11746,21 +11794,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/773"
+          "$ref": "#/776"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/844"
+          "$ref": "#/847"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/845"
+          "$ref": "#/848"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -11774,7 +11822,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/847"
+          "$ref": "#/850"
         },
         "flags": 0,
         "description": "Properties of a managed Cassandra data center."
@@ -11787,7 +11835,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/854"
+          "$ref": "#/857"
         },
         "flags": 0,
         "description": "The status of the resource at the time the operation was called."
@@ -11815,7 +11863,7 @@
       },
       "seedNodes": {
         "type": {
-          "$ref": "#/855"
+          "$ref": "#/858"
         },
         "flags": 2,
         "description": "IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster."
@@ -11871,7 +11919,7 @@
       },
       "authenticationMethodLdapProperties": {
         "type": {
-          "$ref": "#/856"
+          "$ref": "#/859"
         },
         "flags": 0,
         "description": "Ldap authentication method properties. This feature is in preview."
@@ -11885,7 +11933,7 @@
       },
       "provisionError": {
         "type": {
-          "$ref": "#/805"
+          "$ref": "#/808"
         },
         "flags": 0,
         "description": "Error related to resource provisioning."
@@ -11930,15 +11978,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/848"
-      },
-      {
-        "$ref": "#/849"
-      },
-      {
-        "$ref": "#/850"
-      },
-      {
         "$ref": "#/851"
       },
       {
@@ -11946,13 +11985,22 @@
       },
       {
         "$ref": "#/853"
+      },
+      {
+        "$ref": "#/854"
+      },
+      {
+        "$ref": "#/855"
+      },
+      {
+        "$ref": "#/856"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/790"
+      "$ref": "#/793"
     }
   },
   {
@@ -11982,7 +12030,7 @@
       },
       "serviceUserPassword": {
         "type": {
-          "$ref": "#/789"
+          "$ref": "#/792"
         },
         "flags": 0,
         "description": "Password of the look up user."
@@ -12003,7 +12051,7 @@
       },
       "serverCertificates": {
         "type": {
-          "$ref": "#/857"
+          "$ref": "#/860"
         },
         "flags": 0
       },
@@ -12019,14 +12067,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/795"
+      "$ref": "#/798"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/cassandraClusters/dataCenters@2026-04-01-preview",
     "body": {
-      "$ref": "#/846"
+      "$ref": "#/849"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12059,14 +12107,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/859"
+          "$ref": "#/862"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/860"
+          "$ref": "#/863"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -12080,7 +12128,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/862"
+          "$ref": "#/865"
         },
         "flags": 0,
         "description": "Properties related to the Mongo Role Definition."
@@ -12100,7 +12148,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/865"
+          "$ref": "#/868"
         },
         "flags": 0,
         "description": "Indicates whether the Role Definition was built-in or user created."
@@ -12114,14 +12162,14 @@
       },
       "privileges": {
         "type": {
-          "$ref": "#/869"
+          "$ref": "#/872"
         },
         "flags": 0,
         "description": "A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege."
       },
       "roles": {
         "type": {
-          "$ref": "#/871"
+          "$ref": "#/874"
         },
         "flags": 0,
         "description": "The set of roles inherited by this Role Definition."
@@ -12140,10 +12188,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/863"
+        "$ref": "#/866"
       },
       {
-        "$ref": "#/864"
+        "$ref": "#/867"
       }
     ]
   },
@@ -12153,14 +12201,14 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/867"
+          "$ref": "#/870"
         },
         "flags": 0,
         "description": "An Azure Cosmos DB Mongo DB Resource."
       },
       "actions": {
         "type": {
-          "$ref": "#/868"
+          "$ref": "#/871"
         },
         "flags": 0,
         "description": "An array of actions that are allowed."
@@ -12196,7 +12244,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/866"
+      "$ref": "#/869"
     }
   },
   {
@@ -12222,14 +12270,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/870"
+      "$ref": "#/873"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2026-04-01-preview",
     "body": {
-      "$ref": "#/861"
+      "$ref": "#/864"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12262,14 +12310,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/873"
+          "$ref": "#/876"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/874"
+          "$ref": "#/877"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -12283,7 +12331,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/876"
+          "$ref": "#/879"
         },
         "flags": 0,
         "description": "Properties related to the User Definition."
@@ -12303,7 +12351,7 @@
       },
       "password": {
         "type": {
-          "$ref": "#/789"
+          "$ref": "#/792"
         },
         "flags": 0,
         "description": "The password for User Definition. Response does not contain user password."
@@ -12324,7 +12372,7 @@
       },
       "roles": {
         "type": {
-          "$ref": "#/877"
+          "$ref": "#/880"
         },
         "flags": 0,
         "description": "The set of roles inherited by the User Definition."
@@ -12341,14 +12389,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/870"
+      "$ref": "#/873"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2026-04-01-preview",
     "body": {
-      "$ref": "#/875"
+      "$ref": "#/878"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12364,7 +12412,7 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/879"
+        "$ref": "#/882"
       }
     ]
   },
@@ -12389,21 +12437,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/880"
+          "$ref": "#/883"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/881"
+          "$ref": "#/884"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/882"
+          "$ref": "#/885"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -12417,7 +12465,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/884"
+          "$ref": "#/887"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -12448,7 +12496,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-04-01-preview",
     "body": {
-      "$ref": "#/883"
+      "$ref": "#/886"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12481,14 +12529,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/886"
+          "$ref": "#/889"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/887"
+          "$ref": "#/890"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -12502,7 +12550,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/889"
+          "$ref": "#/892"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -12522,14 +12570,14 @@
       },
       "requiredMembers": {
         "type": {
-          "$ref": "#/890"
+          "$ref": "#/893"
         },
         "flags": 2,
         "description": "The private link resource required member names."
       },
       "requiredZoneNames": {
         "type": {
-          "$ref": "#/891"
+          "$ref": "#/894"
         },
         "flags": 2,
         "description": "The private link resource required zone names."
@@ -12552,7 +12600,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/privateLinkResources@2026-04-01-preview",
     "body": {
-      "$ref": "#/888"
+      "$ref": "#/891"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -12585,14 +12633,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/893"
+          "$ref": "#/896"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/894"
+          "$ref": "#/897"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -12606,7 +12654,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/896"
+          "$ref": "#/899"
         },
         "flags": 0,
         "description": "Properties related to the Role Definition."
@@ -12626,21 +12674,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/899"
+          "$ref": "#/902"
         },
         "flags": 0,
         "description": "Indicates whether the Role Definition was built-in or user created."
       },
       "assignableScopes": {
         "type": {
-          "$ref": "#/900"
+          "$ref": "#/903"
         },
         "flags": 0,
         "description": "A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist."
       },
       "permissions": {
         "type": {
-          "$ref": "#/901"
+          "$ref": "#/904"
         },
         "flags": 0,
         "description": "The set of operations allowed through this Role Definition."
@@ -12659,10 +12707,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/897"
+        "$ref": "#/900"
       },
       {
-        "$ref": "#/898"
+        "$ref": "#/901"
       }
     ]
   },
@@ -12675,14 +12723,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/233"
+      "$ref": "#/235"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions@2026-04-01-preview",
     "body": {
-      "$ref": "#/895"
+      "$ref": "#/898"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12715,14 +12763,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/903"
+          "$ref": "#/906"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/904"
+          "$ref": "#/907"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -12736,7 +12784,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/906"
+          "$ref": "#/909"
         },
         "flags": 0,
         "description": "Properties related to the Role Assignment."
@@ -12774,7 +12822,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2026-04-01-preview",
     "body": {
-      "$ref": "#/905"
+      "$ref": "#/908"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -12807,14 +12855,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/908"
+          "$ref": "#/911"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/909"
+          "$ref": "#/912"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -12828,7 +12876,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/911"
+          "$ref": "#/914"
         },
         "flags": 0,
         "description": "The properties of a restorable database account."
@@ -12876,14 +12924,14 @@
       },
       "apiType": {
         "type": {
-          "$ref": "#/918"
+          "$ref": "#/921"
         },
         "flags": 2,
         "description": "The API type of the restorable database account."
       },
       "restorableLocations": {
         "type": {
-          "$ref": "#/920"
+          "$ref": "#/923"
         },
         "flags": 2,
         "description": "List of regions where the of the database account can be restored from."
@@ -12921,15 +12969,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/912"
-      },
-      {
-        "$ref": "#/913"
-      },
-      {
-        "$ref": "#/914"
-      },
-      {
         "$ref": "#/915"
       },
       {
@@ -12937,6 +12976,15 @@
       },
       {
         "$ref": "#/917"
+      },
+      {
+        "$ref": "#/918"
+      },
+      {
+        "$ref": "#/919"
+      },
+      {
+        "$ref": "#/920"
       }
     ]
   },
@@ -12977,14 +13025,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/919"
+      "$ref": "#/922"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/locations/restorableDatabaseAccounts@2026-04-01-preview",
     "body": {
-      "$ref": "#/910"
+      "$ref": "#/913"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -13015,21 +13063,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/922"
+          "$ref": "#/925"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/923"
+          "$ref": "#/926"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/924"
+          "$ref": "#/927"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -13043,7 +13091,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/926"
+          "$ref": "#/929"
         },
         "flags": 0,
         "description": "Services response resource."
@@ -13064,7 +13112,7 @@
       },
       "instanceSize": {
         "type": {
-          "$ref": "#/930"
+          "$ref": "#/933"
         },
         "flags": 0,
         "description": "Instance type for the service."
@@ -13078,7 +13126,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/937"
+          "$ref": "#/940"
         },
         "flags": 2,
         "description": "Describes the status of a service."
@@ -13086,16 +13134,16 @@
     },
     "elements": {
       "DataTransfer": {
-        "$ref": "#/938"
+        "$ref": "#/941"
       },
       "SqlDedicatedGateway": {
-        "$ref": "#/966"
+        "$ref": "#/969"
       },
       "GraphAPICompute": {
-        "$ref": "#/997"
+        "$ref": "#/1000"
       },
       "MaterializedViewsBuilder": {
-        "$ref": "#/1025"
+        "$ref": "#/1028"
       }
     }
   },
@@ -13118,13 +13166,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/927"
+        "$ref": "#/930"
       },
       {
-        "$ref": "#/928"
+        "$ref": "#/931"
       },
       {
-        "$ref": "#/929"
+        "$ref": "#/932"
       }
     ]
   },
@@ -13159,15 +13207,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/931"
-      },
-      {
-        "$ref": "#/932"
-      },
-      {
-        "$ref": "#/933"
-      },
-      {
         "$ref": "#/934"
       },
       {
@@ -13175,6 +13214,15 @@
       },
       {
         "$ref": "#/936"
+      },
+      {
+        "$ref": "#/937"
+      },
+      {
+        "$ref": "#/938"
+      },
+      {
+        "$ref": "#/939"
       }
     ]
   },
@@ -13191,7 +13239,7 @@
       },
       "instanceSize": {
         "type": {
-          "$ref": "#/942"
+          "$ref": "#/945"
         },
         "flags": 0,
         "description": "Instance type for the service."
@@ -13205,21 +13253,21 @@
       },
       "serviceType": {
         "type": {
-          "$ref": "#/965"
+          "$ref": "#/968"
         },
         "flags": 1,
         "description": "ServiceType for the service."
       },
       "status": {
         "type": {
-          "$ref": "#/954"
+          "$ref": "#/957"
         },
         "flags": 2,
         "description": "Describes the status of a service."
       },
       "locations": {
         "type": {
-          "$ref": "#/963"
+          "$ref": "#/966"
         },
         "flags": 2,
         "description": "An array that contains all of the locations for the service."
@@ -13245,13 +13293,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/939"
+        "$ref": "#/942"
       },
       {
-        "$ref": "#/940"
+        "$ref": "#/943"
       },
       {
-        "$ref": "#/941"
+        "$ref": "#/944"
       }
     ]
   },
@@ -13278,16 +13326,16 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/943"
-      },
-      {
-        "$ref": "#/944"
-      },
-      {
-        "$ref": "#/945"
-      },
-      {
         "$ref": "#/946"
+      },
+      {
+        "$ref": "#/947"
+      },
+      {
+        "$ref": "#/948"
+      },
+      {
+        "$ref": "#/949"
       }
     ]
   },
@@ -13322,15 +13370,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/948"
-      },
-      {
-        "$ref": "#/949"
-      },
-      {
-        "$ref": "#/950"
-      },
-      {
         "$ref": "#/951"
       },
       {
@@ -13338,6 +13377,15 @@
       },
       {
         "$ref": "#/953"
+      },
+      {
+        "$ref": "#/954"
+      },
+      {
+        "$ref": "#/955"
+      },
+      {
+        "$ref": "#/956"
       }
     ]
   },
@@ -13361,7 +13409,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/962"
+          "$ref": "#/965"
         },
         "flags": 2,
         "description": "Describes the status of a service."
@@ -13399,15 +13447,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/956"
-      },
-      {
-        "$ref": "#/957"
-      },
-      {
-        "$ref": "#/958"
-      },
-      {
         "$ref": "#/959"
       },
       {
@@ -13415,13 +13454,22 @@
       },
       {
         "$ref": "#/961"
+      },
+      {
+        "$ref": "#/962"
+      },
+      {
+        "$ref": "#/963"
+      },
+      {
+        "$ref": "#/964"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/955"
+      "$ref": "#/958"
     }
   },
   {
@@ -13445,7 +13493,7 @@
       },
       "instanceSize": {
         "type": {
-          "$ref": "#/970"
+          "$ref": "#/973"
         },
         "flags": 0,
         "description": "Instance type for the service."
@@ -13459,14 +13507,14 @@
       },
       "serviceType": {
         "type": {
-          "$ref": "#/996"
+          "$ref": "#/999"
         },
         "flags": 1,
         "description": "ServiceType for the service."
       },
       "status": {
         "type": {
-          "$ref": "#/982"
+          "$ref": "#/985"
         },
         "flags": 2,
         "description": "Describes the status of a service."
@@ -13480,14 +13528,14 @@
       },
       "dedicatedGatewayType": {
         "type": {
-          "$ref": "#/985"
+          "$ref": "#/988"
         },
         "flags": 0,
         "description": "DedicatedGatewayType for the service."
       },
       "locations": {
         "type": {
-          "$ref": "#/994"
+          "$ref": "#/997"
         },
         "flags": 2,
         "description": "An array that contains all of the locations for the service."
@@ -13513,13 +13561,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/967"
+        "$ref": "#/970"
       },
       {
-        "$ref": "#/968"
+        "$ref": "#/971"
       },
       {
-        "$ref": "#/969"
+        "$ref": "#/972"
       }
     ]
   },
@@ -13546,16 +13594,16 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/971"
-      },
-      {
-        "$ref": "#/972"
-      },
-      {
-        "$ref": "#/973"
-      },
-      {
         "$ref": "#/974"
+      },
+      {
+        "$ref": "#/975"
+      },
+      {
+        "$ref": "#/976"
+      },
+      {
+        "$ref": "#/977"
       }
     ]
   },
@@ -13590,15 +13638,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/976"
-      },
-      {
-        "$ref": "#/977"
-      },
-      {
-        "$ref": "#/978"
-      },
-      {
         "$ref": "#/979"
       },
       {
@@ -13606,6 +13645,15 @@
       },
       {
         "$ref": "#/981"
+      },
+      {
+        "$ref": "#/982"
+      },
+      {
+        "$ref": "#/983"
+      },
+      {
+        "$ref": "#/984"
       }
     ]
   },
@@ -13624,10 +13672,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/983"
+        "$ref": "#/986"
       },
       {
-        "$ref": "#/984"
+        "$ref": "#/987"
       }
     ]
   },
@@ -13651,7 +13699,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/993"
+          "$ref": "#/996"
         },
         "flags": 2,
         "description": "Describes the status of a service."
@@ -13696,15 +13744,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/987"
-      },
-      {
-        "$ref": "#/988"
-      },
-      {
-        "$ref": "#/989"
-      },
-      {
         "$ref": "#/990"
       },
       {
@@ -13712,13 +13751,22 @@
       },
       {
         "$ref": "#/992"
+      },
+      {
+        "$ref": "#/993"
+      },
+      {
+        "$ref": "#/994"
+      },
+      {
+        "$ref": "#/995"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/986"
+      "$ref": "#/989"
     }
   },
   {
@@ -13742,7 +13790,7 @@
       },
       "instanceSize": {
         "type": {
-          "$ref": "#/1001"
+          "$ref": "#/1004"
         },
         "flags": 0,
         "description": "Instance type for the service."
@@ -13756,14 +13804,14 @@
       },
       "serviceType": {
         "type": {
-          "$ref": "#/1024"
+          "$ref": "#/1027"
         },
         "flags": 1,
         "description": "ServiceType for the service."
       },
       "status": {
         "type": {
-          "$ref": "#/1013"
+          "$ref": "#/1016"
         },
         "flags": 2,
         "description": "Describes the status of a service."
@@ -13777,7 +13825,7 @@
       },
       "locations": {
         "type": {
-          "$ref": "#/1022"
+          "$ref": "#/1025"
         },
         "flags": 2,
         "description": "An array that contains all of the locations for the service."
@@ -13803,13 +13851,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/998"
+        "$ref": "#/1001"
       },
       {
-        "$ref": "#/999"
+        "$ref": "#/1002"
       },
       {
-        "$ref": "#/1000"
+        "$ref": "#/1003"
       }
     ]
   },
@@ -13836,16 +13884,16 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1002"
-      },
-      {
-        "$ref": "#/1003"
-      },
-      {
-        "$ref": "#/1004"
-      },
-      {
         "$ref": "#/1005"
+      },
+      {
+        "$ref": "#/1006"
+      },
+      {
+        "$ref": "#/1007"
+      },
+      {
+        "$ref": "#/1008"
       }
     ]
   },
@@ -13880,15 +13928,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1007"
-      },
-      {
-        "$ref": "#/1008"
-      },
-      {
-        "$ref": "#/1009"
-      },
-      {
         "$ref": "#/1010"
       },
       {
@@ -13896,6 +13935,15 @@
       },
       {
         "$ref": "#/1012"
+      },
+      {
+        "$ref": "#/1013"
+      },
+      {
+        "$ref": "#/1014"
+      },
+      {
+        "$ref": "#/1015"
       }
     ]
   },
@@ -13919,7 +13967,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/1021"
+          "$ref": "#/1024"
         },
         "flags": 2,
         "description": "Describes the status of a service."
@@ -13964,15 +14012,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1015"
-      },
-      {
-        "$ref": "#/1016"
-      },
-      {
-        "$ref": "#/1017"
-      },
-      {
         "$ref": "#/1018"
       },
       {
@@ -13980,13 +14019,22 @@
       },
       {
         "$ref": "#/1020"
+      },
+      {
+        "$ref": "#/1021"
+      },
+      {
+        "$ref": "#/1022"
+      },
+      {
+        "$ref": "#/1023"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1014"
+      "$ref": "#/1017"
     }
   },
   {
@@ -14010,7 +14058,7 @@
       },
       "instanceSize": {
         "type": {
-          "$ref": "#/1029"
+          "$ref": "#/1032"
         },
         "flags": 0,
         "description": "Instance type for the service."
@@ -14024,21 +14072,21 @@
       },
       "serviceType": {
         "type": {
-          "$ref": "#/1052"
+          "$ref": "#/1055"
         },
         "flags": 1,
         "description": "ServiceType for the service."
       },
       "status": {
         "type": {
-          "$ref": "#/1041"
+          "$ref": "#/1044"
         },
         "flags": 2,
         "description": "Describes the status of a service."
       },
       "locations": {
         "type": {
-          "$ref": "#/1050"
+          "$ref": "#/1053"
         },
         "flags": 2,
         "description": "An array that contains all of the locations for the service."
@@ -14064,13 +14112,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1026"
+        "$ref": "#/1029"
       },
       {
-        "$ref": "#/1027"
+        "$ref": "#/1030"
       },
       {
-        "$ref": "#/1028"
+        "$ref": "#/1031"
       }
     ]
   },
@@ -14097,16 +14145,16 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1030"
-      },
-      {
-        "$ref": "#/1031"
-      },
-      {
-        "$ref": "#/1032"
-      },
-      {
         "$ref": "#/1033"
+      },
+      {
+        "$ref": "#/1034"
+      },
+      {
+        "$ref": "#/1035"
+      },
+      {
+        "$ref": "#/1036"
       }
     ]
   },
@@ -14141,15 +14189,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1035"
-      },
-      {
-        "$ref": "#/1036"
-      },
-      {
-        "$ref": "#/1037"
-      },
-      {
         "$ref": "#/1038"
       },
       {
@@ -14157,6 +14196,15 @@
       },
       {
         "$ref": "#/1040"
+      },
+      {
+        "$ref": "#/1041"
+      },
+      {
+        "$ref": "#/1042"
+      },
+      {
+        "$ref": "#/1043"
       }
     ]
   },
@@ -14180,7 +14228,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/1049"
+          "$ref": "#/1052"
         },
         "flags": 2,
         "description": "Describes the status of a service."
@@ -14218,15 +14266,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1043"
-      },
-      {
-        "$ref": "#/1044"
-      },
-      {
-        "$ref": "#/1045"
-      },
-      {
         "$ref": "#/1046"
       },
       {
@@ -14234,13 +14273,22 @@
       },
       {
         "$ref": "#/1048"
+      },
+      {
+        "$ref": "#/1049"
+      },
+      {
+        "$ref": "#/1050"
+      },
+      {
+        "$ref": "#/1051"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1042"
+      "$ref": "#/1045"
     }
   },
   {
@@ -14255,7 +14303,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/services@2026-04-01-preview",
     "body": {
-      "$ref": "#/925"
+      "$ref": "#/928"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14285,21 +14333,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1054"
+          "$ref": "#/1057"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1055"
+          "$ref": "#/1058"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1056"
+          "$ref": "#/1059"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14313,7 +14361,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1058"
+          "$ref": "#/1061"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB resource throughput"
@@ -14347,7 +14395,7 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/1059"
+          "$ref": "#/1062"
         },
         "flags": 0
       }
@@ -14366,7 +14414,7 @@
       },
       "autoscaleSettings": {
         "type": {
-          "$ref": "#/1060"
+          "$ref": "#/1063"
         },
         "flags": 0,
         "description": "Cosmos DB resource for autoscale settings. Either throughput is required or autoscaleSettings is required, but not both."
@@ -14401,7 +14449,7 @@
       },
       "throughputBuckets": {
         "type": {
-          "$ref": "#/1064"
+          "$ref": "#/1067"
         },
         "flags": 0,
         "description": "Array of throughput bucket limits to be applied to the Cosmos DB container"
@@ -14442,7 +14490,7 @@
       },
       "autoUpgradePolicy": {
         "type": {
-          "$ref": "#/1061"
+          "$ref": "#/1064"
         },
         "flags": 0,
         "description": "Cosmos DB resource auto-upgrade policy"
@@ -14462,7 +14510,7 @@
     "properties": {
       "throughputPolicy": {
         "type": {
-          "$ref": "#/1062"
+          "$ref": "#/1065"
         },
         "flags": 0,
         "description": "Represents throughput policy which service must adhere to for auto-upgrade"
@@ -14519,14 +14567,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1063"
+      "$ref": "#/1066"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-04-01-preview",
     "body": {
-      "$ref": "#/1057"
+      "$ref": "#/1060"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14556,21 +14604,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1066"
+          "$ref": "#/1069"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1067"
+          "$ref": "#/1070"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1068"
+          "$ref": "#/1071"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14584,7 +14632,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1058"
+          "$ref": "#/1061"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB resource throughput"
@@ -14616,7 +14664,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-04-01-preview",
     "body": {
-      "$ref": "#/1069"
+      "$ref": "#/1072"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14646,21 +14694,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1071"
+          "$ref": "#/1074"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1072"
+          "$ref": "#/1075"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1073"
+          "$ref": "#/1076"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14674,7 +14722,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1058"
+          "$ref": "#/1061"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB resource throughput"
@@ -14706,7 +14754,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview",
     "body": {
-      "$ref": "#/1074"
+      "$ref": "#/1077"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14736,21 +14784,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1076"
+          "$ref": "#/1079"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1077"
+          "$ref": "#/1080"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1078"
+          "$ref": "#/1081"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14764,7 +14812,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1058"
+          "$ref": "#/1061"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB resource throughput"
@@ -14796,7 +14844,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview",
     "body": {
-      "$ref": "#/1079"
+      "$ref": "#/1082"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14826,21 +14874,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1081"
+          "$ref": "#/1084"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1082"
+          "$ref": "#/1085"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1083"
+          "$ref": "#/1086"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14854,7 +14902,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1058"
+          "$ref": "#/1061"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB resource throughput"
@@ -14886,7 +14934,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-04-01-preview",
     "body": {
-      "$ref": "#/1084"
+      "$ref": "#/1087"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -14916,21 +14964,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1086"
+          "$ref": "#/1089"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1087"
+          "$ref": "#/1090"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1088"
+          "$ref": "#/1091"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -14944,7 +14992,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1058"
+          "$ref": "#/1061"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB resource throughput"
@@ -14976,7 +15024,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-04-01-preview",
     "body": {
-      "$ref": "#/1089"
+      "$ref": "#/1092"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15006,21 +15054,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1091"
+          "$ref": "#/1094"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1092"
+          "$ref": "#/1095"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1093"
+          "$ref": "#/1096"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -15034,7 +15082,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1058"
+          "$ref": "#/1061"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB resource throughput"
@@ -15066,7 +15114,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-04-01-preview",
     "body": {
-      "$ref": "#/1094"
+      "$ref": "#/1097"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15096,21 +15144,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1096"
+          "$ref": "#/1099"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1097"
+          "$ref": "#/1100"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1098"
+          "$ref": "#/1101"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -15124,7 +15172,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1058"
+          "$ref": "#/1061"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB resource throughput"
@@ -15156,7 +15204,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-04-01-preview",
     "body": {
-      "$ref": "#/1099"
+      "$ref": "#/1102"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15186,21 +15234,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1101"
+          "$ref": "#/1104"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1102"
+          "$ref": "#/1105"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1103"
+          "$ref": "#/1106"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -15214,7 +15262,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1058"
+          "$ref": "#/1061"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB resource throughput"
@@ -15246,7 +15294,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview",
     "body": {
-      "$ref": "#/1104"
+      "$ref": "#/1107"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15276,21 +15324,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1106"
+          "$ref": "#/1109"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1107"
+          "$ref": "#/1110"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1108"
+          "$ref": "#/1111"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -15304,7 +15352,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1058"
+          "$ref": "#/1061"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB resource throughput"
@@ -15336,7 +15384,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview",
     "body": {
-      "$ref": "#/1109"
+      "$ref": "#/1112"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -15366,21 +15414,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1111"
+          "$ref": "#/1114"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1112"
+          "$ref": "#/1115"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1113"
+          "$ref": "#/1116"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -15394,7 +15442,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1115"
+          "$ref": "#/1118"
         },
         "flags": 0,
         "description": "Network security configuration properties."
@@ -15407,35 +15455,35 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/1123"
+          "$ref": "#/1126"
         },
         "flags": 2,
         "description": "Provisioning state of the network security perimeter configuration"
       },
       "provisioningIssues": {
         "type": {
-          "$ref": "#/1150"
+          "$ref": "#/1153"
         },
         "flags": 2,
         "description": "List of provisioning issues, if any"
       },
       "networkSecurityPerimeter": {
         "type": {
-          "$ref": "#/1143"
+          "$ref": "#/1146"
         },
         "flags": 0,
         "description": "Information about the network security perimeter (NSP)"
       },
       "resourceAssociation": {
         "type": {
-          "$ref": "#/1151"
+          "$ref": "#/1154"
         },
         "flags": 0,
         "description": "Information about the resource association"
       },
       "profile": {
         "type": {
-          "$ref": "#/1156"
+          "$ref": "#/1159"
         },
         "flags": 0,
         "description": "Network security perimeter configuration profile"
@@ -15477,15 +15525,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1116"
-      },
-      {
-        "$ref": "#/1117"
-      },
-      {
-        "$ref": "#/1118"
-      },
-      {
         "$ref": "#/1119"
       },
       {
@@ -15496,6 +15535,15 @@
       },
       {
         "$ref": "#/1122"
+      },
+      {
+        "$ref": "#/1123"
+      },
+      {
+        "$ref": "#/1124"
+      },
+      {
+        "$ref": "#/1125"
       }
     ]
   },
@@ -15512,7 +15560,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1125"
+          "$ref": "#/1128"
         },
         "flags": 2,
         "description": "Details of the provisioning issue"
@@ -15525,14 +15573,14 @@
     "properties": {
       "issueType": {
         "type": {
-          "$ref": "#/1130"
+          "$ref": "#/1133"
         },
         "flags": 2,
         "description": "Type of issue"
       },
       "severity": {
         "type": {
-          "$ref": "#/1133"
+          "$ref": "#/1136"
         },
         "flags": 2,
         "description": "Severity of the issue."
@@ -15546,14 +15594,14 @@
       },
       "suggestedResourceIds": {
         "type": {
-          "$ref": "#/1134"
+          "$ref": "#/1137"
         },
         "flags": 2,
         "description": "Fully qualified resource IDs of suggested resources that can be associated to the network security perimeter (NSP) to remediate the issue."
       },
       "suggestedAccessRules": {
         "type": {
-          "$ref": "#/1149"
+          "$ref": "#/1152"
         },
         "flags": 2,
         "description": "Access rules that can be added to the network security profile (NSP) to remediate the issue."
@@ -15583,16 +15631,16 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1126"
-      },
-      {
-        "$ref": "#/1127"
-      },
-      {
-        "$ref": "#/1128"
-      },
-      {
         "$ref": "#/1129"
+      },
+      {
+        "$ref": "#/1130"
+      },
+      {
+        "$ref": "#/1131"
+      },
+      {
+        "$ref": "#/1132"
       }
     ]
   },
@@ -15611,10 +15659,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1131"
+        "$ref": "#/1134"
       },
       {
-        "$ref": "#/1132"
+        "$ref": "#/1135"
       }
     ]
   },
@@ -15637,7 +15685,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1136"
+          "$ref": "#/1139"
         },
         "flags": 0,
         "description": "Properties of the access rule"
@@ -15650,49 +15698,49 @@
     "properties": {
       "direction": {
         "type": {
-          "$ref": "#/1139"
+          "$ref": "#/1142"
         },
         "flags": 0,
         "description": "Direction of the access rule"
       },
       "addressPrefixes": {
         "type": {
-          "$ref": "#/1140"
+          "$ref": "#/1143"
         },
         "flags": 0,
         "description": "Address prefixes in the CIDR format for inbound rules"
       },
       "subscriptions": {
         "type": {
-          "$ref": "#/1142"
+          "$ref": "#/1145"
         },
         "flags": 0,
         "description": "Subscriptions for inbound rules"
       },
       "networkSecurityPerimeters": {
         "type": {
-          "$ref": "#/1145"
+          "$ref": "#/1148"
         },
         "flags": 0,
         "description": "Network security perimeters for inbound rules"
       },
       "fullyQualifiedDomainNames": {
         "type": {
-          "$ref": "#/1146"
+          "$ref": "#/1149"
         },
         "flags": 0,
         "description": "Fully qualified domain names (FQDN) for outbound rules"
       },
       "emailAddresses": {
         "type": {
-          "$ref": "#/1147"
+          "$ref": "#/1150"
         },
         "flags": 0,
         "description": "Email addresses for outbound rules"
       },
       "phoneNumbers": {
         "type": {
-          "$ref": "#/1148"
+          "$ref": "#/1151"
         },
         "flags": 0,
         "description": "Phone numbers for outbound rules"
@@ -15714,10 +15762,10 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1137"
+        "$ref": "#/1140"
       },
       {
-        "$ref": "#/1138"
+        "$ref": "#/1141"
       }
     ]
   },
@@ -15729,7 +15777,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AnonymousModel",
+    "name": "AnonymousModel1",
     "properties": {
       "id": {
         "type": {
@@ -15743,7 +15791,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1141"
+      "$ref": "#/1144"
     }
   },
   {
@@ -15759,7 +15807,7 @@
       },
       "perimeterGuid": {
         "type": {
-          "$ref": "#/1144"
+          "$ref": "#/1147"
         },
         "flags": 0,
         "description": "Universal unique ID (UUID) of the network security perimeter"
@@ -15782,7 +15830,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1143"
+      "$ref": "#/1146"
     }
   },
   {
@@ -15806,13 +15854,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1135"
+      "$ref": "#/1138"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1124"
+      "$ref": "#/1127"
     }
   },
   {
@@ -15828,7 +15876,7 @@
       },
       "accessMode": {
         "type": {
-          "$ref": "#/1155"
+          "$ref": "#/1158"
         },
         "flags": 0,
         "description": "Access mode of the resource association"
@@ -15854,13 +15902,13 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1152"
+        "$ref": "#/1155"
       },
       {
-        "$ref": "#/1153"
+        "$ref": "#/1156"
       },
       {
-        "$ref": "#/1154"
+        "$ref": "#/1157"
       }
     ]
   },
@@ -15884,7 +15932,7 @@
       },
       "accessRules": {
         "type": {
-          "$ref": "#/1157"
+          "$ref": "#/1160"
         },
         "flags": 0,
         "description": "List of Access Rules"
@@ -15898,7 +15946,7 @@
       },
       "enabledLogCategories": {
         "type": {
-          "$ref": "#/1158"
+          "$ref": "#/1161"
         },
         "flags": 0,
         "description": "List of log categories that are enabled"
@@ -15908,7 +15956,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1135"
+      "$ref": "#/1138"
     }
   },
   {
@@ -15921,7 +15969,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations@2026-04-01-preview",
     "body": {
-      "$ref": "#/1114"
+      "$ref": "#/1117"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -15951,21 +15999,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1160"
+          "$ref": "#/1163"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1161"
+          "$ref": "#/1164"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1162"
+          "$ref": "#/1165"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -15979,7 +16027,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1164"
+          "$ref": "#/1167"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -15999,7 +16047,7 @@
       },
       "softDeletionMetadata": {
         "type": {
-          "$ref": "#/1165"
+          "$ref": "#/1168"
         },
         "flags": 0,
         "description": "Metadata related to the soft deletion of the database account."
@@ -16013,7 +16061,7 @@
       },
       "resource": {
         "type": {
-          "$ref": "#/1166"
+          "$ref": "#/1169"
         },
         "flags": 0,
         "description": "A subset of properties of the underlying database account resource."
@@ -16053,21 +16101,21 @@
     "properties": {
       "locations": {
         "type": {
-          "$ref": "#/1167"
+          "$ref": "#/1170"
         },
         "flags": 0,
         "description": "An array that contains all of the locations enabled for the Cosmos DB account."
       },
       "writeLocations": {
         "type": {
-          "$ref": "#/1168"
+          "$ref": "#/1171"
         },
         "flags": 0,
         "description": "An array that contains the write location(s) for the Cosmos DB account."
       },
       "readLocations": {
         "type": {
-          "$ref": "#/1169"
+          "$ref": "#/1172"
         },
         "flags": 0,
         "description": "An array that contains the read locations enabled for the Cosmos DB account."
@@ -16096,7 +16144,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts@2026-04-01-preview",
     "body": {
-      "$ref": "#/1163"
+      "$ref": "#/1166"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -16126,21 +16174,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1171"
+          "$ref": "#/1174"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1172"
+          "$ref": "#/1175"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1173"
+          "$ref": "#/1176"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -16154,7 +16202,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1175"
+          "$ref": "#/1178"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -16167,14 +16215,14 @@
     "properties": {
       "softDeletionMetadata": {
         "type": {
-          "$ref": "#/1165"
+          "$ref": "#/1168"
         },
         "flags": 0,
         "description": "Metadata related to the soft deletion of the SQL database."
       },
       "resource": {
         "type": {
-          "$ref": "#/1176"
+          "$ref": "#/1179"
         },
         "flags": 0,
         "description": "The resource information for the soft-deleted SQL database."
@@ -16205,7 +16253,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases@2026-04-01-preview",
     "body": {
-      "$ref": "#/1174"
+      "$ref": "#/1177"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -16231,21 +16279,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1171"
+          "$ref": "#/1174"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1178"
+          "$ref": "#/1181"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1179"
+          "$ref": "#/1182"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -16259,7 +16307,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1181"
+          "$ref": "#/1184"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -16272,14 +16320,14 @@
     "properties": {
       "softDeletionMetadata": {
         "type": {
-          "$ref": "#/1165"
+          "$ref": "#/1168"
         },
         "flags": 0,
         "description": "Metadata related to the soft deletion of the SQL container."
       },
       "resource": {
         "type": {
-          "$ref": "#/1182"
+          "$ref": "#/1185"
         },
         "flags": 0,
         "description": "The resource information for the soft-deleted SQL container."
@@ -16306,7 +16354,7 @@
       },
       "partitionKey": {
         "type": {
-          "$ref": "#/530"
+          "$ref": "#/532"
         },
         "flags": 0,
         "description": "The configuration of the partition key to be used for partitioning data into multiple partitions"
@@ -16324,7 +16372,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases/softDeletedSqlContainers@2026-04-01-preview",
     "body": {
-      "$ref": "#/1180"
+      "$ref": "#/1183"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -16335,7 +16383,7 @@
     "properties": {
       "failoverPolicies": {
         "type": {
-          "$ref": "#/1185"
+          "$ref": "#/1188"
         },
         "flags": 1,
         "description": "List of failover policies."
@@ -16354,10 +16402,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/446"
+      "$ref": "#/448"
     },
     "input": {
-      "$ref": "#/1184"
+      "$ref": "#/1187"
     }
   },
   {
@@ -16400,7 +16448,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1187"
+      "$ref": "#/1190"
     }
   },
   {
@@ -16409,7 +16457,7 @@
     "properties": {
       "connectionStrings": {
         "type": {
-          "$ref": "#/1206"
+          "$ref": "#/1209"
         },
         "flags": 0,
         "description": "An array that contains the connection strings for the Cosmos DB account."
@@ -16436,14 +16484,14 @@
       },
       "keyKind": {
         "type": {
-          "$ref": "#/1195"
+          "$ref": "#/1198"
         },
         "flags": 2,
         "description": "Kind of the connection string key"
       },
       "type": {
         "type": {
-          "$ref": "#/1205"
+          "$ref": "#/1208"
         },
         "flags": 2,
         "description": "Type of the connection string"
@@ -16473,16 +16521,16 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1191"
-      },
-      {
-        "$ref": "#/1192"
-      },
-      {
-        "$ref": "#/1193"
-      },
-      {
         "$ref": "#/1194"
+      },
+      {
+        "$ref": "#/1195"
+      },
+      {
+        "$ref": "#/1196"
+      },
+      {
+        "$ref": "#/1197"
       }
     ]
   },
@@ -16529,15 +16577,6 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1196"
-      },
-      {
-        "$ref": "#/1197"
-      },
-      {
-        "$ref": "#/1198"
-      },
-      {
         "$ref": "#/1199"
       },
       {
@@ -16554,13 +16593,22 @@
       },
       {
         "$ref": "#/1204"
+      },
+      {
+        "$ref": "#/1205"
+      },
+      {
+        "$ref": "#/1206"
+      },
+      {
+        "$ref": "#/1207"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1190"
+      "$ref": "#/1193"
     }
   },
   {
@@ -16569,7 +16617,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1189"
+      "$ref": "#/1192"
     }
   },
   {
@@ -16591,10 +16639,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/446"
+      "$ref": "#/448"
     },
     "input": {
-      "$ref": "#/1208"
+      "$ref": "#/1211"
     }
   },
   {
@@ -16603,10 +16651,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/446"
+      "$ref": "#/448"
     },
     "input": {
-      "$ref": "#/1208"
+      "$ref": "#/1211"
     }
   },
   {
@@ -16635,7 +16683,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1211"
+      "$ref": "#/1214"
     }
   },
   {
@@ -16644,7 +16692,7 @@
     "properties": {
       "keyKind": {
         "type": {
-          "$ref": "#/1218"
+          "$ref": "#/1221"
         },
         "flags": 1,
         "description": "The access key to regenerate."
@@ -16681,16 +16729,16 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1214"
-      },
-      {
-        "$ref": "#/1215"
-      },
-      {
-        "$ref": "#/1216"
-      },
-      {
         "$ref": "#/1217"
+      },
+      {
+        "$ref": "#/1218"
+      },
+      {
+        "$ref": "#/1219"
+      },
+      {
+        "$ref": "#/1220"
       }
     ]
   },
@@ -16700,10 +16748,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/446"
+      "$ref": "#/448"
     },
     "input": {
-      "$ref": "#/1213"
+      "$ref": "#/1216"
     }
   },
   {
@@ -16719,7 +16767,7 @@
       },
       "name": {
         "type": {
-          "$ref": "#/347"
+          "$ref": "#/349"
         },
         "flags": 3,
         "description": "Name of the Copy Job"
@@ -16740,7 +16788,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/351"
+          "$ref": "#/353"
         },
         "flags": 1,
         "description": "The properties of a Copy Job"
@@ -16753,7 +16801,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/copyJobs",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1220"
+      "$ref": "#/1223"
     }
   },
   {
@@ -16762,7 +16810,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/copyJobs",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1220"
+      "$ref": "#/1223"
     }
   },
   {
@@ -16771,7 +16819,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/copyJobs",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1220"
+      "$ref": "#/1223"
     }
   },
   {
@@ -16780,7 +16828,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/copyJobs",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1220"
+      "$ref": "#/1223"
     }
   },
   {
@@ -16802,7 +16850,7 @@
     "properties": {
       "physicalPartitionStorageInfoCollection": {
         "type": {
-          "$ref": "#/1228"
+          "$ref": "#/1231"
         },
         "flags": 2,
         "description": "List of physical partitions and their properties."
@@ -16832,7 +16880,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1227"
+      "$ref": "#/1230"
     }
   },
   {
@@ -16841,10 +16889,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1226"
+      "$ref": "#/1229"
     },
     "input": {
-      "$ref": "#/1225"
+      "$ref": "#/1228"
     }
   },
   {
@@ -16853,10 +16901,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1226"
+      "$ref": "#/1229"
     },
     "input": {
-      "$ref": "#/1225"
+      "$ref": "#/1228"
     }
   },
   {
@@ -16878,7 +16926,7 @@
     "properties": {
       "continuousBackupInformation": {
         "type": {
-          "$ref": "#/1233"
+          "$ref": "#/1236"
         },
         "flags": 0,
         "description": "Information about the status of continuous backups."
@@ -16904,10 +16952,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1232"
+      "$ref": "#/1235"
     },
     "input": {
-      "$ref": "#/1231"
+      "$ref": "#/1234"
     }
   },
   {
@@ -16916,10 +16964,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1226"
+      "$ref": "#/1229"
     },
     "input": {
-      "$ref": "#/1225"
+      "$ref": "#/1228"
     }
   },
   {
@@ -16928,10 +16976,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1226"
+      "$ref": "#/1229"
     },
     "input": {
-      "$ref": "#/1225"
+      "$ref": "#/1228"
     }
   },
   {
@@ -16940,10 +16988,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1232"
+      "$ref": "#/1235"
     },
     "input": {
-      "$ref": "#/1231"
+      "$ref": "#/1234"
     }
   },
   {
@@ -16952,10 +17000,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1232"
+      "$ref": "#/1235"
     },
     "input": {
-      "$ref": "#/1231"
+      "$ref": "#/1234"
     }
   },
   {
@@ -16964,10 +17012,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1232"
+      "$ref": "#/1235"
     },
     "input": {
-      "$ref": "#/1231"
+      "$ref": "#/1234"
     }
   },
   {
@@ -16983,7 +17031,7 @@
       },
       "name": {
         "type": {
-          "$ref": "#/347"
+          "$ref": "#/349"
         },
         "flags": 3,
         "description": "Name of the Data Transfer Job"
@@ -17004,7 +17052,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/713"
+          "$ref": "#/715"
         },
         "flags": 0,
         "description": "The properties of a DataTransfer Job"
@@ -17017,7 +17065,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1240"
+      "$ref": "#/1243"
     }
   },
   {
@@ -17026,7 +17074,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1240"
+      "$ref": "#/1243"
     }
   },
   {
@@ -17035,7 +17083,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1240"
+      "$ref": "#/1243"
     }
   },
   {
@@ -17044,7 +17092,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1240"
+      "$ref": "#/1243"
     }
   },
   {
@@ -17089,15 +17137,28 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "CommandOutput",
+    "properties": {
+      "commandOutput": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Output of the command."
+      }
+    }
+  },
+  {
     "$type": "ResourceFunctionType",
     "name": "invokeCommand",
     "resourceType": "Microsoft.DocumentDB/cassandraClusters",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/446"
+      "$ref": "#/1249"
     },
     "input": {
-      "$ref": "#/1245"
+      "$ref": "#/1248"
     }
   },
   {
@@ -17113,7 +17174,7 @@
       },
       "arguments": {
         "type": {
-          "$ref": "#/446"
+          "$ref": "#/448"
         },
         "flags": 0,
         "description": "The arguments for the command to be run"
@@ -17161,7 +17222,7 @@
       },
       "arguments": {
         "type": {
-          "$ref": "#/446"
+          "$ref": "#/448"
         },
         "flags": 0,
         "description": "The arguments for the command to be run"
@@ -17203,7 +17264,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/1255"
+          "$ref": "#/1259"
         },
         "flags": 0,
         "description": "Status of the command."
@@ -17248,22 +17309,22 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1249"
-      },
-      {
-        "$ref": "#/1250"
-      },
-      {
-        "$ref": "#/1251"
-      },
-      {
-        "$ref": "#/1252"
-      },
-      {
         "$ref": "#/1253"
       },
       {
         "$ref": "#/1254"
+      },
+      {
+        "$ref": "#/1255"
+      },
+      {
+        "$ref": "#/1256"
+      },
+      {
+        "$ref": "#/1257"
+      },
+      {
+        "$ref": "#/1258"
       }
     ]
   },
@@ -17273,10 +17334,10 @@
     "resourceType": "Microsoft.DocumentDB/cassandraClusters",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1248"
+      "$ref": "#/1252"
     },
     "input": {
-      "$ref": "#/1247"
+      "$ref": "#/1251"
     }
   },
   {
@@ -17285,7 +17346,7 @@
     "resourceType": "Microsoft.DocumentDB/cassandraClusters",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/446"
+      "$ref": "#/448"
     }
   },
   {
@@ -17294,7 +17355,7 @@
     "resourceType": "Microsoft.DocumentDB/cassandraClusters",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/446"
+      "$ref": "#/448"
     }
   },
   {
@@ -17303,7 +17364,7 @@
     "properties": {
       "authToken": {
         "type": {
-          "$ref": "#/789"
+          "$ref": "#/792"
         },
         "flags": 2,
         "description": "Specifies auth token used for connecting to Notebook server (uses token-based auth)."
@@ -17323,7 +17384,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1259"
+      "$ref": "#/1263"
     }
   },
   {
@@ -17332,7 +17393,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/446"
+      "$ref": "#/448"
     }
   },
   {
@@ -17341,7 +17402,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/446"
+      "$ref": "#/448"
     }
   },
   {
@@ -17377,7 +17438,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1058"
+          "$ref": "#/1061"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB resource throughput"
@@ -17411,7 +17472,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17420,7 +17481,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17429,7 +17490,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17438,7 +17499,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17447,7 +17508,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17456,7 +17517,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17507,7 +17568,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1271"
+          "$ref": "#/1275"
         },
         "flags": 1,
         "description": "Properties to retrieve throughput parameters object"
@@ -17520,7 +17581,7 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/1272"
+          "$ref": "#/1276"
         },
         "flags": 1,
         "description": "The standard JSON format of a resource throughput"
@@ -17533,7 +17594,7 @@
     "properties": {
       "physicalPartitionIds": {
         "type": {
-          "$ref": "#/1274"
+          "$ref": "#/1278"
         },
         "flags": 1,
         "description": "Array of PhysicalPartitionId objects."
@@ -17556,7 +17617,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1273"
+      "$ref": "#/1277"
     }
   },
   {
@@ -17607,7 +17668,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1276"
+          "$ref": "#/1280"
         },
         "flags": 0,
         "description": "The properties of an Azure Cosmos DB PhysicalPartitionThroughputInfoResult object"
@@ -17620,7 +17681,7 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/1277"
+          "$ref": "#/1281"
         },
         "flags": 0,
         "description": "properties of physical partition throughput info"
@@ -17633,7 +17694,7 @@
     "properties": {
       "physicalPartitionThroughputInfo": {
         "type": {
-          "$ref": "#/1279"
+          "$ref": "#/1283"
         },
         "flags": 0,
         "description": "Array of physical partition throughput info objects"
@@ -17670,7 +17731,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1278"
+      "$ref": "#/1282"
     }
   },
   {
@@ -17679,10 +17740,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1275"
+      "$ref": "#/1279"
     },
     "input": {
-      "$ref": "#/1270"
+      "$ref": "#/1274"
     }
   },
   {
@@ -17733,7 +17794,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1282"
+          "$ref": "#/1286"
         },
         "flags": 1,
         "description": "Properties to redistribute throughput parameters object"
@@ -17746,7 +17807,7 @@
     "properties": {
       "resource": {
         "type": {
-          "$ref": "#/1283"
+          "$ref": "#/1287"
         },
         "flags": 1,
         "description": "The standard JSON format of a resource throughput"
@@ -17759,21 +17820,21 @@
     "properties": {
       "throughputPolicy": {
         "type": {
-          "$ref": "#/1287"
+          "$ref": "#/1291"
         },
         "flags": 1,
         "description": "ThroughputPolicy to apply for throughput redistribution"
       },
       "targetPhysicalPartitionThroughputInfo": {
         "type": {
-          "$ref": "#/1288"
+          "$ref": "#/1292"
         },
         "flags": 1,
         "description": "Array of PhysicalPartitionThroughputInfoResource objects."
       },
       "sourcePhysicalPartitionThroughputInfo": {
         "type": {
-          "$ref": "#/1289"
+          "$ref": "#/1293"
         },
         "flags": 1,
         "description": "Array of PhysicalPartitionThroughputInfoResource objects."
@@ -17799,26 +17860,26 @@
         "$ref": "#/2"
       },
       {
-        "$ref": "#/1284"
+        "$ref": "#/1288"
       },
       {
-        "$ref": "#/1285"
+        "$ref": "#/1289"
       },
       {
-        "$ref": "#/1286"
+        "$ref": "#/1290"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1278"
+      "$ref": "#/1282"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1278"
+      "$ref": "#/1282"
     }
   },
   {
@@ -17827,10 +17888,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1275"
+      "$ref": "#/1279"
     },
     "input": {
-      "$ref": "#/1281"
+      "$ref": "#/1285"
     }
   },
   {
@@ -17839,7 +17900,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17848,7 +17909,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17857,10 +17918,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1275"
+      "$ref": "#/1279"
     },
     "input": {
-      "$ref": "#/1270"
+      "$ref": "#/1274"
     }
   },
   {
@@ -17869,10 +17930,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1275"
+      "$ref": "#/1279"
     },
     "input": {
-      "$ref": "#/1281"
+      "$ref": "#/1285"
     }
   },
   {
@@ -17881,7 +17942,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17890,7 +17951,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17899,7 +17960,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17908,7 +17969,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17917,7 +17978,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17926,7 +17987,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17935,7 +17996,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17944,7 +18005,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17953,10 +18014,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1275"
+      "$ref": "#/1279"
     },
     "input": {
-      "$ref": "#/1270"
+      "$ref": "#/1274"
     }
   },
   {
@@ -17965,10 +18026,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1275"
+      "$ref": "#/1279"
     },
     "input": {
-      "$ref": "#/1281"
+      "$ref": "#/1285"
     }
   },
   {
@@ -17977,7 +18038,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17986,7 +18047,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -17995,7 +18056,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -18004,7 +18065,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1263"
+      "$ref": "#/1267"
     }
   },
   {
@@ -18013,10 +18074,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1275"
+      "$ref": "#/1279"
     },
     "input": {
-      "$ref": "#/1270"
+      "$ref": "#/1274"
     }
   },
   {
@@ -18025,10 +18086,10 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/1275"
+      "$ref": "#/1279"
     },
     "input": {
-      "$ref": "#/1281"
+      "$ref": "#/1285"
     }
   },
   {
@@ -18037,7 +18098,7 @@
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations",
     "apiVersion": "2026-04-01-preview",
     "output": {
-      "$ref": "#/446"
+      "$ref": "#/448"
     }
   }
 ]

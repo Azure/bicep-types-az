@@ -1,15 +1,31 @@
 # Microsoft.EdgeOperator @ 2026-06-01-preview
 
-## Resource Microsoft.EdgeOperator/systemReadiness@2026-06-01-preview
+## Resource Microsoft.EdgeOperator/systemConfiguration@2026-06-01-preview
 * **Readable Scope(s)**: Subscription
-* **Writable Scope(s)**: None
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2026-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [SystemReadinessProperties](#systemreadinessproperties) (ReadOnly): The resource-specific properties for this resource.
+* **properties**: [SystemConfigurationProperties](#systemconfigurationproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.EdgeOperator/systemReadiness' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.EdgeOperator/systemConfiguration' (ReadOnly, DeployTimeConstant): The resource type
+
+## SystemConfigurationProperties
+### Properties
+* **automaticUpdatePreparationStatus**: 'Disabled' | 'Enabled' | string (ReadOnly): Indicates whether the system is prepared for an automatic update.
+* **connectionIntent**: 'Connected' | 'Disconnected' | string: The connection intent for the system. Not yet set until configured.
+* **deviceResourceId**: string: The resource ID of the device associated with this system configuration. Not yet set until configured.
+* **dnsForwarderIpAddress**: string: The IP address of the DNS forwarder used by the system. Not yet set until configured.
+* **externalDomainSuffix**: string (ReadOnly): The external domain suffix configured for the system.
+* **externalTimeServers**: string[] (ReadOnly): The external time servers configured for the system.
+* **imageVersion**: string (ReadOnly): The image version currently deployed on the system.
+* **ingressNicDefaultGateway**: string (ReadOnly): The default gateway of the ingress network interface controller (NIC).
+* **ingressNicIpAddress**: string (ReadOnly): The IP address of the ingress network interface controller (NIC).
+* **ingressNicPrefixLength**: int (ReadOnly): The prefix length of the ingress network interface controller (NIC).
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the system configuration resource.
+* **stampId**: string {pattern: "^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$"}: The identifier of the stamp hosting the system. Must be a valid GUID. Not yet set until configured.
+* **telemetryOptOutStatus**: 'Disabled' | 'Enabled' | string (ReadOnly): Indicates whether the system has opted out of telemetry.
 
 ## SystemData
 ### Properties
@@ -19,15 +35,4 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
-
-## SystemReadinessCategory
-### Properties
-* **categoryName**: string (Required): The provider-defined name of the readiness category (for example, `services`, `diagnostics`, `identity`, `networking`). Categories may be added, renamed, or removed without an API-version change and must be treated as an open string.
-* **errorMessageDetails**: string[] (Required): The error messages reported for the category. The list is empty when no specific errors are available.
-* **readinessPercentage**: int {minValue: 0, maxValue: 100} (Required): The readiness percentage reported by the category, from 0 (not ready) to 100 (fully ready).
-
-## SystemReadinessProperties
-### Properties
-* **categories**: [SystemReadinessCategory](#systemreadinesscategory)[] (Required, ReadOnly): The readiness state reported for each provider-defined category.
-* **systemReady**: bool (Required, ReadOnly): Indicates whether the system is ready. `true` when every readiness category has reported 100 percent.
 

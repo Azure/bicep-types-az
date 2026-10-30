@@ -122,9 +122,9 @@
 
 ## FirewallRuleProperties
 ### Properties
-* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the mongo cluster firewall rule. Must be IPv4 format.
+* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the DocumentDB cluster firewall rule. Must be IPv4 format.
 * **provisioningState**: 'Canceled' | 'Dropping' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the firewall rule.
-* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the mongo cluster firewall rule. Must be IPv4 format.
+* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the DocumentDB cluster firewall rule. Must be IPv4 format.
 
 ## HighAvailabilityProperties
 ### Properties
@@ -148,7 +148,7 @@
 
 ## ListConnectionStringsResult
 ### Properties
-* **connectionStrings**: [ConnectionString](#connectionstring)[] (ReadOnly): An array that contains the connection strings for a mongo cluster.
+* **connectionStrings**: [ConnectionString](#connectionstring)[] (ReadOnly): An array that contains the connection strings for a DocumentDB cluster.
 
 ## ManagedServiceIdentity
 ### Properties
@@ -159,27 +159,27 @@
 
 ## MongoClusterProperties
 ### Properties
-* **administrator**: [AdministratorProperties](#administratorproperties): The local administrator properties for the mongo cluster.
+* **administrator**: [AdministratorProperties](#administratorproperties): The local administrator properties for the DocumentDB cluster.
 * **authConfig**: [AuthConfigProperties](#authconfigproperties): The authentication configuration for the cluster.
-* **backup**: [BackupProperties](#backupproperties): The backup properties of the mongo cluster.
-* **clusterStatus**: 'Dropping' | 'Provisioning' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): The status of the mongo cluster.
-* **compute**: [ComputeProperties](#computeproperties): The compute properties of the mongo cluster.
+* **backup**: [BackupProperties](#backupproperties): The backup properties of the DocumentDB cluster.
+* **clusterStatus**: 'Dropping' | 'Provisioning' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): The status of the DocumentDB cluster.
+* **compute**: [ComputeProperties](#computeproperties): The compute properties of the DocumentDB cluster.
 * **connectionString**: string (ReadOnly): The default mongo connection string for the cluster.
-* **createMode**: 'Default' | 'GeoReplica' | 'PointInTimeRestore' | 'Replica' | string: The mode to create a mongo cluster.
-* **dataApi**: [DataApiProperties](#dataapiproperties): The Data API properties of the mongo cluster.
+* **createMode**: 'Default' | 'GeoReplica' | 'PointInTimeRestore' | 'Replica' | string: The mode to create a DocumentDB cluster.
+* **dataApi**: [DataApiProperties](#dataapiproperties): The Data API properties of the DocumentDB cluster.
 * **encryption**: [EncryptionProperties](#encryptionproperties): The encryption configuration for the cluster. Depends on identity being configured.
-* **highAvailability**: [HighAvailabilityProperties](#highavailabilityproperties): The high availability properties of the mongo cluster.
+* **highAvailability**: [HighAvailabilityProperties](#highavailabilityproperties): The high availability properties of the DocumentDB cluster.
 * **infrastructureVersion**: string (ReadOnly): The infrastructure version the cluster is provisioned on.
 * **previewFeatures**: ('GeoReplicas' | string)[]: List of private endpoint connections.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections.
-* **provisioningState**: 'Canceled' | 'Dropping' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the mongo cluster.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public endpoint access is allowed for this mongo cluster.
-* **replica**: [ReplicationProperties](#replicationproperties) (ReadOnly): The replication properties for the mongo cluster
-* **replicaParameters**: [MongoClusterReplicaParameters](#mongoclusterreplicaparameters): The parameters to create a replica mongo cluster.
-* **restoreParameters**: [MongoClusterRestoreParameters](#mongoclusterrestoreparameters): The parameters to create a point-in-time restore mongo cluster.
+* **provisioningState**: 'Canceled' | 'Dropping' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the DocumentDB cluster.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public endpoint access is allowed for this DocumentDB cluster.
+* **replica**: [ReplicationProperties](#replicationproperties) (ReadOnly): The replication properties for the DocumentDB cluster
+* **replicaParameters**: [MongoClusterReplicaParameters](#mongoclusterreplicaparameters): The parameters to create a replica DocumentDB cluster.
+* **restoreParameters**: [MongoClusterRestoreParameters](#mongoclusterrestoreparameters): The parameters to create a point-in-time restore DocumentDB cluster.
 * **serverVersion**: string: The Mongo DB server version. Defaults to the latest available version if not specified.
-* **sharding**: [ShardingProperties](#shardingproperties): The sharding properties of the mongo cluster.
-* **storage**: [StorageProperties](#storageproperties): The storage properties of the mongo cluster.
+* **sharding**: [ShardingProperties](#shardingproperties): The sharding properties of the DocumentDB cluster.
+* **storage**: [StorageProperties](#storageproperties): The storage properties of the DocumentDB cluster.
 
 ## MongoClusterReplicaParameters
 ### Properties
@@ -188,7 +188,7 @@
 
 ## MongoClusterRestoreParameters
 ### Properties
-* **pointInTimeUTC**: string: UTC point in time to restore a mongo cluster
+* **pointInTimeUTC**: string: UTC point in time to restore a DocumentDB cluster
 * **sourceResourceId**: string: Resource ID to locate the source cluster to restore
 
 ## PrivateEndpoint

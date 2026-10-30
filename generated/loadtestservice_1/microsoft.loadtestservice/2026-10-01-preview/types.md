@@ -60,8 +60,8 @@
 
 ## ManagedIdentity
 ### Properties
-* **resourceId**: string: The ARM resource ID of the user-assigned managed identity. This value is required when type is UserAssigned and must be omitted when type is SystemAssigned.
-* **type**: 'SystemAssigned' | 'UserAssigned' | string: The type of managed identity used to access a resource.
+* **resourceId**: string: The Azure Resource Manager resource ID of the user-assigned managed identity. Required when type is UserAssigned. Omit when type is SystemAssigned.
+* **type**: 'SystemAssigned' | 'UserAssigned' | string: The managed identity type: SystemAssigned or UserAssigned.
 
 ## ManagedServiceIdentity
 ### Properties
@@ -90,15 +90,15 @@
 
 ## PlaywrightWorkspaceProperties
 ### Properties
-* **dataplaneUri**: string (ReadOnly): The workspace data plane service API URI.
-* **localAuth**: 'Disabled' | 'Enabled' | string: Enables the workspace to use local authentication through service access tokens for operations.
+* **dataplaneUri**: string (ReadOnly): The API endpoint for workspace data plane operations.
+* **localAuth**: 'Disabled' | 'Enabled' | string: Specifies whether service access tokens can be used to authenticate workspace operations.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last resource operation.
-* **regionalAffinity**: 'Disabled' | 'Enabled' | string: Controls the connection region for client workers to cloud-hosted browsers. When enabled, workers connect to browsers in the closest Azure region for lower latency. When disabled, workers connect to browsers in the Azure region where the workspace was created.
-* **reporting**: 'Disabled' | 'Enabled' | string: Indicates whether reporting is enabled for the workspace. When set to true, reports will be generated and available for the workspace.
-* **sessionArtifacts**: 'Disabled' | 'Enabled' | string: Enables session artifact recording for the workspace.
+* **regionalAffinity**: 'Disabled' | 'Enabled' | string: Specifies where client workers connect to cloud-hosted browsers. When Enabled, workers connect to browsers in the nearest Azure region to reduce latency. When Disabled, workers connect to browsers in the workspace's Azure region.
+* **reporting**: 'Disabled' | 'Enabled' | string: Specifies whether test reporting is enabled for the workspace.
+* **sessionArtifacts**: 'Disabled' | 'Enabled' | string: Specifies whether session artifact recording is enabled for the workspace.
 * **storageIdentity**: [ManagedIdentity](#managedidentity): The managed identity used to manage session artifacts in the storage account.
-* **storageUri**: string: The URI of the Azure storage account used to store workspace artifacts, test results, and reports.
-* **subnetId**: string: The ARM resource ID of the virtual network subnet to inject the workspace into for private network connectivity. This is of the form '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Network/virtualNetworks/{virtualNetwork}/subnets/{subnet}'. This value cannot be changed after the workspace is created.
+* **storageUri**: string: The URI of the Azure Storage account used to store workspace artifacts, test results, and reports.
+* **subnetId**: string: The Azure Resource Manager resource ID of the subnet used for private network connectivity. Before creating the workspace, ensure the subnet meets the virtual network prerequisites at https://aka.ms/pww/docs/vnet. Format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Network/virtualNetworks/{virtualNetwork}/subnets/{subnet}. This value cannot be changed after workspace creation.
 * **workspaceId**: string {minLength: 3, maxLength: 36, pattern: "[A-Za-z0-9]+(-[A-Za-z0-9]+)+"} (ReadOnly): The workspace ID in GUID format.
 
 ## PlaywrightWorkspaceQuotaProperties

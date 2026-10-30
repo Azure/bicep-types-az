@@ -64,32 +64,32 @@
 
 ## FirewallRuleProperties
 ### Properties
-* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the mongo cluster firewall rule. Must be IPv4 format.
+* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the DocumentDB cluster firewall rule. Must be IPv4 format.
 * **provisioningState**: 'Canceled' | 'Dropping' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the firewall rule.
-* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the mongo cluster firewall rule. Must be IPv4 format.
+* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the DocumentDB cluster firewall rule. Must be IPv4 format.
 
 ## ListConnectionStringsResult
 ### Properties
-* **connectionStrings**: [ConnectionString](#connectionstring)[] (ReadOnly): An array that contains the connection strings for a mongo cluster.
+* **connectionStrings**: [ConnectionString](#connectionstring)[] (ReadOnly): An array that contains the connection strings for a DocumentDB cluster.
 
 ## MongoClusterProperties
 ### Properties
-* **administratorLogin**: string: The administrator's login for the mongo cluster.
+* **administratorLogin**: string: The administrator's login for the DocumentDB cluster.
 * **administratorLoginPassword**: string {sensitive} (WriteOnly): The password of the administrator login.
-* **clusterStatus**: 'Dropping' | 'Provisioning' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): The status of the mongo cluster.
+* **clusterStatus**: 'Dropping' | 'Provisioning' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): The status of the DocumentDB cluster.
 * **connectionString**: string (ReadOnly): The default mongo connection string for the cluster.
-* **createMode**: 'Default' | 'PointInTimeRestore' | string (WriteOnly): The mode to create a mongo cluster.
+* **createMode**: 'Default' | 'PointInTimeRestore' | string (WriteOnly): The mode to create a DocumentDB cluster.
 * **earliestRestoreTime**: string (ReadOnly): Earliest restore timestamp in UTC ISO8601 format.
 * **nodeGroupSpecs**: [NodeGroupSpec](#nodegroupspec)[]: The list of node group specs in the cluster.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections.
-* **provisioningState**: 'Canceled' | 'Dropping' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the mongo cluster.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public endpoint access is allowed for this mongo cluster.
-* **restoreParameters**: [MongoClusterRestoreParameters](#mongoclusterrestoreparameters) (WriteOnly): The parameters to create a point-in-time restore mongo cluster.
+* **provisioningState**: 'Canceled' | 'Dropping' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the DocumentDB cluster.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public endpoint access is allowed for this DocumentDB cluster.
+* **restoreParameters**: [MongoClusterRestoreParameters](#mongoclusterrestoreparameters) (WriteOnly): The parameters to create a point-in-time restore DocumentDB cluster.
 * **serverVersion**: string: The Mongo DB server version. Defaults to the latest available version if not specified.
 
 ## MongoClusterRestoreParameters
 ### Properties
-* **pointInTimeUTC**: string: UTC point in time to restore a mongo cluster
+* **pointInTimeUTC**: string: UTC point in time to restore a DocumentDB cluster
 * **sourceResourceId**: string: Resource ID to locate the source cluster to restore
 
 ## NodeGroupSpec
