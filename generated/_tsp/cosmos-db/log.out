@@ -1,28 +1,34 @@
 Generating types for 'specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/tspconfig.yaml'
 Running TypeSpec emitter for 'specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB'
-npm warn cli npm v12.0.2 does not support Node.js v24.14.1. This version of npm supports the following node versions: `^22.22.2 || ^24.15.0 || >=26.0.0`. You can find the latest version at https://nodejs.org/.
-
-up to date, audited 871 packages in 2s
-
-211 packages are looking for funding
-  run `npm fund` for details
-
-2 high severity vulnerabilities
-
-To address all issues, run:
-  npm audit fix
-
-Run `npm audit` for details.
-npm warn install-scripts 1 package had install scripts blocked because they are not covered by allowScripts:
-npm warn install-scripts   autorest@3.8.0 (preinstall: node ./.scripts/preinstall-check)
-npm warn install-scripts
-npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
-TypeSpec compiler v1.15.0
+TypeSpec compiler v1.17.0
 
 - Compiling...
-✔ Compiling
+⚠ Compiling
 - Running @azure-tools/typespec-bicep...
-✔ @azure-tools/typespec-bicep 380ms ../../../../../../../tmp/_bcp_1788177517453/cosmos-db_1/
+⚠ @azure-tools/typespec-bicep 159ms ../../../../../../../../../../../../tmp/_bcp_1793377511185/cosmos-db_1/
+Diagnostics were reported during compilation:
 
-Compilation completed successfully.
+warning incompatible-library: Multiple versions of "@typespec/versioning" library were loaded:
+  - Version: "0.87.0" installed at "/home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/node_modules/.pnpm/@typespec+versioning@0.87.0_@typespec+compiler@1.17.0_@types+node@26.6.3_/node_modules/@typespec/versioning"
+  - Version: "0.85.0" installed at "/home/runner/work/bicep-types-az/bicep-types-az/src/typespec-bicep/node_modules/@typespec/versioning"
+warning incompatible-library: Multiple versions of "@azure-tools/typespec-azure-resource-manager" library were loaded:
+  - Version: "0.73.0" installed at "/home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/node_modules/.pnpm/@azure-tools+typespec-azure-resource-manager@0.73.0_7f327fbcf017dd6acead538a3c60488b/node_modules/@azure-tools/typespec-azure-resource-manager"
+  - Version: "0.71.0" installed at "/home/runner/work/bicep-types-az/bicep-types-az/src/typespec-bicep/node_modules/@azure-tools/typespec-azure-resource-manager"
+warning incompatible-library: Multiple versions of "@typespec/http" library were loaded:
+  - Version: "1.17.0" installed at "/home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/node_modules/.pnpm/@typespec+http@1.17.0_@typespec+compiler@1.17.0_@types+node@26.6.3__@typespec+streams@0_7bda75a17f913e0e12d577c417a9e70f/node_modules/@typespec/http"
+  - Version: "1.15.0" installed at "/home/runner/work/bicep-types-az/bicep-types-az/src/typespec-bicep/node_modules/@typespec/http"
+warning incompatible-library: Multiple versions of "@typespec/rest" library were loaded:
+  - Version: "0.87.0" installed at "/home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/node_modules/.pnpm/@typespec+rest@0.87.0_@typespec+compiler@1.17.0_@types+node@26.6.3__@typespec+http@1.17_88aba1b3b810eb04d95789dccc9533be/node_modules/@typespec/rest"
+  - Version: "0.85.0" installed at "/home/runner/work/bicep-types-az/bicep-types-az/src/typespec-bicep/node_modules/@typespec/rest"
+warning incompatible-library: Multiple versions of "@azure-tools/typespec-azure-core" library were loaded:
+  - Version: "0.73.0" installed at "/home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/node_modules/.pnpm/@azure-tools+typespec-azure-core@0.73.0_@typespec+compiler@1.17.0_@types+node@26.6.3__@_72926e19c1ee618be1a6136086bad8ed/node_modules/@azure-tools/typespec-azure-core"
+  - Version: "0.71.0" installed at "/home/runner/work/bicep-types-az/bicep-types-az/src/typespec-bicep/node_modules/@azure-tools/typespec-azure-core"
+warning @azure-tools/typespec-bicep/emitter-warning: Unrecognized type kind: UnionVariant. Returning 'any'.
+warning @azure-tools/typespec-bicep/emitter-warning: Unrecognized type kind: UnionVariant. Returning 'any'.
+warning @azure-tools/typespec-bicep/emitter-warning: Unrecognized type kind: UnionVariant. Returning 'any'.
+warning @azure-tools/typespec-bicep/emitter-warning: Unrecognized type kind: UnionVariant. Returning 'any'.
+warning @azure-tools/typespec-bicep/emitter-warning: Unrecognized type kind: UnionVariant. Returning 'any'.
+warning @azure-tools/typespec-bicep/emitter-warning: Unrecognized type kind: UnionVariant. Returning 'any'.
+
+Found 11 warnings.
 

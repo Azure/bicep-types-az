@@ -6,10 +6,21 @@
 ### Properties
 * **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'MCAS' | 'Sentinel' | 'WDATP' | 'WDATP_EXCLUDE_LINUX_PUBLIC_PREVIEW' | 'WDATP_UNIFIED_SOLUTION' | 'current' | string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^current$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DefenderForStorageSettingProperties](#defenderforstoragesettingproperties): Defender for Storage resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Security/defenderForStorageSettings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Security/defenderForStorageSettings/malwareScans@2026-01-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: None
+### Properties
+* **apiVersion**: '2026-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^(latest|[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [MalwareScanProperties](#malwarescanproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Security/defenderForStorageSettings/malwareScans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function cancelMalwareScan (Microsoft.Security/defenderForStorageSettings/malwareScans@2026-01-01-preview)
 * **Resource**: Microsoft.Security/defenderForStorageSettings/malwareScans
@@ -62,7 +73,11 @@
 
 ## MalwareScan
 ### Properties
-* **properties**: [MalwareScanProperties](#malwarescanproperties)
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [MalwareScanProperties](#malwarescanproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## MalwareScanFilters
 ### Properties
@@ -82,7 +97,7 @@
 * **scanEndTime**: string: The time at which the scan has ended. Only available for a scan which has terminated.
 * **scanId**: string: The identifier of the scan.
 * **scanStartTime**: string: The time at which the scan had been initiated.
-* **scanStatus**: string: A status code of the scan operation.
+* **scanStatus**: 'Canceled' | 'Canceling' | 'Completed' | 'Failed' | 'InProgress' | 'Queued' | 'WaitingForCompletion' | string: A status code of the scan operation.
 * **scanStatusMessage**: string: A description of the status of the scan.
 * **scanSummary**: [ScanSummary](#scansummary): A summary of the scan results.
 
@@ -93,7 +108,7 @@
 
 ## OnUploadFilters
 ### Properties
-* **excludeBlobsLargerThan**: any: Optional. Specifies the maximum size in bytes for blobs to be scanned. This parameter accepts a single positive integer value. Blobs larger than this value will be excluded from scanning.
+* **excludeBlobsLargerThan**: int: Optional. Specifies the maximum size in bytes for blobs to be scanned. This parameter accepts a single positive integer value. Blobs larger than this value will be excluded from scanning.
 * **excludeBlobsWithPrefix**: string[]: Optional. A list of prefixes to exclude from on-upload malware scanning.
 Format: `container-name/blob-name` (start with the container name; do not include the storage account name).
 Exclude entire containers: Use prefix of container names you want to exclude without a trailing `/`.

@@ -2016,7 +2016,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/118"
+          "$ref": "#/117"
         },
         "flags": 0,
         "description": "The properties of the Resource Reference Request."
@@ -2029,7 +2029,7 @@
     "properties": {
       "targetResources": {
         "type": {
-          "$ref": "#/119"
+          "$ref": "#/118"
         },
         "flags": 0,
         "description": "A list of references to azure resources for which referencing dns records need to be queried."
@@ -2039,7 +2039,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/10"
+      "$ref": "#/22"
     }
   },
   {
@@ -2048,7 +2048,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/121"
+          "$ref": "#/120"
         },
         "flags": 0,
         "description": "The result of dns resource reference request. Returns a list of dns resource references for each of the azure resource in the request."
@@ -2061,7 +2061,7 @@
     "properties": {
       "dnsResourceReferences": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "The result of dns resource reference request. A list of dns resource references for each of the azure resource in the request"
@@ -2074,14 +2074,14 @@
     "properties": {
       "dnsResources": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/122"
         },
         "flags": 0,
         "description": "A list of dns Records"
       },
       "targetResource": {
         "type": {
-          "$ref": "#/10"
+          "$ref": "#/22"
         },
         "flags": 0,
         "description": "A reference to an azure resource from where the dns resource value is taken."
@@ -2091,25 +2091,25 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/10"
+      "$ref": "#/22"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/122"
+      "$ref": "#/121"
     }
   },
   {
     "$type": "ResourceFunctionType",
-    "name": "getDnsResourceReference",
+    "name": "getByTargetResources",
     "resourceType": "Microsoft.Network",
     "apiVersion": "2023-07-01-preview",
     "output": {
-      "$ref": "#/120"
+      "$ref": "#/119"
     },
     "input": {
-      "$ref": "#/117"
+      "$ref": "#/116"
     }
   }
 ]

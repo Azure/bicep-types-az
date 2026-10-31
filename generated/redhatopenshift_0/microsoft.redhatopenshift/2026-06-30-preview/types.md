@@ -81,9 +81,9 @@
 ### Properties
 * **maxNodeProvisionTimeSeconds**: int {minValue: 0}: maxNodeProvisionTimeSeconds is the maximum time to wait for node provisioning before considering the
 provisioning to be unsuccessful. The default is 900 seconds, or 15 minutes.
-* **maxNodesTotal**: int {minValue: 0}: maxNodesTotal is the maximum allowable number of nodes for the Autoscaler scale out to be operational.
-The autoscaler will not grow the cluster beyond this number. If omitted, the autoscaler will not have a maximum limit.
-* **maxPodGracePeriodSeconds**: int {minValue: 0}: maxPodGracePeriod is the maximum seconds to wait for graceful pod termination before scaling down a NodePool.
+* **maxNodesTotal**: int {minValue: 0}: maxNodesTotal is the maximum allowable number of nodes. The autoscaler will not grow the cluster beyond this number.
+If omitted, the autoscaler will not have a maximum limit.
+* **maxPodGracePeriodSeconds**: int {minValue: 0}: maxPodGracePeriodSeconds is the maximum amount of time in seconds to wait for graceful pod termination before scaling down a NodePool.
 The default is 600 seconds.
 * **podPriorityThreshold**: int: podPriorityThreshold enables users to schedule "best-effort" pods, which shouldn't trigger autoscaler actions,
 but only run when there are spare resources available. The default is -10.
@@ -124,8 +124,8 @@ Required when encryptionType is "KMS".
 ## DnsProfile
 ### Properties
 * **baseDomain**: string (ReadOnly): BaseDomain is the base DNS domain of the cluster.
-* **baseDomainPrefix**: string {maxLength: 15, pattern: "^[a-z]([-a-z0-9]*[a-z0-9])?$"}: BaseDomainPrefix is the unique name of the cluster representing the OpenShift's cluster name.
-BaseDomainPrefix is the name that will appear in the cluster's DNS, provisioned cloud providers resources
+* **baseDomainPrefix**: string {maxLength: 15, pattern: "^[a-z]([-a-z0-9]*[a-z0-9])?$"}: BaseDomainPrefix is the base domain prefix for the cluster ingress. It will be used to
+configure ingress in the cluster through the subdomain "BaseDomainPrefix.BaseDomain".
 
 ## EtcdDataEncryptionProfile
 ### Properties
@@ -140,8 +140,8 @@ If not specified platform managed keys are used.
 
 ## ExternalAuthClaimProfile
 ### Properties
-* **mappings**: [TokenClaimMappingsProfile](#tokenclaimmappingsprofile) (Required): The claim mappings
-* **validationRules**: [TokenClaimValidationRule](#tokenclaimvalidationrule)[]: The claim validation rules
+* **mappings**: [TokenClaimMappingsProfile](#tokenclaimmappingsprofile) (Required): The claim mappings.
+* **validationRules**: [TokenClaimValidationRule](#tokenclaimvalidationrule)[]: The claim validation rules.
 
 ## ExternalAuthClientComponentProfile
 ### Properties
@@ -181,8 +181,8 @@ There must not be more than 20 entries and entries must have unique namespace/na
 ## GroupClaimProfile
 ### Properties
 * **claim**: string {minLength: 1, maxLength: 256} (Required): Claim name of the external profile
-* **prefix**: string: Prefix for the claim external profile
-If this is specified prefixPolicy will be set to "Prefix" by default
+* **prefix**: string: Prefix for the claim external profile.
+If this is specified, prefixPolicy will be set to "Prefix" by default.
 
 ## HcpOpenShiftClusterAdminCredential
 ### Properties
@@ -212,7 +212,7 @@ especially relevant to cluster upgrades.
 Valid values are in minutes and from 0 to 10080 minutes (1 week).
 0 means that the MachinePool can be drained without any time limitation.
 
-This is the value is used a default for all NodePools. It can be overridden
+This value is used as a default for all NodePools. It can be overridden
 by specifying nodeDrainTimeoutMinutes for a given NodePool
 * **platform**: [PlatformProfile](#platformprofile) (Required): Azure platform configuration
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The status of the last operation.
@@ -333,7 +333,7 @@ Please read the documentation to see which regions support availability zones
 * **enableEncryptionAtHost**: bool: Whether to enable host based OS and data drive encryption.
 - https://learn.microsoft.com/en-us/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data
 * **osDisk**: [OsDiskProfile](#osdiskprofile): The settings and configuration options for OSDisk
-* **subnetId**: string: The Azure resource ID of the worker subnet
+* **subnetId**: string: The Azure resource ID of the worker subnet.
 Note that a subnet cannot be reused between ARO-HCP Clusters, however the
 same subnet can be used for NodePools of the same cluster.
 * **vmSize**: string (Required): The VM size according to the documentation:
@@ -341,11 +341,17 @@ same subnet can be used for NodePools of the same cluster.
 
 ## NodePoolProperties
 ### Properties
-* **autoRepair**: bool: Auto-repair
+* **autoRepair**: bool: autoRepair specifies whether health checks should be enabled for machines
+in the NodePool. Enabling this feature will cause the controller to
+automatically delete unhealthy machines. The unhealthy criteria are
+determined by checking the Node Ready condition and a timeout that might
+vary depending on the platform provider. autoRepair will not take action
+when more than 2 Nodes are unhealthy at the same time, giving time for
+the cluster to stabilize or for the user to manually intervene.
 * **autoScaling**: [NodePoolAutoScaling](#nodepoolautoscaling): Representation of a autoscaling in a node pool.
-* **labels**: [Label](#label)[]: Kubernetes labels to propagate to the NodePool Nodes
+* **labels**: [Label](#label)[]: Kubernetes labels to propagate to the NodePool Nodes.
 Note that when the labels are updated this is only applied to newly
-create nodes in the Nodepool, existing node labels remain unchanged.
+created nodes in the NodePool, existing node labels remain unchanged.
 * **nodeDrainTimeoutMinutes**: int: nodeDrainTimeoutMinutes is the grace period for how long Pod Disruption Budget-protected workloads will be
 respected during any node draining operation. After this grace period, any workloads protected by Pod Disruption
 Budgets that have not been successfully drained from a node will be forcibly evicted. This is
@@ -363,7 +369,7 @@ Validation:
 - Maximum: 200 (only when availabilityZone is not specified)
 - No maximum when availabilityZone is specified
 * **status**: [ResourceStatus](#resourcestatus) (ReadOnly): Status of the node pool resource
-* **taints**: [Taint](#taint)[]: Taints for the nodes
+* **taints**: [Taint](#taint)[]: Taints for the nodes.
 * **version**: [NodePoolVersionProfile](#nodepoolversionprofile): OpenShift version for the nodepool
 
 ## NodePoolVersionProfile
@@ -372,6 +378,9 @@ Validation:
 Each version belongs to only a single set.
 
 If not specified, the default value is 'stable'.
+
+This property is intended to be updateable, but that support is not yet
+complete. Until then, changing this value after node pool creation is rejected.
 * **id**: string (Required): ID is the unique identifier of the version.
 
 ## OperatorIdentityRoles
@@ -406,7 +415,7 @@ selected VM size's local cache, temp, or NVMe capacity.
 ### Properties
 * **issuerUrl**: string (Required, ReadOnly): URL for the OIDC provider to be used for authentication
 to authenticate against user Azure cloud account
-* **managedResourceGroup**: string: Resource group name to put cluster resources
+* **managedResourceGroup**: string: The name of the resource group to put cluster resources in.
 
 If not specified then a unique name is generated from the
 following pattern
@@ -421,7 +430,7 @@ identifier per RFC 4122.
 Note that NSGs cannot be reused for other ARO-HCP clusters.
 * **operatorsAuthentication**: [OperatorsAuthenticationProfile](#operatorsauthenticationprofile) (Required): The configuration that the operators of the cluster have to authenticate to Azure
 * **outboundType**: 'LoadBalancer' | string: The core outgoing configuration
-* **subnetId**: string (Required): The Azure resource ID of the worker subnet
+* **subnetId**: string (Required): The Azure resource ID of the worker subnet.
 Note that a subnet cannot be reused between ARO-HCP Clusters.
 * **vnetIntegrationSubnetId**: string (Required): The Azure resource ID of a subnet that enables direct,
 private network connectivity between the hosted control plane
@@ -465,12 +474,11 @@ It defaults to "RequiredClaim"
 
 ## TokenIssuerProfile
 ### Properties
-* **audiences**: string[] {minLength: 1, maxLength: 10} (Required): This configures the acceptable audiences the JWT token, issued by the identity
-provider, must be issued to. At least one of the entries must match the
-'aud' claim in the JWT token.
+* **audiences**: string[] {minLength: 1, maxLength: 10} (Required): This configures the acceptable audiences for JWT tokens issued by the identity provider.
+At least one of the entries must match the 'aud' claim in the JWT token.
 
-audiences must contain at least one entry and must not exceed ten entries.
-* **ca**: string: The issuer of the token
+Audiences must contain at least one entry and must not exceed ten entries.
+* **ca**: string: The issuer of the token.
 
 Certificate bundle to use to validate server certificates for the configured URL.
 It must be PEM encoded and when not specified, the system trust is used.
@@ -529,7 +537,7 @@ purpose is to perform service level actions.
 ## UsernameClaimProfile
 ### Properties
 * **claim**: string {minLength: 1, maxLength: 256} (Required): Claim name of the external profile
-* **prefix**: string: Prefix for the claim external profile
+* **prefix**: string: Prefix for the claim external profile.
 Must be set when the prefixPolicy field is set to 'Prefix' and must be unset
 otherwise.
 * **prefixPolicy**: 'NoPrefix' | 'None' | 'Prefix' | string: Prefix policy is an optional field that configures how a prefix should be
@@ -559,5 +567,8 @@ the JWT claims include "username":"userA" and "email":"userA
 Each version belongs to only a single set.
 
 If not specified, the default value is 'stable'.
+
+This property is intended to be updateable, but that support is not yet
+complete. Until then, changing this value after cluster creation is rejected.
 * **id**: string (Required): ID is the desired X.Y version of the cluster control plane.
 

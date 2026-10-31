@@ -141,7 +141,9 @@
 
 ## AccessPolicyAssignmentProperties
 ### Properties
-* **accessPolicyName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]|[a-zA-Z0-9])$"} (Required): Name of access policy under specific access policy assignment. Only "default" policy is supported for now.
+* **accessPolicyName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]|[a-zA-Z0-9])$"}: **Deprecated.** This property always returns "default". Use `accessString` to configure custom Redis ACL permissions instead.
+* **accessString**: string: The Redis ACL permissions string applied to this assignment, for example `+@read ~cache:*`. Defaults to `+@all ~*` if not specified.
+* **provisioningError**: [AccessPolicyAssignmentProvisioningError](#accesspolicyassignmentprovisioningerror) (ReadOnly): Provisioning error details when the access string failed to apply (e.g., invalid ACL syntax). Null when provisioning succeeded.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Current provisioning status of the access policy assignment.
 * **user**: [AccessPolicyAssignmentPropertiesUser](#accesspolicyassignmentpropertiesuser) (Required): The user associated with the access policy.
 
@@ -149,10 +151,24 @@
 ### Properties
 * **objectId**: string: The object ID of the user.
 
+## AccessPolicyAssignmentProvisioningError
+### Properties
+* **code**: string (Required): Machine-readable error code (e.g., "InvalidAccessString").
+* **message**: string (Required): Human-readable error message describing the failure.
+* **target**: string: The property that caused the error (e.g., "properties.accessString").
+
 ## ClusterCreateProperties
 ### Properties
 * **encryption**: [ClusterPropertiesEncryption](#clusterpropertiesencryption): Encryption-at-rest configuration for the cluster.
-* **firewallRules**: [FirewallRule](#firewallrule)[]: Firewall rules associated with the cluster.
+* **firewallRules**: [FirewallRule](#firewallrule)[]: The complete set of firewall rules for an Azure Managed Redis (AMR) cluster. At most 250 rules are supported, and non-empty rules require publicNetworkAccess to be Enabled.
+
+On PUT, the supplied array replaces all existing rules. Omitting this property or supplying an empty array clears all rules.
+
+On PATCH, omitting this property preserves existing rules. A supplied array replaces all existing rules; rules absent from it are deleted. Supplying an empty array clears all rules.
+
+Disabling publicNetworkAccess also clears existing rules. With publicNetworkAccess Enabled, an empty rule set allows all public traffic; it does not deny all traffic.
+
+Firewall rule changes cannot be combined with scaling or encryption changes in the same update request.
 * **highAvailability**: 'Disabled' | 'Enabled' | string: Enabled by default. If highAvailability is disabled, the data set is not replicated. This affects the availability SLA, and increases the risk of data loss.
 * **hostName**: string (ReadOnly): DNS name of the cluster endpoint
 * **maintenanceConfiguration**: [MaintenanceConfiguration](#maintenanceconfiguration): Cluster-level maintenance configuration.
@@ -206,8 +222,8 @@
 
 ## FirewallRule
 ### Properties
-* **name**: string (Required): The name of the firewall rule.
-* **sourceAddressPrefix**: string (Required): The source address prefix for the firewall rule.
+* **name**: string (Required): The name of the firewall rule, unique within the cluster ignoring case. Must be 1-80 characters and contain only letters, numbers, hyphens, or underscores.
+* **sourceAddressPrefix**: string (Required): An IPv4 address (for example, "203.0.113.1"), IPv4 CIDR prefix (for example, "203.0.113.0/24"), or Azure service tag (for example, "AzureCloud"). IPv6 addresses are not supported.
 
 ## FlushParameters
 ### Properties

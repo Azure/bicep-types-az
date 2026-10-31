@@ -85,12 +85,12 @@
 
 ## PlaywrightWorkspaceProperties
 ### Properties
-* **dataplaneUri**: string (ReadOnly): The workspace data plane service API URI.
-* **localAuth**: 'Disabled' | 'Enabled' | string: Enables the workspace to use local authentication through service access tokens for operations.
+* **dataplaneUri**: string (ReadOnly): The API endpoint for workspace data plane operations.
+* **localAuth**: 'Disabled' | 'Enabled' | string: Specifies whether service access tokens can be used to authenticate workspace operations.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last resource operation.
-* **regionalAffinity**: 'Disabled' | 'Enabled' | string: Controls the connection region for client workers to cloud-hosted browsers. When enabled, workers connect to browsers in the closest Azure region for lower latency. When disabled, workers connect to browsers in the Azure region where the workspace was created.
-* **reporting**: 'Disabled' | 'Enabled' | string: Indicates whether reporting is enabled for the workspace. When set to true, reports will be generated and available for the workspace.
-* **storageUri**: string: The URI of the Azure storage account used to store workspace artifacts, test results, and reports.
+* **regionalAffinity**: 'Disabled' | 'Enabled' | string: Specifies where client workers connect to cloud-hosted browsers. When Enabled, workers connect to browsers in the nearest Azure region to reduce latency. When Disabled, workers connect to browsers in the workspace's Azure region.
+* **reporting**: 'Disabled' | 'Enabled' | string: Specifies whether test reporting is enabled for the workspace.
+* **storageUri**: string: The URI of the Azure Storage account used to store workspace artifacts, test results, and reports.
 * **workspaceId**: string {minLength: 3, maxLength: 36, pattern: "[A-Za-z0-9]+(-[A-Za-z0-9]+)+"} (ReadOnly): The workspace ID in GUID format.
 
 ## PlaywrightWorkspaceQuotaProperties
