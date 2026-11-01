@@ -637,7 +637,7 @@
 ### Properties
 * **capacityReservations**: [SubResourceReadOnly](#subresourcereadonly)[] (ReadOnly): A list of all capacity reservation resource ids that belong to capacity reservation group.
 * **instanceView**: [CapacityReservationGroupInstanceView](#capacityreservationgroupinstanceview) (ReadOnly): The capacity reservation group instance view which has the list of instance views for all the capacity reservations that belong to the capacity reservation group.
-* **sharingProfile**: [ResourceSharingProfile](#resourcesharingprofile): Specifies the settings to enable sharing across subscriptions for the capacity reservation group resource. Pls. keep in mind the capacity reservation group resource generally can be shared across subscriptions belonging to a single azure AAD tenant or cross AAD tenant if there is a trust relationship established between the AAD tenants. **Note:** Minimum api-version: 2023-09-01. Please refer to https://aka.ms/computereservationsharing for more details.
+* **sharingProfile**: [ResourceSharingProfile](#resourcesharingprofile): Specifies the settings to enable sharing across subscriptions for the capacity reservation group resource. The capacity reservation group resource can be shared only across subscriptions belonging to the same Microsoft Entra ID tenant. Sharing across tenants is not supported. **Note:** Minimum api-version: 2023-09-01. Please refer to https://aka.ms/computereservationsharing for more details.
 * **virtualMachinesAssociated**: [SubResourceReadOnly](#subresourcereadonly)[] (ReadOnly): A list of references to all virtual machines associated to the capacity reservation group.
 
 ## CapacityReservationInstanceView

@@ -29,6 +29,10 @@
   },
   {
     "$type": "StringLiteralType",
+    "value": "Kore.AgentPlatform"
+  },
+  {
+    "$type": "StringLiteralType",
     "value": "LambdaTest.HyperExecute"
   },
   {
@@ -1996,13 +2000,16 @@
       },
       {
         "$ref": "#/284"
+      },
+      {
+        "$ref": "#/285"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/285"
+      "$ref": "#/286"
     }
   },
   {
@@ -2011,7 +2018,7 @@
     "properties": {
       "providers": {
         "type": {
-          "$ref": "#/286"
+          "$ref": "#/287"
         },
         "flags": 0,
         "description": "The Azure provider namespaces to register for the az extension."

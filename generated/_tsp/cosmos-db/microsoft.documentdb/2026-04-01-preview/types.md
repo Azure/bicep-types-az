@@ -782,7 +782,7 @@
 * **Resource**: Microsoft.DocumentDB/cassandraClusters
 * **ApiVersion**: 2026-04-01-preview
 * **Input**: [CommandPostBody](#commandpostbody)
-* **Output**: any
+* **Output**: [CommandOutput](#commandoutput)
 
 ## Function invokeCommandAsync (Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview)
 * **Resource**: Microsoft.DocumentDB/cassandraClusters
@@ -1077,7 +1077,7 @@
 * **fullyQualifiedDomainNames**: string[]: Fully qualified domain names (FQDN) for outbound rules
 * **networkSecurityPerimeters**: [NetworkSecurityPerimeter](#networksecurityperimeter)[]: Network security perimeters for inbound rules
 * **phoneNumbers**: string[]: Phone numbers for outbound rules
-* **subscriptions**: [AnonymousModel](#anonymousmodel)[]: Subscriptions for inbound rules
+* **subscriptions**: [AnonymousModel1](#anonymousmodel1)[]: Subscriptions for inbound rules
 
 ## AccountKeyMetadata
 ### Properties
@@ -1090,7 +1090,7 @@ usage for this key.
 ### Properties
 * **schemaType**: 'FullFidelity' | 'WellDefined' | string: Describes the types of schema for analytical storage.
 
-## AnonymousModel
+## AnonymousModel1
 ### Properties
 * **id**: string: The fully qualified Azure resource ID of the subscription e.g. ('/subscriptions/00000000-0000-0000-0000-000000000000')
 
@@ -1424,6 +1424,10 @@ usage for this key.
 * **host**: string (Required): IP address of the cassandra host to run the command on
 * **readWrite**: bool: If true, allows the command to *write* to the cassandra directory, otherwise read-only.
 
+## CommandOutput
+### Properties
+* **commandOutput**: string: Output of the command.
+
 ## CommandPostBody
 ### Properties
 * **arguments**: [Record](#record): The arguments for the command to be run
@@ -1727,7 +1731,7 @@ usage for this key.
 ### Properties
 * **destination**: [DataTransferDataSourceSink](#datatransferdatasourcesink) (Required): Destination DataStore details
 * **duration**: string (ReadOnly): Total Duration of Job
-* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Error response for Faulted job
+* **error**: [Microsoft.DocumentDB.ErrorResponse](#microsoftdocumentdberrorresponse) (ReadOnly): Error response for Faulted job
 * **jobName**: string (ReadOnly): Job Name
 * **lastUpdatedUtcTime**: string (ReadOnly): Last Updated Time (ISO-8601 format).
 * **mode**: 'Offline' | 'Online' | string: Mode of job execution
@@ -1996,7 +2000,12 @@ usage for this key.
 * **principalId**: string (ReadOnly): The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned': The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
-* **userAssignedIdentities**: [Record](#record): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **userAssignedIdentities**: [TypeSpec.Record](#typespecrecord): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## ManagedServiceIdentityUserAssignedIdentities
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
 ## MaterializedViewDefinition
 ### Properties
@@ -2023,6 +2032,11 @@ usage for this key.
 ## MergeParameters
 ### Properties
 * **isDryRun**: bool: Specifies whether the operation is a real merge operation or a simulation.
+
+## Microsoft.DocumentDB.ErrorResponse
+### Properties
+* **code**: string: Error code.
+* **message**: string: Error message indicating why the operation failed.
 
 ## MongoDBCollectionGetProperties
 ### Properties
@@ -2672,6 +2686,11 @@ usage for this key.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## TypeSpec.Record
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities)
 
 ## UniqueKey
 ### Properties

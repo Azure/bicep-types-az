@@ -3861,7 +3861,7 @@ Defaults to 5000ms.
 ### Properties
 * **latestPatchTime**: string: Time of the latest os patching.
 * **osPatchingErrors**: [ErrorResponse](#errorresponse)[]: Collection of errors encountered when doing os patching.
-* **patchStatus**: 'CompletedWithWarnings' | 'Failed' | 'InProgress' | 'Succeeded' | 'Unknown' | string: The os patching status.
+* **patchStatus**: 'CompletedWithWarnings' | 'Failed' | 'InProgress' | 'Succeeded' | 'Unknown' | string (ReadOnly): The os patching status.
 * **rebootPending**: bool: Specifies whether this compute instance is pending for reboot to finish os patching.
 * **scheduledRebootTime**: string: Time of scheduled reboot.
 

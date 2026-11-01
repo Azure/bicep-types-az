@@ -182,7 +182,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/TXT' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function getDnsResourceReference (Microsoft.Network@2023-07-01-preview)
+## Function getByTargetResources (Microsoft.Network@2023-07-01-preview)
 * **Resource**: Microsoft.Network
 * **ApiVersion**: 2023-07-01-preview
 * **Input**: [DnsResourceReferenceRequest](#dnsresourcereferencerequest)

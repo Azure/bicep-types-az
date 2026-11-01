@@ -7836,7 +7836,7 @@
         "type": {
           "$ref": "#/539"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "The os patching status."
       },
       "latestPatchTime": {
