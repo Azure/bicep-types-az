@@ -97,7 +97,8 @@ function resolvePropertyNumericConstraints(program: Program, prop: ModelProperty
  */
 export function generateTypes(program: Program, definition: ProviderDefinition): BicepType[] {
   const factory = new TypeFactory();
-  const modelDefinitions = new Map<Model, TypeReference>();
+  const modelDefinitions = new Map<Model, Map<Model, TypeReference>>();
+  const mergedModelNames = new Map<Model, Map<Model, string>>();
   const modelNames = new Map<Model, string>();
   const usedModelNames = new Set<string>();
   let anonymousModelCount = 0;
@@ -171,23 +172,21 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
       }
 
       // Add properties from the model (including inherited ARM envelope properties)
-      for (const [propName, prop] of getAllProperties(bodyModel)) {
+      for (const { propName, putProp, getProp } of getObjectProperties(bodyModel, getModel ?? bodyModel)) {
         if (resourceProperties[propName]) {
           continue; // Skip standard properties (id, name, type, apiVersion)
         }
 
-        const propertyType = parsePropertyType(prop);
-        if (propertyType !== undefined) {
-          const flags = parsePropertyFlags(prop);
-          const description = getPropertyDescription(prop);
-          resourceProperties[propName] = createObjectTypeProperty(propertyType, flags, description);
+        const property = parseObjectProperty(putProp, getProp);
+        if (property) {
+          resourceProperties[propName] = property;
         }
       }
 
       // Handle discriminated subtypes
       if (discriminatorProp) {
         const discriminatedType = factory.lookupType(resourceDefinition) as DiscriminatedObjectType;
-        handlePolymorphicType(discriminatedType, bodyModel);
+        handlePolymorphicType(discriminatedType, bodyModel, getModel ?? bodyModel);
       }
     } else {
       resourceDefinition = factory.addObjectType(getFullyQualifiedType(descriptor), resourceProperties);
@@ -309,11 +308,13 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
   // --- Type parsing ---
 
   /** Parse a property's type, applying property-level constraints. */
-  function parsePropertyType(prop: ModelProperty): TypeReference | undefined {
+  function parsePropertyType(prop: ModelProperty, getProp: ModelProperty = prop): TypeReference | undefined {
     const baseType = prop.type;
+    const getType = getProp.type;
 
     if (baseType.kind === "Model" && isArrayModel(baseType)) {
-      const itemType = baseType.indexer?.value ? parseType(baseType.indexer.value) : undefined;
+      const getItemType = getType.kind === "Model" && isArrayModel(getType) ? getType.indexer?.value : undefined;
+      const itemType = baseType.indexer?.value ? parseType(baseType.indexer.value, getItemType) : undefined;
       return factory.addArrayType(itemType ?? factory.addAnyType(), getMinItems(program, prop), getMaxItems(program, prop));
     }
 
@@ -332,7 +333,7 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
       }
     }
 
-    return parseType(prop.type);
+    return parseType(prop.type, getProp.type);
   }
 
   function isStringScalar(scalar: Scalar): boolean {
@@ -343,10 +344,10 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
     return getScalarBaseKind(scalar) === "integer";
   }
 
-  function parseType(type: Type): TypeReference | undefined {
+  function parseType(type: Type, getType: Type = type): TypeReference | undefined {
     switch (type.kind) {
       case "Model":
-        return parseModelType(type);
+        return parseModelType(type, getType.kind === "Model" ? getType : type);
       case "Scalar":
         return parseScalarType(type);
       case "Enum":
@@ -369,30 +370,30 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
     }
   }
 
-  function parseModelType(model: Model): TypeReference | undefined {
+  function parseModelType(model: Model, getModel: Model = model): TypeReference | undefined {
     // Handle well-known built-in models
     if (isArrayModel(model)) {
       const elementType = model.indexer?.value;
-      const itemType = elementType ? parseType(elementType) : factory.addAnyType();
+      const itemType = elementType ? parseType(elementType, getModel.indexer?.value) : factory.addAnyType();
       return factory.addArrayType(itemType ?? factory.addAnyType());
     }
 
     if (isRecordModel(model)) {
-      const modelName = getModelName(model);
-      const existing = modelDefinitions.get(model);
+      const modelName = getMergedModelName(model, getModel);
+      const existing = modelDefinitions.get(model)?.get(getModel);
       if (existing) {
         return existing;
       }
       const valueType = model.indexer?.value;
-      const additionalProps = valueType ? parseType(valueType) : undefined;
+      const additionalProps = valueType ? parseType(valueType, getModel.indexer?.value) : undefined;
       const ref = factory.addObjectType(modelName || "Record", {}, additionalProps, isSecret(program, model) || undefined);
-      modelDefinitions.set(model, ref);
+      cacheModelDefinition(model, getModel, ref);
       return ref;
     }
 
     // Check for cached named definition
-    const modelName = getModelName(model);
-    const existing = modelDefinitions.get(model);
+    const modelName = getMergedModelName(model, getModel);
+    const existing = modelDefinitions.get(model)?.get(getModel);
     if (existing) {
       return existing;
     }
@@ -403,7 +404,7 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
 
     let additionalProperties: TypeReference | undefined;
     if (model.indexer?.value) {
-      additionalProperties = parseType(model.indexer.value);
+      additionalProperties = parseType(model.indexer.value, getModel.indexer?.value);
     }
 
     let definition: TypeReference;
@@ -414,26 +415,24 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
     }
 
     // Cache before recursing to handle circular references
-    modelDefinitions.set(model, definition);
+    cacheModelDefinition(model, getModel, definition);
 
     // Add properties
-    for (const [propName, prop] of getAllProperties(model)) {
+    for (const { propName, putProp, getProp } of getObjectProperties(model, getModel)) {
       if (discriminatorProp && propName === discriminatorProp) {
         continue; // Skip discriminator property
       }
 
-      const propertyType = parsePropertyType(prop);
-      if (propertyType !== undefined) {
-        const flags = parsePropertyFlags(prop);
-        const description = getPropertyDescription(prop);
-        properties[propName] = createObjectTypeProperty(propertyType, flags, description);
+      const property = parseObjectProperty(putProp, getProp);
+      if (property) {
+        properties[propName] = property;
       }
     }
 
     // Handle discriminated subtypes
     if (discriminatorProp) {
       const discriminatedType = factory.lookupType(definition) as DiscriminatedObjectType;
-      handlePolymorphicType(discriminatedType, model);
+      handlePolymorphicType(discriminatedType, model, getModel);
     }
 
     return definition;
@@ -513,6 +512,33 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
 
   // --- Property helpers ---
 
+  function* getObjectProperties(model: Model, getModel: Model) {
+    const putProperties = new Map(getAllProperties(model));
+    const getProperties = new Map(getAllProperties(getModel));
+    for (const propName of new Set([...putProperties.keys(), ...getProperties.keys()])) {
+      yield { propName, putProp: putProperties.get(propName), getProp: getProperties.get(propName) };
+    }
+  }
+
+  function parseObjectProperty(putProp: ModelProperty | undefined, getProp: ModelProperty | undefined): ObjectTypeProperty | undefined {
+    const prop = putProp ?? getProp;
+    if (!prop) {
+      return undefined;
+    }
+    const propertyType = parsePropertyType(prop, getProp ?? prop);
+    if (propertyType === undefined) {
+      return undefined;
+    }
+    let flags = parsePropertyFlags(prop);
+    if (!putProp) {
+      flags = (flags & ~ObjectTypePropertyFlags.Required) | ObjectTypePropertyFlags.ReadOnly;
+    }
+    if (!getProp) {
+      flags |= ObjectTypePropertyFlags.WriteOnly;
+    }
+    return createObjectTypeProperty(propertyType, flags, getPropertyDescription(prop));
+  }
+
   function parsePropertyFlags(prop: ModelProperty): ObjectTypePropertyFlags {
     let flags = ObjectTypePropertyFlags.None;
 
@@ -556,15 +582,18 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
     return undefined;
   }
 
-  function handlePolymorphicType(discriminatedObjectType: DiscriminatedObjectType, model: Model): void {
+  function handlePolymorphicType(discriminatedObjectType: DiscriminatedObjectType, model: Model, getModel: Model = model): void {
     const discriminator = getDiscriminator(program, model);
     if (!discriminator) return;
 
     const [discriminatedUnion, diagnostics] = getDiscriminatedUnionFromInheritance(model, discriminator);
     program.reportDiagnostics(diagnostics);
+    const [getDiscriminatedUnion, getDiagnostics] = getDiscriminatedUnionFromInheritance(getModel, getDiscriminator(program, getModel) ?? discriminator);
+    program.reportDiagnostics(getDiagnostics);
 
-    for (const [discriminatorValue, derived] of discriminatedUnion.variants) {
-      const objectTypeRef = parseModelType(derived);
+    const variants = new Map([...getDiscriminatedUnion.variants, ...discriminatedUnion.variants]);
+    for (const [discriminatorValue, derived] of variants) {
+      const objectTypeRef = parseModelType(derived, getDiscriminatedUnion.variants.get(discriminatorValue) ?? derived);
       if (objectTypeRef === undefined) {
         logWarning(`Skipping subtype '${String(discriminatorValue)}' of discriminated type '${discriminatedObjectType.name}': unable to parse its model.`);
         continue;
@@ -587,6 +616,39 @@ export function generateTypes(program: Program, definition: ProviderDefinition):
   }
 
   // --- Model helpers ---
+
+  function cacheModelDefinition(model: Model, getModel: Model, definition: TypeReference): void {
+    let definitions = modelDefinitions.get(model);
+    if (!definitions) {
+      definitions = new Map();
+      modelDefinitions.set(model, definitions);
+    }
+    definitions.set(getModel, definition);
+  }
+
+  function getMergedModelName(model: Model, getModel: Model): string {
+    if (model === getModel) {
+      return getModelName(model);
+    }
+    let names = mergedModelNames.get(model);
+    if (!names) {
+      names = new Map();
+      mergedModelNames.set(model, names);
+    }
+    const existing = names.get(getModel);
+    if (existing) {
+      return existing;
+    }
+    const baseName = `${getModelName(model)}Or${getModelName(getModel)}`;
+    let name = baseName;
+    let suffix = 2;
+    while (usedModelNames.has(name)) {
+      name = `${baseName}${suffix++}`;
+    }
+    usedModelNames.add(name);
+    names.set(getModel, name);
+    return name;
+  }
 
   function getModelName(model: Model): string {
     const existing = modelNames.get(model);

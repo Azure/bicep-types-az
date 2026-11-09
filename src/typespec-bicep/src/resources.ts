@@ -96,7 +96,7 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
   const resolvedProvider = resolveArmResources(program);
   const resolvedResources = resolvedProvider.resources ?? [];
   const providerOperations = resolvedProvider.providerOperations ?? [];
-  const { customResourceRoutes, httpResourceScopes } = getHttpResourceMetadata(program);
+  const { customResourceRoutes, httpResourceScopes, httpResourcePutModels } = getHttpResourceMetadata(program);
 
   /** Discover a single ARM resource's type(s) and record them on its provider. */
   function processArmResource(armResource: (typeof armResources)[number]): void {
@@ -111,6 +111,7 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
     }
 
     const model = armResource.typespecType;
+    const lifecycle = resolveResourceOperations(program, model).lifecycle;
     const apiVersion = getApiVersion(model.namespace);
     if (!apiVersion) {
       $lib.reportDiagnostic(program, {
@@ -187,7 +188,9 @@ export function getProviderDefinitions(context: EmitContext<BicepEmitterOptions>
             writableScopes: resourcePath.writableScopes,
             constantName: singletonKey,
           },
-          putModel: model,
+          putModel: getOperationRequestModel(resourcePath.resolved?.operations.lifecycle.createOrUpdate?.[0] ?? lifecycle.createOrUpdate)
+            ?? httpResourcePutModels.get(segments.join("/").toLowerCase())
+            ?? model,
           getModel: model,
           nameProperty: getResourceNameProperty(model),
         };
@@ -318,9 +321,11 @@ function buildResourcePaths(
 function getHttpResourceMetadata(program: Program): {
   customResourceRoutes: Map<Model, ResourceRoute[]>;
   httpResourceScopes: Map<string, ResourceScopes>;
+  httpResourcePutModels: Map<string, Model>;
 } {
   const customResourceRoutes = new Map<Model, ResourceRoute[]>();
   const httpResourceScopes = new Map<string, ResourceScopes>();
+  const httpResourcePutModels = new Map<string, Model>();
   const [services, diagnostics] = getAllHttpServices(program);
   program.reportDiagnostics(diagnostics);
 
@@ -356,12 +361,18 @@ function getHttpResourceMetadata(program: Program): {
         }
       } else if (operation.verb === "put" || operation.verb === "patch") {
         scopes.writableScopes |= scope;
+        if (operation.verb === "put") {
+          const requestModel = getOperationRequestModel({ httpOperation: operation });
+          if (requestModel) {
+            httpResourcePutModels.set(key, requestModel);
+          }
+        }
       }
       httpResourceScopes.set(key, scopes);
     }
   }
 
-  return { customResourceRoutes, httpResourceScopes };
+  return { customResourceRoutes, httpResourceScopes, httpResourcePutModels };
 }
 
 function* getResponseBodyModels(operation: HttpOperation): IterableIterator<Model> {
@@ -556,8 +567,8 @@ function getOperationResponseType(action: { httpOperation: HttpOperation }): Typ
 /**
  * Get the request body model from an ARM resource operation.
  */
-function getOperationRequestModel(action: { httpOperation: { parameters: { body?: { type?: Type } } } }): Model | undefined {
-  const body = action.httpOperation.parameters.body;
+function getOperationRequestModel(action: { httpOperation: { parameters: { body?: { type?: Type } } } } | undefined): Model | undefined {
+  const body = action?.httpOperation.parameters.body;
   if (body?.type?.kind === "Model") {
     return body.type;
   }

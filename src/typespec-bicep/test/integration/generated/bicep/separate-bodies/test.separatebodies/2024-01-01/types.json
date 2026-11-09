@@ -1,0 +1,540 @@
+[
+  {
+    "$type": "StringType",
+    "pattern": "^[a-zA-Z0-9-]{3,24}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.SeparateBodies/accounts"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.SeparateBodies/accounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Required account settings."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccountRequestPropertiesOrAccountResponseProperties",
+    "properties": {
+      "databaseAccountOfferType": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1
+      },
+      "locations": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 1
+      },
+      "password": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 5
+      },
+      "nested": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0
+      },
+      "otherNested": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0
+      },
+      "entries": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0
+      },
+      "shared": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0
+      },
+      "polymorphic": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestLocationOrResponseLocation",
+    "properties": {
+      "locationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "failoverPriority": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 1
+      },
+      "isZoneRedundant": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0
+      },
+      "endpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/7"
+    },
+    "minLength": 1,
+    "maxLength": 3
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestNestedOrResponseNested",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1
+      },
+      "next": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0
+      },
+      "result": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 30
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestNestedOrOtherResponseNested",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1
+      },
+      "next": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 4
+      },
+      "otherResult": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestNested",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1
+      },
+      "next": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecordOrTypeSpec.Record",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Shared",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "RequestBaseOrResponseBase",
+    "discriminator": "kind",
+    "baseProperties": {},
+    "elements": {
+      "shared": {
+        "$ref": "#/19"
+      },
+      "response-only": {
+        "$ref": "#/22"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestVariantOrResponseVariant",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 1
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1
+      },
+      "result": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "shared"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "shared"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResponseOnlyVariant",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 1
+      },
+      "result": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "response-only"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "response-only"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.SeparateBodies/accounts@2024-01-01",
+    "body": {
+      "$ref": "#/4"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.SeparateBodies/registeredAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.SeparateBodies/registeredAccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Required account settings."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.SeparateBodies/registeredAccounts@2024-01-01",
+    "body": {
+      "$ref": "#/39"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  }
+]

@@ -5,12 +5,13 @@ import path from "path";
 import { tmpdir } from "os";
 import { mkdtemp, readFile, rm } from "fs/promises";
 import { describe, it, expect } from "vitest";
+import { ObjectTypePropertyFlags, readTypesJson, TypeBaseKind, TypeReference } from "@azure/bicep-types";
 import { defaultLogger, isBaselineRecordEnabled, runTypeSpecEmitter, compareDirectories } from "./utils";
 
 const outputBaseDir = path.resolve(`${__dirname}/generated`);
 
 // Add any new spec paths under ./specs to this list
-const specs = ["basic", "firewalls", "edge-cases"];
+const specs = ["basic", "firewalls", "edge-cases", "separate-bodies"];
 
 describe("integration tests (bicep types)", () => {
   for (const spec of specs) {
@@ -44,6 +45,78 @@ describe("integration tests (bicep types)", () => {
       }
     });
   }
+});
+
+describe("separate request and response models", () => {
+  it("uses PUT requiredness and visibility while preserving response-only properties", async () => {
+    const types = readTypesJson(await readFile(path.join(outputBaseDir, "bicep/separate-bodies/test.separatebodies/2024-01-01/types.json"), "utf8"));
+    const resource = types.find((type) => type.type === TypeBaseKind.ResourceType);
+    if (!resource || resource.type !== TypeBaseKind.ResourceType) {
+      throw new Error("Expected an account resource");
+    }
+
+    function getObject(reference: TypeReference) {
+      const type = types[reference.index];
+      if (type.type !== TypeBaseKind.ObjectType) {
+        throw new Error(`Expected an object at index ${reference.index}`);
+      }
+      return type;
+    }
+
+    const body = getObject(resource.body);
+    expect(body.properties.properties.flags).toBe(ObjectTypePropertyFlags.Required);
+    expect(body.properties.properties.description).toBe("Required account settings.");
+    expect(body.properties.systemData.flags).toBe(ObjectTypePropertyFlags.ReadOnly);
+
+    const properties = getObject(body.properties.properties.type).properties;
+    expect(types[properties.locations.type.index]).toMatchObject({ minLength: 1, maxLength: 3 });
+    expect(properties.databaseAccountOfferType.flags).toBe(ObjectTypePropertyFlags.Required);
+    expect(properties.locations.flags).toBe(ObjectTypePropertyFlags.Required);
+    expect(properties.status.flags).toBe(ObjectTypePropertyFlags.ReadOnly);
+    expect(properties.password.flags).toBe(ObjectTypePropertyFlags.Required | ObjectTypePropertyFlags.WriteOnly);
+    expect(types[properties.password.type.index]).toMatchObject({ type: TypeBaseKind.StringType, sensitive: true });
+
+    const locations = types[properties.locations.type.index];
+    if (locations.type !== TypeBaseKind.ArrayType) {
+      throw new Error("Expected an array of locations");
+    }
+    const location = getObject(locations.itemType).properties;
+    expect(location.locationName.flags).toBe(ObjectTypePropertyFlags.Required);
+    expect(location.failoverPriority.flags).toBe(ObjectTypePropertyFlags.Required);
+    expect(types[location.failoverPriority.type.index]).toMatchObject({ type: TypeBaseKind.IntegerType, minValue: 0 });
+    expect(location.isZoneRedundant.flags).toBe(ObjectTypePropertyFlags.None);
+    expect(location.endpoint.flags).toBe(ObjectTypePropertyFlags.ReadOnly);
+
+    const nested = getObject(properties.nested.type);
+    expect(nested.properties.value.flags).toBe(ObjectTypePropertyFlags.Required);
+    expect(types[nested.properties.value.type.index]).toMatchObject({ type: TypeBaseKind.StringType, maxLength: 30 });
+    expect(nested.properties.result.flags).toBe(ObjectTypePropertyFlags.ReadOnly);
+    expect(nested.properties.next.type).toEqual(properties.nested.type);
+    expect(getObject(properties.entries.type).additionalProperties).toEqual(properties.nested.type);
+    const otherNested = getObject(properties.otherNested.type);
+    expect(otherNested.properties.otherResult.flags).toBe(ObjectTypePropertyFlags.ReadOnly);
+    expect(otherNested.properties.result).toBeUndefined();
+    expect(nested.properties.otherResult).toBeUndefined();
+
+    const polymorphic = types[properties.polymorphic.type.index];
+    if (polymorphic.type !== TypeBaseKind.DiscriminatedObjectType) {
+      throw new Error("Expected a discriminated object");
+    }
+    const variant = getObject(polymorphic.elements.shared).properties;
+    expect(variant.value.flags).toBe(ObjectTypePropertyFlags.Required);
+    expect(variant.result.flags).toBe(ObjectTypePropertyFlags.ReadOnly);
+    expect(polymorphic.elements["response-only"]).toBeDefined();
+
+    const registered = types.find((type) => type.type === TypeBaseKind.ResourceType && type.name.includes("/registeredAccounts@"));
+    if (!registered || registered.type !== TypeBaseKind.ResourceType) {
+      throw new Error("Expected a registered account resource");
+    }
+    expect(getObject(registered.body).properties.properties).toEqual(body.properties.properties);
+
+    const shared = getObject(properties.shared.type).properties;
+    expect(shared.value.flags).toBe(ObjectTypePropertyFlags.None);
+    expect(shared.status.flags).toBe(ObjectTypePropertyFlags.ReadOnly);
+  });
 });
 
 describe("scope validation tests", () => {
