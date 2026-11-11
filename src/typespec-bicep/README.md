@@ -42,6 +42,11 @@ The emitter:
 3. **Converts TypeSpec types to Bicep types** using the `TypeFactory` from the `bicep-types` library
 4. **Generates output files** in the same format as `@autorest/bicep`
 
+When a resource uses separate PUT request and response models, the emitter combines
+their properties recursively. Input types, constraints, and requiredness come from
+the PUT body; response-only properties remain read-only and request-only properties
+are write-only.
+
 ## Architecture
 
 This package mirrors the architecture of `@autorest/bicep` (the AutoRest plugin in `src/autorest.bicep/`):
