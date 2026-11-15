@@ -14,7 +14,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -299,7 +299,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/fleets@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/fleets@2026-07-15",
     "body": {
       "$ref": "#/4"
     },
@@ -312,7 +312,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -564,7 +564,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/fleets/fleetspaces@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/fleets/fleetspaces@2026-07-15",
     "body": {
       "$ref": "#/32"
     },
@@ -577,7 +577,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -747,7 +747,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/fleets/fleetspaces/fleetspaceAccounts@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/fleets/fleetspaces/fleetspaceAccounts@2026-07-15",
     "body": {
       "$ref": "#/56"
     },
@@ -760,7 +760,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -886,7 +886,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections@2026-07-15",
     "body": {
       "$ref": "#/73"
     },
@@ -899,7 +899,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -1391,6 +1391,13 @@
         "flags": 0,
         "description": "Flag to indicate enabling/disabling of hierarchical partition key ID last level enforcement on the account."
       },
+      "perPartitionAutomaticFailoverEnabled": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "Flag to indicate enabling/disabling of per-partition automatic failover on the account, which automatically fails over individual partitions to available regions during a regional outage. Opt-in; defaults to false."
+      },
       "provisioningState": {
         "type": {
           "$ref": "#/2"
@@ -1858,6 +1865,13 @@
         },
         "flags": 0,
         "description": "The object representing the state of the migration between the backup policies."
+      },
+      "backupRetentionLockExpirationTimestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The UTC timestamp until which changes that reduce backup retention are locked.\nWhile active, this timestamp can only be extended."
       }
     },
     "elements": {
@@ -1972,6 +1986,13 @@
         "flags": 0,
         "description": "The object representing the state of the migration between the backup policies."
       },
+      "backupRetentionLockExpirationTimestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The UTC timestamp until which changes that reduce backup retention are locked.\nWhile active, this timestamp can only be extended."
+      },
       "periodicModeProperties": {
         "type": {
           "$ref": "#/148"
@@ -2062,6 +2083,13 @@
         },
         "flags": 0,
         "description": "The object representing the state of the migration between the backup policies."
+      },
+      "backupRetentionLockExpirationTimestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The UTC timestamp until which changes that reduce backup retention are locked.\nWhile active, this timestamp can only be extended."
       },
       "continuousModeProperties": {
         "type": {
@@ -2801,7 +2829,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts@2026-07-15",
     "body": {
       "$ref": "#/80"
     },
@@ -2814,7 +2842,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -2977,7 +3005,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/mongoMIRoleDefinitions@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/mongoMIRoleDefinitions@2026-07-15",
     "body": {
       "$ref": "#/223"
     },
@@ -2990,7 +3018,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -3076,7 +3104,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/mongoMIRoleAssignments@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/mongoMIRoleAssignments@2026-07-15",
     "body": {
       "$ref": "#/236"
     },
@@ -3089,7 +3117,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -3213,7 +3241,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/gremlinRoleDefinitions@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/gremlinRoleDefinitions@2026-07-15",
     "body": {
       "$ref": "#/241"
     },
@@ -3226,7 +3254,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -3312,7 +3340,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/gremlinRoleAssignments@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/gremlinRoleAssignments@2026-07-15",
     "body": {
       "$ref": "#/251"
     },
@@ -3325,7 +3353,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -3449,7 +3477,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraRoleDefinitions@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraRoleDefinitions@2026-07-15",
     "body": {
       "$ref": "#/256"
     },
@@ -3462,7 +3490,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -3548,7 +3576,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraRoleAssignments@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraRoleAssignments@2026-07-15",
     "body": {
       "$ref": "#/266"
     },
@@ -3561,7 +3589,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -3725,7 +3753,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/throughputPools@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/throughputPools@2026-07-15",
     "body": {
       "$ref": "#/271"
     },
@@ -3738,7 +3766,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -3862,7 +3890,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/tableRoleDefinitions@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/tableRoleDefinitions@2026-07-15",
     "body": {
       "$ref": "#/287"
     },
@@ -3875,7 +3903,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -4039,7 +4067,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/throughputPools/throughputPoolAccounts@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/throughputPools/throughputPoolAccounts@2026-07-15",
     "body": {
       "$ref": "#/297"
     },
@@ -4052,7 +4080,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -4138,7 +4166,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/tableRoleAssignments@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/tableRoleAssignments@2026-07-15",
     "body": {
       "$ref": "#/313"
     },
@@ -4151,7 +4179,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -4329,7 +4357,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/fleets/fleetAnalytics@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/fleets/fleetAnalytics@2026-07-15",
     "body": {
       "$ref": "#/318"
     },
@@ -4342,7 +4370,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -4454,7 +4482,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/chaosFaults@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/chaosFaults@2026-07-15",
     "body": {
       "$ref": "#/337"
     },
@@ -4471,7 +4499,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -5420,7 +5448,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-07-15",
     "body": {
       "$ref": "#/346"
     },
@@ -5433,7 +5461,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -5572,7 +5600,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/graphs@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/graphs@2026-07-15",
     "body": {
       "$ref": "#/408"
     },
@@ -5585,7 +5613,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -5809,7 +5837,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2026-07-15",
     "body": {
       "$ref": "#/416"
     },
@@ -5822,7 +5850,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -5976,7 +6004,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys@2026-07-15",
     "body": {
       "$ref": "#/427"
     },
@@ -5989,7 +6017,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -7320,7 +7348,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-07-15",
     "body": {
       "$ref": "#/434"
     },
@@ -7333,7 +7361,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -7487,7 +7515,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2026-07-15",
     "body": {
       "$ref": "#/535"
     },
@@ -7500,7 +7528,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -7634,7 +7662,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2026-07-15",
     "body": {
       "$ref": "#/542"
     },
@@ -7647,7 +7675,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -7860,7 +7888,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2026-07-15",
     "body": {
       "$ref": "#/548"
     },
@@ -7873,7 +7901,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -8056,7 +8084,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2026-07-15",
     "body": {
       "$ref": "#/563"
     },
@@ -8069,7 +8097,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -8338,7 +8366,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-07-15",
     "body": {
       "$ref": "#/573"
     },
@@ -8351,7 +8379,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -8534,7 +8562,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/tables@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/tables@2026-07-15",
     "body": {
       "$ref": "#/588"
     },
@@ -8547,7 +8575,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -8694,7 +8722,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2026-07-15",
     "body": {
       "$ref": "#/598"
     },
@@ -8707,7 +8735,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -8973,7 +9001,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2026-07-15",
     "body": {
       "$ref": "#/605"
     },
@@ -8986,7 +9014,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -9169,7 +9197,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2026-07-15",
     "body": {
       "$ref": "#/619"
     },
@@ -9182,7 +9210,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -9407,7 +9435,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2026-07-15",
     "body": {
       "$ref": "#/629"
     },
@@ -9420,7 +9448,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -9633,7 +9661,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/locations@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/locations@2026-07-15",
     "body": {
       "$ref": "#/639"
     },
@@ -9646,7 +9674,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -9800,7 +9828,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views@2026-07-15",
     "body": {
       "$ref": "#/660"
     },
@@ -9813,7 +9841,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -10208,7 +10236,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-07-15",
     "body": {
       "$ref": "#/667"
     },
@@ -10227,7 +10255,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -10857,7 +10885,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/cassandraClusters@2026-07-15",
     "body": {
       "$ref": "#/690"
     },
@@ -10870,7 +10898,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -11188,7 +11216,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/garnetClusters@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/garnetClusters@2026-07-15",
     "body": {
       "$ref": "#/737"
     },
@@ -11201,7 +11229,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -11494,7 +11522,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/cassandraClusters/dataCenters@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/cassandraClusters/dataCenters@2026-07-15",
     "body": {
       "$ref": "#/760"
     },
@@ -11507,7 +11535,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -11697,7 +11725,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2026-07-15",
     "body": {
       "$ref": "#/775"
     },
@@ -11710,7 +11738,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -11816,7 +11844,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2026-07-15",
     "body": {
       "$ref": "#/789"
     },
@@ -11844,7 +11872,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -11916,7 +11944,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-07-15",
     "body": {
       "$ref": "#/797"
     },
@@ -11929,7 +11957,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -12020,7 +12048,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/privateLinkResources@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/privateLinkResources@2026-07-15",
     "body": {
       "$ref": "#/802"
     },
@@ -12033,7 +12061,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -12150,7 +12178,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions@2026-07-15",
     "body": {
       "$ref": "#/809"
     },
@@ -12163,7 +12191,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -12242,7 +12270,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2026-07-15",
     "body": {
       "$ref": "#/819"
     },
@@ -12255,7 +12283,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -12452,7 +12480,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/locations/restorableDatabaseAccounts@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/locations/restorableDatabaseAccounts@2026-07-15",
     "body": {
       "$ref": "#/824"
     },
@@ -12470,7 +12498,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -13579,7 +13607,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/services@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/services@2026-07-15",
     "body": {
       "$ref": "#/839"
     },
@@ -13596,7 +13624,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -13851,7 +13879,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-07-15",
     "body": {
       "$ref": "#/951"
     },
@@ -13868,7 +13896,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -13941,7 +13969,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-07-15",
     "body": {
       "$ref": "#/963"
     },
@@ -13958,7 +13986,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -14031,7 +14059,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-07-15",
     "body": {
       "$ref": "#/968"
     },
@@ -14048,7 +14076,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -14121,7 +14149,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-07-15",
     "body": {
       "$ref": "#/973"
     },
@@ -14138,7 +14166,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -14211,7 +14239,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-07-15",
     "body": {
       "$ref": "#/978"
     },
@@ -14228,7 +14256,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -14301,7 +14329,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-07-15",
     "body": {
       "$ref": "#/983"
     },
@@ -14318,7 +14346,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -14391,7 +14419,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-07-15",
     "body": {
       "$ref": "#/988"
     },
@@ -14408,7 +14436,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -14481,7 +14509,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-07-15",
     "body": {
       "$ref": "#/993"
     },
@@ -14498,7 +14526,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -14571,7 +14599,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-07-15",
     "body": {
       "$ref": "#/998"
     },
@@ -14588,7 +14616,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -14661,7 +14689,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-07-15",
     "body": {
       "$ref": "#/1003"
     },
@@ -14678,7 +14706,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -15246,7 +15274,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations@2026-07-15",
     "body": {
       "$ref": "#/1008"
     },
@@ -15263,7 +15291,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -15421,7 +15449,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts@2026-07-15",
     "body": {
       "$ref": "#/1057"
     },
@@ -15438,7 +15466,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -15530,7 +15558,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases@2026-07-15",
     "body": {
       "$ref": "#/1068"
     },
@@ -15543,7 +15571,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "2026-04-01-preview"
+    "value": "2026-07-15"
   },
   {
     "$type": "ObjectType",
@@ -15649,7 +15677,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases/softDeletedSqlContainers@2026-04-01-preview",
+    "name": "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases/softDeletedSqlContainers@2026-07-15",
     "body": {
       "$ref": "#/1074"
     },
@@ -15679,7 +15707,7 @@
     "$type": "ResourceFunctionType",
     "name": "failoverPriorityChange",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/400"
     },
@@ -15725,7 +15753,7 @@
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1081"
     }
@@ -15894,7 +15922,7 @@
     "$type": "ResourceFunctionType",
     "name": "listConnectionStrings",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1083"
     }
@@ -15916,7 +15944,7 @@
     "$type": "ResourceFunctionType",
     "name": "offlineRegion",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/400"
     },
@@ -15928,7 +15956,7 @@
     "$type": "ResourceFunctionType",
     "name": "onlineRegion",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/400"
     },
@@ -15960,7 +15988,7 @@
     "$type": "ResourceFunctionType",
     "name": "readonlykeys",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1105"
     }
@@ -16025,7 +16053,7 @@
     "$type": "ResourceFunctionType",
     "name": "regenerateKey",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/400"
     },
@@ -16078,7 +16106,7 @@
     "$type": "ResourceFunctionType",
     "name": "pause",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/copyJobs",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1114"
     }
@@ -16087,7 +16115,7 @@
     "$type": "ResourceFunctionType",
     "name": "resume",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/copyJobs",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1114"
     }
@@ -16096,7 +16124,7 @@
     "$type": "ResourceFunctionType",
     "name": "cancel",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/copyJobs",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1114"
     }
@@ -16105,7 +16133,7 @@
     "$type": "ResourceFunctionType",
     "name": "complete",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/copyJobs",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1114"
     }
@@ -16166,7 +16194,7 @@
     "$type": "ResourceFunctionType",
     "name": "partitionMerge",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1120"
     },
@@ -16178,7 +16206,7 @@
     "$type": "ResourceFunctionType",
     "name": "partitionMerge",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1120"
     },
@@ -16229,7 +16257,7 @@
     "$type": "ResourceFunctionType",
     "name": "retrieveContinuousBackupInformation",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1126"
     },
@@ -16241,7 +16269,7 @@
     "$type": "ResourceFunctionType",
     "name": "partitionMerge",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1120"
     },
@@ -16253,7 +16281,7 @@
     "$type": "ResourceFunctionType",
     "name": "partitionMerge",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1120"
     },
@@ -16265,7 +16293,7 @@
     "$type": "ResourceFunctionType",
     "name": "retrieveContinuousBackupInformation",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1126"
     },
@@ -16277,7 +16305,7 @@
     "$type": "ResourceFunctionType",
     "name": "retrieveContinuousBackupInformation",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1126"
     },
@@ -16289,7 +16317,7 @@
     "$type": "ResourceFunctionType",
     "name": "retrieveContinuousBackupInformation",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1126"
     },
@@ -16342,7 +16370,7 @@
     "$type": "ResourceFunctionType",
     "name": "pause",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1134"
     }
@@ -16351,7 +16379,7 @@
     "$type": "ResourceFunctionType",
     "name": "resume",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1134"
     }
@@ -16360,7 +16388,7 @@
     "$type": "ResourceFunctionType",
     "name": "cancel",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1134"
     }
@@ -16369,7 +16397,7 @@
     "$type": "ResourceFunctionType",
     "name": "complete",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1134"
     }
@@ -16432,7 +16460,7 @@
     "$type": "ResourceFunctionType",
     "name": "invokeCommand",
     "resourceType": "Microsoft.DocumentDB/cassandraClusters",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1140"
     },
@@ -16611,7 +16639,7 @@
     "$type": "ResourceFunctionType",
     "name": "invokeCommandAsync",
     "resourceType": "Microsoft.DocumentDB/cassandraClusters",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1143"
     },
@@ -16623,7 +16651,7 @@
     "$type": "ResourceFunctionType",
     "name": "deallocate",
     "resourceType": "Microsoft.DocumentDB/cassandraClusters",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/400"
     }
@@ -16632,7 +16660,7 @@
     "$type": "ResourceFunctionType",
     "name": "start",
     "resourceType": "Microsoft.DocumentDB/cassandraClusters",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/400"
     }
@@ -16661,7 +16689,7 @@
     "$type": "ResourceFunctionType",
     "name": "listConnectionInfo",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1154"
     }
@@ -16670,7 +16698,7 @@
     "$type": "ResourceFunctionType",
     "name": "regenerateAuthToken",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/400"
     }
@@ -16679,7 +16707,7 @@
     "$type": "ResourceFunctionType",
     "name": "start",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/400"
     }
@@ -16843,7 +16871,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToAutoscale",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -16852,7 +16880,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToManualThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -16861,7 +16889,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToAutoscale",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -16870,7 +16898,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToManualThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -16879,7 +16907,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToAutoscale",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -16888,7 +16916,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToManualThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17111,7 +17139,7 @@
     "$type": "ResourceFunctionType",
     "name": "retrieveThroughputDistribution",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1173"
     },
@@ -17259,7 +17287,7 @@
     "$type": "ResourceFunctionType",
     "name": "redistributeThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1173"
     },
@@ -17271,7 +17299,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToAutoscale",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17280,7 +17308,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToManualThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17289,7 +17317,7 @@
     "$type": "ResourceFunctionType",
     "name": "retrieveThroughputDistribution",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1173"
     },
@@ -17301,7 +17329,7 @@
     "$type": "ResourceFunctionType",
     "name": "redistributeThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1173"
     },
@@ -17313,7 +17341,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToAutoscale",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17322,7 +17350,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToManualThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17331,7 +17359,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToAutoscale",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17340,7 +17368,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToManualThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17349,7 +17377,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToAutoscale",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17358,7 +17386,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToManualThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17367,7 +17395,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToAutoscale",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17376,7 +17404,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToManualThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17385,7 +17413,7 @@
     "$type": "ResourceFunctionType",
     "name": "retrieveThroughputDistribution",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1173"
     },
@@ -17397,7 +17425,7 @@
     "$type": "ResourceFunctionType",
     "name": "redistributeThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1173"
     },
@@ -17409,7 +17437,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToAutoscale",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17418,7 +17446,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToManualThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17427,7 +17455,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToAutoscale",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17436,7 +17464,7 @@
     "$type": "ResourceFunctionType",
     "name": "migrateToManualThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1158"
     }
@@ -17445,7 +17473,7 @@
     "$type": "ResourceFunctionType",
     "name": "retrieveThroughputDistribution",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1173"
     },
@@ -17457,7 +17485,7 @@
     "$type": "ResourceFunctionType",
     "name": "redistributeThroughput",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/1173"
     },
@@ -17469,7 +17497,7 @@
     "$type": "ResourceFunctionType",
     "name": "reconcile",
     "resourceType": "Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations",
-    "apiVersion": "2026-04-01-preview",
+    "apiVersion": "2026-07-15",
     "output": {
       "$ref": "#/400"
     }

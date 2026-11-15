@@ -1496,7 +1496,7 @@
         "flags": 0,
         "description": "The reference to the storage account access key used to access the Azure File share."
       },
-      "userAssignedIdentityClientId": {
+      "userManagedIdentityClientId": {
         "type": {
           "$ref": "#/0"
         },

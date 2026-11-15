@@ -382,7 +382,7 @@
 
 ## StorageProperties
 ### Properties
-* **class**: 'COLD' | 'HOT' | string (Required): The class of Commvault Storage
+* **class**: 'COLD' | 'COOL' | 'HOT' | string (Required): The class of Commvault Storage
 * **complianceLockStatus**: 'Disabled' | 'DisablementPending' | 'Enabled' | string (ReadOnly): The compliance lock status of the storage.
 * **location**: string {minLength: 1, maxLength: 50} (Required): Location of the Commvault Storage
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.

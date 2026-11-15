@@ -195,21 +195,21 @@
           "$ref": "#/14"
         },
         "flags": 0,
-        "description": "The number of prompt, or input, tokens per inference request. Must be supplied together with `maxOutputTokens`, and the two must total from 1 through 131072."
+        "description": "The number of prompt, or input, tokens per inference request. Must be supplied together with `maxOutputTokens`, and the two must total from 1 through 2147483647 without exceeding the model's maximum context length."
       },
       "maxOutputTokens": {
         "type": {
           "$ref": "#/14"
         },
         "flags": 0,
-        "description": "The maximum number of generated output tokens per inference request. Must be supplied together with `promptTokens`, and the two must total from 1 through 131072."
+        "description": "The maximum number of generated output tokens per inference request. Must be supplied together with `promptTokens`, and the two must total from 1 through 2147483647 without exceeding the model's maximum context length."
       }
     }
   },
   {
     "$type": "IntegerType",
     "minValue": 0,
-    "maxValue": 131072
+    "maxValue": 2147483647
   },
   {
     "$type": "ObjectType",

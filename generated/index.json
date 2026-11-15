@@ -5016,185 +5016,185 @@
     "Microsoft.Network/dnsZones@2018-05-01": {
       "$ref": "_legacy/dns/microsoft.network/2018-05-01/types.json#/75"
     },
-    "Microsoft.DocumentDB/fleets@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/29"
+    "Microsoft.DocumentDB/fleets@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/29"
     },
-    "Microsoft.DocumentDB/fleets/fleetspaces@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/53"
+    "Microsoft.DocumentDB/fleets/fleetspaces@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/53"
     },
-    "Microsoft.DocumentDB/fleets/fleetspaces/fleetspaceAccounts@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/70"
+    "Microsoft.DocumentDB/fleets/fleetspaces/fleetspaceAccounts@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/70"
     },
-    "Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/77"
+    "Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/77"
     },
-    "Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/220"
+    "Microsoft.DocumentDB/databaseAccounts@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/220"
     },
-    "Microsoft.DocumentDB/databaseAccounts/mongoMIRoleDefinitions@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/233"
+    "Microsoft.DocumentDB/databaseAccounts/mongoMIRoleDefinitions@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/233"
     },
-    "Microsoft.DocumentDB/databaseAccounts/mongoMIRoleAssignments@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/238"
+    "Microsoft.DocumentDB/databaseAccounts/mongoMIRoleAssignments@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/238"
     },
-    "Microsoft.DocumentDB/databaseAccounts/gremlinRoleDefinitions@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/248"
+    "Microsoft.DocumentDB/databaseAccounts/gremlinRoleDefinitions@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/248"
     },
-    "Microsoft.DocumentDB/databaseAccounts/gremlinRoleAssignments@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/253"
+    "Microsoft.DocumentDB/databaseAccounts/gremlinRoleAssignments@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/253"
     },
-    "Microsoft.DocumentDB/databaseAccounts/cassandraRoleDefinitions@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/263"
+    "Microsoft.DocumentDB/databaseAccounts/cassandraRoleDefinitions@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/263"
     },
-    "Microsoft.DocumentDB/databaseAccounts/cassandraRoleAssignments@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/268"
+    "Microsoft.DocumentDB/databaseAccounts/cassandraRoleAssignments@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/268"
     },
-    "Microsoft.DocumentDB/throughputPools@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/284"
+    "Microsoft.DocumentDB/throughputPools@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/284"
     },
-    "Microsoft.DocumentDB/databaseAccounts/tableRoleDefinitions@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/294"
+    "Microsoft.DocumentDB/databaseAccounts/tableRoleDefinitions@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/294"
     },
-    "Microsoft.DocumentDB/throughputPools/throughputPoolAccounts@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/310"
+    "Microsoft.DocumentDB/throughputPools/throughputPoolAccounts@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/310"
     },
-    "Microsoft.DocumentDB/databaseAccounts/tableRoleAssignments@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/315"
+    "Microsoft.DocumentDB/databaseAccounts/tableRoleAssignments@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/315"
     },
-    "Microsoft.DocumentDB/fleets/fleetAnalytics@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/334"
+    "Microsoft.DocumentDB/fleets/fleetAnalytics@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/334"
     },
-    "Microsoft.DocumentDB/databaseAccounts/chaosFaults@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/342"
+    "Microsoft.DocumentDB/databaseAccounts/chaosFaults@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/342"
     },
-    "Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/405"
+    "Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/405"
     },
-    "Microsoft.DocumentDB/databaseAccounts/graphs@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/413"
+    "Microsoft.DocumentDB/databaseAccounts/graphs@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/413"
     },
-    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/424"
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/424"
     },
-    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/431"
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/431"
     },
-    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/532"
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/532"
     },
-    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/539"
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/539"
     },
-    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/545"
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/545"
     },
-    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/560"
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/560"
     },
-    "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/570"
+    "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/570"
     },
-    "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/585"
+    "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/585"
     },
-    "Microsoft.DocumentDB/databaseAccounts/tables@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/595"
+    "Microsoft.DocumentDB/databaseAccounts/tables@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/595"
     },
-    "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/602"
+    "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/602"
     },
-    "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/616"
+    "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/616"
     },
-    "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/626"
+    "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/626"
     },
-    "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/636"
+    "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/636"
     },
-    "Microsoft.DocumentDB/locations@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/657"
+    "Microsoft.DocumentDB/locations@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/657"
     },
-    "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/664"
+    "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/664"
     },
-    "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/686"
+    "Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/686"
     },
-    "Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/734"
+    "Microsoft.DocumentDB/cassandraClusters@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/734"
     },
-    "Microsoft.DocumentDB/garnetClusters@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/757"
+    "Microsoft.DocumentDB/garnetClusters@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/757"
     },
-    "Microsoft.DocumentDB/cassandraClusters/dataCenters@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/772"
+    "Microsoft.DocumentDB/cassandraClusters/dataCenters@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/772"
     },
-    "Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/786"
+    "Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/786"
     },
-    "Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/792"
+    "Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/792"
     },
-    "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/799"
+    "Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/799"
     },
-    "Microsoft.DocumentDB/databaseAccounts/privateLinkResources@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/806"
+    "Microsoft.DocumentDB/databaseAccounts/privateLinkResources@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/806"
     },
-    "Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/816"
+    "Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/816"
     },
-    "Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/821"
+    "Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/821"
     },
-    "Microsoft.DocumentDB/locations/restorableDatabaseAccounts@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/835"
+    "Microsoft.DocumentDB/locations/restorableDatabaseAccounts@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/835"
     },
-    "Microsoft.DocumentDB/databaseAccounts/services@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/947"
+    "Microsoft.DocumentDB/databaseAccounts/services@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/947"
     },
-    "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/959"
+    "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/959"
     },
-    "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/964"
+    "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/964"
     },
-    "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/969"
+    "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/969"
     },
-    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/974"
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/974"
     },
-    "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/979"
+    "Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/979"
     },
-    "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/984"
+    "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/984"
     },
-    "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/989"
+    "Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/989"
     },
-    "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/994"
+    "Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/994"
     },
-    "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/999"
+    "Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/999"
     },
-    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1004"
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1004"
     },
-    "Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1053"
+    "Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1053"
     },
-    "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1064"
+    "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1064"
     },
-    "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1071"
+    "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1071"
     },
-    "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases/softDeletedSqlContainers@2026-04-01-preview": {
-      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1077"
+    "Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases/softDeletedSqlContainers@2026-07-15": {
+      "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1077"
     },
     "Microsoft.Network/dnsZones@2023-07-01-preview": {
       "$ref": "_tsp/dns/microsoft.network/2023-07-01-preview/types.json#/29"
@@ -5708,6 +5708,36 @@
     },
     "Microsoft.ApiManagement/aigateways@2026-09-01-preview": {
       "$ref": "apimanagement_0/microsoft.apimanagement/2026-09-01-preview/types.json#/41"
+    },
+    "Microsoft.ApiManagement/aigateways@2026-11-01": {
+      "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/59"
+    },
+    "Microsoft.ApiManagement/aigateways/apiKeys@2026-11-01": {
+      "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/70"
+    },
+    "Microsoft.ApiManagement/aigateways/privateEndpointConnections@2026-11-01": {
+      "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/74"
+    },
+    "Microsoft.ApiManagement/aigateways/workspaces/aliases@2026-11-01": {
+      "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/189"
+    },
+    "Microsoft.ApiManagement/aigateways/workspaces/modelProviders@2026-11-01": {
+      "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/208"
+    },
+    "Microsoft.ApiManagement/aigateways/workspaces/modelProviders/models@2026-11-01": {
+      "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/227"
+    },
+    "Microsoft.ApiManagement/aigateways/workspaces/telemetryExporters@2026-11-01": {
+      "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/255"
+    },
+    "Microsoft.ApiManagement/aigateways/workspaces/toolServers@2026-11-01": {
+      "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/312"
+    },
+    "Microsoft.ApiManagement/aigateways/privateLinkResources@2026-11-01": {
+      "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/320"
+    },
+    "Microsoft.ApiManagement/aigateways/workspaces@2026-11-01": {
+      "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/331"
     },
     "Microsoft.ApiManagement/service/apis@2016-07-07": {
       "$ref": "apimanagement_1/microsoft.apimanagement/2016-07-07/types.json#/22"
@@ -16509,6 +16539,24 @@
     "Microsoft.AzureDataTransfer/pipelines/flowProfiles@2026-02-06-preview": {
       "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-02-06-preview/types.json#/298"
     },
+    "Microsoft.AzureDataTransfer/connections@2026-06-29-preview": {
+      "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/92"
+    },
+    "Microsoft.AzureDataTransfer/messagingTransferFlows@2026-06-29-preview": {
+      "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/126"
+    },
+    "Microsoft.AzureDataTransfer/pipelines@2026-06-29-preview": {
+      "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/194"
+    },
+    "Microsoft.AzureDataTransfer/storageTransferFlows@2026-06-29-preview": {
+      "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/220"
+    },
+    "Microsoft.AzureDataTransfer/connections/flows@2026-06-29-preview": {
+      "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/299"
+    },
+    "Microsoft.AzureDataTransfer/pipelines/flowProfiles@2026-06-29-preview": {
+      "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/350"
+    },
     "Microsoft.DependencyMap/maps@2025-01-31-preview": {
       "$ref": "azuredependencymap_0/microsoft.dependencymap/2025-01-31-preview/types.json#/26"
     },
@@ -16931,6 +16979,90 @@
     },
     "Microsoft.AzureResilienceManagement/unifiedResilienceItems@2026-10-31-preview": {
       "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-10-31-preview/types.json#/810"
+    },
+    "Microsoft.AzureResilienceManagement/drills@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/197"
+    },
+    "Microsoft.AzureResilienceManagement/goalAssignments@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/224"
+    },
+    "Microsoft.AzureResilienceManagement/recoveryPlans@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/306"
+    },
+    "Microsoft.AzureResilienceManagement/recoveryPlans/recoveryConfigProfiles@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/394"
+    },
+    "Microsoft.AzureResilienceManagement/usagePlans@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/411"
+    },
+    "Microsoft.AzureResilienceManagement/usagePlans/enrollments@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/425"
+    },
+    "Microsoft.AzureResilienceManagement/drills/drillResources@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/518"
+    },
+    "Microsoft.AzureResilienceManagement/drills/drillRuns@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/637"
+    },
+    "Microsoft.AzureResilienceManagement/drills/drillRuns/drillRunResources@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/669"
+    },
+    "Microsoft.AzureResilienceManagement/goalAssignments/goalResources@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/707"
+    },
+    "Microsoft.AzureResilienceManagement/recoveryPlans/recoveryJobs@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/742"
+    },
+    "Microsoft.AzureResilienceManagement/recoveryPlans/recoveryJobs/recoveryJobResources@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/793"
+    },
+    "Microsoft.AzureResilienceManagement/recoveryPlans/recoveryResources@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/919"
+    },
+    "Microsoft.AzureResilienceManagement/unifiedResilienceItems@2026-11-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/944"
+    },
+    "Microsoft.AzureResilienceManagement/drills@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/197"
+    },
+    "Microsoft.AzureResilienceManagement/goalAssignments@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/224"
+    },
+    "Microsoft.AzureResilienceManagement/recoveryPlans@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/306"
+    },
+    "Microsoft.AzureResilienceManagement/recoveryPlans/recoveryConfigProfiles@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/394"
+    },
+    "Microsoft.AzureResilienceManagement/usagePlans@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/411"
+    },
+    "Microsoft.AzureResilienceManagement/usagePlans/enrollments@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/425"
+    },
+    "Microsoft.AzureResilienceManagement/drills/drillResources@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/520"
+    },
+    "Microsoft.AzureResilienceManagement/drills/drillRuns@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/640"
+    },
+    "Microsoft.AzureResilienceManagement/drills/drillRuns/drillRunResources@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/672"
+    },
+    "Microsoft.AzureResilienceManagement/goalAssignments/goalResources@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/710"
+    },
+    "Microsoft.AzureResilienceManagement/recoveryPlans/recoveryJobs@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/745"
+    },
+    "Microsoft.AzureResilienceManagement/recoveryPlans/recoveryJobs/recoveryJobResources@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/798"
+    },
+    "Microsoft.AzureResilienceManagement/recoveryPlans/recoveryResources@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/929"
+    },
+    "Microsoft.AzureResilienceManagement/unifiedResilienceItems@2026-12-30-preview": {
+      "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/954"
     },
     "Microsoft.AzureStack/registrations@2016-01-01": {
       "$ref": "azurestack/microsoft.azurestack/2016-01-01/types.json#/8"
@@ -21687,6 +21819,60 @@
     "Microsoft.Chaos/workspaces/scenarios/runs@2026-08-01-preview": {
       "$ref": "chaos/microsoft.chaos/2026-08-01-preview/types.json#/351"
     },
+    "Microsoft.Chaos/experiments@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/70"
+    },
+    "Microsoft.Chaos/workspaces@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/105"
+    },
+    "Microsoft.Chaos/targets@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/111"
+    },
+    "Microsoft.Chaos/targets/capabilities@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/125"
+    },
+    "Microsoft.Chaos/workspaces/connections@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/146"
+    },
+    "Microsoft.Chaos/workspaces/scenarios@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/217"
+    },
+    "Microsoft.Chaos/workspaces/scenarios/configurations@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/239"
+    },
+    "Microsoft.Chaos/scenarioTemplates@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/250"
+    },
+    "Microsoft.Chaos/scenarioTemplates/versions@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/260"
+    },
+    "Microsoft.Chaos/experiments/executions@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/274"
+    },
+    "Microsoft.Chaos/locations/actions@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/288"
+    },
+    "Microsoft.Chaos/locations/actions/versions@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/293"
+    },
+    "Microsoft.Chaos/locations/targetTypes@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/299"
+    },
+    "Microsoft.Chaos/locations/targetTypes/capabilityTypes@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/308"
+    },
+    "Microsoft.Chaos/workspaces/discoveredResources@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/315"
+    },
+    "Microsoft.Chaos/workspaces/discoveries@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/353"
+    },
+    "Microsoft.Chaos/workspaces/evaluations@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/376"
+    },
+    "Microsoft.Chaos/workspaces/scenarios/runs@2026-11-01": {
+      "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/442"
+    },
     "Microsoft.CloudHealth/healthmodels@2025-05-01-preview": {
       "$ref": "cloudhealth_0/microsoft.cloudhealth/2025-05-01-preview/types.json#/38"
     },
@@ -23245,118 +23431,322 @@
       "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-01/types.json#/794"
     },
     "Microsoft.CognitiveServices/accounts@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/131"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/136"
     },
     "Microsoft.CognitiveServices/accounts/commitmentPlans@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/153"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/158"
     },
     "Microsoft.CognitiveServices/commitmentPlans@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/159"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/164"
     },
     "Microsoft.CognitiveServices/commitmentPlans/accountAssociations@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/165"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/170"
     },
     "Microsoft.CognitiveServices/quotaTiers@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/177"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/182"
     },
     "Microsoft.CognitiveServices/raiExternalSafetyProviders@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/183"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/188"
     },
     "Microsoft.CognitiveServices/raiPolicy@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/332"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/337"
     },
     "Microsoft.CognitiveServices/accounts/adapterDeployments@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/359"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/364"
     },
     "Microsoft.CognitiveServices/accounts/arcDeployments@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/397"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/402"
     },
     "Microsoft.CognitiveServices/accounts/capabilityHosts@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/417"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/422"
     },
     "Microsoft.CognitiveServices/accounts/computes@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/451"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/456"
     },
     "Microsoft.CognitiveServices/accounts/connections@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/633"
-    },
-    "Microsoft.CognitiveServices/accounts/costControls@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/675"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/638"
     },
     "Microsoft.CognitiveServices/accounts/defenderForAISettings@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/684"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/647"
     },
     "Microsoft.CognitiveServices/accounts/deployments@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/725"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/688"
     },
     "Microsoft.CognitiveServices/accounts/encryptionScopes@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/745"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/708"
     },
     "Microsoft.CognitiveServices/accounts/managedComputeDeployments@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/768"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/731"
     },
     "Microsoft.CognitiveServices/accounts/managedNetworks@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/835"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/798"
     },
     "Microsoft.CognitiveServices/accounts/managedNetworks/outboundRules@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/839"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/802"
     },
     "Microsoft.CognitiveServices/accounts/privateEndpointConnections@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/843"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/806"
     },
     "Microsoft.CognitiveServices/accounts/projects@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/860"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/858"
     },
     "Microsoft.CognitiveServices/accounts/projects/applications@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/905"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/903"
     },
     "Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/939"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/937"
     },
     "Microsoft.CognitiveServices/accounts/projects/capabilityHosts@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/955"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/953"
     },
     "Microsoft.CognitiveServices/accounts/projects/connections@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/959"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/957"
     },
     "Microsoft.CognitiveServices/accounts/projects/workbenches@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/981"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/979"
     },
     "Microsoft.CognitiveServices/accounts/raiBindings@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/987"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/985"
     },
     "Microsoft.CognitiveServices/accounts/raiBlocklists@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/993"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/991"
     },
     "Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/999"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/997"
     },
     "Microsoft.CognitiveServices/accounts/raiPolicies@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1004"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1002"
     },
     "Microsoft.CognitiveServices/accounts/raiRegos@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1013"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1011"
     },
     "Microsoft.CognitiveServices/accounts/raiToolLabels@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1024"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1022"
     },
     "Microsoft.CognitiveServices/accounts/raitopics@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1030"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1028"
     },
     "Microsoft.CognitiveServices/accounts/testRaiExternalSafetyProvider@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1035"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1033"
     },
     "Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1040"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1038"
     },
     "Microsoft.CognitiveServices/locations/computeOperations@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1050"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1048"
     },
     "Microsoft.CognitiveServices/locations/raiContentFilters@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1062"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1060"
     },
     "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations@2026-09-15-preview": {
-      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1088"
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1086"
+    },
+    "Microsoft.CognitiveServices/accounts@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/126"
+    },
+    "Microsoft.CognitiveServices/accounts/commitmentPlans@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/148"
+    },
+    "Microsoft.CognitiveServices/commitmentPlans@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/154"
+    },
+    "Microsoft.CognitiveServices/commitmentPlans/accountAssociations@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/160"
+    },
+    "Microsoft.CognitiveServices/quotaTiers@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/172"
+    },
+    "Microsoft.CognitiveServices/raiExternalSafetyProviders@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/178"
+    },
+    "Microsoft.CognitiveServices/raiPolicy@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/260"
+    },
+    "Microsoft.CognitiveServices/accounts/capabilityHosts@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/280"
+    },
+    "Microsoft.CognitiveServices/accounts/connections@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/461"
+    },
+    "Microsoft.CognitiveServices/accounts/defenderForAISettings@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/470"
+    },
+    "Microsoft.CognitiveServices/accounts/deployments@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/510"
+    },
+    "Microsoft.CognitiveServices/accounts/encryptionScopes@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/530"
+    },
+    "Microsoft.CognitiveServices/accounts/managedNetworks@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/596"
+    },
+    "Microsoft.CognitiveServices/accounts/managedNetworks/outboundRules@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/600"
+    },
+    "Microsoft.CognitiveServices/accounts/privateEndpointConnections@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/604"
+    },
+    "Microsoft.CognitiveServices/accounts/projects@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/620"
+    },
+    "Microsoft.CognitiveServices/accounts/projects/applications@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/665"
+    },
+    "Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/699"
+    },
+    "Microsoft.CognitiveServices/accounts/projects/capabilityHosts@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/715"
+    },
+    "Microsoft.CognitiveServices/accounts/projects/connections@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/719"
+    },
+    "Microsoft.CognitiveServices/accounts/raiBlocklists@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/725"
+    },
+    "Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/731"
+    },
+    "Microsoft.CognitiveServices/accounts/raiPolicies@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/736"
+    },
+    "Microsoft.CognitiveServices/accounts/raiToolLabels@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/747"
+    },
+    "Microsoft.CognitiveServices/accounts/raitopics@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/753"
+    },
+    "Microsoft.CognitiveServices/accounts/testRaiExternalSafetyProvider@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/758"
+    },
+    "Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/786"
+    },
+    "Microsoft.CognitiveServices/locations/raiContentFilters@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/798"
+    },
+    "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations@2026-11-01": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/824"
+    },
+    "Microsoft.CognitiveServices/accounts@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/138"
+    },
+    "Microsoft.CognitiveServices/accounts/commitmentPlans@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/160"
+    },
+    "Microsoft.CognitiveServices/commitmentPlans@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/166"
+    },
+    "Microsoft.CognitiveServices/commitmentPlans/accountAssociations@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/172"
+    },
+    "Microsoft.CognitiveServices/quotaTiers@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/184"
+    },
+    "Microsoft.CognitiveServices/raiExternalSafetyProviders@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/190"
+    },
+    "Microsoft.CognitiveServices/raiPolicy@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/395"
+    },
+    "Microsoft.CognitiveServices/accounts/adapterDeployments@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/422"
+    },
+    "Microsoft.CognitiveServices/accounts/arcDeployments@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/460"
+    },
+    "Microsoft.CognitiveServices/accounts/attachedAksClusters@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/526"
+    },
+    "Microsoft.CognitiveServices/accounts/capabilityHosts@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/546"
+    },
+    "Microsoft.CognitiveServices/accounts/computes@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/580"
+    },
+    "Microsoft.CognitiveServices/accounts/connections@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/762"
+    },
+    "Microsoft.CognitiveServices/accounts/costControls@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/809"
+    },
+    "Microsoft.CognitiveServices/accounts/defenderForAISettings@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/818"
+    },
+    "Microsoft.CognitiveServices/accounts/deployments@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/859"
+    },
+    "Microsoft.CognitiveServices/accounts/encryptionScopes@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/879"
+    },
+    "Microsoft.CognitiveServices/accounts/managedComputeDeployments@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/902"
+    },
+    "Microsoft.CognitiveServices/accounts/managedNetworks@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/969"
+    },
+    "Microsoft.CognitiveServices/accounts/managedNetworks/outboundRules@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/973"
+    },
+    "Microsoft.CognitiveServices/accounts/privateEndpointConnections@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/977"
+    },
+    "Microsoft.CognitiveServices/accounts/projects@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1029"
+    },
+    "Microsoft.CognitiveServices/accounts/projects/applications@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1074"
+    },
+    "Microsoft.CognitiveServices/accounts/projects/applications/agentDeployments@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1108"
+    },
+    "Microsoft.CognitiveServices/accounts/projects/capabilityHosts@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1124"
+    },
+    "Microsoft.CognitiveServices/accounts/projects/connections@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1128"
+    },
+    "Microsoft.CognitiveServices/accounts/projects/costControls@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1132"
+    },
+    "Microsoft.CognitiveServices/accounts/projects/workbenches@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1154"
+    },
+    "Microsoft.CognitiveServices/accounts/raiBindings@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1160"
+    },
+    "Microsoft.CognitiveServices/accounts/raiBlocklists@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1166"
+    },
+    "Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1172"
+    },
+    "Microsoft.CognitiveServices/accounts/raiPolicies@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1177"
+    },
+    "Microsoft.CognitiveServices/accounts/raiRegos@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1186"
+    },
+    "Microsoft.CognitiveServices/accounts/raiToolLabels@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1197"
+    },
+    "Microsoft.CognitiveServices/accounts/raitopics@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1203"
+    },
+    "Microsoft.CognitiveServices/accounts/testRaiExternalSafetyProvider@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1208"
+    },
+    "Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1238"
+    },
+    "Microsoft.CognitiveServices/locations/computeOperations@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1248"
+    },
+    "Microsoft.CognitiveServices/locations/raiContentFilters@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1264"
+    },
+    "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations@2026-11-15-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1290"
     },
     "Microsoft.Communication/communicationServices@2020-08-20-preview": {
       "$ref": "communication_0/microsoft.communication/2020-08-20-preview/types.json#/16"
@@ -27417,6 +27807,51 @@
     "Microsoft.ContainerRegistry/registries/privateLinkResources@2026-09-01-preview": {
       "$ref": "containerregistry_0/microsoft.containerregistry/2026-09-01-preview/types.json#/453"
     },
+    "Microsoft.ContainerRegistry/registries@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/143"
+    },
+    "Microsoft.ContainerRegistry/registries/cacheRules@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/170"
+    },
+    "Microsoft.ContainerRegistry/registries/connectedRegistries@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/246"
+    },
+    "Microsoft.ContainerRegistry/registries/credentialSets@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/266"
+    },
+    "Microsoft.ContainerRegistry/registries/exportPipelines@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/288"
+    },
+    "Microsoft.ContainerRegistry/registries/importPipelines@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/317"
+    },
+    "Microsoft.ContainerRegistry/registries/packages/archives@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/333"
+    },
+    "Microsoft.ContainerRegistry/registries/packages/archives/versions@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/345"
+    },
+    "Microsoft.ContainerRegistry/registries/pipelineRuns@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/370"
+    },
+    "Microsoft.ContainerRegistry/registries/privateEndpointConnections@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/374"
+    },
+    "Microsoft.ContainerRegistry/registries/replications@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/390"
+    },
+    "Microsoft.ContainerRegistry/registries/scopeMaps@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/404"
+    },
+    "Microsoft.ContainerRegistry/registries/tokens@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/431"
+    },
+    "Microsoft.ContainerRegistry/registries/webhooks@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/455"
+    },
+    "Microsoft.ContainerRegistry/registries/privateLinkResources@2026-10-15-preview": {
+      "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/462"
+    },
     "Microsoft.ContainerRegistry/registries/tasks@2018-09-01": {
       "$ref": "containerregistry_1/microsoft.containerregistry/2018-09-01/types.json#/86"
     },
@@ -30657,6 +31092,114 @@
     "Microsoft.ContainerService/managedClusters/upgradeInsights@2026-08-02-preview": {
       "$ref": "containerservice_1/microsoft.containerservice/2026-08-02-preview/types.json#/1136"
     },
+    "Microsoft.ContainerService/managedClusters@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/438"
+    },
+    "Microsoft.ContainerService/snapshots@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/460"
+    },
+    "Microsoft.ContainerService/managedClusters/agentPools@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/521"
+    },
+    "Microsoft.ContainerService/managedClusters/identityBindings@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/537"
+    },
+    "Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/593"
+    },
+    "Microsoft.ContainerService/managedClusters/managedNamespaces@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/626"
+    },
+    "Microsoft.ContainerService/managedClusters/privateEndpointConnections@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/644"
+    },
+    "Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/657"
+    },
+    "Microsoft.ContainerService/locations/meshRevisionProfiles@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/669"
+    },
+    "Microsoft.ContainerService/managedClusters/meshUpgradeProfiles@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/676"
+    },
+    "Microsoft.ContainerService/managedClusters/upgradeProfiles@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/689"
+    },
+    "Microsoft.ContainerService/managedClusters/agentPools/upgradeProfiles@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/702"
+    },
+    "Microsoft.ContainerService/managedClusters/agentPools/machines@2026-09-01": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/715"
+    },
+    "Microsoft.ContainerService/managedClusters@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/550"
+    },
+    "Microsoft.ContainerService/maintenanceWindows@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/597"
+    },
+    "Microsoft.ContainerService/managedclustersnapshots@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/626"
+    },
+    "Microsoft.ContainerService/snapshots@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/653"
+    },
+    "Microsoft.ContainerService/managedClusters/agentFabricMemberships@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/670"
+    },
+    "Microsoft.ContainerService/managedClusters/agentPools@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/743"
+    },
+    "Microsoft.ContainerService/managedClusters/agentPools/machines@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/830"
+    },
+    "Microsoft.ContainerService/managedClusters/alertConfigurations@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/847"
+    },
+    "Microsoft.ContainerService/managedClusters/identityBindings@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/875"
+    },
+    "Microsoft.ContainerService/managedClusters/jwtAuthenticators@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/897"
+    },
+    "Microsoft.ContainerService/managedClusters/loadBalancers@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/902"
+    },
+    "Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/925"
+    },
+    "Microsoft.ContainerService/managedClusters/managedNamespaces@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/958"
+    },
+    "Microsoft.ContainerService/managedClusters/meshMemberships@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/972"
+    },
+    "Microsoft.ContainerService/managedClusters/privateEndpointConnections@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/990"
+    },
+    "Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1003"
+    },
+    "Microsoft.ContainerService/locations/guardrailsVersions@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1012"
+    },
+    "Microsoft.ContainerService/locations/meshRevisionProfiles@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1024"
+    },
+    "Microsoft.ContainerService/locations/safeguardsVersions@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1032"
+    },
+    "Microsoft.ContainerService/managedClusters/meshUpgradeProfiles@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1039"
+    },
+    "Microsoft.ContainerService/managedClusters/upgradeProfiles@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1056"
+    },
+    "Microsoft.ContainerService/managedClusters/agentPools/upgradeProfiles@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1070"
+    },
+    "Microsoft.ContainerService/managedClusters/upgradeInsights@2026-09-02-preview": {
+      "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1137"
+    },
     "Microsoft.ContainerService/deploymentSafeguards@2025-04-01": {
       "$ref": "containerservice_2/microsoft.containerservice/2025-04-01/types.json#/29"
     },
@@ -30893,6 +31436,57 @@
     },
     "Microsoft.ContainerService/fleets/gates@2026-06-02-preview": {
       "$ref": "containerservice_3/microsoft.containerservice/2026-06-02-preview/types.json#/307"
+    },
+    "Microsoft.ContainerService/fleets@2026-11-01": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/45"
+    },
+    "Microsoft.ContainerService/fleets/autoUpgradeProfiles@2026-11-01": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/70"
+    },
+    "Microsoft.ContainerService/fleets/clusterMeshProfiles@2026-11-01": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/88"
+    },
+    "Microsoft.ContainerService/fleets/managedNamespaces@2026-11-01": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/170"
+    },
+    "Microsoft.ContainerService/fleets/members@2026-11-01": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/193"
+    },
+    "Microsoft.ContainerService/fleets/updateRuns@2026-11-01": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/266"
+    },
+    "Microsoft.ContainerService/fleets/updateStrategies@2026-11-01": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/275"
+    },
+    "Microsoft.ContainerService/fleets/gates@2026-11-01": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/306"
+    },
+    "Microsoft.ContainerService/fleets@2026-11-02-preview": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/45"
+    },
+    "Microsoft.ContainerService/fleets/autoUpgradeProfiles@2026-11-02-preview": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/70"
+    },
+    "Microsoft.ContainerService/fleets/clusterMeshProfiles@2026-11-02-preview": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/88"
+    },
+    "Microsoft.ContainerService/fleets/identityBindingProfiles@2026-11-02-preview": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/115"
+    },
+    "Microsoft.ContainerService/fleets/managedNamespaces@2026-11-02-preview": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/197"
+    },
+    "Microsoft.ContainerService/fleets/members@2026-11-02-preview": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/220"
+    },
+    "Microsoft.ContainerService/fleets/updateRuns@2026-11-02-preview": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/294"
+    },
+    "Microsoft.ContainerService/fleets/updateStrategies@2026-11-02-preview": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/303"
+    },
+    "Microsoft.ContainerService/fleets/gates@2026-11-02-preview": {
+      "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/334"
     },
     "Microsoft.ContainerService/nodeCustomizations@2025-08-02-preview": {
       "$ref": "containerservice_4/microsoft.containerservice/2025-08-02-preview/types.json#/40"
@@ -35733,6 +36327,99 @@
     "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2026-04-01-preview": {
       "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-01-preview/types.json#/489"
     },
+    "Microsoft.DesktopVirtualization/appAttachPackages@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/38"
+    },
+    "Microsoft.DesktopVirtualization/applicationGroups@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/62"
+    },
+    "Microsoft.DesktopVirtualization/hostPools@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/150"
+    },
+    "Microsoft.DesktopVirtualization/scalingPlans@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/192"
+    },
+    "Microsoft.DesktopVirtualization/workspaces@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/203"
+    },
+    "Microsoft.DesktopVirtualization/applicationGroups/applications@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/216"
+    },
+    "Microsoft.DesktopVirtualization/hostPools/msixPackages@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/224"
+    },
+    "Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/228"
+    },
+    "Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/232"
+    },
+    "Microsoft.DesktopVirtualization/scalingPlans/personalSchedules@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/296"
+    },
+    "Microsoft.DesktopVirtualization/scalingPlans/pooledSchedules@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/325"
+    },
+    "Microsoft.DesktopVirtualization/applicationGroups/desktops@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/330"
+    },
+    "Microsoft.DesktopVirtualization/hostPools/sessionHosts@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/375"
+    },
+    "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2026-04-16": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/391"
+    },
+    "Microsoft.DesktopVirtualization/appAttachPackages@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/41"
+    },
+    "Microsoft.DesktopVirtualization/applicationGroups@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/72"
+    },
+    "Microsoft.DesktopVirtualization/hostPools@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/166"
+    },
+    "Microsoft.DesktopVirtualization/scalingPlans@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/213"
+    },
+    "Microsoft.DesktopVirtualization/workspaces@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/227"
+    },
+    "Microsoft.DesktopVirtualization/applicationGroups/applications@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/241"
+    },
+    "Microsoft.DesktopVirtualization/hostPools/msixPackages@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/249"
+    },
+    "Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/253"
+    },
+    "Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/257"
+    },
+    "Microsoft.DesktopVirtualization/hostPools/sessionHostConfigurations@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/304"
+    },
+    "Microsoft.DesktopVirtualization/hostPools/sessionHostManagements@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/321"
+    },
+    "Microsoft.DesktopVirtualization/hostPools/sessionHosts@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/366"
+    },
+    "Microsoft.DesktopVirtualization/scalingPlans/personalSchedules@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/429"
+    },
+    "Microsoft.DesktopVirtualization/scalingPlans/pooledSchedules@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/461"
+    },
+    "Microsoft.DesktopVirtualization/applicationGroups/desktops@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/466"
+    },
+    "Microsoft.DesktopVirtualization/hostPools/activeSessionHostConfigurations@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/474"
+    },
+    "Microsoft.DesktopVirtualization/hostPools/sessionHosts/userSessions@2026-08-01-preview": {
+      "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/490"
+    },
     "Microsoft.DevCenter/devcenters@2022-08-01-preview": {
       "$ref": "devcenter_0/microsoft.devcenter/2022-08-01-preview/types.json#/26"
     },
@@ -37696,52 +38383,52 @@
       "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/130"
     },
     "Microsoft.DevTestLab/labs/formulas@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/171"
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/176"
     },
     "Microsoft.DevTestLab/labs/notificationchannels@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/182"
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/187"
     },
     "Microsoft.DevTestLab/labs/policysets/policies@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/205"
-    },
-    "Microsoft.DevTestLab/labs/schedules@2018-09-15": {
       "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/210"
     },
+    "Microsoft.DevTestLab/labs/schedules@2018-09-15": {
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/215"
+    },
     "Microsoft.DevTestLab/labs/servicerunners@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/221"
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/226"
     },
     "Microsoft.DevTestLab/labs/users@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/229"
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/234"
     },
     "Microsoft.DevTestLab/labs/users/disks@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/239"
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/244"
     },
     "Microsoft.DevTestLab/labs/users/environments@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/248"
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/253"
     },
     "Microsoft.DevTestLab/labs/users/secrets@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/254"
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/259"
     },
     "Microsoft.DevTestLab/labs/users/servicefabrics@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/265"
-    },
-    "Microsoft.DevTestLab/labs/users/servicefabrics/schedules@2018-09-15": {
       "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/270"
     },
-    "Microsoft.DevTestLab/labs/virtualmachines@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/290"
+    "Microsoft.DevTestLab/labs/users/servicefabrics/schedules@2018-09-15": {
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/275"
     },
-    "Microsoft.DevTestLab/labs/virtualmachines/schedules@2018-09-15": {
+    "Microsoft.DevTestLab/labs/virtualmachines@2018-09-15": {
       "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/295"
     },
+    "Microsoft.DevTestLab/labs/virtualmachines/schedules@2018-09-15": {
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/300"
+    },
     "Microsoft.DevTestLab/labs/virtualnetworks@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/325"
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/330"
     },
     "Microsoft.DevTestLab/labs/artifactsources/armtemplates@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/336"
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/341"
     },
     "Microsoft.DevTestLab/labs/artifactsources/artifacts@2018-09-15": {
-      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/343"
+      "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/348"
     },
     "Microsoft.Dynamics365FraudProtection/instances@2021-02-01-preview": {
       "$ref": "dfp/microsoft.dynamics365fraudprotection/2021-02-01-preview/types.json#/33"
@@ -42061,61 +42748,61 @@
       "$ref": "horizondb_0/microsoft.horizondb/2026-05-01-preview/types.json#/195"
     },
     "Microsoft.HorizonDb/clusters@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/64"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/65"
     },
     "Microsoft.HorizonDb/parameterGroups@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/87"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/89"
     },
     "Microsoft.HorizonDb/clusters/authentications@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/119"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/123"
     },
     "Microsoft.HorizonDb/clusters/changeDataCapture@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/164"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/169"
     },
     "Microsoft.HorizonDb/clusters/changeDataCaptureConfigurations@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/205"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/211"
     },
     "Microsoft.HorizonDb/clusters/changeDataCaptureDestinations@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/233"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/240"
     },
     "Microsoft.HorizonDb/clusters/changeDataCaptureDestinations/identityAssignments@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/266"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/274"
     },
     "Microsoft.HorizonDb/clusters/microsoftEntraAdministrators@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/284"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/293"
     },
     "Microsoft.HorizonDb/clusters/pools@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/332"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/341"
     },
     "Microsoft.HorizonDb/clusters/pools/firewallRules@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/345"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/355"
     },
     "Microsoft.HorizonDb/clusters/privateEndpointConnections@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/362"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/372"
     },
     "Microsoft.HorizonDb/locations/capabilities@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/410"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/421"
     },
     "Microsoft.HorizonDb/locations/parameterGroups@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/426"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/438"
     },
     "Microsoft.HorizonDb/clusters/endpoints@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/437"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/449"
     },
     "Microsoft.HorizonDb/clusters/logCaptureConfigurations@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/452"
-    },
-    "Microsoft.HorizonDb/clusters/logFiles@2026-10-01-preview": {
       "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/465"
     },
+    "Microsoft.HorizonDb/clusters/logFiles@2026-10-01-preview": {
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/478"
+    },
     "Microsoft.HorizonDb/clusters/pools/maintenanceEvents@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/479"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/492"
     },
     "Microsoft.HorizonDb/clusters/pools/nodes@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/489"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/502"
     },
     "Microsoft.HorizonDb/clusters/privateLinkResources@2026-10-01-preview": {
-      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/497"
+      "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/510"
     },
     "Microsoft.HybridContainerService/provisionedClusterInstances@2023-11-15-preview": {
       "$ref": "hybridaks_0/microsoft.hybridcontainerservice/2023-11-15-preview/types.json#/84"
@@ -44826,6 +45513,45 @@
     "Microsoft.KeyVault/vaults/keys/versions@2026-06-01-preview": {
       "$ref": "keyvault/microsoft.keyvault/2026-06-01-preview/types.json#/373"
     },
+    "Microsoft.KeyVault/managedHSMs@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/106"
+    },
+    "Microsoft.KeyVault/vaults@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/242"
+    },
+    "Microsoft.KeyVault/vaults/accessPolicies@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/252"
+    },
+    "Microsoft.KeyVault/managedHSMs/keys@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/296"
+    },
+    "Microsoft.KeyVault/managedHSMs/privateEndpointConnections@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/301"
+    },
+    "Microsoft.KeyVault/vaults/keys@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/344"
+    },
+    "Microsoft.KeyVault/vaults/privateEndpointConnections@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/349"
+    },
+    "Microsoft.KeyVault/vaults/secrets@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/356"
+    },
+    "Microsoft.KeyVault/locations/deletedManagedHSMs@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/362"
+    },
+    "Microsoft.KeyVault/locations/deletedVaults@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/368"
+    },
+    "Microsoft.KeyVault/managedHSMs/keys/versions@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/374"
+    },
+    "Microsoft.KeyVault/vaults/keys/versions@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/379"
+    },
+    "Microsoft.KeyVault/vaults/networkSecurityPerimeterConfigurations@2026-10-01-preview": {
+      "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/426"
+    },
     "Microsoft.KubernetesConfiguration/extensions@2024-11-01": {
       "$ref": "kubernetesconfiguration_0/microsoft.kubernetesconfiguration/2024-11-01/types.json#/48"
     },
@@ -45265,10 +45991,28 @@
       "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/197"
     },
     "Commvault.ContentStore/cloudAccounts/storages@2026-10-15-preview": {
-      "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/217"
+      "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/218"
     },
     "Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems@2026-10-15-preview": {
-      "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/224"
+      "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/225"
+    },
+    "Commvault.ContentStore/cloudAccounts@2026-11-03": {
+      "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/54"
+    },
+    "Commvault.ContentStore/cloudAccounts/plans@2026-11-03": {
+      "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/147"
+    },
+    "Commvault.ContentStore/cloudAccounts/protectionGroups@2026-11-03": {
+      "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/186"
+    },
+    "Commvault.ContentStore/cloudAccounts/roleMappings@2026-11-03": {
+      "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/197"
+    },
+    "Commvault.ContentStore/cloudAccounts/storages@2026-11-03": {
+      "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/218"
+    },
+    "Commvault.ContentStore/cloudAccounts/protectionGroups/protectedItems@2026-11-03": {
+      "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/225"
     },
     "LambdaTest.HyperExecute/organizations@2024-02-01-preview": {
       "$ref": "liftrhyperexecute_0/lambdatest.hyperexecute/2024-02-01-preview/types.json#/51"
@@ -45409,13 +46153,13 @@
       "$ref": "loadtestservice_1/microsoft.loadtestservice/2026-10-01-preview/types.json#/87"
     },
     "Microsoft.LoadTestService/playwrightWorkspaces@2026-11-01-preview": {
-      "$ref": "loadtestservice_1/microsoft.loadtestservice/2026-11-01-preview/types.json#/55"
+      "$ref": "loadtestservice_1/microsoft.loadtestservice/2026-11-01-preview/types.json#/54"
     },
     "Microsoft.LoadTestService/locations/playwrightQuotas@2026-11-01-preview": {
-      "$ref": "loadtestservice_1/microsoft.loadtestservice/2026-11-01-preview/types.json#/74"
+      "$ref": "loadtestservice_1/microsoft.loadtestservice/2026-11-01-preview/types.json#/73"
     },
     "Microsoft.LoadTestService/playwrightWorkspaces/quotas@2026-11-01-preview": {
-      "$ref": "loadtestservice_1/microsoft.loadtestservice/2026-11-01-preview/types.json#/91"
+      "$ref": "loadtestservice_1/microsoft.loadtestservice/2026-11-01-preview/types.json#/90"
     },
     "Microsoft.Logic/workflows@2015-02-01-preview": {
       "$ref": "logic/microsoft.logic/2015-02-01-preview/types.json#/41"
@@ -73140,6 +73884,21 @@
     "Microsoft.NetworkFunction/azureTrafficCollectors/collectorPolicies@2022-11-01": {
       "$ref": "networkfunction/microsoft.networkfunction/2022-11-01/types.json#/50"
     },
+    "Microsoft.NetworkSecurity/neuroShields@2026-10-01-preview": {
+      "$ref": "networksecurity_0/microsoft.networksecurity/2026-10-01-preview/types.json#/35"
+    },
+    "Microsoft.NetworkSecurity/neuroShields/protectedResources@2026-10-01-preview": {
+      "$ref": "networksecurity_0/microsoft.networksecurity/2026-10-01-preview/types.json#/57"
+    },
+    "Microsoft.NetworkSecurity/neuroShields/protectedResources/findings@2026-10-01-preview": {
+      "$ref": "networksecurity_0/microsoft.networksecurity/2026-10-01-preview/types.json#/80"
+    },
+    "Microsoft.NetworkSecurity/neuroShields/protectedResources/mitigations@2026-10-01-preview": {
+      "$ref": "networksecurity_0/microsoft.networksecurity/2026-10-01-preview/types.json#/101"
+    },
+    "Microsoft.NetworkSecurity/neuroShields/summary@2026-10-01-preview": {
+      "$ref": "networksecurity_0/microsoft.networksecurity/2026-10-01-preview/types.json#/112"
+    },
     "NewRelic.Observability/monitors@2022-07-01-preview": {
       "$ref": "newrelic_0/newrelic.observability/2022-07-01-preview/types.json#/84"
     },
@@ -76074,6 +76833,57 @@
     "PaloAltoNetworks.Cloudngfw/firewalls/statuses@2026-08-27-preview": {
       "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-08-27-preview/types.json#/345"
     },
+    "PaloAltoNetworks.Cloudngfw/globalRulestacks@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/43"
+    },
+    "PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/61"
+    },
+    "PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/77"
+    },
+    "PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/132"
+    },
+    "PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/136"
+    },
+    "PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/152"
+    },
+    "PaloAltoNetworks.Cloudngfw/firewalls@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/238"
+    },
+    "PaloAltoNetworks.Cloudngfw/localRulestacks@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/243"
+    },
+    "PaloAltoNetworks.Cloudngfw/firewalls/customCaptureConfigurations@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/266"
+    },
+    "PaloAltoNetworks.Cloudngfw/firewalls/logIngestionSettings@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/287"
+    },
+    "PaloAltoNetworks.Cloudngfw/firewalls/metrics@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/303"
+    },
+    "PaloAltoNetworks.Cloudngfw/localRulestacks/certificates@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/307"
+    },
+    "PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/311"
+    },
+    "PaloAltoNetworks.Cloudngfw/localRulestacks/localRules@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/315"
+    },
+    "PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/319"
+    },
+    "PaloAltoNetworks.Cloudngfw/marketplaceOffers@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/330"
+    },
+    "PaloAltoNetworks.Cloudngfw/firewalls/statuses@2026-09-25-preview": {
+      "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/359"
+    },
     "Microsoft.Peering/peerAsns@2019-08-01-preview": {
       "$ref": "peering/microsoft.peering/2019-08-01-preview/types.json#/14"
     },
@@ -77256,41 +78066,35 @@
     "Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01": {
       "$ref": "privatedns/microsoft.network/2024-06-01/types.json#/95"
     },
-    "Microsoft.Network/privateTrafficManagerProfiles@2026-02-09-preview": {
-      "$ref": "privatetrafficmanager/microsoft.network/2026-02-09-preview/types.json#/60"
+    "Microsoft.Network/privateDnsZones@2026-06-01-preview": {
+      "$ref": "privatedns/microsoft.network/2026-06-01-preview/types.json#/25"
     },
-    "Microsoft.Network/topologyMaps@2026-02-09-preview": {
-      "$ref": "privatetrafficmanager/microsoft.network/2026-02-09-preview/types.json#/87"
+    "Microsoft.Network/privateDnsZones/A@2026-06-01-preview": {
+      "$ref": "privatedns/microsoft.network/2026-06-01-preview/types.json#/55"
     },
-    "Microsoft.Network/privateTrafficManagerProfiles/endpoints@2026-02-09-preview": {
-      "$ref": "privatetrafficmanager/microsoft.network/2026-02-09-preview/types.json#/108"
+    "Microsoft.Network/privateDnsZones/AAAA@2026-06-01-preview": {
+      "$ref": "privatedns/microsoft.network/2026-06-01-preview/types.json#/59"
     },
-    "Microsoft.Network/privateTrafficManagerProfiles/healthPolicies@2026-02-09-preview": {
-      "$ref": "privatetrafficmanager/microsoft.network/2026-02-09-preview/types.json#/133"
+    "Microsoft.Network/privateDnsZones/CNAME@2026-06-01-preview": {
+      "$ref": "privatedns/microsoft.network/2026-06-01-preview/types.json#/63"
     },
-    "Microsoft.Network/privateTrafficManagerProfiles/probingGateways@2026-02-09-preview": {
-      "$ref": "privatetrafficmanager/microsoft.network/2026-02-09-preview/types.json#/146"
+    "Microsoft.Network/privateDnsZones/MX@2026-06-01-preview": {
+      "$ref": "privatedns/microsoft.network/2026-06-01-preview/types.json#/67"
     },
-    "Microsoft.Network/topologyMaps/sites@2026-02-09-preview": {
-      "$ref": "privatetrafficmanager/microsoft.network/2026-02-09-preview/types.json#/150"
+    "Microsoft.Network/privateDnsZones/PTR@2026-06-01-preview": {
+      "$ref": "privatedns/microsoft.network/2026-06-01-preview/types.json#/71"
     },
-    "Microsoft.Network/privateTrafficManagerProfiles@2026-10-01-preview": {
-      "$ref": "privatetrafficmanager/microsoft.network/2026-10-01-preview/types.json#/62"
+    "Microsoft.Network/privateDnsZones/SOA@2026-06-01-preview": {
+      "$ref": "privatedns/microsoft.network/2026-06-01-preview/types.json#/75"
     },
-    "Microsoft.Network/topologyMaps@2026-10-01-preview": {
-      "$ref": "privatetrafficmanager/microsoft.network/2026-10-01-preview/types.json#/89"
+    "Microsoft.Network/privateDnsZones/SRV@2026-06-01-preview": {
+      "$ref": "privatedns/microsoft.network/2026-06-01-preview/types.json#/79"
     },
-    "Microsoft.Network/privateTrafficManagerProfiles/endpoints@2026-10-01-preview": {
-      "$ref": "privatetrafficmanager/microsoft.network/2026-10-01-preview/types.json#/111"
+    "Microsoft.Network/privateDnsZones/TXT@2026-06-01-preview": {
+      "$ref": "privatedns/microsoft.network/2026-06-01-preview/types.json#/83"
     },
-    "Microsoft.Network/privateTrafficManagerProfiles/healthPolicies@2026-10-01-preview": {
-      "$ref": "privatetrafficmanager/microsoft.network/2026-10-01-preview/types.json#/136"
-    },
-    "Microsoft.Network/privateTrafficManagerProfiles/probingGateways@2026-10-01-preview": {
-      "$ref": "privatetrafficmanager/microsoft.network/2026-10-01-preview/types.json#/149"
-    },
-    "Microsoft.Network/topologyMaps/sites@2026-10-01-preview": {
-      "$ref": "privatetrafficmanager/microsoft.network/2026-10-01-preview/types.json#/153"
+    "Microsoft.Network/privateDnsZones/virtualNetworkLinks@2026-06-01-preview": {
+      "$ref": "privatedns/microsoft.network/2026-06-01-preview/types.json#/102"
     },
     "Microsoft.ProfessionalService/resources@2023-07-01-preview": {
       "$ref": "professionalservice/microsoft.professionalservice/2023-07-01-preview/types.json#/19"
@@ -77699,6 +78503,36 @@
     },
     "PureStorage.Block/storagePools/recoverableVolumeGroups@2026-05-01-preview": {
       "$ref": "purestorage_0/purestorage.block/2026-05-01-preview/types.json#/172"
+    },
+    "PureStorage.Block/reservations@2026-10-01": {
+      "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/35"
+    },
+    "PureStorage.Block/storagePools@2026-10-01": {
+      "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/65"
+    },
+    "PureStorage.Block/storagePools/volumeGroups@2026-10-01": {
+      "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/85"
+    },
+    "PureStorage.Block/storagePools/volumeGroups/snapshots@2026-10-01": {
+      "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/101"
+    },
+    "PureStorage.Block/storagePools/volumeGroups/volumes@2026-10-01": {
+      "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/121"
+    },
+    "PureStorage.Block/storagePools/avsStorageContainers@2026-10-01": {
+      "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/128"
+    },
+    "PureStorage.Block/storagePools/avsStorageContainers/volumes@2026-10-01": {
+      "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/142"
+    },
+    "PureStorage.Block/storagePools/avsVms@2026-10-01": {
+      "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/156"
+    },
+    "PureStorage.Block/storagePools/avsVms/avsVmVolumes@2026-10-01": {
+      "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/160"
+    },
+    "PureStorage.Block/storagePools/recoverableVolumeGroups@2026-10-01": {
+      "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/172"
     },
     "Microsoft.Purview/accounts@2020-12-01-preview": {
       "$ref": "purview/microsoft.purview/2020-12-01-preview/types.json#/53"
@@ -111635,27 +112469,27 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/789"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1080"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1080"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1082"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1082"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1101"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1101"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1103"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1103"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1104"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1104"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1106"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1106"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1113"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1113"
         }
       ]
     },
@@ -112144,15 +112978,15 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/820"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1155"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1155"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1156"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1156"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1157"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1157"
         }
       ]
     },
@@ -112557,18 +113391,18 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/825"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1189"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1189"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1190"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1190"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1191"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1191"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1192"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1192"
         }
       ]
     },
@@ -112985,18 +113819,18 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/823"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1205"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1205"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1206"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1206"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1207"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1207"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1208"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1208"
         }
       ]
     },
@@ -113401,18 +114235,18 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/816"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1166"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1166"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1167"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1167"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1178"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1178"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1188"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1188"
         }
       ]
     },
@@ -113829,18 +114663,18 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/814"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1201"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1201"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1202"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1202"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1203"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1203"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1204"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1204"
         }
       ]
     },
@@ -114173,12 +115007,12 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/828"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1193"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1193"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1194"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1194"
         }
       ]
     },
@@ -114511,12 +115345,12 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/803"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1162"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1162"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1163"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1163"
         }
       ]
     },
@@ -114849,12 +115683,12 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/801"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1195"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1195"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1196"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1196"
         }
       ]
     },
@@ -115187,12 +116021,12 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/811"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1164"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1164"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1165"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1165"
         }
       ]
     },
@@ -115525,12 +116359,12 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/809"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1199"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1199"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1200"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1200"
         }
       ]
     },
@@ -115910,18 +116744,18 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/795"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1141"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1141"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1151"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1151"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1152"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1152"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1153"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1153"
         }
       ]
     },
@@ -116133,12 +116967,12 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/821"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1124"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1124"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1128"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1128"
         }
       ]
     },
@@ -116279,12 +117113,12 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2025-11-01-preview/types.json#/1083"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1197"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1197"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1198"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1198"
         }
       ]
     },
@@ -116481,12 +117315,12 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/812"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1130"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1130"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1131"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1131"
         }
       ]
     },
@@ -116621,9 +117455,9 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/826"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1132"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1132"
         }
       ]
     },
@@ -116758,9 +117592,9 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2026-03-15/types.json#/807"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1133"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1133"
         }
       ]
     },
@@ -116937,18 +117771,18 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2025-11-01-preview/types.json#/1093"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1135"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1135"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1136"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1136"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1137"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1137"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1138"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1138"
         }
       ]
     },
@@ -117192,9 +118026,9 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2025-11-01-preview/types.json#/1150"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1123"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1123"
         }
       ]
     },
@@ -117244,9 +118078,9 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2025-11-01-preview/types.json#/1134"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1129"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1129"
         }
       ]
     },
@@ -117276,9 +118110,9 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2025-11-01-preview/types.json#/1139"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1209"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1209"
         }
       ]
     },
@@ -117311,18 +118145,18 @@
           "$ref": "_legacy/cosmos-db/microsoft.documentdb/2025-11-01-preview/types.json#/1088"
         }
       ],
-      "2026-04-01-preview": [
+      "2026-07-15": [
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1115"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1115"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1116"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1116"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1117"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1117"
         },
         {
-          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-04-01-preview/types.json#/1118"
+          "$ref": "_tsp/cosmos-db/microsoft.documentdb/2026-07-15/types.json#/1118"
         }
       ]
     },
@@ -117388,6 +118222,11 @@
       "2026-04-01": [
         {
           "$ref": "frontdoor/microsoft.network/2026-04-01/types.json#/484"
+        }
+      ],
+      "2026-06-01-preview": [
+        {
+          "$ref": "privatedns/microsoft.network/2026-06-01-preview/types.json#/111"
         }
       ],
       "2015-11-01": [
@@ -117791,6 +118630,43 @@
         },
         {
           "$ref": "apicenter_0/microsoft.apicenter/2024-06-01-preview/types.json#/182"
+        }
+      ]
+    },
+    "microsoft.apimanagement/locations": {
+      "2026-11-01": [
+        {
+          "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/339"
+        }
+      ]
+    },
+    "microsoft.apimanagement/aigateways/apikeys": {
+      "2026-11-01": [
+        {
+          "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/341"
+        },
+        {
+          "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/343"
+        },
+        {
+          "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/344"
+        }
+      ]
+    },
+    "microsoft.apimanagement/aigateways/workspaces/modelproviders": {
+      "2026-11-01": [
+        {
+          "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/350"
+        }
+      ]
+    },
+    "microsoft.apimanagement/aigateways/workspaces/toolservers": {
+      "2026-11-01": [
+        {
+          "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/353"
+        },
+        {
+          "$ref": "apimanagement_0/microsoft.apimanagement/2026-11-01/types.json#/371"
         }
       ]
     },
@@ -127340,6 +128216,20 @@
         {
           "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-02-06-preview/types.json#/359"
         }
+      ],
+      "2026-06-29-preview": [
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/357"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/361"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/409"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/414"
+        }
       ]
     },
     "microsoft.azuredatatransfer/connections/flows": {
@@ -127652,6 +128542,44 @@
         {
           "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-02-06-preview/types.json#/516"
         }
+      ],
+      "2026-06-29-preview": [
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/609"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/610"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/611"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/614"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/617"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/618"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/620"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/621"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/624"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/627"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/629"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/632"
+        }
       ]
     },
     "microsoft.azuredatatransfer/connections": {
@@ -127774,6 +128702,17 @@
         },
         {
           "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-02-06-preview/types.json#/466"
+        }
+      ],
+      "2026-06-29-preview": [
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/418"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/466"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/521"
         }
       ]
     },
@@ -127927,6 +128866,58 @@
         },
         {
           "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-02-06-preview/types.json#/492"
+        }
+      ],
+      "2026-06-29-preview": [
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/527"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/539"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/555"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/591"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/592"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/593"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/602"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/603"
+        }
+      ]
+    },
+    "microsoft.azuredatatransfer/messagingtransferflows": {
+      "2026-06-29-preview": [
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/524"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/525"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/526"
+        }
+      ]
+    },
+    "microsoft.azuredatatransfer/storagetransferflows": {
+      "2026-06-29-preview": [
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/606"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/607"
+        },
+        {
+          "$ref": "azuredatatransfer_0/microsoft.azuredatatransfer/2026-06-29-preview/types.json#/608"
         }
       ]
     },
@@ -128115,6 +129106,28 @@
         },
         {
           "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-10-31-preview/types.json#/835"
+        }
+      ],
+      "2026-11-30-preview": [
+        {
+          "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/961"
+        },
+        {
+          "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/963"
+        },
+        {
+          "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-11-30-preview/types.json#/969"
+        }
+      ],
+      "2026-12-30-preview": [
+        {
+          "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/971"
+        },
+        {
+          "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/973"
+        },
+        {
+          "$ref": "azureresiliencemanagement/microsoft.azureresiliencemanagement/2026-12-30-preview/types.json#/979"
         }
       ]
     },
@@ -135152,6 +136165,14 @@
         {
           "$ref": "chaos/microsoft.chaos/2026-08-01-preview/types.json#/353"
         }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/443"
+        },
+        {
+          "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/444"
+        }
       ]
     },
     "microsoft.chaos/experiments/executions": {
@@ -135189,6 +136210,11 @@
         {
           "$ref": "chaos/microsoft.chaos/2026-08-01-preview/types.json#/374"
         }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/465"
+        }
       ]
     },
     "microsoft.chaos/workspaces": {
@@ -135203,6 +136229,14 @@
         },
         {
           "$ref": "chaos/microsoft.chaos/2026-08-01-preview/types.json#/376"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/467"
+        },
+        {
+          "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/469"
         }
       ]
     },
@@ -135228,6 +136262,17 @@
         {
           "$ref": "chaos/microsoft.chaos/2026-08-01-preview/types.json#/380"
         }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/470"
+        },
+        {
+          "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/472"
+        },
+        {
+          "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/473"
+        }
       ]
     },
     "microsoft.chaos/workspaces/scenarios/runs": {
@@ -135239,6 +136284,11 @@
       "2026-08-01-preview": [
         {
           "$ref": "chaos/microsoft.chaos/2026-08-01-preview/types.json#/381"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "chaos/microsoft.chaos/2026-11-01/types.json#/474"
         }
       ]
     },
@@ -135613,13 +136663,32 @@
       ],
       "2026-09-15-preview": [
         {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1106"
+        },
+        {
           "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1108"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1110"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1113"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/826"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1115"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/831"
+        }
+      ],
+      "2026-11-15-preview": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1310"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1312"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1317"
         }
       ]
     },
@@ -135751,7 +136820,17 @@
       ],
       "2026-09-15-preview": [
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1131"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1129"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/847"
+        }
+      ],
+      "2026-11-15-preview": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1333"
         }
       ]
     },
@@ -135931,10 +137010,26 @@
       ],
       "2026-09-15-preview": [
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1122"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1120"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1125"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1123"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/838"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/841"
+        }
+      ],
+      "2026-11-15-preview": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1324"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1327"
         }
       ]
     },
@@ -136077,10 +137172,26 @@
       ],
       "2026-09-15-preview": [
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1181"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1179"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1183"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1181"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/891"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/893"
+        }
+      ],
+      "2026-11-15-preview": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1383"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1385"
         }
       ]
     },
@@ -136172,7 +137283,17 @@
       ],
       "2026-09-15-preview": [
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1165"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1163"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/878"
+        }
+      ],
+      "2026-11-15-preview": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1367"
         }
       ]
     },
@@ -136259,10 +137380,26 @@
       ],
       "2026-09-15-preview": [
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1137"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1135"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1138"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1136"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/850"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/851"
+        }
+      ],
+      "2026-11-15-preview": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1339"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1340"
         }
       ]
     },
@@ -136349,10 +137486,26 @@
       ],
       "2026-09-15-preview": [
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1162"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1160"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1163"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1161"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/875"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/876"
+        }
+      ],
+      "2026-11-15-preview": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1364"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1365"
         }
       ]
     },
@@ -136469,13 +137622,35 @@
       ],
       "2026-09-15-preview": [
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1166"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1164"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1167"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1165"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1171"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1169"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/879"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/880"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/884"
+        }
+      ],
+      "2026-11-15-preview": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1368"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1369"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1373"
         }
       ]
     },
@@ -136562,10 +137737,26 @@
       ],
       "2026-09-15-preview": [
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1172"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1170"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1173"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1171"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/885"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-01/types.json#/886"
+        }
+      ],
+      "2026-11-15-preview": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1374"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1375"
         }
       ]
     },
@@ -136605,13 +137796,24 @@
       ],
       "2026-09-15-preview": [
         {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1130"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1131"
+        },
+        {
           "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1132"
+        }
+      ],
+      "2026-11-15-preview": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1334"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1133"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1335"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1134"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1336"
         }
       ]
     },
@@ -136651,13 +137853,24 @@
       ],
       "2026-09-15-preview": [
         {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1172"
+        },
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1173"
+        },
+        {
           "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1174"
+        }
+      ],
+      "2026-11-15-preview": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1376"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1175"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1377"
         },
         {
-          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-09-15-preview/types.json#/1176"
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2026-11-15-preview/types.json#/1378"
         }
       ]
     },
@@ -144056,6 +145269,11 @@
         {
           "$ref": "containerregistry_0/microsoft.containerregistry/2026-09-01-preview/types.json#/464"
         }
+      ],
+      "2026-10-15-preview": [
+        {
+          "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/473"
+        }
       ]
     },
     "microsoft.containerregistry/registries": {
@@ -144405,6 +145623,20 @@
           "$ref": "containerregistry_0/microsoft.containerregistry/2026-09-01-preview/types.json#/493"
         }
       ],
+      "2026-10-15-preview": [
+        {
+          "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/480"
+        },
+        {
+          "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/490"
+        },
+        {
+          "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/497"
+        },
+        {
+          "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/502"
+        }
+      ],
       "2018-09-01": [
         {
           "$ref": "containerregistry_1/microsoft.containerregistry/2018-09-01/types.json#/134"
@@ -144694,6 +145926,17 @@
         {
           "$ref": "containerregistry_0/microsoft.containerregistry/2026-09-01-preview/types.json#/514"
         }
+      ],
+      "2026-10-15-preview": [
+        {
+          "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/508"
+        },
+        {
+          "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/521"
+        },
+        {
+          "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/523"
+        }
       ]
     },
     "microsoft.containerregistry/registries/connectedregistries": {
@@ -144794,6 +146037,14 @@
         },
         {
           "$ref": "containerregistry_0/microsoft.containerregistry/2026-09-01-preview/types.json#/496"
+        }
+      ],
+      "2026-10-15-preview": [
+        {
+          "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/503"
+        },
+        {
+          "$ref": "containerregistry_0/microsoft.containerregistry/2026-10-15-preview/types.json#/505"
         }
       ]
     },
@@ -145557,6 +146808,16 @@
       "2026-08-02-preview": [
         {
           "$ref": "containerservice_1/microsoft.containerservice/2026-08-02-preview/types.json#/1172"
+        }
+      ],
+      "2026-09-01": [
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/737"
+        }
+      ],
+      "2026-09-02-preview": [
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1173"
         }
       ]
     },
@@ -149693,6 +150954,88 @@
         {
           "$ref": "containerservice_1/microsoft.containerservice/2026-08-02-preview/types.json#/1168"
         }
+      ],
+      "2026-09-01": [
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/716"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/720"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/721"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/722"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/723"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/724"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/725"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/726"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/730"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/731"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/732"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/733"
+        }
+      ],
+      "2026-09-02-preview": [
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1138"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1142"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1143"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1144"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1147"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1148"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1149"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1150"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1151"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1155"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1156"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1157"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1168"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1169"
+        }
       ]
     },
     "microsoft.containerservice/managedclusters/agentpools": {
@@ -150655,6 +151998,34 @@
         {
           "$ref": "containerservice_1/microsoft.containerservice/2026-08-02-preview/types.json#/1190"
         }
+      ],
+      "2026-09-01": [
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/738"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/741"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/743"
+        }
+      ],
+      "2026-09-02-preview": [
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1174"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1175"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1178"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1189"
+        },
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1191"
+        }
       ]
     },
     "microsoft.containerservice/fleets": {
@@ -150741,6 +152112,16 @@
       "2026-06-02-preview": [
         {
           "$ref": "containerservice_3/microsoft.containerservice/2026-06-02-preview/types.json#/311"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/310"
+        }
+      ],
+      "2026-11-02-preview": [
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/338"
         }
       ]
     },
@@ -150880,6 +152261,16 @@
       "2026-08-02-preview": [
         {
           "$ref": "containerservice_1/microsoft.containerservice/2026-08-02-preview/types.json#/1191"
+        }
+      ],
+      "2026-09-01": [
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-01/types.json#/744"
+        }
+      ],
+      "2026-09-02-preview": [
+        {
+          "$ref": "containerservice_1/microsoft.containerservice/2026-09-02-preview/types.json#/1192"
         }
       ]
     },
@@ -151025,6 +152416,28 @@
         {
           "$ref": "containerservice_3/microsoft.containerservice/2026-06-02-preview/types.json#/327"
         }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/324"
+        },
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/325"
+        },
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/326"
+        }
+      ],
+      "2026-11-02-preview": [
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/354"
+        },
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/355"
+        },
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/356"
+        }
       ]
     },
     "microsoft.containerservice/fleets/autoupgradeprofiles": {
@@ -151062,6 +152475,16 @@
         {
           "$ref": "containerservice_3/microsoft.containerservice/2026-06-02-preview/types.json#/313"
         }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/312"
+        }
+      ],
+      "2026-11-02-preview": [
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/340"
+        }
       ]
     },
     "microsoft.containerservice/fleets/clustermeshprofiles": {
@@ -151073,6 +152496,23 @@
       "2026-06-02-preview": [
         {
           "$ref": "containerservice_3/microsoft.containerservice/2026-06-02-preview/types.json#/315"
+        }
+      ],
+      "2026-11-01": [
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-01/types.json#/314"
+        }
+      ],
+      "2026-11-02-preview": [
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/342"
+        }
+      ]
+    },
+    "microsoft.containerservice/fleets/identitybindingprofiles": {
+      "2026-11-02-preview": [
+        {
+          "$ref": "containerservice_3/microsoft.containerservice/2026-11-02-preview/types.json#/344"
         }
       ]
     },
@@ -157384,6 +158824,22 @@
         {
           "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-01-preview/types.json#/537"
         }
+      ],
+      "2026-04-16": [
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/419"
+        },
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/421"
+        }
+      ],
+      "2026-08-01-preview": [
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/536"
+        },
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/538"
+        }
       ]
     },
     "microsoft.desktopvirtualization/hostpools": {
@@ -157720,6 +159176,34 @@
         {
           "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-01-preview/types.json#/516"
         }
+      ],
+      "2026-04-16": [
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/395"
+        },
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/396"
+        },
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/404"
+        },
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-16/types.json#/418"
+        }
+      ],
+      "2026-08-01-preview": [
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/494"
+        },
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/495"
+        },
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/503"
+        },
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/517"
+        }
       ]
     },
     "microsoft.desktopvirtualization/hostpools/sessionhostmanagements": {
@@ -157858,6 +159342,17 @@
         {
           "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-01-preview/types.json#/531"
         }
+      ],
+      "2026-08-01-preview": [
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/521"
+        },
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/529"
+        },
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/532"
+        }
       ]
     },
     "microsoft.desktopvirtualization/hostpools/sessionhosts": {
@@ -157938,6 +159433,14 @@
         },
         {
           "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-04-01-preview/types.json#/534"
+        }
+      ],
+      "2026-08-01-preview": [
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/534"
+        },
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2026-08-01-preview/types.json#/535"
         }
       ]
     },
@@ -159936,13 +161439,7 @@
       ],
       "2018-09-15": [
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/344"
-        },
-        {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/345"
-        },
-        {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/347"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/349"
         },
         {
           "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/350"
@@ -159951,7 +161448,13 @@
           "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/352"
         },
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/356"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/355"
+        },
+        {
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/357"
+        },
+        {
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/361"
         }
       ]
     },
@@ -159968,7 +161471,7 @@
       ],
       "2018-09-15": [
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/369"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/374"
         }
       ]
     },
@@ -159999,7 +161502,7 @@
       ],
       "2018-09-15": [
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/383"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/388"
         }
       ]
     },
@@ -160019,10 +161522,10 @@
       ],
       "2018-09-15": [
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/384"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/389"
         },
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/387"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/392"
         }
       ]
     },
@@ -160063,16 +161566,7 @@
       ],
       "2018-09-15": [
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/396"
-        },
-        {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/399"
-        },
-        {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/400"
-        },
-        {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/402"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/401"
         },
         {
           "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/404"
@@ -160081,10 +161575,7 @@
           "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/405"
         },
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/406"
-        },
-        {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/408"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/407"
         },
         {
           "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/409"
@@ -160096,10 +161587,22 @@
           "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/411"
         },
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/412"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/413"
         },
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/413"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/414"
+        },
+        {
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/415"
+        },
+        {
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/416"
+        },
+        {
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/417"
+        },
+        {
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/418"
         }
       ]
     },
@@ -160114,10 +161617,10 @@
       ],
       "2018-09-15": [
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/357"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/362"
         },
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/359"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/364"
         }
       ]
     },
@@ -160129,7 +161632,7 @@
       ],
       "2018-09-15": [
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/374"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/379"
         }
       ]
     },
@@ -160144,10 +161647,10 @@
       ],
       "2018-09-15": [
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/389"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/394"
         },
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/391"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/396"
         }
       ]
     },
@@ -160159,27 +161662,27 @@
       ],
       "2018-09-15": [
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/414"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/419"
         }
       ]
     },
     "microsoft.devtestlab/labs/users/servicefabrics": {
       "2018-09-15": [
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/392"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/397"
         },
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/393"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/398"
         },
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/394"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/399"
         }
       ]
     },
     "microsoft.devtestlab/labs/users/servicefabrics/schedules": {
       "2018-09-15": [
         {
-          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/395"
+          "$ref": "devtestlabs/microsoft.devtestlab/2018-09-15/types.json#/400"
         }
       ]
     },
@@ -165011,44 +166514,44 @@
       ],
       "2026-10-01-preview": [
         {
-          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/500"
+          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/513"
         }
       ]
     },
     "microsoft.horizondb/clusters/changedatacapturedestinations": {
       "2026-10-01-preview": [
         {
-          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/504"
+          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/517"
         }
       ]
     },
     "microsoft.horizondb/clusters/logfiles": {
       "2026-10-01-preview": [
         {
-          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/507"
+          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/520"
         }
       ]
     },
     "microsoft.horizondb/clusters/pools": {
       "2026-10-01-preview": [
         {
-          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/510"
+          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/522"
         },
         {
-          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/511"
+          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/523"
         },
         {
-          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/512"
+          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/524"
         }
       ]
     },
     "microsoft.horizondb/clusters/pools/maintenanceevents": {
       "2026-10-01-preview": [
         {
-          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/520"
+          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/532"
         },
         {
-          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/522"
+          "$ref": "horizondb_0/microsoft.horizondb/2026-10-01-preview/types.json#/534"
         }
       ]
     },
@@ -167357,6 +168860,11 @@
         {
           "$ref": "keyvault/microsoft.keyvault/2026-06-01-preview/types.json#/389"
         }
+      ],
+      "2026-10-01-preview": [
+        {
+          "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/442"
+        }
       ]
     },
     "microsoft.keyvault": {
@@ -167500,6 +169008,14 @@
         {
           "$ref": "keyvault/microsoft.keyvault/2026-06-01-preview/types.json#/386"
         }
+      ],
+      "2026-10-01-preview": [
+        {
+          "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/432"
+        },
+        {
+          "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/439"
+        }
       ]
     },
     "microsoft.keyvault/locations/deletedmanagedhsms": {
@@ -167581,6 +169097,18 @@
       "2026-06-01-preview": [
         {
           "$ref": "keyvault/microsoft.keyvault/2026-06-01-preview/types.json#/388"
+        }
+      ],
+      "2026-10-01-preview": [
+        {
+          "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/441"
+        }
+      ]
+    },
+    "microsoft.keyvault/vaults/networksecurityperimeterconfigurations": {
+      "2026-10-01-preview": [
+        {
+          "$ref": "keyvault/microsoft.keyvault/2026-10-01-preview/types.json#/443"
         }
       ]
     },
@@ -167943,16 +169471,30 @@
       ],
       "2026-10-15-preview": [
         {
-          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/251"
+          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/252"
         },
         {
-          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/264"
+          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/265"
         },
         {
-          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/266"
+          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/267"
         },
         {
-          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/268"
+          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/269"
+        }
+      ],
+      "2026-11-03": [
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/252"
+        },
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/265"
+        },
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/267"
+        },
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/269"
         }
       ]
     },
@@ -168039,10 +169581,18 @@
       ],
       "2026-10-15-preview": [
         {
-          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/271"
+          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/272"
         },
         {
-          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/272"
+          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/273"
+        }
+      ],
+      "2026-11-03": [
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/272"
+        },
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/273"
         }
       ]
     },
@@ -168086,10 +169636,18 @@
       ],
       "2026-10-15-preview": [
         {
-          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/228"
+          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/229"
         },
         {
-          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/232"
+          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/233"
+        }
+      ],
+      "2026-11-03": [
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/229"
+        },
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/233"
         }
       ]
     },
@@ -168136,10 +169694,18 @@
       ],
       "2026-10-15-preview": [
         {
-          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/235"
+          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/236"
         },
         {
-          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/239"
+          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/240"
+        }
+      ],
+      "2026-11-03": [
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/236"
+        },
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/240"
         }
       ]
     },
@@ -168179,13 +169745,24 @@
       ],
       "2026-10-15-preview": [
         {
-          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/274"
-        },
-        {
           "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/275"
         },
         {
           "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/276"
+        },
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-10-15-preview/types.json#/277"
+        }
+      ],
+      "2026-11-03": [
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/275"
+        },
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/276"
+        },
+        {
+          "$ref": "liftrcommvault/commvault.contentstore/2026-11-03/types.json#/277"
         }
       ]
     },
@@ -168256,7 +169833,7 @@
       ],
       "2026-11-01-preview": [
         {
-          "$ref": "loadtestservice_1/microsoft.loadtestservice/2026-11-01-preview/types.json#/98"
+          "$ref": "loadtestservice_1/microsoft.loadtestservice/2026-11-01-preview/types.json#/97"
         }
       ]
     },
@@ -199941,6 +201518,33 @@
         }
       ]
     },
+    "microsoft.networksecurity/neuroshields/protectedresources/findings": {
+      "2026-10-01-preview": [
+        {
+          "$ref": "networksecurity_0/microsoft.networksecurity/2026-10-01-preview/types.json#/116"
+        },
+        {
+          "$ref": "networksecurity_0/microsoft.networksecurity/2026-10-01-preview/types.json#/117"
+        }
+      ]
+    },
+    "microsoft.networksecurity/neuroshields/protectedresources/mitigations": {
+      "2026-10-01-preview": [
+        {
+          "$ref": "networksecurity_0/microsoft.networksecurity/2026-10-01-preview/types.json#/118"
+        },
+        {
+          "$ref": "networksecurity_0/microsoft.networksecurity/2026-10-01-preview/types.json#/119"
+        }
+      ]
+    },
+    "microsoft.networksecurity/neuroshields/protectedresources": {
+      "2026-10-01-preview": [
+        {
+          "$ref": "networksecurity_0/microsoft.networksecurity/2026-10-01-preview/types.json#/121"
+        }
+      ]
+    },
     "newrelic.observability/monitors": {
       "2022-07-01-preview": [
         {
@@ -202868,6 +204472,29 @@
         {
           "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-08-27-preview/types.json#/365"
         }
+      ],
+      "2026-09-25-preview": [
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/361"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/364"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/367"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/371"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/374"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/378"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/379"
+        }
       ]
     },
     "paloaltonetworks.cloudngfw/globalrulestacks/postrules": {
@@ -203046,6 +204673,17 @@
         {
           "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-08-27-preview/types.json#/373"
         }
+      ],
+      "2026-09-25-preview": [
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/384"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/385"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/387"
+        }
       ]
     },
     "paloaltonetworks.cloudngfw/globalrulestacks/prerules": {
@@ -203223,6 +204861,17 @@
         },
         {
           "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-08-27-preview/types.json#/376"
+        }
+      ],
+      "2026-09-25-preview": [
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/388"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/389"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/390"
         }
       ]
     },
@@ -203449,6 +205098,20 @@
         },
         {
           "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-08-27-preview/types.json#/425"
+        }
+      ],
+      "2026-09-25-preview": [
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/413"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/427"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/441"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/442"
         }
       ]
     },
@@ -203868,6 +205531,32 @@
         {
           "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-08-27-preview/types.json#/433"
         }
+      ],
+      "2026-09-25-preview": [
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/443"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/444"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/445"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/446"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/447"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/448"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/449"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/450"
+        }
       ]
     },
     "paloaltonetworks.cloudngfw/localrulestacks/localrules": {
@@ -204046,6 +205735,17 @@
         {
           "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-08-27-preview/types.json#/436"
         }
+      ],
+      "2026-09-25-preview": [
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/451"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/452"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/453"
+        }
       ]
     },
     "paloaltonetworks.cloudngfw": {
@@ -204192,6 +205892,23 @@
         },
         {
           "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-08-27-preview/types.json#/394"
+        }
+      ],
+      "2026-09-25-preview": [
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/392"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/395"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/400"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/408"
+        },
+        {
+          "$ref": "paloaltonetworks_0/paloaltonetworks.cloudngfw/2026-09-25-preview/types.json#/411"
         }
       ]
     },
@@ -205519,6 +207236,23 @@
         {
           "$ref": "purestorage_0/purestorage.block/2026-05-01-preview/types.json#/201"
         }
+      ],
+      "2026-10-01": [
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/185"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/187"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/195"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/197"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/201"
+        }
       ]
     },
     "purestorage.block/storagepools": {
@@ -205665,6 +207399,35 @@
         {
           "$ref": "purestorage_0/purestorage.block/2026-05-01-preview/types.json#/243"
         }
+      ],
+      "2026-10-01": [
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/216"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/218"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/220"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/224"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/227"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/229"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/240"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/242"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/243"
+        }
       ]
     },
     "purestorage.block/storagepools/volumegroups": {
@@ -205697,6 +207460,20 @@
         {
           "$ref": "purestorage_0/purestorage.block/2026-05-01-preview/types.json#/257"
         }
+      ],
+      "2026-10-01": [
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/245"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/250"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/252"
+        },
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/257"
+        }
       ]
     },
     "purestorage.block": {
@@ -205709,12 +207486,22 @@
         {
           "$ref": "purestorage_0/purestorage.block/2026-05-01-preview/types.json#/175"
         }
+      ],
+      "2026-10-01": [
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/175"
+        }
       ]
     },
     "purestorage.block/storagepools/volumegroups/volumes": {
       "2026-05-01-preview": [
         {
           "$ref": "purestorage_0/purestorage.block/2026-05-01-preview/types.json#/265"
+        }
+      ],
+      "2026-10-01": [
+        {
+          "$ref": "purestorage_0/purestorage.block/2026-10-01/types.json#/265"
         }
       ]
     },
@@ -237441,7 +239228,7 @@
     "version": "1.0",
     "isSingleton": true,
     "configurationType": {
-      "$ref": "extensions/az/types.json#/288"
+      "$ref": "extensions/az/types.json#/289"
     }
   }
 }

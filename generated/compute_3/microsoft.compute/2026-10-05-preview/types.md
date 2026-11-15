@@ -62,14 +62,14 @@
 * **desiredCount**: int: Desired instance count per region/zone based on the scope.
 * **desiredLocations**: string[]: The desired regions
 * **desiredSizes**: [ResourceSize](#resourcesize)[]: The desired virtual machine SKU sizes.
-* **placementScores**: [PlacementScore](#placementscore)[]: A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation.
+* **placementScores**: [PlacementScore](#placementscore)[]: Placement scores indicating the likelihood of successfully allocating the specified regular virtual machines.
 
 ## PlacementScore
 ### Properties
 * **availabilityZone**: string: The availability zone.
 * **placementPreference**: int {minValue: 0, maxValue: 10}: Placement preference from 0 to 10 (inclusive). Higher is better.
 * **region**: string: The region.
-* **score**: 'DataNotFoundOrStale' | 'High' | 'InsufficientQuota' | 'Low' | 'Medium' | 'RestrictedSkuNotAvailable' | string: A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation.
+* **score**: 'DataNotFoundOrStale' | 'High' | 'InsufficientQuota' | 'Low' | 'Medium' | 'RestrictedSkuNotAvailable' | string: A placement score indicating the likelihood of successfully allocating the specified virtual machines.
 * **sku**: string: The resource's CRP virtual machine SKU size.
 
 ## PlacementScoresProperties

@@ -1,10 +1,10 @@
-# Microsoft.DocumentDB @ 2026-04-01-preview
+# Microsoft.DocumentDB @ 2026-07-15
 
-## Resource Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview
+## Resource Microsoft.DocumentDB/cassandraClusters@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedCassandraManagedServiceIdentity](#managedcassandramanagedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -14,22 +14,22 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/cassandraClusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/cassandraClusters/dataCenters@2026-04-01-preview
+## Resource Microsoft.DocumentDB/cassandraClusters/dataCenters@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 100, pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DataCenterResourceProperties](#datacenterresourceproperties): Properties of a managed Cassandra data center.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/cassandraClusters/dataCenters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity)
 * **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse' | string: Indicates the type of database account. This can only be set at database account creation.
@@ -40,11 +40,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -54,11 +54,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -68,11 +68,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -82,11 +82,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -96,11 +96,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -110,11 +110,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -124,66 +124,66 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraRoleAssignments@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraRoleAssignments@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CassandraRoleAssignmentResourceProperties](#cassandraroleassignmentresourceproperties): Properties to create and update an Azure Cosmos DB Cassandra Role Assignment.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraRoleDefinitions@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraRoleDefinitions@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CassandraRoleDefinitionResourceProperties](#cassandraroledefinitionresourceproperties): Properties to create and update an Azure Cosmos DB Cassandra Role Definition.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/chaosFaults@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/chaosFaults@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [chaosFaultProperties](#chaosfaultproperties): A request object to enable/disable the chaos fault.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/chaosFaults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CopyJobProperties](#copyjobproperties) (Required): The properties of a Copy Job
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/copyJobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DataTransferJobProperties](#datatransferjobproperties) (Required): Data Transfer Create Job Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/dataTransferJobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/graphs@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/graphs@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -193,11 +193,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/graphs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -207,11 +207,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -221,11 +221,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -235,11 +235,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -249,33 +249,33 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/gremlinRoleAssignments@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinRoleAssignments@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GremlinRoleAssignmentResourceProperties](#gremlinroleassignmentresourceproperties): Properties to create and update an Azure Cosmos DB Gremlin Role Assignment.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/gremlinRoleDefinitions@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinRoleDefinitions@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GremlinRoleDefinitionResourceProperties](#gremlinroledefinitionresourceproperties): Properties to create and update an Azure Cosmos DB Gremlin Role Definition.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -285,11 +285,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -299,11 +299,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -313,11 +313,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -327,110 +327,110 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MongoRoleDefinitionResource](#mongoroledefinitionresource): Properties to create and update an Azure Cosmos DB Mongo Role Definition.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MongoUserDefinitionResource](#mongouserdefinitionresource): Properties to create and update an Azure Cosmos DB Mongo User Definition.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongoMIRoleAssignments@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongoMIRoleAssignments@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MongoMIRoleAssignmentResourceProperties](#mongomiroleassignmentresourceproperties): Properties to create and update an Azure Cosmos DB MongoMI Role Assignment.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongoMIRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongoMIRoleDefinitions@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongoMIRoleDefinitions@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MongoMIRoleDefinitionResourceProperties](#mongomiroledefinitionresourceproperties): Properties to create and update an Azure Cosmos DB MongoMI Role Definition.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongoMIRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: None
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties): Network security configuration properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [NotebookWorkspaceProperties](#notebookworkspaceproperties) (ReadOnly): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/privateLinkResources@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/privateLinkResources@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: None
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/services@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/services@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 3, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServiceResourceCreateUpdatePropertiesOrServiceResourceProperties](#serviceresourcecreateupdatepropertiesorserviceresourceproperties): Properties in ServiceResourceCreateUpdateParameters.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/services' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -440,22 +440,22 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClientEncryptionKeyCreateUpdatePropertiesOrClientEncryptionKeyGetProperties](#clientencryptionkeycreateupdatepropertiesorclientencryptionkeygetproperties) (Required): Properties to create and update ClientEncryptionKey.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -465,11 +465,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -479,11 +479,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -493,11 +493,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -507,11 +507,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -521,11 +521,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -535,55 +535,55 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlRoleAssignmentResource](#sqlroleassignmentresource): Properties to create and update an Azure Cosmos DB SQL Role Assignment.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlRoleDefinitionResource](#sqlroledefinitionresource): Properties to create and update an Azure Cosmos DB SQL Role Definition.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/tableRoleAssignments@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/tableRoleAssignments@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TableRoleAssignmentResourceProperties](#tableroleassignmentresourceproperties): Properties to create and update an Azure Cosmos DB Table Role Assignment.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tableRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/tableRoleDefinitions@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/tableRoleDefinitions@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TableRoleDefinitionResourceProperties](#tableroledefinitionresourceproperties): Properties to create and update an Azure Cosmos DB Table Role Definition.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tableRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/tables@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/tables@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -593,11 +593,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-04-01-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
@@ -607,11 +607,11 @@
 * **tags**: [Record](#record): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/fleets@2026-04-01-preview
+## Resource Microsoft.DocumentDB/fleets@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
@@ -620,44 +620,44 @@
 * **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.DocumentDB/fleets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/fleets/fleetAnalytics@2026-04-01-preview
+## Resource Microsoft.DocumentDB/fleets/fleetAnalytics@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FleetAnalyticsProperties](#fleetanalyticsproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/fleets/fleetAnalytics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/fleets/fleetspaces@2026-04-01-preview
+## Resource Microsoft.DocumentDB/fleets/fleetspaces@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FleetspaceProperties](#fleetspaceproperties): Properties to update Azure Cosmos DB Fleetspace.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/fleets/fleetspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/fleets/fleetspaces/fleetspaceAccounts@2026-04-01-preview
+## Resource Microsoft.DocumentDB/fleets/fleetspaces/fleetspaceAccounts@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FleetspaceAccountProperties](#fleetspaceaccountproperties): An Azure Cosmos DB Global Database Account which is part of a Fleetspace Account.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/fleets/fleetspaces/fleetspaceAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/garnetClusters@2026-04-01-preview
+## Resource Microsoft.DocumentDB/garnetClusters@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedCassandraManagedServiceIdentity](#managedcassandramanagedserviceidentity): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
@@ -667,22 +667,22 @@
 * **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.DocumentDB/garnetClusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/locations@2026-04-01-preview
+## Resource Microsoft.DocumentDB/locations@2026-07-15
 * **Readable Scope(s)**: Subscription
 * **Writable Scope(s)**: None
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LocationProperties](#locationproperties): Cosmos DB location metadata
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/locations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/locations/restorableDatabaseAccounts@2026-04-01-preview
+## Resource Microsoft.DocumentDB/locations/restorableDatabaseAccounts@2026-07-15
 * **Readable Scope(s)**: Subscription
 * **Writable Scope(s)**: None
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -690,44 +690,44 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/locations/restorableDatabaseAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts@2026-04-01-preview
+## Resource Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: None
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SoftDeletedDatabaseAccountProperties](#softdeleteddatabaseaccountproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases@2026-04-01-preview
+## Resource Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: None
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[^/\\#?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SoftDeletedSqlDatabaseProperties](#softdeletedsqldatabaseproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases/softDeletedSqlContainers@2026-04-01-preview
+## Resource Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases/softDeletedSqlContainers@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: None
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[^/\\#?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SoftDeletedSqlContainerProperties](#softdeletedsqlcontainerproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/locations/softDeletedDatabaseAccounts/softDeletedSqlDatabases/softDeletedSqlContainers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/throughputPools@2026-04-01-preview
+## Resource Microsoft.DocumentDB/throughputPools@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
@@ -736,332 +736,332 @@
 * **tags**: [Record](#record): Resource tags.
 * **type**: 'Microsoft.DocumentDB/throughputPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/throughputPools/throughputPoolAccounts@2026-04-01-preview
+## Resource Microsoft.DocumentDB/throughputPools/throughputPoolAccounts@2026-07-15
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2026-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2026-07-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ThroughputPoolAccountProperties](#throughputpoolaccountproperties): An Azure Cosmos DB Global Database Account which is part of a Throughputpool.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/throughputPools/throughputPoolAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function cancel (Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-04-01-preview)
+## Function cancel (Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/copyJobs
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [CopyJobGetResults](#copyjobgetresults)
 
-## Function cancel (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-04-01-preview)
+## Function cancel (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/dataTransferJobs
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [DataTransferJobGetResults](#datatransferjobgetresults)
 
-## Function complete (Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-04-01-preview)
+## Function complete (Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/copyJobs
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [CopyJobGetResults](#copyjobgetresults)
 
-## Function complete (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-04-01-preview)
+## Function complete (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/dataTransferJobs
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [DataTransferJobGetResults](#datatransferjobgetresults)
 
-## Function deallocate (Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview)
+## Function deallocate (Microsoft.DocumentDB/cassandraClusters@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/cassandraClusters
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: any
 
-## Function failoverPriorityChange (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
+## Function failoverPriorityChange (Microsoft.DocumentDB/databaseAccounts@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [FailoverPolicies](#failoverpolicies)
 * **Output**: any
 
-## Function invokeCommand (Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview)
+## Function invokeCommand (Microsoft.DocumentDB/cassandraClusters@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/cassandraClusters
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [CommandPostBody](#commandpostbody)
 * **Output**: [CommandOutput](#commandoutput)
 
-## Function invokeCommandAsync (Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview)
+## Function invokeCommandAsync (Microsoft.DocumentDB/cassandraClusters@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/cassandraClusters
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [CommandAsyncPostBody](#commandasyncpostbody)
 * **Output**: [CommandPublicResource](#commandpublicresource)
 
-## Function listConnectionInfo (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-04-01-preview)
+## Function listConnectionInfo (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [NotebookWorkspaceConnectionInfoResult](#notebookworkspaceconnectioninforesult)
 
-## Function listConnectionStrings (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
+## Function listConnectionStrings (Microsoft.DocumentDB/databaseAccounts@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [DatabaseAccountListConnectionStringsResult](#databaseaccountlistconnectionstringsresult)
 
-## Function listKeys (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
+## Function listKeys (Microsoft.DocumentDB/databaseAccounts@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [DatabaseAccountListKeysResult](#databaseaccountlistkeysresult)
 
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-04-01-preview)
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-04-01-preview)
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview)
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview)
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-04-01-preview)
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-04-01-preview)
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-04-01-preview)
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-04-01-preview)
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview)
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview)
+## Function migrateToAutoscale (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-04-01-preview)
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-04-01-preview)
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview)
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview)
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-04-01-preview)
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-04-01-preview)
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-04-01-preview)
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-04-01-preview)
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview)
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview)
+## Function migrateToManualThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [ThroughputSettingsGetResults](#throughputsettingsgetresults)
 
-## Function offlineRegion (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
+## Function offlineRegion (Microsoft.DocumentDB/databaseAccounts@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [RegionForOnlineOffline](#regionforonlineoffline)
 * **Output**: any
 
-## Function onlineRegion (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
+## Function onlineRegion (Microsoft.DocumentDB/databaseAccounts@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [RegionForOnlineOffline](#regionforonlineoffline)
 * **Output**: any
 
-## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2026-04-01-preview)
+## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [MergeParameters](#mergeparameters)
 * **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
 
-## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-04-01-preview)
+## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [MergeParameters](#mergeparameters)
 * **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
 
-## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2026-04-01-preview)
+## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [MergeParameters](#mergeparameters)
 * **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
 
-## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-04-01-preview)
+## Function partitionMerge (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [MergeParameters](#mergeparameters)
 * **Output**: [PhysicalPartitionStorageInfoCollection](#physicalpartitionstorageinfocollection)
 
-## Function pause (Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-04-01-preview)
+## Function pause (Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/copyJobs
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [CopyJobGetResults](#copyjobgetresults)
 
-## Function pause (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-04-01-preview)
+## Function pause (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/dataTransferJobs
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [DataTransferJobGetResults](#datatransferjobgetresults)
 
-## Function readonlykeys (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
+## Function readonlykeys (Microsoft.DocumentDB/databaseAccounts@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [DatabaseAccountListReadOnlyKeysResult](#databaseaccountlistreadonlykeysresult)
 
-## Function reconcile (Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations@2026-04-01-preview)
+## Function reconcile (Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/networkSecurityPerimeterConfigurations
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: any
 
-## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview)
+## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
 * **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
 
-## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview)
+## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
 * **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
 
-## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview)
+## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
 * **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
 
-## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview)
+## Function redistributeThroughput (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [RedistributeThroughputParameters](#redistributethroughputparameters)
 * **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
 
-## Function regenerateAuthToken (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-04-01-preview)
+## Function regenerateAuthToken (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: any
 
-## Function regenerateKey (Microsoft.DocumentDB/databaseAccounts@2026-04-01-preview)
+## Function regenerateKey (Microsoft.DocumentDB/databaseAccounts@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [DatabaseAccountRegenerateKeyParameters](#databaseaccountregeneratekeyparameters)
 * **Output**: any
 
-## Function resume (Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-04-01-preview)
+## Function resume (Microsoft.DocumentDB/databaseAccounts/copyJobs@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/copyJobs
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [CopyJobGetResults](#copyjobgetresults)
 
-## Function resume (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-04-01-preview)
+## Function resume (Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/dataTransferJobs
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: [DataTransferJobGetResults](#datatransferjobgetresults)
 
-## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-04-01-preview)
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
 * **Output**: [BackupInformation](#backupinformation)
 
-## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-04-01-preview)
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
 * **Output**: [BackupInformation](#backupinformation)
 
-## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/tables@2026-04-01-preview)
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/tables@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/tables
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
 * **Output**: [BackupInformation](#backupinformation)
 
-## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2026-04-01-preview)
+## Function retrieveContinuousBackupInformation (Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [ContinuousBackupRestoreLocation](#continuousbackuprestorelocation)
 * **Output**: [BackupInformation](#backupinformation)
 
-## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-04-01-preview)
+## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
 * **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
 
-## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-04-01-preview)
+## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
 * **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
 
-## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-04-01-preview)
+## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
 * **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
 
-## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-04-01-preview)
+## Function retrieveThroughputDistribution (Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Input**: [RetrieveThroughputParameters](#retrievethroughputparameters)
 * **Output**: [PhysicalPartitionThroughputInfoResult](#physicalpartitionthroughputinforesult)
 
-## Function start (Microsoft.DocumentDB/cassandraClusters@2026-04-01-preview)
+## Function start (Microsoft.DocumentDB/cassandraClusters@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/cassandraClusters
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: any
 
-## Function start (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-04-01-preview)
+## Function start (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2026-07-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
-* **ApiVersion**: 2026-04-01-preview
+* **ApiVersion**: 2026-07-15
 * **Output**: any
 
 ## AccessRule
@@ -1139,16 +1139,22 @@ usage for this key.
 * **Discriminator**: type
 
 ### Base Properties
+* **backupRetentionLockExpirationTimestamp**: string: The UTC timestamp until which changes that reduce backup retention are locked.
+While active, this timestamp can only be extended.
 * **migrationState**: [BackupPolicyMigrationState](#backuppolicymigrationstate): The object representing the state of the migration between the backup policies.
 
 ### ContinuousModeBackupPolicy
 #### Properties
+* **backupRetentionLockExpirationTimestamp**: string: The UTC timestamp until which changes that reduce backup retention are locked.
+While active, this timestamp can only be extended.
 * **continuousModeProperties**: [ContinuousModeProperties](#continuousmodeproperties): Configuration values for continuous mode backup
 * **migrationState**: [BackupPolicyMigrationState](#backuppolicymigrationstate): The object representing the state of the migration between the backup policies.
 * **type**: 'Continuous' (Required): Describes the mode of backups.
 
 ### PeriodicModeBackupPolicy
 #### Properties
+* **backupRetentionLockExpirationTimestamp**: string: The UTC timestamp until which changes that reduce backup retention are locked.
+While active, this timestamp can only be extended.
 * **migrationState**: [BackupPolicyMigrationState](#backuppolicymigrationstate): The object representing the state of the migration between the backup policies.
 * **periodicModeProperties**: [PeriodicModeProperties](#periodicmodeproperties): Configuration values for periodic mode backup
 * **type**: 'Periodic' (Required): Describes the mode of backups.
@@ -1638,6 +1644,7 @@ usage for this key.
 * **minimalTlsVersion**: 'Tls' | 'Tls11' | 'Tls12' | string: Indicates the minimum allowed Tls version. The default is Tls 1.0, except for Cassandra and Mongo API's, which only work with Tls 1.2.
 * **networkAclBypass**: 'AzureServices' | 'None': Indicates what services are allowed to bypass firewall checks.
 * **networkAclBypassResourceIds**: string[]: An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
+* **perPartitionAutomaticFailoverEnabled**: bool: Flag to indicate enabling/disabling of per-partition automatic failover on the account, which automatically fails over individual partitions to available regions during a regional outage. Opt-in; defaults to false.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of Private Endpoint Connections configured for the Cosmos DB account.
 * **provisioningState**: string (ReadOnly): The provisioning state of the resource.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'SecuredByPerimeter' | string: Whether requests from Public Network are allowed

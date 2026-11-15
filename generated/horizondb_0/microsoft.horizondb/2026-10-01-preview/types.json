@@ -57,14 +57,14 @@
       },
       "identity": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/46"
         },
         "flags": 0,
         "description": "The managed service identities assigned to this resource. Omitting the entire identity property from PUT or PATCH preserves all current assignments. When provided, PUT replaces the user-assigned identity set and PATCH merges it; null PATCH dictionary entries remove individual identities. Setting type to None clears all assignments."
       },
       "tags": {
         "type": {
-          "$ref": "#/52"
+          "$ref": "#/53"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -78,7 +78,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -101,7 +101,7 @@
           "$ref": "#/11"
         },
         "flags": 0,
-        "description": "The mode used to create the cluster. When this property is omitted while creating a new cluster, the service records Create. PointInTimeRestore creates a new cluster from an available backup; pointInTimeUtc and creationSourceClusterResourceId are then required, postgreSqlVersion must be omitted because it is obtained from the backup metadata, and creationSourceClusterLocation is required when the source and target cluster locations differ. This property is immutable and is returned as creation provenance. On replacement, omission preserves the recorded value, resubmitting the same value is accepted, and changing it is rejected."
+        "description": "The mode used to create the cluster. When this property is omitted while creating a new cluster, the service records Create. PointInTimeRestore creates a new cluster from an available backup; pointInTimeUtc and creationSourceClusterResourceId are then required, postgreSqlVersion must be omitted because it is obtained from the backup metadata, and creationSourceClusterLocation is required when the source and target cluster locations differ. During PointInTimeRestore creation, the service ignores the requested backup.geoRedundancy value and configures the new cluster with the same geo-redundancy setting as the source cluster. This property is immutable and is returned as creation provenance. On replacement, omission preserves the recorded value, resubmitting the same value is accepted, and changing it is rejected."
       },
       "pointInTimeUtc": {
         "type": {
@@ -161,14 +161,14 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/43"
+          "$ref": "#/44"
         },
         "flags": 3,
         "description": "The provisioning state of the cluster."
       },
       "readWritePool": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/45"
         },
         "flags": 3,
         "description": "The pool currently designated to host the cluster's read-write node."
@@ -263,7 +263,7 @@
           "$ref": "#/19"
         },
         "flags": 1,
-        "description": "The geo-redundancy state. Geo-redundant backup is not supported when dataEncryption.type is AzureKeyVault."
+        "description": "The geo-redundancy state. When creationMode is PointInTimeRestore, the service ignores the requested value during cluster creation and configures the new cluster with the same geo-redundancy setting as the source cluster, for both same-location and cross-location restores. The response reports the inherited setting. Geo-redundant backup is not supported when dataEncryption.type is AzureKeyVault."
       },
       "retentionDays": {
         "type": {
@@ -483,6 +483,10 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
@@ -499,6 +503,9 @@
       },
       {
         "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
       },
       {
         "$ref": "#/2"
@@ -524,14 +531,14 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/48"
+          "$ref": "#/49"
         },
         "flags": 1,
         "description": "The managed identity type assigned to the cluster. Setting this property to None clears all managed identity assignments."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/51"
+          "$ref": "#/52"
         },
         "flags": 0,
         "description": "The user-assigned managed identities associated with the cluster. When supplied on PUT, this dictionary replaces the complete set of assignments. When supplied on PATCH, entries are merged with the existing set and a null value removes the corresponding identity. Each dictionary key must be the full Azure resource ID of a Microsoft.ManagedIdentity/userAssignedIdentities resource. Non-null request values can be empty objects; response values contain the service-populated clientId and principalId. Assigning an identity does not grant it access to destination resources; required role assignments must be configured separately."
@@ -550,10 +557,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/46"
+        "$ref": "#/47"
       },
       {
-        "$ref": "#/47"
+        "$ref": "#/48"
       },
       {
         "$ref": "#/2"
@@ -566,14 +573,14 @@
     "properties": {
       "principalId": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/51"
         },
         "flags": 2,
         "description": "The principal ID of the assigned identity."
       },
       "clientId": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/51"
         },
         "flags": 2,
         "description": "The client ID of the assigned identity."
@@ -591,7 +598,7 @@
     "name": "HorizonDbClusterManagedServiceIdentityUserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/49"
+      "$ref": "#/50"
     }
   },
   {
@@ -615,7 +622,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/58"
+          "$ref": "#/59"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -636,7 +643,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/63"
+          "$ref": "#/64"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -670,9 +677,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/54"
-      },
-      {
         "$ref": "#/55"
       },
       {
@@ -680,6 +684,9 @@
       },
       {
         "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
       },
       {
         "$ref": "#/2"
@@ -706,9 +713,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/59"
-      },
-      {
         "$ref": "#/60"
       },
       {
@@ -716,6 +720,9 @@
       },
       {
         "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
       },
       {
         "$ref": "#/2"
@@ -758,35 +765,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/65"
+          "$ref": "#/66"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/66"
+          "$ref": "#/67"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/68"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
       },
       "tags": {
         "type": {
-          "$ref": "#/86"
+          "$ref": "#/88"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -800,7 +807,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -813,28 +820,28 @@
     "properties": {
       "parameters": {
         "type": {
-          "$ref": "#/75"
+          "$ref": "#/76"
         },
         "flags": 0,
         "description": "Parameters in the parameter group."
       },
       "description": {
         "type": {
-          "$ref": "#/76"
+          "$ref": "#/77"
         },
         "flags": 0,
         "description": "Description of the parameter group. The maximum length is 1024 characters."
       },
       "postgreSqlVersion": {
         "type": {
-          "$ref": "#/79"
+          "$ref": "#/80"
         },
         "flags": 1,
         "description": "The PostgreSQL major version for the parameter group. This property is required during creation and is immutable thereafter. The service selects the unique location-scoped default parameter group for this version in the resource location. The DefaultParameterGroups APIs return at most one default parameter group for each PostgreSQL version in a location, so this selection is unambiguous."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/85"
+          "$ref": "#/87"
         },
         "flags": 2,
         "description": "The provisioning state of the parameter group."
@@ -875,7 +882,7 @@
       },
       "valueSource": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/74"
         },
         "flags": 2,
         "description": "The source of the effective parameter value. UserOverride means that the value was explicitly supplied by the user, even when it equals defaultValue."
@@ -896,14 +903,14 @@
       },
       "isDynamic": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/75"
         },
         "flags": 2,
         "description": "Whether the parameter can be changed dynamically."
       },
       "isReadOnly": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/75"
         },
         "flags": 2,
         "description": "Whether the parameter is read-only. Read-only parameters cannot be overridden."
@@ -936,10 +943,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/71"
+        "$ref": "#/72"
       },
       {
-        "$ref": "#/72"
+        "$ref": "#/73"
       },
       {
         "$ref": "#/2"
@@ -952,7 +959,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/70"
+      "$ref": "#/71"
     }
   },
   {
@@ -971,10 +978,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/77"
+        "$ref": "#/78"
       },
       {
-        "$ref": "#/78"
+        "$ref": "#/79"
       },
       {
         "$ref": "#/2"
@@ -1002,11 +1009,12 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
-      {
-        "$ref": "#/80"
-      },
       {
         "$ref": "#/81"
       },
@@ -1018,6 +1026,12 @@
       },
       {
         "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
       },
       {
         "$ref": "#/2"
@@ -1036,7 +1050,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/parameterGroups@2026-10-01-preview",
     "body": {
-      "$ref": "#/68"
+      "$ref": "#/69"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1066,35 +1080,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/88"
+          "$ref": "#/90"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/91"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/90"
+          "$ref": "#/92"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/94"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -1107,14 +1121,14 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/97"
         },
         "flags": 1,
         "description": "The state of Microsoft Entra authentication."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/101"
+          "$ref": "#/104"
         },
         "flags": 2,
         "description": "The provisioning state of the Microsoft Entra authentication method."
@@ -1133,10 +1147,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/93"
+        "$ref": "#/95"
       },
       {
-        "$ref": "#/94"
+        "$ref": "#/96"
       },
       {
         "$ref": "#/2"
@@ -1164,14 +1178,12 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
-      {
-        "$ref": "#/96"
-      },
-      {
-        "$ref": "#/97"
-      },
       {
         "$ref": "#/98"
       },
@@ -1180,6 +1192,15 @@
       },
       {
         "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
       },
       {
         "$ref": "#/2"
@@ -1211,35 +1232,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/102"
+          "$ref": "#/105"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/103"
+          "$ref": "#/106"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/104"
+          "$ref": "#/107"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/106"
+          "$ref": "#/109"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -1252,28 +1273,28 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/109"
+          "$ref": "#/112"
         },
         "flags": 1,
         "description": "The state of PostgreSQL username-and-password authentication."
       },
       "administratorLogin": {
         "type": {
-          "$ref": "#/110"
+          "$ref": "#/113"
         },
-        "flags": 4,
-        "description": "The PostgreSQL administrator login name. This value is not returned in responses. After it is set, renaming is not supported. Setting the login requires password authentication state to be Enabled in the same request."
+        "flags": 0,
+        "description": "The PostgreSQL administrator login name. This value is returned in responses after it is set. After it is set, renaming is not supported. Setting the login requires password authentication state to be Enabled in the same request."
       },
       "administratorLoginPassword": {
         "type": {
-          "$ref": "#/111"
+          "$ref": "#/114"
         },
         "flags": 4,
         "description": "The PostgreSQL administrator password. Setting the password requires password authentication state to be Enabled in the same request."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/117"
+          "$ref": "#/121"
         },
         "flags": 2,
         "description": "The provisioning state of the PostgreSQL username-and-password authentication method."
@@ -1292,10 +1313,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/107"
+        "$ref": "#/110"
       },
       {
-        "$ref": "#/108"
+        "$ref": "#/111"
       },
       {
         "$ref": "#/2"
@@ -1304,7 +1325,6 @@
   },
   {
     "$type": "StringType",
-    "sensitive": true,
     "minLength": 1,
     "maxLength": 63
   },
@@ -1335,22 +1355,29 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
-      {
-        "$ref": "#/112"
-      },
-      {
-        "$ref": "#/113"
-      },
-      {
-        "$ref": "#/114"
-      },
       {
         "$ref": "#/115"
       },
       {
         "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
       },
       {
         "$ref": "#/2"
@@ -1364,10 +1391,10 @@
     "baseProperties": {},
     "elements": {
       "microsoftEntra": {
-        "$ref": "#/91"
+        "$ref": "#/93"
       },
       "passwordMethod": {
-        "$ref": "#/105"
+        "$ref": "#/108"
       }
     }
   },
@@ -1375,7 +1402,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/authentications@2026-10-01-preview",
     "body": {
-      "$ref": "#/118"
+      "$ref": "#/122"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1405,28 +1432,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/120"
+          "$ref": "#/124"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/121"
+          "$ref": "#/125"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/122"
+          "$ref": "#/126"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/128"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -1440,7 +1467,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -1453,70 +1480,70 @@
     "properties": {
       "desiredState": {
         "type": {
-          "$ref": "#/127"
+          "$ref": "#/131"
         },
         "flags": 1,
         "description": "The requested capability state."
       },
       "effectiveState": {
         "type": {
-          "$ref": "#/134"
+          "$ref": "#/138"
         },
         "flags": 3,
         "description": "The current effective capability state."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/140"
+          "$ref": "#/145"
         },
         "flags": 2,
         "description": "The provisioning state of the latest capability mutation."
       },
       "autoUpgradeExtension": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/75"
         },
         "flags": 0,
         "description": "Whether HorizonDB may automatically upgrade the service-owned change data capture extension within the supported compatibility policy."
       },
       "replicationArchitecture": {
         "type": {
-          "$ref": "#/144"
+          "$ref": "#/149"
         },
         "flags": 3,
         "description": "The implementation architecture currently used for change capture."
       },
       "extension": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/150"
         },
         "flags": 3,
         "description": "The installed change data capture extension and its current lifecycle state."
       },
       "prerequisites": {
         "type": {
-          "$ref": "#/153"
+          "$ref": "#/158"
         },
         "flags": 3,
         "description": "The current readiness of change data capture engine and read-write endpoint prerequisites."
       },
       "destinationCount": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/167"
         },
         "flags": 3,
         "description": "The number of change data capture destinations under this cluster."
       },
       "configurationCount": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/167"
         },
         "flags": 3,
         "description": "The number of change data capture configurations under this cluster."
       },
       "status": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/168"
         },
         "flags": 3,
         "description": "Customer-safe health information for the capability."
@@ -1535,10 +1562,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/125"
+        "$ref": "#/129"
       },
       {
-        "$ref": "#/126"
+        "$ref": "#/130"
       },
       {
         "$ref": "#/2"
@@ -1573,22 +1600,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/128"
-      },
-      {
-        "$ref": "#/129"
-      },
-      {
-        "$ref": "#/130"
-      },
-      {
-        "$ref": "#/131"
-      },
-      {
         "$ref": "#/132"
       },
       {
         "$ref": "#/133"
+      },
+      {
+        "$ref": "#/134"
+      },
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
       },
       {
         "$ref": "#/2"
@@ -1616,22 +1643,29 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/135"
-      },
-      {
-        "$ref": "#/136"
-      },
-      {
-        "$ref": "#/137"
-      },
-      {
-        "$ref": "#/138"
-      },
-      {
         "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
       },
       {
         "$ref": "#/2"
@@ -1654,13 +1688,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/141"
+        "$ref": "#/146"
       },
       {
-        "$ref": "#/142"
+        "$ref": "#/147"
       },
       {
-        "$ref": "#/143"
+        "$ref": "#/148"
       },
       {
         "$ref": "#/2"
@@ -1687,7 +1721,7 @@
       },
       "state": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/157"
         },
         "flags": 3,
         "description": "The current extension lifecycle state."
@@ -1722,22 +1756,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/146"
-      },
-      {
-        "$ref": "#/147"
-      },
-      {
-        "$ref": "#/148"
-      },
-      {
-        "$ref": "#/149"
-      },
-      {
-        "$ref": "#/150"
-      },
-      {
         "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/154"
+      },
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
       },
       {
         "$ref": "#/2"
@@ -1750,14 +1784,14 @@
     "properties": {
       "engineConfigurationState": {
         "type": {
-          "$ref": "#/158"
+          "$ref": "#/163"
         },
         "flags": 3,
         "description": "The readiness of the required engine configuration."
       },
       "readWriteEndpointState": {
         "type": {
-          "$ref": "#/161"
+          "$ref": "#/166"
         },
         "flags": 3,
         "description": "The availability of the read-write endpoint required for engine mutations."
@@ -1784,16 +1818,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/154"
+        "$ref": "#/159"
       },
       {
-        "$ref": "#/155"
+        "$ref": "#/160"
       },
       {
-        "$ref": "#/156"
+        "$ref": "#/161"
       },
       {
-        "$ref": "#/157"
+        "$ref": "#/162"
       },
       {
         "$ref": "#/2"
@@ -1812,10 +1846,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/159"
+        "$ref": "#/164"
       },
       {
-        "$ref": "#/160"
+        "$ref": "#/165"
       },
       {
         "$ref": "#/2"
@@ -1849,7 +1883,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/changeDataCapture@2026-10-01-preview",
     "body": {
-      "$ref": "#/123"
+      "$ref": "#/127"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -1882,21 +1916,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/170"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/171"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/168"
+          "$ref": "#/173"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -1910,7 +1944,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -1930,7 +1964,7 @@
       },
       "usageProfile": {
         "type": {
-          "$ref": "#/170"
+          "$ref": "#/175"
         },
         "flags": 1,
         "description": "The immutable usage profile. API version 2026-10-01-preview accepts Mirroring only."
@@ -1951,49 +1985,49 @@
       },
       "desiredState": {
         "type": {
-          "$ref": "#/173"
+          "$ref": "#/178"
         },
         "flags": 1,
         "description": "The requested configuration state."
       },
       "effectiveState": {
         "type": {
-          "$ref": "#/180"
+          "$ref": "#/185"
         },
         "flags": 3,
         "description": "The current effective configuration state."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/186"
+          "$ref": "#/192"
         },
         "flags": 2,
         "description": "The provisioning state of the latest configuration mutation."
       },
       "extension": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/150"
         },
         "flags": 3,
         "description": "The change data capture extension state for the enrolled database."
       },
       "replication": {
         "type": {
-          "$ref": "#/187"
+          "$ref": "#/193"
         },
         "flags": 3,
         "description": "The known status of the destination-owned replication session."
       },
       "topology": {
         "type": {
-          "$ref": "#/198"
+          "$ref": "#/204"
         },
         "flags": 3,
         "description": "The current writer-topology binding for this logical stream."
       },
       "status": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/168"
         },
         "flags": 3,
         "description": "Customer-safe health information for the configuration."
@@ -2008,7 +2042,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/169"
+        "$ref": "#/174"
       },
       {
         "$ref": "#/2"
@@ -2027,10 +2061,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/171"
+        "$ref": "#/176"
       },
       {
-        "$ref": "#/172"
+        "$ref": "#/177"
       },
       {
         "$ref": "#/2"
@@ -2065,22 +2099,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/174"
-      },
-      {
-        "$ref": "#/175"
-      },
-      {
-        "$ref": "#/176"
-      },
-      {
-        "$ref": "#/177"
-      },
-      {
-        "$ref": "#/178"
-      },
-      {
         "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/184"
       },
       {
         "$ref": "#/2"
@@ -2108,22 +2142,29 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/181"
+        "$ref": "#/186"
       },
       {
-        "$ref": "#/182"
+        "$ref": "#/187"
       },
       {
-        "$ref": "#/183"
+        "$ref": "#/188"
       },
       {
-        "$ref": "#/184"
+        "$ref": "#/189"
       },
       {
-        "$ref": "#/185"
+        "$ref": "#/190"
+      },
+      {
+        "$ref": "#/191"
       },
       {
         "$ref": "#/2"
@@ -2136,7 +2177,7 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/197"
+          "$ref": "#/203"
         },
         "flags": 3,
         "description": "The current replication-session state."
@@ -2197,24 +2238,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/188"
-      },
-      {
-        "$ref": "#/189"
-      },
-      {
-        "$ref": "#/190"
-      },
-      {
-        "$ref": "#/191"
-      },
-      {
-        "$ref": "#/192"
-      },
-      {
-        "$ref": "#/193"
-      },
-      {
         "$ref": "#/194"
       },
       {
@@ -2222,6 +2245,24 @@
       },
       {
         "$ref": "#/196"
+      },
+      {
+        "$ref": "#/197"
+      },
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/202"
       },
       {
         "$ref": "#/2"
@@ -2234,14 +2275,14 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/204"
+          "$ref": "#/210"
         },
         "flags": 3,
         "description": "The configuration's relationship to the current writer topology."
       },
       "generation": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/167"
         },
         "flags": 3,
         "description": "A monotonically increasing topology generation for this logical stream."
@@ -2286,19 +2327,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/199"
+        "$ref": "#/205"
       },
       {
-        "$ref": "#/200"
+        "$ref": "#/206"
       },
       {
-        "$ref": "#/201"
+        "$ref": "#/207"
       },
       {
-        "$ref": "#/202"
+        "$ref": "#/208"
       },
       {
-        "$ref": "#/203"
+        "$ref": "#/209"
       },
       {
         "$ref": "#/2"
@@ -2309,7 +2350,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/changeDataCaptureConfigurations@2026-10-01-preview",
     "body": {
-      "$ref": "#/167"
+      "$ref": "#/172"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -2342,21 +2383,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/206"
+          "$ref": "#/212"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/207"
+          "$ref": "#/213"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/209"
+          "$ref": "#/215"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -2370,7 +2411,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -2383,28 +2424,28 @@
     "properties": {
       "destination": {
         "type": {
-          "$ref": "#/210"
+          "$ref": "#/216"
         },
         "flags": 1,
         "description": "The immutable Microsoft Fabric destination settings. Resubmitting the same values is accepted; changing them requires deleting and recreating the destination."
       },
       "desiredState": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/224"
         },
         "flags": 1,
         "description": "The requested destination state."
       },
       "effectiveState": {
         "type": {
-          "$ref": "#/226"
+          "$ref": "#/232"
         },
         "flags": 3,
         "description": "The current effective destination state."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/232"
+          "$ref": "#/239"
         },
         "flags": 2,
         "description": "The provisioning state of the latest destination mutation."
@@ -2418,14 +2459,14 @@
       },
       "configurationCount": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/167"
         },
         "flags": 3,
         "description": "The number of change data capture configurations that reference this destination."
       },
       "status": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/168"
         },
         "flags": 3,
         "description": "Customer-safe health information for the destination."
@@ -2439,7 +2480,7 @@
     "baseProperties": {
       "protocol": {
         "type": {
-          "$ref": "#/212"
+          "$ref": "#/218"
         },
         "flags": 1,
         "description": "The protocol used to communicate with the destination."
@@ -2447,7 +2488,7 @@
     },
     "elements": {
       "Fabric": {
-        "$ref": "#/213"
+        "$ref": "#/219"
       }
     }
   },
@@ -2459,7 +2500,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/211"
+        "$ref": "#/217"
       },
       {
         "$ref": "#/2"
@@ -2472,7 +2513,7 @@
     "properties": {
       "protocol": {
         "type": {
-          "$ref": "#/214"
+          "$ref": "#/220"
         },
         "flags": 1,
         "description": "Specifies the Microsoft Fabric native destination protocol."
@@ -2486,7 +2527,7 @@
       },
       "destinationType": {
         "type": {
-          "$ref": "#/215"
+          "$ref": "#/221"
         },
         "flags": 1,
         "description": "The destination family."
@@ -2513,10 +2554,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/216"
+        "$ref": "#/222"
       },
       {
-        "$ref": "#/217"
+        "$ref": "#/223"
       },
       {
         "$ref": "#/2"
@@ -2555,25 +2596,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/219"
-      },
-      {
-        "$ref": "#/220"
-      },
-      {
-        "$ref": "#/221"
-      },
-      {
-        "$ref": "#/222"
-      },
-      {
-        "$ref": "#/223"
-      },
-      {
-        "$ref": "#/224"
-      },
-      {
         "$ref": "#/225"
+      },
+      {
+        "$ref": "#/226"
+      },
+      {
+        "$ref": "#/227"
+      },
+      {
+        "$ref": "#/228"
+      },
+      {
+        "$ref": "#/229"
+      },
+      {
+        "$ref": "#/230"
+      },
+      {
+        "$ref": "#/231"
       },
       {
         "$ref": "#/2"
@@ -2601,22 +2642,29 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/227"
+        "$ref": "#/233"
       },
       {
-        "$ref": "#/228"
+        "$ref": "#/234"
       },
       {
-        "$ref": "#/229"
+        "$ref": "#/235"
       },
       {
-        "$ref": "#/230"
+        "$ref": "#/236"
       },
       {
-        "$ref": "#/231"
+        "$ref": "#/237"
+      },
+      {
+        "$ref": "#/238"
       },
       {
         "$ref": "#/2"
@@ -2627,7 +2675,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/changeDataCaptureDestinations@2026-10-01-preview",
     "body": {
-      "$ref": "#/208"
+      "$ref": "#/214"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -2660,21 +2708,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/234"
+          "$ref": "#/241"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/235"
+          "$ref": "#/242"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/237"
+          "$ref": "#/244"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
@@ -2688,7 +2736,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -2708,14 +2756,14 @@
       },
       "effectiveState": {
         "type": {
-          "$ref": "#/242"
+          "$ref": "#/249"
         },
         "flags": 3,
         "description": "The current assignment lifecycle state."
       },
       "activationState": {
         "type": {
-          "$ref": "#/248"
+          "$ref": "#/255"
         },
         "flags": 3,
         "description": "The current activation state within the parent destination."
@@ -2736,21 +2784,21 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/254"
+          "$ref": "#/262"
         },
         "flags": 2,
         "description": "The provisioning state of the latest identity-assignment mutation."
       },
       "validation": {
         "type": {
-          "$ref": "#/255"
+          "$ref": "#/263"
         },
         "flags": 3,
         "description": "The latest validation result for this identity assignment."
       },
       "status": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/168"
         },
         "flags": 3,
         "description": "Customer-safe health information for the identity assignment."
@@ -2777,16 +2825,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/238"
+        "$ref": "#/245"
       },
       {
-        "$ref": "#/239"
+        "$ref": "#/246"
       },
       {
-        "$ref": "#/240"
+        "$ref": "#/247"
       },
       {
-        "$ref": "#/241"
+        "$ref": "#/248"
       },
       {
         "$ref": "#/2"
@@ -2817,19 +2865,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/243"
+        "$ref": "#/250"
       },
       {
-        "$ref": "#/244"
+        "$ref": "#/251"
       },
       {
-        "$ref": "#/245"
+        "$ref": "#/252"
       },
       {
-        "$ref": "#/246"
+        "$ref": "#/253"
       },
       {
-        "$ref": "#/247"
+        "$ref": "#/254"
       },
       {
         "$ref": "#/2"
@@ -2857,22 +2905,29 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/249"
+        "$ref": "#/256"
       },
       {
-        "$ref": "#/250"
+        "$ref": "#/257"
       },
       {
-        "$ref": "#/251"
+        "$ref": "#/258"
       },
       {
-        "$ref": "#/252"
+        "$ref": "#/259"
       },
       {
-        "$ref": "#/253"
+        "$ref": "#/260"
+      },
+      {
+        "$ref": "#/261"
       },
       {
         "$ref": "#/2"
@@ -2885,7 +2940,7 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/260"
+          "$ref": "#/268"
         },
         "flags": 3,
         "description": "The current validation state."
@@ -2899,7 +2954,7 @@
       },
       "error": {
         "type": {
-          "$ref": "#/261"
+          "$ref": "#/269"
         },
         "flags": 2,
         "description": "The customer-safe validation error when validation failed."
@@ -2926,16 +2981,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/256"
+        "$ref": "#/264"
       },
       {
-        "$ref": "#/257"
+        "$ref": "#/265"
       },
       {
-        "$ref": "#/258"
+        "$ref": "#/266"
       },
       {
-        "$ref": "#/259"
+        "$ref": "#/267"
       },
       {
         "$ref": "#/2"
@@ -2969,14 +3024,14 @@
       },
       "details": {
         "type": {
-          "$ref": "#/262"
+          "$ref": "#/270"
         },
         "flags": 2,
         "description": "The error details."
       },
       "additionalInfo": {
         "type": {
-          "$ref": "#/265"
+          "$ref": "#/273"
         },
         "flags": 2,
         "description": "The error additional info."
@@ -2986,7 +3041,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/261"
+      "$ref": "#/269"
     }
   },
   {
@@ -3002,7 +3057,7 @@
       },
       "info": {
         "type": {
-          "$ref": "#/264"
+          "$ref": "#/272"
         },
         "flags": 2,
         "description": "The additional info."
@@ -3015,14 +3070,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/263"
+      "$ref": "#/271"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/changeDataCaptureDestinations/identityAssignments@2026-10-01-preview",
     "body": {
-      "$ref": "#/236"
+      "$ref": "#/243"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3052,35 +3107,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/267"
+          "$ref": "#/275"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/268"
+          "$ref": "#/276"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/269"
+          "$ref": "#/277"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/271"
+          "$ref": "#/279"
         },
         "flags": 1,
         "description": "The PostgreSQL role and Microsoft Entra principal mapping properties."
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -3093,14 +3148,14 @@
     "properties": {
       "principalName": {
         "type": {
-          "$ref": "#/272"
+          "$ref": "#/280"
         },
         "flags": 1,
         "description": "The display name or user principal name of the Microsoft Entra principal to map to the PostgreSQL role. For users, this is typically the user principal name, such as admin@contoso.com. For groups, this is the group display name. For service principals, this is the application display name."
       },
       "principalType": {
         "type": {
-          "$ref": "#/277"
+          "$ref": "#/285"
         },
         "flags": 1,
         "description": "The type of Microsoft Entra principal to map to the PostgreSQL role."
@@ -3121,7 +3176,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/283"
+          "$ref": "#/292"
         },
         "flags": 2,
         "description": "The provisioning state of the PostgreSQL role and Microsoft Entra principal mapping."
@@ -3152,16 +3207,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/273"
+        "$ref": "#/281"
       },
       {
-        "$ref": "#/274"
+        "$ref": "#/282"
       },
       {
-        "$ref": "#/275"
+        "$ref": "#/283"
       },
       {
-        "$ref": "#/276"
+        "$ref": "#/284"
       },
       {
         "$ref": "#/2"
@@ -3189,22 +3244,29 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/278"
+        "$ref": "#/286"
       },
       {
-        "$ref": "#/279"
+        "$ref": "#/287"
       },
       {
-        "$ref": "#/280"
+        "$ref": "#/288"
       },
       {
-        "$ref": "#/281"
+        "$ref": "#/289"
       },
       {
-        "$ref": "#/282"
+        "$ref": "#/290"
+      },
+      {
+        "$ref": "#/291"
       },
       {
         "$ref": "#/2"
@@ -3215,7 +3277,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/microsoftEntraAdministrators@2026-10-01-preview",
     "body": {
-      "$ref": "#/270"
+      "$ref": "#/278"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3248,35 +3310,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/285"
+          "$ref": "#/294"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/286"
+          "$ref": "#/295"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/288"
+          "$ref": "#/297"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
       },
-      "tags": {
-        "type": {
-          "$ref": "#/331"
-        },
-        "flags": 0,
-        "description": "Resource tags."
-      },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -3289,49 +3344,49 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/298"
+          "$ref": "#/307"
         },
         "flags": 2,
         "description": "Current state of the pool."
       },
       "computeModel": {
         "type": {
-          "$ref": "#/299"
+          "$ref": "#/308"
         },
         "flags": 1,
         "description": "The required compute model for the HorizonDB pool."
       },
       "nodeCount": {
         "type": {
-          "$ref": "#/307"
+          "$ref": "#/316"
         },
         "flags": 1,
         "description": "The required number of nodes to allocate and assign to the pool. Allowed values are 1 through 16. To deallocate runtime compute without changing the configured node count, stop the pool."
       },
       "highAvailability": {
         "type": {
-          "$ref": "#/308"
+          "$ref": "#/317"
         },
         "flags": 1,
         "description": "The required high-availability configuration for the pool. mode must be Disabled when nodeCount is 1, and must be AnyZone or ZoneRedundant when nodeCount is 2 through 16."
       },
       "parameterGroup": {
         "type": {
-          "$ref": "#/313"
+          "$ref": "#/322"
         },
-        "flags": 1,
-        "description": "The required parameter group associated with the pool. When creating a new pool in this API version, the caller must supply the corresponding default parameter group; customer-created parameter groups are not accepted during creation. For an existing pool, PUT or PATCH can associate either the corresponding default parameter group or a customer-created parameter group. The create-visible shape intentionally supports both resource ID forms so a future API version can allow customer-created parameter groups during creation without a breaking schema change."
+        "flags": 0,
+        "description": "The parameter group associated with the pool. When omitted during creation, the service applies the default parameter group compatible with the parent cluster's PostgreSQL version. When supplied during creation in this API version, it must reference the corresponding default parameter group; customer-created parameter groups are not accepted during creation. For an existing pool, PUT or PATCH can associate either the corresponding default parameter group or a customer-created parameter group. The create-visible shape intentionally supports both resource ID forms so a future API version can allow customer-created parameter groups during creation without a breaking schema change."
       },
       "scheduledMaintenance": {
         "type": {
-          "$ref": "#/322"
+          "$ref": "#/331"
         },
         "flags": 0,
         "description": "The scheduled maintenance configuration for the pool. The properties available depend on the selected maintenance management type."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/330"
+          "$ref": "#/340"
         },
         "flags": 2,
         "description": "The provisioning state of the pool."
@@ -3378,31 +3433,31 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/289"
+        "$ref": "#/298"
       },
       {
-        "$ref": "#/290"
+        "$ref": "#/299"
       },
       {
-        "$ref": "#/291"
+        "$ref": "#/300"
       },
       {
-        "$ref": "#/292"
+        "$ref": "#/301"
       },
       {
-        "$ref": "#/293"
+        "$ref": "#/302"
       },
       {
-        "$ref": "#/294"
+        "$ref": "#/303"
       },
       {
-        "$ref": "#/295"
+        "$ref": "#/304"
       },
       {
-        "$ref": "#/296"
+        "$ref": "#/305"
       },
       {
-        "$ref": "#/297"
+        "$ref": "#/306"
       },
       {
         "$ref": "#/2"
@@ -3415,28 +3470,28 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/301"
+          "$ref": "#/310"
         },
         "flags": 1,
         "description": "The type of compute model."
       },
       "computeProcessor": {
         "type": {
-          "$ref": "#/304"
+          "$ref": "#/313"
         },
         "flags": 1,
         "description": "The processor type for the compute model."
       },
       "computeGeneration": {
         "type": {
-          "$ref": "#/305"
+          "$ref": "#/314"
         },
         "flags": 1,
         "description": "The compute generation for the compute model."
       },
       "vCores": {
         "type": {
-          "$ref": "#/306"
+          "$ref": "#/315"
         },
         "flags": 1,
         "description": "The number of vCores. Allowed values are 1 through 192."
@@ -3451,7 +3506,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/300"
+        "$ref": "#/309"
       },
       {
         "$ref": "#/2"
@@ -3470,10 +3525,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/302"
+        "$ref": "#/311"
       },
       {
-        "$ref": "#/303"
+        "$ref": "#/312"
       },
       {
         "$ref": "#/2"
@@ -3500,7 +3555,7 @@
     "properties": {
       "mode": {
         "type": {
-          "$ref": "#/312"
+          "$ref": "#/321"
         },
         "flags": 1,
         "description": "The high-availability mode. Disabled is required when nodeCount is 1. AnyZone or ZoneRedundant is required when nodeCount is 2 through 16."
@@ -3523,13 +3578,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/309"
+        "$ref": "#/318"
       },
       {
-        "$ref": "#/310"
+        "$ref": "#/319"
       },
       {
-        "$ref": "#/311"
+        "$ref": "#/320"
       },
       {
         "$ref": "#/2"
@@ -3545,18 +3600,18 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The Azure resource ID of the associated parameter group. Initial pool creation in this API version requires the corresponding Microsoft.HorizonDb/locations/parameterGroups resource. For an existing pool, PUT can specify either the corresponding default group or a customer-created Microsoft.HorizonDb/parameterGroups resource."
+        "description": "The Azure resource ID of the associated parameter group. When the parameter group is supplied during initial pool creation in this API version, the ID must identify the corresponding Microsoft.HorizonDb/locations/parameterGroups resource. For an existing pool, PUT can specify either the corresponding default group or a customer-created Microsoft.HorizonDb/parameterGroups resource."
       },
       "applyMethod": {
         "type": {
-          "$ref": "#/316"
+          "$ref": "#/325"
         },
         "flags": 1,
         "description": "Determines when dynamic parameter changes from the associated parameter group become effective. Static parameter changes always require a customer-initiated pool Restart, regardless of this value. Stop followed by Start and scheduled maintenance do not apply pending parameter changes."
       },
       "syncStatus": {
         "type": {
-          "$ref": "#/321"
+          "$ref": "#/330"
         },
         "flags": 2,
         "description": "The synchronization status between the pool and its parameter group. PendingReboot changes remain pending across Stop, Start, and scheduled maintenance and become effective only after a customer-initiated Restart."
@@ -3575,10 +3630,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/314"
+        "$ref": "#/323"
       },
       {
-        "$ref": "#/315"
+        "$ref": "#/324"
       },
       {
         "$ref": "#/2"
@@ -3605,16 +3660,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/317"
+        "$ref": "#/326"
       },
       {
-        "$ref": "#/318"
+        "$ref": "#/327"
       },
       {
-        "$ref": "#/319"
+        "$ref": "#/328"
       },
       {
-        "$ref": "#/320"
+        "$ref": "#/329"
       },
       {
         "$ref": "#/2"
@@ -3628,7 +3683,7 @@
     "baseProperties": {},
     "elements": {
       "System": {
-        "$ref": "#/323"
+        "$ref": "#/332"
       }
     }
   },
@@ -3638,7 +3693,7 @@
     "properties": {
       "maintenanceManagementType": {
         "type": {
-          "$ref": "#/324"
+          "$ref": "#/333"
         },
         "flags": 1,
         "description": "Specifies whether scheduled maintenance is managed by the system or by the user."
@@ -3670,22 +3725,29 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/325"
+        "$ref": "#/334"
       },
       {
-        "$ref": "#/326"
+        "$ref": "#/335"
       },
       {
-        "$ref": "#/327"
+        "$ref": "#/336"
       },
       {
-        "$ref": "#/328"
+        "$ref": "#/337"
       },
       {
-        "$ref": "#/329"
+        "$ref": "#/338"
+      },
+      {
+        "$ref": "#/339"
       },
       {
         "$ref": "#/2"
@@ -3693,18 +3755,10 @@
     ]
   },
   {
-    "$type": "ObjectType",
-    "name": "PoolTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
-    }
-  },
-  {
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/pools@2026-10-01-preview",
     "body": {
-      "$ref": "#/287"
+      "$ref": "#/296"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3712,8 +3766,8 @@
   {
     "$type": "StringType",
     "minLength": 1,
-    "maxLength": 128,
-    "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
+    "maxLength": 80,
+    "pattern": "^[a-zA-Z0-9](?:[a-zA-Z0-9_.-]{0,78}[a-zA-Z0-9_])?$"
   },
   {
     "$type": "StringLiteralType",
@@ -3736,35 +3790,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/333"
+          "$ref": "#/342"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/334"
+          "$ref": "#/343"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/335"
+          "$ref": "#/344"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/337"
+          "$ref": "#/346"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -3777,28 +3831,28 @@
     "properties": {
       "startIpAddress": {
         "type": {
-          "$ref": "#/338"
+          "$ref": "#/347"
         },
         "flags": 1,
         "description": "The start IPv4 address of the firewall rule in dotted-decimal notation."
       },
       "endIpAddress": {
         "type": {
-          "$ref": "#/338"
+          "$ref": "#/347"
         },
         "flags": 1,
         "description": "The end IPv4 address of the firewall rule in dotted-decimal notation. This address must be numerically greater than or equal to startIpAddress."
       },
       "description": {
         "type": {
-          "$ref": "#/76"
+          "$ref": "#/77"
         },
         "flags": 0,
         "description": "The description of the HorizonDB firewall rule. The maximum length is 1024 characters."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/344"
+          "$ref": "#/354"
         },
         "flags": 2,
         "description": "The provisioning state of the firewall rule."
@@ -3830,22 +3884,29 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/339"
+        "$ref": "#/348"
       },
       {
-        "$ref": "#/340"
+        "$ref": "#/349"
       },
       {
-        "$ref": "#/341"
+        "$ref": "#/350"
       },
       {
-        "$ref": "#/342"
+        "$ref": "#/351"
       },
       {
-        "$ref": "#/343"
+        "$ref": "#/352"
+      },
+      {
+        "$ref": "#/353"
       },
       {
         "$ref": "#/2"
@@ -3856,7 +3917,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/pools/firewallRules@2026-10-01-preview",
     "body": {
-      "$ref": "#/336"
+      "$ref": "#/345"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -3889,28 +3950,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/346"
+          "$ref": "#/356"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/347"
+          "$ref": "#/357"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/349"
+          "$ref": "#/359"
         },
         "flags": 0,
         "description": "Resource properties."
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -3923,28 +3984,28 @@
     "properties": {
       "groupIds": {
         "type": {
-          "$ref": "#/350"
+          "$ref": "#/360"
         },
         "flags": 2,
         "description": "The group ids for the private endpoint resource."
       },
       "privateEndpoint": {
         "type": {
-          "$ref": "#/351"
+          "$ref": "#/361"
         },
         "flags": 0,
         "description": "The private endpoint resource."
       },
       "privateLinkServiceConnectionState": {
         "type": {
-          "$ref": "#/352"
+          "$ref": "#/362"
         },
         "flags": 1,
         "description": "A collection of information about the state of the connection between service consumer and provider."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/361"
+          "$ref": "#/371"
         },
         "flags": 2,
         "description": "The provisioning state of the private endpoint connection resource."
@@ -3976,7 +4037,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/356"
+          "$ref": "#/366"
         },
         "flags": 0,
         "description": "Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
@@ -4013,13 +4074,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/353"
+        "$ref": "#/363"
       },
       {
-        "$ref": "#/354"
+        "$ref": "#/364"
       },
       {
-        "$ref": "#/355"
+        "$ref": "#/365"
       },
       {
         "$ref": "#/2"
@@ -4046,16 +4107,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/357"
+        "$ref": "#/367"
       },
       {
-        "$ref": "#/358"
+        "$ref": "#/368"
       },
       {
-        "$ref": "#/359"
+        "$ref": "#/369"
       },
       {
-        "$ref": "#/360"
+        "$ref": "#/370"
       },
       {
         "$ref": "#/2"
@@ -4066,7 +4127,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/privateEndpointConnections@2026-10-01-preview",
     "body": {
-      "$ref": "#/348"
+      "$ref": "#/358"
     },
     "readableScopes": 8,
     "writableScopes": 8
@@ -4096,35 +4157,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/363"
+          "$ref": "#/373"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/364"
+          "$ref": "#/374"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/365"
+          "$ref": "#/375"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/367"
+          "$ref": "#/377"
         },
         "flags": 2,
         "description": "The resource-specific properties for this resource."
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -4137,21 +4198,21 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/373"
+          "$ref": "#/384"
         },
         "flags": 2,
         "description": "The provisioning state of the capability catalog entry."
       },
       "clusterCapabilities": {
         "type": {
-          "$ref": "#/374"
+          "$ref": "#/385"
         },
         "flags": 3,
         "description": "The Cluster capabilities available in the region."
       },
       "poolCapabilities": {
         "type": {
-          "$ref": "#/389"
+          "$ref": "#/400"
         },
         "flags": 3,
         "description": "The Pool capabilities available in the region, including processor, generation, and compute-model details."
@@ -4179,22 +4240,29 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/368"
+        "$ref": "#/378"
       },
       {
-        "$ref": "#/369"
+        "$ref": "#/379"
       },
       {
-        "$ref": "#/370"
+        "$ref": "#/380"
       },
       {
-        "$ref": "#/371"
+        "$ref": "#/381"
       },
       {
-        "$ref": "#/372"
+        "$ref": "#/382"
+      },
+      {
+        "$ref": "#/383"
       },
       {
         "$ref": "#/2"
@@ -4207,21 +4275,21 @@
     "properties": {
       "recommendedPostgreSqlVersion": {
         "type": {
-          "$ref": "#/377"
+          "$ref": "#/388"
         },
         "flags": 3,
         "description": "The PostgreSQL major version recommended for clients to select for HorizonDB Clusters in the region. This recommendation does not describe backend behavior when the PostgreSQL version is omitted from a request."
       },
       "supportedPostgreSqlVersions": {
         "type": {
-          "$ref": "#/386"
+          "$ref": "#/397"
         },
         "flags": 3,
         "description": "The PostgreSQL major versions supported by Clusters in the region."
       },
       "supportedFeatures": {
         "type": {
-          "$ref": "#/388"
+          "$ref": "#/399"
         },
         "flags": 3,
         "description": "Additional Cluster features supported in the region."
@@ -4240,10 +4308,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/375"
+        "$ref": "#/386"
       },
       {
-        "$ref": "#/376"
+        "$ref": "#/387"
       },
       {
         "$ref": "#/2"
@@ -4256,14 +4324,14 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/381"
+          "$ref": "#/392"
         },
         "flags": 3,
         "description": "The PostgreSQL major version."
       },
       "supportedVersionsToUpgrade": {
         "type": {
-          "$ref": "#/385"
+          "$ref": "#/396"
         },
         "flags": 3,
         "description": "The PostgreSQL major versions to which this version can be upgraded in place. API version 2026-10-01-preview does not support in-place PostgreSQL major-version upgrades, so this array is always empty."
@@ -4282,10 +4350,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/379"
+        "$ref": "#/390"
       },
       {
-        "$ref": "#/380"
+        "$ref": "#/391"
       },
       {
         "$ref": "#/2"
@@ -4304,10 +4372,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/382"
+        "$ref": "#/393"
       },
       {
-        "$ref": "#/383"
+        "$ref": "#/394"
       },
       {
         "$ref": "#/2"
@@ -4317,13 +4385,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/384"
+      "$ref": "#/395"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/378"
+      "$ref": "#/389"
     }
   },
   {
@@ -4342,7 +4410,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/387"
+      "$ref": "#/398"
     }
   },
   {
@@ -4351,21 +4419,21 @@
     "properties": {
       "recommendedComputeProcessor": {
         "type": {
-          "$ref": "#/392"
+          "$ref": "#/403"
         },
         "flags": 3,
         "description": "The compute processor recommended for clients to select for HorizonDB Pools in the region. This recommendation does not describe backend behavior when the compute processor is omitted from a request."
       },
       "supportedProcessors": {
         "type": {
-          "$ref": "#/407"
+          "$ref": "#/418"
         },
         "flags": 3,
         "description": "The processor families and their compute capabilities supported by Pools in the region."
       },
       "supportedFeatures": {
         "type": {
-          "$ref": "#/409"
+          "$ref": "#/420"
         },
         "flags": 3,
         "description": "Additional Pool features supported in the region independently of a processor, generation, or compute model."
@@ -4384,10 +4452,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/390"
+        "$ref": "#/401"
       },
       {
-        "$ref": "#/391"
+        "$ref": "#/402"
       },
       {
         "$ref": "#/2"
@@ -4400,14 +4468,14 @@
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/396"
+          "$ref": "#/407"
         },
         "flags": 3,
         "description": "The name of the processor family."
       },
       "supportedGenerations": {
         "type": {
-          "$ref": "#/406"
+          "$ref": "#/417"
         },
         "flags": 3,
         "description": "The compute generations supported by the processor family."
@@ -4426,10 +4494,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/394"
+        "$ref": "#/405"
       },
       {
-        "$ref": "#/395"
+        "$ref": "#/406"
       },
       {
         "$ref": "#/2"
@@ -4442,21 +4510,21 @@
     "properties": {
       "computeGeneration": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/167"
         },
         "flags": 3,
         "description": "The numeric compute generation used when configuring a HorizonDB pool."
       },
       "recommendedComputeModelType": {
         "type": {
-          "$ref": "#/399"
+          "$ref": "#/410"
         },
         "flags": 3,
         "description": "The compute model type recommended for clients to select for this compute generation. This recommendation does not describe backend behavior when the compute model type is omitted from a request."
       },
       "supportedComputeModels": {
         "type": {
-          "$ref": "#/405"
+          "$ref": "#/416"
         },
         "flags": 3,
         "description": "The compute models supported by the compute generation."
@@ -4471,7 +4539,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/398"
+        "$ref": "#/409"
       },
       {
         "$ref": "#/2"
@@ -4485,7 +4553,7 @@
     "baseProperties": {},
     "elements": {
       "Provisioned": {
-        "$ref": "#/401"
+        "$ref": "#/412"
       }
     }
   },
@@ -4495,21 +4563,21 @@
     "properties": {
       "recommendedVCoreCount": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/167"
         },
         "flags": 3,
         "description": "The provisioned vCore count recommended for clients to select. This recommendation does not describe backend behavior when vCores is omitted from a request."
       },
       "supportedComputeSizes": {
         "type": {
-          "$ref": "#/403"
+          "$ref": "#/414"
         },
         "flags": 3,
         "description": "The supported provisioned compute sizes."
       },
       "type": {
         "type": {
-          "$ref": "#/404"
+          "$ref": "#/415"
         },
         "flags": 1,
         "description": "The compute model represented by these capabilities."
@@ -4522,14 +4590,14 @@
     "properties": {
       "vCores": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/167"
         },
         "flags": 3,
         "description": "The number of vCores in the configuration."
       },
       "memoryPerVCoreInMb": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/167"
         },
         "flags": 3,
         "description": "The memory in megabytes available for each vCore."
@@ -4539,7 +4607,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/402"
+      "$ref": "#/413"
     }
   },
   {
@@ -4549,19 +4617,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/400"
+      "$ref": "#/411"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/397"
+      "$ref": "#/408"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/393"
+      "$ref": "#/404"
     }
   },
   {
@@ -4580,14 +4648,14 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/408"
+      "$ref": "#/419"
     }
   },
   {
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/locations/capabilities@2026-10-01-preview",
     "body": {
-      "$ref": "#/366"
+      "$ref": "#/376"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -4617,35 +4685,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/411"
+          "$ref": "#/422"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/412"
+          "$ref": "#/423"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/413"
+          "$ref": "#/424"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/415"
+          "$ref": "#/426"
         },
         "flags": 2,
         "description": "The resource-specific properties for this resource."
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -4658,14 +4726,14 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/421"
+          "$ref": "#/433"
         },
         "flags": 2,
         "description": "The provisioning state of the default parameter group."
       },
       "parameters": {
         "type": {
-          "$ref": "#/422"
+          "$ref": "#/434"
         },
         "flags": 1,
         "description": "Engine-defined parameters in the default parameter group. Service and other non-engine entries are excluded."
@@ -4679,7 +4747,7 @@
       },
       "postgreSqlVersion": {
         "type": {
-          "$ref": "#/425"
+          "$ref": "#/437"
         },
         "flags": 1,
         "description": "PostgreSQL version for which this default parameter group is valid."
@@ -4707,22 +4775,29 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/416"
+        "$ref": "#/427"
       },
       {
-        "$ref": "#/417"
+        "$ref": "#/428"
       },
       {
-        "$ref": "#/418"
+        "$ref": "#/429"
       },
       {
-        "$ref": "#/419"
+        "$ref": "#/430"
       },
       {
-        "$ref": "#/420"
+        "$ref": "#/431"
+      },
+      {
+        "$ref": "#/432"
       },
       {
         "$ref": "#/2"
@@ -4732,7 +4807,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/70"
+      "$ref": "#/71"
     }
   },
   {
@@ -4747,10 +4822,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/423"
+        "$ref": "#/435"
       },
       {
-        "$ref": "#/424"
+        "$ref": "#/436"
       },
       {
         "$ref": "#/2"
@@ -4761,7 +4836,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/locations/parameterGroups@2026-10-01-preview",
     "body": {
-      "$ref": "#/414"
+      "$ref": "#/425"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -4794,28 +4869,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/427"
+          "$ref": "#/439"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/428"
+          "$ref": "#/440"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/430"
+          "$ref": "#/442"
         },
         "flags": 2,
         "description": "The resource-specific properties for this resource."
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -4828,7 +4903,7 @@
     "properties": {
       "scope": {
         "type": {
-          "$ref": "#/433"
+          "$ref": "#/445"
         },
         "flags": 3,
         "description": "The scope of the endpoint. Cluster-scoped Endpoints provide the cluster connection, and Pool-scoped Endpoints provide read-only connections to eligible nodes in one pool."
@@ -4849,7 +4924,7 @@
       },
       "role": {
         "type": {
-          "$ref": "#/436"
+          "$ref": "#/448"
         },
         "flags": 3,
         "description": "The routing role of the endpoint. A Cluster-scoped Endpoint normally has the ReadWrite role. Pool-scoped Endpoints have the ReadOnly role and route only to allocated nodes in the associated Pool that are not currently playing the read-write role. A Pool-scoped ReadOnly Endpoint has no routing destination unless at least one such node exists, including when the Pool is Stopped, has zero allocated nodes, or has only one allocated node and that node is playing the read-write role."
@@ -4868,10 +4943,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/431"
+        "$ref": "#/443"
       },
       {
-        "$ref": "#/432"
+        "$ref": "#/444"
       },
       {
         "$ref": "#/2"
@@ -4890,10 +4965,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/434"
+        "$ref": "#/446"
       },
       {
-        "$ref": "#/435"
+        "$ref": "#/447"
       },
       {
         "$ref": "#/2"
@@ -4904,7 +4979,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/endpoints@2026-10-01-preview",
     "body": {
-      "$ref": "#/429"
+      "$ref": "#/441"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -4934,35 +5009,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/438"
+          "$ref": "#/450"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/439"
+          "$ref": "#/451"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/440"
+          "$ref": "#/452"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/442"
+          "$ref": "#/454"
         },
         "flags": 2,
         "description": "The resource-specific properties for this resource."
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -4975,7 +5050,7 @@
     "properties": {
       "state": {
         "type": {
-          "$ref": "#/445"
+          "$ref": "#/457"
         },
         "flags": 1,
         "description": "Specifies whether HorizonDB captures this type of log. Disabling capture stops the production of new log files; existing files remain available until their retention period expires."
@@ -4989,7 +5064,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/451"
+          "$ref": "#/464"
         },
         "flags": 2,
         "description": "The provisioning state of the log capture configuration."
@@ -5008,10 +5083,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/443"
+        "$ref": "#/455"
       },
       {
-        "$ref": "#/444"
+        "$ref": "#/456"
       },
       {
         "$ref": "#/2"
@@ -5039,22 +5114,29 @@
     "value": "Provisioning"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/446"
+        "$ref": "#/458"
       },
       {
-        "$ref": "#/447"
+        "$ref": "#/459"
       },
       {
-        "$ref": "#/448"
+        "$ref": "#/460"
       },
       {
-        "$ref": "#/449"
+        "$ref": "#/461"
       },
       {
-        "$ref": "#/450"
+        "$ref": "#/462"
+      },
+      {
+        "$ref": "#/463"
       },
       {
         "$ref": "#/2"
@@ -5065,7 +5147,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/logCaptureConfigurations@2026-10-01-preview",
     "body": {
-      "$ref": "#/441"
+      "$ref": "#/453"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -5085,194 +5167,6 @@
   {
     "$type": "ObjectType",
     "name": "Microsoft.HorizonDb/clusters/logFiles",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/453"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/454"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/455"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/457"
-        },
-        "flags": 2,
-        "description": "The resource-specific properties for this resource."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/53"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "LogFileProperties",
-    "properties": {
-      "logType": {
-        "type": {
-          "$ref": "#/459"
-        },
-        "flags": 3,
-        "description": "The type of the captured log file."
-      },
-      "createdAtUtc": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 3,
-        "description": "The date and time when the log file was created, in UTC."
-      },
-      "lastModifiedAtUtc": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 3,
-        "description": "The date and time when the log file was last modified, in UTC."
-      },
-      "retentionExpiresAtUtc": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 3,
-        "description": "The date and time when the log file expires according to its retention period, in UTC."
-      },
-      "isMutable": {
-        "type": {
-          "$ref": "#/74"
-        },
-        "flags": 3,
-        "description": "Whether the platform can still append to or otherwise modify the log file."
-      },
-      "sizeInKilobytes": {
-        "type": {
-          "$ref": "#/460"
-        },
-        "flags": 3,
-        "description": "The size of the log file in kilobytes, where one kilobyte is 1024 bytes."
-      },
-      "pool": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 3,
-        "description": "The name of the HorizonDB pool that the node generating the log file belongs to."
-      },
-      "node": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 3,
-        "description": "The node that generated the log file in the HorizonDB cluster."
-      },
-      "role": {
-        "type": {
-          "$ref": "#/464"
-        },
-        "flags": 3,
-        "description": "The role performed by the node that generated the log file."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "PostgreSqlServer"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/458"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "IntegerType",
-    "minValue": 0
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ReadWrite"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ReadOnly"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Unassigned"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/461"
-      },
-      {
-        "$ref": "#/462"
-      },
-      {
-        "$ref": "#/463"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.HorizonDb/clusters/logFiles@2026-10-01-preview",
-    "body": {
-      "$ref": "#/456"
-    },
-    "readableScopes": 8,
-    "writableScopes": 0
-  },
-  {
-    "$type": "StringType",
-    "minLength": 8,
-    "maxLength": 8,
-    "pattern": "^[A-Z0-9]{4}-[A-Z0-9]{3}$"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.HorizonDb/clusters/pools/maintenanceEvents"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2026-10-01-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.HorizonDb/clusters/pools/maintenanceEvents",
     "properties": {
       "id": {
         "type": {
@@ -5311,7 +5205,195 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogFileProperties",
+    "properties": {
+      "logType": {
+        "type": {
+          "$ref": "#/472"
+        },
+        "flags": 3,
+        "description": "The type of the captured log file."
+      },
+      "createdAtUtc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The date and time when the log file was created, in UTC."
+      },
+      "lastModifiedAtUtc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The date and time when the log file was last modified, in UTC."
+      },
+      "retentionExpiresAtUtc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The date and time when the log file expires according to its retention period, in UTC."
+      },
+      "isMutable": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 3,
+        "description": "Whether the platform can still append to or otherwise modify the log file."
+      },
+      "sizeInKilobytes": {
+        "type": {
+          "$ref": "#/473"
+        },
+        "flags": 3,
+        "description": "The size of the log file in kilobytes, where one kilobyte is 1024 bytes."
+      },
+      "pool": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 3,
+        "description": "The name of the HorizonDB pool that the node generating the log file belongs to."
+      },
+      "node": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The node that generated the log file in the HorizonDB cluster."
+      },
+      "role": {
+        "type": {
+          "$ref": "#/477"
+        },
+        "flags": 3,
+        "description": "The role performed by the node that generated the log file."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PostgreSqlServer"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/471"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadWrite"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unassigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/474"
+      },
+      {
+        "$ref": "#/475"
+      },
+      {
+        "$ref": "#/476"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HorizonDb/clusters/logFiles@2026-10-01-preview",
+    "body": {
+      "$ref": "#/469"
+    },
+    "readableScopes": 8,
+    "writableScopes": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 8,
+    "maxLength": 8,
+    "pattern": "^[A-Z0-9]{4}-[A-Z0-9]{3}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HorizonDb/clusters/pools/maintenanceEvents"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2026-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HorizonDb/clusters/pools/maintenanceEvents",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/479"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/480"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/481"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/483"
+        },
+        "flags": 2,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -5331,7 +5413,7 @@
       },
       "maintenanceType": {
         "type": {
-          "$ref": "#/472"
+          "$ref": "#/485"
         },
         "flags": 3,
         "description": "The maintenance type."
@@ -5345,7 +5427,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/478"
+          "$ref": "#/491"
         },
         "flags": 3,
         "description": "The customer-facing status of the maintenance event."
@@ -5373,7 +5455,7 @@
       },
       "deferrable": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/75"
         },
         "flags": 3,
         "description": "Indicates whether the customer can reschedule this maintenance event."
@@ -5416,7 +5498,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/471"
+        "$ref": "#/484"
       },
       {
         "$ref": "#/2"
@@ -5447,19 +5529,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/473"
+        "$ref": "#/486"
       },
       {
-        "$ref": "#/474"
+        "$ref": "#/487"
       },
       {
-        "$ref": "#/475"
+        "$ref": "#/488"
       },
       {
-        "$ref": "#/476"
+        "$ref": "#/489"
       },
       {
-        "$ref": "#/477"
+        "$ref": "#/490"
       },
       {
         "$ref": "#/2"
@@ -5470,7 +5552,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/pools/maintenanceEvents@2026-10-01-preview",
     "body": {
-      "$ref": "#/469"
+      "$ref": "#/482"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -5500,35 +5582,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/480"
+          "$ref": "#/493"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/481"
+          "$ref": "#/494"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/482"
+          "$ref": "#/495"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/484"
+          "$ref": "#/497"
         },
         "flags": 2,
         "description": "The resource-specific properties for this resource."
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -5541,7 +5623,7 @@
     "properties": {
       "role": {
         "type": {
-          "$ref": "#/488"
+          "$ref": "#/501"
         },
         "flags": 3,
         "description": "The current role performed by the node within its pool."
@@ -5571,13 +5653,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/485"
+        "$ref": "#/498"
       },
       {
-        "$ref": "#/486"
+        "$ref": "#/499"
       },
       {
-        "$ref": "#/487"
+        "$ref": "#/500"
       },
       {
         "$ref": "#/2"
@@ -5588,7 +5670,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/pools/nodes@2026-10-01-preview",
     "body": {
-      "$ref": "#/483"
+      "$ref": "#/496"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -5620,35 +5702,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/490"
+          "$ref": "#/503"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/491"
+          "$ref": "#/504"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/492"
+          "$ref": "#/505"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/494"
+          "$ref": "#/507"
         },
         "flags": 2,
         "description": "The resource-specific properties for this resource."
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -5668,14 +5750,14 @@
       },
       "requiredMembers": {
         "type": {
-          "$ref": "#/495"
+          "$ref": "#/508"
         },
         "flags": 2,
         "description": "The private link resource required member names."
       },
       "requiredZoneNames": {
         "type": {
-          "$ref": "#/496"
+          "$ref": "#/509"
         },
         "flags": 0,
         "description": "The private link resource private link DNS zone name."
@@ -5698,7 +5780,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.HorizonDb/clusters/privateLinkResources@2026-10-01-preview",
     "body": {
-      "$ref": "#/493"
+      "$ref": "#/506"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -5716,14 +5798,14 @@
       },
       "identity": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/46"
         },
         "flags": 0,
         "description": "The managed service identities assigned to this resource. Omitting the entire identity property from PUT or PATCH preserves all current assignments. When provided, PUT replaces the user-assigned identity set and PATCH merges it; null PATCH dictionary entries remove individual identities. Setting type to None clears all assignments."
       },
       "tags": {
         "type": {
-          "$ref": "#/499"
+          "$ref": "#/512"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -5758,7 +5840,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -5779,7 +5861,7 @@
     "resourceType": "Microsoft.HorizonDb/clusters",
     "apiVersion": "2026-10-01-preview",
     "output": {
-      "$ref": "#/498"
+      "$ref": "#/511"
     }
   },
   {
@@ -5795,7 +5877,7 @@
       },
       "drainExistingSessions": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/75"
         },
         "flags": 0,
         "description": "Whether existing destination sessions should drain before the identity cutover. The default is false."
@@ -5808,7 +5890,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/503"
+          "$ref": "#/516"
         },
         "flags": 3,
         "description": "The completed activation status."
@@ -5839,10 +5921,10 @@
     "resourceType": "Microsoft.HorizonDb/clusters/changeDataCaptureDestinations",
     "apiVersion": "2026-10-01-preview",
     "output": {
-      "$ref": "#/502"
+      "$ref": "#/515"
     },
     "input": {
-      "$ref": "#/501"
+      "$ref": "#/514"
     }
   },
   {
@@ -5851,7 +5933,7 @@
     "properties": {
       "downloadUri": {
         "type": {
-          "$ref": "#/506"
+          "$ref": "#/519"
         },
         "flags": 1,
         "description": "A short-lived signed URL from which the original log file can be downloaded."
@@ -5875,7 +5957,7 @@
     "resourceType": "Microsoft.HorizonDb/clusters/logFiles",
     "apiVersion": "2026-10-01-preview",
     "output": {
-      "$ref": "#/505"
+      "$ref": "#/518"
     }
   },
   {
@@ -5884,17 +5966,10 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/288"
+          "$ref": "#/297"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
-      },
-      "tags": {
-        "type": {
-          "$ref": "#/509"
-        },
-        "flags": 0,
-        "description": "Resource tags."
       },
       "id": {
         "type": {
@@ -5919,19 +5994,11 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PoolTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
     }
   },
   {
@@ -5940,7 +6007,7 @@
     "resourceType": "Microsoft.HorizonDb/clusters/pools",
     "apiVersion": "2026-10-01-preview",
     "output": {
-      "$ref": "#/508"
+      "$ref": "#/521"
     }
   },
   {
@@ -5949,7 +6016,7 @@
     "resourceType": "Microsoft.HorizonDb/clusters/pools",
     "apiVersion": "2026-10-01-preview",
     "output": {
-      "$ref": "#/508"
+      "$ref": "#/521"
     }
   },
   {
@@ -5958,7 +6025,7 @@
     "resourceType": "Microsoft.HorizonDb/clusters/pools",
     "apiVersion": "2026-10-01-preview",
     "output": {
-      "$ref": "#/508"
+      "$ref": "#/521"
     }
   },
   {
@@ -5981,7 +6048,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/519"
+          "$ref": "#/531"
         },
         "flags": 0,
         "description": "The status of the maintenance event."
@@ -6002,7 +6069,7 @@
       },
       "appliedNow": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/75"
         },
         "flags": 0,
         "description": "Indicates whether the maintenance event was requested to be applied immediately. The value is true for apply-now and false for reschedule."
@@ -6040,19 +6107,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/514"
+        "$ref": "#/526"
       },
       {
-        "$ref": "#/515"
+        "$ref": "#/527"
       },
       {
-        "$ref": "#/516"
+        "$ref": "#/528"
       },
       {
-        "$ref": "#/517"
+        "$ref": "#/529"
       },
       {
-        "$ref": "#/518"
+        "$ref": "#/530"
       },
       {
         "$ref": "#/2"
@@ -6065,7 +6132,7 @@
     "resourceType": "Microsoft.HorizonDb/clusters/pools/maintenanceEvents",
     "apiVersion": "2026-10-01-preview",
     "output": {
-      "$ref": "#/513"
+      "$ref": "#/525"
     }
   },
   {
@@ -6087,10 +6154,10 @@
     "resourceType": "Microsoft.HorizonDb/clusters/pools/maintenanceEvents",
     "apiVersion": "2026-10-01-preview",
     "output": {
-      "$ref": "#/513"
+      "$ref": "#/525"
     },
     "input": {
-      "$ref": "#/521"
+      "$ref": "#/533"
     }
   }
 ]

@@ -3203,7 +3203,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **backupStorageAccessTier**: 'Archive' | 'Hot' | string: The BackupStorageAccessTier for the LTR backups
 * **monthlyRetention**: string: The monthly retention policy for an LTR backup in an ISO 8601 format.
 * **timeBasedImmutability**: 'Disabled' | 'Enabled' | string: The setting for whether to enable time-based immutability for future backups. When set, future backups will have TimeBasedImmutability enabled.
-* **timeBasedImmutabilityMode**: 'Locked' | 'Unlocked' | string: The setting for time-based immutability mode for future backup (Value can be either Locked or UnLocked. Only effective if TimeBasedImmutability is enabled). Caution: Immutability of LTR backup cannot be removed if TimeBasedImmutabilityMode is Locked.
+* **timeBasedImmutabilityMode**: 'Locked' | 'Unlocked' | string: The setting for time-based immutability mode for future backup (Value can be either Locked or Unlocked. Only effective if TimeBasedImmutability is enabled). Caution: Immutability of LTR backup cannot be removed if TimeBasedImmutabilityMode is Locked.
 * **weeklyRetention**: string: The weekly retention policy for an LTR backup in an ISO 8601 format.
 * **weekOfYear**: int: The week of year to take the yearly backup in an ISO 8601 format.
 * **yearlyRetention**: string: The yearly retention policy for an LTR backup in an ISO 8601 format.
