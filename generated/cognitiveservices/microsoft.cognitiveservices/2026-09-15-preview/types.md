@@ -94,18 +94,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.CognitiveServices/accounts/connections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CognitiveServices/accounts/costControls@2026-09-15-preview
-* **Readable Scope(s)**: ResourceGroup
-* **Writable Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2026-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): The entity tag used for optimistic concurrency.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,63}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [CostControlProperties](#costcontrolproperties): The resource-specific properties for this resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.CognitiveServices/accounts/costControls' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.CognitiveServices/accounts/defenderForAISettings@2026-09-15-preview
 * **Readable Scope(s)**: ResourceGroup
 * **Writable Scope(s)**: ResourceGroup
@@ -635,9 +623,6 @@
 * **capabilities**: [SkuCapability](#skucapability)[] (ReadOnly): Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
 * **capabilitySettings**: [CapabilitySettings](#capabilitysettings): Reusable default agent capability settings inherited by child projects.
 * **commitmentPlanAssociations**: [CommitmentPlanAssociation](#commitmentplanassociation)[] (ReadOnly): The commitment plan associations of Cognitive Services account.
-* **costControlConnections**: [CostControlConnections](#costcontrolconnections): The account-level connections used to publish cost control telemetry and events. Application Insights is optional for attachment, accounting, and enforcement and can be configured later. Event Grid must be configured before attaching a cost control with an alert threshold.
-* **costControlIds**: string[] {maxLength: 1}: The full resource IDs of cost controls directly attached to this account.
-At the moment the service only supports a single cost control. This will be expanded in future API versions.
 * **customSubDomainName**: string: Optional subdomain name used for token-based authentication.
 * **dateCreated**: string (ReadOnly): Gets the date of cognitive services account creation.
 * **defaultProject**: string: Specifies the project, by project name, that is targeted when data plane endpoints are called without a project parameter.
@@ -664,6 +649,7 @@ At the moment the service only supports a single cost control. This will be expa
 * **scheduledPurgeDate**: string (ReadOnly): The scheduled purge date, only available for deleted account.
 * **skuChangeInfo**: [SkuChangeInfo](#skuchangeinfo) (ReadOnly): Sku change info of account.
 * **storedCompletionsDisabled**: bool: The flag to disable stored completions.
+* **trustedCertificateSources**: [TrustedCertificateSource](#trustedcertificatesource)[] {maxLength: 1}: Private CA trust sources for supported features in an AIServices account with allowProjectManagement enabled. Supports one Azure Key Vault source containing version-pinned references to secrets with PEM-encoded CA certificates or certificate bundles. On PUT or PATCH, a non-null array replaces the complete configuration, so include all references to retain. Omit this property or send null to preserve the existing configuration; send an empty array to clear it.
 * **userOwnedStorage**: [UserOwnedStorage](#userownedstorage)[]: The storage accounts for this resource.
 
 ## AccountPropertiesEndpoints
@@ -946,6 +932,11 @@ Required with cpu when specifying CPU and memory limits. Do not specify with gpu
 * **documentStore**: string: Azure resource ID of the document store used by agent runtime state.
 * **vectorStore**: string: Azure resource ID of the vector store used by agent retrieval and indexing.
 
+## CertificateBundleReference
+### Properties
+* **secretName**: string {minLength: 1, maxLength: 127, pattern: "^[0-9a-zA-Z-]{1,127}$"} (Required): Name of the Key Vault secret containing the CA certificate or certificate bundle.
+* **secretVersion**: string {minLength: 1, maxLength: 127, pattern: "^[0-9a-zA-Z-]{1,127}$"} (Required): Required, pinned version of the Key Vault secret. Newer secret versions are not followed automatically. To rotate a bundle, update this value and resubmit the complete account trust configuration.
+
 ## CheckDomainAvailabilityParameter
 ### Properties
 * **kind**: string: The kind (type) of cognitive service account.
@@ -1177,57 +1168,6 @@ depending on each OAuth2 provider's implementation.
 * **publicIpAddress**: string (ReadOnly): The public IP address of the compute instance.
 * **sshPort**: int (ReadOnly): The SSH port for the compute instance.
 
-## CostControlConnections
-### Properties
-* **appInsightsConnectionId**: string: Gets or sets the full resource ID of the optional Application Insights connection.
-* **eventGridConnectionId**: string: The full resource ID of the Event Grid connection used for cost control alerts. This connection must be configured when an attached cost control contains an alert threshold action and cannot be removed while such an action remains attached.
-
-## CostControlDimension
-### Properties
-* **attribute**: string (ReadOnly): Gets or sets the attribute path retained for legacy Custom counters.
-Authored rules cannot select Custom; built-in dimensions must omit this property.
-* **type**: 'Account' | 'Agent' | 'Custom' | 'Identity' | 'Project' | 'Session' | string (Required): The kind of request dimension.
-
-## CostControlMatch
-### Properties
-* **agentResourceIds**: (string {minLength: 1})[] {minLength: 1, maxLength: 20}: Agent resource IDs use /subscriptions/{subscription_guid}/accounts/{account-name}/project/{project-name}/agent/{agent_name}.
-* **identityObjectIds**: (string {minLength: 1})[] {minLength: 1, maxLength: 20}: The authenticated principal object IDs to match.
-* **projectIds**: string[] {minLength: 1, maxLength: 20}: The Foundry project resource IDs to match.
-* **sessionIds**: (string {minLength: 1})[] {minLength: 1, maxLength: 20}: The Foundry session IDs to match.
-
-## CostControlProperties
-### Properties
-* **displayName**: string {maxLength: 128}: An optional human-readable name for the cost control.
-* **rules**: [CostControlRule](#costcontrolrule)[] {minLength: 1, maxLength: 50} (Required): The rules enforced by the cost control.
-
-## CostControlRule
-### Properties
-* **amount**: int (Required): The maximum consumption allowed by this rule, expressed in the selected unit.
-* **counterKey**: [CostControlDimension](#costcontroldimension) (Required): Gets or sets the single built-in dimension used to partition consumption.
-Custom dimensions are retained only for legacy reads and metadata-only updates.
-Legacy singleton arrays are accepted on read; serialization always emits an object.
-To track another field, create another rule.
-* **match**: [CostControlMatch](#costcontrolmatch): Gets or sets optional match arrays keyed by `agentResourceIds`, `identityObjectIds`,
-`sessionIds`, or `projectIds`. Each array contains 1 to 20 non-empty values.
-Agent resource IDs use /subscriptions/{subscription_guid}/accounts/{account-name}/project/{project-name}/agent/{agent_name}.
-Legacy dotted identity, session, and project keys remain accepted, but cannot be combined with their canonical key.
-* **name**: string {maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,63}$"} (Required): The stable rule identifier, unique within the cost control without regard to case.
-* **period**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'Week' | 'Year' | string: Gets or sets the calendar-aligned UTC renewal period. Authored rules support Day, Week, or Month.
-This field is required for recurring rules and must be omitted for non-recurring rules.
-Legacy stored minute, hour, and year periods are preserved when reading definitions.
-* **recurring**: bool: Whether the cost control renews. The default is true.
-* **thresholds**: [CostControlThreshold](#costcontrolthreshold)[] {maxLength: 10}: Gets or sets optional thresholds. Omitted or empty thresholds track usage without explicit actions.
-Authored thresholds must explicitly specify Alert or Block; Audit is retained for legacy reads.
-* **unit**: 'Usd' | string (Required): The unit used for the cost control amount and absolute thresholds.
-
-## CostControlThreshold
-### Properties
-* **action**: 'Alert' | 'Audit' | 'Block' | string (Required): Gets or sets the threshold action. Authored thresholds must explicitly specify Alert or Block.
-Legacy stored definitions with omitted actions continue to read as Audit.
-* **type**: 'Absolute' | 'Percentage' | string (Required): How the threshold value is interpreted.
-* **value**: int {minValue: 0} (Required): Gets or sets the threshold value. Legacy Audit definitions retain their stored values;
-new thresholds support only Alert or Block.
-
 ## CustomBlocklistConfig
 ### Properties
 * **blocking**: bool: If blocking would occur.
@@ -1290,8 +1230,6 @@ new thresholds support only Alert or Block.
 * **capabilities**: [DeploymentPropertiesCapabilities](#deploymentpropertiescapabilities) (ReadOnly): The capabilities.
 * **capacitySettings**: [DeploymentCapacitySettings](#deploymentcapacitysettings): Internal use only.
 * **contextCacheContainerId**: string: The resource ID of the context cache container associated with this deployment.
-* **costControlIds**: string[] {maxLength: 1}: The full resource IDs of cost controls directly attached to this deployment.
-At the moment the service only supports a single cost control. This will be expanded in future API versions.
 * **currentCapacity**: int: The current capacity.
 * **deploymentState**: 'Paused' | 'Running' | string: The state of the deployment. Controls whether the deployment is accepting inference requests. Use 'Running' for active deployments that process requests, or 'Paused' to temporarily stop inference while preserving the deployment configuration.
 * **dynamicThrottlingEnabled**: bool (ReadOnly): If the dynamic throttling is enabled.
@@ -1712,6 +1650,7 @@ Example: azureml://registries/{registry}/models/{model}/versions/{version}
 * **endpoints**: [ProjectPropertiesEndpoints](#projectpropertiesendpoints) (ReadOnly): The list of endpoint for this Cognitive Services Project.
 * **isDefault**: bool (ReadOnly): Indicates whether the project is the default project for the account.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'ExtensionUnreachable' | 'Failed' | 'Moving' | 'ResolvingDNS' | 'Succeeded' | string (ReadOnly): Gets the status of the cognitive services project at the time the operation was called.
+* **toolControls**: [ToolControls](#toolcontrols): The project-level tool access policy. Omitting this property in a PUT request clears the policy. In PATCH requests, omission preserves the policy and an explicit null clears it. Responses omit this property when no policy is configured.
 
 ## ProjectPropertiesEndpoints
 ### Properties
@@ -2190,12 +2129,29 @@ creation and replacement require ACS.
 * **minCount**: int
 * **renewalPeriod**: int
 
+## ToolControlEntry
+### Properties
+* **connectorId**: string: The opaque MCP connector catalog identifier, not an Azure resource ID. Applies only to type mcp and cannot be specified together with serverUrl.
+* **serverUrl**: string: The absolute HTTPS URL or URL pattern of an MCP server, stored as a string to support wildcards. The entire URL may contain at most one literal '*' across its hostname, path, query, and fragment. Supported patterns include https://*.contoso.com/mcp, https://contoso.com/mcp/*, https://contoso.com/mcp?tenant=*, and https://contoso.com/mcp#*. A hostname wildcard must be the leftmost label. The URL must not contain user information. Applies only to type mcp and cannot be specified together with connectorId.
+* **type**: 'a2a' | 'a2a_preview' | 'apply_patch' | 'azure_ai_search' | 'azure_function' | 'bing_custom_search_preview' | 'bing_grounding' | 'browser_automation' | 'browser_automation_preview' | 'capture_structured_outputs' | 'code_interpreter' | 'computer_use_preview' | 'custom' | 'fabric_dataagent_preview' | 'fabric_iq_preview' | 'file_search' | 'function' | 'image_generation' | 'local_shell' | 'mcp' | 'memory_search_preview' | 'openapi' | 'sharepoint_grounding_preview' | 'shell' | 'toolbox_search_preview' | 'web_iq_preview' | 'web_search' | 'web_search_preview' | 'work_iq_preview' | string (Required): The canonical tool type. For type mcp, exactly one of serverUrl or connectorId must be specified. Other tool types must omit both properties.
+
+## ToolControls
+### Properties
+* **allowedTools**: [ToolControlEntry](#toolcontrolentry)[]: The tools explicitly allowed by the policy. Omission or an empty array specifies no explicitly allowed tools.
+* **defaultAction**: 'Deny' | string: The action applied when a tool is not listed explicitly. Only Deny is currently supported.
+
 ## TrafficRoutingRule
 ### Properties
 * **deploymentId**: string: The unique identifier of the deployment to which traffic is routed by this rule.
 * **description**: string: A user-provided description for this traffic routing rule.
 * **ruleId**: string: The identifier of this traffic routing rule.
 * **trafficPercentage**: int: Gets or sets the percentage of traffic allocated to this instance.
+
+## TrustedCertificateSource
+### Properties
+* **certificateBundleReferences**: [CertificateBundleReference](#certificatebundlereference)[] {minLength: 1, maxLength: 25} (Required): References to secrets containing one or more PEM-encoded CA certificates. Each secret name and version pair must be unique within the source, using case-insensitive comparison. The same secret name can be referenced with different versions.
+* **resourceId**: string (Required): Azure resource ID of the Key Vault containing the referenced secrets. The account identity must have permission to read these secrets.
+* **type**: 'AzureKeyVault' | string (Required): Type of resource containing the certificate bundles. Currently only AzureKeyVault is supported.
 
 ## UserAssignedIdentity
 ### Properties

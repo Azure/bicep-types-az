@@ -773,6 +773,10 @@
   },
   {
     "$type": "StringLiteralType",
+    "value": "Microsoft.NetworkSecurity"
+  },
+  {
+    "$type": "StringLiteralType",
     "value": "Microsoft.NotificationHubs"
   },
   {
@@ -2003,13 +2007,16 @@
       },
       {
         "$ref": "#/285"
+      },
+      {
+        "$ref": "#/286"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/286"
+      "$ref": "#/287"
     }
   },
   {
@@ -2018,7 +2025,7 @@
     "properties": {
       "providers": {
         "type": {
-          "$ref": "#/287"
+          "$ref": "#/288"
         },
         "flags": 0,
         "description": "The Azure provider namespaces to register for the az extension."

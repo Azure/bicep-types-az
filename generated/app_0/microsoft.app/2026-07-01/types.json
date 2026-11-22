@@ -4470,6 +4470,13 @@
         "flags": 0,
         "description": "The resource-specific properties for this resource."
       },
+      "identity": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 0,
+        "description": "The managed service identities assigned to this resource."
+      },
       "tags": {
         "type": {
           "$ref": "#/305"

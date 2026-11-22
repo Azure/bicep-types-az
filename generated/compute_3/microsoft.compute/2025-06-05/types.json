@@ -358,7 +358,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation."
+        "description": "A placement score indicating the likelihood of successfully allocating the specified virtual machines."
       },
       "isQuotaAvailable": {
         "type": {

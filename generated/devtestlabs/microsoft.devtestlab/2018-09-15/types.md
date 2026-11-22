@@ -755,6 +755,7 @@
 ### Properties
 * **author**: string (ReadOnly): The author of the formula.
 * **creationDate**: string (ReadOnly): The creation date of the formula.
+* **credentialState**: 'NotConfigured' | 'PasswordConfigured' | 'SshKeyConfigured' | string (ReadOnly): The configured credential state of the formula. This property does not expose the credential value or storage mechanism.
 * **description**: string: The description of the formula.
 * **formulaContent**: [LabVirtualMachineCreationParameter](#labvirtualmachinecreationparameter): The content of the formula.
 * **osType**: string: The OS type of the formula.
@@ -941,7 +942,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **notes**: string: The notes of the virtual machine.
 * **ownerObjectId**: string: The object identifier of the owner of the virtual machine.
 * **ownerUserPrincipalName**: string: The user principal name of the virtual machine owner.
-* **password**: string: The password of the virtual machine administrator.
+* **password**: string {sensitive} (WriteOnly): The password of the virtual machine administrator.
 * **planId**: string: The id of the plan associated with the virtual machine image
 * **scheduleParameters**: [ScheduleCreationParameter](#schedulecreationparameter)[]: Virtual Machine schedules to be created
 * **size**: string: The size of the virtual machine.
@@ -981,7 +982,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **osType**: string (ReadOnly): The OS type of the virtual machine.
 * **ownerObjectId**: string: The object identifier of the owner of the virtual machine.
 * **ownerUserPrincipalName**: string: The user principal name of the virtual machine owner.
-* **password**: string: The password of the virtual machine administrator.
+* **password**: string {sensitive}: The password of the virtual machine administrator.
 * **planId**: string: The id of the plan associated with the virtual machine image
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
 * **scheduleParameters**: [ScheduleCreationParameter](#schedulecreationparameter)[]: Virtual Machine schedules to be created

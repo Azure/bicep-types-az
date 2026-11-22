@@ -1,5 +1,5 @@
 Generating types for 'specification/sql/resource-manager/Microsoft.Sql/SQL/readme.md'
-AutoRest code generation utility [cli version: 3.8.0; node: v24.22.1]
+AutoRest code generation utility [cli version: 3.8.0; node: v24.22.3]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 ⚠️ AutoRest is deprecated and will be retired on July 1, 2026. Please migrate to TypeSpec: https://typespec.io — details: https://github.com/Azure/autorest/issues/5175
@@ -378,7 +378,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'AdvisorProperties' (1 differences):
   - properties.recommendedActions.$ref: "#/components/schemas/schemas:121" => "#/components/schemas/schemas:2708"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RecommendedAction' (4 differences):
-  - allOf: [{"$ref":"#/components/schemas/schemas:3576"}] => <none>
+  - allOf: [{"$ref":"#/components/schemas/schemas:3568"}] => <none>
   - properties.id: <none> => {"$ref":"#/components/schemas/schemas:2712","description":"Resource ID.","readOnly":true}
   - properties.name: <none> => {"$ref":"#/components/schemas/schemas:2713","description":"Resource name.","readOnly":true}
   - properties.type: <none> => {"$ref":"#/components/schemas/schemas:2714","description":"Resource type.","readOnly":true}

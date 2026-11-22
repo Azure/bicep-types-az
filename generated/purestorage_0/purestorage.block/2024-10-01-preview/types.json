@@ -1866,7 +1866,7 @@
       },
       "serviceInitializationHandleEnc": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/115"
         },
         "flags": 0,
         "description": "Encoded service account credentials alongside connection information"

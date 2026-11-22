@@ -138,7 +138,7 @@
 * **storageAccountKey**: string {sensitive}: The storage account access key used to access the Azure File share.
 * **storageAccountKeyReference**: string: The reference to the storage account access key used to access the Azure File share.
 * **storageAccountName**: string (Required): The name of the storage account that contains the Azure File share.
-* **userAssignedIdentityClientId**: string: The client id of the user-assigned managed identity that has access to the Azure File share.
+* **userManagedIdentityClientId**: string: The client id of the user-assigned managed identity that has access to the Azure File share.
 
 ## ConfidentialComputeProperties
 ### Properties

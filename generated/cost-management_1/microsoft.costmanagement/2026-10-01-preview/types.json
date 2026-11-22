@@ -1,0 +1,687 @@
+[
+  {
+    "$type": "ObjectType",
+    "name": "EstimateContent",
+    "properties": {
+      "resources": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 1,
+        "description": "Charge-once entries. Position correlates results; no customer identifiers are accepted."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateResourceInput",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Supported resource type, matched case-insensitively."
+      },
+      "resourceApiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 1,
+        "description": "Supported source resource API version; the service never evaluates that resource or deploys it."
+      },
+      "inputs": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 1,
+        "description": "Two named object inputs: resource (an allowlisted subset of the native ARM resource) and usage (consumption and purchase assumptions). Omitted values are completed only by applicable advertised defaults."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 256
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 32
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateNamedValue",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Unique sibling business name, not a customer resource name or a path expression."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 1,
+        "description": "Typed value. Null and coercion from another JSON kind are not accepted."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 128
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "EstimateValue",
+    "discriminator": "kind",
+    "baseProperties": {},
+    "elements": {
+      "array": {
+        "$ref": "#/7"
+      },
+      "boolean": {
+        "$ref": "#/10"
+      },
+      "number": {
+        "$ref": "#/13"
+      },
+      "object": {
+        "$ref": "#/16"
+      },
+      "string": {
+        "$ref": "#/19"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateArrayValue",
+    "properties": {
+      "items": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 1,
+        "description": "Explicit items, recursively validated. Empty items is distinct from an omitted array."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 1,
+        "description": "Exact discriminator selecting a supported typed variant."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/6"
+    },
+    "maxLength": 1024
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "array"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateBooleanValue",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 1,
+        "description": "Explicit boolean; omission is distinct from false."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 1,
+        "description": "Exact discriminator selecting a supported typed variant."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "boolean"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateNumberValue",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 1,
+        "description": "Parsed using decimal arithmetic. Integer magnitude must not exceed 9007199254740991; non-integer magnitude must not exceed 1000000000. Excess precision and out-of-range values are rejected, not rounded or coerced."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 1,
+        "description": "Exact discriminator selecting a supported typed variant."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": -9007199254740991,
+    "maxValue": 9007199254740991
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "number"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateObjectValue",
+    "properties": {
+      "members": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 1,
+        "description": "Unique, case-sensitive member names. Empty members is an explicit empty object, not an omitted input."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 1,
+        "description": "Exact discriminator selecting a supported typed variant."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/4"
+    },
+    "maxLength": 128
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "object"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateStringValue",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 1,
+        "description": "Text accepted only when permitted by the selected input definition."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 1,
+        "description": "Exact discriminator selecting a supported typed variant."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 1024
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "string"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/4"
+    },
+    "maxLength": 128
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/1"
+    },
+    "minLength": 1,
+    "maxLength": 100
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateResult",
+    "properties": {
+      "currency": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 3,
+        "description": "Subscription billing currency for every amount; never a caller-selected currency or silent fallback."
+      },
+      "pricingAsOf": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 3,
+        "description": "UTC instant used to select applicable prices. This is not a future price guarantee."
+      },
+      "coverage": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 3,
+        "description": "Fixed scope marker, not a completeness enum: this operation prices only\nsubmitted inputs, never an entire template or deployment. Completeness is\nreported by each charge period's status. Callers separately track template\npreparation and coverage gaps."
+      },
+      "results": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 3,
+        "description": "Exactly one result per input, in the same order."
+      },
+      "totals": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 3,
+        "description": "Independent recurring and upfront totals."
+      },
+      "assumptions": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 3,
+        "description": "Request-wide assumptions; never raw input values or customer identifiers."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 3
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubmittedPricingInputs"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateResourceResult",
+    "properties": {
+      "inputIndex": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 3,
+        "description": "Zero-based input position; not a customer resource identifier."
+      },
+      "configuration": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "What the server set or changed in the priced configuration. Absent only when a catalog failure prevented complete validation."
+      },
+      "monthly": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 3,
+        "description": "Known and unknown recurring costs for this entry."
+      },
+      "upfront": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 3,
+        "description": "Known and unknown upfront charges, never included in monthly."
+      },
+      "components": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 3,
+        "description": "Component breakdown, including components whose cost could not be determined."
+      },
+      "issues": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 3,
+        "description": "Reasons for incomplete coverage or costs. Nonempty whenever either summary is incomplete."
+      },
+      "assumptions": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 3,
+        "description": "Defaults and other assumptions actually applied to this entry."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 99
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateEffectiveConfiguration",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 3,
+        "description": "The supported resource type, in its canonical spelling."
+      },
+      "resourceApiVersion": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 3,
+        "description": "The supported source resource API version."
+      },
+      "defaultedFields": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 3,
+        "description": "JSON Pointers of configuration defaults the server applied to omitted inputs."
+      },
+      "assumedUsageFields": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 3,
+        "description": "JSON Pointers of usage quantities the caller omitted and the server assumed, such as /usage/storedGB. A non-empty list means the price rests on quantities the caller did not state."
+      },
+      "appliedValues": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 3,
+        "description": "Every field the server set or changed: defaulted fields, assumed usage quantities and canonicalized spellings. Every other priced value is exactly what the caller submitted."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 256
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 32
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 4096
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/33"
+    },
+    "maxLength": 20000
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/33"
+    },
+    "maxLength": 20000
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateAppliedValue",
+    "properties": {
+      "field": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 3,
+        "description": "JSON Pointer of the field within the decoded resource and usage inputs, such as /usage/accessTier."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 3,
+        "description": "The value the server priced for this field."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/36"
+    },
+    "maxLength": 20000
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateCostSummary",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 3,
+        "description": "Independent completeness of this monthly or upfront summary."
+      },
+      "amount": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 2,
+        "description": "Complete amount only."
+      },
+      "knownAmount": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 2,
+        "description": "Sum of known costs only, not a total or an upper bound. Present only for Partial."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Partial"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/26"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 1000000000
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateComponentResult",
+    "properties": {
+      "component": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 3,
+        "description": "Stable business component name, unique within the entry."
+      },
+      "meterIds": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "Resolved internal pricing meter identifiers, distinct from customer resource IDs. Absent when unresolved or not needed."
+      },
+      "monthly": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 3,
+        "description": "Component's recurring monthly cost."
+      },
+      "upfront": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 3,
+        "description": "Component's upfront charge. A known non-applicable charge is Complete with amount zero."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 128
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 36
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/46"
+    },
+    "maxLength": 128
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/44"
+    },
+    "maxLength": 10000
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateDiagnostic",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 3,
+        "description": "Machine-readable code, such as RateUnavailable, AllowanceContextRequired or InputCanonicalized."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 3,
+        "description": "Explanation without input values, customer information or tokens."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "Optional RFC 6901 request location, using entry positions and business field names only."
+      },
+      "component": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 2,
+        "description": "Affected business component name when the issue is component-specific."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    },
+    "maxLength": 1000
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    },
+    "maxLength": 1000
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/28"
+    },
+    "minLength": 1,
+    "maxLength": 100
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EstimateTotals",
+    "properties": {
+      "monthly": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 3,
+        "description": "Recurring monthly aggregate; an upfront payment is never included."
+      },
+      "upfront": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 3,
+        "description": "Upfront aggregate, without amortization."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/49"
+    },
+    "maxLength": 1000
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "estimatePrices",
+    "resourceType": "Microsoft.CostManagement",
+    "apiVersion": "2026-10-01-preview",
+    "output": {
+      "$ref": "#/24"
+    },
+    "input": {
+      "$ref": "#/0"
+    }
+  }
+]

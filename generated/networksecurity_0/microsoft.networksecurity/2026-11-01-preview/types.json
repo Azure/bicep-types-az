@@ -1,0 +1,2890 @@
+[
+  {
+    "$type": "StringType",
+    "pattern": "^[a-zA-Z0-9-]{3,256}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetworkSecurity/agentFabrics"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2026-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.NetworkSecurity/agentFabrics",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The managed service identity assigned to this fabric. The service uses it to reach the\nclusters associated with the fabric on the customer's behalf."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentFabricProperties",
+    "properties": {
+      "resourceGuid": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The unique identifier (GUID) assigned to the agent fabric by the resource provider when it is created."
+      },
+      "defaultPolicyGroups": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The default policy groups to apply to all members of this fabric. A fabric without a configured\ninspection connection cannot reference a group containing any ContentInspection policy,\neven when that policy's selectors currently match no traffic.\nFor an existing fabric, compatibility uses the stored configuration when PUT omits\ncontentInspectionProfile or supplies an empty object. Existing legacy fabrics retain their regional\nContent Safety connection, which satisfies the inspection prerequisite without new probes.\nA connection still being validated is not an absent connection. Removing a group\nreference remains allowed, subject to other validation."
+      },
+      "contentInspectionProfile": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The connection to the customer's Azure Content Safety account. For a new\nfabric created with API version `2026-10-07-preview` or later, omitting this profile or supplying {}\nrequests no inspection capability and uses no platform-owned account or shared-key fallback.\n\nFor an existing fabric, omitting the profile from PUT, including requests from older clients,\nor supplying {} preserves its customer-owned connection, legacy regional connection, or absence\nof connection. The empty object is a request for no connection change, not a stored replacement\nprofile. Neither omission nor {} removes, probes, or creates a connection or cancels a pending\nconnection update. Other Fabric fields and policy compatibility rules still apply.\nA nonempty request profile requires both endpoint and apiKey, even at the unchanged endpoint.\nPUT can rotate the key or replace the endpoint by supplying the complete pair. Tags- or\nidentity-only PATCH requests cannot change this profile.\n\nExisting legacy fabrics without a profile retain their regional Content Safety endpoint and\nauthentication path. Omission or {} triggers no connection probe, account-management call, key\nretrieval, or credential requirement. Supplying a complete profile explicitly configures a\ncustomer-owned connection; there is no automatic conversion or failed-connection fallback\nto regional credentials.\n\nThe customer owns, pays for, and operates the account. The service does not create, reserve,\nmanage, or delete it. The service validates new or changed endpoint/credential configuration\nand the required Content Safety API before activation; configuration alone does not indicate\nreadiness or active policy enforcement. Unchanged configuration, GET, and list do not trigger\na new validation request. A failed replacement preserves the existing connection and credential,\nincluding a legacy regional connection."
+      },
+      "trustDomain": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "The trust domain that scopes this fabric's member identities. It is the leading component of\neach member's identity, which takes the form `<trustDomain>/<agentFabricName>/<memberName>`.\nSet at creation and immutable thereafter; when omitted, the shared default trust domain\n`microsoft.agentfabric` is used."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContentInspectionProfile",
+    "properties": {
+      "endpoint": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The HTTPS account endpoint, for example `https://contoso.cognitiveservices.azure.com/`.\nOnly Azure Content Safety account endpoints in the service's supported Azure cloud are\naccepted. Credentials must not be forwarded to other destinations, including redirects.\nRequired together with apiKey in a nonempty request profile, including key rotation.\nChanging the endpoint requires a key for the new account; the stored key is not reused."
+      },
+      "apiKey": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 4,
+        "description": "The nonempty API key for the specified account. Required together with endpoint in every\nnonempty request profile, even when the endpoint is unchanged. Supplying a different key\nwith the endpoint on PUT rotates the stored credential. A missing key in a nonempty profile\nis rejected without retrieving a saved key or comparing with the saved endpoint to permit omission.\nNull and empty values are rejected, not treated as removal. The key is never returned in\nresource, list, or long-running operation responses."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^https://[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?\\.cognitiveservices\\.(azure\\.com|azure\\.us|azure\\.cn)/?$"
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true,
+    "minLength": 1
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 253,
+    "pattern": "^[a-z0-9]([a-z0-9.-]*[a-z0-9])?$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemAssignedServiceIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 1,
+        "description": "Type of managed service identity (either system assigned, or none)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.NetworkSecurity/agentFabrics@2026-11-01-preview",
+    "body": {
+      "$ref": "#/4"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetworkSecurity/policyGroups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2026-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.NetworkSecurity/policyGroups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyGroupProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The display name of the policy group."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The description of the policy group."
+      },
+      "priority": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The priority of the policy group."
+      },
+      "networkSecurityPolicies": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 0,
+        "description": "The list of network security policies. A PUT introducing a ContentInspection\npolicy is incompatible if any associated fabric has no configured inspection connection,\nregardless of whether selectors currently match traffic. The request is rejected before\npersisting or distributing the proposed changes, preserving the previously\naccepted policies; mixed compatible and incompatible associations cannot partially apply\nchanges or silently skip inspection. An unattached group, or one attached only to compatible\nfabrics, may contain ContentInspection policies. Removing ContentInspection policies remains allowed,\nsubject to other validation."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "NetworkSecurityPolicyBase",
+    "discriminator": "type",
+    "baseProperties": {},
+    "elements": {
+      "ContentInspection": {
+        "$ref": "#/44"
+      },
+      "FqdnFiltering": {
+        "$ref": "#/64"
+      },
+      "Mcp": {
+        "$ref": "#/82"
+      },
+      "TlsInspection": {
+        "$ref": "#/110"
+      },
+      "UrlFiltering": {
+        "$ref": "#/119"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContentInspectionPolicy",
+    "properties": {
+      "source": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 1,
+        "description": "The source details for the policy."
+      },
+      "promptInjectionProtection": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The prompt injection protection configuration."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 1,
+        "description": "The network security policy type."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ContentInspectionPolicySource",
+    "discriminator": "type",
+    "baseProperties": {},
+    "elements": {
+      "AddressPrefixes": {
+        "$ref": "#/46"
+      },
+      "WorkloadIdPatterns": {
+        "$ref": "#/49"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContentInspectionPolicyAddressPrefixesSource",
+    "properties": {
+      "prefixes": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 1,
+        "description": "The IP address prefixes, in CIDR notation, that identify the source(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "The type of source selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AddressPrefixes"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContentInspectionPolicyWorkloadIdPatternsSource",
+    "properties": {
+      "patterns": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 1,
+        "description": "The workload ID patterns that identify the source(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 1,
+        "description": "The type of source selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WorkloadIdPatterns"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PromptInjectionProtection",
+    "properties": {
+      "sensitivity": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The sensitivity level of prompt injection detection."
+      },
+      "promptLocations": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The JSONPath expressions selecting the parts of the request body to scan for prompt injection."
+      },
+      "responseLocations": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "The JSONPath expressions selecting the parts of the response body to scan for prompt injection."
+      },
+      "onDetection": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 1,
+        "description": "The action to take when prompt injection is detected."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BlockAndAlert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Alert"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sanitize"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ContentInspection"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FqdnFilteringPolicy",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the policy."
+      },
+      "priority": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The priority of the policy."
+      },
+      "direction": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "The direction of traffic for the policy."
+      },
+      "ports": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "The ports for the policy."
+      },
+      "source": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 1,
+        "description": "The source details for the policy."
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 0,
+        "description": "The destination details for the policy."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 1,
+        "description": "The network security policy type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Outbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inbound"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Both"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FqdnFilteringSource",
+    "discriminator": "type",
+    "baseProperties": {},
+    "elements": {
+      "AddressPrefixes": {
+        "$ref": "#/71"
+      },
+      "WorkloadIdPatterns": {
+        "$ref": "#/74"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FqdnFilteringAddressPrefixesSource",
+    "properties": {
+      "prefixes": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 1,
+        "description": "The IP address prefixes, in CIDR notation, that identify the source(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 1,
+        "description": "The type of source selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AddressPrefixes"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FqdnFilteringWorkloadIdPatternsSource",
+    "properties": {
+      "patterns": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 1,
+        "description": "The workload ID patterns that identify the source(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 1,
+        "description": "The type of source selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WorkloadIdPatterns"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "FqdnFilteringDestination",
+    "discriminator": "type",
+    "baseProperties": {},
+    "elements": {
+      "Fqdns": {
+        "$ref": "#/78"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FqdnFilteringFqdnsDestination",
+    "properties": {
+      "fqdns": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 1,
+        "description": "The fully qualified domain names that identify the destination(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 1,
+        "description": "The type of destination selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Fqdns"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FqdnFiltering"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "McpPolicy",
+    "properties": {
+      "defaultAction": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 1,
+        "description": "The default action to take when no rule in the policy matches."
+      },
+      "source": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 1,
+        "description": "The source(s) that this policy applies to."
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 1,
+        "description": "The MCP server(s) that this policy applies to."
+      },
+      "rules": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 1,
+        "description": "The list of MCP rules."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 1,
+        "description": "The network security policy type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "McpPolicySource",
+    "discriminator": "type",
+    "baseProperties": {},
+    "elements": {
+      "AddressPrefixes": {
+        "$ref": "#/87"
+      },
+      "WorkloadIdPatterns": {
+        "$ref": "#/90"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "McpPolicyAddressPrefixesSource",
+    "properties": {
+      "prefixes": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 1,
+        "description": "The IP address prefixes, in CIDR notation, that identify the source(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 1,
+        "description": "The type of source selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AddressPrefixes"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "McpPolicyWorkloadIdPatternsSource",
+    "properties": {
+      "patterns": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 1,
+        "description": "The workload ID patterns that identify the source(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 1,
+        "description": "The type of source selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WorkloadIdPatterns"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "McpPolicyDestination",
+    "discriminator": "type",
+    "baseProperties": {},
+    "elements": {
+      "AddressPrefixes": {
+        "$ref": "#/94"
+      },
+      "Fqdns": {
+        "$ref": "#/97"
+      },
+      "WorkloadIdPatterns": {
+        "$ref": "#/100"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "McpPolicyAddressPrefixesDestination",
+    "properties": {
+      "prefixes": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 1,
+        "description": "The IP address prefixes, in CIDR notation, that identify the destination(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 1,
+        "description": "The type of destination selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AddressPrefixes"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "McpPolicyFqdnsDestination",
+    "properties": {
+      "fqdns": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 1,
+        "description": "The fully qualified domain names that identify the destination(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 1,
+        "description": "The type of destination selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Fqdns"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "McpPolicyWorkloadIdPatternsDestination",
+    "properties": {
+      "patterns": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 1,
+        "description": "The workload ID patterns that identify the destination(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 1,
+        "description": "The type of destination selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WorkloadIdPatterns"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "McpRule",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 1,
+        "description": "The action to take for the specified MCP tools."
+      },
+      "tools": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 1,
+        "description": "The MCP tool names that the rule applies to."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Mcp"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TlsInspectionPolicy",
+    "properties": {
+      "source": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 1,
+        "description": "The source details for the policy."
+      },
+      "certificate": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 1,
+        "description": "The certificate configuration used for TLS inspection."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 1,
+        "description": "The network security policy type."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "TlsInspectionPolicySource",
+    "discriminator": "type",
+    "baseProperties": {},
+    "elements": {
+      "WorkloadIdPatterns": {
+        "$ref": "#/112"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TlsInspectionPolicyWorkloadIdPatternsSource",
+    "properties": {
+      "patterns": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 1,
+        "description": "The workload ID patterns that identify the source(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 1,
+        "description": "The type of source selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WorkloadIdPatterns"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "TlsInspectionCertificateBase",
+    "discriminator": "mode",
+    "baseProperties": {},
+    "elements": {
+      "AzureManagedCA": {
+        "$ref": "#/116"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureManagedCaCertificate",
+    "properties": {
+      "mode": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 1,
+        "description": "The source mode of the TLS inspection certificate."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureManagedCA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TlsInspection"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UrlFilteringPolicy",
+    "properties": {
+      "defaultAction": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 1,
+        "description": "The default action to take when no rule in the policy matches."
+      },
+      "source": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 1,
+        "description": "The source details for the policy."
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 0,
+        "description": "The destination details for the policy."
+      },
+      "rules": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 1,
+        "description": "The list of URL filtering rules."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 1,
+        "description": "The network security policy type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "UrlFilteringSource",
+    "discriminator": "type",
+    "baseProperties": {},
+    "elements": {
+      "AddressPrefixes": {
+        "$ref": "#/124"
+      },
+      "WorkloadIdPatterns": {
+        "$ref": "#/127"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UrlFilteringAddressPrefixesSource",
+    "properties": {
+      "prefixes": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 1,
+        "description": "The IP address prefixes, in CIDR notation, that identify the source(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 1,
+        "description": "The type of source selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AddressPrefixes"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UrlFilteringWorkloadIdPatternsSource",
+    "properties": {
+      "patterns": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 1,
+        "description": "The workload ID patterns that identify the source(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 1,
+        "description": "The type of source selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WorkloadIdPatterns"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "UrlFilteringDestination",
+    "discriminator": "type",
+    "baseProperties": {},
+    "elements": {
+      "AddressPrefixes": {
+        "$ref": "#/131"
+      },
+      "Fqdns": {
+        "$ref": "#/134"
+      },
+      "WorkloadIdPatterns": {
+        "$ref": "#/137"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UrlFilteringAddressPrefixesDestination",
+    "properties": {
+      "prefixes": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 1,
+        "description": "The IP address prefixes, in CIDR notation, that identify the destination(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 1,
+        "description": "The type of destination selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AddressPrefixes"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UrlFilteringFqdnsDestination",
+    "properties": {
+      "fqdns": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 1,
+        "description": "The fully qualified domain names that identify the destination(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 1,
+        "description": "The type of destination selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Fqdns"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UrlFilteringWorkloadIdPatternsDestination",
+    "properties": {
+      "patterns": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 1,
+        "description": "The workload ID patterns that identify the destination(s)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 1,
+        "description": "The type of destination selector."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WorkloadIdPatterns"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UrlFilteringRule",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the rule."
+      },
+      "priority": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 1,
+        "description": "The priority of the rule. Rules are evaluated in ascending priority order."
+      },
+      "hostname": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The hostname matched by the rule. If omitted, the rule matches any hostname."
+      },
+      "method": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 0,
+        "description": "The HTTP method matched by the rule. If omitted, the rule matches any method."
+      },
+      "paths": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 0,
+        "description": "The URL paths matched by the rule. If omitted, the rule matches any path."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/152"
+        },
+        "flags": 1,
+        "description": "The action to take when the rule matches."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GET"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "POST"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PUT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DELETE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PATCH"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HEAD"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OPTIONS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/140"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UrlFiltering"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/43"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/157"
+      },
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
+      },
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.NetworkSecurity/policyGroups@2026-11-01-preview",
+    "body": {
+      "$ref": "#/40"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetworkSecurity/agentFabrics/clusterAssociations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2026-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.NetworkSecurity/agentFabrics/clusterAssociations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/170"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterAssociationProperties",
+    "properties": {
+      "clusterResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The AKS managed cluster or ACI SandboxGroup to enroll. The resource must be\nin the same subscription as the AgentFabric; a different resource group is\nallowed. Set at creation and immutable thereafter; to enroll a different\nresource, delete and recreate the association. AF rejects the request if\nthe resource is already associated with another fabric."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 0,
+        "description": "Determines which AgentFabric components are deployed to the cluster.\nDefaults to Standard when omitted at creation. An update may upgrade\nStandard to Premium but cannot downgrade Premium to Standard. The SKU\nremains unchanged when omitted during an update."
+      },
+      "workloadClusterGatewayIp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 4,
+        "description": "The IPv4 or IPv6 address of the workload cluster gateway used for\ninternal Agent Fabric routing. The resource provider validates the value."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 2,
+        "description": "Error code and message for a failed association. A failed association is\nretained rather than deleted, so the failure can be inspected and retried.\nRead-only."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/183"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterAssociationStatus",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Stable, machine-readable error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Human-readable description of the failure."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.NetworkSecurity/agentFabrics/clusterAssociations@2026-11-01-preview",
+    "body": {
+      "$ref": "#/169"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetworkSecurity/agentFabrics/members"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2026-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.NetworkSecurity/agentFabrics/members",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MemberProperties",
+    "properties": {
+      "fqdn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The customer-provided fully qualified domain name associated with the member."
+      },
+      "workload": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 0,
+        "description": "The workload configuration of the member. Set at creation and immutable\nthereafter; to change the workload, delete and recreate the member."
+      },
+      "spiffeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The SPIFFE ID that identifies this member's workload identity, system-assigned by the service\nat creation time. It takes the form `spiffe://<trustDomain>/<agentFabricName>/<memberName>`,\nusing the owning fabric's trust domain (or the default `microsoft.agentfabric` when unset), with\nall segments lower-cased to conform to the SPIFFE ID scheme. Read-only."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/219"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "WorkloadBase",
+    "discriminator": "type",
+    "baseProperties": {
+      "workloadId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The unique identifier assigned to the workload by the resource provider."
+      },
+      "memberGuid": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The unique identifier (GUID) assigned to the member when it is created. For most workload\ntypes this is assigned by the resource provider and is read-only. Starting in API version\n`2026-10-07-preview`, ACI workloads instead supply this value at creation: the ACI resource\nprovider generates the GUID for the sandbox and this field is immutable afterward. Starting in\nAPI version `2026-11-02-preview`, the ACI member resource name is this GUID: the service sets\nmemberGuid from the member name, and a value supplied in the request must match the member name."
+      }
+    },
+    "elements": {
+      "ACI": {
+        "$ref": "#/191"
+      },
+      "AKS": {
+        "$ref": "#/194"
+      },
+      "AgentFabricSandbox": {
+        "$ref": "#/202"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AciWorkload",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Azure Resource Manager resource ID of the Azure Container Instances (ACI)\nresource backing this member's sandbox. Starting in API version\n`2026-10-07-preview`, this identifies the parent SandboxGroup -- the enrollment\nboundary associated with the fabric through a ClusterAssociation -- rather than\nthe individual container group."
+      },
+      "agentIdentity": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "The Entra agent identity associated with the workload."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 1,
+        "description": "The workload type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentIdentity",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Azure tenant ID that owns the agent identity."
+      },
+      "agentId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Entra agent ID representing the workload's identity."
+      },
+      "blueprintId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Entra agent blueprint ID that this agent identity was instantiated from. The blueprint\ndescribes the agent's declared capabilities and is used to scope the policies applied to the\nworkload."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ACI"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AksWorkload",
+    "properties": {
+      "clusterAssociationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Azure Resource Manager resource ID of the cluster association through which this member's workload is enrolled."
+      },
+      "clusterResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Azure Resource Manager resource ID of the managed cluster that hosts the workload."
+      },
+      "workload": {
+        "type": {
+          "$ref": "#/195"
+        },
+        "flags": 1,
+        "description": "The Kubernetes workload enrolled as this member. Reported when the workload is discovered in the enrolled cluster; member identity derives from the fabric and member name alone."
+      },
+      "endpoints": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 0,
+        "description": "The network endpoints exposed by the workload."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/201"
+        },
+        "flags": 1,
+        "description": "The workload type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AksWorkloadReference",
+    "properties": {
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The API group and version of the workload, for example `apps/v1`."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The kind of the workload, for example `Deployment`."
+      },
+      "namespace": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 1,
+        "description": "The namespace the workload runs in."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 1,
+        "description": "The name of the workload."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 63,
+    "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 253,
+    "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AksWorkloadPortMapping",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the port mapping."
+      },
+      "servicePort": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 1,
+        "description": "The port exposed by the service."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The network protocol used by the endpoint."
+      },
+      "targetPort": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 1,
+        "description": "The port on the workload targeted by the service."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 65535
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/198"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AKS"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentFabricSandboxWorkload",
+    "properties": {
+      "image": {
+        "type": {
+          "$ref": "#/203"
+        },
+        "flags": 1,
+        "description": "The container image to run for the workload."
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 1,
+        "description": "The compute resources allocated to the workload."
+      },
+      "agentIdentity": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 0,
+        "description": "The Entra agent identity associated with the workload."
+      },
+      "endpoints": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 0,
+        "description": "The network endpoints exposed by the workload."
+      },
+      "domain": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The resolvable DNS name assigned to the workload."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/210"
+        },
+        "flags": 1,
+        "description": "The workload type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentFabricSandboxImage",
+    "properties": {
+      "uri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The image reference URI (e.g., registry/repository:tag)."
+      },
+      "digest": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The image content digest used to pin an exact image version."
+      },
+      "pullPolicy": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 0,
+        "description": "The policy controlling when the image is pulled."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Always"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IfNotPresent"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentFabricSandboxResources",
+    "properties": {
+      "cpu": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The amount of CPU to allocate to the workload."
+      },
+      "memory": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The amount of memory to allocate to the workload."
+      },
+      "disk": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The amount of disk to allocate to the workload."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentFabricSandboxEndpoint",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the endpoint."
+      },
+      "servicePort": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 1,
+        "description": "The port exposed by the service."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The network protocol used by the endpoint."
+      },
+      "targetPort": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 1,
+        "description": "The port on the workload targeted by the service."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/208"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AgentFabricSandbox"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/211"
+      },
+      {
+        "$ref": "#/212"
+      },
+      {
+        "$ref": "#/213"
+      },
+      {
+        "$ref": "#/214"
+      },
+      {
+        "$ref": "#/215"
+      },
+      {
+        "$ref": "#/216"
+      },
+      {
+        "$ref": "#/217"
+      },
+      {
+        "$ref": "#/218"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.NetworkSecurity/agentFabrics/members@2026-11-01-preview",
+    "body": {
+      "$ref": "#/188"
+    },
+    "readableScopes": 8,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.NetworkSecurity/agentFabrics/egressTrustBundles"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2026-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.NetworkSecurity/agentFabrics/egressTrustBundles",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/224"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/226"
+        },
+        "flags": 2,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EgressTrustBundleProperties",
+    "properties": {
+      "certificates": {
+        "type": {
+          "$ref": "#/228"
+        },
+        "flags": 3,
+        "description": "The public certificate authority anchors that make up the bundle, ordered with the\ncurrently signing anchor first. Always contains at least one entry."
+      },
+      "bundleVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Opaque identifier of this bundle's content. It changes whenever the set of anchors\nchanges and is stable otherwise, so a caller can record what a sandbox was provisioned\nwith and detect drift without comparing certificate bytes."
+      },
+      "cacheValiditySeconds": {
+        "type": {
+          "$ref": "#/229"
+        },
+        "flags": 3,
+        "description": "How long, in seconds, a caller may serve this bundle from its own cache. This is a\nceiling, not a target: refresh well before it elapses, at roughly half this value, so a\ntransient failure still leaves time to retry before the cached copy must be discarded.\nThe service sets this value and may change it to steer how often callers re-read, so\nhonour the value returned rather than hard-coding an interval. Callers are expected to\ncache; a synchronous dependency on this operation during every sandbox launch is not\nintended."
+      },
+      "cacheExpiresAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The absolute deadline matching `cacheValiditySeconds`. A cached copy must not be used\nafter this instant without re-reading. Reaching it means the earlier refresh was missed\nor failing; a caller that cannot obtain an acceptable bundle must fail or retry\nbring-up rather than silently skip anchor installation."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/238"
+        },
+        "flags": 2,
+        "description": "The provisioning state of the resource. This resource is computed rather than\nprovisioned, so a successful read always reports `Succeeded`."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EgressTrustBundleCertificate",
+    "properties": {
+      "certificateId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Stable identifier of this anchor, unique within the bundle. Derived from the\ncertificate itself, so it is identical wherever the same anchor is served."
+      },
+      "pem": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The PEM-encoded X.509 public certificate. This never contains private key material."
+      },
+      "thumbprintSha256": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "Lowercase hexadecimal SHA-256 fingerprint of the certificate's DER encoding."
+      },
+      "notBefore": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The time from which the certificate is valid."
+      },
+      "notAfter": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The time after which the certificate is no longer valid."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/227"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 60
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/230"
+      },
+      {
+        "$ref": "#/231"
+      },
+      {
+        "$ref": "#/232"
+      },
+      {
+        "$ref": "#/233"
+      },
+      {
+        "$ref": "#/234"
+      },
+      {
+        "$ref": "#/235"
+      },
+      {
+        "$ref": "#/236"
+      },
+      {
+        "$ref": "#/237"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.NetworkSecurity/agentFabrics/egressTrustBundles@2026-11-01-preview",
+    "body": {
+      "$ref": "#/225"
+    },
+    "readableScopes": 8,
+    "writableScopes": 0
+  }
+]

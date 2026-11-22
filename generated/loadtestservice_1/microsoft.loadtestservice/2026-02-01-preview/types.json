@@ -134,7 +134,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The URI of the Azure Storage account used to store workspace artifacts, test results, and reports."
+        "description": "The URI of the Azure Storage account used to store workspace artifacts, test results, reports and browser profiles."
       }
     }
   },

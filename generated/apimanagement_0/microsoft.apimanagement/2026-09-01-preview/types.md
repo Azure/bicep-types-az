@@ -26,7 +26,7 @@
 
 ## AiGatewayProperties
 ### Properties
-* **backend**: [AiGatewayBackend](#aigatewaybackend): Backend networking configuration. Can only be set when the AI Gateway is created.
+* **backend**: [AiGatewayBackend](#aigatewaybackend): Backend networking configuration.
 * **frontend**: [AiGatewayFrontend](#aigatewayfrontend) (ReadOnly): Frontend configuration of the AI Gateway.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
 

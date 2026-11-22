@@ -141,7 +141,6 @@
 * **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-z0-9](?:[-a-z0-9]*[a-z0-9])?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PoolProperties](#poolproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [PoolTags](#pooltags): Resource tags.
 * **type**: 'Microsoft.HorizonDb/clusters/pools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HorizonDb/clusters/pools/firewallRules@2026-10-01-preview
@@ -150,7 +149,7 @@
 ### Properties
 * **apiVersion**: '2026-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 128, pattern: "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9](?:[a-zA-Z0-9_.-]{0,78}[a-zA-Z0-9_])?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FirewallRuleProperties](#firewallruleproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.HorizonDb/clusters/pools/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
@@ -290,14 +289,14 @@
 ## BackupProperties
 ### Properties
 * **earliestRestorePointUtc**: string (ReadOnly): The earliest point in time, in UTC, to which the cluster can currently be restored.
-* **geoRedundancy**: 'Disabled' | 'Enabled' | string (Required): The geo-redundancy state. Geo-redundant backup is not supported when dataEncryption.type is AzureKeyVault.
+* **geoRedundancy**: 'Disabled' | 'Enabled' | string (Required): The geo-redundancy state. When creationMode is PointInTimeRestore, the service ignores the requested value during cluster creation and configures the new cluster with the same geo-redundancy setting as the source cluster, for both same-location and cross-location restores. The response reports the inherited setting. Geo-redundant backup is not supported when dataEncryption.type is AzureKeyVault.
 * **retentionDays**: int {minValue: 1, maxValue: 35}: The number of days that automatic backups are retained. The service defaults to 7 days when this property is omitted.
 
 ## CapabilityProperties
 ### Properties
 * **clusterCapabilities**: [ClusterCapability](#clustercapability) (Required, ReadOnly): The Cluster capabilities available in the region.
 * **poolCapabilities**: [PoolCapability](#poolcapability) (Required, ReadOnly): The Pool capabilities available in the region, including processor, generation, and compute-model details.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the capability catalog entry.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the capability catalog entry.
 
 ## ChangeDataCaptureCapabilityProperties
 ### Properties
@@ -308,7 +307,7 @@
 * **effectiveState**: 'Degraded' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (Required, ReadOnly): The current effective capability state.
 * **extension**: [ChangeDataCaptureExtensionStatus](#changedatacaptureextensionstatus) (Required, ReadOnly): The installed change data capture extension and its current lifecycle state.
 * **prerequisites**: [ChangeDataCapturePrerequisiteStatus](#changedatacaptureprerequisitestatus) (Required, ReadOnly): The current readiness of change data capture engine and read-write endpoint prerequisites.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the latest capability mutation.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the latest capability mutation.
 * **replicationArchitecture**: 'ComputeBased' | 'Hybrid' | 'StorageBased' | string (Required, ReadOnly): The implementation architecture currently used for change capture.
 * **status**: [ChangeDataCaptureStatus](#changedatacapturestatus) (Required, ReadOnly): Customer-safe health information for the capability.
 
@@ -320,7 +319,7 @@
 * **effectiveState**: 'Degraded' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | string (Required, ReadOnly): The current effective configuration state.
 * **extension**: [ChangeDataCaptureExtensionStatus](#changedatacaptureextensionstatus) (Required, ReadOnly): The change data capture extension state for the enrolled database.
 * **logicalStreamId**: string (Required, ReadOnly): A service-generated identifier for the logical stream, represented as an RFC 4122 GUID. This value remains stable when a writer role moves and the service materializes a replacement ARM resource under the new writer cluster.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the latest configuration mutation.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the latest configuration mutation.
 * **replication**: [ChangeDataCaptureReplicationStatus](#changedatacapturereplicationstatus) (Required, ReadOnly): The known status of the destination-owned replication session.
 * **status**: [ChangeDataCaptureStatus](#changedatacapturestatus) (Required, ReadOnly): Customer-safe health information for the configuration.
 * **topology**: [ChangeDataCaptureTopologyBindingStatus](#changedatacapturetopologybindingstatus) (Required, ReadOnly): The current writer-topology binding for this logical stream.
@@ -346,7 +345,7 @@
 * **desiredState**: 'Disabled' | 'Enabled' | string (Required): The requested destination state.
 * **destination**: [ChangeDataCaptureDestinationDetails](#changedatacapturedestinationdetails) (Required): The immutable Microsoft Fabric destination settings. Resubmitting the same values is accepted; changing them requires deleting and recreating the destination.
 * **effectiveState**: 'Degraded' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' | 'WaitingForIdentity' | string (Required, ReadOnly): The current effective destination state.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the latest destination mutation.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the latest destination mutation.
 * **status**: [ChangeDataCaptureStatus](#changedatacapturestatus) (Required, ReadOnly): Customer-safe health information for the destination.
 
 ## ChangeDataCaptureExtensionStatus
@@ -361,7 +360,7 @@
 * **effectiveState**: 'Assigned' | 'Assigning' | 'Failed' | 'Removing' | string (Required, ReadOnly): The current assignment lifecycle state.
 * **identityResourceId**: string (Required): The immutable resource ID of the user-assigned managed identity selected for this destination. The ID must exactly match a key in the parent cluster's top-level identity.userAssignedIdentities dictionary; otherwise creation is rejected. Attaching the identity to the cluster does not grant destination access, so required role assignments must be configured separately. Resubmitting the same value is accepted; changing it requires deleting and recreating the assignment.
 * **principalId**: string (Required, ReadOnly): The Microsoft Entra principal ID resolved from the user-assigned managed identity, represented as an RFC 4122 GUID.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the latest identity-assignment mutation.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the latest identity-assignment mutation.
 * **status**: [ChangeDataCaptureStatus](#changedatacapturestatus) (Required, ReadOnly): Customer-safe health information for the identity assignment.
 * **tenantId**: string (Required, ReadOnly): The Microsoft Entra tenant ID resolved from the user-assigned managed identity, represented as an RFC 4122 GUID.
 * **validation**: [IdentityValidationStatus](#identityvalidationstatus) (Required, ReadOnly): The latest validation result for this identity assignment.
@@ -414,14 +413,14 @@
 ### Properties
 * **aiModelManagement**: 'Disabled' | 'Enabled' | string: Specifies whether AI Model Management is enabled for the cluster.
 * **backup**: [BackupProperties](#backupproperties): The backup configuration for the cluster.
-* **creationMode**: 'Create' | 'PointInTimeRestore' | string: The mode used to create the cluster. When this property is omitted while creating a new cluster, the service records Create. PointInTimeRestore creates a new cluster from an available backup; pointInTimeUtc and creationSourceClusterResourceId are then required, postgreSqlVersion must be omitted because it is obtained from the backup metadata, and creationSourceClusterLocation is required when the source and target cluster locations differ. This property is immutable and is returned as creation provenance. On replacement, omission preserves the recorded value, resubmitting the same value is accepted, and changing it is rejected.
+* **creationMode**: 'Create' | 'PointInTimeRestore' | string: The mode used to create the cluster. When this property is omitted while creating a new cluster, the service records Create. PointInTimeRestore creates a new cluster from an available backup; pointInTimeUtc and creationSourceClusterResourceId are then required, postgreSqlVersion must be omitted because it is obtained from the backup metadata, and creationSourceClusterLocation is required when the source and target cluster locations differ. During PointInTimeRestore creation, the service ignores the requested backup.geoRedundancy value and configures the new cluster with the same geo-redundancy setting as the source cluster. This property is immutable and is returned as creation provenance. On replacement, omission preserves the recorded value, resubmitting the same value is accepted, and changing it is rejected.
 * **creationSourceClusterLocation**: string: The Azure location of the source HorizonDB cluster used for point-in-time restore. This property is optional when the source and target cluster locations are the same. It is required when the source cluster location differs from the target cluster location and must identify the source cluster's location. This property must be absent for creation modes other than PointInTimeRestore or when creationMode is omitted. This immutable creation-provenance value does not change after creation.
 * **creationSourceClusterResourceId**: string: The Azure resource ID of the source HorizonDB cluster used by the selected creation mode. This property is required for PointInTimeRestore and other source-based creation modes, and must be absent when creationMode is Create or omitted. A source cluster does not need to have a pool to be restored, provided an available backup exists. This immutable creation-provenance value does not change after creation.
 * **dataEncryption**: [HorizonDbClusterDataEncryption](#horizondbclusterdataencryption): The data encryption configuration for the cluster. When omitted during initial cluster creation, the service uses SystemManaged encryption. When supplied during initial cluster creation, type is required. For PUT updates of an existing cluster, type may be omitted; if provided, it must match the existing encryption type. The encryption type is selected at cluster creation; switching between SystemManaged and AzureKeyVault after creation is not supported.
 * **network**: [Network](#network): The network configuration for the cluster. When this object is omitted, the service defaults it to publicAccess Disabled.
 * **pointInTimeUtc**: string: The requested point in time, in UTC. This property is required in every PointInTimeRestore request. For a same-location restore, the service restores the latest backup available at or before this value. For a cross-location restore, the service requires but ignores this value and restores the latest available backup; cross-location responses omit this property. This property must be absent for other creation modes or when creationMode is omitted and can only be specified during resource creation.
 * **postgreSqlVersion**: '17' | '18' | string: The PostgreSQL major version used by the HorizonDB cluster. API version 2026-10-01-preview supports versions 17 and 18. For ordinary cluster creation, the version is supplied in the request and is immutable after creation. For point-in-time restore, the service obtains the version from the source backup metadata and the request must omit this property. This API version does not support in-place PostgreSQL major-version upgrades.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (Required, ReadOnly): The provisioning state of the cluster.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (Required, ReadOnly): The provisioning state of the cluster.
 * **readWritePool**: [ReadWritePoolProperties](#readwritepoolproperties) (Required, ReadOnly): The pool currently designated to host the cluster's read-write node.
 * **state**: 'Deleting' | 'Inaccessible' | 'Provisioning' | 'Ready' | 'Updating' | string (Required, ReadOnly): Current state of the cluster.
 
@@ -458,7 +457,7 @@
 * **description**: string: Description of the default parameter group.
 * **parameters**: [ParameterProperties](#parameterproperties)[] (Required): Engine-defined parameters in the default parameter group. Service and other non-engine entries are excluded.
 * **postgreSqlVersion**: '17' | '18' | string (Required): PostgreSQL version for which this default parameter group is valid.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the default parameter group.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the default parameter group.
 
 ## EndpointProperties
 ### Properties
@@ -484,7 +483,7 @@
 ### Properties
 * **description**: string {maxLength: 1024}: The description of the HorizonDB firewall rule. The maximum length is 1024 characters.
 * **endIpAddress**: string {pattern: "^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])[.]){3}(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])$"} (Required): The end IPv4 address of the firewall rule in dotted-decimal notation. This address must be numerically greater than or equal to startIpAddress.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the firewall rule.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the firewall rule.
 * **startIpAddress**: string {pattern: "^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])[.]){3}(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])$"} (Required): The start IPv4 address of the firewall rule in dotted-decimal notation.
 
 ## HorizonDbClusterDataEncryption
@@ -513,7 +512,7 @@
 
 ## LogCaptureConfigurationProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the log capture configuration.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the log capture configuration.
 * **retentionDays**: int {minValue: 1, maxValue: 35} (Required): The number of days captured log files are retained.
 * **state**: 'Disabled' | 'Enabled' | string (Required): Specifies whether HorizonDB captures this type of log. Disabling capture stops the production of new log files; existing files remain available until their retention period expires.
 
@@ -568,12 +567,12 @@
 * **objectId**: string (ReadOnly): The Microsoft Entra object identifier of the principal mapped to the PostgreSQL role, represented as an RFC 4122 GUID. On PUT requests, this value comes from the URI path parameter.
 * **principalName**: string {maxLength: 256} (Required): The display name or user principal name of the Microsoft Entra principal to map to the PostgreSQL role. For users, this is typically the user principal name, such as admin@contoso.com. For groups, this is the group display name. For service principals, this is the application display name.
 * **principalType**: 'Group' | 'ServicePrincipal' | 'Unknown' | 'User' | string (Required): The type of Microsoft Entra principal to map to the PostgreSQL role.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the PostgreSQL role and Microsoft Entra principal mapping.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the PostgreSQL role and Microsoft Entra principal mapping.
 * **tenantId**: string: The identifier of the Microsoft Entra tenant containing the principal to map, represented as an RFC 4122 GUID. If omitted, this value defaults to the tenant of the subscription.
 
 ## MicrosoftEntraAuthenticationProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the Microsoft Entra authentication method.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the Microsoft Entra authentication method.
 * **state**: 'Disabled' | 'Enabled' | string (Required): The state of Microsoft Entra authentication.
 
 ## Network
@@ -590,7 +589,7 @@
 * **description**: string {maxLength: 1024}: Description of the parameter group. The maximum length is 1024 characters.
 * **parameters**: [ParameterProperties](#parameterproperties)[]: Parameters in the parameter group.
 * **postgreSqlVersion**: '17' | '18' | string (Required): The PostgreSQL major version for the parameter group. This property is required during creation and is immutable thereafter. The service selects the unique location-scoped default parameter group for this version in the resource location. The DefaultParameterGroups APIs return at most one default parameter group for each PostgreSQL version in a location, so this selection is unambiguous.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the parameter group.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the parameter group.
 
 ## ParameterProperties
 ### Properties
@@ -608,9 +607,9 @@
 
 ## PasswordAuthenticationProperties
 ### Properties
-* **administratorLogin**: string {sensitive, minLength: 1, maxLength: 63} (WriteOnly): The PostgreSQL administrator login name. This value is not returned in responses. After it is set, renaming is not supported. Setting the login requires password authentication state to be Enabled in the same request.
+* **administratorLogin**: string {minLength: 1, maxLength: 63}: The PostgreSQL administrator login name. This value is returned in responses after it is set. After it is set, renaming is not supported. Setting the login requires password authentication state to be Enabled in the same request.
 * **administratorLoginPassword**: string {sensitive, minLength: 8, maxLength: 128} (WriteOnly): The PostgreSQL administrator password. Setting the password requires password authentication state to be Enabled in the same request.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the PostgreSQL username-and-password authentication method.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the PostgreSQL username-and-password authentication method.
 * **state**: 'Disabled' | 'Enabled' | string (Required): The state of PostgreSQL username-and-password authentication.
 
 ## Pool
@@ -619,7 +618,6 @@
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [PoolProperties](#poolproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [PoolTags](#pooltags): Resource tags.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PoolCapability
@@ -646,7 +644,7 @@
 ## PoolParameterGroupReference
 ### Properties
 * **applyMethod**: 'Immediate' | 'PendingReboot' | string (Required): Determines when dynamic parameter changes from the associated parameter group become effective. Static parameter changes always require a customer-initiated pool Restart, regardless of this value. Stop followed by Start and scheduled maintenance do not apply pending parameter changes.
-* **parameterGroupResourceId**: string (Required): The Azure resource ID of the associated parameter group. Initial pool creation in this API version requires the corresponding Microsoft.HorizonDb/locations/parameterGroups resource. For an existing pool, PUT can specify either the corresponding default group or a customer-created Microsoft.HorizonDb/parameterGroups resource.
+* **parameterGroupResourceId**: string (Required): The Azure resource ID of the associated parameter group. When the parameter group is supplied during initial pool creation in this API version, the ID must identify the corresponding Microsoft.HorizonDb/locations/parameterGroups resource. For an existing pool, PUT can specify either the corresponding default group or a customer-created Microsoft.HorizonDb/parameterGroups resource.
 * **syncStatus**: 'Applying' | 'FailedToApply' | 'InSync' | 'PendingReboot' | string (ReadOnly): The synchronization status between the pool and its parameter group. PendingReboot changes remain pending across Stop, Start, and scheduled maintenance and become effective only after a customer-initiated Restart.
 
 ## PoolProperties
@@ -654,20 +652,10 @@
 * **computeModel**: [PoolComputeModel](#poolcomputemodel) (Required): The required compute model for the HorizonDB pool.
 * **highAvailability**: [PoolHighAvailability](#poolhighavailability) (Required): The required high-availability configuration for the pool. mode must be Disabled when nodeCount is 1, and must be AnyZone or ZoneRedundant when nodeCount is 2 through 16.
 * **nodeCount**: int {minValue: 1, maxValue: 16} (Required): The required number of nodes to allocate and assign to the pool. Allowed values are 1 through 16. To deallocate runtime compute without changing the configured node count, stop the pool.
-* **parameterGroup**: [PoolParameterGroupReference](#poolparametergroupreference) (Required): The required parameter group associated with the pool. When creating a new pool in this API version, the caller must supply the corresponding default parameter group; customer-created parameter groups are not accepted during creation. For an existing pool, PUT or PATCH can associate either the corresponding default parameter group or a customer-created parameter group. The create-visible shape intentionally supports both resource ID forms so a future API version can allow customer-created parameter groups during creation without a breaking schema change.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the pool.
+* **parameterGroup**: [PoolParameterGroupReference](#poolparametergroupreference): The parameter group associated with the pool. When omitted during creation, the service applies the default parameter group compatible with the parent cluster's PostgreSQL version. When supplied during creation in this API version, it must reference the corresponding default parameter group; customer-created parameter groups are not accepted during creation. For an existing pool, PUT or PATCH can associate either the corresponding default parameter group or a customer-created parameter group. The create-visible shape intentionally supports both resource ID forms so a future API version can allow customer-created parameter groups during creation without a breaking schema change.
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the pool.
 * **scheduledMaintenance**: [ScheduledMaintenanceProperties](#scheduledmaintenanceproperties): The scheduled maintenance configuration for the pool. The properties available depend on the selected maintenance management type.
 * **state**: 'Deleting' | 'Inaccessible' | 'Provisioning' | 'Ready' | 'Restarting' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): Current state of the pool.
-
-## PoolTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## PoolTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## PostgreSqlVersionCapability
 ### Properties

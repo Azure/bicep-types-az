@@ -474,7 +474,7 @@
           "$ref": "#/49"
         },
         "flags": 0,
-        "description": "A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation."
+        "description": "Placement scores indicating the likelihood of successfully allocating the specified regular virtual machines."
       }
     }
   },
@@ -520,7 +520,7 @@
           "$ref": "#/47"
         },
         "flags": 0,
-        "description": "A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation."
+        "description": "A placement score indicating the likelihood of successfully allocating the specified virtual machines."
       },
       "placementPreference": {
         "type": {

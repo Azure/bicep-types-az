@@ -90,7 +90,7 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last resource operation.
 * **regionalAffinity**: 'Disabled' | 'Enabled' | string: Specifies where client workers connect to cloud-hosted browsers. When Enabled, workers connect to browsers in the nearest Azure region to reduce latency. When Disabled, workers connect to browsers in the workspace's Azure region.
 * **reporting**: 'Disabled' | 'Enabled' | string: Specifies whether test reporting is enabled for the workspace.
-* **storageUri**: string: The URI of the Azure Storage account used to store workspace artifacts, test results, and reports.
+* **storageUri**: string: The URI of the Azure Storage account used to store workspace artifacts, test results, reports and browser profiles.
 * **subnetId**: string: The Azure Resource Manager resource ID of the subnet used for private network connectivity. Before creating the workspace, ensure the subnet meets the virtual network prerequisites at https://aka.ms/pww/docs/vnet. Format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Network/virtualNetworks/{virtualNetwork}/subnets/{subnet}. This value cannot be changed after workspace creation.
 * **workspaceId**: string {minLength: 3, maxLength: 36, pattern: "[A-Za-z0-9]+(-[A-Za-z0-9]+)+"} (ReadOnly): The workspace ID in GUID format.
 

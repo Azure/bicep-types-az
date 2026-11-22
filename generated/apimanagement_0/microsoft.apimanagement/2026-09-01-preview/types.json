@@ -120,7 +120,7 @@
           "$ref": "#/11"
         },
         "flags": 0,
-        "description": "Backend networking configuration. Can only be set when the AI Gateway is created."
+        "description": "Backend networking configuration."
       }
     }
   },

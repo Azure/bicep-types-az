@@ -22,7 +22,7 @@
 * **availabilityZone**: string: The availability zone.
 * **isQuotaAvailable**: bool: Whether the desired quota is available.
 * **region**: string: The region.
-* **score**: string: A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation.
+* **score**: string: A placement score indicating the likelihood of successfully allocating the specified virtual machines.
 * **sku**: string: The resource's CRP virtual machine SKU size.
 
 ## PlacementScoresProperties

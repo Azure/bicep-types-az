@@ -448,6 +448,7 @@
 ### Properties
 * **apiVersion**: '2026-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^(?![.-])[A-Za-z0-9-]{1,32}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SandboxGroupProperties](#sandboxgroupproperties): The resource-specific properties for this resource.

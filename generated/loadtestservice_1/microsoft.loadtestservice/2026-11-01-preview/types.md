@@ -58,11 +58,6 @@
 * **state**: 'Active' | 'Expired' | 'NotApplicable' | string (Required, ReadOnly): The free trial state.
 * **workspaceId**: string {minLength: 3, maxLength: 36, pattern: "[A-Za-z0-9]+(-[A-Za-z0-9]+)+"} (Required, ReadOnly): The workspace ID in GUID format that has free trial enabled in the subscription.
 
-## LinkedKeyVaultProperties
-### Properties
-* **vaultIdentity**: [ManagedIdentity](#managedidentity): The managed identity used to access the linked Azure Key Vault.
-* **vaultUri**: string: The URI of the linked Azure Key Vault.
-
 ## ManagedIdentity
 ### Properties
 * **resourceId**: string: The Azure Resource Manager resource ID of the user-assigned managed identity. Required when type is UserAssigned. Omit when type is SystemAssigned.
@@ -97,14 +92,13 @@
 ### Properties
 * **browserProxy**: 'Disabled' | 'Enabled' | string: Specifies whether the browser proxy is enabled for the workspace.
 * **dataplaneUri**: string (ReadOnly): The API endpoint for workspace data plane operations.
-* **linkedKeyVault**: [LinkedKeyVaultProperties](#linkedkeyvaultproperties): The Azure Key Vault linked to the workspace and the managed identity used to access it.
 * **localAuth**: 'Disabled' | 'Enabled' | string: Specifies whether service access tokens can be used to authenticate workspace operations.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last resource operation.
 * **regionalAffinity**: 'Disabled' | 'Enabled' | string: Specifies where client workers connect to cloud-hosted browsers. When Enabled, workers connect to browsers in the nearest Azure region to reduce latency. When Disabled, workers connect to browsers in the workspace's Azure region.
 * **reporting**: 'Disabled' | 'Enabled' | string: Specifies whether test reporting is enabled for the workspace.
 * **sessionArtifacts**: 'Disabled' | 'Enabled' | string: Specifies whether session artifact recording is enabled for the workspace.
 * **storageIdentity**: [ManagedIdentity](#managedidentity): The managed identity used to manage session artifacts in the storage account.
-* **storageUri**: string: The URI of the Azure Storage account used to store workspace artifacts, test results, and reports.
+* **storageUri**: string: The URI of the Azure Storage account used to store workspace artifacts, test results, reports and browser profiles.
 * **subnetId**: string: The Azure Resource Manager resource ID of the subnet used for private network connectivity. Before creating the workspace, ensure the subnet meets the virtual network prerequisites at https://aka.ms/pww/docs/vnet. Format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Network/virtualNetworks/{virtualNetwork}/subnets/{subnet}. This value cannot be changed after workspace creation.
 * **workspaceId**: string {minLength: 3, maxLength: 36, pattern: "[A-Za-z0-9]+(-[A-Za-z0-9]+)+"} (ReadOnly): The workspace ID in GUID format.
 

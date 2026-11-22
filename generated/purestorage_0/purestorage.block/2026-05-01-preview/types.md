@@ -239,7 +239,7 @@
 ### Properties
 * **serviceInitializationCompleted**: bool (Required): Indicates whether service initialization is complete
 * **serviceInitializationHandle**: [ServiceInitializationHandle](#serviceinitializationhandle): Explicit service account credentials
-* **serviceInitializationHandleEnc**: string: Encoded service account credentials alongside connection information
+* **serviceInitializationHandleEnc**: string {sensitive}: Encoded service account credentials alongside connection information
 
 ## AvsDiskDetails
 ### Properties

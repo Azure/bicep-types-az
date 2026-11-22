@@ -55,14 +55,14 @@
       },
       "identity": {
         "type": {
-          "$ref": "#/34"
+          "$ref": "#/33"
         },
         "flags": 0,
         "description": "The managed service identities assigned to this resource."
       },
       "tags": {
         "type": {
-          "$ref": "#/43"
+          "$ref": "#/42"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -76,7 +76,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/43"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -134,7 +134,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The URI of the Azure Storage account used to store workspace artifacts, test results, and reports."
+        "description": "The URI of the Azure Storage account used to store workspace artifacts, test results, reports and browser profiles."
       },
       "subnetId": {
         "type": {
@@ -163,13 +163,6 @@
         },
         "flags": 0,
         "description": "Specifies whether the browser proxy is enabled for the workspace."
-      },
-      "linkedKeyVault": {
-        "type": {
-          "$ref": "#/33"
-        },
-        "flags": 0,
-        "description": "The Azure Key Vault linked to the workspace and the managed identity used to access it."
       }
     }
   },
@@ -383,52 +376,32 @@
   },
   {
     "$type": "ObjectType",
-    "name": "LinkedKeyVaultProperties",
-    "properties": {
-      "vaultUri": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The URI of the linked Azure Key Vault."
-      },
-      "vaultIdentity": {
-        "type": {
-          "$ref": "#/26"
-        },
-        "flags": 0,
-        "description": "The managed identity used to access the linked Azure Key Vault."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
     "name": "ManagedServiceIdentity",
     "properties": {
       "principalId": {
         "type": {
-          "$ref": "#/35"
+          "$ref": "#/34"
         },
         "flags": 2,
         "description": "The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity."
       },
       "tenantId": {
         "type": {
-          "$ref": "#/35"
+          "$ref": "#/34"
         },
         "flags": 2,
         "description": "The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity."
       },
       "type": {
         "type": {
-          "$ref": "#/40"
+          "$ref": "#/39"
         },
         "flags": 1,
         "description": "Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed)."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/41"
         },
         "flags": 0,
         "description": "The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests."
@@ -461,6 +434,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/35"
+      },
+      {
         "$ref": "#/36"
       },
       {
@@ -468,9 +444,6 @@
       },
       {
         "$ref": "#/38"
-      },
-      {
-        "$ref": "#/39"
       },
       {
         "$ref": "#/2"
@@ -483,14 +456,14 @@
     "properties": {
       "principalId": {
         "type": {
-          "$ref": "#/35"
+          "$ref": "#/34"
         },
         "flags": 2,
         "description": "The principal ID of the assigned identity."
       },
       "clientId": {
         "type": {
-          "$ref": "#/35"
+          "$ref": "#/34"
         },
         "flags": 2,
         "description": "The client ID of the assigned identity."
@@ -502,7 +475,7 @@
     "name": "ManagedServiceIdentityUserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/41"
+      "$ref": "#/40"
     }
   },
   {
@@ -526,7 +499,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/49"
+          "$ref": "#/48"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -547,7 +520,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/54"
+          "$ref": "#/53"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -581,6 +554,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/44"
+      },
+      {
         "$ref": "#/45"
       },
       {
@@ -588,9 +564,6 @@
       },
       {
         "$ref": "#/47"
-      },
-      {
-        "$ref": "#/48"
       },
       {
         "$ref": "#/2"
@@ -617,6 +590,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/49"
+      },
+      {
         "$ref": "#/50"
       },
       {
@@ -624,9 +600,6 @@
       },
       {
         "$ref": "#/52"
-      },
-      {
-        "$ref": "#/53"
       },
       {
         "$ref": "#/2"
@@ -650,7 +623,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/56"
+        "$ref": "#/55"
       },
       {
         "$ref": "#/2"
@@ -678,35 +651,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/57"
+          "$ref": "#/56"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/58"
+          "$ref": "#/57"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/59"
+          "$ref": "#/58"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/61"
+          "$ref": "#/60"
         },
         "flags": 2,
         "description": "The resource-specific properties for this resource."
       },
       "systemData": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/43"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -719,14 +692,14 @@
     "properties": {
       "freeTrial": {
         "type": {
-          "$ref": "#/62"
+          "$ref": "#/61"
         },
         "flags": 2,
         "description": "The subscription-level location-based Playwright quota free trial properties."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/72"
         },
         "flags": 2,
         "description": "The status of the last resource operation."
@@ -746,7 +719,7 @@
       },
       "state": {
         "type": {
-          "$ref": "#/66"
+          "$ref": "#/65"
         },
         "flags": 3,
         "description": "The free trial state."
@@ -769,13 +742,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/62"
+      },
+      {
         "$ref": "#/63"
       },
       {
         "$ref": "#/64"
-      },
-      {
-        "$ref": "#/65"
       },
       {
         "$ref": "#/2"
@@ -810,6 +783,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/66"
+      },
+      {
         "$ref": "#/67"
       },
       {
@@ -825,9 +801,6 @@
         "$ref": "#/71"
       },
       {
-        "$ref": "#/72"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -836,7 +809,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.LoadTestService/locations/playwrightQuotas@2026-11-01-preview",
     "body": {
-      "$ref": "#/60"
+      "$ref": "#/59"
     },
     "readableScopes": 4,
     "writableScopes": 0
@@ -849,7 +822,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/75"
+        "$ref": "#/74"
       },
       {
         "$ref": "#/2"
@@ -877,35 +850,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/76"
+          "$ref": "#/75"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/77"
+          "$ref": "#/76"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/78"
+          "$ref": "#/77"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/80"
+          "$ref": "#/79"
         },
         "flags": 2,
         "description": "The resource-specific properties for this resource."
       },
       "systemData": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/43"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -918,14 +891,14 @@
     "properties": {
       "freeTrial": {
         "type": {
-          "$ref": "#/81"
+          "$ref": "#/80"
         },
         "flags": 2,
         "description": "The Playwright workspace quota free trial properties."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/90"
+          "$ref": "#/89"
         },
         "flags": 2,
         "description": "The status of the last resource operation."
@@ -952,21 +925,21 @@
       },
       "allocatedValue": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/81"
         },
         "flags": 3,
         "description": "The allocated limit value (e.g., allocated free execution minutes)."
       },
       "usedValue": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/81"
         },
         "flags": 3,
         "description": "The used value (e.g., used free execution minutes)."
       },
       "percentageUsed": {
         "type": {
-          "$ref": "#/83"
+          "$ref": "#/82"
         },
         "flags": 3,
         "description": "The percentage of the free trial quota used."
@@ -1009,6 +982,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/83"
+      },
+      {
         "$ref": "#/84"
       },
       {
@@ -1024,9 +1000,6 @@
         "$ref": "#/88"
       },
       {
-        "$ref": "#/89"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -1035,7 +1008,7 @@
     "$type": "ResourceType",
     "name": "Microsoft.LoadTestService/playwrightWorkspaces/quotas@2026-11-01-preview",
     "body": {
-      "$ref": "#/79"
+      "$ref": "#/78"
     },
     "readableScopes": 8,
     "writableScopes": 0
@@ -1066,14 +1039,14 @@
     "properties": {
       "nameAvailable": {
         "type": {
-          "$ref": "#/94"
+          "$ref": "#/93"
         },
         "flags": 0,
         "description": "Indicates if the resource name is available."
       },
       "reason": {
         "type": {
-          "$ref": "#/97"
+          "$ref": "#/96"
         },
         "flags": 0,
         "description": "The reason why the given name is not available."
@@ -1102,10 +1075,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/95"
+        "$ref": "#/94"
       },
       {
-        "$ref": "#/96"
+        "$ref": "#/95"
       },
       {
         "$ref": "#/2"
@@ -1118,10 +1091,10 @@
     "resourceType": "Microsoft.LoadTestService",
     "apiVersion": "2026-11-01-preview",
     "output": {
-      "$ref": "#/93"
+      "$ref": "#/92"
     },
     "input": {
-      "$ref": "#/92"
+      "$ref": "#/91"
     }
   }
 ]

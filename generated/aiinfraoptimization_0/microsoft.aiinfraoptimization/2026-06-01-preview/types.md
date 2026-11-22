@@ -173,8 +173,8 @@
 
 ## RecommendVmSkuTokenBudget
 ### Properties
-* **maxOutputTokens**: int {minValue: 0, maxValue: 131072}: The maximum number of generated output tokens per inference request. Must be supplied together with `promptTokens`, and the two must total from 1 through 131072.
-* **promptTokens**: int {minValue: 0, maxValue: 131072}: The number of prompt, or input, tokens per inference request. Must be supplied together with `maxOutputTokens`, and the two must total from 1 through 131072.
+* **maxOutputTokens**: int {minValue: 0, maxValue: 2147483647}: The maximum number of generated output tokens per inference request. Must be supplied together with `promptTokens`, and the two must total from 1 through 2147483647 without exceeding the model's maximum context length.
+* **promptTokens**: int {minValue: 0, maxValue: 2147483647}: The number of prompt, or input, tokens per inference request. Must be supplied together with `maxOutputTokens`, and the two must total from 1 through 2147483647 without exceeding the model's maximum context length.
 
 ## RecommendVmSkuTopology
 ### Properties
